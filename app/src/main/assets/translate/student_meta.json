@@ -1,0 +1,192 @@
+{
+  "architecture": "Marian transformer, 6-layer encoder, 3-layer decoder, d_model 384, ffn 1536",
+  "sequence_level_distillation_on_training_verses": true,
+  "parameters": 21015168,
+  "vocab_size": 8000,
+  "special_ids": {
+    "pad": 0,
+    "unk": 1,
+    "eos": 2,
+    "en": 3,
+    "nag": 4
+  },
+  "training_pairs": {
+    "real": 7578,
+    "real_weight": 3,
+    "synthetic": 99207,
+    "distilled_verses": {
+      "en-nag": 7538,
+      "nag-en": 7577
+    }
+  },
+  "best_mean_dev_chrf++": 38.88,
+  "log": [
+    {
+      "epoch": 1,
+      "step": 925,
+      "dev_chrf++": {
+        "en-nag": 22.29,
+        "nag-en": 14.59
+      },
+      "minutes": 3.3
+    },
+    {
+      "epoch": 2,
+      "step": 1850,
+      "dev_chrf++": {
+        "en-nag": 35.08,
+        "nag-en": 25.3
+      },
+      "minutes": 6.6
+    },
+    {
+      "epoch": 3,
+      "step": 2774,
+      "dev_chrf++": {
+        "en-nag": 37.96,
+        "nag-en": 31.27
+      },
+      "minutes": 9.8
+    },
+    {
+      "epoch": 4,
+      "step": 3698,
+      "dev_chrf++": {
+        "en-nag": 39.57,
+        "nag-en": 33.67
+      },
+      "minutes": 13.0
+    },
+    {
+      "epoch": 5,
+      "step": 4622,
+      "dev_chrf++": {
+        "en-nag": 38.34,
+        "nag-en": 33.3
+      },
+      "minutes": 16.1
+    },
+    {
+      "epoch": 6,
+      "step": 5547,
+      "dev_chrf++": {
+        "en-nag": 42.4,
+        "nag-en": 35.35
+      },
+      "minutes": 19.2
+    },
+    {
+      "epoch": 7,
+      "step": 6473,
+      "dev_chrf++": {
+        "en-nag": 41.24,
+        "nag-en": 34.32
+      },
+      "minutes": 23.2
+    },
+    {
+      "epoch": 8,
+      "step": 7399,
+      "dev_chrf++": {
+        "en-nag": 40.18,
+        "nag-en": 33.11
+      },
+      "minutes": 27.9
+    },
+    {
+      "epoch": 9,
+      "step": 8320,
+      "dev_chrf++": {
+        "en-nag": 41.28,
+        "nag-en": 34.22
+      },
+      "minutes": 32.3
+    },
+    {
+      "epoch": 10,
+      "step": 9247,
+      "dev_chrf++": {
+        "en-nag": 41.73,
+        "nag-en": 34.0
+      },
+      "minutes": 36.8
+    },
+    {
+      "epoch": 11,
+      "step": 10173,
+      "dev_chrf++": {
+        "en-nag": 41.2,
+        "nag-en": 34.69
+      },
+      "minutes": 40.4
+    },
+    {
+      "epoch": 12,
+      "step": 11095,
+      "dev_chrf++": {
+        "en-nag": 41.0,
+        "nag-en": 34.61
+      },
+      "minutes": 43.5
+    },
+    {
+      "epoch": 13,
+      "step": 12021,
+      "dev_chrf++": {
+        "en-nag": 40.51,
+        "nag-en": 34.02
+      },
+      "minutes": 46.5
+    },
+    {
+      "epoch": 14,
+      "step": 12944,
+      "dev_chrf++": {
+        "en-nag": 41.42,
+        "nag-en": 35.17
+      },
+      "minutes": 49.6
+    },
+    {
+      "epoch": 15,
+      "step": 13468,
+      "dev_chrf++": {
+        "en-nag": 42.2,
+        "nag-en": 33.47
+      },
+      "minutes": 161.4
+    }
+  ],
+  "trained_at": "2026-10-14T20:44:52+0530",
+  "license_note": "Learns from NLLB-200 outputs (CC BY-NC 4.0), ISV Nagamese text (CC BY-SA 4.0) and Tatoeba English (CC BY 2.0 FR): non-commercial, share-alike, with attribution.",
+  "onnx_int8": {
+    "sizes_mb": {
+      "decoder.fp32.onnx": 53.49,
+      "decoder.onnx": 13.61,
+      "encoder.fp32.onnx": 55.36,
+      "encoder.onnx": 14.08,
+      "parity.json": 0.06,
+      "spm.model": 0.14,
+      "student_meta.json": 0.0,
+      "tokenizer.json": 0.29
+    },
+    "check": {
+      "en-nag": {
+        "dev_chrf++": 43.29,
+        "seconds_per_sentence_cpu": 0.045,
+        "example": [
+          "Paul, an apostle of Christ Jesus through the will of God, and Timothy our brother,",
+          "Paul, Jisu Khrista laga itcha pora Jisu Khrista dwara ekjon apostle, aru amikhan laga bhai Timothy,"
+        ]
+      },
+      "nag-en": {
+        "dev_chrf++": 34.88,
+        "seconds_per_sentence_cpu": 0.04,
+        "example": [
+          "Paul, Isor laga itcha dwara Khrista Jisu laga ekjon apostle, aru Timothy amikhan laga bhai,",
+          "Paul, an apostle of Christ through the will of God, and Timothy our brother,"
+        ]
+      }
+    }
+  }
+}

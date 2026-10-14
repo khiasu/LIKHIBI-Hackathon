@@ -1,0 +1,26 @@
+{
+  "source": "ISV Nagamese New Testament (eBible.org, CC BY-SA 4.0), read from USFM",
+  "model": "interpolated modified Kneser-Ney trigram (nlp_research/prediction/kneser_ney.py)",
+  "excluded_books": [],
+  "sentences": 10315,
+  "tokens": 199684,
+  "distinct_words": 3029,
+  "words_seen_once": 917,
+  "discounts": {
+    "trigram": [
+      0.7860087648109073,
+      1.168681263916619,
+      1.5186237565095637
+    ],
+    "bigram": [
+      0.6724805252069963,
+      1.0876999426922591,
+      1.4294698948192546
+    ],
+    "unigram": [
+      0.5657596371882085,
+      0.7768956146427239,
+      1.7700877452430248
+    ]
+  }
+}

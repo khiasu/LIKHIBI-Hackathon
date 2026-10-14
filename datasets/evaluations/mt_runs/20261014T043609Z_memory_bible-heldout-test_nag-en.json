@@ -1,0 +1,1625 @@
+{
+  "run_id": "20261014T043609Z_memory_bible-heldout-test_nag-en",
+  "engine_id": "memory",
+  "engine_name": "Translation memory",
+  "engine_version": "1.0.0",
+  "engines": [
+    "memory"
+  ],
+  "answered_by": {
+    "memory": 228
+  },
+  "test_set": "bible-heldout-test",
+  "test_set_file": "datasets/processed/test_sets/bible_heldout_test_nag_en.tsv",
+  "direction": "nag-en",
+  "n_segments": 228,
+  "failed_segments": 0,
+  "metrics": {
+    "chrf++": 23.4,
+    "bleu": 5.35
+  },
+  "signatures": {
+    "chrf++": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+    "bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0"
+  },
+  "created_at": "2026-10-14T04:36:09+00:00",
+  "notes": "Baseline, not the shipped setting: translation memory forced to always answer (LIKHIBI_TM_THRESHOLD=0), so it copies the translation of the most similar training verse. Shows how much the NMT engine adds over retrieval.",
+  "segments": [
+    {
+      "source": "Paul, Isor laga ekjon noukar, Jisu Khrista laga apostle, aru Isor pora basi luwa khan laga biswas nimite aru hosa gyaan thaka juntu ki bhal ase etu logote ekta ase,",
+      "reference": "Paul, a servant of God and an apostle of Jesus Christ, according to the faith of God’s chosen ones and the knowledge of the truth which is according to godliness,",
+      "hypothesis": "Paul, a servant of Jesus Christ, called to be an apostle, set apart for the Good News of God,",
+      "chrf++": 34.73,
+      "engine": "memory"
+    },
+    {
+      "source": "anonto jibon te asha rakhi thaka, juntu Isor, kun kitia bhi misa nokoi, yug shuru nakora age pora kosom rakhidise.",
+      "reference": "in hope of eternal life, which God, who can’t lie, promised before time began;",
+      "hypothesis": "that by two immutable things, in which it is impossible for God to lie, we may have a strong encouragement, who have fled for refuge to take hold of the hope set before us.",
+      "chrf++": 26.76,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru thik homoi te, Tai laga kotha prokahit kori dise, amikhan laga Tran-Korta Isor laga hukum pora moike kori bole hukum dise.",
+      "reference": "but in his own time revealed his word in the message with which I was entrusted according to the commandment of God our Savior,",
+      "hypothesis": "but has now been revealed by the appearing of our Savior, Christ Jesus, who abolished death, and brought life and immortality to light through the Good News.",
+      "chrf++": 26.87,
+      "engine": "memory"
+    },
+    {
+      "source": "Titus ke, amikhan laga biswas te thaka ekjon asol chokra; amikhan laga Baba Isor, Tran-Korta Jisu Khrista te anugrah aru shanti hoi thakibi.",
+      "reference": "to Titus, my true child according to a common faith: Grace, mercy, and peace from God the Father and the Lord Jesus Christ our Savior.",
+      "hypothesis": "to Timothy, my true child in faith: Grace, mercy, and peace from God our Father and Christ Jesus our Lord.",
+      "chrf++": 58.97,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi etu karone tumike Crete majuli te chari jaise, ki kaam thik nohoi kene thakise eitu khan thik kori bole, aru moi tumike kowa nisena, sheher te girja laga rokhiya kori bole bura khan ke basi lobi.",
+      "reference": "I left you in Crete for this reason, that you would set in order the things that were lacking and appoint elders in every city, as I directed you—",
+      "hypothesis": "Not only so, but he was also appointed by the assemblies to travel with us in this grace, which is served by us to the glory of the Lord himself, and to show our readiness.",
+      "chrf++": 20.86,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru bura khan to golti nathaka hobo lage, aru ekjon maiki laga mota hobo lage, aru tai laga bacha khan bhi adat biya aru kotha namana eneka nohobo lage.",
+      "reference": "if anyone is blameless, the husband of one wife, having children who believe, who are not accused of loose or unruly behavior.",
+      "hypothesis": "The overseer therefore must be without reproach, the husband of one wife, temperate, sensible, modest, hospitable, good at teaching;",
+      "chrf++": 30.82,
+      "engine": "memory"
+    },
+    {
+      "source": "Kelemane ekjon girja laga cholawta to Isor laga ghor sa karone eku napuncha nathakibo lage. Aru tai ekjon nijor khushi te jai thaka, aru joldi khong kora, aru misa kotha, aru jhagara kora, aru lalchi nohobo lage.",
+      "reference": "For the overseer must be blameless, as God’s steward, not self-pleasing, not easily angered, not given to wine, not violent, not greedy for dishonest gain;",
+      "hypothesis": "not a drinker, not violent, not greedy for money, but gentle, not quarrelsome, not covetous;",
+      "chrf++": 32.31,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu tai alohi manu ke tai laga ghor te rakhibo para hobo lage, dhorjo kora, sidha mon thaka, pobitro thaka, nijorke rukhabole para hobo lage.",
+      "reference": "but given to hospitality, a lover of good, sober minded, fair, holy, self-controlled,",
+      "hypothesis": "in pureness, in knowledge, in perseverance, in kindness, in the Holy Spirit, in sincere love,",
+      "chrf++": 16.07,
+      "engine": "memory"
+    },
+    {
+      "source": "Tai hosa biswas kotha ke thik dhori thaka, aru manu ke Isor laga kotha to bhal pora bujhai dibo para, kotha namana khan ke thik rasta dikha bo para hobo lage.",
+      "reference": "holding to the faithful word which is according to the teaching, that he may be able to exhort in the sound doctrine, and to convict those who contradict him.",
+      "hypothesis": "So let a man think of us as Christ’s servants and stewards of God’s mysteries.",
+      "chrf++": 9.03,
+      "engine": "memory"
+    },
+    {
+      "source": "Kelemane, bisi Yehudi biswasi manu khan ase, kunkhan kotha bhi namane, aru sunnot laga kotha te eku motlob nathaka kotha koi aru dusra ke thogai thake.",
+      "reference": "For there are also many unruly men, vain talkers and deceivers, especially those of the circumcision,",
+      "hypothesis": "Let no one deceive you with empty words, for because of these things the wrath of God comes on the children of disobedience.",
+      "chrf++": 20.0,
+      "engine": "memory"
+    },
+    {
+      "source": "Eitu khan ke rukhai dibole dorkar ase. Taikhan sorom kamai lobo nimite ghor-ghor ke sikhai thake.",
+      "reference": "whose mouths must be stopped: men who overthrow whole houses, teaching things which they ought not, for dishonest gain’s sake.",
+      "hypothesis": "Now where remission of these is, there is no more offering for sin.",
+      "chrf++": 11.58,
+      "engine": "memory"
+    },
+    {
+      "source": "Taikhan majot te ekjon bhabobadi asele kun pora koi rakhise, “Creta laga manu to sob misa koi thake, aru dusto janwar aru alsi kha-kuwa khan ase.”",
+      "reference": "One of them, a prophet of their own, said, “Cretans are always liars, evil beasts, and idle gluttons.”",
+      "hypothesis": "I saw coming out of the mouth of the dragon, and out of the mouth of the beast, and out of the mouth of the false prophet, three unclean spirits, something like frogs;",
+      "chrf++": 25.65,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu gawahi hosa ase, karone taikhan ke kara pora koi thakibi, taikhan biswas te thik thaki bole nimite,",
+      "reference": "This testimony is true. For this cause, reprove them sharply, that they may be sound in the faith,",
+      "hypothesis": "He who has seen has testified, and his testimony is true. He knows that he tells the truth, that you may believe.",
+      "chrf++": 35.87,
+      "engine": "memory"
+    },
+    {
+      "source": "aru taikhan ke Yehudi laga kotha khisa khan aru hosa ke namani kene ghuri juwa khan laga piche jabo nadibi.",
+      "reference": "not paying attention to Jewish fables and commandments of men who turn away from the truth.",
+      "hypothesis": "and will turn away their ears from the truth, and turn away to fables.",
+      "chrf++": 34.65,
+      "engine": "memory"
+    },
+    {
+      "source": "Mon sapha thaka khan nimite hoile sob bostu to sapha ase, kintu sapha nathaka aru biswas nakora khan nimite hoile eku bhi sapha nai, kintu taikhan laga dimag aru bhabona te bhi sob letera ase.",
+      "reference": "To the pure, all things are pure, but to those who are defiled and unbelieving, nothing is pure; but both their mind and their conscience are defiled.",
+      "hypothesis": "without understanding, covenant breakers, without natural affection, unforgiving, unmerciful;",
+      "chrf++": 14.32,
+      "engine": "memory"
+    },
+    {
+      "source": "Taikhan Isor ke jane koi, kintu kaam te hoile taike namane. Taikhan ke to ghin kori bole lage aru taikhan kotha namana khan ase aru eku bhal kaam kori bole thik nohoi.",
+      "reference": "They profess that they know God, but by their deeds they deny him, being abominable, disobedient, and unfit for any good work.",
+      "hypothesis": "backbiters, hateful to God, insolent, arrogant, boastful, inventors of evil things, disobedient to parents,",
+      "chrf++": 23.48,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu tumi to hoile, ki kotha koi, etu hosa hisab te sikhai di thakibi.",
+      "reference": "But say the things which fit sound doctrine,",
+      "hypothesis": "All things therefore whatever they tell you to observe, observe and do, but don’t do their works; for they say, and don’t do.",
+      "chrf++": 19.18,
+      "engine": "memory"
+    },
+    {
+      "source": "Bura manu khan ke gusa nauthi bole, bhal bhabona kori bole, nijorke nomro kori bole, biswas te thaki bole, morom kori bole, aru dhorjo pora thaki bole sikhai dibi.",
+      "reference": "that older men should be temperate, sensible, sober minded, sound in faith, in love, and in perseverance,",
+      "hypothesis": "The Lord’s servant must not quarrel, but be gentle toward all, able to teach, patient,",
+      "chrf++": 13.36,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu nisena dangor umor thaka mahila khan ke bhi pobitro jibon laga bhal niyom thakibo nimite sikhabi, misa kotha kowa aru draikha ros piya nohobo lage, etu bodli, ki bhal ase etu dusra khan ke hikai thaki bole sikhai dibi.",
+      "reference": "and that older women likewise be reverent in behavior, not slanderers nor enslaved to much wine, teachers of that which is good,",
+      "hypothesis": "Let the wives be quiet in the assemblies, for it has not been permitted for them to be talking except in submission, as the law also says,",
+      "chrf++": 17.31,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu nisena jawan mahila khan ke tai laga mota aru bacha ke kineka morom koribo lage, etu sikhai dibi,",
+      "reference": "that they may train the young wives to love their husbands, to love their children,",
+      "hypothesis": "Even so husbands also ought to love their own wives as their own bodies. He who loves his own wife loves himself.",
+      "chrf++": 32.42,
+      "engine": "memory"
+    },
+    {
+      "source": "bhal bhabona thaka, sapha mon thaka, nijor mota laga kotha mani thaka, sapha hoi nijor ghor kaam te bhal thaka mahila khan hobole sikhai dibi, tinehoile Isor laga pobitro kotha ke hinsa nohobo.",
+      "reference": "to be sober minded, chaste, workers at home, kind, being in subjection to their own husbands, that God’s word may not be blasphemed.",
+      "hypothesis": "if they desire to learn anything. “Let them ask their own husbands at home, for it is shameful for a wife to be talking in the assembly.”",
+      "chrf++": 31.23,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru etu nisena jawan manu ke bhal kaam kori bole samjai dibi.",
+      "reference": "Likewise, exhort the younger men to be sober minded.",
+      "hypothesis": "By so much, Jesus has become the guarantee of a better covenant.",
+      "chrf++": 15.87,
+      "engine": "memory"
+    },
+    {
+      "source": "Tumi laga sob kaam te bhal namuna he dikhai dibi. Aru tumi ki sikhai ase etu hosa aru sapha pora kowa kotha hobo lage,",
+      "reference": "In all things show yourself an example of good works. In your teaching, show integrity, seriousness, incorruptibility,",
+      "hypothesis": "Let no man despise your youth; but be an example to those who believe, in word, in your way of life, in love, in spirit, in faith, and in purity.",
+      "chrf++": 24.36,
+      "engine": "memory"
+    },
+    {
+      "source": "juntu hosa kotha ase aru junke eku golti dibo na paribo, eneka hoile kun tumike digdar diye, taikhan sorom hobo, ki karone taikhan pora amikhan laga eku bhi biya kobo na paribo.",
+      "reference": "and soundness of speech that can’t be condemned, that he who opposes you may be ashamed, having no evil thing to say about us.",
+      "hypothesis": "and he from within will answer and say, ‘Don’t bother me. The door is now shut, and my children are with me in bed. I can’t get up and give it to you’?",
+      "chrf++": 20.01,
+      "engine": "memory"
+    },
+    {
+      "source": "Sewak khan ke sob kaam te malik laga kotha mani thaki bole sikhai dibi, khushi pora aru eku jhagara nakori kene,",
+      "reference": "Exhort servants to be in subjection to their own masters and to be well-pleasing in all things, not contradicting,",
+      "hypothesis": "Servants, be obedient to those who according to the flesh are your masters, with fear and trembling, in singleness of your heart, as to Christ,",
+      "chrf++": 27.8,
+      "engine": "memory"
+    },
+    {
+      "source": "nijor malik laga eku chor nakori kene aru sob bhal kaam to biswas pora dikhai dibole nimite sikhai dibi, eneka korile bhal naam to amikhan laga Tran-korta Isor pora sikhai diya kotha ke pabo.",
+      "reference": "not stealing, but showing all good fidelity, that they may adorn the doctrine of God, our Savior, in all things.",
+      "hypothesis": "For this is good and acceptable in the sight of God our Savior,",
+      "chrf++": 22.76,
+      "engine": "memory"
+    },
+    {
+      "source": "Kelemane Isor pora aha anugrah to sob manu laga poritran nimite ase.",
+      "reference": "For the grace of God has appeared, bringing salvation to all men,",
+      "hypothesis": "for by grace you have been saved through faith, and that not of yourselves; it is the gift of God,",
+      "chrf++": 23.42,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu amikhan ke sikhai ase, etu pora he, ki biya ase aru duniya laga itcha hisab te ase etu ke amikhan nabhabibo, aru nijorke rukhabole paribo, dharmik thakibo paribo, eneka hoile etu yug te Isor ke jana jibon thaki bole paribo,",
+      "reference": "instructing us to the intent that, denying ungodliness and worldly lusts, we would live soberly, righteously, and godly in this present age;",
+      "hypothesis": "that Christ may dwell in your hearts through faith, to the end that you, being rooted and grounded in love,",
+      "chrf++": 18.47,
+      "engine": "memory"
+    },
+    {
+      "source": "kele koile amikhan etu asis laga din nimite rukhi ase jitia sob pora dangor Isor aru Tran-korta Jisu Khrista arubi wapas ahibo.",
+      "reference": "looking for the blessed hope and appearing of the glory of our great God and Savior, Jesus Christ,",
+      "hypothesis": "For our citizenship is in heaven, from where we also wait for a Savior, the Lord Jesus Christ,",
+      "chrf++": 29.12,
+      "engine": "memory"
+    },
+    {
+      "source": "Jisu he amikhan ke niyom namana paap pora udhar koribo nimite nijor jibon daan dise, aru Tai nijor nimite pobitro kori kene ekta jati bonai loise, kunkhan bhal kaam kori bole khushi kore.",
+      "reference": "who gave himself for us, that he might redeem us from all iniquity and purify for himself a people for his own possession, zealous for good works.",
+      "hypothesis": "who gave himself as a ransom for all, the testimony at the proper time,",
+      "chrf++": 21.0,
+      "engine": "memory"
+    },
+    {
+      "source": "Girja te etu kotha khan sikai dibi, aru manu sobke eitu khan kori bole mon dangor kori dibi, aru adhikar thaka hisab te golti kora khan ke sidha kori bhi. Kun pora bhi apuni ke hisab nathaka hobo nadibi.",
+      "reference": "Say these things and exhort and reprove with all authority. Let no one despise you.",
+      "hypothesis": "Let the wives be quiet in the assemblies, for it has not been permitted for them to be talking except in submission, as the law also says,",
+      "chrf++": 17.84,
+      "engine": "memory"
+    },
+    {
+      "source": "Girja te aha khan ke janai dibi cholawta aru dangor khan laga niche thaki bole, taikhan laga kotha mani bole, aru hodai bhal kaam nimite taiyar thaki bole,",
+      "reference": "Remind them to be in subjection to rulers and to authorities, to be obedient, to be ready for every good work,",
+      "hypothesis": "make you complete in every good work to do his will, working in you that which is well pleasing in his sight, through Jesus Christ, to whom be the glory forever and ever. Amen.",
+      "chrf++": 29.58,
+      "engine": "memory"
+    },
+    {
+      "source": "kunke bhi bodnam nakoribole aru jhagara nakoribole, kintu sob logote nomro aru bhal niyom pora thaki bole.",
+      "reference": "to speak evil of no one, not to be contentious, to be gentle, showing all humility toward all men.",
+      "hypothesis": "The Lord’s servant must not quarrel, but be gentle toward all, able to teach, patient,",
+      "chrf++": 26.2,
+      "engine": "memory"
+    },
+    {
+      "source": "Kilekoile amikhan bhi ekta somoite eku bhabona nathaka aru kotha namana thakise. Amikhan mangso laga itcha pora dhori kene harai ja khan thakise. Amikhan paap kori thakise aru dusra ke suku joli thakise. Amikhan bisi ghin thakise aru ekjon- ekjon ke bhi ghin kori thakisele.",
+      "reference": "For we were also once foolish, disobedient, deceived, serving various lusts and pleasures, living in malice and envy, hateful, and hating one another.",
+      "hypothesis": "for you are still fleshly. For insofar as there is jealousy, strife, and factions among you, aren’t you fleshly, and don’t you walk in the ways of men?",
+      "chrf++": 18.98,
+      "engine": "memory"
+    },
+    {
+      "source": "Hoile bhi jitia Udhar-korta Isor laga morom manu uporte dikhai dise,",
+      "reference": "But when the kindness of God our Savior and his love toward mankind appeared,",
+      "hypothesis": "For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men who suppress the truth in unrighteousness,",
+      "chrf++": 22.54,
+      "engine": "memory"
+    },
+    {
+      "source": "juntu amikhan laga kaam aru dharmikta pora nohoi, kintu Tai laga anugrah pora poritran anidise, aru Pobitro Atma dwara notun jonom aru notun jibon dise,",
+      "reference": "not by works of righteousness which we did ourselves, but according to his mercy, he saved us through the washing of regeneration and renewing by the Holy Spirit,",
+      "hypothesis": "even when we were dead through our trespasses, made us alive together with Christ—by grace you have been saved—",
+      "chrf++": 16.73,
+      "engine": "memory"
+    },
+    {
+      "source": "amikhan laga Udhar-korta Jisu Khrista karone Pobitro Atma amikhan ke bhorta haali dise,",
+      "reference": "whom he poured out on us richly through Jesus Christ our Savior;",
+      "hypothesis": "Paul, an apostle of Jesus Christ according to the commandment of God our Savior and the Lord Jesus Christ our hope,",
+      "chrf++": 36.2,
+      "engine": "memory"
+    },
+    {
+      "source": "etu nimite Tai laga anugrah karone amikhan ke dhormik bonai kene anonto jibon laga asha te Tai laga uttoradhikari bonai dibo karone.",
+      "reference": "that being justified by his grace, we might be made heirs according to the hope of eternal life.",
+      "hypothesis": "that as sin reigned in death, even so grace might reign through righteousness to eternal life through Jesus Christ our Lord.",
+      "chrf++": 29.08,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu kotha to biswas koribo laga ase. Aru tumikhan ke etu kotha taikhan ke jor pora koi dibole mon ase, etu pora kunkhan Isor ke biswas korise, taikhan bhal kaam te mon dikene kori thakibo nimite. Etu kotha to bhal aru sob karone labh ase.",
+      "reference": "This saying is faithful, and concerning these things I desire that you insist confidently, so that those who have believed God may be careful to maintain good works. These things are good and profitable to men;",
+      "hypothesis": "Every Scripture is God-breathed and profitable for teaching, for reproof, for correction, and for instruction in righteousness,",
+      "chrf++": 17.61,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu misa-misi kotha koi thaka, aru khandan khan khisa, aru jhagara kora, aru niyom laga kotha nimite jhagara kora sob to chari di bhi kele koile eitu khan eku labh nai.",
+      "reference": "but shun foolish questionings, genealogies, strife, and disputes about the law; for they are unprofitable and vain.",
+      "hypothesis": "he is conceited, knowing nothing, but obsessed with arguments, disputes, and word battles, from which come envy, strife, insulting, evil suspicions,",
+      "chrf++": 25.97,
+      "engine": "memory"
+    },
+    {
+      "source": "Kunba kotha namana manu ke ekbar-duibar samjai dibi, judi tai arubi kotha namanile taike alag kori dibi,",
+      "reference": "Avoid a factious man after a first and second warning,",
+      "hypothesis": "For as you in time past were disobedient to God, but now have obtained mercy by their disobedience,",
+      "chrf++": 11.75,
+      "engine": "memory"
+    },
+    {
+      "source": "etu jani kene kun manu bhal rasta chari kene aru paap kori thake, tai nijorke bodnam kori ase.",
+      "reference": "knowing that such a one is perverted and sinful, being self-condemned.",
+      "hypothesis": "For as many as are of the works of the law are under a curse. For it is written, “Cursed is everyone who doesn’t continue in all things that are written in the book of the law, to do them.”",
+      "chrf++": 18.35,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi kitia Artemas nohoile Tychicus ke tumi logot pathabo, joldi Nicopolis sheher te ahibi, kelemane moi ta te thanda dinte thaki bole bhabona kori loise.",
+      "reference": "When I send Artemas to you, or Tychicus, be diligent to come to me to Nicopolis, for I have determined to winter there.",
+      "hypothesis": "But I sent Tychicus to Ephesus.",
+      "chrf++": 11.39,
+      "engine": "memory"
+    },
+    {
+      "source": "Para tak Zenas ukil aru Apollos ke pathai dibi, taikhan eku bhi komti nohobo nimite.",
+      "reference": "Send Zenas the lawyer and Apollos on their journey speedily, that nothing may be lacking for them.",
+      "hypothesis": "Therefore I hope to send him at once, as soon as I see how it will go with me.",
+      "chrf++": 13.13,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru biswasi khan bhi bhal kaam kori bole hiki bo lage, aru bisi ki dorkar ase, etu te modot dibo paribo nimite, aru eneka hoile eku kaam nathaka nohobo.",
+      "reference": "Let our people also learn to maintain good works to meet necessary needs, that they may not be unfruitful.",
+      "hypothesis": "It is indeed unnecessary for me to write to you concerning the service to the saints,",
+      "chrf++": 19.99,
+      "engine": "memory"
+    },
+    {
+      "source": "Ami logote thaka sob pora tumike salam janai ase. Salam di ase jun manu khan biswas te amikhan ke morom kori ase. Apuni khan sob logote Isor laga anugrah thakibo dibi.",
+      "reference": "All who are with me greet you. Greet those who love us in faith. Grace be with you all. Amen.",
+      "hypothesis": "Greet every saint in Christ Jesus. The brothers who are with me greet you.",
+      "chrf++": 37.53,
+      "engine": "memory"
+    },
+    {
+      "source": "Paul, Jisu Khrista laga koidi, aru moi logote bhai Timothy, duijon pora Philemon ke, jun amikhan laga morom sathi aru susamachar laga prochar korate eke logote kaam kora jon ase,",
+      "reference": "Paul, a prisoner of Christ Jesus, and Timothy our brother, to Philemon, our beloved fellow worker,",
+      "hypothesis": "and sent Timothy, our brother and God’s servant in the Good News of Christ, to establish you and to comfort you concerning your faith,",
+      "chrf++": 32.95,
+      "engine": "memory"
+    },
+    {
+      "source": "aru biswas te amikhan laga bhoini Apphia ke, aru Archippus amikhan laga sipahi ke, aru tumi laga ghor te joma kora girja ke.",
+      "reference": "to the beloved Apphia, to Archippus our fellow soldier, and to the assembly in your house:",
+      "hypothesis": "The day following, Paul went in with us to James; and all the elders were present.",
+      "chrf++": 15.8,
+      "engine": "memory"
+    },
+    {
+      "source": "Baba Isor aru Probhu Jisu Khrista laga anugraha aru shanti tumikhan logote thaki bole dibi.",
+      "reference": "Grace to you and peace from God our Father and the Lord Jesus Christ.",
+      "hypothesis": "The grace of the Lord Jesus Christ, God’s love, and the fellowship of the Holy Spirit be with you all. Amen.",
+      "chrf++": 39.86,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi hodai Isor ke dhanyavad di thake. Moi laga prathana te tumikhan ke yaad kori thake.",
+      "reference": "I thank my God always, making mention of you in my prayers,",
+      "hypothesis": "We always give thanks to God for all of you, mentioning you in our prayers,",
+      "chrf++": 44.58,
+      "engine": "memory"
+    },
+    {
+      "source": "Tumikhan Probhu Jisu Khrista logote morom aru biswas thaka aru ekjon-ekjon logote thaka to moi hunise.",
+      "reference": "hearing of your love and of the faith which you have toward the Lord Jesus and toward all the saints,",
+      "hypothesis": "For this cause I also, having heard of the faith in the Lord Jesus which is among you and the love which you have toward all the saints,",
+      "chrf++": 63.9,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi prathana kori ase tumikhan biswas pora lok kori thaka to amikhan majote Khrista dwara ki bhal ase, etu sob aru bhi bhal pora janibo paribo.",
+      "reference": "that the fellowship of your faith may become effective in the knowledge of every good thing which is in us in Christ Jesus.",
+      "hypothesis": "Besides all this, between us and you there is a great gulf fixed, that those who want to pass from here to you are not able, and that no one may cross over from there to us.’",
+      "chrf++": 18.67,
+      "engine": "memory"
+    },
+    {
+      "source": "Tumikhan laga morom thaka nimite moi bisi khushi aru aram paise, kelemane, tumi, moi laga bhai, pora pobitro khan laga mon pora taja kori dise.",
+      "reference": "For we have much joy and comfort in your love, because the hearts of the saints have been refreshed through you, brother.",
+      "hypothesis": "Therefore we have been comforted. In our comfort we rejoiced the more exceedingly for the joy of Titus, because his spirit has been refreshed by you all.",
+      "chrf++": 37.51,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu karone, moi Khrista laga naam pora mon dangor hoi kene tumikhan ke ki kori bole lage etu hukum dibole pare,",
+      "reference": "Therefore though I have all boldness in Christ to command you that which is appropriate,",
+      "hypothesis": "But I hope in the Lord Jesus to send Timothy to you soon, that I also may be cheered up when I know how you are doing.",
+      "chrf++": 18.85,
+      "engine": "memory"
+    },
+    {
+      "source": "kintu morom thaka nimite, moi tumikhan ke anurodh kori ase- Moi, Paul, ekjon bura manu aru etiya Jisu Khrista nimite ekjon koidi.",
+      "reference": "yet for love’s sake I rather appeal to you, being such a one as Paul, the aged, but also a prisoner of Jesus Christ.",
+      "hypothesis": "Now I beg you, brothers, by our Lord Jesus Christ and by the love of the Spirit, that you strive together with me in your prayers to God for me,",
+      "chrf++": 26.5,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi laga bacha Onesimus ke bhabona kori kene hudi ase, moi loha laga rusi pora bandhi kene thaka homoi te tai laga baba hoi jaise.",
+      "reference": "I appeal to you for my child Onesimus, whom I have become the father of in my chains,",
+      "hypothesis": "Suddenly there was a great earthquake, so that the foundations of the prison were shaken; and immediately all the doors were opened, and everyone’s bonds were loosened.",
+      "chrf++": 15.65,
+      "engine": "memory"
+    },
+    {
+      "source": "Tai ekta homoi te tumikhan nimite eku kaam laga thaka nai, kintu etiya tai tumi aru moi nimite bisi kaam laga ase.",
+      "reference": "who once was useless to you, but now is useful to you and to me.",
+      "hypothesis": "When I was with you in the temple daily, you didn’t stretch out your hands against me. But this is your hour, and the power of darkness.”",
+      "chrf++": 21.42,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi taike tumikhan logote pathai di ase, tai moi laga bisi morom kora ekjon ase.",
+      "reference": "I am sending him back. Therefore receive him, that is, my own heart,",
+      "hypothesis": "A new commandment I give to you, that you love one another. Just as I have loved you, you also love one another.",
+      "chrf++": 16.83,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi itcha thakise, jitia tak moi susamachar prochar kora nimite loha pora bandhi kene ase, titia tak taike moi logote rakhi kene tumikhan laga naam te moike sewa kori bole nimite.",
+      "reference": "whom I desired to keep with me, that on your behalf he might serve me in my chains for the Good News.",
+      "hypothesis": "So as much as is in me, I am eager to preach the Good News to you also who are in Rome.",
+      "chrf++": 26.57,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu moi tumikhan ke nahudi kene eku kaam kori bole mon nai. Moi tumikhan pora bhal kaam kori thaka to hoile ene pora koribo dibole mon nai, kintu ki bhal kaam kori ase etu bhal itcha pora hobole lage.",
+      "reference": "But I was willing to do nothing without your consent, that your goodness would not be as of necessity, but of free will.",
+      "hypothesis": "For the good which I desire, I don’t do; but the evil which I don’t desire, that I practice.",
+      "chrf++": 15.84,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu karone tai tumikhan pora olop din nimite alag hoi jaisele, aru etu pora hodai nimite taike tumi wapas pai jobole nimite.",
+      "reference": "For perhaps he was therefore separated from you for a while that you would have him forever,",
+      "hypothesis": "But it was appropriate to celebrate and be glad, for this, your brother, was dead, and is alive again. He was lost, and is found.’”",
+      "chrf++": 16.53,
+      "engine": "memory"
+    },
+    {
+      "source": "Tai aru manu laga sewa nokorile, kintu tai ekjon sewa kora manu pora bhi bhal hoi kene morom thaka bhai hobo. Moi taike bisi morom kore, aru tumike bhi bisi morom kore, mangso pora bhi aru Probhu Jisu laga naam pora bhi.",
+      "reference": "no longer as a slave, but more than a slave, a beloved brother—especially to me, but how much rather to you, both in the flesh and in the Lord.",
+      "hypothesis": "So when they had eaten their breakfast, Jesus said to Simon Peter, “Simon, son of Jonah, do you love me more than these?” He said to him, “Yes, Lord; you know that I have affection for you.” He said to him, “Feed my lambs.”",
+      "chrf++": 21.98,
+      "engine": "memory"
+    },
+    {
+      "source": "Jodi moi bhi tumikhan laga sathi ase koile, moike jineka tumikhan pora loise etu nisena, taike bhi loi lobi.",
+      "reference": "If then you count me a partner, receive him as you would receive me.",
+      "hypothesis": "If you had known me, you would have known my Father also. From now on, you know him and have seen him.”",
+      "chrf++": 24.49,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu jodi tai tumikhan logote kiba biya korise aru dibole baki ase koile, etu moi uporte hali dibi.",
+      "reference": "But if he has wronged you at all or owes you anything, put that to my account.",
+      "hypothesis": "“Let them therefore”, he said, “that are in power among you go down with me, and if there is anything wrong in the man, let them accuse him.”",
+      "chrf++": 23.22,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi, Paul, moi laga nijor hath pora etu likhi ase. Moi nijor sob to wapas kori dibo- aru tumikhan nijorke moi logote dibole baki ase!",
+      "reference": "I, Paul, write this with my own hand: I will repay it (not to mention to you that you owe to me even your own self besides).",
+      "hypothesis": "This greeting is by me, Paul, with my own hand.",
+      "chrf++": 23.06,
+      "engine": "memory"
+    },
+    {
+      "source": "Hoi, bhai, Probhu laga naam pora moi nimite ekta kaam kori dibi; Khrista nimite moi laga mon to taja kori dibi.",
+      "reference": "Yes, brother, let me have joy from you in the Lord. Refresh my heart in the Lord.",
+      "hypothesis": "For I could wish that I myself were accursed from Christ for my brothers’ sake, my relatives according to the flesh",
+      "chrf++": 21.11,
+      "engine": "memory"
+    },
+    {
+      "source": "Tumi pora kotha mani kene thaka to moi bharosa ase. Aru moi kowa kotha pora bhi tumi bisi koribo koi kene moi tumike etu chithi likhi ase.",
+      "reference": "Having confidence in your obedience, I write to you, knowing that you will do even beyond what I say.",
+      "hypothesis": "Jesus answered him, “Because I told you, ‘I saw you underneath the fig tree,’ do you believe? You will see greater things than these!”",
+      "chrf++": 21.31,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru etu logote, etiya moi nimite ekta kamra taiyar kori kene rakhibi, moi asha ase tumi laga prathana pora moi joldi tumi logote wapas ahibo paribo.",
+      "reference": "Also, prepare a guest room for me, for I hope that through your prayers I will be restored to you.",
+      "hypothesis": "Therefore prepare your minds for action. Be sober, and set your hope fully on the grace that will be brought to you at the revelation of Jesus Christ—",
+      "chrf++": 31.99,
+      "engine": "memory"
+    },
+    {
+      "source": "Epaphras, Jisu Khrista laga kaam nimite moi logote bondhi ghor te thaka sathi, tai bhi tumike salam jonai ase.",
+      "reference": "Epaphras, my fellow prisoner in Christ Jesus, greets you,",
+      "hypothesis": "Greet the assembly that is in their house. Greet Epaenetus, my beloved, who is the first fruits of Achaia to Christ.",
+      "chrf++": 23.67,
+      "engine": "memory"
+    },
+    {
+      "source": "Mark, Aristarach, Demas, aru Luke, moi logot kaam kori thaka khan sob pora bhi salam jonai ase.",
+      "reference": "as do Mark, Aristarchus, Demas, and Luke, my fellow workers.",
+      "hypothesis": "Timothy, my fellow worker, greets you, as do Lucius, Jason, and Sosipater, my relatives.",
+      "chrf++": 39.63,
+      "engine": "memory"
+    },
+    {
+      "source": "Jisu Khrista laga anugrah tumikhan sob logot hodai thaki bole dibi. Amen.",
+      "reference": "The grace of our Lord Jesus Christ be with your spirit. Amen.",
+      "hypothesis": "The grace of the Lord Jesus Christ be with you all. Amen.",
+      "chrf++": 69.75,
+      "engine": "memory"
+    },
+    {
+      "source": "Kuntu shuru pora thakise- juntu moi khan hunise, aru suku pora dikhise, juntu moi khan saise, aru amikhan laga hath pora dhorise, eitu khan sob jibon laga kotha ase.",
+      "reference": "That which was from the beginning, that which we have heard, that which we have seen with our eyes, that which we saw, and our hands touched, concerning the Word of life",
+      "hypothesis": "even as those who from the beginning were eyewitnesses and servants of the word delivered them to us,",
+      "chrf++": 22.17,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru, etu jibon amikhan ke janibole dise, aru amikhan etu laga gawahi ase. Moi apuni khan ke anonto jibon laga kotha koi ase, jun to Baba Isor logote ase, aru etu kotha amikhan ke janibole nimite dise.",
+      "reference": "(and the life was revealed, and we have seen, and testify, and declare to you the life, the eternal life, which was with the Father, and was revealed to us);",
+      "hypothesis": "This is eternal life, that they should know you, the only true God, and him whom you sent, Jesus Christ.",
+      "chrf++": 20.83,
+      "engine": "memory"
+    },
+    {
+      "source": "Amikhan ki hunise aru dikhise, etu sob apuni khan ke koidi ase, etu pora amikhan sob mili kene thakibo. Aru, amikhan Baba aru Tai laga Putro, Jisu Khrista logote milikena ase.",
+      "reference": "that which we have seen and heard we declare to you, that you also may have fellowship with us. Yes, and our fellowship is with the Father and with his Son, Jesus Christ.",
+      "hypothesis": "who died for us, that, whether we wake or sleep, we should live together with him.",
+      "chrf++": 15.23,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru, amikhan to apuni khan nimite etu kotha khan likhi ase etu pora apuni khan khushi kori thaka to pura hoi jabo nimite.",
+      "reference": "And we write these things to you, that our joy may be fulfilled.",
+      "hypothesis": "Finally, my brothers, rejoice in the Lord! To write the same things to you, to me indeed is not tiresome, but for you it is safe.",
+      "chrf++": 35.51,
+      "engine": "memory"
+    },
+    {
+      "source": "Amikhan etu kotha Isor laga Putro Jisu Khrista logot pora hunise aru apuni khan ke koi ase: Isor to puhor ase, aru Tai logote eku andhera nai.",
+      "reference": "This is the message which we have heard from him and announce to you, that God is light, and in him is no darkness at all.",
+      "hypothesis": "God is faithful, through whom you were called into the fellowship of his Son, Jesus Christ our Lord.",
+      "chrf++": 17.7,
+      "engine": "memory"
+    },
+    {
+      "source": "Jodi amikhan Tai logote milikena ase koi aru andhar laga rasta te berai, titia amikhan misa koi ase aru hosa laga kotha khan mani kene thaka nohoi jai.",
+      "reference": "If we say that we have fellowship with him and walk in the darkness, we lie and don’t tell the truth.",
+      "hypothesis": "I exhorted Titus, and I sent the brother with him. Did Titus take any advantage of you? Didn’t we walk in the same spirit? Didn’t we walk in the same steps?",
+      "chrf++": 27.99,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu jodi amikhan ujala te berai jineka Tai ujala te thake, amikhan ekjon-ekjon logote milikena ase, aru Tai laga Putro Jisu laga khun pora amikhan laga sob paap to sapha kori diye.",
+      "reference": "But if we walk in the light as he is in the light, we have fellowship with one another, and the blood of Jesus Christ his Son cleanses us from all sin.",
+      "hypothesis": "According to the law, nearly everything is cleansed with blood, and apart from shedding of blood there is no remission.",
+      "chrf++": 22.84,
+      "engine": "memory"
+    },
+    {
+      "source": "Jodi amikhan paap nai koi, titia amikhan nijorke thogai ase, aru hosa to moi khan logote nai.",
+      "reference": "If we say that we have no sin, we deceive ourselves, and the truth is not in us.",
+      "hypothesis": "If we are faithless, he remains faithful; for he can’t deny himself.”",
+      "chrf++": 15.4,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu jodi amikhan pora Isor ke amikhan laga paapkhan shikar kore, titia Tai hosa thaka pora amikhan laga paapkhan maph kori dibo aru sob adharmikta pora sapha kori dibo.",
+      "reference": "If we confess our sins, he is faithful and righteous to forgive us the sins and to cleanse us from all unrighteousness.",
+      "hypothesis": "“Most certainly I tell you, all sins of the descendants of man will be forgiven, including their blasphemies with which they may blaspheme;",
+      "chrf++": 18.38,
+      "engine": "memory"
+    },
+    {
+      "source": "Jodi amikhan paap kora nai koile, amikhan Taike misa bonai di ase, aru Tai laga kotha amikhan logote nai.",
+      "reference": "If we say that we haven’t sinned, we make him a liar, and his word is not in us.",
+      "hypothesis": "They reasoned with themselves, saying, “If we should say, ‘From heaven;’ he will say, ‘Why then did you not believe him?’",
+      "chrf++": 20.0,
+      "engine": "memory"
+    },
+    {
+      "source": "Ami laga bacha khan, moi tumikhan ke etu likhi ase tumikhan paap nokorile nimite. Kintu jodi kunba paap kore, amikhan laga Baba Isor logote kotha kori diya ekjon ase, Jisu Khrista, kun dharmik ase.",
+      "reference": "My little children, I write these things to you so that you may not sin. If anyone sins, we have a Counselor with the Father, Jesus Christ, the righteous.",
+      "hypothesis": "that God has fulfilled this to us, their children, in that he raised up Jesus. As it is also written in the second psalm, ‘You are my Son. Today I have become your father.’",
+      "chrf++": 27.28,
+      "engine": "memory"
+    },
+    {
+      "source": "Tai amikhan laga paap maph kori diya ekjon ase, aru khali amikhan ekla nimite nohoi, kintu pura duniya nimite.",
+      "reference": "And he is the atoning sacrifice for our sins, and not for ours only, but also for the whole world.",
+      "hypothesis": "Forgive us our sins, for we ourselves also forgive everyone who is indebted to us. Bring us not into temptation, but deliver us from the evil one.’”",
+      "chrf++": 30.11,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu pora amikhan Taike jani loise, jodi amikhan Tai laga adesh khan mani kene thake koile.",
+      "reference": "This is how we know that we know him: if we keep his commandments.",
+      "hypothesis": "If we should say, ‘From men’”—they feared the people, for all held John to really be a prophet.",
+      "chrf++": 11.68,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu koi, “Moi Isor ke jane,” kintu kotha mani kene nathake, tai misa kowa manu ase, aru tai logote hosa nai.",
+      "reference": "One who says, “I know him,” and doesn’t keep his commandments, is a liar, and the truth isn’t in him.",
+      "hypothesis": "“He who is not with me is against me. He who doesn’t gather with me scatters.",
+      "chrf++": 17.1,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu kun manu Isor laga kotha mane, tai logot te Isor laga morom to sob phale bhal bonai dise. Etu pora amikhan jane amikhan Tai logote ase:",
+      "reference": "But God’s love has most certainly been perfected in whoever keeps his word. This is how we know that we are in him:",
+      "hypothesis": "We know that God has spoken to Moses. But as for this man, we don’t know where he comes from.”",
+      "chrf++": 21.42,
+      "engine": "memory"
+    },
+    {
+      "source": "kun manu tai Isor logote ase koi, Khrista jineka beraise, etu nisena tai bhi bera bole lage.",
+      "reference": "he who says he remains in him ought himself also to walk just like he walked.",
+      "hypothesis": "Thus consider yourselves also to be dead to sin, but alive to God in Christ Jesus our Lord.",
+      "chrf++": 18.33,
+      "engine": "memory"
+    },
+    {
+      "source": "Morom laga bhai khan, moi tumikhan ke notun niyom likha nohoi, hoilebi kuntu purana niyom tumikhan logote shuru pora ase, etu he koi ase. Etu purana niyom he tumikhan huni thaka laga kotha ase.",
+      "reference": "Brothers, I write no new commandment to you, but an old commandment which you had from the beginning. The old commandment is the word which you heard from the beginning.",
+      "hypothesis": "who also made us sufficient as servants of a new covenant, not of the letter but of the Spirit. For the letter kills, but the Spirit gives life.",
+      "chrf++": 16.71,
+      "engine": "memory"
+    },
+    {
+      "source": "Hoilebi moi tumikhan nimite notun niyom likhi di ase, juntu niyom Khrista aru tumikhan usorte hosa ase, kelemane andhera to jai ase, aru hosa laga puhor to juli ase.",
+      "reference": "Again, I write a new commandment to you, which is true in him and in you, because the darkness is passing away and the true light already shines.",
+      "hypothesis": "Likewise, he took the cup after supper, saying, “This cup is the new covenant in my blood, which is poured out for you.",
+      "chrf++": 21.8,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu ujala te ase eneka koi, aru nijor laga bhai bhoini khan ke ghin kore, tai etiya bhi andhera te ase.",
+      "reference": "He who says he is in the light and hates his brother is in the darkness even until now.",
+      "hypothesis": "“If anyone comes to me, and doesn’t disregard his own father, mother, wife, children, brothers, and sisters, yes, and his own life also, he can’t be my disciple.",
+      "chrf++": 19.51,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu tai laga bhai ke morom kore tai ujala te ase aru tai kitia bhi biya rasta te nagiribo.",
+      "reference": "He who loves his brother remains in the light, and there is no occasion for stumbling in him.",
+      "hypothesis": "Grace be with all those who love our Lord Jesus Christ with incorruptible love. Amen.",
+      "chrf++": 16.8,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu kun manu tai laga bhai ke ghin kore tai andhera te ase aru andhera te berai ase. Tai kote jai ase tai nijor bhi najane, kelemane andhera pora tai laga suku andha kori dise.",
+      "reference": "But he who hates his brother is in the darkness, and walks in the darkness, and doesn’t know where he is going, because the darkness has blinded his eyes.",
+      "hypothesis": "Jesus therefore said to them, “Yet a little while the light is with you. Walk while you have the light, that darkness doesn’t overtake you. He who walks in the darkness doesn’t know where he is going.",
+      "chrf++": 43.49,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi tumikhan ke likhi ase, morom laga bacha khan, kelemane Khrista laga naam pora tumikhan laga paap maph paise.",
+      "reference": "I write to you, little children, because your sins are forgiven you for his name’s sake.",
+      "hypothesis": "to Timothy, my beloved child: Grace, mercy, and peace, from God the Father and Christ Jesus our Lord.",
+      "chrf++": 15.38,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi apuni khan ke likhi ase, baba khan, kelemane apuni khan jane utu ekjon kun ase, jun shuru pora ase. Moi tumikhan nimite likhi ase, jawan manu khan, kelemane tumikhan biya ekjon logote jiti loise.",
+      "reference": "I write to you, fathers, because you know him who is from the beginning. I write to you, young men, because you have overcome the evil one. I write to you, little children, because you know the Father.",
+      "hypothesis": "for your partnership in furtherance of the Good News from the first day until now;",
+      "chrf++": 10.62,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi tumikhan ke likhi dise, chutu bacha khan, kelemane tumikhan Baba Isor ke jane. Moi etu apuni khan ke likhise, baba khan, kelemane apuni khan jane etu ekjon ke kun shuru pora ase. Moi tumikhan ke likhise, jawan manu khan, kelemane tumikhan takot ase, aru Isor laga kotha tumikhan logote ase, aru tumikhan biya uporte jiti loise.",
+      "reference": "I have written to you, fathers, because you know him who is from the beginning. I have written to you, young men, because you are strong, and the word of God remains in you, and you have overcome the evil one.",
+      "hypothesis": "In that same hour, Jesus rejoiced in the Holy Spirit, and said, “I thank you, O Father, Lord of heaven and earth, that you have hidden these things from the wise and understanding, and revealed them to little children. Yes, Father, for so it was well-pleasing in your sight.”",
+      "chrf++": 27.74,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu duniya ke morom nokoribi aru etu duniya te thaka jinis khan ke morom nokoribi. Jodi kunba manu etu duniya ke morom kore, titia tai logote Baba Isor laga morom nai.",
+      "reference": "Don’t love the world or the things that are in the world. If anyone loves the world, the Father’s love isn’t in him.",
+      "hypothesis": "If you were of the world, the world would love its own. But because you are not of the world, since I chose you out of the world, therefore the world hates you.",
+      "chrf++": 34.4,
+      "engine": "memory"
+    },
+    {
+      "source": "Kelemane ki to etu duniya te ase- mangso laga itcha, aru suku laga itcha, aru jibon laga phutani- etu Baba pora nohoi kintu etu duniya laga ase.",
+      "reference": "For all that is in the world—the lust of the flesh, the lust of the eyes, and the pride of life—isn’t the Father’s, but is the world’s.",
+      "hypothesis": "who were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God.",
+      "chrf++": 23.33,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu duniya aru tai laga itcha khan khotom hoi ase. Kintu kun manu Isor laga itcha pora thake tai hodai thakibo.",
+      "reference": "The world is passing away with its lusts, but he who does God’s will remains forever.",
+      "hypothesis": "but in every nation he who fears him and works righteousness is acceptable to him.",
+      "chrf++": 19.88,
+      "engine": "memory"
+    },
+    {
+      "source": "Chutu bacha khan, etu hekh laga homoi ase. Tumikhan Khrista bhirodhi ahi ase koi kene hunise, aru etiya to bisi Khrista bhirodhi jon ahi jaise. Etu pora amikhan jane hekh homoi to ahise.",
+      "reference": "Little children, these are the end times, and as you heard that the Antichrist is coming, even now many antichrists have arisen. By this we know that it is the final hour.",
+      "hypothesis": "For we are not as so many, peddling the word of God. But as of sincerity, but as of God, in the sight of God, we speak in Christ.",
+      "chrf++": 15.94,
+      "engine": "memory"
+    },
+    {
+      "source": "Khrista ke bhirodh kora khan to amikhan pora ulaikene jaise, kintu taikhan to amikhan pora nohoi. Jodi taikhan to amikhan pora ase koile amikhan logote thaki bole asele. Kintu jitia taikhan ulaikene jaise, etu pora jani loise taikhan kun bhi amikhan pora nohoi.",
+      "reference": "They went out from us, but they didn’t belong to us; for if they had belonged to us, they would have continued with us. But they left, that they might be revealed that none of them belong to us.",
+      "hypothesis": "If indeed they had been thinking of that country from which they went out, they would have had enough time to return.",
+      "chrf++": 28.34,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu tumikhan Pobitro Ekjon pora asirbad paise, aru tumikhan sob hosa jani ase.",
+      "reference": "You have an anointing from the Holy One, and you all have knowledge.",
+      "hypothesis": "For concerning those who were once enlightened and tasted of the heavenly gift, and were made partakers of the Holy Spirit,",
+      "chrf++": 21.3,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi tumikhan hosa najane koi kene etu likha nai, kintu tumikhan jani ase aru hosa te eku misa nai.",
+      "reference": "I have not written to you because you don’t know the truth, but because you know it, and because no lie is of the truth.",
+      "hypothesis": "He said, “I tell you, Peter, the rooster will by no means crow today until you deny that you know me three times.”",
+      "chrf++": 19.97,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun misa kowa jon ase, tai ekjon, jun pora Jisu he Khrista ase koi kene mana kore? Etu manu Khrista bhirodhi ase, kelemane tai Baba aru Putro ke mana kori ase.",
+      "reference": "Who is the liar but he who denies that Jesus is the Christ? This is the Antichrist, he who denies the Father and the Son.",
+      "hypothesis": "They began to accuse him, saying, “We found this man perverting the nation, forbidding paying taxes to Caesar, and saying that he himself is Christ, a king.”",
+      "chrf++": 20.04,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu Jisu ke mana kore tai laga Baba nai. Kun manu Jisu ke loi, tai logote Baba ase.",
+      "reference": "Whoever denies the Son doesn’t have the Father. He who confesses the Son has the Father also.",
+      "hypothesis": "Jesus answered, “I don’t have a demon, but I honor my Father and you dishonor me.",
+      "chrf++": 18.28,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru tumikhan to, shuru pora ki kotha hunise etu tumikhan logote thaki bole dibi. Jodi tumikhan shuru pora ki hunise etu monte rakhe koile, tumikhan hodai Putro aru Baba logote thakibo.",
+      "reference": "Therefore, as for you, let that remain in you which you heard from the beginning. If that which you heard from the beginning remains in you, you also will remain in the Son, and in the Father.",
+      "hypothesis": "I say the things which I have seen with my Father; and you also do the things which you have seen with your father.”",
+      "chrf++": 20.92,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu kosom Khrista pora amikhan ke dise- anonto jibon.",
+      "reference": "This is the promise which he promised us, the eternal life.",
+      "hypothesis": "This is eternal life, that they should know you, the only true God, and him whom you sent, Jesus Christ.",
+      "chrf++": 35.49,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi etu kotha tumikhan nimite likhi ase, utu manu karone bhi kun pora tumikhan ke biya rasta te loijabo.",
+      "reference": "These things I have written to you concerning those who would lead you astray.",
+      "hypothesis": "For this is he, of whom it is written, ‘Behold, I send my messenger before your face, who will prepare your way before you.’",
+      "chrf++": 20.01,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru tumikhan to, ki asirbad tumikhan Khrista pora paise etu tumikhan logote he ase, aru dusra pora tumikhan ke sikhai dibole dorkar nai. Kintu Tai laga asirbad pora ki sikhai dise etu hosa ase aru misa nohoi, aru tumikhan ke sikhai diya nisena, Tai logote thakibi.",
+      "reference": "As for you, the anointing which you received from him remains in you, and you don’t need for anyone to teach you. But as his anointing teaches you concerning all things, and is true, and is no lie, and even as it taught you, you will remain in him.",
+      "hypothesis": "You are of your father the devil, and you want to do the desires of your father. He was a murderer from the beginning, and doesn’t stand in the truth, because there is no truth in him. When he speaks a lie, he speaks on his own; for he is a liar, and the father of lies.",
+      "chrf++": 25.62,
+      "engine": "memory"
+    },
+    {
+      "source": "Etiya, bacha khan, Tai logote thakibi, jitia Tai wapas ahibo, moi khan mon dangor koribo aru Tai aha homoi te sorom nakhabo.",
+      "reference": "Now, little children, remain in him, that when he appears, we may have boldness and not be ashamed before him at his coming.",
+      "hypothesis": "according to my earnest expectation and hope, that I will in no way be disappointed, but with all boldness, as always, now also Christ will be magnified in my body, whether by life or by death.",
+      "chrf++": 24.16,
+      "engine": "memory"
+    },
+    {
+      "source": "Jodi tumi jane Tai dharmik ase koi kene, titia hoile tumikhan etu bhi jani thakibo kun manu thik kaam kore tai Isor pora jonom hoise.",
+      "reference": "If you know that he is righteous, you know that everyone who practices righteousness has been born of him.",
+      "hypothesis": "For if Abraham was justified by works, he has something to boast about, but not toward God.",
+      "chrf++": 13.71,
+      "engine": "memory"
+    },
+    {
+      "source": "Sabi Isor pora kineka morom amikhan ke dise, eneka pora amikhan Isor laga bacha ase kobole nimite, aru hosa pora bhi amikhan to Tai laga bacha khan ase. Etu karone, prithibi pora amikhan ke najane, kelemane taikhan Isor ke najane.",
+      "reference": "See how great a love the Father has given to us, that we should be called children of God! For this cause the world doesn’t know us, because it didn’t know him.",
+      "hypothesis": "I have many things to speak and to judge concerning you. However, he who sent me is true; and the things which I heard from him, these I say to the world.”",
+      "chrf++": 18.73,
+      "engine": "memory"
+    },
+    {
+      "source": "Morom laga bhai khan, amikhan etiya Isor laga bacha khan ase aru amikhan ki hobo etu etiya bhi dikhai diya nai. Amikhan jane jitia Khrista ahibo, amikhan Tai nisena hoi jabo, kelemane Tai kineka ase etu nisena amikhan Taike dikhibo.",
+      "reference": "Beloved, now we are children of God. It is not yet revealed what we will be; but we know that when he is revealed, we will be like him, for we will see him just as he is.",
+      "hypothesis": "But we were gentle among you, like a nursing mother cherishes her own children.",
+      "chrf++": 13.65,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu Khrista uporte asha rakhe, Khrista sapha thaka nisena, etu manu khan bhi nijorke sapha kori loi.",
+      "reference": "Everyone who has this hope set on him purifies himself, even as he is pure.",
+      "hypothesis": "For even Christ didn’t please himself. But, as it is written, “The reproaches of those who reproached you fell on me.”",
+      "chrf++": 25.24,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun paap kaam khan kori ase tai niyom khan mani kene thaka manu nohoi, kelemane paap te niyom nai.",
+      "reference": "Everyone who sins also commits lawlessness. Sin is lawlessness.",
+      "hypothesis": "Because by the works of the law, no flesh will be justified in his sight; for through the law comes the knowledge of sin.",
+      "chrf++": 14.36,
+      "engine": "memory"
+    },
+    {
+      "source": "Tumikhan jane Khrista ke dikhai diya to paapkhan hatai dibole nimite hoise, aru Tai logote eku paap nai.",
+      "reference": "You know that he was revealed to take away our sins, and no sin is in him.",
+      "hypothesis": "whom God sent to be an atoning sacrifice through faith in his blood, for a demonstration of his righteousness through the passing over of prior sins, in God’s forbearance;",
+      "chrf++": 18.49,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu Khrista logote thake, tai aru paap kaam nakore. Aru kun manu paap kaam kore, tai Isor ke dikha nai, aru Taike janibole para nai.",
+      "reference": "Whoever remains in him doesn’t sin. Whoever sins hasn’t seen him and doesn’t know him.",
+      "hypothesis": "the Spirit of truth, whom the world can’t receive, for it doesn’t see him and doesn’t know him. You know him, for he lives with you and will be in you.",
+      "chrf++": 40.53,
+      "engine": "memory"
+    },
+    {
+      "source": "Morom laga bacha khan, kun pora bhi tumike biya rasta te loi jabole nadibi. Kun manu bhal kaam kore tai dharmik ase, Khrista dharmik thaka nisena.",
+      "reference": "Little children, let no one lead you astray. He who does righteousness is righteous, even as he is righteous.",
+      "hypothesis": "It is for discipline that you endure. God deals with you as with children, for what son is there whom his father doesn’t discipline?",
+      "chrf++": 23.31,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu paap kaam khan kore tai saitan laga ase, kelemane saitan bhi shuru pora paap kaam kori kene ahise. Etu nimite Isor laga Putro ke dikhai dise, aru Tai pora saitan laga kaam khan khotom kori dibole.",
+      "reference": "He who sins is of the devil, for the devil has been sinning from the beginning. To this end the Son of God was revealed: that he might destroy the works of the devil.",
+      "hypothesis": "For the Father has affection for the Son, and shows him all things that he himself does. He will show him greater works than these, that you may marvel.",
+      "chrf++": 22.94,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu Isor pora jonom loise tai biya kaam kori kene nathake kelemane Isor laga bijon tai logote ase. Tai paap kori kene thaki bole napare kelemane tai Isor pora jonom hoise.",
+      "reference": "Whoever is born of God doesn’t commit sin, because his seed remains in him, and he can’t sin, because he is born of God.",
+      "hypothesis": "For it is written, “Rejoice, you barren who don’t bear. Break out and shout, you who don’t travail. For the desolate women have more children than her who has a husband.”",
+      "chrf++": 16.56,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu pora Isor laga bacha khan aru saitan laga bacha khan ke dikhai diye: Kun manu dharmik kaam nakore tai Isor laga nohoi, aru kun manu tai nijor laga bhai ke morom nakore tai bhi Isor laga nohoi.",
+      "reference": "In this the children of God are revealed, and the children of the devil. Whoever doesn’t do righteousness is not of God, neither is he who doesn’t love his brother.",
+      "hypothesis": "Listen, my beloved brothers. Didn’t God choose those who are poor in this world to be rich in faith and heirs of the Kingdom which he promised to those who love him?",
+      "chrf++": 24.47,
+      "engine": "memory"
+    },
+    {
+      "source": "Kelemane tumikhan shuru pora etu kotha huni kene ahise, amikhan ekjon-ekjon ke morom kori bole lage.",
+      "reference": "For this is the message which you heard from the beginning, that we should love one another—",
+      "hypothesis": "“This is my commandment, that you love one another, even as I have loved you.",
+      "chrf++": 28.81,
+      "engine": "memory"
+    },
+    {
+      "source": "Amikhan Cain nisena nohobole lage, kun biya ekjon pora ahise aru nijor bhai ke morai dise. Ki nimite taike morai dise? Kelemane tai laga kaam khan paap laga kaam khan thakise aru tai laga bhai Abel laga kaam khan dharmik kaam khan thakise.",
+      "reference": "unlike Cain, who was of the evil one and killed his brother. Why did he kill him? Because his deeds were evil, and his brother’s righteous.",
+      "hypothesis": "Because Christ also suffered for sins once, the righteous for the unrighteous, that he might bring you to God, being put to death in the flesh, but made alive in the Spirit,",
+      "chrf++": 20.66,
+      "engine": "memory"
+    },
+    {
+      "source": "Tumikhan asurit nalagibi, ami laga bhai khan, jodi tumike etu duniya pora ghin kore.",
+      "reference": "Don’t be surprised, my brothers, if the world hates you.",
+      "hypothesis": "If the world hates you, you know that it has hated me before it hated you.",
+      "chrf++": 38.96,
+      "engine": "memory"
+    },
+    {
+      "source": "Amikhan mora pora ulaikene jibon paise, kelemane moi khan bhai ke morom kore. Kun manu morom te nathake tai mori kene ase.",
+      "reference": "We know that we have passed out of death into life, because we love the brothers. He who doesn’t love his brother remains in death.",
+      "hypothesis": "“He who is not with me is against me. He who doesn’t gather with me scatters.",
+      "chrf++": 21.37,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu nijor bhai ke morom nakore tai manu morai diya manu ase. Tumi jane manu morai diya manu ke kitia bhi anonto jibon tai logote thaki bole na paribo.",
+      "reference": "Whoever hates his brother is a murderer, and you know that no murderer has eternal life remaining in him.",
+      "hypothesis": "“If anyone comes to me, and doesn’t disregard his own father, mother, wife, children, brothers, and sisters, yes, and his own life also, he can’t be my disciple.",
+      "chrf++": 20.62,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu pora amikhan morom to jane, kelemane Khrista amikhan nimite Tai laga jibon dise. Amikhan bhi nijor laga bhai khan nimite jibon dibole lage.",
+      "reference": "By this we know love, because he laid down his life for us. And we ought to lay down our lives for the brothers.",
+      "hypothesis": "Walk in love, even as Christ also loved us and gave himself up for us, an offering and a sacrifice to God for a sweet-smelling fragrance.",
+      "chrf++": 18.94,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu kun manu logote duniya laga sob saman ase, aru tai laga bhai dukh te thaka dikhile bhi, bhai nimite tai laga mon bondh kori kene rakhe, titia hoile tai logote Isor laga morom kote ase?",
+      "reference": "But whoever has the world’s goods and sees his brother in need, then closes his heart of compassion against him, how does God’s love remain in him?",
+      "hypothesis": "But I, brothers, if I still preach circumcision, why am I still persecuted? Then the stumbling block of the cross has been removed.",
+      "chrf++": 18.44,
+      "engine": "memory"
+    },
+    {
+      "source": "Ami laga morom bacha khan, amikhan khali kotha aru mukh pora morom nokorile, kintu kaam aru hosa pora morom koribo.",
+      "reference": "My little children, let’s not love in word only, or with the tongue only, but in deed and truth.",
+      "hypothesis": "But as God is faithful, our word toward you was not “Yes and no.”",
+      "chrf++": 12.55,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu pora amikhan jani loi amikhan hosa te ase, aru amikhan laga mon Isor usorte rakhi diye.",
+      "reference": "And by this we know that we are of the truth and persuade our hearts before him,",
+      "hypothesis": "and laid them at the apostles’ feet; and distribution was made to each, according as anyone had need.",
+      "chrf++": 15.51,
+      "engine": "memory"
+    },
+    {
+      "source": "Jodi amikhan laga mon pora amikhan ke biya ase koi, Isor to amikhan laga mon pora bhi dangor ase, aru Tai sob jinis khan jani ase.",
+      "reference": "because if our heart condemns us, God is greater than our heart, and knows all things.",
+      "hypothesis": "What then shall we say about these things? If God is for us, who can be against us?",
+      "chrf++": 22.48,
+      "engine": "memory"
+    },
+    {
+      "source": "Morom laga bhai khan, jodi amikhan laga nijor mon pora amikhan ke bodnam nadiye, titia amikhan Isor uporte bharosa ase.",
+      "reference": "Beloved, if our hearts don’t condemn us, we have boldness toward God;",
+      "hypothesis": "Moreover, brothers, we make known to you the grace of God which has been given in the assemblies of Macedonia,",
+      "chrf++": 18.63,
+      "engine": "memory"
+    },
+    {
+      "source": "Amikhan ki mange etu pai jabo, kelemane amikhan Tai laga kotha mani kene thake aru Tai ki khushi pai eitu khan kore.",
+      "reference": "so whatever we ask, we receive from him, because we keep his commandments and do the things that are pleasing in his sight.",
+      "hypothesis": "All things, whatever you ask in prayer, believing, you will receive.”",
+      "chrf++": 19.49,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu Tai laga kotha khan ase: amikhan Tai laga Putro Jisu Khrista ke biswas koribo aru ekjon-ekjon ke morom koribo, Tai pora etu kotha amikhan ke diya nisena.",
+      "reference": "This is his commandment, that we should believe in the name of his Son, Jesus Christ, and love one another, even as he commanded.",
+      "hypothesis": "Hold the pattern of sound words which you have heard from me, in faith and love which is in Christ Jesus.",
+      "chrf++": 23.31,
+      "engine": "memory"
+    },
+    {
+      "source": "Tai laga kotha mani kene thaka manu to Tai logot thake, aru Tai bhi taikhan logote ase. Tai amikhan logote ase koi kene jane Atma dwara jane, junke Tai pora amikhan nimite dise.",
+      "reference": "He who keeps his commandments remains in him, and he in him. By this we know that he remains in us, by the Spirit which he gave us.",
+      "hypothesis": "This man had been instructed in the way of the Lord; and being fervent in spirit, he spoke and taught accurately the things concerning Jesus, although he knew only the baptism of John.",
+      "chrf++": 21.92,
+      "engine": "memory"
+    },
+    {
+      "source": "Morom laga bhai khan, sob atma ke biswas nokoribi. Kintu, kuntu atma Isor pora ase etu bhal pora sai lobi, kelemane bisi misa bhabobadi khan prithibi te ulaikene ase.",
+      "reference": "Beloved, don’t believe every spirit, but test the spirits, whether they are of God, because many false prophets have gone out into the world.",
+      "hypothesis": "You therefore, beloved, knowing these things beforehand, beware, lest being carried away with the error of the wicked, you fall from your own steadfastness.",
+      "chrf++": 22.66,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu pora tumikhan Isor laga Atma to janibo- kun manu Jisu Khrista to sharir hoi kene Isor pora ahise koi kene shikar kore,",
+      "reference": "By this you know the Spirit of God: every spirit who confesses that Jesus Christ has come in the flesh is of God,",
+      "hypothesis": "and that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.",
+      "chrf++": 34.06,
+      "engine": "memory"
+    },
+    {
+      "source": "aru kun atma pora Jisu to Isor pora ahise koi kene shikar nakore. Etu Khrista bhirodh kora laga atma ase, jun ahibole ase koi kene tumikhan hunise, aru etiya tai prithibi te ahi jaise.",
+      "reference": "and every spirit who doesn’t confess that Jesus Christ has come in the flesh is not of God; and this is the spirit of the Antichrist, of whom you have heard that it comes. Now it is in the world already.",
+      "hypothesis": "But the hour comes, and now is, when the true worshipers will worship the Father in spirit and truth, for the Father seeks such to be his worshipers.",
+      "chrf++": 18.79,
+      "engine": "memory"
+    },
+    {
+      "source": "Tumikhan Isor pora ase, morom laga bacha khan, aru taikhan ke jiti loise, kelemane etu ekjon kun tumi logote ase Tai etu duniya te thaka ekjon pora bhi sobse dangor ase.",
+      "reference": "You are of God, little children, and have overcome them, because greater is he who is in you than he who is in the world.",
+      "hypothesis": "“For I tell you, among those who are born of women there is not a greater prophet than John the Baptizer; yet he who is least in God’s Kingdom is greater than he.”",
+      "chrf++": 29.18,
+      "engine": "memory"
+    },
+    {
+      "source": "Taikhan duniya laga ase; etu nimite taikhan ki koi etu duniya laga he ase, aru duniya laga manu khan taikhan laga kotha he hune.",
+      "reference": "They are of the world. Therefore they speak of the world, and the world hears them.",
+      "hypothesis": "I have given them your word. The world hated them because they are not of the world, even as I am not of the world.",
+      "chrf++": 48.88,
+      "engine": "memory"
+    },
+    {
+      "source": "Amikhan Isor pora ase. Kun manu Isor ke jane amikhan laga kotha hune. Aru kun manu Isor pora nohoi amikhan laga kotha nahune. Etu pora amikhan jane hosa laga atma aru misa laga atma.",
+      "reference": "We are of God. He who knows God listens to us. He who is not of God doesn’t listen to us. By this we know the spirit of truth, and the spirit of error.",
+      "hypothesis": "We know that God doesn’t listen to sinners, but if anyone is a worshiper of God and does his will, he listens to him.",
+      "chrf++": 33.0,
+      "engine": "memory"
+    },
+    {
+      "source": "Morom laga bhai khan, amikhan ekjon-ekjon ke morom koribo, kelemane morom to Isor pora he ahe, aru kun manu morom kore tai Isor pora jonom loise, kelemane Isor to morom ase.",
+      "reference": "Beloved, let’s love one another, for love is of God; and everyone who loves has been born of God and knows God.",
+      "hypothesis": "Owe no one anything, except to love one another; for he who loves his neighbor has fulfilled the law.",
+      "chrf++": 31.38,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu morom kori bole najane tai Isor ke najane, kelemane Isor to morom ase.",
+      "reference": "He who doesn’t love doesn’t know God, for God is love.",
+      "hypothesis": "for the great day of his wrath has come, and who is able to stand?”",
+      "chrf++": 13.01,
+      "engine": "memory"
+    },
+    {
+      "source": "Kelemane Isor laga etu morom amikhan ke dikhai diya nimite, Isor pora Tai laga ekjon morom thaka Putro ke duniya te pathai dise aru etu pora moi khan sob Tai logote jinda hoi jabo.",
+      "reference": "By this God’s love was revealed in us, that God has sent his only born Son into the world that we might live through him.",
+      "hypothesis": "For the Father has affection for the Son, and shows him all things that he himself does. He will show him greater works than these, that you may marvel.",
+      "chrf++": 20.45,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu laga morom to, amikhan pora Isor ke morom kora karone nohoi, kintu Tai pora amikhan ke morom korise, aru Tai amikhan ke Tai laga Putro pathaise amikhan ke paap pora bacha bole nimite.",
+      "reference": "In this is love, not that we loved God, but that he loved us, and sent his Son as the atoning sacrifice for our sins.",
+      "hypothesis": "For what the law couldn’t do, in that it was weak through the flesh, God did, sending his own Son in the likeness of sinful flesh and for sin, he condemned sin in the flesh,",
+      "chrf++": 23.98,
+      "engine": "memory"
+    },
+    {
+      "source": "Morom laga bhai khan, jodi Isor pora amikhan ke iman morom korise, titia hoile amikhan bhi ekjon-ekjon ke morom kori bole lage.",
+      "reference": "Beloved, if God loved us in this way, we also ought to love one another.",
+      "hypothesis": "If we live by the Spirit, let’s also walk by the Spirit.",
+      "chrf++": 13.14,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu bhi Isor ke kitia bhi dikha nai. Jodi amikhan ekjon-ekjon ke morom kore, Isor amikhan logote thake, aru Tai laga morom to amikhan logot bhal bonai diye.",
+      "reference": "No one has seen God at any time. If we love one another, God remains in us, and his love has been perfected in us.",
+      "hypothesis": "No one has seen God at any time. The only born Son, who is in the bosom of the Father, has declared him.",
+      "chrf++": 39.33,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu pora Isor amikhan logote ase koi kene jane, kelemane Tai laga Atma amikhan ke dise.",
+      "reference": "By this we know that we remain in him and he in us, because he has given us of his Spirit.",
+      "hypothesis": "For through him we both have our access in one Spirit to the Father.",
+      "chrf++": 16.51,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru, amikhan dikhise aru etu laga gawahi ase Baba pora Tai laga Putro ke etu duniya laga Tran-korta hobole pathaise.",
+      "reference": "We have seen and testify that the Father has sent the Son as the Savior of the world.",
+      "hypothesis": "They said to the woman, “Now we believe, not because of your speaking; for we have heard for ourselves, and know that this is indeed the Christ, the Savior of the world.”",
+      "chrf++": 36.69,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu nijor laga mukh pora shikar kore Jisu he Isor laga Putro ase koi kene, Isor tai logote ase aru tai bhi Isor logote ase.",
+      "reference": "Whoever confesses that Jesus is the Son of God, God remains in him, and he in God.",
+      "hypothesis": "and that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.",
+      "chrf++": 32.72,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru, Isor pora amikhan ke morom kora to janise aru biswas korise. Isor to morom ase, aru kun manu etu morom te thake tai Isor logote ase, aru Isor bhi tai logote ase.",
+      "reference": "We know and have believed the love which God has for us. God is love, and he who remains in love remains in God, and God remains in him.",
+      "hypothesis": "One who has my commandments and keeps them, that person is one who loves me. One who loves me will be loved by my Father, and I will love him, and will reveal myself to him.”",
+      "chrf++": 23.25,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu nimite, morom to amikhan laga majote bhal bonai dise, etu pora amikhan bisar kora laga dinte bharosa kori kene thakibo, kelemane Khrista thaka nisena, amikhan bhi etu duniya te thaki ase.",
+      "reference": "In this, love has been made perfect among us, that we may have boldness in the day of judgment, because as he is, even so we are in this world.",
+      "hypothesis": "For I most certainly, as being absent in body but present in spirit, have already, as though I were present, judged him who has done this thing.",
+      "chrf++": 21.51,
+      "engine": "memory"
+    },
+    {
+      "source": "Morom te eku bhoi nai. Kintu, hosa morom pora sob bhoi phelai diye, kelemane bhoi to sajai pabole nimite ase. Kintu kun manu bhoi kore, morom to tai logote nai.",
+      "reference": "There is no fear in love; but perfect love casts out fear, because fear has punishment. He who fears is not made perfect in love.",
+      "hypothesis": "For in Christ Jesus neither circumcision nor uncircumcision amounts to anything, but faith working through love.",
+      "chrf++": 15.26,
+      "engine": "memory"
+    },
+    {
+      "source": "Amikhan morom kore kelemane Isor pora poila amikhan ke morom korise.",
+      "reference": "We love him, because he first loved us.",
+      "hypothesis": "for the Father himself loves you, because you have loved me, and have believed that I came from God.",
+      "chrf++": 30.12,
+      "engine": "memory"
+    },
+    {
+      "source": "Jodi kunba manu koi, “Moi Isor ke morom kore,” kintu nijor laga bhai ke ghin kore, tai misa koi ase. Kun manu tai laga nijor bhai ke morom nakore, kun tai dikhise, Isor ke kitia bhi morom kori bole na paribo, kunke tai dikha nai.",
+      "reference": "If a man says, “I love God,” and hates his brother, he is a liar; for he who doesn’t love his brother whom he has seen, how can he love God whom he has not seen?",
+      "hypothesis": "“If anyone comes to me, and doesn’t disregard his own father, mother, wife, children, brothers, and sisters, yes, and his own life also, he can’t be my disciple.",
+      "chrf++": 21.85,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru, etu he sikhai diya kotha ase kun to amikhan Khrista nimite rakhise, kun manu Isor ke morom kore tai nijor laga bhai ke bhi morom kori bole lage.",
+      "reference": "This commandment we have from him, that he who loves God should also love his brother.",
+      "hypothesis": "But let him who is taught in the word share all good things with him who teaches.",
+      "chrf++": 16.15,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu Jisu he Khrista ase koi kene biswas kore tai Isor pora jonom loise, aru kun manu Isor ke morom kore, Tai jonom kora bacha ke bhi morom kore.",
+      "reference": "Whoever believes that Jesus is the Christ has been born of God. Whoever loves the Father also loves the child who is born of him.",
+      "hypothesis": "Jesus cried out and said, “Whoever believes in me, believes not in me, but in him who sent me.",
+      "chrf++": 21.19,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu pora jane amikhan Isor laga bacha khan ke morom kore, jitia amikhan Isor ke morom kore aru Tai laga hukum khan ke mane.",
+      "reference": "By this we know that we love the children of God, when we love God and keep his commandments.",
+      "hypothesis": "“This is my commandment, that you love one another, even as I have loved you.",
+      "chrf++": 23.86,
+      "engine": "memory"
+    },
+    {
+      "source": "Kelemane etu he Isor nimite morom ase: amikhan Tai laga hukum khan mani kene thaka to. Tai laga hukum khan bhari nohoi.",
+      "reference": "For this is loving God, that we keep his commandments. His commandments are not grievous.",
+      "hypothesis": "Circumcision is nothing, and uncircumcision is nothing, but what matters is keeping God’s commandments.",
+      "chrf++": 30.36,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu Isor pora jonom loise tai duniya ke jiti loise. Etu pora amikhan duniya ke jiti loise, aru amikhan laga biswas bhi.",
+      "reference": "For whatever is born of God overcomes the world. This is the victory that has overcome the world: your faith.",
+      "hypothesis": "I saw something like a sea of glass mixed with fire, and those who overcame the beast, his image, and the number of his name, standing on the sea of glass, having harps of God.",
+      "chrf++": 20.63,
+      "engine": "memory"
+    },
+    {
+      "source": "Kelemane duniya ke jiti bole para jon to dusra nohoi kintu jun pora Jisu to Isor laga Putro ase koi kene biswas kori loise.",
+      "reference": "Who is he who overcomes the world, but he who believes that Jesus is the Son of God?",
+      "hypothesis": "For God didn’t send his Son into the world to judge the world, but that the world should be saved through him.",
+      "chrf++": 29.9,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu ekjon ase kun pani aru khun pora ahise: Jisu Khrista. Tai khali pani pora aha nai, kintu pani aru khun pora ahise. Etu Pobitro Atma pora he gawahi dise kelemane Atma to hosa ase.",
+      "reference": "This is he who came by water and blood, Jesus Christ; not with the water only, but with the water and the blood. It is the Spirit who testifies, because the Spirit is the truth.",
+      "hypothesis": "for as yet he had fallen on none of them. They had only been baptized in the name of Christ Jesus.",
+      "chrf++": 13.95,
+      "engine": "memory"
+    },
+    {
+      "source": "Kelemane ta te tinjon ase kun etu laga gawah ase:",
+      "reference": "For there are three who testify:",
+      "hypothesis": "You will also testify, because you have been with me from the beginning.",
+      "chrf++": 21.68,
+      "engine": "memory"
+    },
+    {
+      "source": "Atma, aru pani, aru khun. Etu tinta eke logote mili kene ase.",
+      "reference": "the Spirit, the water, and the blood; and the three agree as one.",
+      "hypothesis": "But he who is joined to the Lord is one spirit.",
+      "chrf++": 15.63,
+      "engine": "memory"
+    },
+    {
+      "source": "Jodi amikhan pora manu khan laga gawahi loi, Isor laga gawahi he etu pora bhi dangor ase. Kelemane Isor laga gawahi to eneka ase, Tai pora he Tai laga Putro laga gawahi dise.",
+      "reference": "If we receive the witness of men, the witness of God is greater; for this is God’s testimony which he has testified concerning his Son.",
+      "hypothesis": "Yes, we are also found false witnesses of God, because we testified about God that he raised up Christ, whom he didn’t raise up if it is true that the dead are not raised.",
+      "chrf++": 26.31,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu Isor laga Putro ke biswas kore, tai nijor laga gawahi ase. Kun manu Isor ke biswas nakore Taike misa bonai dise, kelemane tai Isor pora Tai laga Putro laga gawahi diya to biswas kora nai.",
+      "reference": "He who believes in the Son of God has the testimony in himself. He who doesn’t believe God has made him a liar, because he has not believed in the testimony that God has given concerning his Son.",
+      "hypothesis": "But to him who doesn’t work, but believes in him who justifies the ungodly, his faith is accounted for righteousness.",
+      "chrf++": 21.66,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu gawahi ase: Isor amikhan ke anonto jibon dise, aru etu jibon Tai laga Putro Jisu logote ase.",
+      "reference": "The testimony is this: that God gave to us eternal life, and this life is in his Son.",
+      "hypothesis": "This is eternal life, that they should know you, the only true God, and him whom you sent, Jesus Christ.",
+      "chrf++": 32.27,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu logote Jisu ase tai jibon paise. Kintu kun manu logote Isor laga Putro Jisu nai tai jibon panai.",
+      "reference": "He who has the Son has the life. He who doesn’t have God’s Son doesn’t have the life.",
+      "hypothesis": "In the past, you were not a people, but now are God’s people, who had not obtained mercy, but now have obtained mercy.",
+      "chrf++": 18.02,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi tumikhan ke etu kotha khan likhi ase etu pora tumikhan anonto jibon ase koi kene janibo- tumikhan kun Isor laga Putro Jisu Khrista laga naam te biswas kore.",
+      "reference": "These things I have written to you who believe in the name of the Son of God, that you may know that you have eternal life, and that you may continue to believe in the name of the Son of God.",
+      "hypothesis": "but these are written that you may believe that Jesus is the Christ, the Son of God, and that believing you may have life in his name.",
+      "chrf++": 38.88,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru, etu bharosa amikhan Isor logote ase koi kene jane, jodi Tai laga itcha hisab te amikhan mange, Tai amikhan ke hunibo.",
+      "reference": "This is the boldness which we have toward him, that if we ask anything according to his will, he listens to us.",
+      "hypothesis": "But we know that the law is good if a person uses it lawfully,",
+      "chrf++": 13.25,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru, jodi Isor amikhan ke hune koi kene jane- amikhan Tai logote ki mangibo- Tai logote moi khan ki mangise etu sob paise koi kene jane.",
+      "reference": "And if we know that he listens to us, whatever we ask, we know that we have the petitions which we have asked of him.",
+      "hypothesis": "Therefore I tell you, all things whatever you pray and ask for, believe that you have received them, and you shall have them.",
+      "chrf++": 23.31,
+      "engine": "memory"
+    },
+    {
+      "source": "Jodi kunba manu tai laga bhai ke paap kaam kori thaka dikhe aru etu pora mora nai koile, tai prathana kori bole lage, aru Isor pora taike jibon dibo. Moi eitu khan ke koi ase kun paap kori kene mora to dikha nai. Kunba paap to mora dikhi pai; Moi etu nimite prathana kori bole lage koi kene kowa nai.",
+      "reference": "If anyone sees his brother sinning a sin not leading to death, he shall ask, and God will give him life for those who sin not leading to death. There is sin leading to death. I don’t say that he should make a request concerning this.",
+      "hypothesis": "Wake up righteously and don’t sin, for some have no knowledge of God. I say this to your shame.",
+      "chrf++": 13.68,
+      "engine": "memory"
+    },
+    {
+      "source": "Dharmik nathaka kaam khan sob paap ase, kintu kunba paap karone mora laga sajai nadiye.",
+      "reference": "All unrighteousness is sin, and there is sin not leading to death.",
+      "hypothesis": "So then as through one trespass, all men were condemned; even so through one act of righteousness, all men were justified to life.",
+      "chrf++": 25.23,
+      "engine": "memory"
+    },
+    {
+      "source": "Amikhan jane kun manu Isor pora jonom hoise tai paap nakore. Kintu tai ekjon kun Isor pora jonom hoise taike bachai kene rakhe, aru dusto atma pora taike dukh dibole na paribo.",
+      "reference": "We know that whoever is born of God doesn’t sin, but he who was born of God keeps himself, and the evil one doesn’t touch him.",
+      "hypothesis": "But as then, he who was born according to the flesh persecuted him who was born according to the Spirit, so also it is now.",
+      "chrf++": 26.23,
+      "engine": "memory"
+    },
+    {
+      "source": "Amikhan Isor pora ase koi kene jane, aru amikhan jane pura duniya to ekjon biya thaka laga sakti te ase.",
+      "reference": "We know that we are of God, and the whole world lies in the power of the evil one.",
+      "hypothesis": "Now we know that whatever things the law says, it speaks to those who are under the law, that every mouth may be closed, and all the world may be brought under the judgment of God.",
+      "chrf++": 33.54,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu amikhan jane Isor laga Putro pora ahi kene amikhan ke gyaan dise, etu pora Tai hosa ase koi kene moi khan janibo. Aru, moi khan Tai logote ase kun hosa ase, Tai laga Putro Jisu Khrista. Etu ekjon hosa Isor aru anonto jibon ase.",
+      "reference": "We know that the Son of God has come and has given us an understanding, that we know him who is true; and we are in him who is true, in his Son Jesus Christ. This is the true God and eternal life.",
+      "hypothesis": "This is eternal life, that they should know you, the only true God, and him whom you sent, Jesus Christ.",
+      "chrf++": 29.58,
+      "engine": "memory"
+    },
+    {
+      "source": "Bacha khan, nijorke murti puja kora khan pora bachai kene thakibi.",
+      "reference": "Little children, keep yourselves from idols.",
+      "hypothesis": "Therefore, my beloved, flee from idolatry.",
+      "chrf++": 23.37,
+      "engine": "memory"
+    },
+    {
+      "source": "Bura manu pora basi luwa mahila aru tai laga bacha khan ke likhi ase, kunkhan ke moi hosa te morom kore- aru moi ekla nohoi, kintu sobke kun hosa janise-",
+      "reference": "The elder, to the chosen lady and her children, whom I love in truth, and not I only, but also all those who know the truth,",
+      "hypothesis": "Even if I do judge, my judgment is true, for I am not alone, but I am with the Father who sent me.",
+      "chrf++": 17.76,
+      "engine": "memory"
+    },
+    {
+      "source": "kelemane hosa to amikhan logote thaki ase aru etu hodai nimite amikhan logote thakibo.",
+      "reference": "for the truth’s sake, which remains in us, and it will be with us forever:",
+      "hypothesis": "to whom we gave no place in the way of subjection, not for an hour, that the truth of the Good News might continue with you.",
+      "chrf++": 21.5,
+      "engine": "memory"
+    },
+    {
+      "source": "Anugrah, daya, aru shanti Baba Isor aru Jisu Khrista laga asirbad tumikhan logote thakibi, jun Putro laga Baba ase, hosa aru morom te.",
+      "reference": "Grace, mercy, and peace will be with us, from God the Father and from the Lord Jesus Christ, the Son of the Father, in truth and love.",
+      "hypothesis": "Peace be to the brothers, and love with faith, from God the Father and the Lord Jesus Christ.",
+      "chrf++": 47.07,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi bisi khushi kori ase etu huni kene tumikhan laga kunba bacha khan hosa laga rasta te berai ase, jineka amikhan Baba khan pora amikhan etu hukum to paise.",
+      "reference": "I rejoice greatly that I have found some of your children walking in truth, even as we have been commanded by the Father.",
+      "hypothesis": "Your father Abraham rejoiced to see my day. He saw it and was glad.”",
+      "chrf++": 13.15,
+      "engine": "memory"
+    },
+    {
+      "source": "Etiya moi tumike anurodh kori ase, mahila- moi tumike notun hukum likhi kene dibole nimite nohoi, kintu shuru pora juntu thakise- amikhan ekjon-ekjon ke morom kori bole lage.",
+      "reference": "Now I beg you, dear lady, not as though I wrote to you a new commandment, but that which we had from the beginning, that we love one another.",
+      "hypothesis": "A new commandment I give to you, that you love one another. Just as I have loved you, you also love one another.",
+      "chrf++": 37.12,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu morom ase, ki amikhan Tai laga hukum hisab te berai kene jabole lage. Etu hukum ase juntu shuru pora tumi hunise juntu laga rasta te tumi bera bole lage.",
+      "reference": "This is love, that we should walk according to his commandments. This is the commandment, even as you heard from the beginning, that you should walk in it.",
+      "hypothesis": "Leaping up, he stood and began to walk. He entered with them into the temple, walking, leaping, and praising God.",
+      "chrf++": 18.0,
+      "engine": "memory"
+    },
+    {
+      "source": "Kelemane manu khan ke thogai diya duniya te bisi jai kene ase, aru taikhan etu shikar nakore Jisu Khrista sharir hoi kene ahise. Tai thogai diya manu aru Khrista bhirodhi ase.",
+      "reference": "For many deceivers have gone out into the world, those who don’t confess that Jesus Christ came in the flesh. This is the deceiver and the Antichrist.",
+      "hypothesis": "For many will come in my name, saying, ‘I am the Christ,’ and will lead many astray.",
+      "chrf++": 15.13,
+      "engine": "memory"
+    },
+    {
+      "source": "Nijorke sai lobi, amikhan ki nimite kaam kori sele tumi etu naharabo karone, kintu etu pora tumi pura iman to pabo.",
+      "reference": "Watch yourselves, that we don’t lose the things which we have accomplished, but that we receive a full reward.",
+      "hypothesis": "But let each man examine his own work, and then he will have reason to boast in himself, and not in someone else.",
+      "chrf++": 16.15,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu Jisu Khrista pora ki sikhai dise etu noloikene age jai, titia hoile tai logote Isor nai. Kun manu etu kotha khan mani kene thake, tai logote Baba aru Putro duijon bhi ase.",
+      "reference": "Whoever transgresses and doesn’t remain in the teaching of Christ doesn’t have God. He who remains in the teaching has both the Father and the Son.",
+      "hypothesis": "I command you in the sight of God, and the Lord Jesus Christ, and the chosen angels, that you observe these things without prejudice, doing nothing by partiality.",
+      "chrf++": 24.8,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu tumi laga usorte ahe aru eneka nahikai, taike ghor bhitor te namati bhi aru taike salam nadibi.",
+      "reference": "If anyone comes to you and doesn’t bring this teaching, don’t receive him into your house, and don’t welcome him,",
+      "hypothesis": "“No one, when he has lit a lamp, puts it in a cellar or under a basket, but on a stand, that those who come in may see the light.",
+      "chrf++": 14.29,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun taike salam diye, tai laga biya kaam khan te tai bhi bhag loijai.",
+      "reference": "for he who welcomes him participates in his evil deeds.",
+      "hypothesis": "Greet the assembly that is in their house. Greet Epaenetus, my beloved, who is the first fruits of Achaia to Christ.",
+      "chrf++": 15.74,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi tumikhan logote bisi kotha likhi bole ase, kintu moi kagos te aru siyahi pora etu kotha khan likhi bole mon nai. Hoilebi, moi tumikhan logote ahi kene ekjon-ekjon logote kotha kori bole mon ase, etu pora tumikhan laga khushi aru bhi bisi dangor hobo.",
+      "reference": "Having many things to write to you, I don’t want to do so with paper and ink, but I hope to come to you and to speak face to face, that our joy may be made full.",
+      "hypothesis": "I tell you that even so there will be more joy in heaven over one sinner who repents, than over ninety-nine righteous people who need no repentance.",
+      "chrf++": 15.43,
+      "engine": "memory"
+    },
+    {
+      "source": "Tumikhan pora basi luwa bhoini laga bacha khan pora bhi tumike salam di ase.",
+      "reference": "The children of your chosen sister greet you. Amen.",
+      "hypothesis": "She who is in Babylon, chosen together with you, greets you. So does Mark, my son.",
+      "chrf++": 25.49,
+      "engine": "memory"
+    },
+    {
+      "source": "Bura manu pora morom thaka Gaius ekjon cholawta ke likhi ase, kunke moi hosa pora morom kore.",
+      "reference": "The elder to Gaius the beloved, whom I love in truth.",
+      "hypothesis": "The sisters therefore sent to him, saying, “Lord, behold, he for whom you have great affection is sick.”",
+      "chrf++": 18.03,
+      "engine": "memory"
+    },
+    {
+      "source": "Morom laga bhai, Moi prathana kore tumi logote sob bhal thakibo aru tumi laga gaw bhi bhal thakibo, tumi laga atma bhal kori kene thaka nisena.",
+      "reference": "Beloved, I pray that you may prosper in all things and be healthy, even as your soul prospers.",
+      "hypothesis": "For if I pray in another language, my spirit prays, but my understanding is unfruitful.",
+      "chrf++": 18.04,
+      "engine": "memory"
+    },
+    {
+      "source": "Kelemane moi khushi pai jitia bhai khan ahi kene tumi hosa te berai thaka laga gawahi diye, tumi hosa te berai thaka nisena.",
+      "reference": "For I rejoiced greatly when brothers came and testified about your truth, even as you walk in truth.",
+      "hypothesis": "For I delight in God’s law after the inward person,",
+      "chrf++": 12.89,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi etu pora aru dangor khushi nai, jitia ami laga bacha khan hosa rasta te berai ase koi kene moi hune.",
+      "reference": "I have no greater joy than this: to hear about my children walking in truth.",
+      "hypothesis": "However, when he, the Spirit of truth, has come, he will guide you into all truth, for he will not speak from himself; but whatever he hears, he will speak. He will declare to you things that are coming.",
+      "chrf++": 17.94,
+      "engine": "memory"
+    },
+    {
+      "source": "Morom laga bhai, tumi biswas pora ki kori ase etu tumi bhai khan nimite aru bahar manu khan nimite kori ase",
+      "reference": "Beloved, you do a faithful work in whatever you accomplish for those who are brothers and strangers.",
+      "hypothesis": "But that you also may know my affairs, how I am doing, Tychicus, the beloved brother and faithful servant in the Lord, will make known to you all things.",
+      "chrf++": 27.47,
+      "engine": "memory"
+    },
+    {
+      "source": "kun pora tumikhan laga morom kora laga gawahi girja manu khan laga usorte dise. Isor laga usorte bhal mohima hobole nimite tumi manu ke bhal pora saikene taikhan ke safar kori bole pathai dibi,",
+      "reference": "They have testified about your love before the assembly. You will do well to send them forward on their journey in a way worthy of God,",
+      "hypothesis": "He said to them, “You are those who justify yourselves in the sight of men, but God knows your hearts. For that which is exalted among men is an abomination in the sight of God.",
+      "chrf++": 23.25,
+      "engine": "memory"
+    },
+    {
+      "source": "kelemane Isor laga naam nimite taikhan ulaikene jaise, aru Porjati manu khan pora eku luwa nai.",
+      "reference": "because for the sake of the Name they went out, taking nothing from the Gentiles.",
+      "hypothesis": "For “the name of God is blasphemed among the Gentiles because of you,” just as it is written.",
+      "chrf++": 28.65,
+      "engine": "memory"
+    },
+    {
+      "source": "Amikhan bhi taikhan ke mati bole lage, etu pora amikhan bhi hosa te kaam kora sathi hoi jabo.",
+      "reference": "We therefore ought to receive such, that we may be fellow workers for the truth.",
+      "hypothesis": "For most certainly I tell you, whoever may tell this mountain, ‘Be taken up and cast into the sea,’ and doesn’t doubt in his heart, but believes that what he says is happening, he shall have whatever he says.",
+      "chrf++": 16.85,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi manu khan nimite kiba likhise, kintu Diotrephes, kun manu laga age te thaki bole nimite bhal pai, tai amikhan ke swekar nakore.",
+      "reference": "I wrote to the assembly, but Diotrephes, who loves to be first among them, doesn’t accept what we say.",
+      "hypothesis": "As it is written in the prophets, “Behold, I send my messenger before your face, who will prepare your way before you:",
+      "chrf++": 18.38,
+      "engine": "memory"
+    },
+    {
+      "source": "Jodi moi ahe, Moi tai ki kaam kori ase etu sabo, amikhan laga bhirodh te biya kotha kori ase. Kintu eneka kori kene bhi khushi panai, tai nijor pora bhi bhai kokai khan ke mati bole mon nai, aru kun manu ke mati bole mon kore taikhan ke rukhai diye aru girja laga bahar te ulai diye.",
+      "reference": "Therefore, if I come, I will call attention to his deeds which he does, unjustly accusing us with wicked words. Not content with this, he doesn’t receive the brothers himself, and those who would, he forbids and throws out of the assembly.",
+      "hypothesis": "Don’t speak against one another, brothers. He who speaks against a brother and judges his brother, speaks against the law and judges the law. But if you judge the law, you are not a doer of the law but a judge.",
+      "chrf++": 19.06,
+      "engine": "memory"
+    },
+    {
+      "source": "Morom laga bhai, biya kaam khan nokoribi kintu ki to bhal kaam ase etu he koribi. Kun manu bhal kaam kore tai Isor laga ase; aru kun manu biya kaam kore tai Isor ke dikha nai.",
+      "reference": "Beloved, don’t imitate that which is evil, but that which is good. He who does good is of God. He who does evil hasn’t seen God.",
+      "hypothesis": "and in godliness, brotherly affection; and in brotherly affection, love.",
+      "chrf++": 9.56,
+      "engine": "memory"
+    },
+    {
+      "source": "Demetrius ke sob manu pora aru hosa pora tai nijor laga gawahi diye. Kintu amikhan bhi gawahi diye, aru tumikhan jane amikhan laga gawahi to hosa ase.",
+      "reference": "Demetrius has the testimony of all, and of the truth itself; yes, we also testify, and you know that our testimony is true.",
+      "hypothesis": "Most certainly I tell you, we speak that which we know and testify of that which we have seen, and you don’t receive our witness.",
+      "chrf++": 27.21,
+      "engine": "memory"
+    },
+    {
+      "source": "Moi tumikhan ke bisi kotha likhi bole ase, kintu moi kolom aru siyahi pora etu kotha khan tumikhan ke likhi bole mon nai.",
+      "reference": "I had many things to write to you, but I am unwilling to write to you with ink and pen;",
+      "hypothesis": "But I tell you that Elijah has come, and they have also done to him whatever they wanted to, even as it is written about him.”",
+      "chrf++": 18.42,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu moi tumikhan ke joldi lok pabole itcha kori ase, titia moi khan ekjon-ekjon logote bohi kene kotha koribo. Tumikhan logote shanti thaki bole dibi. Sathi khan bhi tumikhan ke salam di ase. Naam loi kene ta te thaka sathi khan ke salam di dibi.",
+      "reference": "but I hope to see you soon. Then we will speak face to face. Peace be to you. The friends greet you. Greet the friends by name.",
+      "hypothesis": "Greet one another with a kiss of love. Peace be to all of you who are in Christ Jesus. Amen.",
+      "chrf++": 23.03,
+      "engine": "memory"
+    },
+    {
+      "source": "Jude, Jisu Khrista laga ekjon noukar, aru moi James laga bhai, pora likhi ase kunkhan ke mati loise, Baba Isor laga morom kora khan, aru Jisu Khrista nimite rakhise:",
+      "reference": "Jude, a servant of Jesus Christ, and brother of James, to those who are called, sanctified by God the Father, and kept for Jesus Christ:",
+      "hypothesis": "James, a servant of God and of the Lord Jesus Christ, to the twelve tribes which are in the Dispersion: Greetings.",
+      "chrf++": 34.94,
+      "engine": "memory"
+    },
+    {
+      "source": "Daya aru shanti aru morom apuni khan logote bhorta hoi thaki bole dibo.",
+      "reference": "May mercy, peace, and love be multiplied to you.",
+      "hypothesis": "As many as walk by this rule, peace and mercy be on them, and on God’s Israel.",
+      "chrf++": 28.6,
+      "engine": "memory"
+    },
+    {
+      "source": "Morom thaka bhai khan, moi khan laga poritran pabole laga kotha apuni khan logote likhi bole kosis korise, aru moi apuni khan ke mon dangor kori dibole nimite etu bhi likhi ase pobitro manu khan nimite ki kaam kori bole dise etu biswas aru mon pora dukh uthaikene hoile bhi kori kene thakibi.",
+      "reference": "Beloved, while I was very eager to write to you about our common salvation, I was constrained to write to you exhorting you to contend earnestly for the faith which was once for all delivered to the saints.",
+      "hypothesis": "Through Silvanus, our faithful brother, as I consider him, I have written to you briefly, exhorting and testifying that this is the true grace of God in which you stand.",
+      "chrf++": 23.05,
+      "engine": "memory"
+    },
+    {
+      "source": "Kelemane apuni khan majot pora kunba manu khan lukai kene biya rasta te jaise, kunkhan ke poila pora letera kaam kori dibole nimite pathaise, etu biya manu khan pora mangso laga itcha loi kene Isor laga morom logot bodli kori dise, aru taikhan Jisu Khrista Probhu aru Malik ase koi kene namane.",
+      "reference": "For there are certain men who crept in secretly, even those who were long ago written about for this condemnation: ungodly men, turning the grace of our God into indecency, and denying our only Master, God, and Lord, Jesus Christ.",
+      "hypothesis": "But concerning brotherly love, you have no need that one write to you. For you yourselves are taught by God to love one another,",
+      "chrf++": 14.13,
+      "engine": "memory"
+    },
+    {
+      "source": "Etiya moi apuni khan ke etu kobole nimite itcha kori ase- apuni khan etu sob jani kene thakile bhi- Jisu pora Egypt desh pora manu khan ke bachai loise, kintu pichete kunkhan Taike biswas kora nai taikhan ke khotom kori dise.",
+      "reference": "Now I desire to remind you, though you already know this, that the Lord, having saved a people out of the land of Egypt, afterward destroyed those who didn’t believe.",
+      "hypothesis": "“He saved others, but he can’t save himself. If he is the King of Israel, let him come down from the cross now, and we will believe in him.",
+      "chrf++": 18.7,
+      "engine": "memory"
+    },
+    {
+      "source": "Aru sorgodoth kunkhan nijor laga adhikar diya to bhal pora chola nai, kintu taike diya asol jaga to chari dise- Isor pora taikhan ke kitia bhi khuli bole napara laga loha rusi pora bandhi dise, andhera jagate, jitia tak Isor laga bisar laga din ahi kene napunche.",
+      "reference": "Angels who didn’t keep their first domain, but deserted their own dwelling place, he has kept in everlasting bonds under darkness for the judgment of the great day.",
+      "hypothesis": "For if God didn’t spare angels when they sinned, but cast them down to Tartarus, and committed them to pits of darkness to be reserved for judgment;",
+      "chrf++": 27.4,
+      "engine": "memory"
+    },
+    {
+      "source": "Sodom aru Gomorrah aru usorte thaka sheher dusra khan ke kora nisena he, taikhan bhi nijorke bebichari laga kaam te nijorke hali se, aru ki to Isor pora kori bole diya nai etu laga biya itcha kaam khan he korise. Taikhan dusra manu khan nimite ekta sakhi hoise kunkhan norok laga anonto jui te dukh paikene jolibo.",
+      "reference": "Even as Sodom and Gomorrah and the cities around them, having in the same way as these given themselves over to sexual immorality and gone after strange flesh, are shown as an example, suffering the punishment of eternal fire.",
+      "hypothesis": "As Isaiah has said before, “Unless the Lord of Armies had left us a seed, we would have become like Sodom, and would have been made like Gomorrah.”",
+      "chrf++": 15.48,
+      "engine": "memory"
+    },
+    {
+      "source": "Etu nisena he, sapna dikhi thaka manu khan bhi nijor laga gaw letera kori ase. Kintu taikhan Isor laga adhikar ke mana nai, aru taikhan mohima te thaka khan uporte biya kotha khan kori thake.",
+      "reference": "Yet in the same way, these also in their dreaming defile the flesh, despise authority, and slander celestial beings.",
+      "hypothesis": "The wife doesn’t have authority over her own body, but the husband does. Likewise also the husband doesn’t have authority over his own body, but the wife does.",
+      "chrf++": 23.05,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu prodhan sorgodoth Michael bhi, jitia tai bhoot logote lorai kori thakise aru Moses laga morija gaw nimite kotha namili kene thakise, tai uporte ekdom biya laga bisar ani diya nai. Kintu tai koise, “Probhu he tumike gali dibi!”",
+      "reference": "But Michael, the archangel, when contending with the devil and arguing about the body of Moses, dared not bring against him an abusive condemnation, but said, “May the Lord rebuke you!”",
+      "hypothesis": "There was war in the sky. Michael and his angels made war on the dragon. The dragon and his angels made war.",
+      "chrf++": 14.91,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu etu manu khan pora taikhan bujibo napara khan laga biya kotha koi kene berai thake, aru taikhan nijor laga ki bhabona pora eneka kore, ekta bhal-biya janibo napara janwar nisena, etu pora he taikhan ke khotom kori diye.",
+      "reference": "But these speak evil of whatever things they don’t know. They are destroyed in these things that they understand naturally, like the creatures without reason.",
+      "hypothesis": "But these, as unreasoning creatures, born natural animals to be taken and destroyed, speaking evil in matters about which they are ignorant, will in their destroying surely be destroyed,",
+      "chrf++": 34.06,
+      "engine": "memory"
+    },
+    {
+      "source": "Hai ase taikhan ke! Kelemane taikhan Cain laga rasta te beraise aru Balaam pora galti kora nisena, kiba labh pabole nimite bisarise. Taikhan Korah pora kotha namani kene thaka logote nijorke harai dise.",
+      "reference": "Woe to them! For they went in the way of Cain, and ran riotously in the error of Balaam for hire, and perished in Korah’s rebellion.",
+      "hypothesis": "For it would be better for them not to have known the way of righteousness, than after knowing it, to turn back from the holy commandment delivered to them.",
+      "chrf++": 26.11,
+      "engine": "memory"
+    },
+    {
+      "source": "Eitu khan to hoile apuni khan morom laga kha luwa jagate lukai kene thaka ta te ulai thaka jongol nisena ase, aru apuni khan logote sorom nathaki kene eke logote kha luwa kore- taikhan mer rukha manu khan ase kun nijor he khilai. Taikhan pani nathaka badal nisena he ase, aru hawa pora loijai. Taikhan sukha mohina laga ghas te phul ulabole napara nisena he ase- duibar morise, aru jor pora ulaikene phelai dise.",
+      "reference": "These are hidden rocky reefs in your love feasts when they feast with you, shepherds who without fear feed themselves; clouds without water, carried along by winds; autumn trees without fruit, twice dead, plucked up by the roots;",
+      "hypothesis": "For, “All flesh is like grass, and all of man’s glory like the flower in the grass. The grass withers, and its flower falls;",
+      "chrf++": 11.68,
+      "engine": "memory"
+    },
+    {
+      "source": "Taikhan samundar te biya hawa jai thaka nisena ase, taikhan nijor laga sorom to ulaikene dikhai ase. Taikhan eku asha nathakikena berai thaka tara nisena he ase, aru tai nimite dukh laga andhera to hodai nimite rakhidise.",
+      "reference": "wild waves of the sea, foaming out their own shame; wandering stars, for whom the blackness of darkness has been reserved forever.",
+      "hypothesis": "These are wells without water, clouds driven by a storm, for whom the blackness of darkness has been reserved forever.",
+      "chrf++": 55.2,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu Enoch bhi, jun Adam laga piche aha ekjon ase, taikhan nimite eneka bhabobani korise, aru koise, “Sabi! Probhu Tai laga hajar-hajar pobitro khan pora thaka khan ke loi kene ani ase.",
+      "reference": "About these also Enoch, the seventh from Adam, prophesied, saying, “Behold, the Lord came with ten thousands of his holy ones,",
+      "hypothesis": "He said to them, “Behold, when you have entered into the city, a man carrying a pitcher of water will meet you. Follow him into the house which he enters.",
+      "chrf++": 23.02,
+      "engine": "memory"
+    },
+    {
+      "source": "Tai sob uporte bisar kori bole nimite ahi ase. Kunkhan Isor pora bhal napa laga sob kisim laga beya kaam kori kene thaki ase, aru kiman paapi manu jun Isor ke bhoi nakori kene tai laga uporte bisi biya kotha koise, eitu khan sob laga uporte bisar kori bole nimite Isor ahi ase.”",
+      "reference": "to execute judgment on all, and to convict all the ungodly of all their works of ungodliness which they have done in an ungodly way, and of all the hard things which ungodly sinners have spoken against him.”",
+      "hypothesis": "He who acts unjustly, let him act unjustly still. He who is filthy, let him be filthy still. He who is righteous, let him do righteousness still. He who is holy, let him be holy still.”",
+      "chrf++": 12.77,
+      "engine": "memory"
+    },
+    {
+      "source": "Taikhan dusra logote khushi pora nathaka manu, hodai manu laga biya kotha koi thaka manu, nijor laga biya itcha te berai thaka manu khan ase. Taikhan laga mukh pora phutani laga kotha ulai thake, kun, nijor laga labh nimite dusra manu ke phusla laga kotha kori kene berai thake.",
+      "reference": "These are murmurers and complainers, walking after their lusts—and their mouth speaks proud things—showing respect of persons to gain advantage.",
+      "hypothesis": "For many walk, of whom I told you often, and now tell you even weeping, as the enemies of the cross of Christ,",
+      "chrf++": 13.21,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu apuni, morom laga bhai khan, Probhu Jisu Khrista laga apostle khan pora age te ki koi dise eitu khan sob yaad koribi.",
+      "reference": "But you, beloved, remember the words which have been spoken before by the apostles of our Lord Jesus Christ.",
+      "hypothesis": "remembering without ceasing your work of faith and labor of love and perseverance of hope in our Lord Jesus Christ, before our God and Father.",
+      "chrf++": 35.18,
+      "engine": "memory"
+    },
+    {
+      "source": "Taikhan pora apnikhan ke koise, “Duniya khotom hobole thaka homoi te misa kowa manu khan ulabo aru taikhan nijor laga biya itcha pichete he jabo.”",
+      "reference": "They said to you, “In the last time there will be mockers, walking after their own ungodly lusts.”",
+      "hypothesis": "knowing this first, that in the last days mockers will come, walking after their own lusts",
+      "chrf++": 45.04,
+      "engine": "memory"
+    },
+    {
+      "source": "Eitu khan nimite he sob bhag hoi kene alag hoijai ase; taikhan duniya laga ase aru taikhan logote Isor laga Atma nai.",
+      "reference": "These are those who cause divisions and are sensual, not having the Spirit.",
+      "hypothesis": "being darkened in their understanding, alienated from the life of God because of the ignorance that is in them, because of the hardening of their hearts.",
+      "chrf++": 18.36,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu apnikhan, morom laga bhai khan, dangor pobitro biswas pora apnikhan nijorke bonai lobi, aru Pobitro Atma pora prathana koribi.",
+      "reference": "But you, beloved, keep building up yourselves on your most holy faith, praying in the Holy Spirit.",
+      "hypothesis": "with all prayer and requests, praying at all times in the Spirit, and being watchful to this end in all perseverance and requests for all the saints.",
+      "chrf++": 23.23,
+      "engine": "memory"
+    },
+    {
+      "source": "Apnikhan nijorke Isor laga morom te rakhibi, aru Jisu Khrista laga anonto jibon aru daya nimite rukhi thakibi.",
+      "reference": "Keep yourselves in God’s love, looking for the mercy of our Lord Jesus Christ to eternal life.",
+      "hypothesis": "to Timothy, my beloved child: Grace, mercy, and peace, from God the Father and Christ Jesus our Lord.",
+      "chrf++": 26.81,
+      "engine": "memory"
+    },
+    {
+      "source": "Kun manu biswas nakori kene thaki ase tai uporte bhi daya koribi.",
+      "reference": "On some have compassion, making a distinction,",
+      "hypothesis": "As many as walk by this rule, peace and mercy be on them, and on God’s Israel.",
+      "chrf++": 13.02,
+      "engine": "memory"
+    },
+    {
+      "source": "Kintu dusra manu khan ke jui pora ulaikene bachai lobi. Isor ke bhoi koribi aru dusra khan uporte daya koribi. Aru mangso laga itcha pora letera kora kapra ke ghin koribi.",
+      "reference": "and some save, snatching them out of the fire with fear, hating even the clothing stained by the flesh.",
+      "hypothesis": "So then it is not of him who wills, nor of him who runs, but of God who has mercy.",
+      "chrf++": 13.03,
+      "engine": "memory"
+    },
+    {
+      "source": "Etiya ekjon jun apnikhan ke giribole thaka pora bachai kene rakhe aru Tai laga mohima usorte eku golti aru letera nathaki kene khushi pora khara kori bole diye,",
+      "reference": "Now to him who is able to keep them from stumbling, and to present you faultless before the presence of his glory in great joy,",
+      "hypothesis": "When they had tied him up with straps, Paul asked the centurion who stood by, “Is it lawful for you to scourge a man who is a Roman, and not found guilty?”",
+      "chrf++": 21.62,
+      "engine": "memory"
+    },
+    {
+      "source": "amikhan laga Isor aru Tran-korta Probhu Jisu Khrista ke, mohima hobole dibi, Tai laga mohanta, aru sob uporte raj kori bole dibi, aru takot, sob homoi te, etiya aru hodai tak thaki bole dibo. Amen.",
+      "reference": "to God our Savior, who alone is wise, be glory and majesty, dominion and power, both now and forever. Amen.",
+      "hypothesis": "But grow in the grace and knowledge of our Lord and Savior Jesus Christ. To him be the glory both now and forever. Amen.",
+      "chrf++": 40.28,
+      "engine": "memory"
+    }
+  ]
+}

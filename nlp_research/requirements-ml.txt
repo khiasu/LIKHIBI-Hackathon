@@ -1,0 +1,26 @@
+# Machine-learning environment: training, exporting and serving the translation models,
+# and building the lexicon and keyboard assets.
+# Tested on Windows 11, Python 3.14, NVIDIA RTX 2050 (4 GB), October 2026.
+#
+# Install PyTorch with CUDA first, from PyTorch's own index:
+#   python -m pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cu126
+# (CPU only: python -m pip install torch==2.14.1)
+# Then:
+#   python -m pip install -r nlp_research/requirements-ml.txt
+#
+# To serve the models in the dashboard, also install
+# dashboard/backend/requirements.txt into the same environment.
+
+transformers>=5.19,<6
+peft>=0.21,<1
+sentencepiece>=0.2.2
+accelerate>=1.15
+sacrebleu>=2.6
+protobuf
+# Phone model export (ONNX, int8) and its engine
+onnx>=1.23
+onnxscript>=0.7
+onnxruntime>=1.31
+# Lexicon part-of-speech projection: also run nltk.download("averaged_perceptron_tagger_eng")
+nltk>=3.9
+pytest>=9

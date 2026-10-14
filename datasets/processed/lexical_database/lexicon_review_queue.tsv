@@ -1,0 +1,872 @@
+id	word	status	pos	gloss_candidates	morphology	variants	domains	decision	correct_pos	correct_gloss	note
+LKB-00001	aru	attested	CCONJ	and							
+LKB-00002	laga	attested	ADP	of (possessive)			grammar,greetings				
+LKB-00003	pora	attested	ADP	from, by			grammar,greetings,home				
+LKB-00004	khan	attested	PART	plural marker (written apart or attached: manu khan, manukhan)			grammar,greetings				
+LKB-00005	ke	attested	ADP	to (object marker)			grammar,greetings				
+LKB-00006	tai	attested	PRON	he, she			greetings,pronouns				
+LKB-00007	ase	attested	AUX	is, am, are (exists)		aase,asse	grammar,greetings				
+LKB-00008	te	attested	ADP	in, at, to			grammar,greetings				
+LKB-00009	etu	attested	PRON	this			grammar,greetings,places				
+LKB-00010	kene	attested	SCONJ	having (done), and then			grammar,greetings				
+LKB-00011	taikhan	attested	PRON	they	tai + -khan (plural)		greetings,pronouns				
+LKB-00013	bhi	attested	PART	also, even			grammar,greetings				
+LKB-00015	moi	attested	PRON	I, me			greetings,pronouns				
+LKB-00016	to	attested	PART	topic or emphasis particle			grammar,greetings				
+LKB-00017	kintu	attested	CCONJ	but			grammar,greetings				
+LKB-00019	nimite	attested	ADP	for			grammar,greetings				
+LKB-00023	sob	attested	DET	all			grammar,greetings				
+LKB-00025	amikhan	attested	PRON	we	ami + -khan (plural)		greetings,pronouns				
+LKB-00027	apuni	attested	PRON	you (polite)			greetings,pronouns				
+LKB-00028	he	attested	PART	emphasis particle (indeed, only)			grammar,greetings				
+LKB-00029	logote	attested	ADP	with			grammar,greetings,places				
+LKB-00031	thakise	attested	AUX	was, stayed	thak- + -ise (past)	thakishe	grammar,greetings				
+LKB-00032	tumikhan	attested	PRON	you (plural)	tumi + -khan (plural)		pronouns				
+LKB-00034	koi	attested	PART	quotative: saying that	ko- + -i (non-finite, ongoing)		actions				
+LKB-00035	titia	attested	ADV	then							
+LKB-00036	ekjon	attested	DET	one (person), someone							
+LKB-00037	jitia	attested	SCONJ	when (relative)							
+LKB-00041	kun	attested	PRON	who, which							
+LKB-00042	bisi	attested	DET	many, much, very		bishi,bissi					
+LKB-00043	nai	attested	PART	not, there is not		naai	grammar,greetings				
+LKB-00044	ki	attested	PRON	what			greetings				
+LKB-00045	kelemane	attested	SCONJ	because							
+LKB-00046	hoi	attested	AUX	is, becomes; yes	ho- + -i (non-finite, ongoing)		greetings				
+LKB-00047	eneka	attested	ADV	like this, so							
+LKB-00048	tumi	attested	PRON	you (familiar)			pronouns				
+LKB-00052	apnikhan	attested	PRON	you (plural, polite)	apni + -khan (plural)						
+LKB-00054	karone	attested	ADP	because of, for			grammar,greetings,slang				
+LKB-00055	ami	attested	PRON	we			pronouns				
+LKB-00058	nijor	attested	PRON	own, oneself							
+LKB-00059	ekta	attested	DET	one, a			greetings				
+LKB-00060	nohoi	attested	PART	is not, no	noho- + -i (non-finite, ongoing)						
+LKB-00061	hoise	attested	AUX	became, happened	ho- + -ise (past)		grammar				
+LKB-00068	ta	attested	ADV	there							
+LKB-00070	jodi	attested	SCONJ	if							
+LKB-00080	uporte	attested	ADP	on, above							
+LKB-00083	pichete	attested	ADP	after, behind							
+LKB-00086	etiya	attested	ADV	now			grammar,greetings,slang,time				
+LKB-00087	dusra	attested	DET	other, another							
+LKB-00089	kunba	attested	PRON	someone, some							
+LKB-00096	hobo	attested	AUX	will be, will happen	ho- + -bo (future)		grammar				
+LKB-00098	eku	attested	DET	any (nothing, with a negative)							
+LKB-00100	hoile	attested	SCONJ	then, if so	ho- + -ile (conditional, when)						
+LKB-00106	na	attested	PART	not			grammar,greetings,slang				
+LKB-00109	thake	attested	AUX	stays, is (habitually)	thak- + -e (present, habitual)						
+LKB-00113	kilekoile	attested	ADV	why							
+LKB-00115	tak	attested	ADP	until, up to			describing				
+LKB-00118	lage	attested	AUX	must, is needed	lag- + -e (present, habitual)		grammar				
+LKB-00131	logot	attested	ADP	with			community,family				
+LKB-00132	nohoile	attested	CCONJ	otherwise, or else	noho- + -ile (conditional, when)						
+LKB-00135	thakibo	attested	AUX	will be, will stay	thak- + -ibo (future)	thaakibo	actions,grammar				
+LKB-00137	kitia	attested	ADV	when (question)							
+LKB-00141	thik	attested	ADV	right, correctly, okay			greetings,slang				
+LKB-00149	hodai	attested	ADV	always							
+LKB-00150	majote	attested	ADP	among, in the middle of			places				
+LKB-00155	kineka	attested	ADV	how							
+LKB-00160	utu	attested	PRON	that							
+LKB-00168	jineka	attested	SCONJ	as, the way that							
+LKB-00178	naki	attested	PART	or (in questions), isn't it							
+LKB-00181	khali	attested	ADV	only, just							
+LKB-00182	duijon	attested	NUM	two (people)							
+LKB-00225	pare	attested	AUX	can	par- + -e (present, habitual)						
+LKB-00250	olop	attested	DET	a little, few							
+LKB-00276	kiman	attested	ADV	how much, how many		kimaan					
+LKB-00286	tin	attested	NUM	three		teen	numbers				
+LKB-00305	dhanyavad	attested	INTJ	thank you		dhanyabaad,dhanyabad					
+LKB-00306	kiba	attested	PRON	something		kibaa	greetings,slang				
+LKB-00320	majot	attested	ADP	among, in the middle of							
+LKB-00344	napare	attested	AUX	cannot	par- + -e (negative, present, habitual)						
+LKB-00358	kot	attested	ADV	where			slang				
+LKB-00373	ek	attested	NUM	one			numbers				
+LKB-00403	aji	attested	ADV	today		aaji					
+LKB-00566	amen	attested	INTJ	amen							
+LKB-00603	dui	attested	NUM	two			numbers				
+LKB-00703	kote	attested	ADV	where			places				
+LKB-00771	kali	attested	ADV	tomorrow, yesterday			time				
+LKB-00864	char	attested	NUM	four		chaar					
+LKB-01098	nisina	attested	ADP	like, as		nishina					
+LKB-01149	itu	attested	PRON	this			grammar,greetings,places,slang				
+LKB-01171	ba	attested	CCONJ	or			grammar,greetings				
+LKB-01299	kena	attested	SCONJ	having (done), and then			grammar				
+LKB-01310	panch	attested	NUM	five		paanch					
+LKB-01768	bi	attested	PART	also, even							
+LKB-02204	apunikhan	attested	PRON	you (plural, polite)	apuni + -khan (plural)		pronouns				
+LKB-03030	aro	curated	CCONJ	and							
+LKB-03482	agete	curated	ADP	before, in front of							
+LKB-04731	abar	curated	ADV	again							
+LKB-00012	manu	attested	NOUN	man; men			community,family,greetings				
+LKB-00014	kori	attested	VERB		kor- + -i (non-finite, ongoing)		actions,greetings,slang				
+LKB-00018	isor	attested	PROPN	god			greetings,religion				
+LKB-00020	koise	attested	VERB	said; saying	ko- + -ise (past)		greetings				
+LKB-00021	dise	attested	VERB	gave; given	di- + -se (past)		greetings				
+LKB-00022	jisu	attested	PROPN	jesus			greetings,religion				
+LKB-00024	kotha	attested	Unknown	word; words		kothaa	greetings,religion,slang				
+LKB-00026	thaka	attested	Unknown			thakaa	greetings				
+LKB-00030	taike	attested	PRON		tai + ke (attached postposition)		pronouns				
+LKB-00033	bole	attested	Unknown				grammar				
+LKB-00038	jaise	attested	VERB	went; departed	ja- + -ise (past)						
+LKB-00039	kaam	attested	VERB	works; work		kam	actions,community				
+LKB-00040	jun	attested	Unknown	whoever							
+LKB-00049	bhal	attested	ADJ	good; well		bhaal	describing,greetings,slang				
+LKB-00050	nisena	attested	Unknown	like							
+LKB-00051	kora	attested	NOUN				food				
+LKB-00053	korise	attested	VERB	done	kor- + -ise (past)	korishe					
+LKB-00056	dibo	attested	VERB	give	di- + -bo (future)						
+LKB-00057	mon	attested	VERB	heart; hearts			actions,slang				
+LKB-00062	khrista	attested	PROPN	christ			greetings,religion				
+LKB-00063	probhu	attested	PROPN	lord							
+LKB-00064	diya	attested	Unknown								
+LKB-00065	biswas	attested	Unknown	faith; believe		bishwas,vishwas	religion				
+LKB-00066	jai	attested	VERB	went; going	ja- + -i (non-finite, ongoing)						
+LKB-00067	loi	attested	VERB	took; led	lo- + -i (non-finite, ongoing)		actions				
+LKB-00069	baba	attested	NOUN	father; fathers			actions,family				
+LKB-00071	ahise	attested	VERB	came; come	ah- + -ise (past)	aahise	grammar				
+LKB-00072	kore	attested	VERB		kor- + -e (present, habitual)		actions				
+LKB-00073	dibi	attested	VERB		di- + -bi (imperative, future (you))		actions				
+LKB-00074	atma	attested	PROPN	spirit; spiritual			feelings,religion				
+LKB-00075	koribo	attested	VERB		kor- + -ibo (future)		actions,grammar				
+LKB-00076	ghor	attested	NOUN	house; household			actions,home				
+LKB-00077	dangor	attested	ADJ	great; greater			nature				
+LKB-00078	moike	attested	PRON		moi + ke (attached postposition)		pronouns				
+LKB-00079	loise	attested	VERB	took; received	lo- + -ise (past)						
+LKB-00081	niyom	attested	NOUN	law; lawful							
+LKB-00082	morom	attested	VERB	love; beloved			feelings,slang				
+LKB-00084	biya	attested	Unknown	evil; worse							
+LKB-00085	usorte	attested	Unknown	near; sight	usor + te (attached postposition)						
+LKB-00088	koile	attested	VERB		ko- + -ile (conditional, when)						
+LKB-00090	dibole	attested	VERB	give	di- + -bole (infinitive, purpose)						
+LKB-00091	din	attested	NOUN	days; day			actions,time				
+LKB-00092	dukh	attested	VERB	suffer; suffered			body				
+LKB-00093	koribi	attested	VERB		kor- + -ibi (imperative, future (you))						
+LKB-00094	bacha	attested	NOUN	children; child		baccha					
+LKB-00095	bhai	attested	NOUN	brothers; brother			actions,community,family				
+LKB-00097	di	attested	Unknown	give; delivered		dii					
+LKB-00099	hosa	attested	Unknown	truth; certainly		hosaa	slang				
+LKB-00101	chela	attested	NOUN	disciples; disciple							
+LKB-00102	naam	attested	NOUN	name; names			greetings				
+LKB-00103	jabo	attested	VERB	go	ja- + -bo (future)	jaabo,javo	actions,grammar,greetings				
+LKB-00104	homoi	attested	NOUN	time; hour							
+LKB-00105	juntu	attested	Unknown								
+LKB-00107	pobitro	attested	PROPN	holy; saints			religion				
+LKB-00108	thaki	attested	VERB	stay; live	thak- + -i (non-finite, ongoing)		actions,grammar,greetings				
+LKB-00110	eitu	attested	Unknown	things							
+LKB-00111	kele	attested	Unknown								
+LKB-00112	paap	attested	NOUN	sin; sins			greetings,religion				
+LKB-00114	itcha	attested	Unknown	desire; lusts							
+LKB-00116	ahi	attested	VERB	coming; came	ah- + -i (non-finite, ongoing)		actions				
+LKB-00117	gaw	attested	NOUN	body; flesh							
+LKB-00119	khushi	attested	VERB	joy; rejoice		khusi	actions,feelings				
+LKB-00120	prithibi	attested	NOUN	earth; world							
+LKB-00121	jagate	attested	Unknown	place	jaga + te (attached postposition)						
+LKB-00122	dikhise	attested	VERB	saw; seen	dikh- + -ise (past)						
+LKB-00123	jani	attested	VERB	know; knowing	jan- + -i (non-finite, ongoing)						
+LKB-00124	age	attested	Unknown	first		aage	time				
+LKB-00125	jibon	attested	NOUN	life			religion				
+LKB-00126	sabi	attested	VERB	behold; see	sa- + -bi (imperative, future (you))		actions				
+LKB-00127	yehudi	attested	PROPN	jews; jew							
+LKB-00128	paribo	attested	VERB	able	par- + -ibo (future)						
+LKB-00129	chari	attested	VERB	left; leave	char- + -i (non-finite, ongoing)		numbers				
+LKB-00130	pura	attested	Unknown	fulfilled; whole							
+LKB-00133	jinda	attested	Unknown	living; live							
+LKB-00134	hoilebi	attested	Unknown								
+LKB-00136	diye	attested	VERB	gives							
+LKB-00138	thakibi	attested	VERB	watch	thak- + -ibi (imperative, future (you))						
+LKB-00139	chokra	attested	NOUN	son			family,greetings,slang				
+LKB-00140	putro	attested	PROPN	son			family,greetings				
+LKB-00142	paul	attested	PROPN	paul							
+LKB-00143	bhabona	attested	NOUN	mind; thoughts			actions,feelings				
+LKB-00144	bisar	attested	NOUN	judgment; judge							
+LKB-00145	sheher	attested	NOUN	city; cities			greetings				
+LKB-00146	bhitor	attested	NOUN	entered			home				
+LKB-00147	luwa	attested	NOUN	food; chosen							
+LKB-00148	huni	attested	VERB	hear; heard	hun- + -i (non-finite, ongoing)						
+LKB-00151	paise	attested	VERB	found; received	pa- + -ise (past)						
+LKB-00152	pabo	attested	VERB	receive; find	pa- + -bo (future)						
+LKB-00153	kapra	attested	NOUN	clothing; garment							
+LKB-00154	mohima	attested	NOUN	glory; glorified							
+LKB-00156	hobole	attested	VERB	become; happen	ho- + -bole (infinitive, purpose)						
+LKB-00157	dikhai	attested	VERB	revealed; show	dikha- + -i (non-finite, ongoing)						
+LKB-00158	bhoi	attested	Unknown	fear; afraid							
+LKB-00159	alag	attested	Unknown	languages; separate							
+LKB-00161	khara	attested	VERB	standing; stood							
+LKB-00162	morai	attested	VERB	killed; kill	mora- + -i (non-finite, ongoing)						
+LKB-00163	peter	attested	PROPN	peter							
+LKB-00164	mora	attested	ADJ	dead; death			nature				
+LKB-00165	hath	attested	NOUN	hands; hand		haath	body				
+LKB-00166	hunise	attested	VERB	heard	hun- + -ise (past)						
+LKB-00167	nijorke	attested	Unknown		nijor + ke (attached postposition)						
+LKB-00169	prathana	attested	VERB	pray; prayer							
+LKB-00170	asele	attested	VERB								
+LKB-00171	kobo	attested	VERB	say; tell	ko- + -bo (future)						
+LKB-00172	sorgodoth	attested	NOUN	angel; angels							
+LKB-00173	khotom	attested	VERB	destroy; destroyed							
+LKB-00174	ulai	attested	VERB		ula- + -i (non-finite, ongoing)						
+LKB-00175	ahibo	attested	VERB	come; comes	ah- + -ibo (future)	aahibo	actions,grammar				
+LKB-00176	jabole	attested	VERB	go	ja- + -bole (infinitive, purpose)						
+LKB-00177	dinte	attested	NOUN	day	din + te (attached postposition)						
+LKB-00179	maiki	attested	NOUN	wife; woman							
+LKB-00180	kowa	attested	VERB				nature				
+LKB-00183	rasta	attested	NOUN	way; ways		raasta	greetings				
+LKB-00184	aha	attested	VERB	coming; come							
+LKB-00185	pani	attested	NOUN	water; waters		paani	actions,food,nature				
+LKB-00186	likha	attested	Unknown	scribes; written							
+LKB-00187	sapha	attested	Unknown	pure; clean							
+LKB-00188	bhag	attested	NOUN	members; part							
+LKB-00189	sorgo	attested	NOUN	heaven; heavens							
+LKB-00190	mati	attested	VERB	called; call	mat- + -i (non-finite, ongoing)		actions,colours,farming,nature				
+LKB-00191	poila	attested	ADJ	first							
+LKB-00192	phale	attested	Unknown	side; toward			greetings,places				
+LKB-00193	mondoli	attested	NOUN	temple; synagogue							
+LKB-00194	purohit	attested	NOUN	priest; priests							
+LKB-00195	tumike	attested	PRON		tumi + ke (attached postposition)		pronouns				
+LKB-00196	bohi	attested	VERB	sat; sitting	boh- + -i (non-finite, ongoing)						
+LKB-00197	jowab	attested	VERB	answered; answer							
+LKB-00198	john	attested	PROPN	john							
+LKB-00199	jaga	attested	NOUN	place; places			greetings				
+LKB-00200	bhabobadi	attested	NOUN	prophets; prophet			greetings				
+LKB-00201	pai	attested	VERB		pa- + -i (non-finite, ongoing)						
+LKB-00202	mahila	attested	NOUN	woman; women							
+LKB-00203	asurit	attested	VERB	marveled; amazed							
+LKB-00204	dikhi	attested	VERB	see; seen	dikh- + -i (non-finite, ongoing)						
+LKB-00205	jerusalem	attested	PROPN	jerusalem							
+LKB-00206	hisab	attested	VERB	according; measure							
+LKB-00207	likhi	attested	VERB	written; write	likh- + -i (non-finite, ongoing)		actions				
+LKB-00208	bonai	attested	VERB	made; make	bona- + -i (non-finite, ongoing)						
+LKB-00209	nathaka	attested	Unknown	without							
+LKB-00210	suku	attested	NOUN	eyes; eye							
+LKB-00211	raja	attested	Unknown	king; kings			community,slang				
+LKB-00212	desh	attested	NOUN	nations; nation			actions				
+LKB-00213	joma	attested	VERB	gathered; together							
+LKB-00214	bahar	attested	NOUN	outside			home				
+LKB-00215	mani	attested	VERB	keep; obedience	man- + -i (non-finite, ongoing)		greetings				
+LKB-00216	lobi	attested	VERB	take	lo- + -bi (imperative, future (you))						
+LKB-00217	hukum	attested	VERB	commanded; commandment			grammar				
+LKB-00218	pathai	attested	VERB	sent; send	patha- + -i (non-finite, ongoing)						
+LKB-00219	sikhai	attested	VERB	teaching; taught	sikha- + -i (non-finite, ongoing)						
+LKB-00220	takot	attested	NOUN	power; strong			greetings				
+LKB-00221	para	attested	Unknown	able							
+LKB-00222	kha	attested	NOUN	food; eat							
+LKB-00223	jane	attested	VERB	know; knows	jan- + -e (present, habitual)	jaane					
+LKB-00224	mori	attested	VERB	died; die	mor- + -i (non-finite, ongoing)						
+LKB-00226	eke	attested	ADV	together; accord							
+LKB-00227	girja	attested	NOUN	assembly; assemblies			religion				
+LKB-00228	bhorta	attested	VERB	filled; full							
+LKB-00229	awaj	attested	NOUN	voice; sound							
+LKB-00230	duniya	attested	NOUN	world			actions				
+LKB-00231	dikene	attested	VERB								
+LKB-00232	noukar	attested	NOUN	servant; servants							
+LKB-00233	hudise	attested	VERB	asked	hud- + -ise (past)						
+LKB-00234	misa	attested	ADJ	false; lie		misaa	slang				
+LKB-00235	shuru	attested	VERB	beginning; began		suru	actions,greetings				
+LKB-00236	khuli	attested	VERB	opened; open							
+LKB-00237	mangso	attested	NOUN	flesh; fleshly			food,home				
+LKB-00238	wapas	attested	VERB	back; returned							
+LKB-00239	ama	attested	NOUN	mother; parents			actions,family				
+LKB-00240	rajyo	attested	PROPN	kingdom							
+LKB-00241	ghas	attested	NOUN	tree; trees							
+LKB-00242	nakore	attested	VERB		kor- + -e (negative, present, habitual)						
+LKB-00243	dhori	attested	VERB	seize; hold	dhor- + -i (non-finite, ongoing)		actions				
+LKB-00244	prochar	attested	VERB	preach; preached			greetings,religion				
+LKB-00245	pathor	attested	NOUN	stone; stones							
+LKB-00246	theng	attested	NOUN	feet; foot			body				
+LKB-00247	malik	attested	NOUN	master; masters							
+LKB-00248	jabi	attested	VERB	go; depart	ja- + -bi (imperative, future (you))						
+LKB-00249	khai	attested	VERB	eats; eating	kha- + -i (non-finite, ongoing)		actions				
+LKB-00251	kosom	attested	NOUN	promise; oath			greetings				
+LKB-00252	mota	attested	NOUN	husband; husbands		motaa					
+LKB-00253	tinehoile	attested	ADV								
+LKB-00254	najane	attested	VERB	know	jan- + -e (negative, present, habitual)		greetings				
+LKB-00255	shanti	attested	NOUN	peace		santi	feelings,religion,slang				
+LKB-00256	bo	attested	Unknown								
+LKB-00257	huwa	attested	NOUN								
+LKB-00258	baptizma	attested	VERB	baptized; baptism							
+LKB-00259	dwara	attested	Unknown								
+LKB-00260	gawahi	attested	NOUN	testimony; witnesses			community,greetings,religion				
+LKB-00261	poisa	attested	NOUN	money; tax			civic				
+LKB-00262	jonom	attested	VERB	born; birth							
+LKB-00263	matha	attested	NOUN	head; heads			body				
+LKB-00264	khun	attested	NOUN	blood							
+LKB-00265	ahibole	attested	VERB	come	ah- + -ibole (infinitive, purpose)		slang				
+LKB-00266	bemar	attested	Unknown	sick; diseases							
+LKB-00267	jon	attested	NOUN				nature				
+LKB-00268	mer	attested	Unknown	sheep; lamb							
+LKB-00269	kheti	attested	NOUN	field; farmers			farming				
+LKB-00270	junke	attested	Unknown		jun + ke (attached postposition)						
+LKB-00271	yate	attested	ADV								
+LKB-00272	piche	attested	VERB	followed; follow							
+LKB-00273	janwar	attested	NOUN	beast; animals							
+LKB-00274	lobo	attested	VERB		lo- + -bo (future)						
+LKB-00275	roti	attested	NOUN	bread; loaves							
+LKB-00277	golti	attested	Unknown	accusers; accuse							
+LKB-00278	jui	attested	NOUN	fire; sulfur							
+LKB-00279	basi	attested	VERB	chosen; appointed							
+LKB-00280	pathaise	attested	VERB	sent	patha- + -ise (past)						
+LKB-00281	pharisee	attested	PROPN	pharisees; pharisee							
+LKB-00282	kobole	attested	VERB	speak	ko- + -bole (infinitive, purpose)						
+LKB-00283	khabole	attested	VERB	eat; drink	kha- + -bole (infinitive, purpose)		slang				
+LKB-00284	anise	attested	VERB	brought	an- + -ise (past)						
+LKB-00285	shadi	attested	NOUN	wedding; marry							
+LKB-00287	uthai	attested	VERB	exalted; raised	utha- + -i (non-finite, ongoing)						
+LKB-00288	sorgote	attested	NOUN	heaven; heavenly	sorgo + te (attached postposition)						
+LKB-00289	se	attested	VERB			she					
+LKB-00290	cholawta	attested	NOUN	rulers; ruler							
+LKB-00291	kunke	attested	Unknown		kun + ke (attached postposition)						
+LKB-00292	rakhi	attested	VERB	laid	rakh- + -i (non-finite, ongoing)		actions				
+LKB-00293	hala	attested	VERB	cried; crying							
+LKB-00294	abraham	attested	PROPN	abraham							
+LKB-00295	lagai	attested	VERB	clothed; dressed	laga- + -i (non-finite, ongoing)						
+LKB-00296	chutu	attested	ADJ	little; small							
+LKB-00297	sewa	attested	VERB	serve; served		shewa	greetings				
+LKB-00298	susamachar	attested	PROPN	news			community,greetings				
+LKB-00299	matise	attested	VERB	called; invited	mat- + -ise (past)						
+LKB-00300	sai	attested	VERB	watching; watched	sa- + -i (non-finite, ongoing)						
+LKB-00301	mukh	attested	NOUN	mouth			body				
+LKB-00302	rakhise	attested	VERB	laid	rakh- + -ise (past)						
+LKB-00303	joldi	attested	ADV	immediately; quickly							
+LKB-00304	mari	attested	VERB	struck; beat	mar- + -i (non-finite, ongoing)						
+LKB-00307	somoi	attested	NOUN	time; hour							
+LKB-00308	adhikar	attested	NOUN	authority							
+LKB-00309	porjati	attested	PROPN	gentiles; nations							
+LKB-00310	giri	attested	VERB	fell; fall	gir- + -i (non-finite, ongoing)						
+LKB-00311	phelai	attested	VERB	thrown; throw	phela- + -i (non-finite, ongoing)						
+LKB-00312	hathte	attested	NOUN	delivered; hand	hath + te (attached postposition)						
+LKB-00313	gyaan	attested	NOUN	knowledge; wisdom							
+LKB-00314	bujhi	attested	VERB	understand; understanding	bujh- + -i (non-finite, ongoing)						
+LKB-00315	moses	attested	PROPN	moses							
+LKB-00316	sat	attested	NUM	seven		saat,shaat					
+LKB-00317	ahikena	attested	VERB		ah- + -ikena (having done)						
+LKB-00318	sorom	attested	VERB	shame; ashamed							
+LKB-00319	biswasi	attested	Unknown	faithful		biswasee					
+LKB-00321	maph	attested	VERB	forgive; forgiven							
+LKB-00322	notun	attested	ADJ	new							
+LKB-00323	israel	attested	PROPN	israel							
+LKB-00324	somoite	attested	NOUN	hour	somoi + te (attached postposition)						
+LKB-00325	bona	attested	VERB	foundation							
+LKB-00326	dikha	attested	VERB	show; seen							
+LKB-00327	nadibi	attested	VERB		di- + -bi (negative, imperative, future (you))						
+LKB-00328	bisari	attested	VERB	seek; seeking	bisar- + -i (non-finite, ongoing)						
+LKB-00329	bhoot	attested	NOUN	demons; demon							
+LKB-00330	nichete	attested	Unknown	subjected; subject	niche + te (attached postposition)						
+LKB-00331	cross	attested	VERB	cross; crucified							
+LKB-00332	sobke	attested	Unknown		sob + ke (attached postposition)						
+LKB-00333	dharmik	attested	ADJ	righteous; righteousness							
+LKB-00334	monte	attested	NOUN	heart; hearts	mon + te (attached postposition)						
+LKB-00335	bachai	attested	VERB	save; saved	bacha- + -i (non-finite, ongoing)						
+LKB-00336	chihna	attested	NOUN	sign; signs							
+LKB-00337	baroh	attested	NOUN	twelve							
+LKB-00338	sonman	attested	Unknown	honor; honored							
+LKB-00339	digdar	attested	NOUN	trouble; hard							
+LKB-00340	taiyar	attested	VERB	ready; prepare							
+LKB-00341	apostle	attested	NOUN	apostles; apostle							
+LKB-00342	ulaikene	attested	VERB		ula- + -ikene (having done)						
+LKB-00343	duita	attested	NUM	two							
+LKB-00345	asha	attested	NOUN	hope		asa	feelings,religion				
+LKB-00346	saal	attested	NOUN	years; year		sal	time				
+LKB-00347	rukhi	attested	VERB	waiting; wait	rukh- + -i (non-finite, ongoing)						
+LKB-00348	simon	attested	PROPN	simon							
+LKB-00349	lobole	attested	VERB		lo- + -bole (infinitive, purpose)						
+LKB-00350	salam	attested	Unknown	greet; greetings		salaam	greetings				
+LKB-00351	asirbad	attested	VERB	blessed; blessing							
+LKB-00352	modot	attested	Unknown	help; helped							
+LKB-00353	thakile	attested	VERB	though; absent	thak- + -ile (conditional, when)						
+LKB-00354	galilee	attested	PROPN	galilee; galileans							
+LKB-00355	naw	attested	NOUN	boat; boats							
+LKB-00356	harai	attested	VERB	lost; perish	hara- + -i (non-finite, ongoing)						
+LKB-00357	sipahi	attested	NOUN	soldiers; soldier			community				
+LKB-00359	bijon	attested	NOUN	seed; sow							
+LKB-00360	jinis	attested	NOUN	things		jinish					
+LKB-00361	uthi	attested	VERB	arose; arise	uth- + -i (non-finite, ongoing)						
+LKB-00362	sunnot	attested	NOUN	circumcision; circumcised							
+LKB-00363	dur	attested	ADJ	far; abstain		door	describing,greetings				
+LKB-00364	motlob	attested	VERB	mean; interpreted							
+LKB-00365	saman	attested	NOUN	goods		saaman					
+LKB-00366	bhirodh	attested	Unknown								
+LKB-00367	pabole	attested	VERB	inheritance	pa- + -bole (infinitive, purpose)						
+LKB-00368	samundar	attested	NOUN	sea							
+LKB-00369	dhun	attested	NOUN	riches; treasure							
+LKB-00370	khong	attested	NOUN	wrath; angry							
+LKB-00371	anugrah	attested	NOUN	grace			religion				
+LKB-00372	porikha	attested	VERB	tempted; temptation			greetings				
+LKB-00374	hali	attested	VERB	poured	hal- + -i (non-finite, ongoing)	haali					
+LKB-00375	saikene	attested	VERB	looking	sa- + -ikene (having done)						
+LKB-00376	mili	attested	VERB	join	mil- + -i (non-finite, ongoing)		actions				
+LKB-00377	chinta	attested	Unknown	anxious; troubled			feelings				
+LKB-00378	lagi	attested	VERB		lag- + -i (non-finite, ongoing)	laagi					
+LKB-00379	lok	attested	VERB	met; meet							
+LKB-00380	bondhi	attested	NOUN	prison; prisoner							
+LKB-05137	aa	candidate	Unknown								
+LKB-05138	aadmi	candidate	Unknown								
+LKB-05141	aahibo	candidate	Unknown								
+LKB-05143	aaj	candidate	Unknown								
+LKB-05144	aaja	candidate	Unknown								
+LKB-05155	aao	candidate	Unknown								
+LKB-05156	aapne	candidate	Unknown								
+LKB-05157	aasaan	candidate	Unknown								
+LKB-05159	aata	candidate	Unknown								
+LKB-05160	aati	candidate	Unknown								
+LKB-05161	aaya	candidate	Unknown								
+LKB-05162	aaye	candidate	Unknown								
+LKB-05163	aayi	candidate	Unknown								
+LKB-05166	about	candidate	Unknown								
+LKB-05167	abuse	candidate	Unknown								
+LKB-05169	accha	candidate	Unknown			achha					
+LKB-05171	achha	candidate	Unknown								
+LKB-05177	added	candidate	Unknown								
+LKB-05178	additions	candidate	Unknown								
+LKB-05180	ads	candidate	Unknown								
+LKB-05183	agae	candidate	Unknown								
+LKB-05185	against	candidate	Unknown								
+LKB-05189	ago	candidate	Unknown								
+LKB-05194	aicf	candidate	Unknown								
+LKB-05200	alert	candidate	Unknown								
+LKB-05205	alphabetical	candidate	Unknown								
+LKB-05212	ameer	candidate	Unknown								
+LKB-05214	amikhanr	candidate	Unknown								
+LKB-05227	apunba	candidate	Unknown								
+LKB-05228	apunikhanr	candidate	Unknown								
+LKB-05230	archives	candidate	Unknown								
+LKB-05233	arrest	candidate	Unknown								
+LKB-05235	asaan	candidate	Unknown								
+LKB-05236	asey	candidate	Unknown								
+LKB-05242	assamese	candidate	Unknown								
+LKB-05250	awareness	candidate	Unknown								
+LKB-05252	baad	candidate	Unknown								
+LKB-05255	baap	candidate	Unknown								
+LKB-05256	baat	candidate	Unknown			bat					
+LKB-05258	babri	candidate	Unknown								
+LKB-05260	baccha	candidate	Unknown								
+LKB-05261	bada	candidate	Unknown								
+LKB-05264	badsurat	candidate	Unknown								
+LKB-05266	bagmi	candidate	Unknown								
+LKB-05270	bahut	candidate	Unknown								
+LKB-05272	baitho	candidate	Unknown								
+LKB-05273	bajaanaa	candidate	Unknown								
+LKB-05275	banana	candidate	Unknown								
+LKB-05276	banda	candidate	Unknown								
+LKB-05299	bea	candidate	Unknown								
+LKB-05308	beneficiaries	candidate	Unknown								
+LKB-05323	bhandari	candidate	Unknown								
+LKB-05327	bhejna	candidate	Unknown								
+LKB-05335	bhool	candidate	Unknown								
+LKB-05347	bihar	candidate	Unknown								
+LKB-05364	blas	candidate	Unknown								
+LKB-05365	blos	candidate	Unknown								
+LKB-05374	bol	candidate	Unknown								
+LKB-05379	bolibo	candidate	Unknown								
+LKB-05380	bolna	candidate	Unknown								
+LKB-05381	bolo	candidate	Unknown								
+LKB-05382	bolta	candidate	Unknown								
+LKB-05383	bolti	candidate	Unknown								
+LKB-05385	bonn	candidate	Unknown								
+LKB-05410	bronze	candidate	Unknown								
+LKB-05411	browse	candidate	Unknown								
+LKB-05417	bulana	candidate	Unknown								
+LKB-05419	bull	candidate	Unknown								
+LKB-05420	bumrah	candidate	Unknown								
+LKB-05428	can	candidate	Unknown								
+LKB-05437	categories	candidate	Unknown								
+LKB-05438	category	candidate	Unknown								
+LKB-05440	ceuta	candidate	Unknown								
+LKB-05444	chaawal	candidate	Unknown								
+LKB-05445	chahiye	candidate	Unknown								
+LKB-05446	chai	candidate	Unknown								
+LKB-05455	chalna	candidate	Unknown			chalnaa					
+LKB-05456	chalnaa	candidate	Unknown								
+LKB-05457	chalo	candidate	Unknown								
+LKB-05461	championship	candidate	Unknown								
+LKB-05464	cheez	candidate	Unknown								
+LKB-05467	chhodna	candidate	Unknown								
+LKB-05477	chopra	candidate	Unknown								
+LKB-05480	circuit	candidate	Unknown								
+LKB-05491	columbus	candidate	Unknown								
+LKB-05492	comeback	candidate	Unknown								
+LKB-05494	commonwealth	candidate	Unknown								
+LKB-05501	contributors	candidate	Unknown								
+LKB-05507	crackdown	candidate	Unknown								
+LKB-05509	crew	candidate	Unknown								
+LKB-05511	crore	candidate	Unknown								
+LKB-05512	crossing	candidate	Unknown								
+LKB-05513	csos	candidate	Unknown								
+LKB-05528	dara	candidate	Unknown								
+LKB-05532	daudna	candidate	Unknown								
+LKB-05534	days	candidate	Unknown								
+LKB-05536	ddma	candidate	Unknown								
+LKB-05542	defcc	candidate	Unknown								
+LKB-05543	dega	candidate	Unknown								
+LKB-05544	degi	candidate	Unknown								
+LKB-05545	dekh	candidate	Unknown								
+LKB-05547	dekhna	candidate	Unknown								
+LKB-05548	dekho	candidate	Unknown								
+LKB-05549	dekhta	candidate	Unknown								
+LKB-05550	dekhti	candidate	Unknown								
+LKB-05552	demolition	candidate	Unknown								
+LKB-05553	dena	candidate	Unknown								
+LKB-05554	departments	candidate	Unknown								
+LKB-05564	dheere	candidate	Unknown			dhheere					
+LKB-05565	dhheere	candidate	Unknown								
+LKB-05572	dictionary	candidate	Unknown								
+LKB-05578	digilocker	candidate	Unknown								
+LKB-05586	discover	candidate	Unknown								
+LKB-05587	discuss	candidate	Unknown								
+LKB-05588	dishey	candidate	Unknown								
+LKB-05592	division	candidate	Unknown								
+LKB-05596	don	candidate	Unknown								
+LKB-05597	donate	candidate	Unknown								
+LKB-05605	doubles	candidate	Unknown								
+LKB-05606	dpdb	candidate	Unknown								
+LKB-05611	drug	candidate	Unknown								
+LKB-05616	dure	candidate	Unknown			duure					
+LKB-05619	dwsm	candidate	Unknown								
+LKB-05620	dy	candidate	Unknown								
+LKB-05628	editorial	candidate	Unknown								
+LKB-05644	empower	candidate	Unknown								
+LKB-05648	entered	candidate	Unknown								
+LKB-05649	entertainment	candidate	Unknown								
+LKB-05657	eu	candidate	Unknown								
+LKB-05658	evaluate	candidate	Unknown								
+LKB-05660	ex	candidate	Unknown								
+LKB-05663	exclusive	candidate	Unknown								
+LKB-05667	express	candidate	Unknown								
+LKB-05672	faster	candidate	Unknown								
+LKB-05674	february	candidate	Unknown								
+LKB-05676	felicitate	candidate	Unknown								
+LKB-05684	forestry	candidate	Unknown								
+LKB-05690	fraud	candidate	Unknown								
+LKB-05693	gaana	candidate	Unknown								
+LKB-05694	gaanaa	candidate	Unknown								
+LKB-05699	gahuri	candidate	Unknown								
+LKB-05701	games	candidate	Unknown								
+LKB-05702	ganda	candidate	Unknown								
+LKB-05710	garib	candidate	Unknown								
+LKB-05713	gateway	candidate	Unknown								
+LKB-05715	gaya	candidate	Unknown								
+LKB-05716	gaye	candidate	Unknown								
+LKB-05720	get	candidate	Unknown								
+LKB-05732	ghussa	candidate	Unknown								
+LKB-05733	girna	candidate	Unknown								
+LKB-05744	gratia	candidate	Unknown								
+LKB-05746	grief	candidate	Unknown								
+LKB-05751	haafta	candidate	Unknown								
+LKB-05752	haan	candidate	Unknown								
+LKB-05753	haarna	candidate	Unknown								
+LKB-05758	hame	candidate	Unknown								
+LKB-05759	hamesha	candidate	Unknown								
+LKB-05760	hamne	candidate	Unknown								
+LKB-05763	hansna	candidate	Unknown								
+LKB-05767	hatana	candidate	Unknown								
+LKB-05770	have	candidate	Unknown								
+LKB-05774	headlines	candidate	Unknown								
+LKB-05786	hm	candidate	Unknown								
+LKB-05787	ho	candidate	Unknown								
+LKB-05791	hoga	candidate	Unknown								
+LKB-05792	hogi	candidate	Unknown								
+LKB-05793	hoileh	candidate	Unknown								
+LKB-05794	hoishey	candidate	Unknown								
+LKB-05799	homepage	candidate	Unknown								
+LKB-05801	hormuz	candidate	Unknown								
+LKB-05805	hote	candidate	Unknown								
+LKB-05810	hours	candidate	Unknown								
+LKB-05813	hua	candidate	Unknown								
+LKB-05814	hue	candidate	Unknown								
+LKB-05815	hui	candidate	Unknown								
+LKB-05816	hundreds	candidate	Unknown								
+LKB-05820	icfre	candidate	Unknown								
+LKB-05821	imd	candidate	Unknown								
+LKB-05823	imran	candidate	Unknown								
+LKB-05826	infrastructure	candidate	Unknown								
+LKB-05829	inquiry	candidate	Unknown								
+LKB-05830	inspect	candidate	Unknown								
+LKB-05831	integration	candidate	Unknown								
+LKB-05832	inter	candidate	Unknown								
+LKB-05833	interact	candidate	Unknown								
+LKB-05834	interaction	candidate	Unknown								
+LKB-05837	involved	candidate	Unknown								
+LKB-05838	isliye	candidate	Unknown								
+LKB-05842	itna	candidate	Unknown								
+LKB-05843	jaabo	candidate	Unknown								
+LKB-05845	jaana	candidate	Unknown								
+LKB-05846	jaata	candidate	Unknown								
+LKB-05847	jaati	candidate	Unknown								
+LKB-05848	jab	candidate	Unknown								
+LKB-05853	janaiise	candidate	Unknown								
+LKB-05855	jao	candidate	Unknown								
+LKB-05856	javelin	candidate	Unknown								
+LKB-05859	jeena	candidate	Unknown								
+LKB-05861	jeetna	candidate	Unknown								
+LKB-05862	jete	candidate	Unknown								
+LKB-05876	jo	candidate	Unknown								
+LKB-05877	jodna	candidate	Unknown								
+LKB-05878	jokom	candidate	Unknown								
+LKB-05887	july	candidate	Unknown								
+LKB-05889	june	candidate	Unknown								
+LKB-05891	justice	candidate	Unknown								
+LKB-05894	kaafi	candidate	Unknown								
+LKB-05897	kab	candidate	Unknown								
+LKB-05898	kabhi	candidate	Unknown								
+LKB-05899	kahan	candidate	Unknown								
+LKB-05900	kahin	candidate	Unknown								
+LKB-05901	kaise	candidate	Unknown								
+LKB-05908	kamaboley	candidate	Unknown								
+LKB-05909	kamzor	candidate	Unknown								
+LKB-05916	karega	candidate	Unknown								
+LKB-05917	karegi	candidate	Unknown								
+LKB-05918	karein	candidate	Unknown								
+LKB-05919	karenge	candidate	Unknown								
+LKB-05921	kariye	candidate	Unknown								
+LKB-05922	karne	candidate	Unknown								
+LKB-05923	karney	candidate	Unknown								
+LKB-05924	karo	candidate	Unknown								
+LKB-05926	karta	candidate	Unknown								
+LKB-05927	karti	candidate	Unknown								
+LKB-05928	karunga	candidate	Unknown								
+LKB-05929	karungi	candidate	Unknown								
+LKB-05933	kaun	candidate	Unknown								
+LKB-05934	kcp	candidate	Unknown								
+LKB-05938	kenee	candidate	Unknown								
+LKB-05945	khaabo	candidate	Unknown								
+LKB-05952	khao	candidate	Unknown								
+LKB-05953	kharid	candidate	Unknown								
+LKB-05955	khelnaa	candidate	Unknown								
+LKB-05969	kholna	candidate	Unknown								
+LKB-05972	khush	candidate	Unknown								
+LKB-05976	kibaa	candidate	Unknown								
+LKB-05987	kitna	candidate	Unknown								
+LKB-05991	kiye	candidate	Unknown								
+LKB-05998	koina	candidate	Unknown								
+LKB-05999	koishey	candidate	Unknown								
+LKB-06007	koriboo	candidate	Unknown								
+LKB-06010	kothaa	candidate	Unknown								
+LKB-06014	kuch	candidate	Unknown								
+LKB-06020	kumba	candidate	Unknown								
+LKB-06023	kurey	candidate	Unknown								
+LKB-06024	kuriboley	candidate	Unknown								
+LKB-06025	kurishey	candidate	Unknown								
+LKB-06026	kurisheynutun	candidate	Unknown								
+LKB-06027	kyunki	candidate	Unknown								
+LKB-06029	laagise	candidate	Unknown								
+LKB-06030	laana	candidate	Unknown			lana					
+LKB-06031	ladka	candidate	Unknown								
+LKB-06032	ladki	candidate	Unknown								
+LKB-06033	lagana	candidate	Unknown								
+LKB-06035	lagey	candidate	Unknown								
+LKB-06039	laile	candidate	Unknown								
+LKB-06040	laka	candidate	Unknown								
+LKB-06041	lale	candidate	Unknown								
+LKB-06042	lalse	candidate	Unknown								
+LKB-06044	lana	candidate	Unknown								
+LKB-06045	landslide	candidate	Unknown								
+LKB-06046	languages	candidate	Unknown								
+LKB-06048	latest	candidate	Unknown								
+LKB-06053	lega	candidate	Unknown								
+LKB-06054	legi	candidate	Unknown								
+LKB-06055	leh	candidate	Unknown								
+LKB-06056	lejana	candidate	Unknown								
+LKB-06057	lekha	candidate	Unknown								
+LKB-06058	lekin	candidate	Unknown								
+LKB-06059	lena	candidate	Unknown								
+LKB-06061	liberhan	candidate	Unknown								
+LKB-06063	likhna	candidate	Unknown								
+LKB-06064	likho	candidate	Unknown								
+LKB-06065	links	candidate	Unknown								
+LKB-06067	litikai	candidate	Unknown								
+LKB-06068	liye	candidate	Unknown								
+LKB-06072	loboley	candidate	Unknown								
+LKB-06078	loishey	candidate	Unknown								
+LKB-06079	lokot	candidate	Unknown								
+LKB-06091	maa	candidate	Unknown								
+LKB-06103	majbut	candidate	Unknown								
+LKB-06107	malum	candidate	Unknown								
+LKB-06117	manuh	candidate	Unknown								
+LKB-06123	marna	candidate	Unknown								
+LKB-06124	masaala	candidate	Unknown								
+LKB-06127	mass	candidate	Unknown								
+LKB-06132	matlab	candidate	Unknown								
+LKB-06139	may	candidate	Unknown								
+LKB-06140	mazboot	candidate	Unknown								
+LKB-06141	measure	candidate	Unknown								
+LKB-06148	members	candidate	Unknown								
+LKB-06149	messi	candidate	Unknown								
+LKB-06150	miami	candidate	Unknown								
+LKB-06153	migrant	candidate	Unknown								
+LKB-06156	milega	candidate	Unknown								
+LKB-06157	milegi	candidate	Unknown								
+LKB-06158	milestone	candidate	Unknown								
+LKB-06159	milna	candidate	Unknown								
+LKB-06160	milo	candidate	Unknown								
+LKB-06166	mla	candidate	Unknown								
+LKB-06169	modi	candidate	Unknown								
+LKB-06176	monday	candidate	Unknown								
+LKB-06184	more	candidate	Unknown								
+LKB-06189	motaa	candidate	Unknown								
+LKB-06195	mujhe	candidate	Unknown								
+LKB-06196	mujhse	candidate	Unknown								
+LKB-06197	multilingual	candidate	Unknown								
+LKB-06198	murai	candidate	Unknown								
+LKB-06200	mushkil	candidate	Unknown								
+LKB-06204	naachna	candidate	Unknown			nachnaa					
+LKB-06206	naai	candidate	Unknown								
+LKB-06217	nachnaa	candidate	Unknown								
+LKB-06224	nakura	candidate	Unknown								
+LKB-06241	nbsp	candidate	Unknown								
+LKB-06245	neeraj	candidate	Unknown								
+LKB-06246	negotiate	candidate	Unknown								
+LKB-06252	nh	candidate	Unknown								
+LKB-06256	nimitey	candidate	Unknown								
+LKB-06259	nishina	candidate	Unknown								
+LKB-06263	nitish	candidate	Unknown								
+LKB-06266	nk	candidate	Unknown								
+LKB-06276	northeastern	candidate	Unknown								
+LKB-06277	november	candidate	Unknown								
+LKB-06279	npsc	candidate	Unknown								
+LKB-06286	ocr	candidate	Unknown								
+LKB-06299	oman	candidate	Unknown								
+LKB-06303	operations	candidate	Unknown								
+LKB-06305	org	candidate	Unknown								
+LKB-06306	organize	candidate	Unknown								
+LKB-06314	ott	candidate	Unknown								
+LKB-06316	our	candidate	Unknown								
+LKB-06327	padhibo	candidate	Unknown								
+LKB-06328	padho	candidate	Unknown								
+LKB-06333	paishey	candidate	Unknown								
+LKB-06335	pakadna	candidate	Unknown								
+LKB-06336	pakana	candidate	Unknown								
+LKB-06345	par	candidate	Unknown								
+LKB-06352	parso	candidate	Unknown								
+LKB-06354	passing	candidate	Unknown								
+LKB-06357	pathok	candidate	Unknown								
+LKB-06361	patil	candidate	Unknown								
+LKB-06362	pehle	candidate	Unknown								
+LKB-06365	pending	candidate	Unknown								
+LKB-06375	petro	candidate	Unknown								
+LKB-06379	phenkna	candidate	Unknown								
+LKB-06380	phesama	candidate	Unknown								
+LKB-06381	phir	candidate	Unknown								
+LKB-06396	piyo	candidate	Unknown								
+LKB-06397	planned	candidate	Unknown								
+LKB-06401	pledge	candidate	Unknown								
+LKB-06402	pm	candidate	Unknown								
+LKB-06405	pohoribole	candidate	Unknown								
+LKB-06424	posts	candidate	Unknown								
+LKB-06427	powered	candidate	Unknown								
+LKB-06428	pra	candidate	Unknown								
+LKB-06434	prashanth	candidate	Unknown								
+LKB-06436	pre	candidate	Unknown								
+LKB-06448	projects	candidate	Unknown								
+LKB-06459	proverbs	candidate	Unknown								
+LKB-06466	quick	candidate	Unknown								
+LKB-06478	rakhna	candidate	Unknown								
+LKB-06479	ramanathan	candidate	Unknown								
+LKB-06480	ramkumar	candidate	Unknown								
+LKB-06490	recent	candidate	Unknown								
+LKB-06492	recovery	candidate	Unknown								
+LKB-06497	regional	candidate	Unknown								
+LKB-06501	releases	candidate	Unknown								
+LKB-06502	relief	candidate	Unknown								
+LKB-06507	repeat	candidate	Unknown								
+LKB-06510	resources	candidate	Unknown								
+LKB-06515	reveal	candidate	Unknown								
+LKB-06516	rfri	candidate	Unknown								
+LKB-06517	rifles	candidate	Unknown								
+LKB-06523	rona	candidate	Unknown								
+LKB-06530	roz	candidate	Unknown								
+LKB-06531	rozana	candidate	Unknown								
+LKB-06532	rs	candidate	Unknown								
+LKB-06534	rukna	candidate	Unknown								
+LKB-06535	ruko	candidate	Unknown								
+LKB-06543	saath	candidate	Unknown								
+LKB-06545	sab	candidate	Unknown								
+LKB-06546	sabji	candidate	Unknown								
+LKB-06552	samajh	candidate	Unknown								
+LKB-06553	samajhna	candidate	Unknown								
+LKB-06556	samjha	candidate	Unknown								
+LKB-06557	samjho	candidate	Unknown								
+LKB-06568	satha	candidate	Unknown								
+LKB-06571	scams	candidate	Unknown								
+LKB-06576	seedha	candidate	Unknown								
+LKB-06584	senior	candidate	Unknown								
+LKB-06585	september	candidate	Unknown								
+LKB-06587	servicemen	candidate	Unknown								
+LKB-06599	sharma	candidate	Unknown								
+LKB-06603	shatrughan	candidate	Unknown								
+LKB-06605	she	candidate	Unknown								
+LKB-06608	shells	candidate	Unknown								
+LKB-06611	shey	candidate	Unknown								
+LKB-06612	shg	candidate	Unknown								
+LKB-06627	shuruhubo	candidate	Unknown								
+LKB-06631	silver	candidate	Unknown								
+LKB-06633	sinking	candidate	Unknown								
+LKB-06635	sirf	candidate	Unknown								
+LKB-06640	sitrolekha	candidate	Unknown								
+LKB-06651	soch	candidate	Unknown								
+LKB-06653	sochna	candidate	Unknown								
+LKB-06654	socho	candidate	Unknown								
+LKB-06661	sona	candidate	Unknown								
+LKB-06664	sono	candidate	Unknown								
+LKB-06684	states	candidate	Unknown								
+LKB-06685	statistics	candidate	Unknown								
+LKB-06689	strait	candidate	Unknown								
+LKB-06696	sundar	candidate	Unknown								
+LKB-06699	sunna	candidate	Unknown								
+LKB-06700	suno	candidate	Unknown								
+LKB-06701	sunta	candidate	Unknown								
+LKB-06702	sunti	candidate	Unknown								
+LKB-06703	supreme	candidate	Unknown								
+LKB-06711	tab	candidate	Unknown								
+LKB-06712	tabhi	candidate	Unknown								
+LKB-06717	taikhanr	candidate	Unknown								
+LKB-06725	talks	candidate	Unknown								
+LKB-06733	teen	candidate	Unknown								
+LKB-06738	temporary	candidate	Unknown								
+LKB-06740	tests	candidate	Unknown								
+LKB-06741	tez	candidate	Unknown								
+LKB-06742	thaakibo	candidate	Unknown								
+LKB-06744	thakaa	candidate	Unknown								
+LKB-06745	thakishey	candidate	Unknown								
+LKB-06747	thanka	candidate	Unknown								
+LKB-06748	thanks	candidate	Unknown								
+LKB-06758	thoda	candidate	Unknown								
+LKB-06765	times	candidate	Unknown								
+LKB-06771	todna	candidate	Unknown								
+LKB-06777	tools	candidate	Unknown								
+LKB-06783	tou	candidate	Unknown								
+LKB-06797	trump	candidate	Unknown								
+LKB-06799	tssori	candidate	Unknown								
+LKB-06810	tumhe	candidate	Unknown								
+LKB-06811	tumikhanr	candidate	Unknown								
+LKB-06814	tumne	candidate	Unknown								
+LKB-06815	tumse	candidate	Unknown								
+LKB-06823	udaas	candidate	Unknown								
+LKB-06824	udyog	candidate	Unknown								
+LKB-06828	ukrainian	candidate	Unknown								
+LKB-06830	uncategorized	candidate	Unknown								
+LKB-06831	under	candidate	Unknown								
+LKB-06832	understanding	candidate	Unknown								
+LKB-06841	user	candidate	Unknown								
+LKB-06842	usne	candidate	Unknown								
+LKB-06843	usse	candidate	Unknown								
+LKB-06845	uthana	candidate	Unknown								
+LKB-06846	uthho	candidate	Unknown			utho					
+LKB-06848	uthna	candidate	Unknown								
+LKB-06849	utho	candidate	Unknown								
+LKB-06850	utna	candidate	Unknown								
+LKB-06851	valuable	candidate	Unknown								
+LKB-06856	vijay	candidate	Unknown								
+LKB-06857	vir	candidate	Unknown								
+LKB-06860	visitor	candidate	Unknown								
+LKB-06863	wahan	candidate	Unknown								
+LKB-06864	waisa	candidate	Unknown								
+LKB-06865	waise	candidate	Unknown								
+LKB-06868	wales	candidate	Unknown								
+LKB-06870	warna	candidate	Unknown								
+LKB-06882	wildfire	candidate	Unknown								
+LKB-06887	withdrawing	candidate	Unknown								
+LKB-06889	word	candidate	Unknown								
+LKB-06890	words	candidate	Unknown								
+LKB-06897	xobdo	candidate	Unknown								
+LKB-06900	ya	candidate	Unknown								
+LKB-06901	yaar	candidate	Unknown								
+LKB-06902	yahan	candidate	Unknown								
+LKB-06903	yash	candidate	Unknown								
+LKB-06909	zaroor	candidate	Unknown								
+LKB-06912	zyada	candidate	Unknown								

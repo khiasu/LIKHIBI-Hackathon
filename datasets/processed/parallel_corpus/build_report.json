@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-10-13T16:28:58+00:00",
+  "sources": {
+    "nagamese": {
+      "path": "F:/likhibi-main/datasets/raw/parallel/ebible_nag_usfm",
+      "title": "Indian Standard Version (ISV) Nagamese New Testament",
+      "license": "CC BY-SA 4.0, copyright 2019 Bridge Connectivity Solutions",
+      "url": "https://ebible.org/Bible/details.php?id=nag",
+      "verses": 7959
+    },
+    "english": {
+      "path": "F:/likhibi-main/datasets/raw/parallel/english_web_usfm",
+      "title": "World English Bible (public domain), footnotes and markup removed",
+      "license": "Public domain",
+      "url": "https://ebible.org/Bible/details.php?id=engwebp",
+      "verses": 7953
+    }
+  },
+  "aligned_pairs": 7953,
+  "kept_pairs": 7953,
+  "splits": {
+    "train": 7583,
+    "dev": 142,
+    "test": 228
+  },
+  "test_books": [
+    "1JN",
+    "2JN",
+    "3JN",
+    "JUD",
+    "PHM",
+    "TIT"
+  ],
+  "dev_books": [
+    "2TH",
+    "COL"
+  ],
+  "length_ratio": {
+    "max_allowed": 3.0,
+    "median": 1.212
+  },
+  "events": {
+    "only_nagamese": 5,
+    "merged_bridges": 1
+  },
+  "pairs_per_book": {
+    "Matthew": 1071,
+    "Mark": 678,
+    "Luke": 1150,
+    "John": 879,
+    "Acts": 1004,
+    "Romans": 433,
+    "1 Corinthians": 437,
+    "2 Corinthians": 257,
+    "Galatians": 149,
+    "Ephesians": 155,
+    "Philippians": 104,
+    "Colossians": 95,
+    "1 Thessalonians": 89,
+    "2 Thessalonians": 47,
+    "1 Timothy": 113,
+    "2 Timothy": 83,
+    "Titus": 46,
+    "Philemon": 25,
+    "Hebrews": 303,
+    "James": 108,
+    "1 Peter": 105,
+    "2 Peter": 61,
+    "1 John": 105,
+    "2 John": 13,
+    "3 John": 14,
+    "Jude": 25,
+    "Revelation": 404
+  }
+}

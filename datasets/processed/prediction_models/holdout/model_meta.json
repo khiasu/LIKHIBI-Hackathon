@@ -1,0 +1,7 @@
+{
+  "vocab_size": 3007,
+  "total_tokens": 193400,
+  "smoothing_k": 0.01,
+  "unique_bigrams": 43719,
+  "unique_trigrams": 118977
+}

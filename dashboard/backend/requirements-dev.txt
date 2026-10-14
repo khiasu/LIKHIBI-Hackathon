@@ -1,0 +1,5 @@
+-r requirements.txt
+pytest>=9.1
+httpx2>=2.13  # Starlette 1.x test client; plain httpx is deprecated there
+# Needed by nlp_research.translation.evaluate_engine, which the tests exercise.
+sacrebleu>=2.6

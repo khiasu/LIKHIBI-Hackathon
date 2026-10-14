@@ -1,0 +1,14 @@
+word	source	reason
+ghor bou	vocab:additional_nagamese_vocab.txt#NAGAMESE KINSHIP EXTENDED	not a single lowercase word
+copyright	vocab:regional_nagamese_glossary.txt#Automated Web Scraped Vocabulary Additions	web page boilerplate
+here	vocab:regional_nagamese_glossary.txt#Automated Web Scraped Vocabulary Additions	web page boilerplate
+kya	vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — EXTREMELY COMMON IN NAGAMESE SENTENCES	Hindi function word, not Nagamese
+kyun	vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — EXTREMELY COMMON IN NAGAMESE SENTENCES	Hindi function word, not Nagamese
+aana	vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — EXTREMELY COMMON IN NAGAMESE SENTENCES; vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — HIGH-FREQUENCY DAILY USE (ADDITIONAL BATCH)	Hindi function word, not Nagamese
+peena	vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — EXTREMELY COMMON IN NAGAMESE SENTENCES; vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — HIGH-FREQUENCY DAILY USE (ADDITIONAL BATCH)	Hindi function word, not Nagamese
+karna	vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — EXTREMELY COMMON IN NAGAMESE SENTENCES; vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — HIGH-FREQUENCY DAILY USE (ADDITIONAL BATCH); vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — HIGH-FREQUENCY DAILY USE (ADDITIONAL BATCH)	Hindi function word, not Nagamese
+padhna	vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — EXTREMELY COMMON IN NAGAMESE SENTENCES; vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — HIGH-FREQUENCY DAILY USE (ADDITIONAL BATCH)	Hindi function word, not Nagamese
+mein	vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — COMMON SENTENCES ITEMS	Hindi function word, not Nagamese
+ka	vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — COMMON SENTENCES ITEMS	Hindi function word, not Nagamese
+ne	vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — COMMON SENTENCES ITEMS	Hindi function word, not Nagamese
+tha	vocab:english_hindi_loanwords.txt#HINDI LOANWORDS — COMMON SENTENCES ITEMS	Hindi function word, not Nagamese

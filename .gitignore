@@ -1,0 +1,40 @@
+# Gradle and Android
+.gradle/
+.kotlin/
+.idea/
+.vscode/
+local.properties
+**/build/
+*.iml
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Dashboard
+node_modules/
+dashboard/frontend/dist/
+dashboard/backend/var/
+
+# Trained models and caches: large and machine-specific (the phone model in
+# app/src/main/assets/translate/ is committed so the APK builds from a clone)
+/models/
+/.cache/
+/backups/
+
+# Rebuilt by nlp_research/translation/distill.py; the Tatoeba file is downloaded by hand
+/datasets/processed/synthetic/
+/datasets/raw/monolingual/
+
+# Generated QR card
+/tools/likhibi_contribute_qr.png
+
+# Private prep notes
+/notes/
+
+*.log
+*.tmp

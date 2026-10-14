@@ -1,0 +1,317 @@
+@import "tailwindcss";
+
+/*
+ * Likhibi design tokens, taken from the Android keyboard so the dashboard and the
+ * keyboard read as one product: the Naga Heritage theme in CustomKeyboardView
+ * (getNagaHeritageColors) and the app themes in res/values and res/values-night.
+ *
+ *   bg          keyboard background          surface      keys and cards
+ *   key-pressed pressed key                  key-mod      modifier keys (shift, ?123)
+ *   line        key divider                  accent       Naga red, the enter key
+ *   lip         the darker lower edge every key has (hasShadow), 1.5dp deep
+ *
+ * Components use these semantic names, so dark mode is a token swap. Status colours
+ * (good / warning / critical) are reserved for state and always come with an icon
+ * and a label, because the brand accent is also red.
+ */
+:root {
+  color-scheme: light;
+  --bg: #f7f4ee;
+  --surface: #ffffff;
+  --surface-2: #fbf9f5;
+  --sunken: #f1ece3;
+  --key-pressed: #ede7de;
+  --key-mod: #ece5da;
+  --ink: #1c1917;
+  --ink-2: #57534e;
+  --muted: #6f6863;
+  --faint: #8a8072;
+  --line: #e2d9cc;
+  --line-strong: #cfc4b4;
+  --accent: #c62828;
+  --accent-hover: #a72020;
+  --accent-soft: #f7e4e0;
+  --accent-text: #c62828;
+  --accent-ink: #ffffff;
+  --lip: rgb(28 25 23 / 0.2);
+  --lip-accent: #811a1a;
+  --edge: rgb(28 25 23 / 0.07);
+  --good: #2e7d32;
+  --good-ink: #1b5e20;
+  --good-track: #dcefdc;
+  --warning: #e5a00d;
+  --warning-track: #f8ebc9;
+  --critical: #d03b3b;
+  --critical-track: #f6dada;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #141416;
+    --surface: #222124;
+    --surface-2: #1c1b1e;
+    --sunken: #1a191c;
+    --key-pressed: #333136;
+    --key-mod: #2a282d;
+    --ink: #f5efe6;
+    --ink-2: #c9c1b6;
+    --muted: #a8a096;
+    --faint: #807a72;
+    --line: #2e2c31;
+    --line-strong: #3d3b42;
+    --accent: #d32f2f;
+    --accent-hover: #b71c1c;
+    --accent-soft: #3a1c1d;
+    --accent-text: #f06a64;
+    --accent-ink: #ffffff;
+    --lip: rgb(0 0 0 / 0.55);
+    --lip-accent: #7f1717;
+    --edge: rgb(255 255 255 / 0.04);
+    --good: #4caf50;
+    --good-ink: #7bd17f;
+    --good-track: #16301a;
+    --warning: #f2b632;
+    --warning-track: #3a2f14;
+    --critical: #ef5350;
+    --critical-track: #3d1b1b;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #141416;
+  --surface: #222124;
+  --surface-2: #1c1b1e;
+  --sunken: #1a191c;
+  --key-pressed: #333136;
+  --key-mod: #2a282d;
+  --ink: #f5efe6;
+  --ink-2: #c9c1b6;
+  --muted: #a8a096;
+  --faint: #807a72;
+  --line: #2e2c31;
+  --line-strong: #3d3b42;
+  --accent: #d32f2f;
+  --accent-hover: #b71c1c;
+  --accent-soft: #3a1c1d;
+  --accent-text: #f06a64;
+  --accent-ink: #ffffff;
+  --lip: rgb(0 0 0 / 0.55);
+  --lip-accent: #7f1717;
+  --edge: rgb(255 255 255 / 0.04);
+  --good: #4caf50;
+  --good-ink: #7bd17f;
+  --good-track: #16301a;
+  --warning: #f2b632;
+  --warning-track: #3a2f14;
+  --critical: #ef5350;
+  --critical-track: #3d1b1b;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-sunken: var(--sunken);
+  --color-key-pressed: var(--key-pressed);
+  --color-key-mod: var(--key-mod);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-text: var(--accent-text);
+  --color-accent-ink: var(--accent-ink);
+  --color-good: var(--good);
+  --color-good-ink: var(--good-ink);
+  --color-good-track: var(--good-track);
+  --color-warning: var(--warning);
+  --color-warning-track: var(--warning-track);
+  --color-critical: var(--critical);
+  --color-critical-track: var(--critical-track);
+  /* Android's sans-serif is Roboto; the keyboard draws every label with it. */
+  --font-sans: "Roboto Variable", Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-sans);
+  --font-mono: "Roboto Mono Variable", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+
+@layer base {
+  html {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    min-height: 100dvh;
+    background: var(--bg);
+  }
+
+  ::selection {
+    background: var(--accent-soft);
+    color: var(--ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  /* Settings-screen cards: flat, 16dp corners, no elevation. */
+  .card {
+    background: var(--surface);
+    border-radius: 16px;
+    box-shadow: 0 0 0 1px var(--edge);
+  }
+
+  /* A key: white face, 1.5dp lip, pressing pushes it down onto the lip. */
+  .keycap {
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow:
+      0 0 0 1px var(--edge),
+      0 1.5px 0 var(--lip);
+    transition:
+      transform 70ms ease-out,
+      box-shadow 70ms ease-out,
+      background-color 120ms ease-out;
+  }
+  .keycap:hover:not(:disabled) {
+    background: var(--surface-2);
+  }
+  .keycap:active:not(:disabled),
+  .keycap[aria-pressed="true"]:active {
+    transform: translateY(1px);
+    background: var(--key-pressed);
+    box-shadow:
+      0 0 0 1px var(--edge),
+      0 0.5px 0 var(--lip);
+  }
+
+  /* The enter key. */
+  .keycap-accent {
+    background: var(--accent);
+    color: var(--accent-ink);
+    box-shadow: 0 1.5px 0 var(--lip-accent);
+    transition:
+      transform 70ms ease-out,
+      box-shadow 70ms ease-out,
+      background-color 120ms ease-out;
+  }
+  .keycap-accent:hover:not(:disabled) {
+    background: var(--accent-hover);
+  }
+  .keycap-accent:active:not(:disabled) {
+    transform: translateY(1px);
+    box-shadow: 0 0.5px 0 var(--lip-accent);
+  }
+
+  /* Section labels, as on the keyboard's settings screen ("PERSONALIZATION"). */
+  .label-caps {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-text);
+  }
+
+  /* Suggestion-strip pills. The accent pill marks the current choice. */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink-2);
+    transition:
+      background-color 120ms ease-out,
+      border-color 120ms ease-out,
+      color 120ms ease-out;
+  }
+  .pill:hover {
+    border-color: var(--line-strong);
+    color: var(--ink);
+  }
+  .pill-accent,
+  .pill-accent:hover {
+    border: 1.5px solid var(--accent);
+    background: var(--accent-soft);
+    color: var(--ink);
+  }
+
+  .field {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    color: var(--ink);
+    transition: border-color 120ms ease-out;
+  }
+  .field::placeholder {
+    color: var(--faint);
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+
+  .reveal {
+    animation: rise 280ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, var(--sunken) 0%, var(--line) 50%, var(--sunken) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.3s linear infinite;
+    border-radius: 7px;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

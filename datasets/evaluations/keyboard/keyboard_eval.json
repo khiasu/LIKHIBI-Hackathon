@@ -1,0 +1,33 @@
+{
+  "train_sentences": 9990,
+  "test_sentences": 323,
+  "test_tokens": 6562,
+  "perplexity": {
+    "add_k_bigram (baseline)": 74.8,
+    "add_k_trigram_backoff (baseline)": 187.0,
+    "kneser_ney_trigram (shipped)": 57.0
+  },
+  "kneser_ney_discounts": {
+    "trigram": [
+      0.786985784114391,
+      1.1754861420288216,
+      1.4969660169524348
+    ],
+    "bigram": [
+      0.6732123375979372,
+      1.0937683388723367,
+      1.4117926049769332
+    ],
+    "unigram": [
+      0.5654659805603202,
+      0.772343594836147,
+      1.758031082696606
+    ]
+  },
+  "typing_simulation": {
+    "words": 6239,
+    "keystroke_savings": 0.5903,
+    "next_word_top3": 0.3569,
+    "found_after_one_letter": 0.3186
+  }
+}
