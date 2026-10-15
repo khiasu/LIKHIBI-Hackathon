@@ -191,7 +191,7 @@ export function TranslatePage() {
       {/* The two pages of the spread */}
       <div className="reveal card overflow-hidden" style={{ animationDelay: "120ms" }}>
         <div className="grid md:grid-cols-2">
-          <section aria-label={`${langName(source)} text`} className="flex min-h-[320px] flex-col p-5 sm:p-6">
+          <section aria-label={`${langName(source)} text`} className="flex min-h-[460px] flex-col p-5 sm:p-6">
             <div className="mb-3 flex items-center justify-between text-[13px] text-muted">
               <span className="label-caps">{langName(source)}</span>
               <span className={cx("tabular-nums", tooLong && "text-critical")}>
@@ -207,7 +207,7 @@ export function TranslatePage() {
               rows={6}
               placeholder={source === "en" ? "Type or paste English…" : "Nagamese likhibi…"}
               aria-label={`Text to translate from ${langName(source)}`}
-              className="min-h-[180px] w-full flex-1 resize-y bg-transparent text-[19px] leading-relaxed text-ink placeholder:text-faint focus:outline-none"
+              className="min-h-[280px] w-full flex-1 resize-y bg-transparent text-[19px] leading-relaxed text-ink placeholder:text-faint focus:outline-none"
             />
             <div className="mt-4 flex flex-col gap-3">
               <div className="flex flex-wrap gap-1.5" aria-label="Example sentences">
@@ -247,7 +247,7 @@ export function TranslatePage() {
           <section
             aria-label={`${langName(target)} translation`}
             aria-busy={busy}
-            className="flex min-h-[320px] flex-col border-t border-line bg-surface-2 p-5 sm:p-6 md:border-t-0 md:border-l"
+            className="flex min-h-[460px] flex-col border-t border-line bg-surface-2 p-5 sm:p-6 md:border-t-0 md:border-l"
           >
             <div className="mb-3 flex items-center justify-between text-[13px] text-muted">
               <span className="label-caps">{langName(target)}</span>
