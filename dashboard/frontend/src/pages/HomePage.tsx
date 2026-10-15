@@ -64,7 +64,7 @@ export function HomePage() {
         )}
       </section>
 
-      <div className="mt-6 grid gap-4 lg:grid-cols-[1.1fr_1fr]">
+      <div className="mt-4 grid gap-4 lg:grid-cols-[1fr_1.4fr]">
         <section className="card flex flex-col p-5" aria-labelledby="queue-title">
           <div className="flex items-center gap-2">
             <ClipboardCheck aria-hidden className="size-4 text-muted" />
@@ -72,17 +72,20 @@ export function HomePage() {
           </div>
           {community.data ? (
             <>
-              <p className="mt-4 text-[32px] leading-none font-semibold tracking-[-0.02em] text-ink tabular-nums">{fmt(pending)}</p>
-              <p className="mt-1.5 text-[13.5px] text-muted">
-                {pending === 0
-                  ? "Nothing waiting. New corrections from the dashboard and the keyboard appear here."
-                  : `${pending === 1 ? "contribution is" : "contributions are"} waiting for a verified reviewer.`}
-              </p>
-              <div className="mt-auto pt-5">
+              <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
+                <div>
+                  <p className="text-[32px] leading-none font-semibold tracking-[-0.02em] text-ink tabular-nums">{fmt(pending)}</p>
+                  <p className="mt-1.5 text-[13.5px] text-muted">
+                    {pending === 0 ? "Nothing waiting for review." : `${pending === 1 ? "contribution" : "contributions"} waiting for a reviewer`}
+                  </p>
+                </div>
                 <ButtonLink href={href("review")} variant={pending > 0 ? "primary" : "secondary"}>
                   {pending > 0 ? "Start reviewing" : "Open review"}
                 </ButtonLink>
               </div>
+              <p className="mt-4 border-t border-line pt-3 text-[12.5px] leading-relaxed text-muted">
+                Corrections arrive from the Translate page and from the Likhibi keyboard. Approved ones reach the translator at once.
+              </p>
             </>
           ) : (
             <Skeleton className="mt-4 h-20" />
@@ -116,7 +119,7 @@ export function HomePage() {
         </section>
       </div>
 
-      <section className="mt-6 grid gap-x-8 gap-y-3 border-t border-line pt-6 text-[13.5px] leading-relaxed text-muted sm:grid-cols-3" aria-label="About Likhibi">
+      <section className="mt-5 grid gap-x-8 gap-y-3 border-t border-line pt-5 text-[13.5px] leading-relaxed text-muted sm:grid-cols-3" aria-label="About Likhibi">
         <p>
           <span className="font-medium text-ink">Type.</span> The Android keyboard completes and predicts Nagamese on the phone,
           and translates offline.

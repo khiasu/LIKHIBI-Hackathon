@@ -98,7 +98,7 @@ export function ContributionsPage() {
 
       {needsToken ? (
         <form
-          className="card max-w-lg space-y-3 p-5"
+          className="card max-w-2xl space-y-3 p-5"
           onSubmit={(event) => {
             event.preventDefault();
             setAdminToken(tokenDraft.trim() || null);

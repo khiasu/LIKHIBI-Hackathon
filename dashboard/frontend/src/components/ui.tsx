@@ -201,8 +201,8 @@ export function PageHeader({
   actions?: ReactNode;
 }) {
   return (
-    <header className="reveal mb-7 flex flex-col gap-4 border-b border-line pb-6 sm:flex-row sm:items-end sm:justify-between">
-      <div className="max-w-2xl">
+    <header className="reveal mb-5 flex flex-col gap-3 border-b border-line pb-5 sm:flex-row sm:items-end sm:justify-between">
+      <div className="max-w-3xl">
         {eyebrow && <p className="mb-1 text-[13px] font-medium text-muted">{eyebrow}</p>}
         <h1 className="text-[24px] leading-tight font-semibold tracking-[-0.015em] text-ink">{title}</h1>
         {description && <p className="mt-1.5 text-[14.5px] leading-relaxed text-muted">{description}</p>}
