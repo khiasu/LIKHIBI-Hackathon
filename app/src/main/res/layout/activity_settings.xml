@@ -342,6 +342,76 @@
                     android:paddingEnd="19dp"
                     android:paddingBottom="14dp"
                     android:text="@string/translate_privacy_note" />
+
+                <View style="@style/Likhibi.Divider" />
+
+                <!-- Community contributions: corrections sent from the keyboard to verified reviewers. -->
+                <LinearLayout style="@style/Likhibi.Row">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Likhibi.RowTitle"
+                            android:text="Contribute corrections" />
+
+                        <TextView
+                            style="@style/Likhibi.RowDescription"
+                            android:text="Send better translations from the keyboard. Verified speakers review them; approved ones teach the translator and are shared under CC BY-SA 4.0." />
+                    </LinearLayout>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switch_contribute"
+                        style="@style/Likhibi.Switch"
+                        android:contentDescription="Contribute corrections" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_contributor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="19dp"
+                    android:paddingBottom="12dp">
+
+                    <EditText
+                        android:id="@+id/edit_contributor_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:backgroundTint="@color/app_outline"
+                        android:hint="Credit me as (optional)"
+                        android:importantForAutofill="no"
+                        android:inputType="textPersonName"
+                        android:maxLength="80"
+                        android:singleLine="true"
+                        android:textColor="@color/app_text"
+                        android:textColorHint="@color/app_text_secondary"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edit_contributor_variety"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:backgroundTint="@color/app_outline"
+                        android:hint="My dialect, e.g. Kohima Nagamese (optional)"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:maxLength="60"
+                        android:singleLine="true"
+                        android:textColor="@color/app_text"
+                        android:textColorHint="@color/app_text_secondary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_feedback_queue"
+                        style="@style/Likhibi.RowDescription"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 

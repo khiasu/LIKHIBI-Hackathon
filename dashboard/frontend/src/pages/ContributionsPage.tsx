@@ -1,6 +1,7 @@
-import { Ban, Check, Download, Inbox, KeyRound, RefreshCw, ThumbsDown, ThumbsUp, Trash2, Undo2, UserRound } from "lucide-react";
+import { Ban, Check, Download, Inbox, Keyboard, KeyRound, LogOut, MapPin, RefreshCw, ShieldCheck, ThumbsDown, ThumbsUp, Trash2, Undo2, UserRound } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "../components/AppContext";
+import { LearningPanel, ReviewersPanel } from "../components/CommunityPanels";
 import {
   Button,
   Chip,
@@ -38,12 +39,15 @@ export function ContributionsPage() {
   const [tokenDraft, setTokenDraft] = useState("");
   const [tokenVersion, setTokenVersion] = useState(0);
   const feedback = useAsync(() => api.listFeedback(filter), [filter, tokenVersion]);
+  const me = useAsync(() => api.me(), [tokenVersion]);
   const needsToken = feedback.error instanceof ApiError && feedback.error.status === 401;
+  const [learningVersion, setLearningVersion] = useState(0);
 
   async function review(item: Feedback, status: FeedbackStatus) {
     try {
       await api.reviewFeedback(item.id, status);
       await feedback.reload();
+      if (status === "approved") setLearningVersion((v) => v + 1);
     } catch (err) {
       toast(err instanceof Error ? err.message : "Review failed", "critical");
     }
@@ -80,7 +84,7 @@ export function ContributionsPage() {
       <PageHeader
         eyebrow="Community"
         title="Review contributions"
-        description="Approve what speakers send before the translator uses it. Every approved pair is human-verified, published under CC BY-SA 4.0 and credited to its contributor. Remove anything whose author withdraws it."
+        description="Verified reviewers approve what speakers send, from this dashboard and the Likhibi keyboard, before the translator uses it. Every approved pair is human-verified, published under CC BY-SA 4.0, credited to its contributor, and teaches the model. Remove anything whose author withdraws it."
         actions={
           <>
             <Button icon={RefreshCw} onClick={() => void feedback.reload()} loading={feedback.loading && !!feedback.data}>
@@ -105,11 +109,11 @@ export function ContributionsPage() {
         >
           <div className="flex items-center gap-2 font-semibold text-ink">
             <KeyRound aria-hidden className="size-4 text-accent-text" />
-            Reviewing needs the admin token
+            Sign in to review
           </div>
           <p className="text-[14.5px] text-ink-2">
-            This server sets <code className="font-mono text-[13px]">LIKHIBI_ADMIN_TOKEN</code>. The token is kept in this
-            browser only.
+            Enter your personal reviewer token, or the admin token (<code className="font-mono text-[13px]">LIKHIBI_ADMIN_TOKEN</code>).
+            It is kept in this browser only.
           </p>
           {getAdminToken() && <InlineAlert tone="warning" title="The saved token was rejected." />}
           <div className="flex gap-2">
@@ -117,8 +121,8 @@ export function ContributionsPage() {
               type="password"
               value={tokenDraft}
               onChange={(event) => setTokenDraft(event.target.value)}
-              aria-label="Admin token"
-              placeholder="Admin token"
+              aria-label="Reviewer or admin token"
+              placeholder="Reviewer or admin token"
               className="h-10 flex-1 rounded-lg border border-line-strong bg-surface-2 px-3 text-ink focus:border-accent focus:outline-none"
             />
             <Button variant="primary" type="submit" disabled={!tokenDraft.trim()}>
@@ -128,6 +132,34 @@ export function ContributionsPage() {
         </form>
       ) : (
         <>
+          {me.data && (
+            <div className="reveal mb-5 flex flex-wrap items-center gap-2 text-[14px] text-ink-2">
+              <ShieldCheck aria-hidden className="size-4 text-accent-text" />
+              <span>
+                Signed in as <strong className="font-semibold text-ink">{me.data.name}</strong>
+                {me.data.role === "admin" ? ", admin" : `, reviewer for ${me.data.languages.length ? me.data.languages.join(", ") : "all languages"}`}
+              </span>
+              {getAdminToken() && (
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  icon={LogOut}
+                  onClick={() => {
+                    setAdminToken(null);
+                    setTokenVersion((v) => v + 1);
+                  }}
+                >
+                  Sign out
+                </Button>
+              )}
+            </div>
+          )}
+          {me.data && (
+            <div className={cx("mb-6 grid gap-4", me.data.role === "admin" && "lg:grid-cols-2")}>
+              <LearningPanel me={me.data} version={learningVersion} />
+              {me.data.role === "admin" && <ReviewersPanel />}
+            </div>
+          )}
           <div role="tablist" aria-label="Filter by status" className="reveal mb-6 inline-flex flex-wrap gap-1 rounded-xl border border-line bg-surface p-1">
             {FILTERS.map((option) => (
               <button
@@ -214,6 +246,16 @@ function ContributionCard({
             <UserRound aria-hidden className="size-3" /> {item.contributor}
           </Chip>
         )}
+        {item.variety && (
+          <Chip>
+            <MapPin aria-hidden className="size-3" /> {item.variety}
+          </Chip>
+        )}
+        {item.origin === "keyboard" && (
+          <Chip>
+            <Keyboard aria-hidden className="size-3" /> From the keyboard
+          </Chip>
+        )}
         <span className="ml-auto text-[13px] text-muted">{timeAgo(item.created_at)}</span>
       </div>
 
@@ -239,6 +281,13 @@ function ContributionCard({
       </dl>
 
       {item.comment && <p className="mt-4 rounded-xl bg-sunken px-3 py-2 text-[14px] text-ink-2">{item.comment}</p>}
+      {item.reviewed_by && item.status !== "pending" && (
+        <p className="mt-3 text-[13px] text-muted">
+          {item.status === "approved" ? "Approved" : "Rejected"} by {item.reviewed_by}
+          {item.reviewed_at ? `, ${timeAgo(item.reviewed_at)}` : ""}
+          {item.review_note ? `: ${item.review_note}` : ""}
+        </p>
+      )}
 
       <div className="mt-4 flex flex-wrap justify-end gap-2 border-t border-line pt-4">
         {confirmRemove ? (

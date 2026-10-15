@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from typing import Literal
 
-from fastapi import APIRouter, Depends, Query, Response
+from fastapi import APIRouter, Depends, Query, Request, Response
 
-from ..deps import get_registry, get_storage, require_admin
+from ..deps import Reviewer, get_registry, get_storage, require_admin_reviewer, require_reviewer
 from ..engines.registry import EngineRegistry
 from ..errors import ApiError
 from ..services.translation import approved_examples
@@ -57,7 +57,7 @@ def community_stats(storage: Storage = Depends(get_storage)) -> CommunityStatsOu
 
 @router.get(
     "/feedback/export.tsv",
-    dependencies=[Depends(require_admin)],
+    dependencies=[Depends(require_reviewer)],
     response_class=Response,
     responses={200: {"content": {"text/tab-separated-values": {}}}},
 )
@@ -88,40 +88,48 @@ def export_corrections(storage: Storage = Depends(get_storage)) -> Response:
     )
 
 
-@router.get("/feedback", response_model=FeedbackListOut, dependencies=[Depends(require_admin)])
+@router.get("/feedback", response_model=FeedbackListOut)
 def list_feedback(
     status: Literal["pending", "approved", "rejected", "all"] = "pending",
     limit: int = Query(default=100, ge=1, le=500),
     offset: int = Query(default=0, ge=0),
     storage: Storage = Depends(get_storage),
+    reviewer: Reviewer = Depends(require_reviewer),
 ) -> FeedbackListOut:
     rows = storage.list_feedback(None if status == "all" else status, limit, offset)
+    # A reviewer sees the languages they are trusted with.
+    rows = [row for row in rows if reviewer.may_review(row["source_lang"], row["target_lang"])]
     return FeedbackListOut(
         items=[FeedbackOut(**row) for row in rows],
         counts=FeedbackCounts(**storage.feedback_counts()),
     )
 
 
-@router.patch(
-    "/feedback/{feedback_id}",
-    response_model=FeedbackOut,
-    dependencies=[Depends(require_admin)],
-)
+@router.patch("/feedback/{feedback_id}", response_model=FeedbackOut)
 def review_feedback(
     feedback_id: int,
     body: FeedbackReviewIn,
+    request: Request,
     storage: Storage = Depends(get_storage),
     registry: EngineRegistry = Depends(get_registry),
+    reviewer: Reviewer = Depends(require_reviewer),
 ) -> FeedbackOut:
-    updated = storage.set_feedback_status(feedback_id, body.status)
-    if updated is None:
+    existing = storage.get_feedback(feedback_id)
+    if existing is None:
         raise ApiError(404, "feedback_not_found", f"No feedback with id {feedback_id}.")
-    # The data flywheel: engines see an approved correction on the very next request.
+    if not reviewer.may_review(existing["source_lang"], existing["target_lang"]):
+        raise ApiError(403, "language_not_assigned", "You are not a reviewer for this language.")
+    updated = storage.set_feedback_status(feedback_id, body.status, reviewer.name, body.note)
+    assert updated is not None
+    # The data flywheel: engines see an approved correction on the very next request,
+    # and the model itself learns once enough have been approved.
     registry.broadcast_community_examples(approved_examples(storage))
+    if body.status == "approved":
+        request.app.state.learning.maybe_start()
     return FeedbackOut(**updated)
 
 
-@router.delete("/feedback/{feedback_id}", status_code=204, dependencies=[Depends(require_admin)])
+@router.delete("/feedback/{feedback_id}", status_code=204, dependencies=[Depends(require_admin_reviewer)])
 def delete_feedback(
     feedback_id: int,
     storage: Storage = Depends(get_storage),

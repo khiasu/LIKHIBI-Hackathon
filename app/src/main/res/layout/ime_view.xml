@@ -311,6 +311,23 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/translate_suggest"
+                            style="@style/Likhibi.Keyboard.GhostButton"
+                            android:contentDescription="Suggest a better translation"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/translate_suggest_icon"
+                                style="@style/Likhibi.Keyboard.GhostIcon"
+                                android:src="@drawable/ic_kb_pencil" />
+
+                            <TextView
+                                android:id="@+id/translate_suggest_text"
+                                style="@style/Likhibi.Keyboard.GhostLabel"
+                                android:text="Suggest" />
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:id="@+id/translate_online"
                             style="@style/Likhibi.Keyboard.GhostButton"
                             android:contentDescription="Translate with the Likhibi server"

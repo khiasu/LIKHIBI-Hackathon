@@ -30,6 +30,7 @@ import android.view.inputmethod.InputConnection
 import android.view.inputmethod.InputMethodManager
 import com.likhibi.keyboard.R
 import com.likhibi.nlp.engine.NagameseOfflineEngine
+import com.likhibi.nlp.translate.FeedbackClient
 import com.likhibi.nlp.translate.RemoteTranslator
 import com.likhibi.nlp.translate.SentencePieceTokenizer
 import com.likhibi.nlp.translate.StudentTranslator
@@ -58,6 +59,8 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
     private lateinit var fonts: KeyboardThemes.Fonts
     private lateinit var panels: KeyboardPanels
     private var openPanel: KeyboardPanels.Kind? = null
+    override var suggestion: KeyboardPanels.Suggestion? = null
+    private lateinit var feedbackClient: FeedbackClient
 
     // Views
     private var root: View? = null
@@ -148,6 +151,7 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
         feedback = KeyFeedback(this)
         settings = KeyboardSettings.load(this)
         panels = KeyboardPanels(this, this)
+        feedbackClient = FeedbackClient(this)
         lastLearnedReset = prefs.getLong("learned_reset_at", 0L)
         background { engine.warmUp() }
     }
@@ -207,6 +211,13 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
         view.findViewById<View>(R.id.translate_undo).setOnClickListener { tap(); undoInsert() }
         view.findViewById<View>(R.id.translate_copy).setOnClickListener { tap(); copyTranslation() }
         view.findViewById<View>(R.id.translate_online).setOnClickListener { tap(); pendingSource?.let { requestOnline(it, translateGeneration) } }
+        view.findViewById<View>(R.id.translate_suggest).setOnClickListener {
+            tap()
+            val source = pendingSource ?: return@setOnClickListener
+            val (from, to) = translateDirection.split("-")
+            suggestion = KeyboardPanels.Suggestion(from, to, source.text, shownText)
+            showPanel(KeyboardPanels.Kind.SUGGEST)
+        }
 
         applySettings()
         registerClipboardListener()
@@ -275,6 +286,7 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
             Triple(R.id.translate_undo, R.id.translate_undo_icon, R.id.translate_undo_text),
             Triple(R.id.translate_copy, R.id.translate_copy_icon, R.id.translate_copy_text),
             Triple(R.id.translate_online, R.id.translate_online_icon, R.id.translate_online_text),
+            Triple(R.id.translate_suggest, R.id.translate_suggest_icon, R.id.translate_suggest_text),
         )) {
             view.findViewById<View>(button).background = pressable(Color.TRANSPARENT, theme.keyPressed, dp(18f))
             view.findViewById<ImageView>(icon).setColorFilter(theme.stripLabel)
@@ -430,6 +442,21 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
         root?.findViewById<View>(R.id.tool_translate)?.visibility = if (learningAllowed) View.VISIBLE else View.GONE
         updateAutoCap()
         scheduleSuggestions()
+        if (feedbackClient.enabled && feedbackClient.pending > 0) background { feedbackClient.flush() }
+    }
+
+    /** Keeps the correction and sends it to the reviewers when the server can be reached. */
+    override fun submitCorrection(suggestion: KeyboardPanels.Suggestion, corrected: String) {
+        feedbackClient.add(FeedbackClient.Correction(suggestion.sourceLang, suggestion.targetLang, suggestion.sourceText, suggestion.machineTranslation, corrected))
+        this.suggestion = null
+        closePanel()
+        val hasServer = prefs.getString("translate_server_url", "")?.isNotBlank() == true
+        android.widget.Toast.makeText(
+            this,
+            if (hasServer) "Thank you. A reviewer will check your correction." else "Saved on this phone. It is sent once a Likhibi server is set in Settings.",
+            android.widget.Toast.LENGTH_SHORT,
+        ).show()
+        if (hasServer) background { feedbackClient.flush() }
     }
 
     override fun onFinishInputView(finishingInput: Boolean) {
@@ -987,6 +1014,8 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
         enable(R.id.translate_undo, undoState != null)
         enable(R.id.translate_copy, shownText.isNotBlank())
         enable(R.id.translate_replace, previewText.isNotBlank())
+        // Anyone can open Suggest; sending asks them to opt in to contributing first.
+        view.findViewById<View>(R.id.translate_suggest).visibility = if (shownText.isNotBlank() && learningAllowed) View.VISIBLE else View.GONE
         view.findViewById<View>(R.id.translate_online).visibility = if (serverUrl().isNotEmpty() && undoState == null) View.VISIBLE else View.GONE
     }
 

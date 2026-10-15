@@ -142,11 +142,22 @@ How requests are routed:
 | `LIKHIBI_MAX_CHARS` | 2000 | Longest accepted input |
 | `LIKHIBI_LOG_TRANSLATIONS` | on | `0` stops storing translated text. The Translate page states whether text is stored. |
 | `LIKHIBI_ADMIN_TOKEN` | none | When set, listing, reviewing and exporting feedback need the `X-Admin-Token` header. Set it on any public deployment. |
+| `LIKHIBI_LEARN_THRESHOLD` | 20 | Approved corrections that start the model learning by itself. `0` turns automatic learning off. |
 | `LIKHIBI_DATASETS_DIR` | `<repo>/datasets` | Dataset root that Data health measures |
 | `LIKHIBI_DB_PATH` | `backend/var/likhibi.sqlite3` | SQLite file for translations and feedback |
 | `LIKHIBI_CORS_ORIGINS` | `http://localhost:5173` | Origins allowed to call the API from a browser |
 | `LIKHIBI_FRONTEND_DIST` | `frontend/dist` | Built frontend served at `/` when the folder exists |
 | `VITE_API_BASE` (frontend build) | same origin | Set it when the frontend is hosted apart from the API |
+
+## Community review and learning
+
+Speakers contribute corrections from the Translate page and from the Likhibi keyboard (Settings, Contribute corrections). Nothing is used until a verified reviewer approves it.
+
+- **Reviewers.** With `LIKHIBI_ADMIN_TOKEN` set, the admin adds reviewers on the Contributions page. Each gets a personal token, shown once, and can be limited to languages or dialect codes (`nag` now, others as they are added). A reviewer only sees and judges contributions in their languages; every decision records who made it. Only the admin adds or switches off reviewers and deletes contributions.
+- **Learning.** An approved correction reaches the translation memory and LLM engines on the next request. When `LIKHIBI_LEARN_THRESHOLD` new ones are approved, the dashboard runs `python -m nlp_research.translation.learn_from_community`, which writes them to `datasets/processed/parallel_corpus/community_approved.tsv`, continues training the NMT adapter for an epoch, and swaps the new adapter in only if its held-out chrF++ did not drop. The previous adapter stays in `models/nmt-nllb-lora.previous`. Progress and history show on the Contributions page; the admin can also start a run.
+- **Dialects.** Contributions carry an optional dialect or variety label, so data for each can be kept apart until it has its own model.
+
+The phone's offline translator is a distilled copy of the NMT model, so it improves when it is distilled and exported again (`distill.py`, `export_student.py`) and shipped in a new app build.
 
 ## API
 

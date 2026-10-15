@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
 import { useApp, useToast } from "../components/AppContext";
-import { ShareConsent, useCreditName } from "../components/ShareConsent";
+import { readVariety, ShareConsent, useCreditName } from "../components/ShareConsent";
 import {
   Button,
   ButtonLink,
@@ -459,6 +459,7 @@ function FeedbackBar({ result }: { result: Translation }) {
         comment: comment.trim() || null,
         engine_id: result.engine.id,
         contributor: withCorrection ? credit.trim() || null : null,
+        variety: withCorrection ? readVariety() : null,
         share_consent: withCorrection && consent,
       });
       setSent(true);
@@ -585,6 +586,7 @@ function ContributeForm({ input }: { input: { text: string; source: LangCode; ta
             source_text: input.text,
             corrected_translation: translation.trim(),
             contributor: credit.trim() || null,
+            variety: readVariety(),
             share_consent: consent,
           });
           setSent(true);

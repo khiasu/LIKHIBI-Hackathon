@@ -129,12 +129,15 @@ class FeedbackIn(BaseModel):
     comment: str | None = Field(default=None, max_length=1000)
     engine_id: str | None = Field(default=None, max_length=100)
     contributor: str | None = Field(default=None, max_length=80)
+    # The dialect or local variety the contributor speaks, so data for each can be kept apart.
+    variety: str | None = Field(default=None, max_length=60)
+    origin: Literal["web", "keyboard"] = "web"
     # Sharing a translation means publishing it under CC BY-SA 4.0; it needs an explicit yes.
     share_consent: bool = False
 
     @model_validator(mode="after")
     def _clean(self) -> "FeedbackIn":
-        for name in ("source_text", "machine_translation", "corrected_translation", "comment", "contributor"):
+        for name in ("source_text", "machine_translation", "corrected_translation", "comment", "contributor", "variety"):
             value = getattr(self, name)
             if isinstance(value, str):
                 stripped = value.strip()
@@ -166,6 +169,10 @@ class FeedbackOut(BaseModel):
     reviewed_at: datetime | None
     contributor: str | None = None
     license: str | None = None
+    reviewed_by: str | None = None
+    review_note: str | None = None
+    variety: str | None = None
+    origin: str | None = None
 
 
 class FeedbackCounts(BaseModel):
@@ -182,6 +189,83 @@ class FeedbackListOut(BaseModel):
 
 class FeedbackReviewIn(BaseModel):
     status: FeedbackStatus
+    note: str | None = Field(default=None, max_length=500)
+
+
+# Reviewers -------------------------------------------------------------------
+
+
+class ReviewerIn(BaseModel):
+    name: str = Field(min_length=2, max_length=60)
+    # Language codes this reviewer may judge ("nag", later dialect codes); empty means all.
+    languages: list[str] = Field(default_factory=list, max_length=20)
+    role: Literal["reviewer", "admin"] = "reviewer"
+
+    @model_validator(mode="after")
+    def _clean(self) -> "ReviewerIn":
+        self.name = " ".join(self.name.split())
+        cleaned = []
+        for code in self.languages:
+            code = code.strip().lower()
+            if not code:
+                continue
+            if not code.replace("-", "").isalnum() or len(code) > 12:
+                raise ValueError(f"Not a language code: {code!r}")
+            if code not in cleaned:
+                cleaned.append(code)
+        self.languages = cleaned
+        return self
+
+
+class ReviewerOut(BaseModel):
+    id: int
+    created_at: datetime
+    name: str
+    languages: list[str]
+    role: str
+    active: bool
+    reviews: int
+
+
+class ReviewerCreatedOut(BaseModel):
+    reviewer: ReviewerOut
+    token: str = Field(description="Shown once. The reviewer signs in with it; only its hash is stored.")
+
+
+class ReviewerListOut(BaseModel):
+    items: list[ReviewerOut]
+
+
+class MeOut(BaseModel):
+    name: str
+    role: str
+    languages: list[str]
+
+
+# Learning from contributions ---------------------------------------------------------
+
+
+class LearningRunOut(BaseModel):
+    id: int
+    started_at: datetime
+    finished_at: datetime | None
+    state: str
+    trigger: str
+    pairs: int
+    score_before: float | None
+    score_after: float | None
+    accepted: bool | None
+    message: str | None
+
+
+class LearningOut(BaseModel):
+    available: bool = Field(description="The training tools are installed on this computer")
+    problem: str | None
+    approved_pairs: int
+    new_since_last: int = Field(description="Approved corrections the model has not learned yet")
+    threshold: int = Field(description="Learning starts by itself when this many are waiting")
+    running: bool
+    runs: list[LearningRunOut]
 
 
 class CommunityStatsOut(BaseModel):

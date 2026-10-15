@@ -21,8 +21,9 @@ from . import __version__
 from .config import Settings
 from .engines.registry import EngineRegistry
 from .errors import ApiError, api_error_handler, validation_error_handler
-from .routers import api_keys, data, engines, evaluations, feedback, lexicon, meta, translate
+from .routers import api_keys, data, engines, evaluations, feedback, learning, lexicon, meta, reviewers, translate
 from .services.translation import TranslationService, approved_examples
+from .services.learning import LearningService
 from .storage import Storage
 
 logger = logging.getLogger(__name__)
@@ -65,7 +66,11 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.add_exception_handler(ApiError, api_error_handler)
     app.add_exception_handler(RequestValidationError, validation_error_handler)
 
-    for module in (meta, engines, api_keys, translate, feedback, lexicon, data, evaluations):
+    app.state.learning = LearningService(
+        storage, registry, settings.db_path, settings.learn_threshold, settings.db_path.parent / "learning-logs"
+    )
+
+    for module in (meta, engines, api_keys, translate, feedback, lexicon, data, evaluations, reviewers, learning):
         app.include_router(module.router, prefix="/api")
 
     # In production the built React app is served from the same origin.

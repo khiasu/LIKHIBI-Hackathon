@@ -37,7 +37,10 @@ import kotlin.math.roundToInt
  */
 class KeyboardPanels(private val context: Context, private val host: Host) {
 
-    enum class Kind { SETTINGS, THEMES, CUSTOMISE, CLIPBOARD, EMOJI, EMOJI_SEARCH }
+    enum class Kind { SETTINGS, THEMES, CUSTOMISE, CLIPBOARD, EMOJI, EMOJI_SEARCH, SUGGEST }
+
+    /** What a correction is for: the text, its machine translation, and the direction. */
+    data class Suggestion(val sourceLang: String, val targetLang: String, val sourceText: String, val machineTranslation: String)
 
     interface Host {
         val settings: KeyboardSettings
@@ -52,6 +55,10 @@ class KeyboardPanels(private val context: Context, private val host: Host) {
         /** Opens the Likhibi app, for what only an app screen can do (picking a photo). */
         fun openApp(extra: String?)
         fun panelHeight(): Int
+        /** The translation the Suggest panel corrects, if one is open. */
+        val suggestion: Suggestion?
+        /** Saves the correction (and sends it when the server can be reached). */
+        fun submitCorrection(suggestion: Suggestion, corrected: String)
     }
 
     private val prefs = KeyboardThemes.prefs(context)
@@ -69,6 +76,7 @@ class KeyboardPanels(private val context: Context, private val host: Host) {
             Kind.CLIPBOARD -> clipboardPanel()
             Kind.EMOJI -> emojiPanel()
             Kind.EMOJI_SEARCH -> emojiSearchPanel()
+            Kind.SUGGEST -> suggestPanel()
         }
         panel.setBackgroundColor(theme.strip)
         return panel
@@ -111,6 +119,7 @@ class KeyboardPanels(private val context: Context, private val host: Host) {
 
         body.addView(section("Translate"))
         body.addView(choiceRow("Direction", "translate_direction", listOf("en-nag" to "English → Nagamese", "nag-en" to "Nagamese → English"), "en-nag", stacked = true))
+        body.addView(switchRow("Contribute corrections", "contribute_feedback", false))
 
         body.addView(section("Clipboard"))
         body.addView(switchRow("Clipboard history", "clipboard_enabled", true))
@@ -525,6 +534,94 @@ class KeyboardPanels(private val context: Context, private val host: Host) {
         }
         panel.addView(keys, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
         refresh()
+        return panel
+    }
+
+    // ------------------------------------------------------------------ suggest a correction
+
+    /**
+     * Correcting a translation: the original and the machine's attempt, an editable
+     * correction typed with the keyboard below, and Send. Corrections go to verified
+     * reviewers; only people who said yes to contributing can send them.
+     */
+    private fun suggestPanel(): View {
+        val suggestion = host.suggestion ?: return note("Nothing to correct.").also { host.closePanel() }
+        val panel = column()
+        val draft = StringBuilder(suggestion.machineTranslation)
+        val contributing = prefs.getBoolean("contribute_feedback", false)
+        val send = action("Send") {}
+        panel.addView(header("Suggest a correction", send))
+
+        val info = LinearLayout(context).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(dp(16f), 0, dp(16f), dp(4f))
+        }
+        info.addView(text(suggestion.sourceText, 13f, fonts.regular, theme.keyLabelSecondary).apply { maxLines = 1; ellipsize = TextUtils.TruncateAt.START })
+        panel.addView(info)
+
+        val field = LinearLayout(context).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+            setPadding(dp(12f), 0, dp(4f), 0)
+            background = rounded(theme.key, theme.keyRadiusDp * d + 2f * d, theme.accent, dp(1.5f))
+        }
+        val draftView = text("", 16f, fonts.regular, theme.keyLabel).apply { maxLines = 2; ellipsize = TextUtils.TruncateAt.START }
+        field.addView(draftView, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
+        field.addView(iconButton(R.drawable.ic_kb_x, theme.keyLabelSecondary, 16f, "Clear") {
+            draft.setLength(0)
+            draftView.text = ""
+        }, LinearLayout.LayoutParams(dp(40f), dp(40f)))
+        panel.addView(field, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(52f)).apply { setMargins(dp(10f), dp(2f), dp(10f), 0) })
+
+        fun render() {
+            draftView.text = draft
+            val ready = contributing && draft.isNotBlank() && draft.toString().trim() != suggestion.machineTranslation.trim()
+            send.isEnabled = ready
+            send.alpha = if (ready) 1f else 0.4f
+        }
+        send.setOnClickListener {
+            tap(send)
+            host.submitCorrection(suggestion, draft.toString().trim())
+        }
+
+        if (!contributing) {
+            // Contributing is a choice: ask once, in plain words, before anything is sent.
+            panel.addView(row("Contribute corrections", KbSwitch(context, theme, "Contribute corrections", false) {
+                prefs.edit().putBoolean("contribute_feedback", it).apply()
+                host.showPanel(Kind.SUGGEST)
+            }, description = "Reviewed by verified speakers, then shared under CC BY-SA 4.0"))
+        }
+
+        val available = host.panelHeight() - dp(48f + 20f + 54f) - if (contributing) 0 else dp(56f)
+        val keyHeight = ((available / d - 14f - 3 * 8f) / 4f).coerceIn(30f, host.settings.keyHeightDp)
+        val keys = KeyboardView(context).apply {
+            overlay = host.overlay
+            feedback = host.feedback
+            configure(host.settings.copy(numberRow = false, keyHeightDp = keyHeight, rowGapDp = 8f, longPressSymbols = false, emojiKey = false))
+            listener = object : KeyboardView.Listener {
+                override fun onKeyText(text: String) {
+                    draft.append(text)
+                    if (isShifted() && !isCapsLock()) setShift(false, false)
+                    render()
+                }
+                override fun onKeyCode(code: Int) {
+                    when (code) {
+                        KeyboardLayouts.CODE_DELETE -> if (draft.isNotEmpty()) draft.setLength(draft.length - Character.charCount(draft.codePointBefore(draft.length)))
+                        KeyboardLayouts.CODE_SPACE -> draft.append(' ')
+                        KeyboardLayouts.CODE_SHIFT -> setShift(!isShifted(), false)
+                        KeyboardLayouts.CODE_SYMBOLS -> setMode(if (mode == KeyboardView.Mode.LETTERS) KeyboardView.Mode.SYMBOLS else KeyboardView.Mode.LETTERS)
+                        KeyboardLayouts.CODE_EXTRA_SYMBOLS -> setMode(KeyboardView.Mode.EXTRA_SYMBOLS)
+                        KeyboardLayouts.CODE_SYMBOLS_BACK -> setMode(KeyboardView.Mode.SYMBOLS)
+                        KeyboardLayouts.CODE_ENTER -> if (send.isEnabled) send.performClick()
+                    }
+                    render()
+                }
+                override fun onCursorMove(steps: Int) = Unit
+            }
+        }
+        panel.addView(View(context), LinearLayout.LayoutParams(1, 0, 1f))
+        panel.addView(keys, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
+        render()
         return panel
     }
 

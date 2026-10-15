@@ -120,6 +120,19 @@ class NmtEngine(TranslationEngine):
         self._tokenizer, self._model = tokenizer, model
         self._problem = None
 
+    def unload(self) -> None:
+        """Frees the model (and the GPU), for example while the model is retrained."""
+        with self._lock:
+            self._tokenizer, self._model = None, None
+            self._problem = "Learning from community contributions; back shortly."
+        try:
+            import torch
+
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+        except ImportError:
+            pass
+
     def status(self) -> EngineStatus:
         if self._model is None:
             return EngineStatus(EngineState.NOT_CONFIGURED, self._problem or "Model not loaded yet.")

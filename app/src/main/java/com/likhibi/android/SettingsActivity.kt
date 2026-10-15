@@ -119,6 +119,29 @@ class SettingsActivity : AppCompatActivity() {
             })
         }
 
+        // Contributing corrections: opt-in, with an optional name to credit and the speaker's dialect.
+        val contributorBox = findViewById<View>(R.id.layout_contributor)
+        findViewById<SwitchMaterial>(R.id.switch_contribute).apply {
+            isChecked = prefs.getBoolean("contribute_feedback", false)
+            contributorBox.visibility = if (isChecked) View.VISIBLE else View.GONE
+            setOnCheckedChangeListener { _, on ->
+                prefs.edit().putBoolean("contribute_feedback", on).apply()
+                contributorBox.visibility = if (on) View.VISIBLE else View.GONE
+            }
+        }
+        for ((id, key) in listOf(R.id.edit_contributor_name to "contributor_name", R.id.edit_contributor_variety to "contributor_variety")) {
+            findViewById<EditText>(id).apply {
+                setText(prefs.getString(key, ""))
+                addTextChangedListener(object : android.text.TextWatcher {
+                    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
+                    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) = Unit
+                    override fun afterTextChanged(s: android.text.Editable?) {
+                        prefs.edit().putString(key, s?.toString()?.trim().orEmpty()).apply()
+                    }
+                })
+            }
+        }
+
         findViewById<View>(R.id.btn_clear_clipboard).setOnClickListener {
             performHapticClick()
             ClipboardStore(this).clear()
@@ -144,6 +167,16 @@ class SettingsActivity : AppCompatActivity() {
         seekHaptic.value = prefs.getInt("haptic_strength", KeyboardSettings.DEFAULT_HAPTIC_MS).coerceIn(1, 50).toFloat()
         seekSoundVolume.value = (prefs.getFloat("sound_volume", 0.5f) * 100).toInt().coerceIn(0, 100).toFloat()
         renderFeedbackLabels()
+        renderQueue()
+    }
+
+    private fun renderQueue() {
+        val waiting = com.likhibi.nlp.translate.FeedbackClient(this).pending
+        findViewById<TextView>(R.id.text_feedback_queue).text = when {
+            waiting == 0 -> "Corrections are sent to the server address above."
+            prefs.getString("translate_server_url", "").isNullOrBlank() -> "$waiting waiting on this phone. Add a server address above to send them."
+            else -> "$waiting waiting to be sent; they go the next time the keyboard opens online."
+        }
     }
 
     private fun renderFeedbackLabels() {

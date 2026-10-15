@@ -77,6 +77,9 @@ export interface FeedbackInput {
   comment?: string | null;
   engine_id?: string | null;
   contributor?: string | null;
+  /** The dialect or local variety the contributor speaks. */
+  variety?: string | null;
+  origin?: "web" | "keyboard";
   /** Sharing a translation publishes it under CC BY-SA 4.0, so it needs an explicit yes. */
   share_consent?: boolean;
 }
@@ -97,6 +100,49 @@ export interface Feedback {
   reviewed_at: string | null;
   contributor: string | null;
   license: string | null;
+  reviewed_by: string | null;
+  review_note: string | null;
+  variety: string | null;
+  origin: string | null;
+}
+
+export interface Reviewer {
+  id: number;
+  created_at: string;
+  name: string;
+  languages: string[];
+  role: "reviewer" | "admin";
+  active: boolean;
+  reviews: number;
+}
+
+export interface ReviewerIdentity {
+  name: string;
+  role: "reviewer" | "admin";
+  languages: string[];
+}
+
+export interface LearningRun {
+  id: number;
+  started_at: string;
+  finished_at: string | null;
+  state: "running" | "done" | "failed" | "interrupted";
+  trigger: "auto" | "manual";
+  pairs: number;
+  score_before: number | null;
+  score_after: number | null;
+  accepted: boolean | null;
+  message: string | null;
+}
+
+export interface LearningStatus {
+  available: boolean;
+  problem: string | null;
+  approved_pairs: number;
+  new_since_last: number;
+  threshold: number;
+  running: boolean;
+  runs: LearningRun[];
 }
 
 export interface FeedbackList {

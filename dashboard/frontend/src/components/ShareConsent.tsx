@@ -1,6 +1,16 @@
 import { useState } from "react";
 
 const CREDIT_KEY = "likhibi-credit-name";
+const VARIETY_KEY = "likhibi-variety";
+
+/** The dialect the contributor speaks, remembered in this browser; sent with each contribution. */
+export function readVariety(): string | null {
+  try {
+    return localStorage.getItem(VARIETY_KEY)?.trim() || null;
+  } catch {
+    return null;
+  }
+}
 const LICENSE_URL = "https://creativecommons.org/licenses/by-sa/4.0/";
 
 /** The name to credit, remembered in this browser only. */
@@ -61,6 +71,24 @@ export function ShareConsent({
           placeholder="Your name, or leave empty"
           maxLength={80}
           autoComplete="name"
+          className="field h-9 min-w-0 flex-1 basis-48 px-3 text-[14px]"
+        />
+      </label>
+      <label className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[13.5px] text-ink-2">
+        <span className="shrink-0">My dialect</span>
+        <input
+          defaultValue={readVariety() ?? ""}
+          onChange={(event) => {
+            try {
+              const value = event.target.value.trim();
+              if (value) localStorage.setItem(VARIETY_KEY, value);
+              else localStorage.removeItem(VARIETY_KEY);
+            } catch {
+              // Without storage the dialect is not remembered.
+            }
+          }}
+          placeholder="e.g. Kohima Nagamese, or leave empty"
+          maxLength={60}
           className="field h-9 min-w-0 flex-1 basis-48 px-3 text-[14px]"
         />
       </label>

@@ -52,11 +52,46 @@ CREATE TABLE IF NOT EXISTS feedback (
 );
 
 CREATE INDEX IF NOT EXISTS idx_feedback_status ON feedback (status);
+
+-- Verified reviewers: people trusted to approve or reject contributions. Only a hash of
+-- each reviewer's token is kept. An empty languages list means every language.
+CREATE TABLE IF NOT EXISTS reviewers (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    created_at  TEXT NOT NULL,
+    name        TEXT NOT NULL UNIQUE,
+    token_hash  TEXT NOT NULL UNIQUE,
+    languages   TEXT NOT NULL DEFAULT '',
+    role        TEXT NOT NULL DEFAULT 'reviewer',
+    active      INTEGER NOT NULL DEFAULT 1,
+    reviews     INTEGER NOT NULL DEFAULT 0
+);
+
+-- Each time the translation model learns from approved contributions.
+CREATE TABLE IF NOT EXISTS learning_runs (
+    id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    started_at    TEXT NOT NULL,
+    finished_at   TEXT,
+    state         TEXT NOT NULL DEFAULT 'running',
+    trigger       TEXT NOT NULL,
+    pairs         INTEGER NOT NULL DEFAULT 0,
+    last_feedback INTEGER NOT NULL DEFAULT 0,
+    score_before  REAL,
+    score_after   REAL,
+    accepted      INTEGER,
+    message       TEXT
+);
 """
 
 
 # Columns added after the first release; older databases gain them on start-up.
-_ADDED_FEEDBACK_COLUMNS = {"contributor": "TEXT", "license": "TEXT"}
+_ADDED_FEEDBACK_COLUMNS = {
+    "contributor": "TEXT",
+    "license": "TEXT",
+    "reviewed_by": "TEXT",
+    "review_note": "TEXT",
+    "variety": "TEXT",  # dialect or local variety, for languages added later
+    "origin": "TEXT",  # where it was sent from: web or keyboard
+}
 
 
 def utc_now() -> str:
@@ -131,7 +166,8 @@ class Storage:
             cursor = conn.execute(
                 "INSERT INTO feedback (created_at, translation_id, source_lang, target_lang,"
                 " source_text, machine_translation, corrected_translation, rating, comment,"
-                " engine_id, contributor, license) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                " engine_id, contributor, license, variety, origin)"
+                " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                 (
                     utc_now(),
                     data.get("translation_id"),
@@ -145,6 +181,8 @@ class Storage:
                     data.get("engine_id"),
                     data.get("contributor"),
                     data.get("license"),
+                    data.get("variety"),
+                    data.get("origin") or "web",
                 ),
             )
             feedback_id = cursor.lastrowid
@@ -172,15 +210,19 @@ class Storage:
         counts["all"] = sum(counts[status] for status in FEEDBACK_STATUSES)
         return counts
 
-    def set_feedback_status(self, feedback_id: int, status: str) -> dict[str, Any] | None:
+    def set_feedback_status(
+        self, feedback_id: int, status: str, reviewer: str | None = None, note: str | None = None
+    ) -> dict[str, Any] | None:
         if status not in FEEDBACK_STATUSES:
             raise ValueError(f"Unknown feedback status: {status}")
         reviewed_at = None if status == "pending" else utc_now()
         with closing(self._connect()) as conn, conn:
-            conn.execute(
-                "UPDATE feedback SET status = ?, reviewed_at = ? WHERE id = ?",
-                (status, reviewed_at, feedback_id),
-            )
+            changed = conn.execute(
+                "UPDATE feedback SET status = ?, reviewed_at = ?, reviewed_by = ?, review_note = ? WHERE id = ?",
+                (status, reviewed_at, None if status == "pending" else reviewer, note, feedback_id),
+            ).rowcount
+            if changed and reviewer and status != "pending":
+                conn.execute("UPDATE reviewers SET reviews = reviews + 1 WHERE name = ?", (reviewer,))
         return self.get_feedback(feedback_id)
 
     def delete_feedback(self, feedback_id: int) -> bool:
@@ -220,3 +262,67 @@ class Storage:
             " AND corrected_translation IS NOT NULL AND TRIM(corrected_translation) != ''"
             " ORDER BY id"
         )
+
+    # Reviewers ------------------------------------------------------------
+
+    def add_reviewer(self, name: str, token_hash: str, languages: str, role: str) -> dict[str, Any]:
+        with closing(self._connect()) as conn, conn:
+            cursor = conn.execute(
+                "INSERT INTO reviewers (created_at, name, token_hash, languages, role) VALUES (?, ?, ?, ?, ?)",
+                (utc_now(), name, token_hash, languages, role),
+            )
+            reviewer_id = cursor.lastrowid
+        return self._query("SELECT * FROM reviewers WHERE id = ?", (reviewer_id,))[0]
+
+    def reviewer_by_token_hash(self, token_hash: str) -> dict[str, Any] | None:
+        rows = self._query("SELECT * FROM reviewers WHERE token_hash = ? AND active = 1", (token_hash,))
+        return rows[0] if rows else None
+
+    def list_reviewers(self) -> list[dict[str, Any]]:
+        return self._query("SELECT * FROM reviewers ORDER BY active DESC, name")
+
+    def set_reviewer_active(self, reviewer_id: int, active: bool) -> dict[str, Any] | None:
+        with closing(self._connect()) as conn, conn:
+            conn.execute("UPDATE reviewers SET active = ? WHERE id = ?", (1 if active else 0, reviewer_id))
+        rows = self._query("SELECT * FROM reviewers WHERE id = ?", (reviewer_id,))
+        return rows[0] if rows else None
+
+    def reviewer_name_taken(self, name: str) -> bool:
+        return bool(self._query("SELECT 1 FROM reviewers WHERE LOWER(name) = LOWER(?)", (name,)))
+
+    # Learning runs -----------------------------------------------------------
+
+    def start_learning_run(self, trigger: str, pairs: int, last_feedback: int) -> int:
+        with closing(self._connect()) as conn, conn:
+            return conn.execute(
+                "INSERT INTO learning_runs (started_at, trigger, pairs, last_feedback) VALUES (?, ?, ?, ?)",
+                (utc_now(), trigger, pairs, last_feedback),
+            ).lastrowid
+
+    def finish_learning_run(
+        self, run_id: int, state: str, accepted: bool | None, score_before: float | None,
+        score_after: float | None, message: str,
+    ) -> None:
+        with closing(self._connect()) as conn, conn:
+            conn.execute(
+                "UPDATE learning_runs SET finished_at = ?, state = ?, accepted = ?, score_before = ?,"
+                " score_after = ?, message = ? WHERE id = ?",
+                (utc_now(), state, None if accepted is None else int(accepted), score_before, score_after, message, run_id),
+            )
+
+    def learning_runs(self, limit: int = 10) -> list[dict[str, Any]]:
+        return self._query("SELECT * FROM learning_runs ORDER BY id DESC LIMIT ?", (limit,))
+
+    def running_learning_run(self) -> dict[str, Any] | None:
+        rows = self._query("SELECT * FROM learning_runs WHERE state = 'running' ORDER BY id DESC LIMIT 1")
+        return rows[0] if rows else None
+
+    def last_learned_feedback(self) -> int:
+        """Newest approved feedback id the model has already learned from (in an accepted run)."""
+        rows = self._query("SELECT MAX(last_feedback) AS n FROM learning_runs WHERE accepted = 1")
+        return rows[0]["n"] or 0
+
+    def approved_since(self, feedback_id: int) -> int:
+        shared = "corrected_translation IS NOT NULL AND TRIM(corrected_translation) != ''"
+        rows = self._query(f"SELECT COUNT(*) AS n FROM feedback WHERE status = 'approved' AND {shared} AND id > ?", (feedback_id,))
+        return rows[0]["n"]

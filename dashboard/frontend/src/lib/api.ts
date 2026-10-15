@@ -11,6 +11,9 @@ import type {
   FeedbackList,
   FeedbackStatus,
   LangCode,
+  LearningStatus,
+  Reviewer,
+  ReviewerIdentity,
   LlmSettings,
   MeaningTasks,
   Meta,
@@ -115,8 +118,18 @@ export const api = {
   listFeedback: (status: FeedbackStatus | "all") =>
     json<FeedbackList>(`/feedback?status=${status}&limit=200`, undefined, true),
 
-  reviewFeedback: (id: number, status: FeedbackStatus) =>
-    json<Feedback>(`/feedback/${id}`, { method: "PATCH", body: JSON.stringify({ status }) }, true),
+  reviewFeedback: (id: number, status: FeedbackStatus, note?: string) =>
+    json<Feedback>(`/feedback/${id}`, { method: "PATCH", body: JSON.stringify({ status, note: note || null }) }, true),
+
+  me: () => json<ReviewerIdentity>("/reviewers/me", undefined, true),
+  reviewers: () => json<{ items: Reviewer[] }>("/reviewers", undefined, true),
+  addReviewer: (body: { name: string; languages: string[]; role: "reviewer" | "admin" }) =>
+    json<{ reviewer: Reviewer; token: string }>("/reviewers", { method: "POST", body: JSON.stringify(body) }, true),
+  setReviewerActive: (id: number, active: boolean) =>
+    json<Reviewer>(`/reviewers/${id}/${active ? "activate" : "deactivate"}`, { method: "POST" }, true),
+
+  learning: () => json<LearningStatus>("/learning", undefined, true),
+  startLearning: () => json<LearningStatus>("/learning/run", { method: "POST" }, true),
 
   exportCorrections: async (): Promise<Blob> => (await send("/feedback/export.tsv", {}, true)).blob(),
   deleteFeedback: async (id: number): Promise<void> => {

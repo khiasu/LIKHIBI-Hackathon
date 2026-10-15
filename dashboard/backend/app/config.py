@@ -9,6 +9,7 @@
 | LIKHIBI_MAX_CHARS            | Maximum characters per translation request (default 2000) |
 | LIKHIBI_LOG_TRANSLATIONS     | "0" stops storing translated text (default on)            |
 | LIKHIBI_ADMIN_TOKEN          | When set, reviewing and exporting feedback needs it       |
+| LIKHIBI_LEARN_THRESHOLD      | Approved corrections that start learning (default 20, 0 off) |
 | LIKHIBI_DATASETS_DIR         | Dataset root (default: <repo>/datasets)                   |
 | LIKHIBI_DB_PATH              | SQLite file (default: dashboard/backend/var/...)          |
 | LIKHIBI_CORS_ORIGINS         | Comma-separated origins allowed to call the API           |
@@ -69,6 +70,7 @@ class Settings:
     admin_token: str | None
     cors_origins: tuple[str, ...]
     frontend_dist: Path
+    learn_threshold: int = 20
 
     @classmethod
     def from_env(cls, env: Mapping[str, str] | None = None) -> "Settings":
@@ -89,6 +91,7 @@ class Settings:
             max_chars=int(env.get("LIKHIBI_MAX_CHARS") or 2000),
             log_translations=_flag(env.get("LIKHIBI_LOG_TRANSLATIONS"), True),
             admin_token=_text(env.get("LIKHIBI_ADMIN_TOKEN")),
+            learn_threshold=int(env.get("LIKHIBI_LEARN_THRESHOLD") or 20),
             cors_origins=_items(env.get("LIKHIBI_CORS_ORIGINS")) or _DEFAULT_CORS,
             frontend_dist=Path(
                 env.get("LIKHIBI_FRONTEND_DIST") or REPO_ROOT / "dashboard" / "frontend" / "dist"
