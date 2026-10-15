@@ -3333,6 +3333,14 @@ class NagameseOfflineEngine(private val context: Context) {
         noteChange()
     }
 
+    /** Forgets every word and word pair learned from this person's typing. */
+    fun clearUserData() {
+        synchronized(userWords) { userWords.clear() }
+        synchronized(userBigrams) { userBigrams.clear() }
+        synchronized(this) { unsavedChanges = 0 }
+        userPrefs.edit().clear().apply()
+    }
+
     // Learned words and word pairs are written to preferences every few changes, not on each key.
     private var unsavedChanges = 0
 

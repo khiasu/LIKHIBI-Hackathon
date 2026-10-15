@@ -41,23 +41,17 @@ class SettingsActivity : AppCompatActivity() {
 
     companion object {
         private const val RC_PICK_WALLPAPER = 1001
+        const val EXTRA_OPEN_THEMES = "open_themes"
 
         /** Stored theme ids, in the order the theme spinner lists them. */
-        private val THEME_VALUES = arrayOf(
-            "theme_system",
-            "theme_slate_dark",
-            "theme_chalk_light",
-            "theme_naga_heritage",
-            "theme_obsidian_oled",
-            "theme_nordic_frost",
-            "theme_custom"
-        )
+        private val THEME_VALUES = KeyboardThemes.NAMES.keys.toTypedArray()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
+        KeyboardThemes.migrate(this)
         prefs = getSharedPreferences("likhibi_keyboard_prefs", Context.MODE_PRIVATE)
 
         findViewById<Button>(R.id.btn_enable_keyboard).setOnClickListener {
@@ -71,26 +65,14 @@ class SettingsActivity : AppCompatActivity() {
 
         // Theme Selection via Spinner
         val themeSpinner: Spinner = findViewById(R.id.spinner_theme)
-        val themeOptions = arrayOf(
-            "Dynamic System (Auto)",
-            "Slate Dark",
-            "Chalk Light",
-            "Naga Heritage",
-            "Obsidian AMOLED",
-            "Nordic Frost",
-            "Custom Studio"
-        )
+        val themeOptions = KeyboardThemes.NAMES.values.toTypedArray()
         val themeValues = THEME_VALUES
         val themeAdapter = ArrayAdapter(this, R.layout.item_select_value, themeOptions)
         themeAdapter.setDropDownViewResource(R.layout.item_select_dropdown)
         themeSpinner.adapter = themeAdapter
 
         val currentTheme = prefs.getString("selected_theme", CustomKeyboardView.DEFAULT_THEME) ?: CustomKeyboardView.DEFAULT_THEME
-        val resolvedIndex = when (currentTheme) {
-            "theme_midnight_glass", "theme_liquid_glass" -> themeValues.indexOf("theme_slate_dark")
-            "theme_pure_minimal", "theme_material_you" -> themeValues.indexOf("theme_chalk_light")
-            else -> themeValues.indexOf(currentTheme)
-        }.coerceAtLeast(0)
+        val resolvedIndex = themeValues.indexOf(currentTheme).coerceAtLeast(0)
         themeSpinner.setSelection(resolvedIndex)
         var isInitialSelection = true
 
@@ -105,7 +87,7 @@ class SettingsActivity : AppCompatActivity() {
         val switchCustomShadow: SwitchMaterial = findViewById(R.id.switch_custom_shadow)
         val switchNumberRow: SwitchMaterial = findViewById(R.id.switch_number_row)
 
-        val isNumberRowEnabled = prefs.getBoolean("show_number_row", false)
+        val isNumberRowEnabled = prefs.getBoolean("show_number_row", true)
         switchNumberRow.isChecked = isNumberRowEnabled
         switchNumberRow.setOnCheckedChangeListener { _, isChecked ->
             performHapticClick()
@@ -194,13 +176,13 @@ class SettingsActivity : AppCompatActivity() {
 
         // Font Selection
         fontSpinner = findViewById(R.id.spinner_font)
-        val fontOptions = arrayOf("System Default", "Sans Serif Clean", "Modern Light", "Bold Impact", "Classic Serif", "Monospace Code")
-        val fontValues = arrayOf("sans-serif", "sans-serif-medium", "sans-serif-light", "sans-serif-black", "serif", "monospace")
+        val fontOptions = arrayOf("Figtree", "System")
+        val fontValues = arrayOf(KeyboardThemes.FONT_FIGTREE, KeyboardThemes.FONT_SYSTEM)
         val fontAdapter = ArrayAdapter(this, R.layout.item_select_value, fontOptions)
         fontAdapter.setDropDownViewResource(R.layout.item_select_dropdown)
         fontSpinner.adapter = fontAdapter
 
-        val currentFont = prefs.getString("selected_font", "sans-serif") ?: "sans-serif"
+        val currentFont = prefs.getString("selected_font", KeyboardThemes.FONT_FIGTREE) ?: KeyboardThemes.FONT_FIGTREE
         val fontIndex = fontValues.indexOf(currentFont).coerceAtLeast(0)
         fontSpinner.setSelection(fontIndex)
 
@@ -281,7 +263,7 @@ class SettingsActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.btn_clear_clipboard).setOnClickListener {
             performHapticClick()
-            prefs.edit().putString("clipboard_history", "").apply()
+            ClipboardStore(this).clear()
             Toast.makeText(this, "Clipboard history cleared!", Toast.LENGTH_SHORT).show()
         }
 

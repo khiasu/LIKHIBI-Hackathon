@@ -1,25 +1,33 @@
 package com.likhibi.android
 
-import com.likhibi.keyboard.R
-import com.likhibi.nlp.engine.NagameseOfflineEngine
-
+import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
+import android.graphics.Typeface
+import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
+import android.graphics.drawable.StateListDrawable
 import android.inputmethodservice.InputMethodService
-import android.os.VibrationEffect
-import android.os.Vibrator
 import android.text.InputType
 import android.util.Log
+import android.view.HapticFeedbackConstants
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputConnection
+import android.view.inputmethod.InputMethodManager
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.likhibi.keyboard.R
+import com.likhibi.nlp.engine.NagameseOfflineEngine
+import com.likhibi.nlp.translate.RemoteTranslator
+import com.likhibi.nlp.translate.SentencePieceTokenizer
+import com.likhibi.nlp.translate.StudentTranslator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -28,54 +36,40 @@ import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.likhibi.nlp.translate.RemoteTranslator
-import com.likhibi.nlp.translate.SentencePieceTokenizer
-import com.likhibi.nlp.translate.StudentTranslator
 import java.util.concurrent.Executors
+import kotlin.math.roundToInt
 
 class LikhibiImeService : InputMethodService() {
     private val serviceScope: CoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
-    private var lastTheme = ""
-    private var lastFont = ""
+    private lateinit var prefs: SharedPreferences
+    private lateinit var offlineEngine: NagameseOfflineEngine
+    private lateinit var clipboardStore: ClipboardStore
 
+    private var root: View? = null
     private var keyboardView: CustomKeyboardView? = null
-    private var imeRootView: View? = null
-    private var suggestionBar: LinearLayout? = null
+    private var stripContainer: View? = null
+    private var suggestionStrip: View? = null
+    private var toolbarStrip: View? = null
+    private var translateStrip: View? = null
     private var suggestionViews: List<TextView> = emptyList()
+    private var suggestionDividers: List<View> = emptyList()
+    private var oneHandLeft: View? = null
+    private var oneHandRight: View? = null
 
-    // Toolbar elements
-    private var btnToggle: android.widget.ImageView? = null
-    private var iconToolClip: android.widget.ImageView? = null
-    private var iconToolTheme: android.widget.ImageView? = null
-    private var iconToolSettings: android.widget.ImageView? = null
-    private var textToolClip: TextView? = null
-    private var textToolTheme: TextView? = null
-    private var textToolSettings: TextView? = null
-    private var suggestionsLayout: LinearLayout? = null
-    private var toolsLayout: LinearLayout? = null
-    private var btnToolClip: View? = null
-    private var btnToolTheme: View? = null
-    private var btnToolSettings: View? = null
-    private var toolbarDivider: View? = null
-    private var barDivider: View? = null
+    // Settings changed in the settings app are applied the next time the keyboard opens.
+    @Volatile private var visualsDirty = false
+    private val prefsListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+        if (key != null && VISUAL_KEYS.any { key.startsWith(it) }) visualsDirty = true
+    }
 
-    // Translate strip: English <-> Nagamese on the phone, with the Likhibi server as an online option
-    private var btnToolTranslate: View? = null
-    private var iconToolTranslate: android.widget.ImageView? = null
-    private var textToolTranslate: TextView? = null
-    private var translateContainer: LinearLayout? = null
-    private var translateDirectionView: TextView? = null
-    private var translateLabel: TextView? = null
-    private var translateResult: TextView? = null
-    private var translateAction: TextView? = null
-    private var translateInsert: android.widget.ImageView? = null
-
+    // Translate strip: English <-> Nagamese on the phone, with the Likhibi server as an online option.
     private var translateMode = false
     private var translateDirection = "en-nag"
     private var translateJob: Job? = null
     private var translateGeneration = 0
     private var pendingSource: TranslationSource? = null
     private var previewText = ""
+    private var shownText = ""
     private var undoState: UndoState? = null
 
     /** The text being translated: a selection, or the sentence that ends at the cursor. */
@@ -87,312 +81,279 @@ class LikhibiImeService : InputMethodService() {
     @Volatile private var student: StudentTranslator? = null
     @Volatile private var studentState = "unloaded"  // unloaded, ready, missing, failed
 
-    // Clipboard elements
     private var clipboardManager: ClipboardManager? = null
     private val clipListener = ClipboardManager.OnPrimaryClipChangedListener { captureCurrentClip() }
     private var isClipListenerRegistered = false
 
-    private lateinit var offlineEngine: NagameseOfflineEngine
-
-    private var suggestionsEnabledForField: Boolean = true
+    private var suggestionsEnabledForField = true
     // False in password and incognito fields: nothing typed there is remembered.
-    private var learningAllowed: Boolean = true
-    private var currentComposing: StringBuilder = StringBuilder()
+    private var learningAllowed = true
+    private var currentComposing = StringBuilder()
+    private var lastLearnedReset = 0L
 
     companion object {
-        const val KEYCODE_DELETE = -5
-        const val KEYCODE_SHIFT = -1
-        const val KEYCODE_SYMBOL_SWITCH = -2
-        const val KEYCODE_SYMBOL_EXTRA = -3
-        const val KEYCODE_SYMBOL_BACK = -4
-        const val KEYCODE_EMOJI_SWITCH = -10
-        const val KEYCODE_SWITCH_IME = -11
+        const val KEYCODE_DELETE = CustomKeyboardView.CODE_DELETE
+        const val KEYCODE_SHIFT = CustomKeyboardView.CODE_SHIFT
+        const val KEYCODE_SYMBOL_SWITCH = CustomKeyboardView.CODE_SYMBOLS
+        const val KEYCODE_SYMBOL_EXTRA = CustomKeyboardView.CODE_EXTRA_SYMBOLS
+        const val KEYCODE_SYMBOL_BACK = CustomKeyboardView.CODE_SYMBOLS_BACK
+        const val KEYCODE_EMOJI_SWITCH = CustomKeyboardView.CODE_EMOJI
+        const val KEYCODE_SWITCH_IME = CustomKeyboardView.CODE_SWITCH_IME
+
+        private val VISUAL_KEYS = listOf(
+            "selected_theme", "selected_font", "keyboard_height", "show_", "key_popup",
+            "long_press_symbols", "custom_", "photo_version", "one_handed_mode",
+        )
     }
 
     override fun onCreate() {
         super.onCreate()
+        KeyboardThemes.migrate(this)
+        prefs = KeyboardThemes.prefs(this)
+        prefs.registerOnSharedPreferenceChangeListener(prefsListener)
+        clipboardStore = ClipboardStore(this)
         offlineEngine = NagameseOfflineEngine(this)
-
+        lastLearnedReset = prefs.getLong("learned_reset_at", 0L)
         // Load the word tree and n-gram tables off the main thread; typing works meanwhile.
-        serviceScope.launch(Dispatchers.Default) {
-            offlineEngine.warmUp()
-        }
+        serviceScope.launch(Dispatchers.Default) { offlineEngine.warmUp() }
     }
 
     override fun onCreateInputView(): View {
         val view = LayoutInflater.from(this).inflate(R.layout.ime_view, null)
-        imeRootView = view
-        suggestionBar = view.findViewById(R.id.suggestion_bar)
-        val s1 = view.findViewById<TextView>(R.id.suggestion_1)
-        val s2 = view.findViewById<TextView>(R.id.suggestion_2)
-        val s3 = view.findViewById<TextView>(R.id.suggestion_3)
-        suggestionViews = listOf(s1, s2, s3)
+        root = view
+        stripContainer = view.findViewById(R.id.strip_container)
+        suggestionStrip = view.findViewById(R.id.suggestion_strip)
+        toolbarStrip = view.findViewById(R.id.toolbar_strip)
+        translateStrip = view.findViewById(R.id.translate_strip)
+        suggestionViews = listOf(R.id.suggestion_1, R.id.suggestion_2, R.id.suggestion_3).map { view.findViewById(it) }
+        suggestionDividers = listOf(R.id.suggestion_divider_1, R.id.suggestion_divider_2).map { view.findViewById(it) }
+        oneHandLeft = view.findViewById(R.id.one_hand_left)
+        oneHandRight = view.findViewById(R.id.one_hand_right)
+        translateDirection = prefs.getString("translate_direction", "en-nag") ?: "en-nag"
 
         for (tv in suggestionViews) {
             tv.setOnClickListener {
-                keyboardView?.performHapticFeedback(android.view.HapticFeedbackConstants.KEYBOARD_TAP)
+                tap()
                 val word = (it as TextView).text?.toString()?.trim().orEmpty()
-                if (word.isNotEmpty()) {
-                    acceptSuggestion(word)
-                }
+                if (word.isNotEmpty()) acceptSuggestion(word)
             }
         }
 
-        val prefs = getSharedPreferences("likhibi_keyboard_prefs", Context.MODE_PRIVATE)
-        lastTheme = prefs.getString("selected_theme", CustomKeyboardView.DEFAULT_THEME) ?: CustomKeyboardView.DEFAULT_THEME
-        lastFont = prefs.getString("selected_font", "sans-serif") ?: "sans-serif"
+        view.findViewById<View>(R.id.btn_toolbar_toggle).setOnClickListener { tap(); showToolbar(true) }
+        view.findViewById<View>(R.id.btn_toolbar_back).setOnClickListener { tap(); showToolbar(false) }
+        view.findViewById<View>(R.id.tool_emoji).setOnClickListener { tap(); keyboardView?.showEmojiShelf() }
+        view.findViewById<View>(R.id.tool_clipboard).setOnClickListener { tap(); keyboardView?.showClipboard() }
+        view.findViewById<View>(R.id.tool_translate).setOnClickListener { tap(); openTranslate() }
+        view.findViewById<View>(R.id.tool_themes).setOnClickListener { tap(); openSettings(SettingsActivity.EXTRA_OPEN_THEMES) }
+        view.findViewById<View>(R.id.tool_one_hand).setOnClickListener {
+            tap()
+            setOneHandedMode(if (oneHandedMode() == "off") "right" else "off")
+        }
+        view.findViewById<View>(R.id.tool_settings).setOnClickListener { tap(); openSettings(null) }
 
-        // Initialize and bind toolbar controls
-        btnToggle = view.findViewById(R.id.btn_toolbar_toggle)
-        suggestionsLayout = view.findViewById(R.id.suggestions_container)
-        toolsLayout = view.findViewById(R.id.tools_container)
-        toolbarDivider = view.findViewById(R.id.toolbar_divider)
-        barDivider = view.findViewById(R.id.bar_divider)
-        btnToolClip = view.findViewById(R.id.btn_tool_clip)
-        btnToolTheme = view.findViewById(R.id.btn_tool_theme)
-        btnToolSettings = view.findViewById(R.id.btn_tool_settings)
-        iconToolClip = view.findViewById(R.id.icon_tool_clip)
-        iconToolTheme = view.findViewById(R.id.icon_tool_theme)
-        iconToolSettings = view.findViewById(R.id.icon_tool_settings)
-        textToolClip = view.findViewById(R.id.text_tool_clip)
-        textToolTheme = view.findViewById(R.id.text_tool_theme)
-        textToolSettings = view.findViewById(R.id.text_tool_settings)
-        iconToolClip = view.findViewById(R.id.icon_tool_clip)
-        iconToolTheme = view.findViewById(R.id.icon_tool_theme)
-        iconToolSettings = view.findViewById(R.id.icon_tool_settings)
-        textToolClip = view.findViewById(R.id.text_tool_clip)
-        textToolTheme = view.findViewById(R.id.text_tool_theme)
-        textToolSettings = view.findViewById(R.id.text_tool_settings)
-
-        btnToolTranslate = view.findViewById(R.id.btn_tool_translate)
-        iconToolTranslate = view.findViewById(R.id.icon_tool_translate)
-        textToolTranslate = view.findViewById(R.id.text_tool_translate)
-        translateContainer = view.findViewById(R.id.translate_container)
-        translateDirectionView = view.findViewById(R.id.translate_direction)
-        translateLabel = view.findViewById(R.id.translate_label)
-        translateResult = view.findViewById(R.id.translate_result)
-        translateAction = view.findViewById(R.id.translate_action)
-        translateInsert = view.findViewById(R.id.translate_insert)
-        translateDirection = prefs.getString("translate_direction", "en-nag") ?: "en-nag"
-
-        btnToggle?.setOnClickListener {
-            keyboardView?.performHapticFeedback(android.view.HapticFeedbackConstants.KEYBOARD_TAP)
-            toggleToolbar()
+        for (id in listOf(R.id.one_hand_left_move, R.id.one_hand_right_move)) {
+            view.findViewById<View>(id).setOnClickListener { tap(); setOneHandedMode(if (oneHandedMode() == "left") "right" else "left") }
+        }
+        for (id in listOf(R.id.one_hand_left_exit, R.id.one_hand_right_exit)) {
+            view.findViewById<View>(id).setOnClickListener { tap(); setOneHandedMode("off") }
         }
 
-        btnToolTranslate?.setOnClickListener {
-            keyboardView?.performHapticFeedback(android.view.HapticFeedbackConstants.KEYBOARD_TAP)
-            openTranslate()
-        }
-        translateDirectionView?.setOnClickListener {
-            keyboardView?.performHapticFeedback(android.view.HapticFeedbackConstants.KEYBOARD_TAP)
-            translateDirection = if (translateDirection == "en-nag") "nag-en" else "en-nag"
-            getSharedPreferences("likhibi_keyboard_prefs", MODE_PRIVATE).edit().putString("translate_direction", translateDirection).apply()
-            renderDirection()
-            undoState = null
-            scheduleTranslation(immediate = true)
-        }
-        val insert = View.OnClickListener {
-            keyboardView?.performHapticFeedback(android.view.HapticFeedbackConstants.KEYBOARD_TAP)
-            insertTranslation()
-        }
-        translateInsert?.setOnClickListener(insert)
-        view.findViewById<View>(R.id.translate_preview)?.setOnClickListener(insert)
-        translateAction?.setOnClickListener {
-            keyboardView?.performHapticFeedback(android.view.HapticFeedbackConstants.KEYBOARD_TAP)
-            if (undoState != null) undoInsert() else pendingSource?.let { requestOnline(it, translateGeneration) }
-        }
-
-        btnToolClip?.setOnClickListener {
-            keyboardView?.performHapticFeedback(android.view.HapticFeedbackConstants.KEYBOARD_TAP)
-            keyboardView?.showClipboard()
-        }
-
-        btnToolTheme?.setOnClickListener {
-            keyboardView?.performHapticFeedback(android.view.HapticFeedbackConstants.KEYBOARD_TAP)
-            keyboardView?.showThemeSwitcher()
-        }
-
-        btnToolSettings?.setOnClickListener {
-            keyboardView?.performHapticFeedback(android.view.HapticFeedbackConstants.KEYBOARD_TAP)
-            val intent = Intent(this, SettingsActivity::class.java).apply {
-                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            }
-            startActivity(intent)
-        }
+        view.findViewById<View>(R.id.translate_seg_en_nag).setOnClickListener { tap(); setDirection("en-nag") }
+        view.findViewById<View>(R.id.translate_seg_nag_en).setOnClickListener { tap(); setDirection("nag-en") }
+        view.findViewById<View>(R.id.translate_close).setOnClickListener { tap(); closeTranslate() }
+        view.findViewById<View>(R.id.translate_replace).setOnClickListener { tap(); insertTranslation() }
+        view.findViewById<View>(R.id.translate_card).setOnClickListener { tap(); insertTranslation() }
+        view.findViewById<View>(R.id.translate_undo).setOnClickListener { tap(); undoInsert() }
+        view.findViewById<View>(R.id.translate_copy).setOnClickListener { tap(); copyTranslation() }
+        view.findViewById<View>(R.id.translate_online).setOnClickListener { tap(); pendingSource?.let { requestOnline(it, translateGeneration) } }
 
         keyboardView = view.findViewById<CustomKeyboardView>(R.id.keyboard_view).also {
+            it.popupLayer = view.findViewById(R.id.popup_layer)
             it.listener = object : CustomKeyboardView.OnKeyActionListener {
-                override fun onKey(code: Int) {
-                    handleCustomKey(code)
-                }
-
-                override fun onText(text: String) {
-                    handleText(text)
-                }
+                override fun onKey(code: Int) = handleCustomKey(code)
+                override fun onText(text: String) = handleText(text)
+                override fun onAlternate(text: String) = handleAlternate(text)
             }
+            it.onPanelChanged = { state -> onPanelChanged(state) }
         }
 
-        // Apply active theme immediately on view creation
-        keyboardView?.applyTheme()
-        applySuggestionBarTheme()
-
-        keyboardView?.themeChangeListener = {
-            applySuggestionBarTheme()
-        }
-        keyboardView?.wallpaperPickerListener = {
-            val intent = Intent(this, SettingsActivity::class.java).apply {
-                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                putExtra("ACTION_PICK_WALLPAPER", true)
-            }
-            startActivity(intent)
-        }
-
+        applyTheme()
         registerClipboardListener()
-
         return view
     }
 
-    /**
-     * Applies theme-specific colors to the suggestion bar, toolbar, and tool buttons
-     */
-    private fun applySuggestionBarTheme() {
-        val prefs = getSharedPreferences("likhibi_keyboard_prefs", MODE_PRIVATE)
-        val theme = prefs.getString("selected_theme", CustomKeyboardView.DEFAULT_THEME) ?: CustomKeyboardView.DEFAULT_THEME
-        val isSystemNight = (resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK) == android.content.res.Configuration.UI_MODE_NIGHT_YES
+    private fun tap() {
+        keyboardView?.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
+    }
 
-        data class BarColors(
-            val barBg: Int, val textNormal: Int, val textAccent: Int,
-            val toggleColor: Int, val divider: Int, val toolText: Int
+    private fun openSettings(extra: String?) {
+        startActivity(Intent(this, SettingsActivity::class.java).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            if (extra != null) putExtra(extra, true)
+        })
+    }
+
+    // ------------------------------------------------------------------ theme
+
+    private lateinit var fonts: KeyboardThemes.Fonts
+
+    /** Colours every strip from the current [KeyboardTheme]; the key grid themes itself. */
+    private fun applyTheme() {
+        val view = root ?: return
+        keyboardView?.reload()
+        val theme = keyboardView?.currentTheme() ?: KeyboardThemes.current(this)
+        fonts = KeyboardThemes.Fonts(this, KeyboardThemes.usesFigtree(prefs))
+        val d = resources.displayMetrics.density
+        fun dp(v: Float) = (v * d).roundToInt()
+
+        view.background = KeyboardThemes.backgroundDrawable(this, theme)
+        for (strip in listOf(suggestionStrip, toolbarStrip, translateStrip)) strip?.setBackgroundColor(theme.strip)
+
+        suggestionViews.forEachIndexed { i, tv ->
+            tv.setTextColor(theme.stripLabel)
+            tv.typeface = if (i == 1) fonts.semibold else fonts.regular
+            tv.background = pressable(Color.TRANSPARENT, theme.keyPressed, dp(theme.keyRadiusDp).toFloat())
+        }
+        suggestionDividers.forEach { it.setBackgroundColor(theme.keyBorder) }
+        view.findViewById<ImageView>(R.id.btn_toolbar_toggle).apply {
+            setColorFilter(theme.stripLabel)
+            background = pressable(Color.TRANSPARENT, theme.keyPressed, dp(theme.keyRadiusDp).toFloat())
+        }
+        view.findViewById<ImageView>(R.id.btn_toolbar_back).apply {
+            setColorFilter(theme.stripLabel)
+            background = pressable(Color.TRANSPARENT, theme.keyPressed, dp(theme.keyRadiusDp).toFloat())
+        }
+        for (id in listOf(R.id.tool_emoji, R.id.tool_clipboard, R.id.tool_translate, R.id.tool_themes, R.id.tool_one_hand, R.id.tool_settings)) {
+            view.findViewById<View>(id).background = pressable(Color.TRANSPARENT, theme.keyPressed, dp(theme.keyRadiusDp).toFloat())
+        }
+        for (id in listOf(R.id.text_tool_emoji, R.id.text_tool_clipboard, R.id.text_tool_translate, R.id.text_tool_themes, R.id.text_tool_one_hand, R.id.text_tool_settings)) {
+            view.findViewById<TextView>(id).typeface = fonts.medium
+        }
+        renderToolStates(theme)
+
+        // Translate strip, built from keyboard tokens so it follows every theme (flat, no shadows).
+        view.findViewById<View>(R.id.translate_segments).background = rounded(theme.keyFunction, dp(6f).toFloat())
+        view.findViewById<ImageView>(R.id.translate_close).apply {
+            setColorFilter(theme.keyLabel)
+            background = pressable(Color.TRANSPARENT, theme.keyPressed, dp(20f).toFloat())
+        }
+        view.findViewById<View>(R.id.translate_card).background = GradientDrawable().apply {
+            cornerRadius = dp(theme.keyRadiusDp).toFloat()
+            setColor(theme.key)
+            if (theme.keyBorderWidthDp > 0) setStroke(dp(theme.keyBorderWidthDp), theme.keyBorder)
+        }
+        view.findViewById<TextView>(R.id.translate_status).apply { setTextColor(theme.keyLabelSecondary); typeface = fonts.medium }
+        for (id in listOf(R.id.translate_bar_1, R.id.translate_bar_2)) view.findViewById<View>(id).background = rounded(theme.keyPressed, dp(4f).toFloat())
+        view.findViewById<TextView>(R.id.translate_result).apply { setTextColor(theme.keyLabel); typeface = fonts.medium }
+        view.findViewById<TextView>(R.id.translate_source_text).apply { setTextColor(theme.keyLabelSecondary); typeface = fonts.medium }
+        view.findViewById<ImageView>(R.id.translate_source_icon).setColorFilter(theme.keyLabelSecondary)
+        for ((button, icon, label) in listOf(
+            Triple(R.id.translate_undo, R.id.translate_undo_icon, R.id.translate_undo_text),
+            Triple(R.id.translate_copy, R.id.translate_copy_icon, R.id.translate_copy_text),
+            Triple(R.id.translate_online, R.id.translate_online_icon, R.id.translate_online_text),
+        )) {
+            view.findViewById<View>(button).background = pressable(Color.TRANSPARENT, theme.keyPressed, dp(10f).toFloat())
+            view.findViewById<ImageView>(icon).setColorFilter(theme.keyLabel)
+            view.findViewById<TextView>(label).apply { setTextColor(theme.keyLabel); typeface = fonts.medium }
+        }
+        view.findViewById<TextView>(R.id.translate_replace).apply {
+            setTextColor(theme.onAccent)
+            typeface = fonts.medium
+            background = pressable(theme.accent, blendColor(theme.accent, theme.onAccent, 0.18f), dp(10f).toFloat())
+        }
+        renderDirection()
+
+        for (id in listOf(R.id.one_hand_left_move, R.id.one_hand_left_exit, R.id.one_hand_right_move, R.id.one_hand_right_exit)) {
+            view.findViewById<ImageView>(id).apply {
+                setColorFilter(theme.keyLabelSecondary)
+                background = pressable(Color.TRANSPARENT, theme.keyPressed, dp(24f).toFloat())
+            }
+        }
+        applyOneHandedMode()
+        visualsDirty = false
+    }
+
+    /** Tool icons and labels in the secondary colour; a tool that is on (one-handed) in the accent. */
+    private fun renderToolStates(theme: KeyboardTheme = keyboardView?.currentTheme() ?: KeyboardThemes.current(this)) {
+        val view = root ?: return
+        val active = mapOf(R.id.icon_tool_one_hand to (oneHandedMode() != "off"))
+        val pairs = listOf(
+            R.id.icon_tool_emoji to R.id.text_tool_emoji,
+            R.id.icon_tool_clipboard to R.id.text_tool_clipboard,
+            R.id.icon_tool_translate to R.id.text_tool_translate,
+            R.id.icon_tool_themes to R.id.text_tool_themes,
+            R.id.icon_tool_one_hand to R.id.text_tool_one_hand,
+            R.id.icon_tool_settings to R.id.text_tool_settings,
         )
-
-        val slateColors = BarColors(
-            Color.parseColor("#1E1F22"), Color.parseColor("#949BA4"), Color.parseColor("#6BA0F5"),
-            Color.parseColor("#6BA0F5"), Color.parseColor("#2B2D31"), Color.parseColor("#D1D5DB")
-        )
-
-        val chalkColors = BarColors(
-            Color.parseColor("#ECEFF1"), Color.parseColor("#5F6368"), Color.parseColor("#1A73E8"),
-            Color.parseColor("#1A73E8"), Color.parseColor("#D9DEE3"), Color.parseColor("#49454F")
-        )
-
-        val c = when (theme) {
-            "theme_system" -> if (isSystemNight) slateColors else chalkColors
-            "theme_slate_dark", "theme_midnight_glass", "theme_liquid_glass" -> slateColors
-            "theme_chalk_light", "theme_pure_minimal", "theme_material_you" -> chalkColors
-            "theme_naga_heritage" -> {
-                if (isSystemNight) {
-                    BarColors(
-                        Color.parseColor("#141416"), Color.parseColor("#A8A096"), Color.parseColor("#E53935"),
-                        Color.parseColor("#E53935"), Color.parseColor("#262428"), Color.parseColor("#F5EFE6")
-                    )
-                } else {
-                    BarColors(
-                        Color.parseColor("#F7F4EE"), Color.parseColor("#78716C"), Color.parseColor("#C62828"),
-                        Color.parseColor("#C62828"), Color.parseColor("#E2D9CC"), Color.parseColor("#1C1917")
-                    )
-                }
-            }
-            "theme_obsidian_oled" -> BarColors(
-                Color.parseColor("#000000"), Color.parseColor("#9CA3AF"), Color.parseColor("#60A5FA"),
-                Color.parseColor("#60A5FA"), Color.parseColor("#1F2228"), Color.parseColor("#E5E7EB")
-            )
-            "theme_nordic_frost" -> BarColors(
-                Color.parseColor("#242933"), Color.parseColor("#D8DEE9"), Color.parseColor("#88C0D0"),
-                Color.parseColor("#88C0D0"), Color.parseColor("#2E3440"), Color.parseColor("#ECEFF4")
-            )
-            "theme_custom" -> {
-                val accentColorValue = prefs.getInt("custom_accent_color", Color.parseColor("#1A73E8"))
-                val overlayOpacity = prefs.getInt("custom_overlay_opacity", 140).coerceIn(0, 220)
-                BarColors(
-                    Color.argb(overlayOpacity, 16, 18, 24), Color.parseColor("#9CA3AF"), accentColorValue,
-                    accentColorValue, Color.argb(40, 255, 255, 255), Color.WHITE
-                )
-            }
-            else -> if (isSystemNight) slateColors else chalkColors
+        for ((icon, label) in pairs) {
+            val color = if (active[icon] == true) theme.accent else theme.keyLabelSecondary
+            view.findViewById<ImageView>(icon).setColorFilter(color)
+            view.findViewById<TextView>(label).setTextColor(color)
         }
-
-        toolTextColor = c.toolText
-        if (toolsLayout?.visibility == View.VISIBLE || translateMode) btnToggle?.setColorFilter(toolTextColor)
-        suggestionBar?.setBackgroundColor(c.barBg)
-        imeRootView?.setBackgroundColor(c.barBg)
-        // btnToggle logo is pristine background-less
-        toolbarDivider?.setBackgroundColor(c.divider)
-        barDivider?.setBackgroundColor(c.divider)
-
-        // Suggestion text colors
-        suggestionViews.getOrNull(0)?.setTextColor(c.textNormal)
-        suggestionViews.getOrNull(1)?.setTextColor(c.textAccent)
-        suggestionViews.getOrNull(2)?.setTextColor(c.textNormal)
-
-        // Suggestion separator dividers
-        suggestionsLayout?.let { container ->
-            for (i in 0 until container.childCount) {
-                val child = container.getChildAt(i)
-                if (child !is TextView && child.layoutParams.width == 1) {
-                    child.setBackgroundColor(c.divider)
-                }
-            }
-        }
-
-        // Tool button vector tint & text colors
-        textToolClip?.setTextColor(c.toolText)
-        textToolTheme?.setTextColor(c.toolText)
-        textToolSettings?.setTextColor(c.toolText)
-        iconToolClip?.setColorFilter(c.toolText)
-        iconToolTheme?.setColorFilter(c.toolText)
-        iconToolSettings?.setColorFilter(c.toolText)
-        textToolTranslate?.setTextColor(c.toolText)
-        iconToolTranslate?.setColorFilter(c.toolText)
-        translateDirectionView?.setTextColor(c.textAccent)
-        translateAction?.setTextColor(c.textAccent)
-        translateInsert?.setColorFilter(c.textAccent)
-        translateLabel?.setTextColor(c.textNormal)
-        translateResult?.setTextColor(c.toolText)
+        view.findViewById<View>(R.id.tool_one_hand).contentDescription =
+            if (oneHandedMode() != "off") "One-handed mode, on" else "One-handed mode"
     }
 
-    // The close icon is a white glyph, so it takes the theme's tool colour; the logo keeps its own colours.
-    private var toolTextColor: Int = Color.WHITE
-
-    private fun showToggleClose() {
-        btnToggle?.setImageResource(R.drawable.ic_close_clean)
-        btnToggle?.setColorFilter(toolTextColor)
+    private fun rounded(fill: Int, radius: Float): Drawable = GradientDrawable().apply {
+        cornerRadius = radius
+        setColor(fill)
     }
 
-    private fun showToggleLogo() {
-        btnToggle?.setImageResource(R.drawable.likhibi_logo)
-        btnToggle?.clearColorFilter()
+    private fun pressable(fill: Int, pressed: Int, radius: Float): Drawable = StateListDrawable().apply {
+        addState(intArrayOf(android.R.attr.state_pressed), rounded(pressed, radius))
+        addState(intArrayOf(), rounded(fill, radius))
     }
 
-    private fun toggleToolbar() {
-        if (translateMode) {
-            closeTranslate()
-            return
-        }
-        if (toolsLayout?.visibility == View.VISIBLE) {
-            // Close tools, show suggestions
-            toolsLayout?.visibility = View.GONE
-            suggestionsLayout?.visibility = View.VISIBLE
-            showToggleLogo()
-            btnToggle?.rotation = 0f
-            // Revert keyboard shelf if showing clipboard or theme swappers
-            if (keyboardView?.getViewState() != CustomKeyboardView.ViewState.KEYS) {
-                keyboardView?.switchMode(CustomKeyboardView.Mode.QWERTY)
-            }
-        } else {
-            // Show tools, hide suggestions
-            suggestionsLayout?.visibility = View.GONE
-            toolsLayout?.visibility = View.VISIBLE
-            showToggleClose()
+    private fun blendColor(a: Int, b: Int, t: Float): Int = Color.rgb(
+        (Color.red(a) + (Color.red(b) - Color.red(a)) * t).roundToInt(),
+        (Color.green(a) + (Color.green(b) - Color.green(a)) * t).roundToInt(),
+        (Color.blue(a) + (Color.blue(b) - Color.blue(a)) * t).roundToInt(),
+    )
+
+    // ------------------------------------------------------------------ strip states
+
+    private fun showToolbar(show: Boolean) {
+        if (translateMode) return
+        toolbarStrip?.visibility = if (show) View.VISIBLE else View.GONE
+        suggestionStrip?.visibility = if (show) View.GONE else View.VISIBLE
+        if (!show && keyboardView?.getViewState() != CustomKeyboardView.ViewState.KEYS) {
+            keyboardView?.switchMode(CustomKeyboardView.Mode.QWERTY)
         }
     }
+
+    /** Clipboard and emoji panels replace the strip and the keys; the strip returns with the keys. */
+    private fun onPanelChanged(state: CustomKeyboardView.ViewState) {
+        val keys = state == CustomKeyboardView.ViewState.KEYS
+        stripContainer?.visibility = if (keys && suggestionsEnabledForField) View.VISIBLE else View.GONE
+        if (keys && !translateMode) {
+            toolbarStrip?.visibility = View.GONE
+            suggestionStrip?.visibility = View.VISIBLE
+        }
+        applyOneHandedMode()
+    }
+
+    private fun oneHandedMode(): String = prefs.getString("one_handed_mode", "off") ?: "off"
+
+    private fun setOneHandedMode(mode: String) {
+        prefs.edit().putString("one_handed_mode", mode).apply()
+        applyOneHandedMode()
+        renderToolStates()
+    }
+
+    /** One-handed: the keys shrink towards one side and the controls take the other. */
+    private fun applyOneHandedMode() {
+        val keysShowing = keyboardView?.getViewState() == CustomKeyboardView.ViewState.KEYS
+        val mode = if (keysShowing) oneHandedMode() else "off"
+        oneHandLeft?.visibility = if (mode == "right") View.VISIBLE else View.GONE
+        oneHandRight?.visibility = if (mode == "left") View.VISIBLE else View.GONE
+    }
+
+    // ------------------------------------------------------------------ clipboard
 
     private fun registerClipboardListener() {
         if (isClipListenerRegistered) return
         try {
-            if (clipboardManager == null) {
-                clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager
-            }
+            if (clipboardManager == null) clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager
             clipboardManager?.addPrimaryClipChangedListener(clipListener)
             isClipListenerRegistered = true
         } catch (e: Exception) {
@@ -410,92 +371,64 @@ class LikhibiImeService : InputMethodService() {
         }
     }
 
-    /**
-     * Intercepts copied text while keyboard is active and saves to SharedPreferences
-     */
+    /** Keeps text copied while the keyboard is open, unless the person turned clipboard history off. */
     private fun captureCurrentClip() {
+        if (!clipboardStore.enabled || !learningAllowed) return
         try {
-            val clip = clipboardManager?.primaryClip
-            if (clip != null && clip.itemCount > 0) {
-                val text = clip.getItemAt(0).text?.toString()?.trim()
-                if (!text.isNullOrEmpty()) {
-                    saveToClipboardHistory(text)
-                }
+            val clip = clipboardManager?.primaryClip ?: return
+            if (clip.itemCount == 0) return
+            val text = clip.getItemAt(0).text?.toString()?.trim()
+            if (!text.isNullOrEmpty()) {
+                clipboardStore.add(text)
+                if (keyboardView?.getViewState() == CustomKeyboardView.ViewState.CLIPBOARD) keyboardView?.showClipboard()
             }
         } catch (e: Exception) {
             Log.e("LikhibiIME", "Failed to capture clipboard text: ${e.message}")
         }
     }
 
-    private fun saveToClipboardHistory(text: String) {
-        val prefs = getSharedPreferences("likhibi_keyboard_prefs", MODE_PRIVATE)
-        val saved = prefs.getString("clipboard_history", "") ?: ""
-        val clips = if (saved.isEmpty()) mutableListOf() else saved.split("[LIKHIBI_SPLIT]").filter { it.isNotEmpty() }.toMutableList()
-
-        // Push new item to the top by removing past duplicates and inserting
-        clips.remove(text)
-        clips.add(text)
-
-        // Limit clipboard history to last 15 items
-        val trimmed = if (clips.size > 15) clips.takeLast(15) else clips
-
-        prefs.edit().putString("clipboard_history", trimmed.joinToString("[LIKHIBI_SPLIT]")).apply()
-
-        // Live refresh the clipboard layout if currently showing on screen
-        if (keyboardView?.getViewState() == CustomKeyboardView.ViewState.CLIPBOARD) {
-            keyboardView?.showClipboard()
-        }
-    }
+    // ------------------------------------------------------------------ input lifecycle
 
     override fun onStartInput(attribute: EditorInfo?, restarting: Boolean) {
-        val prefs = getSharedPreferences("likhibi_keyboard_prefs", Context.MODE_PRIVATE)
-        val currentTheme = prefs.getString("selected_theme", CustomKeyboardView.DEFAULT_THEME) ?: CustomKeyboardView.DEFAULT_THEME
-        val currentFont = prefs.getString("selected_font", "sans-serif") ?: "sans-serif"
-        
-        if (currentTheme != lastTheme || currentFont != lastFont) {
-            setInputView(onCreateInputView())
-        }
-
         super.onStartInput(attribute, restarting)
+
+        val learnedReset = prefs.getLong("learned_reset_at", 0L)
+        if (learnedReset > lastLearnedReset) {
+            offlineEngine.clearUserData()
+            lastLearnedReset = learnedReset
+        }
 
         val imeOptions = attribute?.imeOptions ?: 0
         val inputType = attribute?.inputType ?: 0
-        val enterAction = imeOptions and EditorInfo.IME_MASK_ACTION
         val noEnterAction = (imeOptions and EditorInfo.IME_FLAG_NO_ENTER_ACTION) != 0
         val isMultiLine = (inputType and InputType.TYPE_TEXT_FLAG_MULTI_LINE) != 0
-
-        val enterLabel = if (noEnterAction || isMultiLine) {
-            "↵"
-        } else {
-            when (enterAction) {
-                EditorInfo.IME_ACTION_SEARCH -> "🔍"
-                EditorInfo.IME_ACTION_GO -> "➔"
-                EditorInfo.IME_ACTION_SEND -> "➤"
-                EditorInfo.IME_ACTION_NEXT -> "↵"
-                EditorInfo.IME_ACTION_DONE -> "✓"
-                else -> "↵"
-            }
+        val enterAction = if (noEnterAction || isMultiLine) CustomKeyboardView.EnterAction.NEWLINE else when (imeOptions and EditorInfo.IME_MASK_ACTION) {
+            EditorInfo.IME_ACTION_SEARCH -> CustomKeyboardView.EnterAction.SEARCH
+            EditorInfo.IME_ACTION_SEND -> CustomKeyboardView.EnterAction.SEND
+            EditorInfo.IME_ACTION_GO -> CustomKeyboardView.EnterAction.GO
+            EditorInfo.IME_ACTION_NEXT -> CustomKeyboardView.EnterAction.NEXT
+            EditorInfo.IME_ACTION_DONE -> CustomKeyboardView.EnterAction.DONE
+            else -> CustomKeyboardView.EnterAction.NEWLINE
         }
-        keyboardView?.enterKeyLabel = enterLabel
+
         currentComposing = StringBuilder()
         suggestionsEnabledForField = attribute?.let { !isPasswordField(it) } ?: true
         val incognito = (imeOptions and EditorInfo.IME_FLAG_NO_PERSONALIZED_LEARNING) != 0
         learningAllowed = suggestionsEnabledForField && !incognito
-        updateSuggestionsForCurrentState()
-        suggestionBar?.visibility = if (suggestionsEnabledForField) View.VISIBLE else View.GONE
-        
-        // Auto reset toolbar state back to suggestions on launch
-        toolsLayout?.visibility = View.GONE
-        suggestionsLayout?.visibility = View.VISIBLE
-        showToggleLogo()
-        translateMode = false
-        translateContainer?.visibility = View.GONE
-        // Nothing typed in a password or incognito field is translated or sent anywhere.
-        btnToolTranslate?.visibility = if (learningAllowed) View.VISIBLE else View.GONE
 
-        // Batch reset visual state to avoid redundant UI rebuilds and ANRs
+        if (translateMode) closeTranslate()
+        if (visualsDirty) applyTheme()
+        keyboardView?.enterAction = enterAction
+        // Nothing typed in a password or incognito field is translated or sent anywhere.
+        root?.findViewById<View>(R.id.tool_translate)?.visibility = if (learningAllowed) View.VISIBLE else View.GONE
         keyboardView?.resetState(CustomKeyboardView.Mode.QWERTY, false)
-        applySuggestionBarTheme()
+        onPanelChanged(CustomKeyboardView.ViewState.KEYS)
+        updateSuggestionsForCurrentState()
+    }
+
+    override fun onStartInputView(info: EditorInfo?, restarting: Boolean) {
+        super.onStartInputView(info, restarting)
+        if (visualsDirty) applyTheme()
     }
 
     override fun onFinishInput() {
@@ -506,6 +439,7 @@ class LikhibiImeService : InputMethodService() {
 
     override fun onDestroy() {
         super.onDestroy()
+        prefs.unregisterOnSharedPreferenceChangeListener(prefsListener)
         translateJob?.cancel()
         student?.close()
         translateDispatcher.close()
@@ -513,24 +447,22 @@ class LikhibiImeService : InputMethodService() {
         serviceScope.coroutineContext[Job]?.cancel()
     }
 
+    // ------------------------------------------------------------------ keys
+
     private fun handleCustomKey(code: Int) {
         val ic = currentInputConnection ?: return
-
         when (code) {
             KEYCODE_DELETE -> handleBackspace(ic)
             KEYCODE_SHIFT -> handleShift()
             KEYCODE_SYMBOL_SWITCH -> handleSymbolSwitch()
-            KEYCODE_SYMBOL_EXTRA -> handleSymbolExtra()
-            KEYCODE_SYMBOL_BACK -> handleSymbolBack()
-            KEYCODE_EMOJI_SWITCH -> handleEmojiSwitch()
-            KEYCODE_SWITCH_IME -> {
-                val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as? android.view.inputmethod.InputMethodManager
-                imm?.showInputMethodPicker()
-            }
+            KEYCODE_SYMBOL_EXTRA -> keyboardView?.switchMode(CustomKeyboardView.Mode.EXTRA_SYMBOLS)
+            KEYCODE_SYMBOL_BACK -> keyboardView?.switchMode(CustomKeyboardView.Mode.SYMBOLS)
+            KEYCODE_EMOJI_SWITCH -> keyboardView?.showEmojiShelf()
+            KEYCODE_SWITCH_IME -> (getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager)?.showInputMethodPicker()
             10 -> handleEnter(ic)
             32 -> handleSpace(ic)
-            Int.MAX_VALUE -> ic.sendKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_DPAD_RIGHT))
-            Int.MIN_VALUE -> ic.sendKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_DPAD_LEFT))
+            CustomKeyboardView.CODE_CURSOR_RIGHT -> ic.sendKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_DPAD_RIGHT))
+            CustomKeyboardView.CODE_CURSOR_LEFT -> ic.sendKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_DPAD_LEFT))
             else -> handleCharacter(ic, code)
         }
     }
@@ -538,21 +470,21 @@ class LikhibiImeService : InputMethodService() {
     private var lastShiftTime = 0L
 
     private fun handleShift() {
+        val kv = keyboardView ?: return
         val now = System.currentTimeMillis()
-        if (now - lastShiftTime < 300) {
-            keyboardView?.isCapsLock = true
-            keyboardView?.setShifted(true)
+        if (now - lastShiftTime < 300 && !kv.isCapsLock) {
+            kv.isCapsLock = true
+            kv.setShifted(true)
         } else {
-            keyboardView?.isCapsLock = false
-            keyboardView?.setShifted(!(keyboardView?.isShifted() ?: false))
+            val turnOn = !kv.isShifted() && !kv.isCapsLock
+            kv.isCapsLock = false
+            kv.setShifted(turnOn)
         }
         lastShiftTime = now
     }
 
     private fun handleText(text: String) {
         val ic = currentInputConnection ?: return
-        
-        // Commit current composition first if active
         val composing = currentComposing.toString().trim()
         if (composing.isNotEmpty()) {
             learnWord(composing)
@@ -561,45 +493,47 @@ class LikhibiImeService : InputMethodService() {
             currentComposing = StringBuilder()
         }
         ic.commitText(text, 1)
-
-        // Dynamically learn the bigram from the last 2 committed words
         val last2 = getLastWords(2)
-        if (last2.size == 2) {
-            learnBigram(last2[0], last2[1])
-        }
+        if (last2.size == 2) learnBigram(last2[0], last2[1])
+        updateSuggestionsForCurrentState()
     }
 
     private fun handleCharacter(ic: InputConnection, primaryCode: Int) {
         var ch = primaryCode.toChar().toString()
-        if (keyboardView?.isShifted() == true) {
-            ch = ch.uppercase()
-        }
+        if (keyboardView?.isShifted() == true) ch = ch.uppercase()
         currentComposing.append(ch)
         ic.setComposingText(currentComposing, 1)
         updateSuggestionsForCurrentState()
-        
-        // Auto-shift back to lowercase after typing a letter
         val kv = keyboardView ?: return
-        if (kv.isShifted() && !kv.isCapsLock) {
-            kv.setShifted(false)
+        if (kv.isShifted() && !kv.isCapsLock) kv.setShifted(false)
+    }
+
+    /** A long-press alternate (é, 3, @) replaces the character the key typed on touch. */
+    private fun handleAlternate(text: String) {
+        val ic = currentInputConnection ?: return
+        if (currentComposing.isNotEmpty()) {
+            currentComposing.deleteCharAt(currentComposing.length - 1)
+            currentComposing.append(text)
+            ic.setComposingText(currentComposing, 1)
+        } else {
+            ic.deleteSurroundingText(1, 0)
+            ic.commitText(text, 1)
         }
+        updateSuggestionsForCurrentState()
     }
 
     private fun handleBackspace(ic: InputConnection) {
         if (currentComposing.isNotEmpty()) {
-            currentComposing.deleteAt(currentComposing.length - 1)
-            if (currentComposing.isEmpty()) {
-                ic.finishComposingText()
-            } else {
-                ic.setComposingText(currentComposing, 1)
-            }
+            currentComposing.deleteCharAt(currentComposing.length - 1)
+            if (currentComposing.isEmpty()) ic.commitText("", 1) else ic.setComposingText(currentComposing, 1)
         } else {
-            ic.deleteSurroundingText(1, 0)
+            val selected = ic.getSelectedText(0)
+            if (!selected.isNullOrEmpty()) ic.commitText("", 1) else ic.deleteSurroundingText(1, 0)
         }
         updateSuggestionsForCurrentState()
     }
 
-    private fun handleSpace(ic: InputConnection) {
+    private fun commitComposing(ic: InputConnection) {
         val composing = currentComposing.toString().trim()
         if (composing.isNotEmpty()) {
             learnWord(composing)
@@ -607,100 +541,52 @@ class LikhibiImeService : InputMethodService() {
             ic.finishComposingText()
             currentComposing = StringBuilder()
         }
+    }
+
+    private fun handleSpace(ic: InputConnection) {
+        commitComposing(ic)
         ic.commitText(" ", 1)
-
-        // Dynamically learn the bigram from the last 2 committed words
         val last2 = getLastWords(2)
-        if (last2.size == 2) {
-            learnBigram(last2[0], last2[1])
-        }
-
+        if (last2.size == 2) learnBigram(last2[0], last2[1])
         updateSuggestionsForCurrentState()
     }
 
     private fun handleEnter(ic: InputConnection) {
-        val composing = currentComposing.toString().trim()
-        if (composing.isNotEmpty()) {
-            learnWord(composing)
-            ic.commitText(currentComposing.toString(), 1)
-            ic.finishComposingText()
-            currentComposing = StringBuilder()
-        }
-
+        commitComposing(ic)
         val info = currentInputEditorInfo
         val imeOptions = info?.imeOptions ?: 0
         val inputType = info?.inputType ?: 0
         val action = imeOptions and EditorInfo.IME_MASK_ACTION
         val noEnterAction = (imeOptions and EditorInfo.IME_FLAG_NO_ENTER_ACTION) != 0
         val isMultiLine = (inputType and InputType.TYPE_TEXT_FLAG_MULTI_LINE) != 0
-
         if (!noEnterAction && !isMultiLine && action != EditorInfo.IME_ACTION_NONE && action != EditorInfo.IME_ACTION_UNSPECIFIED) {
             ic.performEditorAction(action)
-        } else {
-            // Newline for multiline chat & text fields (WhatsApp, Telegram, Notes, Messages)
-            val committed = ic.commitText("\n", 1)
-            if (!committed) {
-                ic.sendKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_ENTER))
-                ic.sendKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_UP, android.view.KeyEvent.KEYCODE_ENTER))
-            }
+        } else if (!ic.commitText("\n", 1)) {
+            ic.sendKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_ENTER))
+            ic.sendKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_UP, android.view.KeyEvent.KEYCODE_ENTER))
         }
-
-        // Dynamically learn the bigram from the last 2 committed words
         val last2 = getLastWords(2)
-        if (last2.size == 2) {
-            learnBigram(last2[0], last2[1])
-        }
-
+        if (last2.size == 2) learnBigram(last2[0], last2[1])
         updateSuggestionsForCurrentState()
     }
 
-
     private fun handleSymbolSwitch() {
         val kv = keyboardView ?: return
-        if (kv.getMode() != CustomKeyboardView.Mode.QWERTY) {
-            kv.switchMode(CustomKeyboardView.Mode.QWERTY)
-        } else {
-            kv.switchMode(CustomKeyboardView.Mode.SYMBOLS)
-        }
+        kv.switchMode(if (kv.getMode() != CustomKeyboardView.Mode.QWERTY) CustomKeyboardView.Mode.QWERTY else CustomKeyboardView.Mode.SYMBOLS)
     }
 
-    private fun handleSymbolExtra() {
-        keyboardView?.switchMode(CustomKeyboardView.Mode.EXTRA_SYMBOLS)
-    }
-
-    private fun handleSymbolBack() {
-        keyboardView?.switchMode(CustomKeyboardView.Mode.SYMBOLS)
-    }
-
-    private fun handleEmojiSwitch() {
-        val kv = keyboardView ?: return
-        if (kv.getViewState() == CustomKeyboardView.ViewState.EMOJI_SHELF) {
-            kv.switchMode(CustomKeyboardView.Mode.QWERTY)
-        } else {
-            kv.showEmojiShelf()
-        }
-    }
+    // ------------------------------------------------------------------ suggestions
 
     private fun acceptSuggestion(word: String) {
         val ic = currentInputConnection ?: return
-
-        val composing = currentComposing.toString().trim()
-        if (composing.isNotEmpty()) {
-            learnWord(composing)
-        }
-
+        if (currentComposing.toString().trim().isNotEmpty()) learnWord(currentComposing.toString().trim())
         ic.commitText(word, 1)
         ic.finishComposingText()
         ic.commitText(" ", 1)
         currentComposing = StringBuilder()
-
         learnWord(word)
-
         val last2 = getLastWords(2)
-        if (last2.size == 2) {
-            learnBigram(last2[0], last2[1])
-        }
-
+        if (last2.size == 2) learnBigram(last2[0], last2[1])
         updateSuggestionsForCurrentState()
     }
 
@@ -713,30 +599,16 @@ class LikhibiImeService : InputMethodService() {
 
         val composing = currentComposing.toString().trim()
         if (composing.isNotEmpty()) {
-            // Auto revert toolbar back to Suggestions Mode when user starts active typing
-            if (toolsLayout?.visibility == View.VISIBLE) {
-                toolsLayout?.visibility = View.GONE
-                suggestionsLayout?.visibility = View.VISIBLE
-                showToggleLogo()
-                if (keyboardView?.getViewState() != CustomKeyboardView.ViewState.KEYS) {
-                    keyboardView?.switchMode(CustomKeyboardView.Mode.QWERTY)
-                }
-            }
-
+            // Typing returns the strip from the toolbar to the suggestions.
+            if (toolbarStrip?.visibility == View.VISIBLE) showToolbar(false)
             // Completions use the words already typed, so "moi bazar te j" ranks "jabo" first.
-            val localMatches = offlineEngine.getPrefixMatches(predictionContext(includeComposing = false), composing)
-            if (localMatches.isNotEmpty()) {
-                updateSuggestionBar(styled(localMatches))
-            } else {
-                updateSuggestionBar(listOf(composing, "", ""))
-            }
+            val matches = offlineEngine.getPrefixMatches(predictionContext(includeComposing = false), composing)
+            updateSuggestionBar(if (matches.isNotEmpty()) styled(matches) else listOf(composing))
+        } else if (!prefs.getBoolean("next_word_suggestions", true)) {
+            updateSuggestionBar(emptyList())
         } else {
             val context = predictionContext(includeComposing = true)
-            if (context.isEmpty()) {
-                updateSuggestionBar(styled(offlineEngine.getPopularWords()))
-                return
-            }
-            updateSuggestionBar(styled(offlineEngine.getLocalNextWordPredictions(context)))
+            updateSuggestionBar(styled(if (context.isEmpty()) offlineEngine.getPopularWords() else offlineEngine.getLocalNextWordPredictions(context)))
         }
     }
 
@@ -789,21 +661,54 @@ class LikhibiImeService : InputMethodService() {
         if (learningAllowed && !translateMode) offlineEngine.learnBigram(first, second)
     }
 
+    private fun getLastWords(maxWords: Int): List<String> {
+        val ic = currentInputConnection ?: return emptyList()
+        val before = ic.getTextBeforeCursor(60, 0)?.toString().orEmpty()
+        val combined = (before + currentComposing.toString()).trim()
+        if (combined.isEmpty()) return emptyList()
+        return combined.split(Regex("\\s+")).map { it.trim() }.filter { it.isNotEmpty() }.takeLast(maxWords)
+    }
+
+    private fun updateSuggestionBar(words: List<String>) {
+        if (!suggestionsEnabledForField) return
+        val padded = (words + listOf("", "", "")).take(3)
+        // The likeliest suggestion sits in the middle, in the bolder weight.
+        val ordered = listOf(padded[1], padded[0], padded[2])
+        for (i in 0..2) {
+            val tv = suggestionViews.getOrNull(i) ?: continue
+            tv.text = ordered[i]
+            tv.contentDescription = if (ordered[i].isEmpty()) null else "Suggestion: ${ordered[i]}"
+        }
+    }
+
+    private fun isPasswordField(info: EditorInfo): Boolean {
+        val type = info.inputType
+        val variation = type and InputType.TYPE_MASK_VARIATION
+        val klass = type and InputType.TYPE_MASK_CLASS
+        val textPassword = klass == InputType.TYPE_CLASS_TEXT && (
+            variation == InputType.TYPE_TEXT_VARIATION_PASSWORD ||
+                variation == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD ||
+                variation == InputType.TYPE_TEXT_VARIATION_WEB_PASSWORD
+            )
+        val numberPassword = klass == InputType.TYPE_CLASS_NUMBER && variation == InputType.TYPE_NUMBER_VARIATION_PASSWORD
+        return textPassword || numberPassword
+    }
+
     // ------------------------------------------------------------------ translate strip
+
+    private enum class Preview { HINT, PROGRESS, RESULT, MESSAGE }
 
     private fun openTranslate() {
         translateMode = true
         undoState = null
         previewText = ""
-        toolsLayout?.visibility = View.GONE
-        suggestionsLayout?.visibility = View.GONE
-        translateContainer?.visibility = View.VISIBLE
-        showToggleClose()
-        if (keyboardView?.getViewState() != CustomKeyboardView.ViewState.KEYS) {
-            keyboardView?.switchMode(CustomKeyboardView.Mode.QWERTY)
-        }
+        shownText = ""
+        toolbarStrip?.visibility = View.GONE
+        suggestionStrip?.visibility = View.GONE
+        translateStrip?.visibility = View.VISIBLE
+        keyboardView?.numberRowSuppressed = true
+        if (keyboardView?.getViewState() != CustomKeyboardView.ViewState.KEYS) keyboardView?.switchMode(CustomKeyboardView.Mode.QWERTY)
         renderDirection()
-        updateAction()
         scheduleTranslation(immediate = true)
     }
 
@@ -811,42 +716,78 @@ class LikhibiImeService : InputMethodService() {
         translateMode = false
         translateGeneration++
         translateJob?.cancel()
-        translateContainer?.visibility = View.GONE
-        suggestionsLayout?.visibility = View.VISIBLE
-        showToggleLogo()
+        translateStrip?.visibility = View.GONE
+        suggestionStrip?.visibility = View.VISIBLE
+        keyboardView?.numberRowSuppressed = false
         updateSuggestionsForCurrentState()
     }
 
+    private fun setDirection(direction: String) {
+        if (direction == translateDirection) return
+        translateDirection = direction
+        prefs.edit().putString("translate_direction", direction).apply()
+        renderDirection()
+        undoState = null
+        scheduleTranslation(immediate = true)
+    }
+
+    /** The two-segment direction control: the chosen direction is a raised segment. */
     private fun renderDirection() {
-        translateDirectionView?.text = if (translateDirection == "en-nag") "EN → NAG" else "NAG → EN"
-    }
-
-    private fun showPreview(label: String, text: String) {
-        translateLabel?.text = label
-        translateResult?.text = text
-    }
-
-    private fun serverUrl(): String =
-        getSharedPreferences("likhibi_keyboard_prefs", MODE_PRIVATE).getString("translate_server_url", "")?.trim().orEmpty()
-
-    private fun updateAction() {
-        val action = translateAction ?: return
-        when {
-            undoState != null -> {
-                action.text = "Undo"
-                action.visibility = View.VISIBLE
+        val view = root ?: return
+        val theme = keyboardView?.currentTheme() ?: return
+        val d = resources.displayMetrics.density
+        for ((id, value) in listOf(R.id.translate_seg_en_nag to "en-nag", R.id.translate_seg_nag_en to "nag-en")) {
+            val selected = value == translateDirection
+            view.findViewById<TextView>(id).apply {
+                setTextColor(if (selected) theme.keyLabel else theme.keyLabelSecondary)
+                typeface = if (selected) fonts.semibold else fonts.regular
+                background = if (selected) rounded(theme.key, 4 * d) else null
+                isSelected = selected
+                contentDescription = (if (value == "en-nag") "English to Nagamese" else "Nagamese to English") + if (selected) ", selected" else ""
             }
-            serverUrl().isNotEmpty() -> {
-                action.text = "Online"
-                action.visibility = View.VISIBLE
-            }
-            else -> action.visibility = View.GONE
         }
     }
 
+    private fun showPreview(state: Preview, message: String = "", online: Boolean = false) {
+        val view = root ?: return
+        val status = view.findViewById<TextView>(R.id.translate_status)
+        val result = view.findViewById<TextView>(R.id.translate_result)
+        val source = view.findViewById<View>(R.id.translate_source)
+        val bars = listOf(view.findViewById<View>(R.id.translate_bar_1), view.findViewById<View>(R.id.translate_bar_2))
+        status.visibility = if (state == Preview.RESULT) View.GONE else View.VISIBLE
+        bars.forEach { it.visibility = if (state == Preview.PROGRESS) View.VISIBLE else View.GONE }
+        result.visibility = if (state == Preview.RESULT) View.VISIBLE else View.GONE
+        source.visibility = if (state == Preview.RESULT) View.VISIBLE else View.GONE
+        when (state) {
+            Preview.PROGRESS -> status.text = "Translating…"
+            Preview.RESULT -> {
+                result.text = message
+                shownText = message
+                view.findViewById<TextView>(R.id.translate_source_text).text = if (online) "Online · server" else "Offline · Likhibi"
+                view.findViewById<ImageView>(R.id.translate_source_icon).setImageResource(if (online) R.drawable.ic_kb_wifi else R.drawable.ic_kb_wifi_off)
+            }
+            else -> status.text = message
+        }
+        updateActions()
+    }
+
+    private fun serverUrl(): String = prefs.getString("translate_server_url", "")?.trim().orEmpty()
+
+    private fun updateActions() {
+        val view = root ?: return
+        fun enable(id: Int, on: Boolean) = view.findViewById<View>(id).apply {
+            isEnabled = on
+            alpha = if (on) 1f else 0.4f
+        }
+        enable(R.id.translate_undo, undoState != null)
+        enable(R.id.translate_copy, shownText.isNotBlank())
+        enable(R.id.translate_replace, previewText.isNotBlank())
+        view.findViewById<View>(R.id.translate_online).visibility = if (serverUrl().isNotEmpty() && undoState == null) View.VISIBLE else View.GONE
+    }
+
     private fun hintLabel(): String =
-        if (translateDirection == "en-nag") "Type English: Nagamese appears here, translated on this phone"
-        else "Type Nagamese: English appears here, translated on this phone"
+        if (translateDirection == "en-nag") "Type in English. The Nagamese appears here, translated on this phone."
+        else "Type in Nagamese. The English appears here, translated on this phone."
 
     /** Translates the current sentence shortly after typing pauses. */
     private fun scheduleTranslation(immediate: Boolean = false) {
@@ -858,31 +799,30 @@ class LikhibiImeService : InputMethodService() {
             pendingSource = source
             if (source == null || source.text.isBlank()) {
                 previewText = ""
-                showPreview(hintLabel(), "")
-                updateAction()
+                shownText = ""
+                showPreview(Preview.HINT, hintLabel())
                 return@launch
             }
             val target = translateDirection.substringAfter("-")
-            showPreview("Translating on this phone…", previewText)
+            showPreview(Preview.PROGRESS)
             val result = withContext(translateDispatcher) {
                 runCatching { loadStudent()?.translate(source.text, target) }.getOrNull()
             }
             if (generation != translateGeneration) return@launch
             if (result != null && result.text.isNotBlank()) {
                 previewText = result.text
-                showPreview("On this phone · ${result.millis} ms · tap to insert", result.text)
+                showPreview(Preview.RESULT, result.text)
             } else {
                 previewText = ""
+                shownText = ""
                 val problem = when (studentState) {
-                    "missing" -> "The offline model is not installed in this build"
-                    "failed" -> "The offline model could not start on this phone"
+                    "missing" -> "The offline translator is not installed in this build"
+                    "failed" -> "The offline translator could not start on this phone"
                     else -> "No translation for this text"
                 }
-                showPreview(problem + if (serverUrl().isNotEmpty()) ". Tap Online." else ".", "")
+                showPreview(Preview.MESSAGE, problem + if (serverUrl().isNotEmpty()) ". Tap Online to ask the server." else ".")
             }
-            updateAction()
-            val autoOnline = getSharedPreferences("likhibi_keyboard_prefs", MODE_PRIVATE).getBoolean("translate_auto_online", false)
-            if (autoOnline && serverUrl().isNotEmpty()) requestOnline(source, generation)
+            if (prefs.getBoolean("translate_auto_online", false) && serverUrl().isNotEmpty()) requestOnline(source, generation)
         }
     }
 
@@ -911,18 +851,17 @@ class LikhibiImeService : InputMethodService() {
     private fun requestOnline(source: TranslationSource, generation: Int) {
         val server = serverUrl()
         if (server.isEmpty()) return
-        showPreview("Asking the Likhibi server…", previewText)
+        showPreview(Preview.PROGRESS)
         serviceScope.launch {
             val (from, to) = translateDirection.split("-")
             val result = withContext(Dispatchers.IO) { runCatching { RemoteTranslator(server).translate(source.text, from, to) } }
             if (generation != translateGeneration) return@launch
             result.onSuccess {
                 previewText = it.text
-                showPreview("Online · ${it.engineName} · ${it.millis} ms · tap to insert", it.text)
+                showPreview(Preview.RESULT, it.text, online = true)
             }.onFailure {
-                showPreview("Online translation failed: ${it.message ?: "no connection"}", previewText)
+                showPreview(Preview.MESSAGE, "Online translation failed: ${it.message ?: "no connection"}")
             }
-            updateAction()
         }
     }
 
@@ -941,11 +880,13 @@ class LikhibiImeService : InputMethodService() {
         return TranslationSource(sentence.trim(), sentence.length - leading + trailing, isSelection = false)
     }
 
+    /** Replace: puts the translation in place of the sentence (or selection) it came from. */
     private fun insertTranslation() {
         val ic = currentInputConnection ?: return
         val source = pendingSource ?: return
         val translation = previewText.takeIf { it.isNotBlank() } ?: return
         translateGeneration++
+        translateJob?.cancel()
         ic.beginBatchEdit()
         ic.finishComposingText()
         currentComposing = StringBuilder()
@@ -962,8 +903,7 @@ class LikhibiImeService : InputMethodService() {
         }
         ic.endBatchEdit()
         previewText = ""
-        showPreview("Inserted · Undo puts your text back", translation)
-        updateAction()
+        updateActions()
     }
 
     private fun undoInsert() {
@@ -979,37 +919,8 @@ class LikhibiImeService : InputMethodService() {
         scheduleTranslation(immediate = true)
     }
 
-    private fun getLastWords(maxWords: Int): List<String> {
-        val ic = currentInputConnection ?: return emptyList()
-        val before = ic.getTextBeforeCursor(60, 0)?.toString().orEmpty()
-        val combined = (before + currentComposing.toString()).trim()
-        if (combined.isEmpty()) return emptyList()
-        val tokens = combined
-            .split(Regex("\\s+"))
-            .map { it.trim() }
-            .filter { it.isNotEmpty() }
-        if (tokens.isEmpty()) return emptyList()
-        return tokens.takeLast(maxWords)
-    }
-
-    private fun updateSuggestionBar(words: List<String>) {
-        if (!suggestionsEnabledForField) return
-        val padded = (words + listOf("", "", "")).take(3)
-        for (i in 0..2) {
-            suggestionViews.getOrNull(i)?.text = padded[i]
-        }
-    }
-
-    private fun isPasswordField(info: EditorInfo): Boolean {
-        val type = info.inputType
-        val variation = type and InputType.TYPE_MASK_VARIATION
-        val klass = type and InputType.TYPE_MASK_CLASS
-        val textPassword = klass == InputType.TYPE_CLASS_TEXT && (
-            variation == InputType.TYPE_TEXT_VARIATION_PASSWORD ||
-                variation == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD ||
-                variation == InputType.TYPE_TEXT_VARIATION_WEB_PASSWORD
-            )
-        val numberPassword = klass == InputType.TYPE_CLASS_NUMBER && variation == InputType.TYPE_NUMBER_VARIATION_PASSWORD
-        return textPassword || numberPassword
+    private fun copyTranslation() {
+        val text = shownText.takeIf { it.isNotBlank() } ?: return
+        clipboardManager?.setPrimaryClip(ClipData.newPlainText("Likhibi translation", text))
     }
 }

@@ -1,1556 +1,1136 @@
 package com.likhibi.android
 
-import com.likhibi.keyboard.R
 import android.content.Context
-import android.content.res.ColorStateList
-import android.content.res.Configuration
-import android.graphics.BitmapFactory
+import android.graphics.Canvas
 import android.graphics.Color
+import android.graphics.Paint
 import android.graphics.Typeface
-import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
-import android.graphics.drawable.LayerDrawable
-import android.graphics.drawable.RippleDrawable
+import android.graphics.drawable.StateListDrawable
 import android.media.AudioAttributes
 import android.media.SoundPool
-import android.os.Build
 import android.os.Handler
 import android.os.Looper
 import android.os.VibrationEffect
 import android.os.Vibrator
+import android.text.TextPaint
+import android.text.TextUtils
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.Gravity
 import android.view.HapticFeedbackConstants
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.view.accessibility.AccessibilityNodeInfo
+import android.widget.FrameLayout
 import android.widget.HorizontalScrollView
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
-import java.io.File
+import androidx.core.content.ContextCompat
+import com.likhibi.keyboard.R
+import kotlin.math.roundToInt
 
+/**
+ * The key grid, and the clipboard and emoji panels that take its place. Built from the
+ * Figma "Keyboard" page (design/SPECS.md): sizes in dp, colours from [KeyboardTheme].
+ */
 class CustomKeyboardView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0
+    defStyleAttr: Int = 0,
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
     interface OnKeyActionListener {
         fun onKey(code: Int)
         fun onText(text: String)
+        /** Replaces the character just typed with an alternate chosen by long-press. */
+        fun onAlternate(text: String)
     }
 
-    var listener: OnKeyActionListener? = null
-    private var isShifted = false
-    var isCapsLock = false
-    var enterKeyLabel = "↵"
-    private var keyboardMode = Mode.QWERTY
-    private var currentTheme = DEFAULT_THEME
-    private var lastAppliedTheme: String? = null
-    private var cachedThemeColors: ThemeColors? = null
-    private var cachedWallpaper: BitmapDrawable? = null
-    private val drawableCache = mutableMapOf<String, android.graphics.drawable.Drawable.ConstantState>()
-
-    private val prefs = context.getSharedPreferences("likhibi_keyboard_prefs", Context.MODE_PRIVATE)
-
-    private var soundPool: SoundPool? = null
-    private var soundClick: Int = 0
-    private var soundSpace: Int = 0
-    private var deleteRunnable: Runnable? = null
-    private val deleteHandler = Handler(Looper.getMainLooper())
-
-    // Fast-path letter views for instant Shift toggling without recreating layouts
-    private val letterKeyViews = mutableListOf<Pair<TextView, String>>()
-    private var shiftKeyView: TextView? = null
-
-    // Tracking view state (whether showing normal keys, clipboard, theme switcher, or emoji shelf)
-    private var viewState = ViewState.KEYS
-    private var currentEmojiCategoryIndex = 0
+    enum class Mode { QWERTY, SYMBOLS, EXTRA_SYMBOLS }
+    enum class ViewState { KEYS, CLIPBOARD, EMOJI_SHELF }
+    enum class EnterAction { NEWLINE, SEARCH, SEND, GO, NEXT, DONE }
+    enum class HapticType { KEY_STANDARD, KEY_SPACE, KEY_MODIFIER, KEY_ACCENT }
 
     companion object {
-        /** The brand theme: cream and Naga red by day, smoky black by night. */
-        const val DEFAULT_THEME = "theme_naga_heritage"
+        const val DEFAULT_THEME = KeyboardThemes.DEFAULT_THEME
         const val DEFAULT_HAPTIC_MS = 10
         const val DEFAULT_SOUND_ENABLED = false
+
+        const val CODE_SHIFT = -1
+        const val CODE_SYMBOLS = -2
+        const val CODE_EXTRA_SYMBOLS = -3
+        const val CODE_SYMBOLS_BACK = -4
+        const val CODE_DELETE = -5
+        const val CODE_EMOJI = -10
+        const val CODE_SWITCH_IME = -11
+        const val CODE_CURSOR_RIGHT = Int.MAX_VALUE
+        const val CODE_CURSOR_LEFT = Int.MIN_VALUE
+
+        /** Height of the strip above the keys (suggestions, toolbar). */
+        const val STRIP_HEIGHT_DP = 52f
+
+        private const val LONG_PRESS_MS = 380L
+        private const val SPACE_LONG_PRESS_MS = 450L
+
+        private val ACCENTS = mapOf(
+            "a" to listOf("à", "á", "â", "ä", "ã", "å", "ā"),
+            "e" to listOf("é", "è", "ê", "ë", "ē"),
+            "i" to listOf("í", "ì", "î", "ï"),
+            "o" to listOf("ó", "ò", "ô", "ö", "õ", "ō"),
+            "u" to listOf("ú", "ù", "û", "ü", "ū"),
+            "n" to listOf("ñ"),
+            "c" to listOf("ç"),
+            "y" to listOf("ý"),
+        )
+        private val ROW1 = listOf("q", "w", "e", "r", "t", "y", "u", "i", "o", "p")
+        private val ROW2 = listOf("a", "s", "d", "f", "g", "h", "j", "k", "l")
+        private val ROW3 = listOf("z", "x", "c", "v", "b", "n", "m")
+        private val DIGITS = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "0")
+        // Long-press symbols, as on the symbols layer: a-row ~ row 2, z-row ~ row 3.
+        private val ROW2_SYMBOLS = listOf("@", "#", "$", "_", "&", "-", "+", "(", ")")
+        private val ROW3_SYMBOLS = listOf("*", "\"", "'", ":", ";", "!", "?")
+        private val PERIOD_ALTERNATES = listOf("?", "!", ",", ":", ";", "-", "'", "\"")
     }
 
-    enum class Mode {
-        QWERTY, SYMBOLS, EXTRA_SYMBOLS, EMOJI
-    }
+    private enum class Kind { CHAR, FUNCTION, SPACE, ENTER, SPACER }
 
-    enum class ViewState {
-        KEYS, CLIPBOARD, THEME_SWITCHER, EMOJI_SHELF
-    }
-
-    enum class HapticType {
-        KEY_STANDARD, KEY_SPACE, KEY_MODIFIER, KEY_ACCENT
-    }
-
-    data class ThemeColors(
-        val bgColor: Int,
-        val bgGradient: List<String>? = null,
-        val keyBgNormal: Int,
-        val keyBgNormalPressed: Int,
-        val keyBgModifier: Int,
-        val keyBgModifierPressed: Int,
-        val keyBgAccent: Int,
-        val keyBgAccentPressed: Int,
-        val keyTextColorNormal: Int,
-        val keyTextColorModifier: Int,
-        val keyTextColorAccent: Int,
-        val isGlass: Boolean = false,
-        val hasShadow: Boolean = true,
-        val suggestionBarBg: Int,
-        val suggestionTextNormal: Int,
-        val suggestionTextAccent: Int,
-        val toolbarToggleColor: Int,
-        val dividerColor: Int,
-        val clipboardCardBg: Int,
-        val clipboardCardPressed: Int,
-        val clipboardEmptyText: Int,
-        val deleteColor: Int,
-        val accentColor: Int,
-        val cornerRadiusDp: Float = 7f,
-        val borderWidthDp: Float = 0f,
-        val borderColor: Int = Color.TRANSPARENT
-    )
-
-    data class KeyInfo(
+    private data class Key(
         val label: String,
         val code: Int,
-        val weight: Float = 1.0f,
-        val isModifier: Boolean = false,
-        val isAccent: Boolean = false,
-        val subLabel: String? = null
+        val width: Float,
+        val kind: Kind = Kind.CHAR,
+        val icon: Int = 0,
+        val hint: String? = null,
+        val alternates: List<String> = emptyList(),
+        val description: String? = null,
     )
 
-    var themeChangeListener: (() -> Unit)? = null
-    var wallpaperPickerListener: (() -> Unit)? = null
+    var listener: OnKeyActionListener? = null
+    /** Told when a panel replaces the keys, so the strip above can hide. */
+    var onPanelChanged: ((ViewState) -> Unit)? = null
+    /** Where key previews and long-press popups are drawn (a layer over the whole keyboard). */
+    var popupLayer: ViewGroup? = null
+
+    var isCapsLock = false
+    var enterAction = EnterAction.NEWLINE
+        set(value) {
+            if (field != value) {
+                field = value
+                if (viewState == ViewState.KEYS) buildKeys()
+            }
+        }
+    /** The translate strip hides the number row to keep the keyboard short. */
+    var numberRowSuppressed = false
+        set(value) {
+            if (field != value) {
+                field = value
+                if (viewState == ViewState.KEYS) buildKeys()
+            }
+        }
+
+    /** For theme thumbnails: draw this theme instead of the saved one, and ignore touches. */
+    var themeOverride: KeyboardTheme? = null
+    var previewMode = false
+
+    private val prefs = KeyboardThemes.prefs(context)
+    private val density = resources.displayMetrics.density
+    private val handler = Handler(Looper.getMainLooper())
+    private val clipboard = ClipboardStore(context)
+
+    private lateinit var theme: KeyboardTheme
+    private lateinit var fonts: KeyboardThemes.Fonts
+    private var keyHeightDp = 46f
+    private var showNumberRow = true
+    private var showEmojiKey = false
+    private var keyPopups = true
+    private var longPressSymbols = true
+
+    private var isShifted = false
+    private var keyboardMode = Mode.QWERTY
+    private var viewState = ViewState.KEYS
+    private val letterKeys = mutableListOf<Pair<TextView, String>>()
+    private var shiftKey: KeyCapView? = null
+    private val backgroundCache = HashMap<String, Drawable.ConstantState>()
+
+    private var soundPool: SoundPool? = null
+    private var soundClick = 0
+    private var soundSpace = 0
+
+    private var emojiSearch: StringBuilder? = null
 
     init {
         orientation = VERTICAL
         isMotionEventSplittingEnabled = true
-        currentTheme = prefs.getString("selected_theme", DEFAULT_THEME) ?: DEFAULT_THEME
-        applyTheme()
-        initSoundPool()
+        reload()
     }
 
-    private fun initSoundPool() {
-        val attrs = AudioAttributes.Builder()
-            .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
-            .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-            .build()
-        soundPool = SoundPool.Builder().setMaxStreams(4).setAudioAttributes(attrs).build()
-        try {
-            soundClick = soundPool?.load(context, R.raw.key_click, 1) ?: 0
-            soundSpace = soundPool?.load(context, R.raw.key_space, 1) ?: 0
-        } catch (e: Exception) { /* ignore */ }
-    }
+    // ------------------------------------------------------------------ settings and theme
 
-    private fun getSelectedTypeface(): Typeface {
-        val fontName = prefs.getString("selected_font", "sans-serif") ?: "sans-serif"
-        return Typeface.create(fontName, Typeface.NORMAL)
-    }
-
-    fun setShifted(shifted: Boolean) {
-        if (isShifted != shifted) {
-            isShifted = shifted
-            if (keyboardMode == Mode.QWERTY && viewState == ViewState.KEYS) {
-                // High-performance instantaneous in-place text update
-                for ((tv, base) in letterKeyViews) {
-                    tv.text = if (isShifted) base.uppercase() else base.lowercase()
-                }
-                shiftKeyView?.let { skv ->
-                    skv.text = if (isShifted) (if (isCapsLock) "⬆" else "⇧") else "⇧"
-                    val colors = cachedThemeColors ?: getThemeColors()
-                    if (isShifted || isCapsLock) {
-                        skv.setTextColor(colors.keyTextColorAccent)
-                        skv.setBackgroundColor(colors.keyBgAccent)
-                    } else {
-                        skv.setTextColor(colors.keyTextColorModifier)
-                        skv.setBackgroundColor(colors.keyBgModifier)
-                    }
-                }
-            }
-        }
-    }
-
-    fun isShifted(): Boolean = isShifted
-
-    fun switchMode(mode: Mode) {
-        if (mode == Mode.EMOJI) {
-            showEmojiShelf()
-        } else {
-            if (keyboardMode != mode || viewState != ViewState.KEYS) {
-                keyboardMode = mode
-                viewState = ViewState.KEYS
-                buildKeyboard()
-            }
-        }
-    }
-
-    fun resetState(mode: Mode, shifted: Boolean) {
-        val modeChanged = (this.keyboardMode != mode)
-        val shiftChanged = (this.isShifted != shifted)
-        val stateChanged = (this.viewState != ViewState.KEYS)
-
-        this.keyboardMode = mode
-        this.isShifted = shifted
-        this.viewState = ViewState.KEYS
-
-        if (modeChanged || shiftChanged || stateChanged) {
-            applyTheme(forceRebuild = true)
-        } else {
-            applyTheme(forceRebuild = false)
-        }
-    }
-
-    fun getMode(): Mode = keyboardMode
-    fun getViewState(): ViewState = viewState
-
-    /**
-     * Resolves clean, professional flagship theme colors without AI neon cyber tropes
-     */
-    private fun getThemeColors(): ThemeColors {
-        val theme = prefs.getString("selected_theme", DEFAULT_THEME) ?: DEFAULT_THEME
-        val isSystemNight = (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
-
-        return when (theme) {
-            "theme_system" -> {
-                if (isSystemNight) getSlateDarkColors() else getChalkLightColors()
-            }
-            "theme_slate_dark", "theme_midnight_glass", "theme_liquid_glass" -> {
-                getSlateDarkColors()
-            }
-            "theme_chalk_light", "theme_pure_minimal", "theme_material_you" -> {
-                getChalkLightColors()
-            }
-            "theme_naga_heritage" -> {
-                getNagaHeritageColors(isSystemNight)
-            }
-            "theme_obsidian_oled" -> {
-                getObsidianOledColors()
-            }
-            "theme_nordic_frost" -> {
-                getNordicFrostColors()
-            }
-            "theme_custom" -> {
-                getCustomThemeColors()
-            }
-            else -> {
-                if (isSystemNight) getSlateDarkColors() else getChalkLightColors()
-            }
-        }
-    }
-
-    private fun getSlateDarkColors(): ThemeColors = ThemeColors(
-        bgColor = Color.parseColor("#1E1F22"),
-        keyBgNormal = Color.parseColor("#2B2D31"),
-        keyBgNormalPressed = Color.parseColor("#383A40"),
-        keyBgModifier = Color.parseColor("#232528"),
-        keyBgModifierPressed = Color.parseColor("#32353A"),
-        keyBgAccent = Color.parseColor("#4E80EE"),
-        keyBgAccentPressed = Color.parseColor("#3B6CD4"),
-        keyTextColorNormal = Color.parseColor("#F2F3F5"),
-        keyTextColorModifier = Color.parseColor("#B5BAC1"),
-        keyTextColorAccent = Color.WHITE,
-        hasShadow = true,
-        cornerRadiusDp = 7f,
-        suggestionBarBg = Color.parseColor("#1E1F22"),
-        suggestionTextNormal = Color.parseColor("#949BA4"),
-        suggestionTextAccent = Color.parseColor("#6BA0F5"),
-        toolbarToggleColor = Color.parseColor("#6BA0F5"),
-        dividerColor = Color.parseColor("#2B2D31"),
-        clipboardCardBg = Color.parseColor("#2B2D31"),
-        clipboardCardPressed = Color.parseColor("#383A40"),
-        clipboardEmptyText = Color.parseColor("#808495"),
-        deleteColor = Color.parseColor("#EF4444"),
-        accentColor = Color.parseColor("#4E80EE")
-    )
-
-    private fun getChalkLightColors(): ThemeColors = ThemeColors(
-        bgColor = Color.parseColor("#ECEFF1"),
-        keyBgNormal = Color.parseColor("#FFFFFF"),
-        keyBgNormalPressed = Color.parseColor("#E1E4E8"),
-        keyBgModifier = Color.parseColor("#D9DEE3"),
-        keyBgModifierPressed = Color.parseColor("#CBD1D8"),
-        keyBgAccent = Color.parseColor("#1A73E8"),
-        keyBgAccentPressed = Color.parseColor("#1558B0"),
-        keyTextColorNormal = Color.parseColor("#1F1F1F"),
-        keyTextColorModifier = Color.parseColor("#49454F"),
-        keyTextColorAccent = Color.WHITE,
-        hasShadow = true,
-        cornerRadiusDp = 7f,
-        suggestionBarBg = Color.parseColor("#ECEFF1"),
-        suggestionTextNormal = Color.parseColor("#5F6368"),
-        suggestionTextAccent = Color.parseColor("#1A73E8"),
-        toolbarToggleColor = Color.parseColor("#1A73E8"),
-        dividerColor = Color.parseColor("#D9DEE3"),
-        clipboardCardBg = Color.parseColor("#FFFFFF"),
-        clipboardCardPressed = Color.parseColor("#E4E7EB"),
-        clipboardEmptyText = Color.parseColor("#9AA0A6"),
-        deleteColor = Color.parseColor("#D93025"),
-        accentColor = Color.parseColor("#1A73E8")
-    )
-
-    private fun getNagaHeritageColors(isNight: Boolean): ThemeColors {
-        return if (isNight) {
-            ThemeColors(
-                bgColor = Color.parseColor("#141416"),
-                keyBgNormal = Color.parseColor("#222124"),
-                keyBgNormalPressed = Color.parseColor("#333136"),
-                keyBgModifier = Color.parseColor("#1A191C"),
-                keyBgModifierPressed = Color.parseColor("#2A282D"),
-                keyBgAccent = Color.parseColor("#D32F2F"),
-                keyBgAccentPressed = Color.parseColor("#B71C1C"),
-                keyTextColorNormal = Color.parseColor("#F5EFE6"),
-                keyTextColorModifier = Color.parseColor("#A8A096"),
-                keyTextColorAccent = Color.WHITE,
-                hasShadow = true,
-                cornerRadiusDp = 7f,
-                suggestionBarBg = Color.parseColor("#141416"),
-                suggestionTextNormal = Color.parseColor("#A8A096"),
-                suggestionTextAccent = Color.parseColor("#E53935"),
-                toolbarToggleColor = Color.parseColor("#E53935"),
-                dividerColor = Color.parseColor("#262428"),
-                clipboardCardBg = Color.parseColor("#222124"),
-                clipboardCardPressed = Color.parseColor("#2F2E33"),
-                clipboardEmptyText = Color.parseColor("#807A72"),
-                deleteColor = Color.parseColor("#E53935"),
-                accentColor = Color.parseColor("#E53935")
-            )
-        } else {
-            ThemeColors(
-                bgColor = Color.parseColor("#F7F4EE"),
-                keyBgNormal = Color.parseColor("#FFFFFF"),
-                keyBgNormalPressed = Color.parseColor("#EDE7DE"),
-                keyBgModifier = Color.parseColor("#ECE5DA"),
-                keyBgModifierPressed = Color.parseColor("#DFD7CB"),
-                keyBgAccent = Color.parseColor("#C62828"),
-                keyBgAccentPressed = Color.parseColor("#A72020"),
-                keyTextColorNormal = Color.parseColor("#1C1917"),
-                keyTextColorModifier = Color.parseColor("#57534E"),
-                keyTextColorAccent = Color.WHITE,
-                hasShadow = true,
-                cornerRadiusDp = 7f,
-                suggestionBarBg = Color.parseColor("#F7F4EE"),
-                suggestionTextNormal = Color.parseColor("#78716C"),
-                suggestionTextAccent = Color.parseColor("#C62828"),
-                toolbarToggleColor = Color.parseColor("#C62828"),
-                dividerColor = Color.parseColor("#E2D9CC"),
-                clipboardCardBg = Color.parseColor("#FFFFFF"),
-                clipboardCardPressed = Color.parseColor("#EDE7DE"),
-                clipboardEmptyText = Color.parseColor("#8A8072"),
-                deleteColor = Color.parseColor("#C62828"),
-                accentColor = Color.parseColor("#C62828")
-            )
-        }
-    }
-
-    private fun getObsidianOledColors(): ThemeColors = ThemeColors(
-        bgColor = Color.parseColor("#000000"),
-        keyBgNormal = Color.parseColor("#141416"),
-        keyBgNormalPressed = Color.parseColor("#252528"),
-        keyBgModifier = Color.parseColor("#0E0E10"),
-        keyBgModifierPressed = Color.parseColor("#1E1E22"),
-        keyBgAccent = Color.parseColor("#3B82F6"),
-        keyBgAccentPressed = Color.parseColor("#2563EB"),
-        keyTextColorNormal = Color.parseColor("#FFFFFF"),
-        keyTextColorModifier = Color.parseColor("#9CA3AF"),
-        keyTextColorAccent = Color.WHITE,
-        hasShadow = false,
-        cornerRadiusDp = 7f,
-        suggestionBarBg = Color.parseColor("#000000"),
-        suggestionTextNormal = Color.parseColor("#9CA3AF"),
-        suggestionTextAccent = Color.parseColor("#60A5FA"),
-        toolbarToggleColor = Color.parseColor("#60A5FA"),
-        dividerColor = Color.parseColor("#1F2228"),
-        clipboardCardBg = Color.parseColor("#141416"),
-        clipboardCardPressed = Color.parseColor("#222226"),
-        clipboardEmptyText = Color.parseColor("#6B7280"),
-        deleteColor = Color.parseColor("#EF4444"),
-        accentColor = Color.parseColor("#3B82F6")
-    )
-
-    private fun getNordicFrostColors(): ThemeColors = ThemeColors(
-        bgColor = Color.parseColor("#242933"),
-        keyBgNormal = Color.parseColor("#2E3440"),
-        keyBgNormalPressed = Color.parseColor("#3B4252"),
-        keyBgModifier = Color.parseColor("#1E232B"),
-        keyBgModifierPressed = Color.parseColor("#2E3440"),
-        keyBgAccent = Color.parseColor("#5E81AC"),
-        keyBgAccentPressed = Color.parseColor("#4C6A8D"),
-        keyTextColorNormal = Color.parseColor("#ECEFF4"),
-        keyTextColorModifier = Color.parseColor("#D8DEE9"),
-        keyTextColorAccent = Color.parseColor("#ECEFF4"),
-        hasShadow = true,
-        cornerRadiusDp = 7f,
-        suggestionBarBg = Color.parseColor("#242933"),
-        suggestionTextNormal = Color.parseColor("#D8DEE9"),
-        suggestionTextAccent = Color.parseColor("#88C0D0"),
-        toolbarToggleColor = Color.parseColor("#88C0D0"),
-        dividerColor = Color.parseColor("#2E3440"),
-        clipboardCardBg = Color.parseColor("#2E3440"),
-        clipboardCardPressed = Color.parseColor("#3B4252"),
-        clipboardEmptyText = Color.parseColor("#7B88A1"),
-        deleteColor = Color.parseColor("#BF616A"),
-        accentColor = Color.parseColor("#88C0D0")
-    )
-
-    private fun getCustomThemeColors(): ThemeColors {
-        val keyOpacity = prefs.getInt("custom_key_opacity", 70).coerceIn(0, 255)
-        val overlayOpacity = prefs.getInt("custom_overlay_opacity", 140).coerceIn(0, 240)
-        val cornerRadius = prefs.getFloat("custom_corner_radius", 8f).coerceIn(0f, 20f)
-        val hasShadow = prefs.getBoolean("custom_key_has_shadow", true)
-        val accentColorValue = prefs.getInt("custom_accent_color", Color.parseColor("#1A73E8"))
-
-        return ThemeColors(
-            bgColor = Color.TRANSPARENT,
-            keyBgNormal = Color.argb(keyOpacity.coerceAtLeast(160), 30, 32, 40),
-            keyBgNormalPressed = Color.argb((keyOpacity + 40).coerceAtMost(255), 50, 54, 66),
-            keyBgModifier = Color.argb(keyOpacity.coerceAtLeast(140), 22, 24, 30),
-            keyBgModifierPressed = Color.argb((keyOpacity + 40).coerceAtMost(255), 40, 44, 54),
-            keyBgAccent = accentColorValue,
-            keyBgAccentPressed = darkenColor(accentColorValue, 0.2f),
-            keyTextColorNormal = Color.WHITE,
-            keyTextColorModifier = Color.parseColor("#D1D5DB"),
-            keyTextColorAccent = Color.WHITE,
-            hasShadow = hasShadow,
-            cornerRadiusDp = cornerRadius,
-            suggestionBarBg = Color.argb(overlayOpacity, 16, 18, 24),
-            suggestionTextNormal = Color.parseColor("#9CA3AF"),
-            suggestionTextAccent = accentColorValue,
-            toolbarToggleColor = accentColorValue,
-            dividerColor = Color.argb(40, 255, 255, 255),
-            clipboardCardBg = Color.argb(keyOpacity.coerceAtLeast(150), 30, 32, 40),
-            clipboardCardPressed = Color.argb(255, 50, 54, 66),
-            clipboardEmptyText = Color.argb(180, 200, 200, 200),
-            deleteColor = Color.parseColor("#EF4444"),
-            accentColor = accentColorValue
-        )
-    }
-
-    fun applyTheme(forceRebuild: Boolean = false) {
-        val selectedTheme = prefs.getString("selected_theme", DEFAULT_THEME) ?: DEFAULT_THEME
-        if (!forceRebuild && selectedTheme == lastAppliedTheme && cachedThemeColors != null) {
-            return
-        }
-
-        if (forceRebuild || selectedTheme != lastAppliedTheme) {
-            drawableCache.clear()
-            if (forceRebuild) cachedWallpaper = null
-        }
-
-        currentTheme = selectedTheme
-        lastAppliedTheme = currentTheme
-        cachedThemeColors = getThemeColors()
-        val colors = cachedThemeColors!!
-
-        val density = resources.displayMetrics.density
-        setPadding((3 * density).toInt(), (2 * density).toInt(), (3 * density).toInt(), (2 * density).toInt())
-
-        when {
-            currentTheme == "theme_custom" -> {
-                val overlayDim = prefs.getInt("custom_overlay_opacity", 140)
-                val dimColor = Color.argb(overlayDim.coerceIn(0, 220), 12, 14, 20)
-                val wallpaperFile = File(context.filesDir, "custom_wallpaper.jpg")
-                if (wallpaperFile.exists()) {
-                    try {
-                        val bitmap = BitmapFactory.decodeFile(wallpaperFile.absolutePath)
-                        if (bitmap != null) {
-                            background = CenterCropWallpaperDrawable(bitmap, dimColor)
-                        } else {
-                            setBackgroundColor(Color.parseColor("#181920"))
-                        }
-                    } catch (e: Exception) {
-                        setBackgroundColor(Color.parseColor("#181920"))
-                    }
-                } else {
-                    setBackgroundColor(Color.parseColor("#181920"))
-                }
-            }
-            colors.bgGradient != null -> {
-                cachedWallpaper = null
-                val parsedColors = colors.bgGradient.map { Color.parseColor(it) }.toIntArray()
-                background = GradientDrawable(GradientDrawable.Orientation.TL_BR, parsedColors)
-            }
-            else -> {
-                cachedWallpaper = null
-                setBackgroundColor(colors.bgColor)
-            }
-        }
-
+    /** Re-reads the theme and keyboard settings and redraws whatever is showing. */
+    fun reload() {
+        theme = themeOverride ?: KeyboardThemes.current(context)
+        fonts = KeyboardThemes.Fonts(context, KeyboardThemes.usesFigtree(prefs))
+        keyHeightDp = KeyboardThemes.keyHeightDp(prefs)
+        showNumberRow = previewMode || prefs.getBoolean("show_number_row", true)
+        showEmojiKey = !previewMode && prefs.getBoolean("show_emoji_key", false)
+        keyPopups = !previewMode && prefs.getBoolean("key_popup", true)
+        longPressSymbols = prefs.getBoolean("long_press_symbols", true)
+        backgroundCache.clear()
         when (viewState) {
-            ViewState.KEYS -> buildKeyboard()
+            ViewState.KEYS -> buildKeys()
             ViewState.CLIPBOARD -> showClipboard()
-            ViewState.THEME_SWITCHER -> showThemeSwitcher()
             ViewState.EMOJI_SHELF -> showEmojiShelf()
         }
     }
 
-    fun buildKeyboard() {
-        removeAllViews()
-        viewState = ViewState.KEYS
-        letterKeyViews.clear()
-        shiftKeyView = null
+    /** Kept for callers that changed the theme: same as [reload]. */
+    fun applyTheme(@Suppress("UNUSED_PARAMETER") forceRebuild: Boolean = true) = reload()
 
-        val rows = getRowsForCurrentState()
-        val colors = cachedThemeColors ?: getThemeColors().also { cachedThemeColors = it }
+    fun currentTheme(): KeyboardTheme = theme
 
-        val density = resources.displayMetrics.density
-        val showNumberRow = prefs.getBoolean("show_number_row", false)
-        val rowHeightPx = if (showNumberRow && keyboardMode == Mode.QWERTY) (44 * density).toInt() else (48 * density).toInt()
-        val isAtoLRowIndex = if (showNumberRow) 2 else 1
-
-        for ((index, rowKeys) in rows.withIndex()) {
-            val rowLayout = LinearLayout(context).apply {
-                orientation = HORIZONTAL
-                layoutParams = LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, rowHeightPx)
-                gravity = Gravity.CENTER
-                isMotionEventSplittingEnabled = true
-            }
-
-            val isRowAtoL = (keyboardMode == Mode.QWERTY && index == isAtoLRowIndex)
-            if (isRowAtoL) {
-                rowLayout.addView(createSpacer(0.5f))
-            }
-
-            for (key in rowKeys) {
-                rowLayout.addView(createKeyView(key, colors))
-            }
-
-            if (isRowAtoL) {
-                rowLayout.addView(createSpacer(0.5f))
-            }
-
-            addView(rowLayout)
+    fun setShifted(shifted: Boolean) {
+        if (isShifted == shifted && shiftKey?.tag == isCapsLock) return
+        isShifted = shifted
+        if (keyboardMode == Mode.QWERTY && viewState == ViewState.KEYS && emojiSearch == null) {
+            for ((tv, base) in letterKeys) tv.text = if (isShifted) base.uppercase() else base
+            shiftKey?.let { styleShift(it) }
         }
     }
 
-    private fun getRowsForCurrentState(): List<List<KeyInfo>> {
+    fun isShifted(): Boolean = isShifted
+    fun getMode(): Mode = keyboardMode
+    fun getViewState(): ViewState = viewState
+
+    fun switchMode(mode: Mode) {
+        if (keyboardMode != mode || viewState != ViewState.KEYS) {
+            keyboardMode = mode
+            buildKeys()
+        }
+    }
+
+    fun resetState(mode: Mode, shifted: Boolean) {
+        keyboardMode = mode
+        isShifted = shifted
+        isCapsLock = false
+        emojiSearch = null
+        buildKeys()
+    }
+
+    /** Height of the strip plus the letters layout, so panels open without the keyboard jumping. */
+    fun typingHeightPx(): Int {
+        val rows = if (showNumberRow && !numberRowSuppressed) 5 else 4
+        return dp(STRIP_HEIGHT_DP) + rows * (dp(keyHeightDp) + dp(theme.keyGapDp)) + dp(6f)
+    }
+
+    // ------------------------------------------------------------------ key grid
+
+    private fun rows(): List<List<Key>> {
+        val bottomLeft = when (keyboardMode) {
+            Mode.QWERTY -> Key("?123", CODE_SYMBOLS, 52.8f, Kind.FUNCTION, description = "Symbols")
+            else -> Key("ABC", CODE_SYMBOLS, 52.8f, Kind.FUNCTION, description = "Letters")
+        }
+        val bottom = buildList {
+            add(bottomLeft)
+            add(Key(",", ','.code, 35.2f))
+            if (showEmojiKey) add(Key("", CODE_EMOJI, 35.2f, Kind.FUNCTION, icon = R.drawable.ic_kb_smile, description = "Emoji"))
+            add(Key("Likhibi", ' '.code, if (showEmojiKey) 164.8f else 206f, Kind.SPACE, description = "Space"))
+            add(Key(".", '.'.code, 35.2f, alternates = PERIOD_ALTERNATES))
+            add(Key("", '\n'.code, 52.8f, Kind.ENTER, icon = enterIcon(), description = enterDescription()))
+        }
+        val backspace = Key("", CODE_DELETE, 55.8f, Kind.FUNCTION, icon = R.drawable.ic_kb_delete, description = "Delete")
+
         return when (keyboardMode) {
-            Mode.QWERTY -> getQwertyRows()
-            Mode.SYMBOLS -> getSymbolsRows()
-            Mode.EXTRA_SYMBOLS -> getExtraSymbolsRows()
-            Mode.EMOJI -> getQwertyRows() // Emoji Shelf handles its own view
-        }
-    }
-
-    private fun getQwertyRows(): List<List<KeyInfo>> {
-        val showNumberRow = prefs.getBoolean("show_number_row", false)
-        val r0 = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "0")
-        val r1 = listOf("q", "w", "e", "r", "t", "y", "u", "i", "o", "p")
-        val r2 = listOf("a", "s", "d", "f", "g", "h", "j", "k", "l")
-        val r3 = listOf("z", "x", "c", "v", "b", "n", "m")
-
-        val result = mutableListOf<List<KeyInfo>>()
-        if (showNumberRow) {
-            result.add(r0.map { KeyInfo(it, it[0].code, weight = 1.0f) })
-        }
-
-        // Q..P row: map top-row letters with number hint subLabels
-        val topNumberHints = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "0")
-        result.add(r1.mapIndexed { idx, it ->
-            KeyInfo(formatText(it), it[0].code, weight = 1.0f, subLabel = if (!showNumberRow) topNumberHints[idx] else null)
-        })
-
-        // A..L row
-        result.add(r2.map { KeyInfo(formatText(it), it[0].code, weight = 1.0f) })
-
-        // Z..M row with Shift and Backspace
-        result.add(listOf(
-            KeyInfo(if (isShifted) (if (isCapsLock) "⬆" else "⇧") else "⇧", -1, weight = 1.5f, isModifier = true),
-            *r3.map { KeyInfo(formatText(it), it[0].code, weight = 1.0f) }.toTypedArray(),
-            KeyInfo("⌫", -5, weight = 1.5f, isModifier = true)
-        ))
-
-        // Bottom row: ?123, comma, emoji, space, period, enter
-        result.add(listOf(
-            KeyInfo("?123", -2, weight = 1.4f, isModifier = true),
-            KeyInfo(",", 44, weight = 1.0f),
-            KeyInfo("😊", -10, weight = 1.0f, isModifier = true),
-            KeyInfo("likhibi", 32, weight = 4.2f),
-            KeyInfo(".", 46, weight = 1.0f),
-            KeyInfo(enterKeyLabel, 10, weight = 1.4f, isAccent = true)
-        ))
-        return result
-    }
-
-    private fun getSymbolsRows(): List<List<KeyInfo>> {
-        val r1 = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "0")
-        val r2 = listOf("@", "#", "$", "%", "&", "-", "+", "(", ")", "/")
-        val r3 = listOf("*", "\"", "'", ":", ";", "!", "?")
-
-        return listOf(
-            r1.map { KeyInfo(it, it[0].code, weight = 1.0f) },
-            r2.map { KeyInfo(it, it[0].code, weight = 1.0f) },
-            listOf(
-                KeyInfo("=/<", -3, weight = 1.5f, isModifier = true),
-                *r3.map { KeyInfo(it, it[0].code, weight = 1.0f) }.toTypedArray(),
-                KeyInfo("⌫", -5, weight = 1.5f, isModifier = true)
-            ),
-            listOf(
-                KeyInfo("ABC", -2, weight = 1.4f, isModifier = true),
-                KeyInfo(",", 44, weight = 1.0f),
-                KeyInfo("😊", -10, weight = 1.0f, isModifier = true),
-                KeyInfo("space", 32, weight = 4.2f),
-                KeyInfo(".", 46, weight = 1.0f),
-                KeyInfo(enterKeyLabel, 10, weight = 1.4f, isAccent = true)
+            Mode.QWERTY -> buildList {
+                val numberRow = showNumberRow && !numberRowSuppressed
+                if (numberRow) add(DIGITS.map { Key(it, it[0].code, 35.2f) })
+                add(ROW1.mapIndexed { i, letter ->
+                    val digit = if (longPressSymbols && !numberRow) DIGITS[i] else null
+                    Key(letter, letter[0].code, 35.2f, hint = digit, alternates = listOfNotNull(digit) + ACCENTS[letter].orEmpty())
+                })
+                add(listOf(Key("", 0, 20.6f, Kind.SPACER)) + ROW2.mapIndexed { i, letter ->
+                    Key(letter, letter[0].code, 35.2f, alternates = listOfNotNull(ROW2_SYMBOLS[i].takeIf { longPressSymbols }) + ACCENTS[letter].orEmpty())
+                } + Key("", 0, 20.6f, Kind.SPACER))
+                add(listOf(Key("", CODE_SHIFT, 55.8f, Kind.FUNCTION, icon = R.drawable.ic_kb_arrow_big_up, description = "Shift")) +
+                    ROW3.mapIndexed { i, letter ->
+                        Key(letter, letter[0].code, 35.2f, alternates = listOfNotNull(ROW3_SYMBOLS[i].takeIf { longPressSymbols }) + ACCENTS[letter].orEmpty())
+                    } + backspace)
+                add(bottom)
+            }
+            Mode.SYMBOLS -> listOf(
+                DIGITS.map { Key(it, it[0].code, 35.2f) },
+                listOf("@", "#", "$", "_", "&", "-", "+", "(", ")", "/").map { Key(it, it[0].code, 35.2f) },
+                listOf(Key("=\\<", CODE_EXTRA_SYMBOLS, 55.8f, Kind.FUNCTION, description = "More symbols")) +
+                    listOf("*", "\"", "'", ":", ";", "!", "?").map { Key(it, it[0].code, 35.2f) } + backspace,
+                bottom,
             )
-        )
-    }
-
-    private fun getExtraSymbolsRows(): List<List<KeyInfo>> {
-        val r1 = listOf("~", "`", "|", "•", "√", "π", "÷", "×", "¶", "∆")
-        val r2 = listOf("£", "¥", "€", "¢", "^", "°", "=", "{", "}", "\\")
-        val r3 = listOf("%", "_", "<", ">", "[", "]", "§")
-
-        return listOf(
-            r1.map { KeyInfo(it, it[0].code, weight = 1.0f) },
-            r2.map { KeyInfo(it, it[0].code, weight = 1.0f) },
-            listOf(
-                KeyInfo("?123", -4, weight = 1.5f, isModifier = true),
-                *r3.map { KeyInfo(it, it[0].code, weight = 1.0f) }.toTypedArray(),
-                KeyInfo("⌫", -5, weight = 1.5f, isModifier = true)
-            ),
-            listOf(
-                KeyInfo("ABC", -2, weight = 1.4f, isModifier = true),
-                KeyInfo(",", 44, weight = 1.0f),
-                KeyInfo("😊", -10, weight = 1.0f, isModifier = true),
-                KeyInfo("space", 32, weight = 4.2f),
-                KeyInfo(".", 46, weight = 1.0f),
-                KeyInfo(enterKeyLabel, 10, weight = 1.4f, isAccent = true)
+            Mode.EXTRA_SYMBOLS -> listOf(
+                listOf("~", "`", "|", "•", "√", "π", "÷", "×", "¶", "∆").map { Key(it, it[0].code, 35.2f) },
+                listOf("£", "¥", "€", "¢", "^", "°", "=", "{", "}", "\\").map { Key(it, it[0].code, 35.2f) },
+                listOf(Key("?123", CODE_SYMBOLS_BACK, 55.8f, Kind.FUNCTION, description = "Symbols")) +
+                    listOf("%", "©", "<", ">", "[", "]", "§").map { Key(it, it[0].code, 35.2f) } + backspace,
+                bottom,
             )
-        )
-    }
-
-    private fun formatText(text: String): String {
-        return if (isShifted) text.uppercase() else text.lowercase()
-    }
-
-    private fun createKeyView(key: KeyInfo, colors: ThemeColors): View {
-        val density = resources.displayMetrics.density
-
-        val keyTextView = TextView(context).apply {
-            text = if (isShifted && key.label.length == 1 && key.label[0].isLetter()) key.label.uppercase() else key.label
-            gravity = Gravity.CENTER
-            val selectedFont = getSelectedTypeface()
-            typeface = if (key.isAccent) Typeface.create(selectedFont, Typeface.BOLD) else selectedFont
-
-            if (key.isAccent) {
-                setTextColor(colors.keyTextColorAccent)
-                textSize = 20f
-            } else if (key.isModifier) {
-                setTextColor(colors.keyTextColorModifier)
-                textSize = 16f
-            } else {
-                setTextColor(colors.keyTextColorNormal)
-                textSize = 19f
-                if (key.code == 32) {
-                    textSize = 13f
-                    setTextColor(colors.suggestionTextNormal)
-                }
-            }
-
-            val bgNormalColor = when {
-                key.isAccent -> colors.keyBgAccent
-                key.isModifier -> {
-                    if (key.code == -1 && (isShifted || isCapsLock)) colors.keyBgAccent
-                    else colors.keyBgModifier
-                }
-                else -> colors.keyBgNormal
-            }
-
-            val bgPressedColor = when {
-                key.isAccent -> colors.keyBgAccentPressed
-                key.isModifier -> {
-                    if (key.code == -1 && (isShifted || isCapsLock)) colors.keyBgAccentPressed
-                    else colors.keyBgModifierPressed
-                }
-                else -> colors.keyBgNormalPressed
-            }
-
-            val shadowColor = when {
-                key.isAccent -> darkenColor(colors.keyBgAccent, 0.35f)
-                key.isModifier -> darkenColor(colors.keyBgModifier, 0.35f)
-                else -> darkenColor(colors.keyBgNormal, 0.3f)
-            }
-
-            background = getCachedKeyDrawable(
-                normalColor = bgNormalColor,
-                pressedColor = bgPressedColor,
-                shadowColor = shadowColor,
-                hasShadow = colors.hasShadow,
-                radius = colors.cornerRadiusDp * density,
-                borderWidthDp = colors.borderWidthDp,
-                borderColor = colors.borderColor
-            )
-
-            val params = LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, key.weight)
-            params.setMargins(
-                (2.5f * density).toInt(),
-                (2.5f * density).toInt(),
-                (2.5f * density).toInt(),
-                (2.5f * density).toInt()
-            )
-            layoutParams = params
-
-            // Cache letter views for instantaneous zero-jank Shift updates
-            if (key.label.length == 1 && key.label[0].isLetter()) {
-                letterKeyViews.add(Pair(this, key.label))
-            } else if (key.code == -1) {
-                shiftKeyView = this
-            }
-
-            // Blazing-fast multi-touch listener handling ACTION_DOWN and ACTION_POINTER_DOWN
-            var startX = 0f
-            var isDraggingSpace = false
-            var spaceLongPressRunnable: Runnable? = null
-            var keyLongPressRunnable: Runnable? = null
-            val keyHandler = Handler(Looper.getMainLooper())
-
-            setOnTouchListener { v, event ->
-                when (event.actionMasked) {
-                    MotionEvent.ACTION_DOWN, MotionEvent.ACTION_POINTER_DOWN -> {
-                        val pointerIndex = event.actionIndex
-                        startX = event.getX(pointerIndex)
-                        isDraggingSpace = false
-                        v.isPressed = true
-
-                        // Subtle fast haptic tap feedback
-                        performPremiumHaptic(when {
-                            key.isAccent -> HapticType.KEY_ACCENT
-                            key.code == 32 -> HapticType.KEY_SPACE
-                            key.isModifier -> HapticType.KEY_MODIFIER
-                            else -> HapticType.KEY_STANDARD
-                        })
-
-                        // Check for long press on letters/punctuation
-                        if (key.subLabel != null) {
-                            keyLongPressRunnable = Runnable {
-                                performPremiumHaptic(HapticType.KEY_MODIFIER)
-                                listener?.onText(key.subLabel)
-                                v.isPressed = false
-                            }
-                            keyHandler.postDelayed(keyLongPressRunnable!!, 380L)
-                        } else if (key.code == 46) { // Period '.' long press inserts quick punctuation
-                            keyLongPressRunnable = Runnable {
-                                performPremiumHaptic(HapticType.KEY_MODIFIER)
-                                listener?.onText("?")
-                                v.isPressed = false
-                            }
-                            keyHandler.postDelayed(keyLongPressRunnable!!, 380L)
-                        }
-
-                        // Instant key dispatch on down for zero-latency fluid typing
-                        if (key.code != 32) {
-                            if (keyboardMode == Mode.EMOJI && !key.isModifier) {
-                                listener?.onText(key.label)
-                            } else {
-                                listener?.onKey(key.code)
-                            }
-                        } else {
-                            listener?.onKey(32)
-                            spaceLongPressRunnable = Runnable {
-                                performPremiumHaptic(HapticType.KEY_ACCENT)
-                                listener?.onKey(-11) // Switch input method
-                            }
-                            keyHandler.postDelayed(spaceLongPressRunnable!!, 450L)
-                        }
-
-                        // Continuous backspace repeat
-                        if (key.code == -5) {
-                            deleteRunnable = object : Runnable {
-                                override fun run() {
-                                    listener?.onKey(key.code)
-                                    performPremiumHaptic(HapticType.KEY_MODIFIER)
-                                    deleteHandler.postDelayed(this, 50L)
-                                }
-                            }
-                            deleteHandler.postDelayed(deleteRunnable!!, 320L)
-                        }
-                    }
-                    MotionEvent.ACTION_MOVE -> {
-                        if (key.code == 32) {
-                            val diffX = event.x - startX
-                            if (Math.abs(diffX) > 18 * density) {
-                                isDraggingSpace = true
-                                spaceLongPressRunnable?.let { keyHandler.removeCallbacks(it) }
-                                if (diffX > 0) {
-                                    listener?.onKey(Int.MAX_VALUE) // D-pad right
-                                } else {
-                                    listener?.onKey(Int.MIN_VALUE) // D-pad left
-                                }
-                                startX = event.x
-                            }
-                        }
-                    }
-                    MotionEvent.ACTION_UP, MotionEvent.ACTION_POINTER_UP, MotionEvent.ACTION_CANCEL -> {
-                        v.isPressed = false
-                        keyLongPressRunnable?.let { keyHandler.removeCallbacks(it) }
-                        keyLongPressRunnable = null
-
-                        if (key.code == 32) {
-                            spaceLongPressRunnable?.let { keyHandler.removeCallbacks(it) }
-                            spaceLongPressRunnable = null
-                        }
-
-                        if (key.code == -5) {
-                            deleteRunnable?.let { deleteHandler.removeCallbacks(it) }
-                            deleteRunnable = null
-                        }
-                    }
-                }
-                true
-            }
-        }
-
-        return keyTextView
-    }
-
-    private fun createSpacer(weight: Float): View {
-        return View(context).apply {
-            layoutParams = LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, weight)
         }
     }
 
-    private fun getCachedKeyDrawable(
-        normalColor: Int,
-        pressedColor: Int,
-        shadowColor: Int,
-        hasShadow: Boolean,
-        radius: Float,
-        borderWidthDp: Float = 0f,
-        borderColor: Int = Color.TRANSPARENT
-    ): RippleDrawable {
-        val key = "$normalColor-$pressedColor-$shadowColor-$hasShadow-$radius-$borderWidthDp-$borderColor"
-        val state = drawableCache.getOrPut(key) {
-            createKeyDrawable(normalColor, pressedColor, shadowColor, hasShadow, radius, borderWidthDp, borderColor).constantState!!
-        }
-        return state.newDrawable() as RippleDrawable
+    private fun enterIcon(): Int = when (enterAction) {
+        EnterAction.SEARCH -> R.drawable.ic_kb_search
+        EnterAction.SEND -> R.drawable.ic_kb_send
+        EnterAction.GO, EnterAction.NEXT -> R.drawable.ic_kb_arrow_right
+        EnterAction.DONE -> R.drawable.ic_kb_check
+        EnterAction.NEWLINE -> R.drawable.ic_kb_corner_down_left
     }
 
-    private fun darkenColor(color: Int, factor: Float): Int {
-        val r = (Color.red(color) * (1f - factor)).toInt().coerceIn(0, 255)
-        val g = (Color.green(color) * (1f - factor)).toInt().coerceIn(0, 255)
-        val b = (Color.blue(color) * (1f - factor)).toInt().coerceIn(0, 255)
-        return Color.argb(Color.alpha(color).coerceAtLeast(80), r, g, b)
+    private fun enterDescription(): String = when (enterAction) {
+        EnterAction.SEARCH -> "Search"
+        EnterAction.SEND -> "Send"
+        EnterAction.GO -> "Go"
+        EnterAction.NEXT -> "Next"
+        EnterAction.DONE -> "Done"
+        EnterAction.NEWLINE -> "Enter"
     }
 
-    private fun createKeyDrawable(
-        normalColor: Int,
-        pressedColor: Int,
-        shadowColor: Int,
-        hasShadow: Boolean,
-        radius: Float,
-        borderWidthDp: Float = 0f,
-        borderColor: Int = Color.TRANSPARENT
-    ): RippleDrawable {
-        val density = resources.displayMetrics.density
-        val contentDrawable = if (hasShadow) {
-            val shadow = GradientDrawable().apply {
-                shape = GradientDrawable.RECTANGLE
-                cornerRadius = radius
-                setColor(shadowColor)
-            }
-            val keycap = GradientDrawable().apply {
-                shape = GradientDrawable.RECTANGLE
-                cornerRadius = radius
-                setColor(normalColor)
-            }
-            val layers = arrayOf(shadow, keycap)
-            LayerDrawable(layers).apply {
-                setLayerInset(1, 0, 0, 0, (2f * density).toInt())
-            }
-        } else {
-            GradientDrawable().apply {
-                shape = GradientDrawable.RECTANGLE
-                cornerRadius = radius
-                setColor(normalColor)
-                val bwPx = if (borderWidthDp > 0f) (borderWidthDp * density).toInt().coerceAtLeast(1) else 0
-                if (bwPx > 0 && borderColor != Color.TRANSPARENT) {
-                    setStroke(bwPx, borderColor)
-                }
-            }
-        }
-
-        val maskDrawable = GradientDrawable().apply {
-            shape = GradientDrawable.RECTANGLE
-            cornerRadius = radius
-            setColor(Color.WHITE)
-        }
-
-        return RippleDrawable(
-            ColorStateList.valueOf(pressedColor),
-            contentDrawable,
-            maskDrawable
-        )
-    }
-
-    private fun performPremiumHaptic(type: HapticType) {
-        // High-frequency Android OS keyboard tap (non-blocking)
-        performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
-
-        // Light user-configurable subtle vibration fallback
-        val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator ?: return
-        val strengthSetting = prefs.getInt("haptic_strength", DEFAULT_HAPTIC_MS)
-        if (strengthSetting > 0 && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val duration = when (type) {
-                HapticType.KEY_STANDARD -> strengthSetting.toLong()
-                HapticType.KEY_SPACE -> (strengthSetting * 1.3).toLong()
-                HapticType.KEY_MODIFIER -> (strengthSetting * 1.2).toLong()
-                HapticType.KEY_ACCENT -> (strengthSetting * 1.5).toLong()
-            }
-            try {
-                vibrator.vibrate(VibrationEffect.createOneShot(duration, 140))
-            } catch (e: Exception) { /* ignore */ }
-        }
-
-        val soundEnabled = prefs.getBoolean("sound_enabled", DEFAULT_SOUND_ENABLED)
-        if (soundEnabled && soundPool != null) {
-            try {
-                val baseVolume = prefs.getFloat("sound_volume", 0.5f) * 0.35f
-                val rate = when (type) {
-                    HapticType.KEY_SPACE -> 0.75f
-                    HapticType.KEY_MODIFIER -> 0.8f
-                    HapticType.KEY_ACCENT -> 0.85f
-                    else -> 0.8f
-                }
-                if (type == HapticType.KEY_SPACE) {
-                    soundPool?.play(soundSpace, baseVolume, baseVolume, 1, 0, rate)
-                } else {
-                    soundPool?.play(soundClick, baseVolume, baseVolume, 1, 0, rate)
-                }
-            } catch (e: Exception) { /* ignore */ }
-        }
-    }
-
-    /**
-     * Professional, full-featured Emoji Shelf (Gboard style) with categorized emoji tabs
-     */
-    fun showEmojiShelf() {
+    private fun buildKeys() {
+        dismissPopups()
         removeAllViews()
-        viewState = ViewState.EMOJI_SHELF
-        val density = resources.displayMetrics.density
-        val colors = cachedThemeColors ?: getThemeColors()
+        letterKeys.clear()
+        shiftKey = null
+        emojiSearch = null
+        val changed = viewState != ViewState.KEYS
+        viewState = ViewState.KEYS
+        setPadding(0, dp(3f), 0, dp(3f))
+        setPanelHeight(ViewGroup.LayoutParams.WRAP_CONTENT)
+        for (row in rows()) addView(buildRow(row, dp(keyHeightDp)))
+        if (changed) onPanelChanged?.invoke(viewState)
+    }
 
-        val categories = listOf(
-            Pair("Smileys", listOf(
-                "😀", "😃", "😄", "😁", "😆", "😅", "🤣", "😂", "🙂", "🙃", "😉", "😊", "😇", "🥰", "😍", "🤩",
-                "😘", "😗", "😚", "😙", "😋", "😛", "😜", "🤪", "😝", "🤑", "🤗", "🤭", "🤫", "🤔", "🤐", "🤨",
-                "😐", "😑", "😶", "😏", "😒", "🙄", "😬", "🤥", "😌", "😔", "😪", "🤤", "😴", "😷", "🤒", "🤕",
-                "🤢", "🤮", "🤧", "🥵", "🥶", "🥴", "😵", "🤯", "🤠", "🥳", "🥸", "😎", "🤓", "🧐", "😕", "😟",
-                "🙁", "😮", "😯", "😲", "😳", "🥺", "😦", "😧", "😨", "😰", "😥", "😢", "😭", "😱", "😖", "😣",
-                "😞", "😓", "😩", "😫", "🥱", "😤", "😡", "😠", "🤬", "💀", "☠️", "💩", "🤡", "👹", "👻", "👽"
-            )),
-            Pair("Gestures", listOf(
-                "👋", "🤚", "🖐️", "✋", "🖖", "👌", "🤌", "🤏", "✌️", "🤞", "🤟", "🤘", "🤙", "👈", "👉", "👆",
-                "🖕", "👇", "☝️", "👍", "👎", "✊", "👊", "🤛", "🤜", "👏", "🙌", "👐", "🤲", "🤝", "🙏", "✍️",
-                "💅", "🤳", "💪", "🦾", "🦿", "🦵", "🦶", "👂", "🦻", "👃", "🧠", "🦷", "🦴", "👀", "👁️", "👅",
-                "👄", "💋", "👶", "🧒", "👦", "👧", "🧑", "👱", "👨", "🧔", "👩", "🧓", "👴", "👵", "🏃", "🚶"
-            )),
-            Pair("Hearts", listOf(
-                "❤️", "🧡", "💛", "💚", "💙", "💜", "🖤", "🤍", "🤎", "💔", "❣️", "💕", "💞", "💓", "💗", "💖",
-                "💘", "💝", "💟", "☮️", "✝️", "☪️", "🕉️", "☸️", "✡️", "🔯", "🕎", "☯️", "☦️", "🛐", "👑", "💎",
-                "🎈", "🎉", "🎊", "🎋", "🎍", "🎎", "🎏", "🎐", "🎑", "🧧", "🎀", "🎁", "🎫", "🏆", "🏅", "🥇",
-                "🥈", "🥉", "⚽", "🏀", "🏈", "⚾", "🎾", "🎮", "🎯", "🎲", "🎵", "🎶", "✨", "🔥", "💯", "⭐"
-            )),
-            Pair("Animals", listOf(
-                "🐶", "🐱", "🐭", "🐹", "🐰", "🦊", "🐻", "🐼", "🐨", "🐯", "🦁", "🐮", "🐷", "🐸", "🐵", "🐔",
-                "🐧", "🐦", "🐤", "🦆", "🦅", "🦉", "🦇", "🐺", "🐗", "🐴", "🦄", "🐝", "🐛", "🦋", "🐌", "🐞",
-                "🐜", "🦟", "🐢", "🐍", "🦎", "🐙", "🦑", "🦐", "🦀", "🐡", "🐠", "🐟", "🐬", "🐳", "🦈", "🐊",
-                "🐅", "🐆", "🦓", "🦍", "🦧", "🐘", "🦛", "🦏", "🐪", "🐫", "🦒", "🦘", "🐃", "🐂", "🐎", "🐖",
-                "🌲", "🌳", "🌴", "🌵", "🌷", "🌸", "🌹", "🌺", "🌻", "🌼", "🌾", "🌿", "🍀", "🍁", "🍂", "🍃"
-            )),
-            Pair("Food", listOf(
-                "🍏", "🍎", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🫐", "🍈", "🍒", "🍑", "🥭", "🍍", "🥥",
-                "🥝", "🍅", "🍆", "🥑", "🥦", "🥬", "🥒", "🌶️", "🫑", "🌽", "🥕", "🧄", "🧅", "🥔", "🍠", "🥐",
-                "🥯", "🍞", "🥖", "🥨", "🧀", "🥚", "🍳", "🧈", "🥞", "🧇", "🥓", "🥩", "🍗", "🍖", "🌭", "🍔",
-                "🍟", "🍕", "🥪", "🌮", "🌯", "🥗", "🥘", "🍝", "🍜", "🍲", "🍛", "🍣", "🍱", "🥟", "🍤", "🍙",
-                "🍰", "🎂", "🧁", "🥧", "🍫", "🍬", "🍭", "🍮", "🍿", "🍩", "🍪", "☕", "🍵", "🧃", "🍺", "🍷"
-            ))
-        )
-
-        // Top Category Bar
-        val categoryBar = HorizontalScrollView(context).apply {
-            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (38 * density).toInt())
-            isHorizontalScrollBarEnabled = false
-        }
-        val tabContainer = LinearLayout(context).apply {
+    private fun buildRow(row: List<Key>, keyHeight: Int, onKeyOverride: ((Key) -> Unit)? = null): LinearLayout {
+        val half = dp(theme.keyGapDp / 2)
+        return LinearLayout(context).apply {
             orientation = HORIZONTAL
-            gravity = Gravity.CENTER_VERTICAL
-            setPadding((8 * density).toInt(), 0, (8 * density).toInt(), 0)
-        }
-
-        val scrollArea = ScrollView(context).apply {
-            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (185 * density).toInt())
-            isVerticalScrollBarEnabled = false
-        }
-
-        val gridContainer = LinearLayout(context).apply {
-            orientation = VERTICAL
-            setPadding((6 * density).toInt(), (4 * density).toInt(), (6 * density).toInt(), (4 * density).toInt())
-        }
-
-        fun populateEmojis(categoryIndex: Int) {
-            gridContainer.removeAllViews()
-            val list = categories[categoryIndex].second
-            val cols = 8
-            var rowLayout = LinearLayout(context).apply {
-                orientation = HORIZONTAL
-                gravity = Gravity.CENTER
-                layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (44 * density).toInt())
-            }
-            var count = 0
-            for (em in list) {
-                val tv = TextView(context).apply {
-                    text = em
-                    textSize = 24f
-                    gravity = Gravity.CENTER
-                    layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1f)
-                    background = createKeyDrawable(
-                        Color.TRANSPARENT,
-                        colors.keyBgNormalPressed,
-                        0, false, 8f * density
-                    )
-                    setOnClickListener {
-                        performPremiumHaptic(HapticType.KEY_STANDARD)
-                        listener?.onText(em)
-                    }
-                }
-                rowLayout.addView(tv)
-                count++
-                if (count % cols == 0) {
-                    gridContainer.addView(rowLayout)
-                    rowLayout = LinearLayout(context).apply {
-                        orientation = HORIZONTAL
-                        gravity = Gravity.CENTER
-                        layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (44 * density).toInt())
-                    }
-                }
-            }
-            if (rowLayout.childCount > 0) {
-                while (rowLayout.childCount < cols) {
-                    rowLayout.addView(View(context).apply {
-                        layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1f)
+            isMotionEventSplittingEnabled = true
+            layoutParams = LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, keyHeight + 2 * half)
+            for (key in row) {
+                if (key.kind == Kind.SPACER) {
+                    addView(View(context), LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, key.width))
+                } else {
+                    addView(createKey(key, onKeyOverride), LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, key.width).apply {
+                        setMargins(half, half, half, half)
                     })
                 }
-                gridContainer.addView(rowLayout)
             }
         }
+    }
 
-        for ((idx, cat) in categories.withIndex()) {
-            val tab = TextView(context).apply {
-                text = cat.first
-                textSize = 13f
-                gravity = Gravity.CENTER
-                setPadding((12 * density).toInt(), (6 * density).toInt(), (12 * density).toInt(), (6 * density).toInt())
-                setTextColor(if (idx == currentEmojiCategoryIndex) colors.accentColor else colors.keyTextColorModifier)
-                typeface = Typeface.create(getSelectedTypeface(), if (idx == currentEmojiCategoryIndex) Typeface.BOLD else Typeface.NORMAL)
-                setOnClickListener {
-                    currentEmojiCategoryIndex = idx
-                    for (i in 0 until tabContainer.childCount) {
-                        val child = tabContainer.getChildAt(i) as? TextView ?: continue
-                        child.setTextColor(if (i == idx) colors.accentColor else colors.keyTextColorModifier)
-                        child.typeface = Typeface.create(getSelectedTypeface(), if (i == idx) Typeface.BOLD else Typeface.NORMAL)
-                    }
-                    populateEmojis(idx)
+    private fun createKey(key: Key, onKeyOverride: ((Key) -> Unit)?): View {
+        val view = KeyCapView(context)
+        view.gravity = Gravity.CENTER
+        view.includeFontPadding = false
+        view.isSoundEffectsEnabled = false
+        view.contentDescription = key.description
+        view.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
+        when (key.kind) {
+            Kind.CHAR -> {
+                view.text = if (isShifted && keyboardMode == Mode.QWERTY) key.label.uppercase() else key.label
+                view.typeface = fonts.regular
+                view.setTextSize(TypedValue.COMPLEX_UNIT_SP, 22f)
+                view.setTextColor(theme.keyLabel)
+                view.background = keyBackground(theme.key, theme.keyPressed)
+                if (key.label.length == 1 && key.label[0].isLetter()) letterKeys.add(view to key.label)
+                key.hint?.let { view.setHint(it, theme.keyLabelSecondary, fonts.regular, sp(10f)) }
+            }
+            Kind.FUNCTION -> {
+                view.text = key.label
+                view.typeface = fonts.medium
+                view.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f)
+                view.setTextColor(theme.keyLabel)
+                view.background = keyBackground(theme.keyFunction, theme.keyPressed)
+                if (key.icon != 0) view.setIcon(key.icon, theme.keyLabel, dp(20f))
+                if (key.code == CODE_SHIFT) {
+                    shiftKey = view
+                    styleShift(view)
                 }
             }
-            tabContainer.addView(tab)
+            Kind.SPACE -> {
+                view.text = key.label
+                view.typeface = fonts.medium
+                view.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13f)
+                view.setTextColor(theme.keyLabelSecondary)
+                view.background = keyBackground(theme.key, theme.keyPressed)
+            }
+            Kind.ENTER -> {
+                view.background = keyBackground(theme.accent, blend(theme.accent, theme.onAccent, 0.18f))
+                view.setIcon(key.icon, theme.onAccent, dp(20f))
+            }
+            Kind.SPACER -> Unit
         }
+        if (!previewMode) attachTouch(view, key, onKeyOverride)
+        return view
+    }
 
-        categoryBar.addView(tabContainer)
-        addView(categoryBar)
-
-        // Divider
-        addView(View(context).apply {
-            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (1 * density).toInt())
-            setBackgroundColor(colors.dividerColor)
-        })
-
-        populateEmojis(currentEmojiCategoryIndex)
-        scrollArea.addView(gridContainer)
-        addView(scrollArea)
-
-        // Bottom control row: [ABC] [Space] [Backspace]
-        val bottomBar = LinearLayout(context).apply {
-            orientation = HORIZONTAL
-            gravity = Gravity.CENTER_VERTICAL
-            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (46 * density).toInt()).apply {
-                setPadding((4 * density).toInt(), (3 * density).toInt(), (4 * density).toInt(), (3 * density).toInt())
-            }
+    private fun styleShift(view: KeyCapView) {
+        view.tag = isCapsLock
+        val icon = if (isShifted || isCapsLock) R.drawable.ic_kb_arrow_big_up_filled else R.drawable.ic_kb_arrow_big_up
+        if (isCapsLock) {
+            view.background = keyBackground(theme.accent, blend(theme.accent, theme.onAccent, 0.18f))
+            view.setIcon(icon, theme.onAccent, dp(20f))
+        } else {
+            view.background = keyBackground(theme.keyFunction, theme.keyPressed)
+            view.setIcon(icon, theme.keyLabel, dp(20f))
         }
-
-        val abcBtn = TextView(context).apply {
-            text = "ABC"
-            gravity = Gravity.CENTER
-            textSize = 16f
-            setTextColor(colors.keyTextColorModifier)
-            typeface = Typeface.create(getSelectedTypeface(), Typeface.BOLD)
-            layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1.8f).apply {
-                setMargins((2 * density).toInt(), 0, (2 * density).toInt(), 0)
-            }
-            background = getCachedKeyDrawable(colors.keyBgModifier, colors.keyBgModifierPressed, 0, false, 7f * density)
-            setOnClickListener {
-                performPremiumHaptic(HapticType.KEY_MODIFIER)
-                switchMode(Mode.QWERTY)
-            }
+        view.contentDescription = when {
+            isCapsLock -> "Shift, caps lock on"
+            isShifted -> "Shift, on"
+            else -> "Shift"
         }
-        bottomBar.addView(abcBtn)
+    }
 
-        val spaceBtn = TextView(context).apply {
-            text = "space"
-            gravity = Gravity.CENTER
-            textSize = 13f
-            setTextColor(colors.suggestionTextNormal)
-            layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 4.4f).apply {
-                setMargins((2 * density).toInt(), 0, (2 * density).toInt(), 0)
-            }
-            background = getCachedKeyDrawable(colors.keyBgNormal, colors.keyBgNormalPressed, 0, colors.hasShadow, 7f * density)
-            setOnClickListener {
-                performPremiumHaptic(HapticType.KEY_SPACE)
-                listener?.onKey(32)
-            }
-        }
-        bottomBar.addView(spaceBtn)
+    // ------------------------------------------------------------------ touch
 
-        val delBtn = TextView(context).apply {
-            text = "⌫"
-            gravity = Gravity.CENTER
-            textSize = 18f
-            setTextColor(colors.keyTextColorModifier)
-            layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1.8f).apply {
-                setMargins((2 * density).toInt(), 0, (2 * density).toInt(), 0)
-            }
-            background = getCachedKeyDrawable(colors.keyBgModifier, colors.keyBgModifierPressed, 0, false, 7f * density)
-            setOnTouchListener { v, event ->
-                when (event.actionMasked) {
-                    MotionEvent.ACTION_DOWN -> {
-                        v.isPressed = true
-                        performPremiumHaptic(HapticType.KEY_MODIFIER)
-                        listener?.onKey(-5)
-                        deleteRunnable = object : Runnable {
-                            override fun run() {
-                                listener?.onKey(-5)
-                                performPremiumHaptic(HapticType.KEY_MODIFIER)
-                                deleteHandler.postDelayed(this, 50L)
+    private fun attachTouch(view: KeyCapView, key: Key, onKeyOverride: ((Key) -> Unit)?) {
+        var longPress: Runnable? = null
+        var repeat: Runnable? = null
+        var alternatesShown = false
+        var typedUpper = false
+        var spaceStartX = 0f
+        var spaceDragged = false
+        var spaceLongPressed = false
+
+        view.setOnTouchListener { v, event ->
+            when (event.actionMasked) {
+                MotionEvent.ACTION_DOWN -> {
+                    v.isPressed = true
+                    haptic(when (key.kind) {
+                        Kind.ENTER -> HapticType.KEY_ACCENT
+                        Kind.SPACE -> HapticType.KEY_SPACE
+                        Kind.FUNCTION -> HapticType.KEY_MODIFIER
+                        else -> HapticType.KEY_STANDARD
+                    })
+                    when (key.kind) {
+                        Kind.SPACE -> {
+                            spaceStartX = event.rawX
+                            spaceDragged = false
+                            spaceLongPressed = false
+                            if (onKeyOverride == null) {
+                                longPress = Runnable {
+                                    spaceLongPressed = true
+                                    haptic(HapticType.KEY_ACCENT)
+                                    listener?.onKey(CODE_SWITCH_IME)
+                                }.also { handler.postDelayed(it, SPACE_LONG_PRESS_MS) }
                             }
                         }
-                        deleteHandler.postDelayed(deleteRunnable!!, 320L)
-                    }
-                    MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
-                        v.isPressed = false
-                        deleteRunnable?.let { deleteHandler.removeCallbacks(it) }
-                        deleteRunnable = null
+                        Kind.CHAR -> {
+                            typedUpper = isShifted && keyboardMode == Mode.QWERTY
+                            dispatch(key, onKeyOverride)
+                            if (keyPopups) showPreview(v, (v as TextView).text.toString())
+                            if (key.alternates.isNotEmpty() && onKeyOverride == null) {
+                                alternatesShown = false
+                                longPress = Runnable {
+                                    hidePreview()
+                                    alternatesShown = true
+                                    haptic(HapticType.KEY_MODIFIER)
+                                    showAlternates(v, key.alternates.map { if (typedUpper) it.uppercase() else it })
+                                }.also { handler.postDelayed(it, LONG_PRESS_MS) }
+                            }
+                        }
+                        else -> {
+                            dispatch(key, onKeyOverride)
+                            if (key.code == CODE_DELETE) {
+                                repeat = object : Runnable {
+                                    override fun run() {
+                                        dispatch(key, onKeyOverride)
+                                        haptic(HapticType.KEY_MODIFIER)
+                                        handler.postDelayed(this, 50L)
+                                    }
+                                }.also { handler.postDelayed(it, 320L) }
+                            }
+                        }
                     }
                 }
-                true
+                MotionEvent.ACTION_MOVE -> {
+                    if (alternatesShown) {
+                        moveAlternateHighlight(event.rawX)
+                    } else if (key.kind == Kind.SPACE && onKeyOverride == null && !spaceLongPressed) {
+                        val dx = event.rawX - spaceStartX
+                        if (Math.abs(dx) > dp(18f)) {
+                            spaceDragged = true
+                            longPress?.let { handler.removeCallbacks(it) }
+                            listener?.onKey(if (dx > 0) CODE_CURSOR_RIGHT else CODE_CURSOR_LEFT)
+                            spaceStartX = event.rawX
+                        }
+                    }
+                }
+                MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                    v.isPressed = false
+                    longPress?.let { handler.removeCallbacks(it) }
+                    longPress = null
+                    repeat?.let { handler.removeCallbacks(it) }
+                    repeat = null
+                    hidePreview()
+                    if (alternatesShown) {
+                        val chosen = selectedAlternate()
+                        hideAlternates()
+                        alternatesShown = false
+                        if (event.actionMasked == MotionEvent.ACTION_UP && chosen != null) listener?.onAlternate(chosen)
+                    }
+                    if (key.kind == Kind.SPACE && event.actionMasked == MotionEvent.ACTION_UP && !spaceDragged && !spaceLongPressed) {
+                        dispatch(key, onKeyOverride)
+                    }
+                }
             }
+            true
         }
-        bottomBar.addView(delBtn)
-
-        addView(bottomBar)
     }
 
-    /**
-     * In-keyboard scrolling Clipboard Manager Shelf.
-     */
-    fun showClipboard() {
-        removeAllViews()
-        viewState = ViewState.CLIPBOARD
-        val density = resources.displayMetrics.density
-        val colors = cachedThemeColors ?: getThemeColors()
-
-        val header = LinearLayout(context).apply {
-            orientation = HORIZONTAL
-            gravity = Gravity.CENTER_VERTICAL
-            setPadding((14 * density).toInt(), (6 * density).toInt(), (14 * density).toInt(), (6 * density).toInt())
-            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (44 * density).toInt())
-        }
-
-        val title = TextView(context).apply {
-            text = "Clipboard"
-            setTextColor(colors.keyTextColorNormal)
-            textSize = 16f
-            typeface = Typeface.create(getSelectedTypeface(), Typeface.BOLD)
-            layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
-        }
-        header.addView(title)
-
-        val closeBtn = ImageView(context).apply {
-            setImageResource(R.drawable.ic_close_clean)
-            setColorFilter(colors.keyTextColorModifier)
-            layoutParams = LinearLayout.LayoutParams((32 * density).toInt(), (32 * density).toInt())
-            setPadding((6 * density).toInt(), (6 * density).toInt(), (6 * density).toInt(), (6 * density).toInt())
-            background = createKeyDrawable(
-                Color.argb(20, 255, 255, 255),
-                Color.argb(50, 255, 255, 255),
-                0, false, 8f * density
-            )
-            setOnClickListener {
-                viewState = ViewState.KEYS
-                buildKeyboard()
-            }
-        }
-        header.addView(closeBtn)
-        addView(header)
-
-        addView(View(context).apply {
-            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (1 * density).toInt()).apply {
-                setMargins(0, 0, 0, (6 * density).toInt())
-            }
-            setBackgroundColor(colors.dividerColor)
-        })
-
-        val scrollView = ScrollView(context).apply {
-            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (185 * density).toInt())
-            isVerticalScrollBarEnabled = false
-        }
-
-        val listLayout = LinearLayout(context).apply {
-            orientation = VERTICAL
-            setPadding((10 * density).toInt(), 0, (10 * density).toInt(), (8 * density).toInt())
-        }
-
-        val saved = prefs.getString("clipboard_history", "") ?: ""
-        val items = if (saved.isEmpty()) emptyList() else saved.split("[LIKHIBI_SPLIT]").filter { it.isNotEmpty() }
-
-        if (items.isEmpty()) {
-            val emptyTv = TextView(context).apply {
-                text = "Clipboard history is empty\nCopied text will appear here automatically."
-                setTextColor(colors.clipboardEmptyText)
-                textSize = 14f
-                gravity = Gravity.CENTER
-                setPadding(0, (40 * density).toInt(), 0, (40 * density).toInt())
-            }
-            listLayout.addView(emptyTv)
-        } else {
-            for (item in items.reversed()) {
-                val card = LinearLayout(context).apply {
-                    orientation = HORIZONTAL
-                    gravity = Gravity.CENTER_VERTICAL
-                    setPadding((12 * density).toInt(), (10 * density).toInt(), (10 * density).toInt(), (10 * density).toInt())
-                    layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply {
-                        setMargins(0, (3 * density).toInt(), 0, (3 * density).toInt())
-                    }
-                    background = createKeyDrawable(
-                        colors.clipboardCardBg,
-                        colors.clipboardCardPressed,
-                        0, false, 10f * density
-                    )
-                }
-
-                val clipText = TextView(context).apply {
-                    text = item
-                    setTextColor(colors.keyTextColorNormal)
-                    textSize = 14f
-                    maxLines = 2
-                    layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f).apply {
-                        setMargins(0, 0, (8 * density).toInt(), 0)
-                    }
-                }
-                card.addView(clipText)
-
-                val delBtn = ImageView(context).apply {
-                    setImageResource(R.drawable.ic_trash_clean)
-                    setColorFilter(colors.deleteColor)
-                    layoutParams = LinearLayout.LayoutParams((28 * density).toInt(), (28 * density).toInt())
-                    setPadding((4 * density).toInt(), (4 * density).toInt(), (4 * density).toInt(), (4 * density).toInt())
-                    setOnClickListener {
-                        val currentList = prefs.getString("clipboard_history", "")?.split("[LIKHIBI_SPLIT]")?.toMutableList() ?: mutableListOf()
-                        currentList.remove(item)
-                        prefs.edit().putString("clipboard_history", currentList.joinToString("[LIKHIBI_SPLIT]")).apply()
-                        showClipboard()
-                    }
-                }
-                card.addView(delBtn)
-
-                card.setOnClickListener {
-                    performPremiumHaptic(HapticType.KEY_STANDARD)
-                    listener?.onText(item)
-                    viewState = ViewState.KEYS
-                    buildKeyboard()
-                }
-
-                listLayout.addView(card)
-            }
-        }
-
-        scrollView.addView(listLayout)
-        addView(scrollView)
+    private fun dispatch(key: Key, onKeyOverride: ((Key) -> Unit)?) {
+        if (onKeyOverride != null) onKeyOverride(key) else listener?.onKey(key.code)
     }
 
-    /**
-     * Redesigned Theme Switcher Shelf displaying professional flagship themes
-     */
-    fun showThemeSwitcher() {
-        removeAllViews()
-        viewState = ViewState.THEME_SWITCHER
-        val density = resources.displayMetrics.density
-        val colors = cachedThemeColors ?: getThemeColors()
-
-        val header = LinearLayout(context).apply {
-            orientation = HORIZONTAL
-            gravity = Gravity.CENTER_VERTICAL
-            setPadding((14 * density).toInt(), (6 * density).toInt(), (14 * density).toInt(), (6 * density).toInt())
-            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (44 * density).toInt())
+    private fun haptic(type: HapticType) {
+        if (previewMode) return
+        performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
+        if (prefs.getBoolean("haptic_enabled", true)) {
+            val strength = prefs.getInt("haptic_strength", DEFAULT_HAPTIC_MS)
+            val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
+            if (strength > 0 && vibrator != null) {
+                val duration = when (type) {
+                    HapticType.KEY_STANDARD -> strength.toLong()
+                    HapticType.KEY_SPACE -> (strength * 1.3).toLong()
+                    HapticType.KEY_MODIFIER -> (strength * 1.2).toLong()
+                    HapticType.KEY_ACCENT -> (strength * 1.5).toLong()
+                }
+                runCatching { vibrator.vibrate(VibrationEffect.createOneShot(duration, 140)) }
+            }
         }
-
-        val title = TextView(context).apply {
-            text = "Themes"
-            setTextColor(colors.keyTextColorNormal)
-            textSize = 16f
-            typeface = Typeface.create(getSelectedTypeface(), Typeface.BOLD)
-            layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+        if (prefs.getBoolean("sound_enabled", DEFAULT_SOUND_ENABLED)) {
+            val pool = soundPool ?: initSoundPool()
+            val volume = prefs.getFloat("sound_volume", 0.5f) * 0.35f
+            val rate = if (type == HapticType.KEY_SPACE) 0.75f else 0.8f
+            runCatching { pool.play(if (type == HapticType.KEY_SPACE) soundSpace else soundClick, volume, volume, 1, 0, rate) }
         }
-        header.addView(title)
+    }
 
-        val wallpaperBtn = LinearLayout(context).apply {
-            orientation = HORIZONTAL
+    private fun initSoundPool(): SoundPool {
+        val attrs = AudioAttributes.Builder()
+            .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
+            .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+            .build()
+        val pool = SoundPool.Builder().setMaxStreams(4).setAudioAttributes(attrs).build()
+        soundClick = pool.load(context, R.raw.key_click, 1)
+        soundSpace = pool.load(context, R.raw.key_space, 1)
+        soundPool = pool
+        return pool
+    }
+
+    override fun onInterceptTouchEvent(ev: MotionEvent): Boolean = previewMode || super.onInterceptTouchEvent(ev)
+
+    override fun onTouchEvent(event: MotionEvent): Boolean = if (previewMode) true else super.onTouchEvent(event)
+
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        dismissPopups()
+        handler.removeCallbacksAndMessages(null)
+    }
+
+    // ------------------------------------------------------------------ popups
+
+    private var previewBubble: TextView? = null
+    private var alternatesPopup: LinearLayout? = null
+    private var alternatesLeftOnScreen = 0
+    private var alternateIndex = 0
+    private var alternateCells: List<TextView> = emptyList()
+
+    private fun layerOffset(anchor: View): Pair<Int, Int>? {
+        val layer = popupLayer ?: return null
+        val a = IntArray(2).also { anchor.getLocationInWindow(it) }
+        val l = IntArray(2).also { layer.getLocationInWindow(it) }
+        return (a[0] - l[0]) to (a[1] - l[1])
+    }
+
+    private fun showPreview(key: View, label: String) {
+        val layer = popupLayer ?: return
+        val (x, y) = layerOffset(key) ?: return
+        val bubble = previewBubble?.takeIf { it.parent === layer } ?: TextView(context).apply {
             gravity = Gravity.CENTER
-            setPadding((10 * density).toInt(), (5 * density).toInt(), (10 * density).toInt(), (5 * density).toInt())
-            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, (32 * density).toInt()).apply {
-                setMargins(0, 0, (8 * density).toInt(), 0)
-            }
-            background = createKeyDrawable(
-                Color.argb(30, Color.red(colors.accentColor), Color.green(colors.accentColor), Color.blue(colors.accentColor)),
-                Color.argb(70, Color.red(colors.accentColor), Color.green(colors.accentColor), Color.blue(colors.accentColor)),
-                0, false, 16f * density
-            )
-            setOnClickListener {
-                wallpaperPickerListener?.invoke()
-            }
+            includeFontPadding = false
+            importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
+            layer.addView(this, FrameLayout.LayoutParams(0, 0))
+            previewBubble = this
         }
-        val wpIcon = ImageView(context).apply {
-            setImageResource(R.drawable.ic_wallpaper_clean)
-            setColorFilter(colors.accentColor)
-            layoutParams = LinearLayout.LayoutParams((16 * density).toInt(), (16 * density).toInt()).apply {
-                setMargins(0, 0, (5 * density).toInt(), 0)
-            }
-        }
-        wallpaperBtn.addView(wpIcon)
-        val wpText = TextView(context).apply {
-            text = "Custom Photo"
-            setTextColor(colors.accentColor)
-            textSize = 12f
-            typeface = Typeface.create(getSelectedTypeface(), Typeface.BOLD)
-        }
-        wallpaperBtn.addView(wpText)
-        header.addView(wallpaperBtn)
+        bubble.text = label
+        bubble.typeface = fonts.regular
+        bubble.setTextSize(TypedValue.COMPLEX_UNIT_SP, 26f)
+        bubble.setTextColor(theme.keyLabel)
+        bubble.background = rounded(opaque(theme.key), theme.keyBorder, dp(1f), dp(theme.keyRadiusDp))
+        val w = maxOf(key.width + dp(12f), dp(44f))
+        val h = key.height + dp(10f)
+        val lp = bubble.layoutParams as FrameLayout.LayoutParams
+        lp.width = w
+        lp.height = h
+        lp.leftMargin = (x + (key.width - w) / 2).coerceIn(0, maxOf(0, layer.width - w))
+        lp.topMargin = (y - h - dp(4f)).coerceAtLeast(0)
+        bubble.layoutParams = lp
+        bubble.visibility = View.VISIBLE
+    }
 
-        val closeBtn = ImageView(context).apply {
-            setImageResource(R.drawable.ic_close_clean)
-            setColorFilter(colors.keyTextColorModifier)
-            layoutParams = LinearLayout.LayoutParams((32 * density).toInt(), (32 * density).toInt())
-            setPadding((6 * density).toInt(), (6 * density).toInt(), (6 * density).toInt(), (6 * density).toInt())
-            background = createKeyDrawable(
-                Color.argb(20, 255, 255, 255),
-                Color.argb(50, 255, 255, 255),
-                0, false, 8f * density
-            )
-            setOnClickListener {
-                viewState = ViewState.KEYS
-                buildKeyboard()
-            }
-        }
-        header.addView(closeBtn)
-        addView(header)
+    private fun hidePreview() {
+        previewBubble?.visibility = View.GONE
+    }
 
-        addView(View(context).apply {
-            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (1 * density).toInt()).apply {
-                setMargins(0, 0, 0, (8 * density).toInt())
-            }
-            setBackgroundColor(colors.dividerColor)
-        })
-
-        val scrollView = HorizontalScrollView(context).apply {
-            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (165 * density).toInt())
-            isHorizontalScrollBarEnabled = false
-        }
-
-        val container = LinearLayout(context).apply {
+    private fun showAlternates(key: View, alternates: List<String>) {
+        val layer = popupLayer ?: return
+        val (x, y) = layerOffset(key) ?: return
+        hideAlternates()
+        val pad = dp(4f)
+        val cellW = dp(40f)
+        val cellH = dp(46f)
+        val popup = LinearLayout(context).apply {
             orientation = HORIZONTAL
-            setPadding((12 * density).toInt(), (4 * density).toInt(), (12 * density).toInt(), (4 * density).toInt())
+            setPadding(pad, pad, pad, pad)
+            background = rounded(opaque(theme.key), theme.keyBorder, dp(1f), dp(theme.keyRadiusDp))
+            importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
+        }
+        alternateCells = alternates.mapIndexed { i, text ->
+            TextView(context).apply {
+                this.text = text
+                gravity = Gravity.CENTER
+                includeFontPadding = false
+                typeface = fonts.regular
+                setTextSize(TypedValue.COMPLEX_UNIT_SP, 24f)
+                popup.addView(this, LayoutParams(cellW, cellH).apply { if (i > 0) marginStart = pad })
+            }
+        }
+        val width = pad * 2 + alternates.size * cellW + (alternates.size - 1) * pad
+        val height = pad * 2 + cellH
+        val left = (x - pad).coerceIn(0, maxOf(0, layer.width - width))
+        layer.addView(popup, FrameLayout.LayoutParams(width, height).apply {
+            leftMargin = left
+            topMargin = (y - height - dp(4f)).coerceAtLeast(0)
+        })
+        val l = IntArray(2).also { layer.getLocationOnScreen(it) }
+        alternatesLeftOnScreen = l[0] + left
+        alternatesPopup = popup
+        highlightAlternate(0)
+    }
+
+    private fun moveAlternateHighlight(rawX: Float) {
+        val cells = alternateCells.size
+        if (cells == 0) return
+        val step = dp(44f)
+        val index = ((rawX - alternatesLeftOnScreen - dp(4f)) / step).toInt().coerceIn(0, cells - 1)
+        if (index != alternateIndex) highlightAlternate(index)
+    }
+
+    private fun highlightAlternate(index: Int) {
+        alternateIndex = index
+        alternateCells.forEachIndexed { i, cell ->
+            val on = i == index
+            cell.setTextColor(if (on) theme.onAccent else theme.keyLabel)
+            cell.background = if (on) rounded(theme.accent, 0, 0, dp(maxOf(theme.keyRadiusDp - 2f, 2f))) else null
+        }
+    }
+
+    private fun selectedAlternate(): String? = alternateCells.getOrNull(alternateIndex)?.text?.toString()
+
+    private fun hideAlternates() {
+        alternatesPopup?.let { (it.parent as? ViewGroup)?.removeView(it) }
+        alternatesPopup = null
+        alternateCells = emptyList()
+    }
+
+    private fun dismissPopups() {
+        hidePreview()
+        hideAlternates()
+    }
+
+    // ------------------------------------------------------------------ clipboard panel
+
+    /** The clipboard panel (screen 6): pinned clips first, two columns, pin and delete per clip. */
+    fun showClipboard() {
+        dismissPopups()
+        removeAllViews()
+        emojiSearch = null
+        viewState = ViewState.CLIPBOARD
+        setPadding(dp(12f), dp(10f), dp(12f), dp(4f))
+        onPanelChanged?.invoke(viewState)
+
+        val panelHeight = typingHeightPx()
+        val header = LinearLayout(context).apply {
+            orientation = HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+        }
+        header.addView(iconButton(R.drawable.ic_kb_chevron_left, theme.keyLabel, 20f, "Back to keyboard") { buildKeys() }, LayoutParams(dp(36f), dp(36f)))
+        header.addView(text("Clipboard", 17f, fonts.semibold, theme.keyLabel), LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f).apply { marginStart = dp(4f) })
+        header.addView(text("Clipboard on", 13f, fonts.medium, theme.keyLabelSecondary).apply { importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO })
+        header.addView(KbSwitch(context, theme, "Clipboard on", clipboard.enabled) { on ->
+            clipboard.enabled = on
+            showClipboard()
+        }, LayoutParams(dp(56f), dp(40f)))
+        addView(header, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(36f)))
+
+        val scroll = ScrollView(context).apply { isVerticalScrollBarEnabled = false }
+        val list = LinearLayout(context).apply { orientation = VERTICAL }
+        val clips = clipboard.clips()
+        when {
+            !clipboard.enabled -> list.addView(emptyNote("Clipboard history is off. Turn it on to keep text you copy here."))
+            clips.isEmpty() -> list.addView(emptyNote("Text you copy appears here."))
+            else -> for (pair in clips.chunked(2)) {
+                val row = LinearLayout(context).apply { orientation = HORIZONTAL }
+                pair.forEachIndexed { i, clip ->
+                    row.addView(clipCard(clip), LayoutParams(0, dp(98f), 1f).apply { if (i == 1) marginStart = dp(8f) })
+                }
+                if (pair.size == 1) row.addView(View(context), LayoutParams(0, dp(98f), 1f).apply { marginStart = dp(8f) })
+                list.addView(row, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { bottomMargin = dp(8f) })
+            }
+        }
+        scroll.addView(list)
+        addView(scroll, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f).apply { topMargin = dp(10f) })
+
+        val bottom = LinearLayout(context).apply {
+            orientation = HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+        }
+        bottom.addView(panelKey("ABC", 0, "Back to keyboard") { buildKeys() }, LayoutParams(dp(64f), dp(46f)))
+        bottom.addView(text("Clips are removed after 1 hour. Pinned clips stay.", 12f, fonts.regular, theme.keyLabelSecondary),
+            LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f).apply { marginStart = dp(8f) })
+        addView(bottom, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(46f)).apply { topMargin = dp(2f) })
+
+        setPanelHeight(panelHeight)
+    }
+
+    private fun clipCard(clip: ClipboardStore.Clip): View {
+        val card = LinearLayout(context).apply {
+            orientation = VERTICAL
+            setPadding(dp(10f), dp(10f), dp(6f), dp(4f))
+            background = keyBackground(theme.key, theme.keyPressed, if (clip.pinned) theme.accent else theme.keyBorder, dp(1f))
+            isClickable = true
+            contentDescription = "Paste: ${clip.text}"
+            setOnClickListener {
+                haptic(HapticType.KEY_STANDARD)
+                listener?.onText(clip.text)
+                buildKeys()
+            }
+        }
+        card.addView(text(clip.text, 13f, fonts.regular, theme.keyLabel).apply {
+            maxLines = 3
+            ellipsize = TextUtils.TruncateAt.END
+            setPadding(0, 0, dp(4f), 0)
+        }, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f))
+        val footer = LinearLayout(context).apply {
+            orientation = HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+        }
+        val age = if (clip.pinned) text("Pinned", 11f, fonts.semibold, theme.accent) else text(ClipboardStore.age(clip.time), 11f, fonts.medium, theme.keyLabelSecondary)
+        footer.addView(age, LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
+        footer.addView(iconButton(R.drawable.ic_kb_pin, if (clip.pinned) theme.accent else theme.keyLabelSecondary, 16f, if (clip.pinned) "Unpin" else "Pin") {
+            clipboard.togglePin(clip.text)
+            showClipboard()
+        }, LayoutParams(dp(32f), dp(32f)))
+        footer.addView(iconButton(R.drawable.ic_kb_trash, theme.keyLabelSecondary, 16f, "Delete clip") {
+            clipboard.remove(clip.text)
+            showClipboard()
+        }, LayoutParams(dp(32f), dp(32f)))
+        card.addView(footer, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(32f)))
+        return card
+    }
+
+    private fun emptyNote(message: String): View = text(message, 13f, fonts.regular, theme.keyLabelSecondary).apply {
+        gravity = Gravity.CENTER
+        setPadding(dp(16f), dp(36f), dp(16f), dp(36f))
+    }
+
+    // ------------------------------------------------------------------ emoji panel
+
+    private data class EmojiSection(val title: String, val icon: Int, val emojis: List<String>)
+
+    private fun emojiSections(): List<EmojiSection> = listOf(
+        EmojiSection("Recent", R.drawable.ic_kb_clock, recentEmojis()),
+        EmojiSection("Smileys", R.drawable.ic_kb_smile, Emoji.SMILEYS),
+        EmojiSection("Gestures", R.drawable.ic_kb_hand, Emoji.GESTURES),
+        EmojiSection("Nature and places", R.drawable.ic_kb_image, Emoji.NATURE),
+        EmojiSection("Symbols", R.drawable.ic_kb_type, Emoji.SYMBOLS),
+    )
+
+    private fun recentEmojis(): List<String> =
+        prefs.getString("emoji_recent", "").orEmpty().split('\u001F').filter { it.isNotEmpty() }
+
+    private fun rememberEmoji(emoji: String) {
+        val recent = listOf(emoji) + recentEmojis().filter { it != emoji }
+        prefs.edit().putString("emoji_recent", recent.take(16).joinToString("\u001F")).apply()
+    }
+
+    private fun typeEmoji(emoji: String) {
+        haptic(HapticType.KEY_STANDARD)
+        listener?.onText(emoji)
+        rememberEmoji(emoji)
+    }
+
+    /** The emoji panel (screen 7): search, five tabs, one scrolling list of sections. */
+    fun showEmojiShelf() {
+        dismissPopups()
+        removeAllViews()
+        emojiSearch = null
+        viewState = ViewState.EMOJI_SHELF
+        setPadding(dp(12f), dp(10f), dp(12f), dp(4f))
+        onPanelChanged?.invoke(viewState)
+
+        val search = LinearLayout(context).apply {
+            orientation = HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+            setPadding(dp(12f), 0, dp(12f), 0)
+            background = keyBackground(theme.key, theme.keyPressed, theme.keyBorder, dp(1f))
+            isClickable = true
+            contentDescription = "Search emoji"
+            setOnClickListener { showEmojiSearch() }
+        }
+        search.addView(ImageView(context).apply { setImageDrawable(tinted(R.drawable.ic_kb_search, theme.keyLabelSecondary)) }, LayoutParams(dp(18f), dp(18f)))
+        search.addView(text("Search emoji", 15f, fonts.regular, theme.keyLabelSecondary), LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f).apply { marginStart = dp(8f) })
+        addView(search, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(42f)))
+
+        val sections = emojiSections().filter { it.emojis.isNotEmpty() }
+        val tabs = LinearLayout(context).apply { orientation = HORIZONTAL }
+        val underlines = mutableListOf<View>()
+        val tabIcons = mutableListOf<ImageView>()
+        val scroll = ScrollView(context).apply { isVerticalScrollBarEnabled = false }
+        val content = LinearLayout(context).apply { orientation = VERTICAL }
+        val sectionViews = mutableListOf<View>()
+
+        fun markTab(index: Int) {
+            underlines.forEachIndexed { i, u -> u.setBackgroundColor(if (i == index) theme.accent else Color.TRANSPARENT) }
+            tabIcons.forEachIndexed { i, icon -> icon.setColorFilter(if (i == index) theme.keyLabel else theme.keyLabelSecondary) }
         }
 
-        val themePresets = listOf(
-            Triple("theme_system", "Dynamic System", Triple("#1E1F22", "#2B2D31", "#4E80EE")),
-            Triple("theme_slate_dark", "Slate Dark", Triple("#1E1F22", "#2B2D31", "#4E80EE")),
-            Triple("theme_chalk_light", "Chalk Light", Triple("#ECEFF1", "#FFFFFF", "#1A73E8")),
-            Triple("theme_naga_heritage", "Naga Heritage", Triple("#F7F4EE", "#FFFFFF", "#C62828")),
-            Triple("theme_obsidian_oled", "Obsidian OLED", Triple("#000000", "#141416", "#3B82F6")),
-            Triple("theme_nordic_frost", "Nordic Frost", Triple("#242933", "#2E3440", "#5E81AC")),
-            Triple("theme_custom", "Custom Studio", Triple("#12141C", "#262A36", "#1A73E8"))
-        )
-
-        for ((id, name, palette) in themePresets) {
-            val isSelected = (currentTheme == id)
-            val cardBg = Color.parseColor(palette.first)
-            val keyColor = Color.parseColor(palette.second)
-            val accentClr = Color.parseColor(palette.third)
-
-            val itemCard = LinearLayout(context).apply {
+        sections.forEachIndexed { index, section ->
+            val tab = LinearLayout(context).apply {
                 orientation = VERTICAL
                 gravity = Gravity.CENTER_HORIZONTAL
-                setPadding((8 * density).toInt(), (8 * density).toInt(), (8 * density).toInt(), (8 * density).toInt())
-                layoutParams = LinearLayout.LayoutParams((114 * density).toInt(), (145 * density).toInt()).apply {
-                    setMargins((6 * density).toInt(), 0, (6 * density).toInt(), 0)
+                setPadding(0, dp(8f), 0, 0)
+                isClickable = true
+                contentDescription = section.title
+                setOnClickListener {
+                    haptic(HapticType.KEY_MODIFIER)
+                    scroll.smoothScrollTo(0, sectionViews[index].top)
+                    markTab(index)
                 }
+            }
+            val icon = ImageView(context).apply { setImageResource(section.icon) }
+            tab.addView(icon, LayoutParams(dp(22f), dp(22f)))
+            val underline = View(context)
+            tab.addView(underline, LayoutParams(dp(40f), dp(2f)).apply { topMargin = dp(8f) })
+            tabs.addView(tab, LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
+            underlines.add(underline)
+            tabIcons.add(icon)
 
-                background = createKeyDrawable(
-                    if (isSelected) Color.argb(40, Color.red(accentClr), Color.green(accentClr), Color.blue(accentClr)) else colors.clipboardCardBg,
-                    colors.clipboardCardPressed,
-                    0,
-                    false,
-                    12f * density,
-                    if (isSelected) 1.5f else 0.5f,
-                    if (isSelected) accentClr else Color.argb(30, 255, 255, 255)
-                )
-            }
-
-            val isLightTheme = (id == "theme_chalk_light" || id == "theme_naga_heritage")
-            val previewBox = LinearLayout(context).apply {
-                orientation = VERTICAL
-                layoutParams = LinearLayout.LayoutParams((98 * density).toInt(), (66 * density).toInt()).apply {
-                    setMargins(0, (2 * density).toInt(), 0, (10 * density).toInt())
-                }
-                setPadding((5 * density).toInt(), (6 * density).toInt(), (5 * density).toInt(), (6 * density).toInt())
-                background = GradientDrawable().apply {
-                    shape = GradientDrawable.RECTANGLE
-                    cornerRadius = 8f * density
-                    setColor(cardBg)
-                    setStroke(
-                        (1f * density).toInt(),
-                        if (isLightTheme) Color.parseColor("#CCCCCC") else Color.argb(50, 255, 255, 255)
-                    )
-                }
-            }
-
-            // Preview Row 1
-            val pRow1 = LinearLayout(context).apply {
-                orientation = HORIZONTAL
-                layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (12 * density).toInt()).apply {
-                    setMargins(0, 0, 0, (4 * density).toInt())
-                }
-            }
-            for (k in 0..5) {
-                pRow1.addView(View(context).apply {
-                    layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1f).apply {
-                        setMargins((1 * density).toInt(), 0, (1 * density).toInt(), 0)
-                    }
-                    background = GradientDrawable().apply {
-                        shape = GradientDrawable.RECTANGLE
-                        cornerRadius = 3f * density
-                        setColor(keyColor)
-                    }
-                })
-            }
-            previewBox.addView(pRow1)
-
-            // Preview Row 2
-            val pRow2 = LinearLayout(context).apply {
-                orientation = HORIZONTAL
-                layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (12 * density).toInt()).apply {
-                    setMargins(0, 0, 0, (4 * density).toInt())
-                }
-            }
-            for (k in 0..4) {
-                pRow2.addView(View(context).apply {
-                    layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1f).apply {
-                        setMargins((1 * density).toInt(), 0, (1 * density).toInt(), 0)
-                    }
-                    background = GradientDrawable().apply {
-                        shape = GradientDrawable.RECTANGLE
-                        cornerRadius = 3f * density
-                        setColor(keyColor)
-                    }
-                })
-            }
-            previewBox.addView(pRow2)
-
-            // Preview Row 3
-            val pRow3 = LinearLayout(context).apply {
-                orientation = HORIZONTAL
-                layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (12 * density).toInt())
-            }
-            pRow3.addView(View(context).apply {
-                layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1.2f).apply {
-                    setMargins((1 * density).toInt(), 0, (1 * density).toInt(), 0)
-                }
-                background = GradientDrawable().apply {
-                    shape = GradientDrawable.RECTANGLE
-                    cornerRadius = 3f * density
-                    setColor(keyColor)
-                }
+            val block = LinearLayout(context).apply { orientation = VERTICAL }
+            block.addView(text(section.title, 12f, fonts.semibold, theme.keyLabelSecondary).apply {
+                androidx.core.view.ViewCompat.setAccessibilityHeading(this, true)
+                setPadding(0, dp(6f), 0, dp(2f))
             })
-            pRow3.addView(View(context).apply {
-                layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 3f).apply {
-                    setMargins((1 * density).toInt(), 0, (1 * density).toInt(), 0)
-                }
-                background = GradientDrawable().apply {
-                    shape = GradientDrawable.RECTANGLE
-                    cornerRadius = 3f * density
-                    setColor(keyColor)
-                }
-            })
-            pRow3.addView(View(context).apply {
-                layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1.5f).apply {
-                    setMargins((1 * density).toInt(), 0, (1 * density).toInt(), 0)
-                }
-                background = GradientDrawable().apply {
-                    shape = GradientDrawable.RECTANGLE
-                    cornerRadius = 3f * density
-                    setColor(accentClr)
-                }
-            })
-            previewBox.addView(pRow3)
+            block.addView(emojiGrid(section.emojis))
+            content.addView(block)
+            sectionViews.add(block)
+        }
+        addView(tabs, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = dp(2f) })
+        addView(View(context).apply { setBackgroundColor(theme.keyBorder) }, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(1f)))
+        scroll.addView(content)
+        scroll.setOnScrollChangeListener { _, _, y, _, _ ->
+            val current = sectionViews.indexOfLast { it.top <= y + dp(8f) }.coerceAtLeast(0)
+            markTab(current)
+        }
+        addView(scroll, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f))
+        markTab(0)
 
-            itemCard.addView(previewBox)
+        val bottom = LinearLayout(context).apply {
+            orientation = HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+            setPadding(0, dp(6f), 0, 0)
+        }
+        bottom.addView(panelKey("ABC", 0, "Back to keyboard") { buildKeys() }, LayoutParams(dp(64f), dp(46f)))
+        bottom.addView(View(context), LayoutParams(0, 1, 1f))
+        bottom.addView(repeatingDelete(), LayoutParams(dp(64f), dp(46f)))
+        addView(bottom, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(52f)))
 
-            val nameRow = LinearLayout(context).apply {
-                orientation = HORIZONTAL
-                gravity = Gravity.CENTER
-                layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        setPanelHeight(typingHeightPx())
+    }
+
+    /** Panels take the height the strip and keys had, so the app above does not jump. */
+    private fun setPanelHeight(height: Int) {
+        val lp = layoutParams ?: return
+        if (lp.height != height) {
+            lp.height = height
+            layoutParams = lp
+        }
+    }
+
+    private fun emojiGrid(emojis: List<String>, columns: Int = 8): View {
+        val grid = LinearLayout(context).apply { orientation = VERTICAL }
+        for (chunk in emojis.chunked(columns)) {
+            val row = LinearLayout(context).apply { orientation = HORIZONTAL }
+            for (emoji in chunk) row.addView(emojiCell(emoji), LayoutParams(0, dp(42f), 1f))
+            repeat(columns - chunk.size) { row.addView(View(context), LayoutParams(0, dp(42f), 1f)) }
+            grid.addView(row)
+        }
+        return grid
+    }
+
+    private fun emojiCell(emoji: String): TextView = TextView(context).apply {
+        text = emoji
+        gravity = Gravity.CENTER
+        setTextSize(TypedValue.COMPLEX_UNIT_SP, 26f)
+        background = keyBackground(Color.TRANSPARENT, theme.keyPressed)
+        setOnClickListener { typeEmoji(emoji) }
+    }
+
+    /** Emoji search: the letter keys type into the search field instead of the app. */
+    private fun showEmojiSearch() {
+        dismissPopups()
+        removeAllViews()
+        val query = StringBuilder()
+        emojiSearch = query
+        setPadding(0, dp(8f), 0, dp(4f))
+        setPanelHeight(typingHeightPx())
+
+        val field = LinearLayout(context).apply {
+            orientation = HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+            setPadding(dp(4f), 0, dp(4f), 0)
+            background = rounded(theme.key, theme.keyBorder, dp(1f), dp(theme.keyRadiusDp))
+        }
+        field.addView(iconButton(R.drawable.ic_kb_chevron_left, theme.keyLabel, 18f, "Back to emoji") { showEmojiShelf() }, LayoutParams(dp(34f), dp(34f)))
+        val queryView = text("", 15f, fonts.regular, theme.keyLabel).apply {
+            maxLines = 1
+            ellipsize = TextUtils.TruncateAt.START
+        }
+        field.addView(queryView, LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f).apply { marginStart = dp(4f) })
+        addView(field, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(40f)).apply { setMargins(dp(12f), 0, dp(12f), 0) })
+
+        val resultsScroll = HorizontalScrollView(context).apply { isHorizontalScrollBarEnabled = false }
+        val results = LinearLayout(context).apply { orientation = HORIZONTAL }
+        resultsScroll.addView(results)
+        addView(resultsScroll, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(44f)).apply { setMargins(dp(12f), 0, dp(12f), 0) })
+
+        fun refresh() {
+            queryView.text = if (query.isEmpty()) "Search emoji" else query
+            queryView.setTextColor(if (query.isEmpty()) theme.keyLabelSecondary else theme.keyLabel)
+            results.removeAllViews()
+            val found = Emoji.search(query.toString(), emojiSections().drop(1).flatMap { it.emojis }.distinct())
+            if (found.isEmpty() && query.isNotEmpty()) {
+                results.addView(text("No emoji found", 13f, fonts.regular, theme.keyLabelSecondary).apply { gravity = Gravity.CENTER_VERTICAL },
+                    LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, dp(44f)))
             }
-
-            val nameTxt = TextView(context).apply {
-                text = name
-                setTextColor(if (isSelected) accentClr else colors.keyTextColorNormal)
-                textSize = 12f
-                gravity = Gravity.CENTER
-                typeface = Typeface.create(getSelectedTypeface(), if (isSelected) Typeface.BOLD else Typeface.NORMAL)
-            }
-            nameRow.addView(nameTxt)
-
-            if (isSelected) {
-                val checkIcon = ImageView(context).apply {
-                    setImageResource(R.drawable.ic_check_clean)
-                    setColorFilter(accentClr)
-                    layoutParams = LinearLayout.LayoutParams((14 * density).toInt(), (14 * density).toInt()).apply {
-                        setMargins((4 * density).toInt(), 0, 0, 0)
-                    }
-                }
-                nameRow.addView(checkIcon)
-            }
-
-            itemCard.addView(nameRow)
-
-            itemCard.setOnClickListener {
-                prefs.edit().putString("selected_theme", id).apply()
-                cachedThemeColors = null
-                themeChangeListener?.invoke()
-                viewState = ViewState.KEYS
-                applyTheme(forceRebuild = true)
-            }
-
-            container.addView(itemCard)
+            for (emoji in found.take(40)) results.addView(emojiCell(emoji), LayoutParams(dp(44f), dp(44f)))
         }
 
-        scrollView.addView(container)
-        addView(scrollView)
+        val onKey: (Key) -> Unit = { key ->
+            when {
+                key.code == CODE_DELETE -> if (query.isNotEmpty()) query.deleteCharAt(query.length - 1)
+                key.kind == Kind.SPACE -> if (query.isNotEmpty() && query.last() != ' ') query.append(' ')
+                key.code == CODE_SYMBOLS -> showEmojiShelf()
+                key.kind == Kind.CHAR -> query.append(key.label.lowercase())
+            }
+            if (emojiSearch === query) refresh()
+        }
+        val available = typingHeightPx() - dp(12f) - dp(40f) - dp(44f) - dp(4f)
+        val keyHeight = minOf(dp(keyHeightDp), available / 4 - dp(theme.keyGapDp)).coerceAtLeast(dp(28f))
+        val backspace = Key("", CODE_DELETE, 55.8f, Kind.FUNCTION, icon = R.drawable.ic_kb_delete, description = "Delete")
+        val rows = listOf(
+            ROW1.map { Key(it, it[0].code, 35.2f) },
+            listOf(Key("", 0, 20.6f, Kind.SPACER)) + ROW2.map { Key(it, it[0].code, 35.2f) } + Key("", 0, 20.6f, Kind.SPACER),
+            listOf(Key("", 0, 55.8f, Kind.SPACER)) + ROW3.map { Key(it, it[0].code, 35.2f) } + backspace,
+            listOf(Key("ABC", CODE_SYMBOLS, 52.8f, Kind.FUNCTION, description = "Back to emoji"), Key("Likhibi", ' '.code, 294.4f, Kind.SPACE, description = "Space")),
+        )
+        val wasShifted = isShifted
+        isShifted = false
+        val grid = LinearLayout(context).apply { orientation = VERTICAL }
+        for (row in rows) grid.addView(buildRow(row, keyHeight, onKey))
+        isShifted = wasShifted
+        letterKeys.clear()
+        addView(grid, LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f).apply { topMargin = dp(4f) })
+        refresh()
+    }
+
+    // ------------------------------------------------------------------ small pieces
+
+    private fun panelKey(label: String, icon: Int, description: String, onClick: () -> Unit): KeyCapView = KeyCapView(context).apply {
+        text = label
+        gravity = Gravity.CENTER
+        typeface = fonts.medium
+        setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f)
+        setTextColor(theme.keyLabel)
+        background = keyBackground(theme.keyFunction, theme.keyPressed)
+        if (icon != 0) setIcon(icon, theme.keyLabel, dp(20f))
+        contentDescription = description
+        setOnClickListener {
+            haptic(HapticType.KEY_MODIFIER)
+            onClick()
+        }
+    }
+
+    private fun repeatingDelete(): View {
+        val view = panelKey("", R.drawable.ic_kb_delete, "Delete") {}
+        view.setOnClickListener(null)
+        attachTouch(view, Key("", CODE_DELETE, 64f, Kind.FUNCTION), null)
+        return view
+    }
+
+    private fun iconButton(icon: Int, color: Int, sizeDp: Float, description: String, onClick: () -> Unit): ImageView =
+        ImageView(context).apply {
+            // Icons are drawn at their design size inside a larger touch target.
+            setImageDrawable(SizedDrawable(tinted(icon, color), dp(sizeDp)))
+            scaleType = ImageView.ScaleType.CENTER
+            contentDescription = description
+            background = keyBackground(Color.TRANSPARENT, theme.keyPressed)
+            setOnClickListener {
+                haptic(HapticType.KEY_MODIFIER)
+                onClick()
+            }
+        }
+
+    private fun text(value: String, sizeSp: Float, face: Typeface, color: Int): TextView = TextView(context).apply {
+        text = value
+        typeface = face
+        setTextSize(TypedValue.COMPLEX_UNIT_SP, sizeSp)
+        setTextColor(color)
+        includeFontPadding = false
+    }
+
+    private fun tinted(icon: Int, color: Int): Drawable =
+        ContextCompat.getDrawable(context, icon)!!.mutate().also { it.setTint(color) }
+
+    private fun keyBackground(fill: Int, pressed: Int, border: Int = theme.keyBorder, borderWidth: Int = dp(theme.keyBorderWidthDp)): Drawable {
+        val radius = dp(theme.keyRadiusDp)
+        val cacheKey = "$fill/$pressed/$border/$borderWidth/$radius"
+        backgroundCache[cacheKey]?.let { return it.newDrawable().mutate() }
+        val drawable = StateListDrawable().apply {
+            addState(intArrayOf(android.R.attr.state_pressed), rounded(pressed, border, borderWidth, radius))
+            addState(intArrayOf(), rounded(fill, border, borderWidth, radius))
+        }
+        backgroundCache[cacheKey] = drawable.constantState!!
+        return drawable
+    }
+
+    private fun rounded(fill: Int, border: Int, borderWidth: Int, radius: Int): GradientDrawable = GradientDrawable().apply {
+        shape = GradientDrawable.RECTANGLE
+        cornerRadius = radius.toFloat()
+        setColor(fill)
+        if (borderWidth > 0 && Color.alpha(border) > 0) setStroke(borderWidth, border)
+    }
+
+    /** Popups float over other keys, so a translucent key colour gets a solid backing. */
+    private fun opaque(color: Int): Int {
+        if (Color.alpha(color) == 255) return color
+        val base = if (theme.usesPhoto) Color.parseColor("#3A3D38") else theme.background.let { if (Color.alpha(it) == 255) it else Color.DKGRAY }
+        return blend(base, color or (0xFF shl 24), Color.alpha(color) / 255f)
+    }
+
+    private fun blend(a: Int, b: Int, t: Float): Int = Color.argb(
+        255,
+        (Color.red(a) + (Color.red(b) - Color.red(a)) * t).roundToInt(),
+        (Color.green(a) + (Color.green(b) - Color.green(a)) * t).roundToInt(),
+        (Color.blue(a) + (Color.blue(b) - Color.blue(a)) * t).roundToInt(),
+    )
+
+    private fun dp(value: Float): Int = (value * density).roundToInt()
+    private fun sp(value: Float): Float = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, value, resources.displayMetrics)
+
+    /** A keycap: its label, an optional centred icon, and an optional small hint in the corner. */
+    private class KeyCapView(context: Context) : TextView(context) {
+        private var icon: Drawable? = null
+        private var iconSize = 0
+        private var hint: String? = null
+        private val hintPaint = TextPaint(Paint.ANTI_ALIAS_FLAG)
+
+        fun setIcon(res: Int, color: Int, size: Int) {
+            icon = ContextCompat.getDrawable(context, res)!!.mutate().also { it.setTint(color) }
+            iconSize = size
+            invalidate()
+        }
+
+        fun setHint(text: String, color: Int, face: Typeface, sizePx: Float) {
+            hint = text
+            hintPaint.color = color
+            hintPaint.typeface = face
+            hintPaint.textSize = sizePx
+        }
+
+        override fun onDraw(canvas: Canvas) {
+            super.onDraw(canvas)
+            icon?.let {
+                val left = (width - iconSize) / 2
+                val top = (height - iconSize) / 2
+                it.setBounds(left, top, left + iconSize, top + iconSize)
+                it.draw(canvas)
+            }
+            hint?.let {
+                val pad = hintPaint.textSize * 0.45f
+                canvas.drawText(it, width - pad - hintPaint.measureText(it), pad + hintPaint.textSize * 0.85f, hintPaint)
+            }
+        }
+    }
+
+    /** Draws a drawable at a fixed size, centred, so small icons keep a large touch target. */
+    private class SizedDrawable(private val inner: Drawable, private val size: Int) : Drawable() {
+        override fun draw(canvas: Canvas) {
+            val l = bounds.centerX() - size / 2
+            val t = bounds.centerY() - size / 2
+            inner.setBounds(l, t, l + size, t + size)
+            inner.draw(canvas)
+        }
+        override fun getIntrinsicWidth() = size
+        override fun getIntrinsicHeight() = size
+        override fun setAlpha(alpha: Int) { inner.alpha = alpha }
+        override fun setColorFilter(colorFilter: android.graphics.ColorFilter?) { inner.colorFilter = colorFilter }
+        @Deprecated("Deprecated in Java")
+        override fun getOpacity(): Int = android.graphics.PixelFormat.TRANSLUCENT
+    }
+
+    /** The keyboard's own switch (design 29:1808, Keyboard context): a 40 x 24 pill in theme colours. */
+    private class KbSwitch(
+        context: Context,
+        private val theme: KeyboardTheme,
+        private val label: String,
+        private var checked: Boolean,
+        private val onChange: (Boolean) -> Unit,
+    ) : View(context) {
+        private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
+        private val d = resources.displayMetrics.density
+
+        init {
+            isClickable = true
+            isFocusable = true
+            contentDescription = label
+            setOnClickListener {
+                checked = !checked
+                performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
+                invalidate()
+                onChange(checked)
+            }
+        }
+
+        override fun onDraw(canvas: Canvas) {
+            val w = 40 * d
+            val h = 24 * d
+            val left = (width - w) / 2
+            val top = (height - h) / 2
+            paint.color = if (checked) theme.accent else theme.keyFunction
+            canvas.drawRoundRect(left, top, left + w, top + h, h / 2, h / 2, paint)
+            val r = 9 * d
+            val cx = if (checked) left + w - h / 2 else left + h / 2
+            paint.color = if (checked) theme.onAccent else theme.keyLabelSecondary
+            canvas.drawCircle(cx, top + h / 2, r, paint)
+        }
+
+        override fun onInitializeAccessibilityNodeInfo(info: AccessibilityNodeInfo) {
+            super.onInitializeAccessibilityNodeInfo(info)
+            info.className = android.widget.Switch::class.java.name
+            info.isCheckable = true
+            info.isChecked = checked
+        }
     }
 }
 
@@ -1560,35 +1140,28 @@ class CustomKeyboardView @JvmOverloads constructor(
  */
 class CenterCropWallpaperDrawable(
     private val bitmap: android.graphics.Bitmap,
-    private val overlayColor: Int
-) : android.graphics.drawable.Drawable() {
+    private val overlayColor: Int,
+) : Drawable() {
     private val drawMatrix = android.graphics.Matrix()
-    private val bitmapPaint = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG or android.graphics.Paint.FILTER_BITMAP_FLAG)
-    private val overlayPaint = android.graphics.Paint().apply {
+    private val bitmapPaint = Paint(Paint.ANTI_ALIAS_FLAG or Paint.FILTER_BITMAP_FLAG)
+    private val overlayPaint = Paint().apply {
         color = overlayColor
-        style = android.graphics.Paint.Style.FILL
+        style = Paint.Style.FILL
     }
 
-    override fun draw(canvas: android.graphics.Canvas) {
+    override fun draw(canvas: Canvas) {
         val w = bounds.width().toFloat()
         val h = bounds.height().toFloat()
         if (w <= 0f || h <= 0f || bitmap.isRecycled) return
-
         val bw = bitmap.width.toFloat()
         val bh = bitmap.height.toFloat()
-        val scale = Math.max(w / bw, h / bh)
-        val dx = (w - bw * scale) * 0.5f
-        val dy = (h - bh * scale) * 0.5f
-
+        val scale = maxOf(w / bw, h / bh)
         drawMatrix.setScale(scale, scale)
-        drawMatrix.postTranslate(dx, dy)
-
+        drawMatrix.postTranslate(bounds.left + (w - bw * scale) * 0.5f, bounds.top + (h - bh * scale) * 0.5f)
         canvas.save()
         canvas.clipRect(bounds)
         canvas.drawBitmap(bitmap, drawMatrix, bitmapPaint)
-        if (android.graphics.Color.alpha(overlayColor) > 0) {
-            canvas.drawRect(bounds, overlayPaint)
-        }
+        if (Color.alpha(overlayColor) > 0) canvas.drawRect(bounds, overlayPaint)
         canvas.restore()
     }
 
