@@ -43,7 +43,7 @@ class StudentEngine(TranslationEngine):
         version="1.0.0",
         directions=(EN_TO_NAG, NAG_TO_EN),
         description=(
-            "A 10M-parameter model distilled from the fine-tuned NLLB, small enough to run offline "
+            "A 40M-parameter model distilled from the fine-tuned NLLB, small enough to run offline "
             "inside the Likhibi keyboard. Less accurate than NLLB; shown here so the two can be compared."
         ),
         offline=True,

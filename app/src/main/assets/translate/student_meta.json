@@ -1,7 +1,7 @@
 {
-  "architecture": "Marian transformer, 6-layer encoder, 3-layer decoder, d_model 384, ffn 1536",
+  "architecture": "Marian transformer, 6-layer encoder, 4-layer decoder, d_model 512, ffn 2048",
   "sequence_level_distillation_on_training_verses": true,
-  "parameters": 21015168,
+  "parameters": 40088576,
   "vocab_size": 8000,
   "special_ids": {
     "pad": 0,
@@ -13,178 +13,240 @@
   "training_pairs": {
     "real": 7578,
     "real_weight": 3,
-    "synthetic": 99207,
+    "synthetic": 122202,
     "distilled_verses": {
-      "en-nag": 7538,
+      "en-nag": 7528,
       "nag-en": 7577
     }
   },
-  "best_mean_dev_chrf++": 38.88,
+  "best_mean_dev_chrf++": 39.48,
   "log": [
     {
       "epoch": 1,
-      "step": 925,
+      "step": 1255,
       "dev_chrf++": {
-        "en-nag": 22.29,
-        "nag-en": 14.59
+        "en-nag": 28.95,
+        "nag-en": 22.74
       },
-      "minutes": 3.3
+      "minutes": 5.0
     },
     {
       "epoch": 2,
-      "step": 1850,
+      "step": 2511,
       "dev_chrf++": {
-        "en-nag": 35.08,
-        "nag-en": 25.3
+        "en-nag": 35.97,
+        "nag-en": 28.94
       },
-      "minutes": 6.6
+      "minutes": 10.3
     },
     {
       "epoch": 3,
-      "step": 2774,
+      "step": 3769,
       "dev_chrf++": {
-        "en-nag": 37.96,
-        "nag-en": 31.27
+        "en-nag": 39.96,
+        "nag-en": 33.32
       },
-      "minutes": 9.8
+      "minutes": 15.7
     },
     {
       "epoch": 4,
-      "step": 3698,
+      "step": 5027,
       "dev_chrf++": {
-        "en-nag": 39.57,
-        "nag-en": 33.67
+        "en-nag": 40.89,
+        "nag-en": 33.6
       },
-      "minutes": 13.0
+      "minutes": 20.8
     },
     {
       "epoch": 5,
-      "step": 4622,
+      "step": 6279,
       "dev_chrf++": {
-        "en-nag": 38.34,
-        "nag-en": 33.3
+        "en-nag": 41.28,
+        "nag-en": 34.72
       },
-      "minutes": 16.1
+      "minutes": 26.0
     },
     {
       "epoch": 6,
-      "step": 5547,
+      "step": 7537,
       "dev_chrf++": {
-        "en-nag": 42.4,
-        "nag-en": 35.35
+        "en-nag": 41.55,
+        "nag-en": 35.26
       },
-      "minutes": 19.2
+      "minutes": 31.1
     },
     {
       "epoch": 7,
-      "step": 6473,
+      "step": 8791,
       "dev_chrf++": {
-        "en-nag": 41.24,
-        "nag-en": 34.32
+        "en-nag": 42.0,
+        "nag-en": 36.42
       },
-      "minutes": 23.2
+      "minutes": 36.3
     },
     {
       "epoch": 8,
-      "step": 7399,
+      "step": 10045,
       "dev_chrf++": {
-        "en-nag": 40.18,
-        "nag-en": 33.11
+        "en-nag": 41.93,
+        "nag-en": 35.0
       },
-      "minutes": 27.9
+      "minutes": 41.4
     },
     {
       "epoch": 9,
-      "step": 8320,
+      "step": 11301,
       "dev_chrf++": {
-        "en-nag": 41.28,
-        "nag-en": 34.22
+        "en-nag": 42.07,
+        "nag-en": 35.92
       },
-      "minutes": 32.3
+      "minutes": 46.3
     },
     {
       "epoch": 10,
-      "step": 9247,
+      "step": 12555,
       "dev_chrf++": {
-        "en-nag": 41.73,
-        "nag-en": 34.0
+        "en-nag": 42.17,
+        "nag-en": 35.42
       },
-      "minutes": 36.8
+      "minutes": 51.3
     },
     {
       "epoch": 11,
-      "step": 10173,
+      "step": 13814,
       "dev_chrf++": {
-        "en-nag": 41.2,
-        "nag-en": 34.69
+        "en-nag": 41.98,
+        "nag-en": 35.38
       },
-      "minutes": 40.4
+      "minutes": 56.2
     },
     {
       "epoch": 12,
-      "step": 11095,
+      "step": 15069,
       "dev_chrf++": {
-        "en-nag": 41.0,
-        "nag-en": 34.61
+        "en-nag": 42.04,
+        "nag-en": 35.71
       },
-      "minutes": 43.5
+      "minutes": 61.4
     },
     {
       "epoch": 13,
-      "step": 12021,
+      "step": 16325,
       "dev_chrf++": {
-        "en-nag": 40.51,
-        "nag-en": 34.02
+        "en-nag": 41.62,
+        "nag-en": 36.02
       },
-      "minutes": 46.5
+      "minutes": 66.5
     },
     {
       "epoch": 14,
-      "step": 12944,
+      "step": 17581,
       "dev_chrf++": {
-        "en-nag": 41.42,
-        "nag-en": 35.17
+        "en-nag": 42.66,
+        "nag-en": 35.22
       },
-      "minutes": 49.6
+      "minutes": 71.5
     },
     {
       "epoch": 15,
-      "step": 13468,
+      "step": 18840,
       "dev_chrf++": {
-        "en-nag": 42.2,
-        "nag-en": 33.47
+        "en-nag": 43.04,
+        "nag-en": 35.39
       },
-      "minutes": 161.4
+      "minutes": 76.4
+    },
+    {
+      "epoch": 16,
+      "step": 20095,
+      "dev_chrf++": {
+        "en-nag": 42.47,
+        "nag-en": 35.72
+      },
+      "minutes": 81.4
+    },
+    {
+      "epoch": 17,
+      "step": 21348,
+      "dev_chrf++": {
+        "en-nag": 42.3,
+        "nag-en": 35.81
+      },
+      "minutes": 86.5
+    },
+    {
+      "epoch": 18,
+      "step": 22603,
+      "dev_chrf++": {
+        "en-nag": 42.63,
+        "nag-en": 35.41
+      },
+      "minutes": 91.4
+    },
+    {
+      "epoch": 19,
+      "step": 23856,
+      "dev_chrf++": {
+        "en-nag": 42.59,
+        "nag-en": 35.03
+      },
+      "minutes": 96.3
+    },
+    {
+      "epoch": 20,
+      "step": 25115,
+      "dev_chrf++": {
+        "en-nag": 42.52,
+        "nag-en": 35.36
+      },
+      "minutes": 101.3
+    },
+    {
+      "epoch": 21,
+      "step": 26371,
+      "dev_chrf++": {
+        "en-nag": 42.03,
+        "nag-en": 35.25
+      },
+      "minutes": 106.2
+    },
+    {
+      "epoch": 22,
+      "step": 27387,
+      "dev_chrf++": {
+        "en-nag": 43.14,
+        "nag-en": 35.83
+      },
+      "minutes": 110.3
     }
   ],
-  "trained_at": "2026-10-14T20:44:52+0530",
+  "trained_at": "2026-10-16T04:17:05+0530",
   "license_note": "Learns from NLLB-200 outputs (CC BY-NC 4.0), ISV Nagamese text (CC BY-SA 4.0) and Tatoeba English (CC BY 2.0 FR): non-commercial, share-alike, with attribution.",
   "onnx_int8": {
     "sizes_mb": {
-      "decoder.fp32.onnx": 53.49,
-      "decoder.onnx": 13.61,
-      "encoder.fp32.onnx": 55.36,
-      "encoder.onnx": 14.08,
+      "decoder.fp32.onnx": 100.71,
+      "decoder.onnx": 25.51,
+      "encoder.fp32.onnx": 92.66,
+      "encoder.onnx": 23.43,
       "parity.json": 0.06,
       "spm.model": 0.14,
-      "student_meta.json": 0.0,
       "tokenizer.json": 0.29
     },
     "check": {
       "en-nag": {
-        "dev_chrf++": 43.29,
-        "seconds_per_sentence_cpu": 0.045,
+        "dev_chrf++": 43.21,
+        "seconds_per_sentence_cpu": 0.068,
         "example": [
           "Paul, an apostle of Christ Jesus through the will of God, and Timothy our brother,",
-          "Paul, Jisu Khrista laga itcha pora Jisu Khrista dwara ekjon apostle, aru amikhan laga bhai Timothy,"
+          "Paul, Isor laga itcha pora Jisu Khrista laga apostle, aru bhai Timothy,"
         ]
       },
       "nag-en": {
-        "dev_chrf++": 34.88,
-        "seconds_per_sentence_cpu": 0.04,
+        "dev_chrf++": 36.23,
+        "seconds_per_sentence_cpu": 0.067,
         "example": [
           "Paul, Isor laga itcha dwara Khrista Jisu laga ekjon apostle, aru Timothy amikhan laga bhai,",
-          "Paul, an apostle of Christ through the will of God, and Timothy our brother,"
+          "Paul, an apostle of Christ Jesus by the will of God, and Timothy our brother,"
         ]
       }
     }

@@ -15,6 +15,10 @@ import java.io.File
  */
 class StudentParityTest {
 
+    private companion object {
+        const val OPENING_WORDS = 3
+    }
+
     private val folder = File("src/main/assets/translate")
     private val parityFile = File("src/test/resources/translate/parity.json")
 
@@ -41,6 +45,7 @@ class StudentParityTest {
         assumeTrue("export the student first", parityFile.exists())
         val cases = JSONObject(parityFile.readText()).getJSONArray("translations")
         val mismatches = mutableListOf<String>()
+        val wrongStart = mutableListOf<String>()
         StudentTranslator(
             File(folder, "encoder.onnx").readBytes(),
             File(folder, "decoder.onnx").readBytes(),
@@ -48,17 +53,23 @@ class StudentParityTest {
         ).use { translator ->
             for (i in 0 until cases.length()) {
                 val case = cases.getJSONObject(i)
+                val expected = case.getString("output")
                 val result = translator.translate(case.getString("text"), case.getString("target"))
-                if (result.text != case.getString("output")) {
-                    mismatches.add("${case.getString("text")}\n  python: ${case.getString("output")}\n  kotlin: ${result.text}")
+                if (result.text != expected) {
+                    mismatches.add("${case.getString("text")}\n  python: $expected\n  kotlin: ${result.text}")
                 }
+                val opening = expected.split(" ").take(OPENING_WORDS)
+                if (result.text.split(" ").take(OPENING_WORDS) != opening) wrongStart.add(expected)
             }
         }
         // The JVM test runs desktop ONNX Runtime 1.19 (see app/build.gradle.kts) while the reference
-        // came from 1.31, and their int8 kernels can break a near-tie between two tokens differently.
-        // Wrong token ids or decoding logic would break almost every case, not one in ten.
+        // came from 1.31, and their int8 kernels can break a near-tie between two tokens differently;
+        // once one token differs, a long sentence goes its own way. Wrong token ids or decoding logic
+        // would break the opening of nearly every case instead, so every case must start as Python's
+        // does, and most must match it to the last word.
         mismatches.forEach { println("translation differs:\n$it") }
+        assertEquals("translations that start differently from Python: ${wrongStart.take(3)}", 0, wrongStart.size)
         val matched = cases.length() - mismatches.size
-        assertTrue("only $matched of ${cases.length()} translations match Python", matched >= cases.length() * 0.8)
+        assertTrue("only $matched of ${cases.length()} translations match Python", matched * 2 > cases.length())
     }
 }
