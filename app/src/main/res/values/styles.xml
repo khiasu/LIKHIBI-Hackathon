@@ -142,8 +142,10 @@
 
     <style name="Likhibi.Keyboard.Suggestion">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">46dp</item>
+        <item name="android:layout_height">40dp</item>
         <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
         <item name="android:gravity">center</item>
         <item name="android:ellipsize">end</item>
         <item name="android:maxLines">1</item>
@@ -156,36 +158,31 @@
         <item name="android:soundEffectsEnabled">false</item>
     </style>
 
-    <style name="Likhibi.Keyboard.Tool">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">46dp</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:gravity">center</item>
-        <item name="android:orientation">vertical</item>
+    <style name="Likhibi.Keyboard.StripButton">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:padding">13dp</item>
+        <item name="android:scaleType">fitCenter</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
         <item name="android:soundEffectsEnabled">false</item>
     </style>
 
-    <style name="Likhibi.Keyboard.ToolIcon">
-        <item name="android:layout_width">22dp</item>
-        <item name="android:layout_height">22dp</item>
-        <item name="android:importantForAccessibility">no</item>
-    </style>
-
-    <style name="Likhibi.Keyboard.ToolLabel">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">4dp</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:textSize">11sp</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:importantForAccessibility">no</item>
+    <style name="Likhibi.Keyboard.ToolButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:soundEffectsEnabled">false</item>
     </style>
 
     <style name="Likhibi.Keyboard.Segment">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_height">28dp</item>
         <item name="android:gravity">center</item>
         <item name="android:paddingStart">8dp</item>
         <item name="android:paddingEnd">8dp</item>
@@ -197,7 +194,7 @@
 
     <style name="Likhibi.Keyboard.GhostButton">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_height">36dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:paddingStart">12dp</item>
@@ -222,8 +219,9 @@
     </style>
 
     <style name="Likhibi.Keyboard.OneHandColumn">
-        <item name="android:layout_width">56dp</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">22</item>
         <item name="android:gravity">center</item>
         <item name="android:orientation">vertical</item>
         <item name="android:visibility">gone</item>
@@ -232,9 +230,11 @@
     <style name="Likhibi.Keyboard.OneHandButton">
         <item name="android:layout_width">48dp</item>
         <item name="android:layout_height">48dp</item>
-        <item name="android:layout_marginTop">8dp</item>
-        <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:padding">14dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:padding">12dp</item>
         <item name="android:scaleType">fitCenter</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
     </style>
 </resources>

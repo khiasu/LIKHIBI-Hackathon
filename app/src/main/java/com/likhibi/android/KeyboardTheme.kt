@@ -236,7 +236,7 @@ object KeyboardThemes {
             edit.putString("selected_font", if (oldFont == "sans-serif") FONT_FIGTREE else FONT_SYSTEM)
         }
         if (prefs.contains("haptic_strength") && prefs.getInt("haptic_strength", 10) == 0) {
-            edit.putBoolean("haptic_enabled", false).putInt("haptic_strength", CustomKeyboardView.DEFAULT_HAPTIC_MS)
+            edit.putBoolean("haptic_enabled", false).putInt("haptic_strength", KeyboardSettings.DEFAULT_HAPTIC_MS)
         }
         edit.putInt("settings_schema", 2).apply()
     }
@@ -276,4 +276,50 @@ data class CustomSettings(
             )
         }
     }
+}
+
+/**
+ * CenterCropWallpaperDrawable scales and crops a bitmap to fill the view bounds
+ * without distortion and without reporting intrinsic width/height.
+ */
+class CenterCropWallpaperDrawable(
+    private val bitmap: android.graphics.Bitmap,
+    private val overlayColor: Int,
+) : android.graphics.drawable.Drawable() {
+    private val drawMatrix = android.graphics.Matrix()
+    private val bitmapPaint = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG or android.graphics.Paint.FILTER_BITMAP_FLAG)
+    private val overlayPaint = android.graphics.Paint().apply {
+        color = overlayColor
+        style = android.graphics.Paint.Style.FILL
+    }
+
+    override fun draw(canvas: android.graphics.Canvas) {
+        val w = bounds.width().toFloat()
+        val h = bounds.height().toFloat()
+        if (w <= 0f || h <= 0f || bitmap.isRecycled) return
+        val bw = bitmap.width.toFloat()
+        val bh = bitmap.height.toFloat()
+        val scale = maxOf(w / bw, h / bh)
+        drawMatrix.setScale(scale, scale)
+        drawMatrix.postTranslate(bounds.left + (w - bw * scale) * 0.5f, bounds.top + (h - bh * scale) * 0.5f)
+        canvas.save()
+        canvas.clipRect(bounds)
+        canvas.drawBitmap(bitmap, drawMatrix, bitmapPaint)
+        if (Color.alpha(overlayColor) > 0) canvas.drawRect(bounds, overlayPaint)
+        canvas.restore()
+    }
+
+    override fun setAlpha(alpha: Int) {
+        bitmapPaint.alpha = alpha
+    }
+
+    override fun setColorFilter(colorFilter: android.graphics.ColorFilter?) {
+        bitmapPaint.colorFilter = colorFilter
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun getOpacity(): Int = android.graphics.PixelFormat.TRANSLUCENT
+
+    override fun getIntrinsicWidth(): Int = -1
+    override fun getIntrinsicHeight(): Int = -1
 }

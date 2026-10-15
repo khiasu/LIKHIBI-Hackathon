@@ -47,14 +47,13 @@ class KeyboardPreviewView(context: Context) : ViewGroup(context) {
         val strip = LinearLayout(context).apply {
             orientation = LinearLayout.HORIZONTAL
             gravity = Gravity.CENTER_VERTICAL
-            setPadding(dp(3f), dp(3f), dp(3f), dp(3f))
             setBackgroundColor(theme.strip)
         }
         strip.addView(ImageView(context).apply {
             setImageResource(R.drawable.ic_kb_layout_grid)
             setColorFilter(theme.stripLabel)
-            setPadding(dp(10f), dp(13f), dp(10f), dp(13f))
-        }, LinearLayout.LayoutParams(dp(40f), dp(46f)))
+            setPadding(dp(13f), dp(13f), dp(13f), dp(13f))
+        }, LinearLayout.LayoutParams(dp(48f), dp(48f)))
         listOf("ase", "berabole", "bole").forEachIndexed { i, word ->
             if (i > 0) strip.addView(View(context).apply { setBackgroundColor(theme.keyBorder) }, LinearLayout.LayoutParams(dp(1f), dp(22f)))
             strip.addView(TextView(context).apply {
@@ -63,19 +62,32 @@ class KeyboardPreviewView(context: Context) : ViewGroup(context) {
                 setTextColor(theme.stripLabel)
                 typeface = if (i == 1) fonts.semibold else fonts.regular
                 setTextSize(TypedValue.COMPLEX_UNIT_SP, 16f)
-            }, LinearLayout.LayoutParams(0, dp(46f), 1f))
+            }, LinearLayout.LayoutParams(0, dp(48f), 1f))
         }
-        column.addView(strip, LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, dp(52f)))
-        column.addView(CustomKeyboardView(context).apply {
+        column.addView(strip, LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, dp(48f)))
+        val base = KeyboardSettings.load(context)
+        val (defaultHeight, defaultGap) = KeyboardSettings.heights("normal")
+        column.addView(KeyboardView(context).apply {
             previewMode = true
-            themeOverride = theme
-            fontOverride = figtree
-            keyHeightOverride = keyHeightDp
-            reload()
+            configure(base.copy(
+                theme = theme,
+                figtree = figtree ?: base.figtree,
+                keyHeightDp = keyHeightDp ?: defaultHeight,
+                rowGapDp = if (keyHeightDp == null) defaultGap else KeyboardSettings.heights(heightName(keyHeightDp)).second,
+                numberRow = true,
+                longPressSymbols = false,
+                keyPopup = false,
+            ))
         }, LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
         content = column
         addView(column)
         requestLayout()
+    }
+
+    private fun heightName(keyHeightDp: Float) = when {
+        keyHeightDp < 44f -> "short"
+        keyHeightDp > 48f -> "tall"
+        else -> "normal"
     }
 
     private fun scale(width: Int) = width.toFloat() / virtualWidth

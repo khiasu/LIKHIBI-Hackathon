@@ -141,14 +141,14 @@ class SettingsActivity : AppCompatActivity() {
     private fun refresh() {
         findViewById<TextView>(R.id.text_theme_value).text = KeyboardThemes.NAMES[KeyboardThemes.selectedId(prefs)] ?: ""
         findViewById<Spinner>(R.id.spinner_font).setSelection(if (KeyboardThemes.usesFigtree(prefs)) 0 else 1)
-        seekHaptic.value = prefs.getInt("haptic_strength", CustomKeyboardView.DEFAULT_HAPTIC_MS).coerceIn(1, 50).toFloat()
+        seekHaptic.value = prefs.getInt("haptic_strength", KeyboardSettings.DEFAULT_HAPTIC_MS).coerceIn(1, 50).toFloat()
         seekSoundVolume.value = (prefs.getFloat("sound_volume", 0.5f) * 100).toInt().coerceIn(0, 100).toFloat()
         renderFeedbackLabels()
     }
 
     private fun renderFeedbackLabels() {
         val hapticOn = prefs.getBoolean("haptic_enabled", true)
-        val soundOn = prefs.getBoolean("sound_enabled", CustomKeyboardView.DEFAULT_SOUND_ENABLED)
+        val soundOn = prefs.getBoolean("sound_enabled", KeyboardSettings.DEFAULT_SOUND)
         lblHaptic.text = if (hapticOn) "Vibration strength: ${seekHaptic.value.toInt()}ms" else "Vibration is off. Turn it on in More preferences."
         lblSoundVolume.text = if (soundOn) "Volume: ${seekSoundVolume.value.toInt()}%" else "Sounds are off. Turn them on in More preferences."
         seekHaptic.isEnabled = hapticOn
@@ -158,7 +158,7 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     private fun performHapticClick() {
-        if (prefs.getBoolean("haptic_enabled", true)) triggerTactileSample(prefs.getInt("haptic_strength", CustomKeyboardView.DEFAULT_HAPTIC_MS))
+        if (prefs.getBoolean("haptic_enabled", true)) triggerTactileSample(prefs.getInt("haptic_strength", KeyboardSettings.DEFAULT_HAPTIC_MS))
     }
 
     private fun triggerTactileSample(durationMs: Int) {

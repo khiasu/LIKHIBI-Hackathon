@@ -30,19 +30,21 @@ class PreferencesActivity : AppCompatActivity() {
     private fun render() {
         body.removeAllViews()
         section("Layout", first = true) {
-            switchRow("Number row", null, "show_number_row", true)
-            switchRow("Show emoji switch key", null, "show_emoji_key", false)
+            switchRow("Number row", null, "show_number_row", false)
+            switchRow("Show emoji switch key", null, "show_emoji_key", true)
             choiceRow("Keyboard height", null, "keyboard_height", listOf("short" to "Short", "normal" to "Normal", "tall" to "Tall"), "normal")
             choiceRow("One-handed mode", null, "one_handed_mode", listOf("off" to "Off", "left" to "Left", "right" to "Right"), "off")
         }
         section("Key press") {
-            switchRow("Sound on keypress", null, "sound_enabled", CustomKeyboardView.DEFAULT_SOUND_ENABLED)
+            switchRow("Sound on keypress", null, "sound_enabled", KeyboardSettings.DEFAULT_SOUND)
             switchRow("Vibration on keypress", "Strength: ${strengthName()}", "haptic_enabled", true)
             checkRow("Popup on keypress", "key_popup", true)
             checkRow("Long-press for symbols", "long_press_symbols", true)
         }
         section("Typing") {
             switchRow("Next-word suggestions", null, "next_word_suggestions", true)
+            switchRow("Auto-capitalisation", "Capital letter at the start of a sentence", "auto_capitalise", true)
+            switchRow("Double-space period", "Two spaces type a full stop and a space", "double_space_period", true)
         }
         section("Translate") {
             choiceRow(
@@ -56,7 +58,7 @@ class PreferencesActivity : AppCompatActivity() {
     }
 
     private fun strengthName(): String {
-        val ms = prefs.getInt("haptic_strength", CustomKeyboardView.DEFAULT_HAPTIC_MS)
+        val ms = prefs.getInt("haptic_strength", KeyboardSettings.DEFAULT_HAPTIC_MS)
         return when {
             ms <= 8 -> "light"
             ms <= 20 -> "medium"
