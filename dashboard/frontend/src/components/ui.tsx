@@ -14,14 +14,14 @@ export function cx(...classes: (string | false | null | undefined)[]): string {
   return classes.filter(Boolean).join(" ");
 }
 
-// Buttons: keys from the keyboard ----------------------------------------------
+// Buttons ------------------------------------------------------------------------
 
 type ButtonVariant = "primary" | "secondary" | "ghost" | "danger";
 
 const BUTTON_VARIANTS: Record<ButtonVariant, string> = {
   primary: "keycap-accent disabled:opacity-45",
   secondary: "keycap disabled:opacity-45",
-  ghost: "text-ink-2 hover:bg-sunken hover:text-ink active:bg-key-pressed disabled:opacity-40",
+  ghost: "border border-transparent text-ink-2 hover:bg-sunken hover:text-ink active:bg-key-pressed disabled:opacity-40",
   danger: "keycap text-critical disabled:opacity-45",
 };
 
@@ -47,7 +47,7 @@ export function Button({
       className={cx(
         "inline-flex shrink-0 items-center justify-center gap-2 font-medium whitespace-nowrap select-none",
         "disabled:cursor-not-allowed",
-        size === "sm" ? "h-8 rounded-[10px] px-3 text-[13.5px]" : "h-10 rounded-xl px-4 text-[15px]",
+        size === "sm" ? "h-8 rounded-lg px-2.5 text-[13px]" : "h-9 rounded-lg px-3.5 text-[14px]",
         BUTTON_VARIANTS[variant],
         className,
       )}
@@ -62,7 +62,7 @@ export function Button({
   );
 }
 
-/** A link that looks like a key, for navigation that reads as an action. */
+/** A link styled as a button, for navigation that reads as an action. */
 export function ButtonLink({
   href,
   variant = "secondary",
@@ -78,7 +78,7 @@ export function ButtonLink({
     <a
       href={href}
       className={cx(
-        "inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-xl px-5 text-[15px] font-medium whitespace-nowrap",
+        "inline-flex h-9 shrink-0 items-center justify-center gap-2 rounded-lg px-3.5 text-[14px] font-medium whitespace-nowrap",
         BUTTON_VARIANTS[variant],
       )}
     >
@@ -132,19 +132,19 @@ const TONE_ICON_CLASS: Record<Tone, string> = {
 export function StatusBadge({ tone, label, icon }: { tone: Tone; label: string; icon?: LucideIcon }) {
   const Icon = icon ?? TONE_ICON[tone];
   return (
-    <span className="pill h-7 shrink-0 px-2.5 text-[13px] font-medium whitespace-nowrap text-ink">
+    <span className="inline-flex h-6 shrink-0 items-center gap-1.5 rounded-md bg-sunken px-2 text-[12.5px] font-medium whitespace-nowrap text-ink-2">
       <Icon aria-hidden className={cx("size-3.5", TONE_ICON_CLASS[tone])} strokeWidth={2.4} />
       {label}
     </span>
   );
 }
 
-/** A small key-shaped tag, like the modifier keys. */
+/** A small neutral tag. */
 export function Chip({ children, mono = false }: { children: ReactNode; mono?: boolean }) {
   return (
     <span
       className={cx(
-        "inline-flex h-6 items-center gap-1 rounded-[7px] bg-key-mod px-2 text-[12.5px] font-medium text-ink-2",
+        "inline-flex h-6 items-center gap-1 rounded-md border border-line px-2 text-[12.5px] font-medium text-ink-2",
         mono && "font-mono font-normal",
       )}
     >
@@ -201,18 +201,18 @@ export function PageHeader({
   actions?: ReactNode;
 }) {
   return (
-    <header className="reveal mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+    <header className="reveal mb-7 flex flex-col gap-4 border-b border-line pb-6 sm:flex-row sm:items-end sm:justify-between">
       <div className="max-w-2xl">
-        {eyebrow && <p className="label-caps mb-2">{eyebrow}</p>}
-        <h1 className="text-[28px] leading-tight font-bold tracking-[-0.01em] text-ink sm:text-[30px]">{title}</h1>
-        {description && <p className="mt-2 text-[15.5px] leading-relaxed text-ink-2">{description}</p>}
+        {eyebrow && <p className="mb-1 text-[13px] font-medium text-muted">{eyebrow}</p>}
+        <h1 className="text-[24px] leading-tight font-semibold tracking-[-0.015em] text-ink">{title}</h1>
+        {description && <p className="mt-1.5 text-[14.5px] leading-relaxed text-muted">{description}</p>}
       </div>
       {actions && <div className="flex shrink-0 flex-wrap gap-2">{actions}</div>}
     </header>
   );
 }
 
-/** A settings-screen section: the red caps label, an optional line of context, then the card. */
+/** A section title, an optional line of context, then its content. */
 export function SectionHeading({
   title,
   description,
@@ -225,8 +225,8 @@ export function SectionHeading({
   return (
     <div className="mb-3 flex flex-col gap-2 px-1 sm:flex-row sm:items-end sm:justify-between">
       <div>
-        <h2 className="label-caps">{title}</h2>
-        {description && <p className="mt-1 max-w-2xl text-[14px] leading-relaxed text-ink-2">{description}</p>}
+        <h2 className="text-[15px] font-semibold text-ink">{title}</h2>
+        {description && <p className="mt-0.5 max-w-2xl text-[13.5px] leading-relaxed text-muted">{description}</p>}
       </div>
       {actions && <div className="flex shrink-0 gap-2">{actions}</div>}
     </div>
@@ -247,11 +247,11 @@ export function StatTile({
   return (
     <div className="card flex flex-col gap-1 p-4">
       <div className="flex items-center justify-between gap-2">
-        <span className="text-[13.5px] font-medium text-ink-2">{label}</span>
+        <span className="text-[13px] font-medium text-muted">{label}</span>
         {tone && tone !== "neutral" && <StatusIcon tone={tone} />}
       </div>
-      <span className="text-[28px] leading-tight font-bold tracking-[-0.01em] text-ink tabular-nums">{value}</span>
-      {context && <span className="text-[13px] leading-snug break-words text-muted">{context}</span>}
+      <span className="mt-1 text-[26px] leading-tight font-semibold tracking-[-0.02em] text-ink tabular-nums">{value}</span>
+      {context && <span className="text-[12.5px] leading-snug break-words text-muted">{context}</span>}
     </div>
   );
 }
@@ -274,11 +274,11 @@ export function EmptyState({
 }) {
   return (
     <div className="card flex flex-col items-start gap-3 p-6 sm:p-8">
-      <span className="grid size-11 place-items-center rounded-xl bg-accent-soft text-accent-text">
+      <span className="grid size-10 place-items-center rounded-lg border border-line bg-sunken text-ink-2">
         <Icon aria-hidden className="size-5" />
       </span>
-      <h3 className="text-[18px] leading-snug font-semibold text-ink">{title}</h3>
-      {children && <div className="max-w-xl space-y-2 text-[15px] leading-relaxed text-ink-2">{children}</div>}
+      <h3 className="text-[16px] leading-snug font-semibold text-ink">{title}</h3>
+      {children && <div className="max-w-xl space-y-2 text-[14.5px] leading-relaxed text-muted">{children}</div>}
       {actions && <div className="mt-1 flex flex-wrap gap-2">{actions}</div>}
     </div>
   );
@@ -288,12 +288,12 @@ export function InlineAlert({ tone, title, children }: { tone: Tone; title: stri
   return (
     <div
       role={tone === "critical" ? "alert" : "status"}
-      className="flex gap-3 rounded-xl border border-line bg-surface p-4"
+      className="flex gap-3 rounded-lg border border-line bg-surface-2 p-3.5"
     >
       <span className="mt-0.5">
         <StatusIcon tone={tone} />
       </span>
-      <div className="min-w-0 text-[14.5px] leading-relaxed">
+      <div className="min-w-0 text-[14px] leading-relaxed">
         <p className="font-medium text-ink">{title}</p>
         {children && <div className="mt-0.5 text-ink-2">{children}</div>}
       </div>
@@ -303,7 +303,7 @@ export function InlineAlert({ tone, title, children }: { tone: Tone; title: stri
 
 export function CodeBlock({ code, label }: { code: string; label?: string }) {
   return (
-    <div className="overflow-hidden rounded-xl bg-sunken">
+    <div className="overflow-hidden rounded-lg border border-line bg-sunken">
       <div className="flex items-center justify-between border-b border-line px-3 py-1.5">
         <span className="text-[12px] font-medium text-muted">{label ?? "Code"}</span>
         <CopyButton text={code} />

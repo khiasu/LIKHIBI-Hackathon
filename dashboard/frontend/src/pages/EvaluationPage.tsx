@@ -28,9 +28,8 @@ export function EvaluationPage() {
   return (
     <div>
       <PageHeader
-        eyebrow="Under the hood"
         title="Evaluation"
-        description="Runs recorded by the evaluation harness. chrF++ is the headline metric because it scores characters, which suits unstandardised Nagamese spelling. BLEU is shown for comparison with published work."
+        description="Scores on held-out text. chrF++ leads because it suits Nagamese's varied spelling; BLEU is shown for comparison."
         actions={
           <Button icon={RefreshCw} loading={runs.loading && !!runs.data} onClick={() => void runs.reload()}>
             Refresh

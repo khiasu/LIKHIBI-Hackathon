@@ -1,50 +1,12 @@
-import { Archive, ArrowRight, HeartHandshake, Keyboard, Languages, type LucideIcon } from "lucide-react";
+import { ArrowRight, ClipboardCheck, HeartHandshake, Languages } from "lucide-react";
 import { useApp } from "../components/AppContext";
-import { ButtonLink, SectionHeading, Skeleton, StatTile } from "../components/ui";
+import { ButtonLink, PageHeader, Skeleton, StatTile, StatusIcon, type Tone } from "../components/ui";
 import { api } from "../lib/api";
 import { fmt } from "../lib/format";
 import { href, useAsync } from "../lib/hooks";
+import type { EngineState } from "../lib/types";
 
-const STEPS: { icon: LucideIcon; title: string; text: string; link?: { label: string; to: Parameters<typeof href>[0] } }[] = [
-  {
-    icon: Keyboard,
-    title: "Type",
-    text: "An Android keyboard that completes and predicts Nagamese words on the phone itself, with no internet: a word tree for completions, word-sequence statistics for the next word.",
-  },
-  {
-    icon: Languages,
-    title: "Translate",
-    text: "Stored human translations answer first. New sentences go to an AI model shown the most similar human examples, or to our own model, which runs offline.",
-    link: { label: "Try it", to: "translate" },
-  },
-  {
-    icon: HeartHandshake,
-    title: "Teach",
-    text: "Speakers fix wrong translations and give words their meanings. A reviewer approves each one, and the translator uses it on the very next request.",
-    link: { label: "Contribute", to: "contribute" },
-  },
-  {
-    icon: Archive,
-    title: "Keep",
-    text: "What people add is published openly under CC BY-SA 4.0, credited to them if they wish, and removed if they ask. It stays a commons.",
-    link: { label: "Where the data comes from", to: "data" },
-  },
-];
-
-const PEOPLE: { title: string; text: string }[] = [
-  {
-    title: "Who contributes",
-    text: "Nagamese speakers: elders who know older words, young people who know how it is typed today, teachers and translators.",
-  },
-  {
-    title: "Who benefits",
-    text: "Everyone who writes or learns Nagamese, and the teachers and researchers who get an open dataset instead of starting from nothing.",
-  },
-  {
-    title: "Who decides",
-    text: "Reviewers approve every addition before it is used. Contributors choose whether to be credited, and can withdraw what they gave.",
-  },
-];
+const ENGINE_TONE: Record<EngineState, Tone> = { ready: "good", not_configured: "warning", error: "critical" };
 
 export function HomePage() {
   const { engines } = useApp();
@@ -56,104 +18,120 @@ export function HomePage() {
   const pairs = data ? data.parallel.reduce((sum, file) => sum + file.english_real, 0) + data.community.approved_pairs : null;
   const realEngines = engines?.engines.filter((engine) => engine.kind !== "mock") ?? [];
   const ready = realEngines.filter((engine) => engine.state === "ready");
+  const pending = community.data?.pending ?? 0;
 
   return (
     <div>
-      <header className="reveal flex flex-col items-center pt-2 pb-12 text-center sm:pt-6">
-        <img src="/brand/likhibi-mark-512.png" alt="Likhibi logo" width={112} height={112} className="size-28" />
-        <h1 className="mt-5 text-[40px] leading-none font-bold tracking-[-0.02em] text-accent-text">Likhibi</h1>
-        <p className="mt-3 max-w-xl text-[17px] leading-relaxed text-ink-2">
-          A keyboard, a translator and an open word-bank for Nagamese, built with the people who speak it.
-        </p>
-        <div className="mt-7 flex flex-wrap justify-center gap-3">
-          <ButtonLink href={href("translate")} variant="primary" icon={Languages}>
-            Translate
-          </ButtonLink>
-          <ButtonLink href={href("contribute")} icon={HeartHandshake}>
-            Contribute a word
-          </ButtonLink>
-        </div>
-      </header>
+      <PageHeader
+        title="Overview"
+        description="The Likhibi keyboard, translator and open word-bank for Nagamese."
+        actions={
+          <>
+            <ButtonLink href={href("contribute")} icon={HeartHandshake}>
+              Contribute
+            </ButtonLink>
+            <ButtonLink href={href("translate")} variant="primary" icon={Languages}>
+              Translate
+            </ButtonLink>
+          </>
+        }
+      />
 
-      <section className="reveal mb-12" style={{ animationDelay: "60ms" }} aria-label="Likhibi in numbers">
-        <SectionHeading title="Right now" />
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {pairs === null ? (
-            <Skeleton className="h-[118px] rounded-2xl" />
-          ) : (
-            <StatTile
-              label="Sentence pairs"
-              value={fmt(pairs)}
-              context="Bible verses aligned with English, plus approved community pairs"
-            />
-          )}
-          {data && words.data ? (
-            <StatTile
-              label="Words listed"
-              value={fmt(data.lexicon.entries)}
-              context={`${fmt(words.data.remaining)} still need an English meaning`}
-            />
-          ) : (
-            <Skeleton className="h-[118px] rounded-2xl" />
-          )}
+      <section aria-label="Likhibi in numbers" className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {pairs === null ? (
+          <Skeleton className="h-[108px] rounded-xl" />
+        ) : (
+          <StatTile label="Sentence pairs" value={fmt(pairs)} context="Aligned English–Nagamese, with approved corrections" />
+        )}
+        {data && words.data ? (
+          <StatTile label="Words in the lexicon" value={fmt(data.lexicon.entries)} context={`${fmt(words.data.remaining)} still need a meaning`} />
+        ) : (
+          <Skeleton className="h-[108px] rounded-xl" />
+        )}
+        {community.data ? (
+          <StatTile
+            label="Approved contributions"
+            value={fmt(community.data.approved_pairs)}
+            context={`${fmt(community.data.contributors)} credited contributors`}
+          />
+        ) : (
+          <Skeleton className="h-[108px] rounded-xl" />
+        )}
+        {engines ? (
+          <StatTile label="Engines ready" value={`${ready.length} / ${realEngines.length}`} context="Translation memory, LLM and NMT" />
+        ) : (
+          <Skeleton className="h-[108px] rounded-xl" />
+        )}
+      </section>
+
+      <div className="mt-6 grid gap-4 lg:grid-cols-[1.1fr_1fr]">
+        <section className="card flex flex-col p-5" aria-labelledby="queue-title">
+          <div className="flex items-center gap-2">
+            <ClipboardCheck aria-hidden className="size-4 text-muted" />
+            <h2 id="queue-title" className="text-[15px] font-semibold text-ink">Review queue</h2>
+          </div>
           {community.data ? (
-            <StatTile
-              label="Community additions"
-              value={fmt(community.data.approved_pairs)}
-              context={`${fmt(community.data.pending)} waiting for review · ${fmt(community.data.contributors)} credited contributors`}
-            />
-          ) : (
-            <Skeleton className="h-[118px] rounded-2xl" />
-          )}
-          {engines ? (
-            <StatTile
-              label="Translation engines"
-              value={`${ready.length} of ${realEngines.length}`}
-              context={ready.length ? `Ready: ${ready.map((engine) => engine.name).join(", ")}` : "None ready yet"}
-            />
-          ) : (
-            <Skeleton className="h-[118px] rounded-2xl" />
-          )}
-        </div>
-      </section>
-
-      <section className="reveal mb-12" style={{ animationDelay: "120ms" }}>
-        <SectionHeading title="How it works" />
-        <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {STEPS.map(({ icon: Icon, title, text, link }, index) => (
-            <li key={title} className="card flex flex-col gap-3 p-5">
-              <div className="flex items-center gap-3">
-                <span className="grid size-10 place-items-center rounded-xl bg-accent-soft text-accent-text">
-                  <Icon aria-hidden className="size-5" />
-                </span>
-                <span className="text-[13px] font-medium text-faint tabular-nums">{index + 1}</span>
+            <>
+              <p className="mt-4 text-[32px] leading-none font-semibold tracking-[-0.02em] text-ink tabular-nums">{fmt(pending)}</p>
+              <p className="mt-1.5 text-[13.5px] text-muted">
+                {pending === 0
+                  ? "Nothing waiting. New corrections from the dashboard and the keyboard appear here."
+                  : `${pending === 1 ? "contribution is" : "contributions are"} waiting for a verified reviewer.`}
+              </p>
+              <div className="mt-auto pt-5">
+                <ButtonLink href={href("review")} variant={pending > 0 ? "primary" : "secondary"}>
+                  {pending > 0 ? "Start reviewing" : "Open review"}
+                </ButtonLink>
               </div>
-              <h3 className="text-[17px] font-semibold text-ink">{title}</h3>
-              <p className="text-[14.5px] leading-relaxed text-ink-2">{text}</p>
-              {link && (
-                <a
-                  href={href(link.to)}
-                  className="mt-auto inline-flex items-center gap-1.5 pt-1 text-[14px] font-medium text-accent-text underline-offset-2 hover:underline"
-                >
-                  {link.label}
-                  <ArrowRight aria-hidden className="size-3.5" />
-                </a>
-              )}
-            </li>
-          ))}
-        </ol>
-      </section>
+            </>
+          ) : (
+            <Skeleton className="mt-4 h-20" />
+          )}
+        </section>
 
-      <section className="reveal" style={{ animationDelay: "180ms" }}>
-        <SectionHeading title="Who takes part" />
-        <ul className="card divide-y divide-line">
-          {PEOPLE.map(({ title, text }) => (
-            <li key={title} className="grid gap-1 px-5 py-4 sm:grid-cols-[200px_1fr] sm:gap-6">
-              <p className="text-[16px] font-medium text-ink">{title}</p>
-              <p className="text-[14.5px] leading-relaxed text-ink-2">{text}</p>
-            </li>
-          ))}
-        </ul>
+        <section className="card p-5" aria-labelledby="engines-title">
+          <div className="flex items-center justify-between gap-2">
+            <h2 id="engines-title" className="text-[15px] font-semibold text-ink">Translation engines</h2>
+            <a href={href("engines")} className="inline-flex items-center gap-1 text-[13px] font-medium text-muted hover:text-ink">
+              Manage <ArrowRight aria-hidden className="size-3.5" />
+            </a>
+          </div>
+          {!engines && <Skeleton className="mt-4 h-24" />}
+          {engines && (
+            <ul className="mt-3 divide-y divide-line">
+              {realEngines.map((engine) => (
+                <li key={engine.id} className="flex items-start gap-3 py-3 first:pt-1 last:pb-0">
+                  <span className="mt-0.5">
+                    <StatusIcon tone={ENGINE_TONE[engine.state]} />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-[14px] font-medium text-ink">{engine.name}</p>
+                    {engine.status_message && <p className="truncate text-[12.5px] text-muted">{engine.status_message}</p>}
+                  </div>
+                  <span className="ml-auto shrink-0 text-[12px] text-faint">{engine.offline ? "Offline" : "Online"}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      </div>
+
+      <section className="mt-6 grid gap-x-8 gap-y-3 border-t border-line pt-6 text-[13.5px] leading-relaxed text-muted sm:grid-cols-3" aria-label="About Likhibi">
+        <p>
+          <span className="font-medium text-ink">Type.</span> The Android keyboard completes and predicts Nagamese on the phone,
+          and translates offline.
+        </p>
+        <p>
+          <span className="font-medium text-ink">Teach.</span> Speakers correct translations; verified reviewers approve them,
+          and the models learn from what is approved.
+        </p>
+        <p>
+          <span className="font-medium text-ink">Keep.</span> Contributions are published under CC BY-SA 4.0, credited if the
+          contributor wishes, and removed on request.{" "}
+          <a href={href("data")} className="font-medium text-ink-2 underline underline-offset-2 hover:text-ink">
+            Data sources
+          </a>
+        </p>
       </section>
     </div>
   );

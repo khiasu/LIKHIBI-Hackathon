@@ -82,9 +82,8 @@ export function ContributionsPage() {
   return (
     <div>
       <PageHeader
-        eyebrow="Community"
         title="Review contributions"
-        description="Verified reviewers approve what speakers send, from this dashboard and the Likhibi keyboard, before the translator uses it. Every approved pair is human-verified, published under CC BY-SA 4.0, credited to its contributor, and teaches the model. Remove anything whose author withdraws it."
+        description="Approve or reject corrections from the dashboard and the keyboard. Approved pairs are credited, shared under CC BY-SA 4.0, and teach the models."
         actions={
           <>
             <Button icon={RefreshCw} onClick={() => void feedback.reload()} loading={feedback.loading && !!feedback.data}>

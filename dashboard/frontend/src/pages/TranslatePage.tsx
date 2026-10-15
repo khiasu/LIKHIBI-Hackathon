@@ -131,7 +131,7 @@ export function TranslatePage() {
     <div>
       <PageHeader
         title="Translate"
-        description="English and Nagamese, both ways. Every answer names the engine that produced it and shows the human translations it leaned on, so a speaker can judge it quickly."
+        description="English and Nagamese, both ways. Each answer shows which engine produced it."
       />
 
       {/* Controls */}

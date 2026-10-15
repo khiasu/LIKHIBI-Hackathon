@@ -15,9 +15,8 @@ export function ContributePage() {
   return (
     <div>
       <PageHeader
-        eyebrow="Community"
         title="Teach Likhibi"
-        description="Add a phrase, or give a word its meaning. A reviewer checks each one. Once approved, the translator uses it straight away, and it joins the open Nagamese dataset."
+        description="Add a phrase or give a word its meaning. Approved contributions improve the translator."
       />
 
       <section className="reveal mb-8" aria-label="Sharing terms">

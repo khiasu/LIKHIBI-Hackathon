@@ -54,9 +54,8 @@ export function EnginesPage() {
   return (
     <div>
       <PageHeader
-        eyebrow="Under the hood"
         title="Translation engines"
-        description="Every engine implements one contract, so the dashboard, the evaluation harness and later the keyboard can use any of them. Auto mode tries the default engine first and falls back to the next ready one."
+        description="Status and settings for each engine. Auto mode tries the default first, then the next ready one."
         actions={
           <Button icon={RefreshCw} onClick={() => void refreshEngines()}>
             Refresh

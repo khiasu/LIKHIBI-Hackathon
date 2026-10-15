@@ -27,9 +27,8 @@ export function DataPage() {
   return (
     <div>
       <PageHeader
-        eyebrow="Under the hood"
         title="Language data"
-        description="Where every sentence and word comes from, who may use it, and what is still missing. The numbers are measured from the files in datasets/ each time this page loads."
+        description="Where every sentence and word comes from, its licence, and what is still missing."
         actions={
           <Button
             icon={RefreshCw}

@@ -41,6 +41,11 @@ SYNTHETIC_DIR = DEFAULT_DATASETS_DIR / "processed" / "synthetic"
 SELECTED = SYNTHETIC_DIR / "tatoeba_en_selected.tsv"
 TEACHER_OUTPUT = SYNTHETIC_DIR / "tatoeba_en_nag_teacher.tsv"
 BIBLE_KD = SYNTHETIC_DIR / "bible_kd.tsv"  # the teacher's translations of the training verses, both ways
+# The Old Testament has no Nagamese translation, so its English (World English Bible, public
+# domain) is in-domain text the teacher can translate: Bible-register pairs the student would
+# otherwise never see, and real Bible English for the Nagamese-to-English direction.
+OT_USFM = DEFAULT_DATASETS_DIR / "raw" / "monolingual" / "english_web_ot_usfm"
+OT_TEACHER = SYNTHETIC_DIR / "bible_ot_en_nag_teacher.tsv"
 STUDENT_DIR = REPO_ROOT / "models" / "student"
 
 # Everyday sentences only: plain ASCII text without digits, 3 to 14 words.
@@ -158,6 +163,49 @@ def generate(beams: int, batch_size: int, block: int, limit: int | None, min_bat
     return 0
 
 
+def generate_ot(beams: int, batch_size: int, block: int, min_battery: int) -> int:
+    """The teacher translates the Old Testament's English verses into Nagamese. Safe to stop and rerun."""
+    from ..corpus.usfm import read_usfm_dir
+    from .train_nmt import keep_awake, power_status, translate
+
+    rows: list[tuple[str, str]] = []
+    for book, verses in read_usfm_dir(OT_USFM).items():
+        for index, verse in enumerate(verses):
+            text = clean(verse.text)
+            if len(text.split()) >= 3 and len(text) <= 600:
+                rows.append((f"{book}.{index}", text))
+    done: set[str] = set()
+    if OT_TEACHER.is_file():
+        done = {row["id"] for row in _read_tsv(OT_TEACHER)}
+    todo = sorted((row for row in rows if row[0] not in done), key=lambda row: len(row[1]))
+    if not todo:
+        print(f"Nothing to do: {len(done):,} verses already translated in {OT_TEACHER}")
+        return 0
+    keep_awake()
+    model, tokenizer, device = load_teacher()
+    print(f"Teacher loaded. {len(done):,} done, {len(todo):,} Old Testament verses to go", flush=True)
+    SYNTHETIC_DIR.mkdir(parents=True, exist_ok=True)
+    new_file = not OT_TEACHER.is_file()
+    started, finished = time.time(), 0
+    with OT_TEACHER.open("a", encoding="utf-8", newline="") as handle:
+        if new_file:
+            handle.write("id\tenglish\tnagamese\n")
+        for start in range(0, len(todo), block):
+            on_mains, percent = power_status()
+            if not on_mains and percent is not None and percent < min_battery:
+                print(f"Stopped: on battery at {percent}%. Plug in and rerun to continue.", flush=True)
+                return 1
+            chunk = todo[start : start + block]
+            outputs = translate(model, tokenizer, [text for _, text in chunk], "en", "nag", device, batch_size, beams)
+            for (verse_id, english), nagamese in zip(chunk, outputs):
+                handle.write(f"{verse_id}\t{_cell(english)}\t{_cell(nagamese)}\n")
+            handle.flush()
+            finished += len(chunk)
+            rate = finished / (time.time() - started)
+            print(f"  {len(done) + finished:,} verses, {rate:.1f}/s, about {(len(todo) - finished) / rate / 60:.0f} min left", flush=True)
+    return 0
+
+
 def generate_bible_kd(beams: int, batch_size: int) -> int:
     """The teacher translates every training verse both ways (sequence-level distillation).
 
@@ -224,7 +272,9 @@ def training_pairs() -> tuple[list[tuple[str, str]], list[tuple[str, str]]]:
     real = [(clean(e.english), clean(e.nagamese)) for e in load_examples(DEFAULT_DATASETS_DIR)]
     synthetic = [
         (clean(row["english"]), clean(row["nagamese"]))
-        for row in _read_tsv(TEACHER_OUTPUT)
+        for path in (TEACHER_OUTPUT, OT_TEACHER)
+        if path.is_file()
+        for row in _read_tsv(path)
         if _plausible(row["english"], row["nagamese"])
     ]
     return real, synthetic
@@ -461,6 +511,11 @@ def main(argv: list[str] | None = None) -> int:
     tr.add_argument("--ffn", type=int, default=1024)
     tr.add_argument("--decoder-layers", type=int, default=3)
     tr.add_argument("--kd", action="store_true", help="also train on the teacher's translations of the training verses")
+    ot = commands.add_parser("generate-ot", help="translate the Old Testament's English with the teacher")
+    ot.add_argument("--beams", type=int, default=2)
+    ot.add_argument("--batch-size", type=int, default=48)
+    ot.add_argument("--block", type=int, default=1024)
+    ot.add_argument("--min-battery", type=int, default=35)
     kd = commands.add_parser("kd", help="the teacher translates the training verses both ways")
     kd.add_argument("--beams", type=int, default=2)
     kd.add_argument("--batch-size", type=int, default=48)
@@ -470,6 +525,8 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if args.command == "generate":
         return generate(args.beams, args.batch_size, args.block, args.limit, args.min_battery)
+    if args.command == "generate-ot":
+        return generate_ot(args.beams, args.batch_size, args.block, args.min_battery)
     if args.command == "train":
         return train_student(args.minutes, args.max_tokens, args.lr, args.warmup, args.real_weight, args.vocab_size,
                              args.seed, args.d_model, args.ffn, args.decoder_layers, args.kd)

@@ -31,22 +31,13 @@ const NAV_HOOD: NavItem[] = [
   { route: "evaluation", label: "Evaluation", icon: ChartColumn },
 ];
 
-/** The keyboard's settings header: the launcher icon, then "Likhibi" in Naga red. */
-function Brand({ compact = false }: { compact?: boolean }) {
+function Brand() {
   return (
-    <a href={href("home")} className="flex min-w-0 items-center gap-3 rounded-xl">
-      <img
-        src="/brand/likhibi-mark-160.png"
-        alt=""
-        width={compact ? 36 : 44}
-        height={compact ? 36 : 44}
-        className={cx("shrink-0", compact ? "size-9" : "size-11")}
-      />
+    <a href={href("home")} className="flex min-w-0 items-center gap-2.5 rounded-lg">
+      <img src="/brand/likhibi-mark-160.png" alt="" width={30} height={30} className="size-[30px] shrink-0 rounded-md" />
       <span className="min-w-0 leading-tight">
-        <span className={cx("block font-bold tracking-[-0.01em] text-accent-text", compact ? "text-[20px]" : "text-[22px]")}>
-          Likhibi
-        </span>
-        {!compact && <span className="block text-[12.5px] text-muted">Nagamese keyboard &amp; translator</span>}
+        <span className="block text-[15px] font-semibold tracking-[-0.01em] text-ink">Likhibi</span>
+        <span className="block text-[12px] text-muted">Nagamese</span>
       </span>
     </a>
   );
@@ -73,7 +64,7 @@ function EngineStatusPill() {
     }
   }
   return (
-    <a href={href("engines")} className="pill h-9 px-3 text-[13.5px] font-medium text-ink">
+    <a href={href("engines")} className="flex h-8 items-center gap-2 rounded-lg px-2 text-[13px] text-ink-2 hover:bg-sunken hover:text-ink">
       <StatusIcon tone={tone} />
       {label}
     </a>
@@ -88,7 +79,7 @@ function ThemeSwitch() {
     { value: "dark", label: "Dark theme", icon: Moon },
   ];
   return (
-    <div role="radiogroup" aria-label="Colour theme" className="inline-flex gap-0.5 rounded-xl bg-key-mod p-0.5">
+    <div role="radiogroup" aria-label="Colour theme" className="inline-flex gap-0.5 rounded-lg border border-line bg-sunken p-0.5">
       {options.map(({ value, label, icon: Icon }) => (
         <button
           key={value}
@@ -98,11 +89,11 @@ function ThemeSwitch() {
           title={label}
           onClick={() => setTheme(value)}
           className={cx(
-            "grid size-8 place-items-center rounded-[10px] transition-colors",
-            theme === value ? "keycap text-ink" : "text-muted hover:text-ink",
+            "grid size-7 place-items-center rounded-md transition-colors",
+            theme === value ? "bg-surface text-ink shadow-[var(--shadow)]" : "text-muted hover:text-ink",
           )}
         >
-          <Icon aria-hidden className="size-4" />
+          <Icon aria-hidden className="size-3.5" />
         </button>
       ))}
     </div>
@@ -116,13 +107,13 @@ function SideLink({ item, active }: { item: NavItem; active: boolean }) {
       href={href(route)}
       aria-current={active ? "page" : undefined}
       className={cx(
-        "group flex h-10 items-center gap-3 rounded-xl px-3 text-[15px] font-medium transition-colors",
-        active ? "keycap text-ink" : "text-ink-2 hover:bg-sunken hover:text-ink",
+        "group flex h-9 items-center gap-2.5 rounded-lg px-2.5 text-[14px] font-medium transition-colors",
+        active ? "bg-sunken text-ink" : "text-ink-2 hover:bg-sunken/70 hover:text-ink",
       )}
     >
       <Icon
         aria-hidden
-        className={cx("size-[18px]", active ? "text-accent-text" : "text-muted group-hover:text-ink-2")}
+        className={cx("size-4", active ? "text-ink" : "text-muted group-hover:text-ink-2")}
         strokeWidth={2}
       />
       {label}
@@ -133,34 +124,34 @@ function SideLink({ item, active }: { item: NavItem; active: boolean }) {
 export function Layout({ route, children }: { route: Route; children: ReactNode }) {
   const { meta } = useApp();
   return (
-    <div className="min-h-dvh lg:grid lg:grid-cols-[264px_1fr]">
+    <div className="min-h-dvh lg:grid lg:grid-cols-[232px_1fr]">
       {/* Desktop sidebar */}
-      <aside className="sticky top-0 hidden h-dvh flex-col border-r border-line lg:flex">
-        <div className="px-5 pt-7 pb-8">
+      <aside className="sticky top-0 hidden h-dvh flex-col border-r border-line bg-surface lg:flex">
+        <div className="flex h-16 items-center px-4">
           <Brand />
         </div>
-        <nav aria-label="Main" className="flex flex-col gap-1 px-3">
+        <nav aria-label="Main" className="flex flex-col gap-0.5 px-2.5 pt-2">
           {NAV_MAIN.map((item) => (
             <SideLink key={item.route} item={item} active={route === item.route} />
           ))}
-          <p className="label-caps mt-6 mb-1 px-3">Under the hood</p>
+          <p className="mt-5 mb-1 px-2.5 text-[12px] font-medium text-faint">Data and models</p>
           {NAV_HOOD.map((item) => (
             <SideLink key={item.route} item={item} active={route === item.route} />
           ))}
         </nav>
-        <div className="mt-auto flex flex-col gap-3 px-5 pb-6">
+        <div className="mt-auto flex flex-col gap-2 border-t border-line px-2.5 py-3">
           <EngineStatusPill />
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between px-2">
             <ThemeSwitch />
-            {meta && <span className="font-mono text-[12px] text-faint">v{meta.app_version}</span>}
+            {meta && <span className="font-mono text-[11.5px] text-faint">v{meta.app_version}</span>}
           </div>
         </div>
       </aside>
 
       {/* Mobile: the brand, then the pages as a suggestion strip */}
-      <div className="sticky top-0 z-20 border-b border-line bg-bg/95 backdrop-blur lg:hidden">
+      <div className="sticky top-0 z-20 border-b border-line bg-surface lg:hidden">
         <div className="flex items-center justify-between gap-3 px-4 pt-3 pb-2">
-          <Brand compact />
+          <Brand />
           <ThemeSwitch />
         </div>
         <nav aria-label="Main" className="flex gap-1.5 overflow-x-auto px-4 pb-3 [scrollbar-width:none]">
@@ -169,16 +160,19 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
               key={target}
               href={href(target)}
               aria-current={route === target ? "page" : undefined}
-              className={cx("pill h-9 shrink-0 px-3.5 text-[14px] font-medium", route === target && "pill-accent")}
+              className={cx(
+                "inline-flex h-8 shrink-0 items-center gap-1.5 rounded-lg px-3 text-[13.5px] font-medium",
+                route === target ? "bg-sunken text-ink" : "text-ink-2",
+              )}
             >
-              <Icon aria-hidden className={cx("size-4", route === target ? "text-accent-text" : "text-muted")} />
+              <Icon aria-hidden className={cx("size-4", route === target ? "text-ink" : "text-muted")} />
               {label}
             </a>
           ))}
         </nav>
       </div>
 
-      <main className="mx-auto w-full max-w-[1120px] px-4 py-8 sm:px-8 lg:px-12 lg:py-12">{children}</main>
+      <main className="mx-auto w-full max-w-[1080px] px-4 py-6 sm:px-8 lg:px-10 lg:py-9">{children}</main>
     </div>
   );
 }
