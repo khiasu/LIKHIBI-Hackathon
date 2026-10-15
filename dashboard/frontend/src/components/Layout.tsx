@@ -172,7 +172,7 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
         </nav>
       </div>
 
-      <main className="w-full max-w-[1480px] px-4 py-5 sm:px-6 lg:px-8 lg:py-7">{children}</main>
+      <main className="mx-auto w-full max-w-[1600px] px-4 py-5 sm:px-6 lg:px-8 lg:py-7">{children}</main>
     </div>
   );
 }
