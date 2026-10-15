@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import shutil
 import sqlite3
 import subprocess
@@ -107,6 +108,9 @@ def main() -> int:
     shutil.rmtree(candidate, ignore_errors=True)
     fresh = not (ADAPTER / "adapter_config.json").is_file()
     command = [sys.executable, "-m", "nlp_research.translation.train_nmt", "--output", str(candidate), "--min-battery", "0"]
+    # The same base model the dashboard's NMT engine uses, so it is not downloaded twice.
+    if os.environ.get("LIKHIBI_NMT_BASE_MODEL"):
+        command += ["--base-model", os.environ["LIKHIBI_NMT_BASE_MODEL"]]
     if fresh:
         command += ["--epochs", "3", "--skip-baseline"]
     else:
