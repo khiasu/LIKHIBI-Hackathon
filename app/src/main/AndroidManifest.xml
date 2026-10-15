@@ -21,6 +21,24 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="com.likhibi.android.ThemeGalleryActivity"
+            android:exported="false"
+            android:label="Themes"
+            android:parentActivityName="com.likhibi.android.SettingsActivity" />
+
+        <activity
+            android:name="com.likhibi.android.ThemeEditorActivity"
+            android:exported="false"
+            android:label="Edit theme"
+            android:parentActivityName="com.likhibi.android.ThemeGalleryActivity" />
+
+        <activity
+            android:name="com.likhibi.android.PreferencesActivity"
+            android:exported="false"
+            android:label="Preferences"
+            android:parentActivityName="com.likhibi.android.SettingsActivity" />
+
         <service
             android:name="com.likhibi.android.LikhibiImeService"
             android:exported="true"

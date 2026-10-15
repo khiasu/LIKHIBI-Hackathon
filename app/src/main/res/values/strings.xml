@@ -31,6 +31,6 @@
     <string name="translate_privacy_note">Typing and offline translation never leave this phone. With the server on, only the sentence you choose to translate is sent to the address above.</string>
     <string name="row_clear_clipboard">Clear Clipboard History</string>
 
-    <string name="custom_pick_wallpaper">Choose photo</string>
-    <string name="custom_accent">Accent colour</string>
+    <string name="row_more_preferences">More preferences</string>
+    <string name="row_more_preferences_desc">Layout, key press, typing, translate, learned words</string>
 </resources>

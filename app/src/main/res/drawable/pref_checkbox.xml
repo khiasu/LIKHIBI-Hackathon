@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Preferences checkbox (design 35:3350): a 22dp rounded square, filled with a check when on. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item android:width="22dp" android:height="22dp" android:gravity="center">
+                <shape android:shape="rectangle">
+                    <corners android:radius="6dp" />
+                    <solid android:color="@color/app_secondary_track" />
+                </shape>
+            </item>
+            <item android:width="14dp" android:height="14dp" android:gravity="center" android:drawable="@drawable/ic_kb_check" />
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:width="22dp" android:height="22dp" android:gravity="center">
+                <shape android:shape="rectangle">
+                    <corners android:radius="6dp" />
+                    <stroke android:width="1.5dp" android:color="@color/app_text_secondary" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

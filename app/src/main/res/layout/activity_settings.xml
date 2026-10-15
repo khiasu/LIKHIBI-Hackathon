@@ -77,8 +77,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <!-- Opens the theme gallery (screen 8). -->
                 <LinearLayout
+                    android:id="@+id/row_theme"
                     style="@style/Likhibi.Row"
+                    android:background="@drawable/app_row_background"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:minHeight="72dp">
 
                     <LinearLayout
@@ -96,187 +101,22 @@
                             android:text="@string/row_theme_desc" />
                     </LinearLayout>
 
-                    <Spinner
-                        android:id="@+id/spinner_theme"
-                        style="@style/Likhibi.Select"
-                        android:contentDescription="@string/row_theme" />
-                </LinearLayout>
-
-                <!-- Custom theme controls, shown only while Custom is selected. -->
-                <LinearLayout
-                    android:id="@+id/layout_custom_theme_controls"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="19dp"
-                    android:paddingBottom="16dp"
-                    android:visibility="gone">
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btn_change_wallpaper"
-                        style="@style/Likhibi.Button.Outlined"
-                        android:layout_marginBottom="14dp"
-                        android:text="@string/custom_pick_wallpaper" />
-
                     <TextView
-                        android:id="@+id/lbl_overlay_opacity"
-                        style="@style/Likhibi.RowDescription"
-                        android:text="Wallpaper dimming" />
-
-                    <com.google.android.material.slider.Slider
-                        android:id="@+id/seek_overlay_opacity"
-                        style="@style/Likhibi.Slider"
-                        android:contentDescription="Wallpaper dimming"
-                        android:stepSize="1"
-                        android:valueFrom="0"
-                        android:valueTo="240" />
-
-                    <TextView
-                        android:id="@+id/lbl_key_opacity"
-                        style="@style/Likhibi.RowDescription"
-                        android:text="Keycap opacity" />
-
-                    <com.google.android.material.slider.Slider
-                        android:id="@+id/seek_key_opacity"
-                        style="@style/Likhibi.Slider"
-                        android:contentDescription="Keycap opacity"
-                        android:stepSize="1"
-                        android:valueFrom="0"
-                        android:valueTo="255" />
-
-                    <TextView
-                        android:id="@+id/lbl_corner_radius"
-                        style="@style/Likhibi.RowDescription"
-                        android:text="Key corner radius" />
-
-                    <com.google.android.material.slider.Slider
-                        android:id="@+id/seek_corner_radius"
-                        style="@style/Likhibi.Slider"
-                        android:contentDescription="Key corner radius"
-                        android:stepSize="1"
-                        android:valueFrom="0"
-                        android:valueTo="20" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/Likhibi.RowTitle"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="Key shadows" />
-
-                        <com.google.android.material.switchmaterial.SwitchMaterial
-                            android:id="@+id/switch_custom_shadow"
-                            style="@style/Likhibi.Switch"
-                            android:contentDescription="Key shadows" />
-                    </LinearLayout>
-
-                    <TextView
-                        style="@style/Likhibi.RowDescription"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/custom_accent" />
-
-                    <LinearLayout
-                        android:id="@+id/layout_accent_colors"
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <View
-                            android:id="@+id/color_chip_cyan"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/color_chip_cyan"
-                            android:clickable="true"
-                            android:focusable="true" />
-
-                        <View
-                            android:id="@+id/color_chip_amber"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/color_chip_amber"
-                            android:clickable="true"
-                            android:focusable="true" />
-
-                        <View
-                            android:id="@+id/color_chip_emerald"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/color_chip_emerald"
-                            android:clickable="true"
-                            android:focusable="true" />
-
-                        <View
-                            android:id="@+id/color_chip_rose"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/color_chip_rose"
-                            android:clickable="true"
-                            android:focusable="true" />
-
-                        <View
-                            android:id="@+id/color_chip_violet"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/color_chip_violet"
-                            android:clickable="true"
-                            android:focusable="true" />
-
-                        <View
-                            android:id="@+id/color_chip_blue"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/color_chip_blue"
-                            android:clickable="true"
-                            android:focusable="true" />
-
-                        <View
-                            android:id="@+id/color_chip_white"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:background="@drawable/color_chip_white"
-                            android:clickable="true"
-                            android:focusable="true" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <View style="@style/Likhibi.Divider" />
-
-                <LinearLayout
-                    style="@style/Likhibi.Row"
-                    android:minHeight="72dp">
-
-                    <LinearLayout
+                        android:id="@+id/text_theme_value"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/app_text"
+                        android:textSize="16sp" />
 
-                        <TextView
-                            style="@style/Likhibi.RowTitle"
-                            android:text="@string/row_number_row" />
-
-                        <TextView
-                            style="@style/Likhibi.RowDescription"
-                            android:text="@string/row_number_row_desc" />
-                    </LinearLayout>
-
-                    <com.google.android.material.switchmaterial.SwitchMaterial
-                        android:id="@+id/switch_number_row"
-                        style="@style/Likhibi.Switch"
-                        android:contentDescription="@string/row_number_row" />
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_kb_chevron_right"
+                        app:tint="@color/app_text" />
                 </LinearLayout>
 
                 <View style="@style/Likhibi.Divider" />
@@ -305,10 +145,45 @@
                         style="@style/Likhibi.Select"
                         android:contentDescription="@string/row_font" />
                 </LinearLayout>
+
+                <View style="@style/Likhibi.Divider" />
+
+                <!-- Opens Preferences (screen 10), where the on/off switches live. -->
+                <LinearLayout
+                    android:id="@+id/row_more_preferences"
+                    style="@style/Likhibi.Row"
+                    android:background="@drawable/app_row_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="69dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Likhibi.RowTitle"
+                            android:text="@string/row_more_preferences" />
+
+                        <TextView
+                            style="@style/Likhibi.RowDescription"
+                            android:text="@string/row_more_preferences_desc" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_kb_chevron_right"
+                        app:tint="@color/app_text" />
+                </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- SENSORY FEEDBACK -->
+        <!-- SENSORY FEEDBACK: strength and volume. Switching them on and off is in Preferences. -->
         <TextView
             style="@style/Likhibi.SectionHeader"
             android:text="@string/section_feedback" />
@@ -335,8 +210,7 @@
 
                     <TextView
                         android:id="@+id/lbl_haptic"
-                        style="@style/Likhibi.RowDescription"
-                        android:text="Vibration strength: 10ms" />
+                        style="@style/Likhibi.RowDescription" />
 
                     <com.google.android.material.slider.Slider
                         android:id="@+id/seek_haptic"
@@ -344,7 +218,7 @@
                         android:layout_marginTop="6dp"
                         android:contentDescription="@string/row_haptic"
                         android:stepSize="1"
-                        android:valueFrom="0"
+                        android:valueFrom="1"
                         android:valueTo="50" />
                 </LinearLayout>
 
@@ -355,37 +229,22 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingStart="16dp"
-                    android:paddingTop="14dp"
+                    android:paddingTop="16dp"
                     android:paddingEnd="16dp"
-                    android:paddingBottom="12dp">
+                    android:paddingBottom="10dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/Likhibi.RowTitle"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/row_sound" />
-
-                        <com.google.android.material.switchmaterial.SwitchMaterial
-                            android:id="@+id/switch_sound"
-                            style="@style/Likhibi.Switch"
-                            android:contentDescription="@string/row_sound" />
-                    </LinearLayout>
+                    <TextView
+                        style="@style/Likhibi.RowTitle"
+                        android:text="@string/row_sound" />
 
                     <TextView
                         android:id="@+id/lbl_sound_volume"
-                        style="@style/Likhibi.RowDescription"
-                        android:layout_marginTop="14dp"
-                        android:text="Volume: 50%" />
+                        style="@style/Likhibi.RowDescription" />
 
                     <com.google.android.material.slider.Slider
                         android:id="@+id/seek_sound_volume"
                         style="@style/Likhibi.Slider"
+                        android:layout_marginTop="6dp"
                         android:contentDescription="@string/row_sound_volume"
                         android:stepSize="1"
                         android:valueFrom="0"

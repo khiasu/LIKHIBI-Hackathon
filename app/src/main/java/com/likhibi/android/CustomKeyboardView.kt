@@ -136,6 +136,9 @@ class CustomKeyboardView @JvmOverloads constructor(
     /** For theme thumbnails: draw this theme instead of the saved one, and ignore touches. */
     var themeOverride: KeyboardTheme? = null
     var previewMode = false
+    /** Theme editor previews: Figtree or not, and key height, before they are saved. */
+    var fontOverride: Boolean? = null
+    var keyHeightOverride: Float? = null
 
     private val prefs = KeyboardThemes.prefs(context)
     private val density = resources.displayMetrics.density
@@ -174,8 +177,8 @@ class CustomKeyboardView @JvmOverloads constructor(
     /** Re-reads the theme and keyboard settings and redraws whatever is showing. */
     fun reload() {
         theme = themeOverride ?: KeyboardThemes.current(context)
-        fonts = KeyboardThemes.Fonts(context, KeyboardThemes.usesFigtree(prefs))
-        keyHeightDp = KeyboardThemes.keyHeightDp(prefs)
+        fonts = KeyboardThemes.Fonts(context, fontOverride ?: KeyboardThemes.usesFigtree(prefs))
+        keyHeightDp = keyHeightOverride ?: KeyboardThemes.keyHeightDp(prefs)
         showNumberRow = previewMode || prefs.getBoolean("show_number_row", true)
         showEmojiKey = !previewMode && prefs.getBoolean("show_emoji_key", false)
         keyPopups = !previewMode && prefs.getBoolean("key_popup", true)

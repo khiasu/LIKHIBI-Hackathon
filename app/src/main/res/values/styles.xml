@@ -127,6 +127,16 @@
         <item name="android:spinnerMode">dropdown</item>
     </style>
 
+    <style name="Likhibi.Dialog" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="colorAccent">@color/app_secondary</item>
+        <item name="android:textColorPrimary">@color/app_text</item>
+        <item name="android:textColorSecondary">@color/app_text_secondary</item>
+        <item name="android:textColorAlertDialogListItem">@color/app_text</item>
+        <item name="colorControlNormal">@color/app_text_secondary</item>
+        <item name="colorControlActivated">@color/app_secondary</item>
+    </style>
+
     <!-- Keyboard strips (design/SPECS.md, screens 1-4). Colours and fonts are set in code from KeyboardTheme. -->
     <style name="Likhibi.Keyboard" />
 
