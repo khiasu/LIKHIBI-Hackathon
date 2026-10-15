@@ -111,7 +111,7 @@ class KeyFeedback(context: Context) {
             }
             val effect = synchronized(effects) { effects.getOrPut(ms) { VibrationEffect.createOneShot(ms, VibrationEffect.DEFAULT_AMPLITUDE) } }
             val v = vibrator
-            worker.execute { runCatching { v.vibrate(effect) } }
+            runCatching { worker.execute { runCatching { v.vibrate(effect) } } }
         }
         if (settings.soundOn) {
             val pool = soundPool ?: return
@@ -121,7 +121,7 @@ class KeyFeedback(context: Context) {
     }
 
     fun release() {
-        worker.execute { soundPool?.release() }
+        runCatching { worker.execute { soundPool?.release() } }
         worker.shutdown()
     }
 }

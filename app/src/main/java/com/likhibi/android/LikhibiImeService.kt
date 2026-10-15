@@ -149,7 +149,7 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
         settings = KeyboardSettings.load(this)
         panels = KeyboardPanels(this, this)
         lastLearnedReset = prefs.getLong("learned_reset_at", 0L)
-        worker.execute { engine.warmUp() }
+        background { engine.warmUp() }
     }
 
     override fun onEvaluateFullscreenMode(): Boolean = false
@@ -389,7 +389,7 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
         val learnedReset = prefs.getLong("learned_reset_at", 0L)
         if (learnedReset > lastLearnedReset) {
             lastLearnedReset = learnedReset
-            worker.execute { engine.clearUserData() }
+            background { engine.clearUserData() }
         }
     }
 
@@ -465,6 +465,7 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
     override fun onDestroy() {
         super.onDestroy()
         prefs.unregisterOnSharedPreferenceChangeListener(prefsListener)
+        main.removeCallbacksAndMessages(null)
         translateJob?.cancel()
         student?.close()
         translateDispatcher.close()
@@ -737,7 +738,7 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
         if (!learningAllowed || translateMode) return
         val clean = word.trim()
         if (clean.isEmpty()) return
-        worker.execute {
+        background {
             engine.learnWord(clean)
             if (previous != null) engine.learnBigram(previous, clean)
         }
@@ -774,6 +775,11 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
 
     // ------------------------------------------------------------------ suggestions
 
+    /** Runs on the prediction thread; quietly does nothing once the keyboard has shut down. */
+    private fun background(task: () -> Unit) {
+        runCatching { worker.execute(task) }
+    }
+
     private fun scheduleSuggestions() {
         if (suggestionsPosted) return
         suggestionsPosted = true
@@ -793,7 +799,7 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
         val capitalise = if (word.isNotEmpty()) word[0].isUpperCase() else atSentenceStart(text)
         val nextWord = settings.nextWordSuggestions
         val generation = ++suggestionGeneration
-        worker.execute {
+        background {
             val found = runCatching {
                 when {
                     word.isNotEmpty() -> engine.getPrefixMatches(context, word).ifEmpty { listOf(word) }
