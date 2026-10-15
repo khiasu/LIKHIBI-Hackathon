@@ -45,7 +45,11 @@ data class KeyboardSettings(
 
         fun load(context: Context): KeyboardSettings {
             val p = KeyboardThemes.prefs(context)
-            val (keyHeight, rowGap) = heights(p.getString("keyboard_height", "normal"))
+            val oneHanded = p.getString("one_handed_mode", "off") ?: "off"
+            val (fullHeight, fullGap) = heights(p.getString("keyboard_height", "normal"))
+            // One-handed keys are narrower, so they are a little shorter too and keep a key-like shape.
+            val keyHeight = if (oneHanded == "off") fullHeight else fullHeight - 3f
+            val rowGap = if (oneHanded == "off") fullGap else fullGap - 2f
             return KeyboardSettings(
                 theme = KeyboardThemes.current(context),
                 figtree = KeyboardThemes.usesFigtree(p),
@@ -62,7 +66,7 @@ data class KeyboardSettings(
                 autoCapitalise = p.getBoolean("auto_capitalise", true),
                 doubleSpacePeriod = p.getBoolean("double_space_period", true),
                 nextWordSuggestions = p.getBoolean("next_word_suggestions", true),
-                oneHanded = p.getString("one_handed_mode", "off") ?: "off",
+                oneHanded = oneHanded,
             )
         }
     }

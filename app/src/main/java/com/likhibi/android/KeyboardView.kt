@@ -159,11 +159,18 @@ class KeyboardView(context: Context) : View(context) {
     }
 
     private fun layoutKeys(width: Int) {
+        val narrow = settings.oneHanded != "off"
         contentHeight = KeyboardLayouts.place(
             rows, width.toFloat(), settings.keyHeightDp * d, settings.rowGapDp * d,
-            keyGap = 6f * d, side = 3f * d, top = 6f * d, bottom = 8f * d,
+            keyGap = (if (narrow) 4.5f else 6f) * d, side = 3f * d, top = 6f * d, bottom = 8f * d,
         ).roundToInt()
         laidOutWidth = width
+        // Labels follow the key width, so narrow (one-handed) keys keep their proportions.
+        val unit = (width - 6f * d) / 10f
+        letterPaint.textSize = minOf(sp(if (settings.keyHeightDp < 44f) 21f else 23f), unit * 0.6f)
+        functionPaint.textSize = minOf(sp(14f), unit * 0.4f)
+        spacePaint.textSize = minOf(sp(13f), unit * 0.38f)
+        hintPaint.textSize = minOf(sp(10f), unit * 0.27f)
     }
 
     /** Height of the letters layout as typed now, so panels can take exactly its place. */

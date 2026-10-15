@@ -23,11 +23,21 @@
                 android:contentDescription="Full-width keyboard"
                 android:src="@drawable/ic_kb_maximize" />
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
             <ImageView
                 android:id="@+id/one_hand_left_move"
-                style="@style/Likhibi.Keyboard.OneHandButton"
+                style="@style/Likhibi.Keyboard.OneHandSwap"
                 android:contentDescription="Move keyboard to the left"
                 android:src="@drawable/ic_kb_chevron_left" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
@@ -355,11 +365,21 @@
                 android:contentDescription="Full-width keyboard"
                 android:src="@drawable/ic_kb_maximize" />
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
             <ImageView
                 android:id="@+id/one_hand_right_move"
-                style="@style/Likhibi.Keyboard.OneHandButton"
+                style="@style/Likhibi.Keyboard.OneHandSwap"
                 android:contentDescription="Move keyboard to the right"
                 android:src="@drawable/ic_kb_chevron_right" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

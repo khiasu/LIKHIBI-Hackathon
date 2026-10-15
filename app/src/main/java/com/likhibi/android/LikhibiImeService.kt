@@ -235,8 +235,15 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
         }
         val divider = Color.argb(60, Color.red(theme.stripLabel), Color.green(theme.stripLabel), Color.blue(theme.stripLabel))
         suggestionDividers.forEach { it.setBackgroundColor(divider) }
-        for (id in listOf(R.id.btn_toolbar_toggle, R.id.btn_toolbar_back, R.id.tool_emoji, R.id.tool_clipboard, R.id.tool_translate, R.id.tool_themes, R.id.tool_settings,
-            R.id.one_hand_left_exit, R.id.one_hand_left_move, R.id.one_hand_right_exit, R.id.one_hand_right_move)) {
+        // One-handed rail: raised, key-coloured buttons that read as controls, not stray icons.
+        val railFill = if (Color.alpha(theme.keyFunction) >= 80) theme.keyFunction else theme.key
+        for (id in listOf(R.id.one_hand_left_exit, R.id.one_hand_left_move, R.id.one_hand_right_exit, R.id.one_hand_right_move)) {
+            view.findViewById<ImageView>(id).apply {
+                setColorFilter(theme.keyLabel)
+                background = pressable(railFill, theme.keyPressed, dp(24f))
+            }
+        }
+        for (id in listOf(R.id.btn_toolbar_toggle, R.id.btn_toolbar_back, R.id.tool_emoji, R.id.tool_clipboard, R.id.tool_translate, R.id.tool_themes, R.id.tool_settings)) {
             view.findViewById<ImageView>(id).apply {
                 setColorFilter(theme.stripLabel)
                 background = pressable(Color.TRANSPARENT, theme.keyPressed, dp(24f))
@@ -352,7 +359,7 @@ class LikhibiImeService : InputMethodService(), KeyboardView.Listener, KeyboardP
     private fun applyOneHanded() {
         val mode = settings.oneHanded
         (mainColumn?.layoutParams as? LinearLayout.LayoutParams)?.let {
-            it.weight = if (mode == "off") 100f else 78f
+            it.weight = if (mode == "off") 100f else 80f
             mainColumn?.layoutParams = it
         }
         root?.findViewById<View>(R.id.one_hand_left)?.visibility = if (mode == "right") View.VISIBLE else View.GONE
