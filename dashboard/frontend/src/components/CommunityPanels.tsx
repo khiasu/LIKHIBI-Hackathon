@@ -1,7 +1,6 @@
-import { Brain, Copy, GraduationCap, Play, ShieldCheck, UserPlus, UserX } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "./AppContext";
-import { Button, Chip, cx, InlineAlert, Skeleton, StatusBadge } from "./ui";
+import { Button, cx, InlineAlert, Meter, SectionHeading, Skeleton, StatusBadge, type Tone } from "./ui";
 import { api } from "../lib/api";
 import { fmt, timeAgo } from "../lib/format";
 import { useAsync } from "../lib/hooks";
@@ -27,40 +26,52 @@ export function LearningPanel({ me, version }: { me: ReviewerIdentity; version: 
     }
   }
 
-  const progress = data ? Math.min(100, Math.round((data.new_since_last / Math.max(1, data.threshold)) * 100)) : 0;
   return (
-    <section className="card p-5" aria-labelledby="learning-title">
-      <div className="mb-3 flex items-center gap-2">
-        <Brain aria-hidden className="size-4 text-accent-text" />
-        <h2 id="learning-title" className="font-semibold text-ink">Model learning</h2>
-        {data?.running && <StatusBadge tone="neutral" label="Learning now" />}
-      </div>
+    <section aria-labelledby="learning-title">
+      <SectionHeading
+        id="learning-title"
+        title="Model learning"
+        actions={data?.running ? <StatusBadge tone="neutral" label="Learning now" /> : undefined}
+      />
       {!data && !learning.error && <Skeleton className="h-24" />}
-      {learning.error && <InlineAlert tone="critical" title="Could not load the learning status">{learning.error.message}</InlineAlert>}
+      {learning.error && (
+        <InlineAlert tone="critical" title="Could not load the learning status">
+          {learning.error.message}
+        </InlineAlert>
+      )}
       {data && (
         <>
-          <p className="text-[14px] leading-relaxed text-ink-2">
-            Approved corrections reach the translator at once. Every {fmt(data.threshold)} new ones, the model also
-            retrains on them, and keeps the new version only if it translates the held-out test text at least as well.
-          </p>
-          <div className="mt-4">
-            <div className="mb-1.5 flex justify-between text-[13px] text-ink-2">
-              <span>{fmt(data.new_since_last)} new of {fmt(data.threshold)} to start learning</span>
-              <span className="tabular-nums text-muted">{fmt(data.approved_pairs)} approved in total</span>
-            </div>
-            <div className="h-2 overflow-hidden rounded-full bg-sunken" role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100}>
-              <div className="h-full rounded-full bg-accent transition-all" style={{ width: `${progress}%` }} />
-            </div>
+          <div className="flex items-baseline justify-between gap-3">
+            <p className="num text-[26px] leading-none font-semibold tracking-[-0.03em] text-ink">
+              {fmt(data.new_since_last)}
+              <span className="text-[15px] font-normal tracking-normal text-muted"> of {fmt(data.threshold)}</span>
+            </p>
+            <span className="num font-mono text-[11.5px] text-faint">{fmt(data.approved_pairs)} approved in all</span>
           </div>
-          {data.problem && <InlineAlert tone="warning" title="Learning is not set up on this computer">{data.problem}</InlineAlert>}
+          <div className="mt-3">
+            <Meter value={data.new_since_last} max={data.threshold} tone="neutral" label="New approved pairs towards the next learning run" />
+          </div>
+          <p className="mt-3 text-[13px] leading-relaxed text-muted">
+            Approved pairs reach the translator at once. Every {fmt(data.threshold)} new ones, the model retrains on them
+            and keeps the result only if it scores at least as well on held-out text.
+          </p>
+          {data.problem && (
+            <div className="mt-4">
+              <InlineAlert tone="warning" title="Learning is not set up on this computer">
+                {data.problem}
+              </InlineAlert>
+            </div>
+          )}
           {data.runs.length > 0 && (
-            <ul className="mt-4 space-y-2">
-              {data.runs.slice(0, 3).map((run) => <RunRow key={run.id} run={run} />)}
+            <ul className="mt-4 divide-y divide-line border-t border-line">
+              {data.runs.slice(0, 3).map((run) => (
+                <RunRow key={run.id} run={run} />
+              ))}
             </ul>
           )}
           {me.role === "admin" && (
-            <div className="mt-4 flex justify-end">
-              <Button icon={Play} onClick={() => void start()} loading={starting} disabled={!data.available || data.running || data.approved_pairs === 0}>
+            <div className="mt-4">
+              <Button onClick={() => void start()} loading={starting} disabled={!data.available || data.running || data.approved_pairs === 0}>
                 Learn now
               </Button>
             </div>
@@ -72,21 +83,24 @@ export function LearningPanel({ me, version }: { me: ReviewerIdentity; version: 
 }
 
 function RunRow({ run }: { run: LearningRun }) {
-  const tone = run.state === "running" ? "neutral" : run.accepted ? "good" : run.state === "done" ? "warning" : "critical";
-  const label = run.state === "running" ? "Running" : run.accepted ? "In use" : run.state === "done" ? "Not used" : run.state === "failed" ? "Failed" : "Interrupted";
+  const tone: Tone = run.state === "running" ? "neutral" : run.accepted ? "good" : run.state === "done" ? "warning" : "critical";
+  const label =
+    run.state === "running" ? "Running" : run.accepted ? "In use" : run.state === "done" ? "Not used" : run.state === "failed" ? "Failed" : "Interrupted";
   return (
-    <li className="rounded-xl bg-sunken px-3 py-2 text-[13.5px] text-ink-2">
-      <div className="flex flex-wrap items-center gap-2">
+    <li className="py-2.5">
+      <div className="flex items-center gap-3">
         <StatusBadge tone={tone} label={label} />
-        <span>{fmt(run.pairs)} pairs · {run.trigger === "auto" ? "started by itself" : "started by an admin"}</span>
         {run.score_after !== null && (
-          <span className="tabular-nums">
+          <span className="num font-mono text-[11.5px] text-muted">
             chrF++ {run.score_before ?? "–"} → {run.score_after}
           </span>
         )}
-        <span className="ml-auto text-muted">{timeAgo(run.started_at)}</span>
+        <span className="ml-auto font-mono text-[11.5px] text-faint">{timeAgo(run.started_at)}</span>
       </div>
-      {run.message && run.state !== "running" && <p className="mt-1 text-[12.5px] text-muted">{run.message}</p>}
+      <p className="mt-0.5 text-[12.5px] text-muted">
+        {fmt(run.pairs)} pairs, {run.trigger === "auto" ? "started by itself" : "started by an admin"}
+        {run.message && run.state !== "running" ? `. ${run.message}` : ""}
+      </p>
     </li>
   );
 }
@@ -105,7 +119,10 @@ export function ReviewersPanel() {
     try {
       const created = await api.addReviewer({
         name: name.trim(),
-        languages: languages.split(",").map((code) => code.trim()).filter(Boolean),
+        languages: languages
+          .split(",")
+          .map((code) => code.trim())
+          .filter(Boolean),
         role: "reviewer",
       });
       setIssued({ name: created.reviewer.name, token: created.token });
@@ -128,71 +145,77 @@ export function ReviewersPanel() {
   }
 
   return (
-    <section className="card p-5" aria-labelledby="reviewers-title">
-      <div className="mb-3 flex items-center gap-2">
-        <ShieldCheck aria-hidden className="size-4 text-accent-text" />
-        <h2 id="reviewers-title" className="font-semibold text-ink">Verified reviewers</h2>
-      </div>
-      <p className="text-[14px] leading-relaxed text-ink-2">
-        Trusted speakers who approve or reject contributions, each for their own languages and dialects. Each gets a
-        personal token; it is shown once.
+    <section aria-labelledby="reviewers-title">
+      <SectionHeading id="reviewers-title" title="Verified reviewers" />
+      <p className="text-[13px] leading-relaxed text-muted">
+        Trusted speakers who approve contributions for their own languages. Each gets a personal token, shown once.
       </p>
 
       {issued && (
-        <InlineAlert tone="good" title={`Token for ${issued.name}`}>
-          <div className="mt-1 flex items-center gap-2">
-            <code className="min-w-0 flex-1 truncate rounded-md bg-surface px-2 py-1 font-mono text-[13px]">{issued.token}</code>
-            <Button
-              size="sm"
-              icon={Copy}
-              onClick={() => {
-                void navigator.clipboard?.writeText(issued.token);
-                toast("Token copied. Send it to them privately.");
-              }}
-            >
-              Copy
-            </Button>
-          </div>
-          <p className="mt-1 text-[12.5px]">It cannot be shown again. If it is lost, switch this reviewer off and add them again.</p>
-        </InlineAlert>
+        <div className="mt-4">
+          <InlineAlert tone="good" title={`Token for ${issued.name}`}>
+            <div className="mt-1.5 flex items-center gap-2">
+              <code className="min-w-0 flex-1 truncate rounded border border-line bg-surface px-2 py-1 font-mono text-[12px] text-ink">{issued.token}</code>
+              <Button
+                size="sm"
+                onClick={() => {
+                  void navigator.clipboard?.writeText(issued.token);
+                  toast("Token copied. Send it to them privately.");
+                }}
+              >
+                Copy
+              </Button>
+            </div>
+            <p className="mt-1.5 text-[12.5px]">It cannot be shown again. If it is lost, switch this reviewer off and add them again.</p>
+          </InlineAlert>
+        </div>
       )}
-
-      <form
-        className="mt-4 flex flex-wrap gap-2"
-        onSubmit={(event) => {
-          event.preventDefault();
-          void add();
-        }}
-      >
-        <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" aria-label="Reviewer name" maxLength={60} className="field h-10 min-w-0 flex-1 basis-40 px-3" />
-        <input
-          value={languages}
-          onChange={(e) => setLanguages(e.target.value)}
-          placeholder="Languages, e.g. nag, ao"
-          aria-label="Languages this reviewer checks, comma-separated; empty for all"
-          className="field h-10 w-40 px-3"
-        />
-        <Button variant="primary" type="submit" icon={UserPlus} loading={adding} disabled={name.trim().length < 2}>
-          Add
-        </Button>
-      </form>
 
       {!reviewers.data && !reviewers.error && <Skeleton className="mt-4 h-16" />}
       {reviewers.data && reviewers.data.items.length > 0 && (
-        <ul className="mt-4 divide-y divide-line">
+        <ul className="mt-4 divide-y divide-line border-y border-line">
           {reviewers.data.items.map((reviewer) => (
-            <li key={reviewer.id} className={cx("flex flex-wrap items-center gap-2 py-2.5", !reviewer.active && "opacity-60")}>
-              <GraduationCap aria-hidden className="size-4 text-muted" />
-              <span className="font-medium text-ink">{reviewer.name}</span>
-              <Chip>{reviewer.languages.length ? reviewer.languages.join(", ") : "all languages"}</Chip>
-              <span className="text-[13px] text-muted">{fmt(reviewer.reviews)} reviews</span>
-              <Button size="sm" variant="ghost" icon={UserX} className="ml-auto" onClick={() => void toggle(reviewer.id, !reviewer.active)}>
+            <li key={reviewer.id} className="flex items-center gap-3 py-2.5">
+              <div className={cx("min-w-0 flex-1", !reviewer.active && "opacity-50")}>
+                <p className="truncate text-[13.5px] font-medium text-ink">{reviewer.name}</p>
+                <p className="font-mono text-[11px] text-faint">
+                  {reviewer.languages.length ? reviewer.languages.join(", ") : "all languages"} · {fmt(reviewer.reviews)} reviews
+                </p>
+              </div>
+              <Button size="sm" variant="ghost" onClick={() => void toggle(reviewer.id, !reviewer.active)}>
                 {reviewer.active ? "Switch off" : "Switch on"}
               </Button>
             </li>
           ))}
         </ul>
       )}
+
+      <form
+        className="mt-4 grid grid-cols-[1fr_88px_auto] gap-2"
+        onSubmit={(event) => {
+          event.preventDefault();
+          void add();
+        }}
+      >
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Name"
+          aria-label="Reviewer name"
+          maxLength={60}
+          className="field h-[34px] min-w-0 px-2.5 text-[13.5px]"
+        />
+        <input
+          value={languages}
+          onChange={(e) => setLanguages(e.target.value)}
+          placeholder="nag, ao"
+          aria-label="Languages this reviewer checks, comma-separated; empty for all"
+          className="field h-[34px] min-w-0 px-2.5 font-mono text-[12.5px]"
+        />
+        <Button type="submit" loading={adding} disabled={name.trim().length < 2}>
+          Add
+        </Button>
+      </form>
     </section>
   );
 }

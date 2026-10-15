@@ -1,4 +1,4 @@
-import { CircleCheck, CircleX, X } from "lucide-react";
+import { X } from "lucide-react";
 import { createContext, useCallback, useContext, useMemo, useRef, useState, type ReactNode } from "react";
 import { api } from "../lib/api";
 import { useAsync } from "../lib/hooks";
@@ -65,16 +65,13 @@ export function ToastProvider({ children }: { children: ReactNode }) {
         {toasts.map((toast) => (
           <div
             key={toast.id}
-            className="reveal pointer-events-auto flex max-w-sm items-start gap-3 rounded-xl border border-line bg-surface px-4 py-3 text-[14.5px] text-ink shadow-[0_10px_30px_-12px_rgb(0_0_0/0.35)]"
+            role={toast.tone === "critical" ? "alert" : "status"}
+            className="reveal pointer-events-auto flex max-w-sm items-start gap-3 rounded-lg bg-ink py-2.5 pr-2.5 pl-3.5 text-[13.5px] leading-snug text-bg shadow-[0_12px_32px_-12px_rgb(0_0_0/0.45)]"
           >
-            {toast.tone === "good" ? (
-              <CircleCheck aria-hidden className="mt-0.5 size-4 shrink-0 text-good" strokeWidth={2.4} />
-            ) : (
-              <CircleX aria-hidden className="mt-0.5 size-4 shrink-0 text-critical" strokeWidth={2.4} />
-            )}
+            <span aria-hidden className={`mt-[6px] size-[7px] shrink-0 rounded-full ${toast.tone === "good" ? "bg-good" : "bg-critical"}`} />
             <span className="flex-1">{toast.message}</span>
-            <button aria-label="Dismiss" onClick={() => dismiss(toast.id)} className="text-muted hover:text-ink">
-              <X aria-hidden className="size-4" />
+            <button aria-label="Dismiss" onClick={() => dismiss(toast.id)} className="-my-0.5 grid size-6 place-items-center rounded opacity-60 hover:opacity-100">
+              <X aria-hidden className="size-3.5" strokeWidth={2} />
             </button>
           </div>
         ))}

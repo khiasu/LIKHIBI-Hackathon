@@ -1,4 +1,5 @@
-import "@fontsource-variable/roboto/wght.css";
+import "@fontsource-variable/literata/opsz.css";
+import "@fontsource-variable/literata/opsz-italic.css";
 import "@fontsource-variable/roboto-mono/wght.css";
 import "./index.css";
 

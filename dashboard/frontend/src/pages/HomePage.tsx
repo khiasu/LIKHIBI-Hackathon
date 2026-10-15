@@ -1,12 +1,9 @@
-import { ArrowRight, ClipboardCheck, HeartHandshake, Languages } from "lucide-react";
 import { useApp } from "../components/AppContext";
-import { ButtonLink, PageHeader, Skeleton, StatTile, StatusIcon, type Tone } from "../components/ui";
+import { ButtonLink, cx, PageHeader, SectionHeading, Skeleton, StatTile, StatusBadge } from "../components/ui";
 import { api } from "../lib/api";
+import { STATE_META } from "../lib/engines";
 import { fmt } from "../lib/format";
 import { href, useAsync } from "../lib/hooks";
-import type { EngineState } from "../lib/types";
-
-const ENGINE_TONE: Record<EngineState, Tone> = { ready: "good", not_configured: "warning", error: "critical" };
 
 export function HomePage() {
   const { engines } = useApp();
@@ -20,6 +17,13 @@ export function HomePage() {
   const ready = realEngines.filter((engine) => engine.state === "ready");
   const pending = community.data?.pending ?? 0;
 
+  const figures = [
+    pairs === null ? null : { label: "Sentence pairs", value: fmt(pairs), context: "Aligned English and Nagamese" },
+    data && words.data ? { label: "Words in the lexicon", value: fmt(data.lexicon.entries), context: `${fmt(words.data.remaining)} without a meaning yet` } : null,
+    community.data ? { label: "Approved contributions", value: fmt(community.data.approved_pairs), context: `${fmt(community.data.contributors)} credited contributors` } : null,
+    engines ? { label: "Engines ready", value: `${ready.length} of ${realEngines.length}`, context: "Memory, LLM and NMT" } : null,
+  ];
+
   return (
     <div>
       <PageHeader
@@ -27,115 +31,103 @@ export function HomePage() {
         description="The Likhibi keyboard, translator and open word-bank for Nagamese."
         actions={
           <>
-            <ButtonLink href={href("contribute")} icon={HeartHandshake}>
-              Contribute
-            </ButtonLink>
-            <ButtonLink href={href("translate")} variant="primary" icon={Languages}>
+            <ButtonLink href={href("contribute")}>Contribute</ButtonLink>
+            <ButtonLink href={href("translate")} variant="primary">
               Translate
             </ButtonLink>
           </>
         }
       />
 
-      <section aria-label="Likhibi in numbers" className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {pairs === null ? (
-          <Skeleton className="h-[108px] rounded-xl" />
-        ) : (
-          <StatTile label="Sentence pairs" value={fmt(pairs)} context="Aligned English–Nagamese, with approved corrections" />
-        )}
-        {data && words.data ? (
-          <StatTile label="Words in the lexicon" value={fmt(data.lexicon.entries)} context={`${fmt(words.data.remaining)} still need a meaning`} />
-        ) : (
-          <Skeleton className="h-[108px] rounded-xl" />
-        )}
-        {community.data ? (
-          <StatTile
-            label="Approved contributions"
-            value={fmt(community.data.approved_pairs)}
-            context={`${fmt(community.data.contributors)} credited contributors`}
-          />
-        ) : (
-          <Skeleton className="h-[108px] rounded-xl" />
-        )}
-        {engines ? (
-          <StatTile label="Engines ready" value={`${ready.length} / ${realEngines.length}`} context="Translation memory, LLM and NMT" />
-        ) : (
-          <Skeleton className="h-[108px] rounded-xl" />
-        )}
+      <section aria-label="Likhibi in numbers" className="reveal grid grid-cols-2 gap-y-8 border-y border-line py-7 lg:grid-cols-4">
+        {figures.map((figure, index) => (
+          <div key={index} className={cx("px-0 sm:px-6", index % 2 === 1 && "border-l border-line pl-5", index >= 2 && "lg:border-l lg:border-line", index === 0 && "sm:pl-0", index === 2 && "max-lg:pl-0 lg:pl-6")}>
+            {figure ? <StatTile {...figure} /> : <Skeleton className="h-[78px] w-40" />}
+          </div>
+        ))}
       </section>
 
-      <div className="mt-4 grid gap-4 lg:grid-cols-[1fr_1.4fr]">
-        <section className="card flex flex-col p-5" aria-labelledby="queue-title">
-          <div className="flex items-center gap-2">
-            <ClipboardCheck aria-hidden className="size-4 text-muted" />
-            <h2 id="queue-title" className="text-[15px] font-semibold text-ink">Review queue</h2>
-          </div>
+      <div className="mt-12 grid gap-12 lg:grid-cols-[5fr_7fr]">
+        <section aria-labelledby="queue-title">
+          <SectionHeading id="queue-title" title="Review queue" />
           {community.data ? (
-            <>
-              <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
-                <div>
-                  <p className="text-[32px] leading-none font-semibold tracking-[-0.02em] text-ink tabular-nums">{fmt(pending)}</p>
-                  <p className="mt-1.5 text-[13.5px] text-muted">
-                    {pending === 0 ? "Nothing waiting for review." : `${pending === 1 ? "contribution" : "contributions"} waiting for a reviewer`}
-                  </p>
-                </div>
+            <div>
+              <p className="num text-[44px] leading-none font-semibold tracking-[-0.035em] text-ink">{fmt(pending)}</p>
+              <p className="mt-2 max-w-sm text-[14px] leading-relaxed text-muted">
+                {pending === 0
+                  ? "Nothing is waiting. Corrections from the Translate page and the keyboard arrive here for a verified reviewer."
+                  : `${pending === 1 ? "contribution is" : "contributions are"} waiting for a verified reviewer. Approved pairs reach the translator at once.`}
+              </p>
+              <div className="mt-5">
                 <ButtonLink href={href("review")} variant={pending > 0 ? "primary" : "secondary"}>
-                  {pending > 0 ? "Start reviewing" : "Open review"}
+                  {pending > 0 ? "Start reviewing" : "Open the queue"}
                 </ButtonLink>
               </div>
-              <p className="mt-4 border-t border-line pt-3 text-[12.5px] leading-relaxed text-muted">
-                Corrections arrive from the Translate page and from the Likhibi keyboard. Approved ones reach the translator at once.
-              </p>
-            </>
+            </div>
           ) : (
-            <Skeleton className="mt-4 h-20" />
+            <Skeleton className="h-28" />
           )}
         </section>
 
-        <section className="card p-5" aria-labelledby="engines-title">
-          <div className="flex items-center justify-between gap-2">
-            <h2 id="engines-title" className="text-[15px] font-semibold text-ink">Translation engines</h2>
-            <a href={href("engines")} className="inline-flex items-center gap-1 text-[13px] font-medium text-muted hover:text-ink">
-              Manage <ArrowRight aria-hidden className="size-3.5" />
-            </a>
-          </div>
-          {!engines && <Skeleton className="mt-4 h-24" />}
+        <section aria-label="Translation engines">
+          <SectionHeading
+            title="Translation engines"
+            actions={
+              <a href={href("engines")} className="text-[13px] font-medium text-muted underline-offset-4 hover:text-ink hover:underline">
+                Manage
+              </a>
+            }
+          />
+          {!engines && <Skeleton className="h-28" />}
           {engines && (
-            <ul className="mt-3 divide-y divide-line">
-              {realEngines.map((engine) => (
-                <li key={engine.id} className="flex items-start gap-3 py-3 first:pt-1 last:pb-0">
-                  <span className="mt-0.5">
-                    <StatusIcon tone={ENGINE_TONE[engine.state]} />
-                  </span>
-                  <div className="min-w-0">
-                    <p className="text-[14px] font-medium text-ink">{engine.name}</p>
-                    {engine.status_message && <p className="truncate text-[12.5px] text-muted">{engine.status_message}</p>}
-                  </div>
-                  <span className="ml-auto shrink-0 text-[12px] text-faint">{engine.offline ? "Offline" : "Online"}</span>
-                </li>
-              ))}
-            </ul>
+            <table className="w-full text-left">
+              <thead className="sr-only">
+                <tr>
+                  <th>Engine</th>
+                  <th>State</th>
+                  <th>Runs</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-line">
+                {realEngines.map((engine) => (
+                  <tr key={engine.id} className="align-top">
+                    <td className="py-3 pr-4">
+                      <p className="text-[14px] leading-5 font-medium text-ink">{engine.name}</p>
+                      {engine.status_message && <p className="mt-0.5 text-[12.5px] leading-snug text-muted">{engine.status_message}</p>}
+                    </td>
+                    <td className="py-3 pr-6 whitespace-nowrap">
+                      <div className="flex h-5 items-center">
+                        <StatusBadge {...STATE_META[engine.state]} />
+                      </div>
+                    </td>
+                    <td className="py-3 text-right font-mono text-[11.5px] leading-5 whitespace-nowrap text-faint">
+                      {engine.offline ? "on device" : "online"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           )}
         </section>
       </div>
 
-      <section className="mt-5 grid gap-x-8 gap-y-3 border-t border-line pt-5 text-[13.5px] leading-relaxed text-muted sm:grid-cols-3" aria-label="About Likhibi">
+      <footer className="mt-16 grid gap-x-10 gap-y-4 border-t border-line pt-6 text-[13px] leading-relaxed text-muted md:grid-cols-3" aria-label="About Likhibi">
         <p>
-          <span className="font-medium text-ink">Type.</span> The Android keyboard completes and predicts Nagamese on the phone,
-          and translates offline.
+          <span className="font-medium text-ink-2">Type.</span> The Android keyboard completes and predicts Nagamese on the
+          phone, and translates without a connection.
         </p>
         <p>
-          <span className="font-medium text-ink">Teach.</span> Speakers correct translations; verified reviewers approve them,
-          and the models learn from what is approved.
+          <span className="font-medium text-ink-2">Teach.</span> Speakers correct translations. Verified reviewers approve
+          them, and the models learn from what is approved.
         </p>
         <p>
-          <span className="font-medium text-ink">Keep.</span> Contributions are published under CC BY-SA 4.0, credited if the
-          contributor wishes, and removed on request.{" "}
-          <a href={href("data")} className="font-medium text-ink-2 underline underline-offset-2 hover:text-ink">
-            Data sources
+          <span className="font-medium text-ink-2">Keep.</span> Contributions are shared under CC BY-SA 4.0, credited if the
+          contributor wishes and removed on request.{" "}
+          <a href={href("data")} className="text-ink-2 underline decoration-line-strong underline-offset-4 hover:decoration-ink">
+            Sources
           </a>
         </p>
-      </section>
+      </footer>
     </div>
   );
 }

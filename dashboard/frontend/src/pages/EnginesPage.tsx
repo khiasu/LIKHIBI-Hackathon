@@ -1,22 +1,11 @@
-import { ExternalLink, KeyRound, Plug, RefreshCw, Trash2, Wifi, WifiOff } from "lucide-react";
 import { useState } from "react";
 import type { FormEvent, ReactNode } from "react";
 import { useApp, useToast } from "../components/AppContext";
-import {
-  Button,
-  Chip,
-  CodeBlock,
-  EmptyState,
-  InlineAlert,
-  PageHeader,
-  SectionHeading,
-  Skeleton,
-  StatusBadge,
-} from "../components/ui";
+import { Button, CodeBlock, EmptyState, InlineAlert, PageHeader, SectionHeading, Skeleton, StatusBadge } from "../components/ui";
 import { api, getAdminToken } from "../lib/api";
 import { kindMeta, STATE_META } from "../lib/engines";
 import { shortDirection } from "../lib/format";
-import { useAsync } from "../lib/hooks";
+import { href, useAsync } from "../lib/hooks";
 import type { Engine } from "../lib/types";
 
 const ENGINE_SKELETON = `from nlp_research.translation.engine_api import (
@@ -54,17 +43,13 @@ export function EnginesPage() {
   return (
     <div>
       <PageHeader
-        title="Translation engines"
-        description="Status and settings for each engine. Auto mode tries the default first, then the next ready one."
-        actions={
-          <Button icon={RefreshCw} onClick={() => void refreshEngines()}>
-            Refresh
-          </Button>
-        }
+        title="Engines"
+        description="Each engine translates in its own way. In Best available mode the default answers first, then the next ready one."
+        actions={<Button onClick={() => void refreshEngines()}>Refresh</Button>}
       />
 
       {enginesError && (
-        <div className="mb-6">
+        <div className="mb-8">
           <InlineAlert tone="critical" title="Could not load engines">
             {enginesError.message}
           </InlineAlert>
@@ -72,43 +57,43 @@ export function EnginesPage() {
       )}
 
       {!engines && !enginesError && (
-        <div className="grid gap-4 md:grid-cols-2">
-          <Skeleton className="h-40" />
-          <Skeleton className="h-40" />
+        <div className="space-y-4">
+          <Skeleton className="h-36" />
+          <Skeleton className="h-36" />
         </div>
       )}
 
       {engines && (
-        <section className="reveal mb-12">
+        <section className="reveal" aria-labelledby="registered-title">
           <SectionHeading
+            id="registered-title"
             title="Registered"
-            description={
-              registered.length
-                ? `${registered.length} registered, ${ready} ready${engines.default_engine ? `, default: ${engines.default_engine}` : ""}.`
-                : undefined
+            actions={
+              registered.length > 0 && (
+                <span className="num font-mono text-[11.5px] text-faint">
+                  {ready} of {registered.length} ready
+                </span>
+              )
             }
           />
           {registered.length === 0 ? (
-            <EmptyState icon={Plug} title="No engines are registered yet">
-              <p>
-                That is expected at this stage: the dashboard was built first, and the engine plugs in later. Follow the
-                three steps below to connect one.
-              </p>
+            <EmptyState title="No engines are registered yet">
+              <p>The dashboard runs without one. Follow the three steps below to connect an engine.</p>
             </EmptyState>
           ) : (
-            <div className="grid gap-4 md:grid-cols-2">
+            <ul className="-mt-4 divide-y divide-line">
               {registered.map((engine) => (
-                <EngineCard key={engine.id} engine={engine} />
+                <EngineSheet key={engine.id} engine={engine} />
               ))}
-            </div>
+            </ul>
           )}
 
           {engines.broken.length > 0 && (
             <div className="mt-6 space-y-3">
-              <h3 className="font-semibold text-ink">Specs that failed to load</h3>
+              <h3 className="text-[14px] font-semibold text-ink">Specs that failed to load</h3>
               {engines.broken.map((item) => (
                 <InlineAlert key={item.spec} tone="critical" title={item.spec}>
-                  <span className="font-mono text-[13px]">{item.error}</span>
+                  <span className="font-mono text-[12.5px]">{item.error}</span>
                 </InlineAlert>
               ))}
             </div>
@@ -116,22 +101,32 @@ export function EnginesPage() {
         </section>
       )}
 
-      <section className="reveal mb-12" style={{ animationDelay: "80ms" }}>
+      <section className="reveal mt-16" aria-labelledby="connect-title">
         <SectionHeading
+          id="connect-title"
           title="Connect an engine"
-          description="The contract lives in nlp_research/translation/engine_api.py and needs only the standard library, so engines can be built in a notebook."
+          description={
+            <>
+              The contract is in <code className="font-mono text-[12.5px] text-ink-2">nlp_research/translation/engine_api.py</code> and needs only
+              the standard library, so an engine can start life in a notebook.
+            </>
+          }
         />
-        <ol className="space-y-5">
+        <ol className="max-w-[880px] space-y-8">
           <Step number={1} title="Implement the contract">
             <CodeBlock code={ENGINE_SKELETON} label="Python" />
           </Step>
-          <Step number={2} title="Register it with environment variables">
+          <Step number={2} title="Register it">
             <CodeBlock code={REGISTER} label="Environment" />
           </Step>
           <Step number={3} title="Measure it">
-            <p className="text-[15px] leading-relaxed text-ink-2">
-              Run <code className="font-mono text-[13.5px]">python -m nlp_research.translation.evaluate_engine</code> on a
-              held-out test set. The run appears on the Evaluation page.
+            <p className="text-[14px] leading-relaxed text-ink-2">
+              Run <code className="font-mono text-[12.5px] text-ink">python -m nlp_research.translation.evaluate_engine</code> on a held-out
+              test set. The scores appear under{" "}
+              <a href={href("evaluation")} className="text-ink underline decoration-line-strong underline-offset-4 hover:decoration-ink">
+                Evaluation
+              </a>
+              .
             </p>
           </Step>
         </ol>
@@ -140,43 +135,40 @@ export function EnginesPage() {
   );
 }
 
-function EngineCard({ engine }: { engine: Engine }) {
-  const { icon: Icon, label } = kindMeta(engine.kind);
+/** One engine as a specification: what it is on the left, the facts on the right. */
+function EngineSheet({ engine }: { engine: Engine }) {
   const state = STATE_META[engine.state];
   const isLlm = engine.kind === "llm-rag";
   return (
-    <article className="card flex flex-col gap-3 p-5">
-      <header className="flex items-start justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <span className="grid size-10 place-items-center rounded-xl bg-sunken text-ink-2">
-            <Icon aria-hidden className="size-5" />
-          </span>
-          <div>
-            <h3 className="text-[17px] leading-tight font-semibold text-ink">{engine.name}</h3>
-            <p className="font-mono text-[12.5px] text-muted">
-              {engine.id} · v{engine.version}
-            </p>
-          </div>
+    <li className="grid gap-x-14 gap-y-5 py-7 lg:grid-cols-[minmax(0,1fr)_280px]">
+      <div className="min-w-0">
+        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+          <h3 className="text-[18px] leading-tight font-semibold tracking-[-0.015em] text-ink">{engine.name}</h3>
+          {engine.is_default && <span className="text-[12px] font-medium text-accent-text">Default</span>}
         </div>
-        <StatusBadge tone={state.tone} label={state.label} />
-      </header>
-      {engine.description && <p className="text-[14.5px] leading-relaxed text-ink-2">{engine.description}</p>}
-      {engine.status_message && !(isLlm && engine.state === "not_configured") && (
-        <p className="text-[14px] text-ink">{engine.status_message}</p>
-      )}
-      {isLlm && <LlmKeyPanel />}
-      <div className="mt-auto flex flex-wrap gap-1.5">
-        <Chip>{label}</Chip>
-        {engine.directions.map((direction) => (
-          <Chip key={direction}>{shortDirection(direction)}</Chip>
-        ))}
-        <Chip>
-          {engine.offline ? <WifiOff aria-hidden className="size-3" /> : <Wifi aria-hidden className="size-3" />}
-          {engine.offline ? "Works offline" : "Needs internet"}
-        </Chip>
-        {engine.is_default && <Chip>Default</Chip>}
+        <p className="mt-1 font-mono text-[11.5px] text-faint">
+          {engine.id} · v{engine.version}
+        </p>
+        {engine.description && <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-ink-2">{engine.description}</p>}
+        {engine.status_message && !(isLlm && engine.state === "not_configured") && (
+          <p className="mt-2 max-w-2xl text-[13.5px] leading-relaxed text-muted">{engine.status_message}</p>
+        )}
+        {isLlm && <LlmKeyPanel />}
       </div>
-    </article>
+
+      <dl className="grid grid-cols-[92px_minmax(0,1fr)] content-start gap-x-4 gap-y-2.5 text-[13px] lg:border-l lg:border-line lg:pl-8">
+        <dt className="text-muted">State</dt>
+        <dd>
+          <StatusBadge {...state} />
+        </dd>
+        <dt className="text-muted">Method</dt>
+        <dd className="text-ink-2">{kindMeta(engine.kind).label}</dd>
+        <dt className="text-muted">Directions</dt>
+        <dd className="font-mono text-[12px] text-ink-2">{engine.directions.map(shortDirection).join(", ")}</dd>
+        <dt className="text-muted">Runs</dt>
+        <dd className="text-ink-2">{engine.offline ? "On this computer" : "Online"}</dd>
+      </dl>
+    </li>
   );
 }
 
@@ -194,14 +186,20 @@ function LlmKeyPanel() {
   const current = settings.data;
 
   if (settings.error) {
-    return <InlineAlert tone="warning" title="Could not load the API key settings">{settings.error.message}</InlineAlert>;
+    return (
+      <div className="mt-5">
+        <InlineAlert tone="warning" title="Could not load the API key settings">
+          {settings.error.message}
+        </InlineAlert>
+      </div>
+    );
   }
-  if (!current) return <Skeleton className="h-28" />;
+  if (!current) return <Skeleton className="mt-5 h-24" />;
   if (current.provider !== "gemini") {
     return (
-      <p className="text-[14px] text-ink-2">
-        This engine uses an OpenAI-compatible server set by{" "}
-        <code className="font-mono text-[13px]">LIKHIBI_LLM_PROVIDER</code>. Its key comes from the server environment.
+      <p className="mt-4 text-[13.5px] text-muted">
+        This engine uses an OpenAI-compatible server set by <code className="font-mono text-[12.5px]">LIKHIBI_LLM_PROVIDER</code>. Its key comes from
+        the server environment.
       </p>
     );
   }
@@ -244,46 +242,42 @@ function LlmKeyPanel() {
     }
   }
 
+  const code = "font-mono text-[12px] text-ink";
+
   return (
-    <div className="space-y-3 rounded-xl border border-line bg-surface-2 p-4">
-      <div className="flex items-center gap-2 font-semibold text-ink">
-        <KeyRound aria-hidden className="size-4 text-accent-text" />
-        Gemini API key
-      </div>
+    <div className="mt-5 max-w-2xl space-y-3 rounded-lg border border-line bg-surface-2 p-4">
+      <p className="text-[13.5px] font-semibold text-ink">Gemini API key</p>
 
       {current.key_source === "dashboard" && (
-        <p className="text-[14px] text-ink-2">
-          Saved in {current.store}, ending in <code className="font-mono text-[13px] text-ink">••••{current.key_hint}</code>.
+        <p className="text-[13.5px] text-ink-2">
+          Saved in {current.store}, ending in <code className={code}>••••{current.key_hint}</code>.
         </p>
       )}
       {current.key_source === "environment" && (
-        <p className="text-[14px] text-ink-2">
-          Using <code className="font-mono text-[13px]">{current.key_env_var}</code> from the server environment, ending in{" "}
-          <code className="font-mono text-[13px] text-ink">••••{current.key_hint}</code>. A key saved here takes its place.
+        <p className="text-[13.5px] text-ink-2">
+          Using <code className={code}>{current.key_env_var}</code> from the server environment, ending in <code className={code}>••••{current.key_hint}</code>. A key
+          saved here takes its place.
         </p>
       )}
       {current.key_source === null && (
-        <p className="text-[14px] text-ink-2">
+        <p className="text-[13.5px] text-ink-2">
           Paste a key to switch this engine on. Keys are free from{" "}
-          <a href={AI_STUDIO} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 font-semibold text-accent-text underline-offset-2 hover:underline">
+          <a href={AI_STUDIO} target="_blank" rel="noreferrer" className="text-ink underline decoration-line-strong underline-offset-4 hover:decoration-ink">
             Google AI Studio
-            <ExternalLink aria-hidden className="size-3.5" />
           </a>
           .
         </p>
       )}
 
-      {!current.can_edit && (
-        <p className="text-[14px] text-muted">To change the key, open the dashboard on the computer running it, at localhost.</p>
-      )}
+      {!current.can_edit && <p className="text-[13px] text-muted">To change the key, open the dashboard on the computer running it, at localhost.</p>}
       {current.can_edit && current.store === null && (
-        <p className="text-[14px] text-muted">
-          This computer has no secure credential store, so keys cannot be saved here. Set{" "}
-          <code className="font-mono text-[13px]">GEMINI_API_KEY</code> on the server instead.
+        <p className="text-[13px] text-muted">
+          This computer has no secure credential store, so keys cannot be saved here. Set <code className="font-mono text-[12px]">GEMINI_API_KEY</code> on the
+          server instead.
         </p>
       )}
       {canSave && current.edit_requires_token && !getAdminToken() && (
-        <p className="text-[14px] text-muted">Changing the key needs the admin token. Enter it on the Contributions page first.</p>
+        <p className="text-[13px] text-muted">Changing the key needs the admin token. Sign in on the Review page first.</p>
       )}
 
       {showForm && (
@@ -297,33 +291,47 @@ function LlmKeyPanel() {
               placeholder="Paste your Gemini API key"
               autoComplete="off"
               spellCheck={false}
-              className="h-10 min-w-0 flex-1 basis-56 rounded-lg border border-line-strong bg-surface px-3 font-mono text-[14px] text-ink focus:border-accent focus:outline-none"
+              className="field h-[34px] min-w-0 flex-1 basis-56 px-2.5 font-mono text-[13px]"
             />
             <Button variant="primary" type="submit" loading={busy === "save"} disabled={!draft.trim() || busy !== null}>
               {busy === "save" ? "Checking with Google" : "Save key"}
             </Button>
             {replacing && (
-              <Button variant="ghost" onClick={() => { setReplacing(false); setDraft(""); setError(null); }}>
+              <Button
+                variant="ghost"
+                onClick={() => {
+                  setReplacing(false);
+                  setDraft("");
+                  setError(null);
+                }}
+              >
                 Cancel
               </Button>
             )}
           </div>
-          <p className="text-[13px] leading-relaxed text-muted">
-            The key is checked with Google, then kept in {current.store}, encrypted for your user account. It never goes
-            into the project files or this browser, and is never shown again.
+          <p className="text-[12.5px] leading-relaxed text-muted">
+            Google checks the key, then it is kept in {current.store}, encrypted for your user account. It never goes into the project files or
+            this browser, and is not shown again.
           </p>
         </form>
       )}
 
       {canSave && current.key_source !== null && !replacing && (
         <div className="flex flex-wrap gap-2">
-          <Button size="sm" icon={KeyRound} onClick={() => { setReplacing(true); setConfirmRemove(false); setError(null); }}>
+          <Button
+            size="sm"
+            onClick={() => {
+              setReplacing(true);
+              setConfirmRemove(false);
+              setError(null);
+            }}
+          >
             {current.key_source === "dashboard" ? "Replace key" : "Save a key here"}
           </Button>
           {current.key_source === "dashboard" &&
             (confirmRemove ? (
               <>
-                <Button size="sm" variant="danger" icon={Trash2} loading={busy === "remove"} onClick={() => void remove()}>
+                <Button size="sm" variant="danger" loading={busy === "remove"} onClick={() => void remove()}>
                   Remove key
                 </Button>
                 <Button size="sm" variant="ghost" onClick={() => setConfirmRemove(false)}>
@@ -331,7 +339,7 @@ function LlmKeyPanel() {
                 </Button>
               </>
             ) : (
-              <Button size="sm" variant="ghost" icon={Trash2} onClick={() => setConfirmRemove(true)}>
+              <Button size="sm" variant="ghost" onClick={() => setConfirmRemove(true)}>
                 Remove
               </Button>
             ))}
@@ -345,12 +353,10 @@ function LlmKeyPanel() {
 
 function Step({ number, title, children }: { number: number; title: string; children: ReactNode }) {
   return (
-    <li className="grid gap-3 sm:grid-cols-[40px_1fr]">
-      <span className="keycap grid size-9 place-items-center rounded-full text-[15px] font-semibold text-ink">
-        {number}
-      </span>
+    <li className="grid gap-x-6 gap-y-2 md:grid-cols-[48px_minmax(0,1fr)]">
+      <span className="num pt-px font-mono text-[12px] text-accent-text">{String(number).padStart(2, "0")}</span>
       <div className="min-w-0">
-        <h3 className="mb-2 pt-1.5 font-medium text-ink">{title}</h3>
+        <h3 className="mb-3 text-[14.5px] font-semibold text-ink">{title}</h3>
         {children}
       </div>
     </li>
