@@ -168,4 +168,10 @@ class KeyPopupOverlay(context: Context) : View(context) {
     private fun sp(v: Float) = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, v, resources.displayMetrics)
 
     override fun onTouchEvent(event: MotionEvent?): Boolean = false
+
+    // Only ever as tall as the keyboard it covers; never asks for space of its own.
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        val h = if (MeasureSpec.getMode(heightMeasureSpec) == MeasureSpec.EXACTLY) MeasureSpec.getSize(heightMeasureSpec) else 0
+        setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec), h)
+    }
 }
