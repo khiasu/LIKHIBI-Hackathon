@@ -1,0 +1,1481 @@
+smartphone	NOUN	smartphone	technology	smartfone
+iphone	PROPN	iphone	technology	i phone
+ringtone	NOUN	phone ringtone	technology	ring tone
+unmute	VERB	unmute mic	technology,actions	
+earbud	NOUN	earbud	technology	earbuds
+handsfree	NOUN	hands free earphone	technology	hands free
+powerbank	NOUN	power bank	technology	power bank
+usb	NOUN	usb cable or drive	technology	
+memorycard	NOUN	memory card	technology	memory card
+gadget	NOUN	gadget	technology	gadgets
+file	NOUN	computer file	technology,work	files
+contact	NOUN	phone contact	technology	contacts
+dialer	NOUN	phone dial pad	technology	dial pad
+redial	VERB	redial number	technology,actions	
+roaming	NOUN	mobile roaming	technology,travel	
+talktime	NOUN	talk time	money,technology	talk time
+topup	NOUN	mobile recharge	money	top up
+simcard	NOUN	sim card	technology	sim card,sim
+dualsim	ADJ	dual sim	technology	dual sim
+backcover	NOUN	phone back cover	technology	back cover
+screenguard	NOUN	screen guard	technology	screen guard
+inbox	NOUN	inbox	technology,work	
+outbox	NOUN	outbox	technology	
+voicenote	NOUN	voice note	technology,media	voice note
+emoji	NOUN	emoji	media,slang	emojis
+sticker	NOUN	sticker	media,technology	stickers
+gif	NOUN	gif	media	
+meme	NOUN	meme	media	memes
+trending	ADJ	trending	media	
+hashtag	NOUN	hashtag	media	hash tag
+unfollow	VERB	unfollow	media,actions	
+subscriber	NOUN	subscriber	media	subscribers
+unsubscribe	VERB	unsubscribe	media,actions	
+vlog	NOUN	vlog	media	
+vlogger	NOUN	vlogger	media	
+youtuber	NOUN	youtuber	media	you tuber
+influencer	NOUN	influencer	media	
+bio	NOUN	social media bio	media	
+highlight	NOUN	highlight	media,leisure	highlights
+newsfeed	NOUN	news feed	media	news feed
+retweet	VERB	retweet	media,actions	
+repost	VERB	repost	media,actions	
+pic	NOUN	photo	media	pics
+picture	NOUN	photo	media	pictures
+photoshoot	NOUN	photo shoot	media,leisure	photo shoot
+clip	NOUN	video clip	media	clips
+livestream	NOUN	live stream	media	live stream
+signup	VERB	register account	technology,actions	sign up
+signin	VERB	log in	technology,actions	sign in
+username	NOUN	username	technology	user name
+userid	NOUN	user id	technology	user id
+otp	NOUN	one time password	technology,money	
+hacked	ADJ	hacked	technology	
+seen	ADJ	message seen	technology,slang	
+lastseen	NOUN	last seen	technology	last seen
+screenlock	NOUN	screen lock	technology	screen lock
+barcode	NOUN	barcode	money,work	bar code
+playstore	PROPN	play store	technology	play store
+appstore	PROPN	app store	technology	app store
+buffering	NOUN	video buffering	media,technology	
+netpack	NOUN	data pack	technology,money	net pack
+internetpack	NOUN	internet pack	technology,money	internet pack
+snapchat	PROPN	snapchat	media	
+tiktok	PROPN	tiktok	media	
+wechat	PROPN	wechat	media	
+skype	PROPN	skype	technology	
+netflix	PROPN	netflix	media,leisure	
+spotify	PROPN	spotify	media,leisure	
+ups	NOUN	power backup	technology,home	ups
+touchpad	NOUN	touch pad	technology	touch pad
+harddisk	NOUN	hard disk	technology	hard disk
+powerpoint	NOUN	slide presentation	work,technology	power point
+ppt	NOUN	ppt slides	work,technology	
+cyber	NOUN	cyber cafe	technology,places	
+chatbot	NOUN	chatbot	technology	
+megapixel	NOUN	megapixel	technology,media	
+hd	ADJ	high definition	media	
+ringlight	NOUN	ring light	media	ring light
+dslr	NOUN	dslr camera	media	
+cartoon	NOUN	cartoon	media,leisure	cartoons
+kdrama	NOUN	korean drama	media	k drama
+dubbed	ADJ	dubbed	media	
+subtitle	NOUN	subtitle	media	subtitles
+kpop	NOUN	korean pop	media,leisure	k pop
+superhit	NOUN	super hit	media,leisure	super hit
+celeb	NOUN	celebrity	media,leisure	
+fan	NOUN	fan supporter	leisure,media	fans
+award	NOUN	award	leisure,media	awards
+view	NOUN	video view	media	views
+webseries	NOUN	web series	media	web series
+drum	NOUN	drum	leisure	drums
+vocal	NOUN	singing vocal	leisure	vocals
+lyric	NOUN	song lyric	leisure	lyrics
+remix	NOUN	remix	leisure,media	
+mashup	NOUN	mash up	leisure,media	mash up
+hiphop	NOUN	hip hop	leisure	hip hop
+deejay	NOUN	dj	leisure	dj
+runnerup	NOUN	runner up	leisure	runner up
+move	NOUN	dance move	leisure	moves
+chord	NOUN	guitar chord	leisure	chords
+instrument	NOUN	musical instrument	leisure	instruments
+hit	NOUN	hit song	leisure,media	hits
+ost	NOUN	original soundtrack	media	
+bgm	NOUN	background music	media	
+fest	NOUN	festival	leisure,community	
+dancefloor	NOUN	dance floor	leisure,places	dance floor
+futsal	NOUN	futsal	leisure	
+pingpong	NOUN	table tennis	leisure	ping pong
+kabaddi	NOUN	kabaddi	leisure	
+shotput	NOUN	shot put	leisure	shot put
+rafting	NOUN	river rafting	leisure,travel	
+kungfu	NOUN	kung fu	leisure	kung fu
+zumba	NOUN	zumba	leisure,health	
+pushup	NOUN	push up	health	pushups,push ups
+situp	NOUN	sit up	health	sit ups
+pullup	NOUN	pull up	health	pull ups
+squat	NOUN	squat exercise	health	squats
+warmup	NOUN	warm up	health,leisure	warm up
+midfielder	NOUN	midfielder	leisure	
+freekick	NOUN	free kick	leisure	free kick
+throwin	NOUN	throw in	leisure	throw in
+yellowcard	NOUN	yellow card	leisure	yellow card
+redcard	NOUN	red card	leisure	red card
+fulltime	NOUN	full time	leisure	full time
+extratime	NOUN	extra time	leisure	extra time
+stud	NOUN	boot stud	leisure	studs
+shinguard	NOUN	shin guard	leisure	shin guard
+physio	NOUN	physiotherapist	health,leisure	
+hattrick	NOUN	hat trick	leisure	hat trick
+wicketkeeper	NOUN	wicket keeper	leisure	wicket keeper
+run	NOUN	cricket run	leisure	runs
+over	NOUN	cricket over	leisure	overs
+notout	ADJ	not out	leisure	not out
+stump	NOUN	cricket stump	leisure	stumps
+yorker	NOUN	yorker ball	leisure	
+carrom	NOUN	carrom board	leisure	
+tambola	NOUN	tambola bingo	leisure	
+housie	NOUN	housie bingo	leisure	
+toy	NOUN	toy	leisure,home	toys
+yoyo	NOUN	yo yo	leisure	yo yo
+videogame	NOUN	video game	leisure	video games,videogames
+gamer	NOUN	gamer	leisure	
+playstation	PROPN	playstation	leisure	play station
+xbox	PROPN	xbox	leisure	
+noob	NOUN	newbie	leisure,slang	
+gg	INTJ	good game	leisure,slang	
+kill	NOUN	game kill	leisure	kills
+coin	NOUN	coin	money,leisure	coins
+multiplayer	ADJ	multiplayer	leisure	
+gem	NOUN	game gem	leisure	gems
+diamond	NOUN	game currency	leisure	diamonds
+highscore	NOUN	high score	leisure	high score
+life	NOUN	extra life	leisure	lives
+esports	NOUN	esports	leisure	e sports
+pubg	PROPN	pubg	leisure	
+freefire	PROPN	free fire	leisure	free fire
+hobby	NOUN	hobby	leisure	hobbies
+timepass	NOUN	time pass	leisure,slang	time pass
+comic	NOUN	comic	leisure,media	comics
+charging	NOUN	phone charging	technology	
+smartwatch	NOUN	smart watch	technology	smart watch
+selfiestick	NOUN	selfie stick	technology,media	selfie stick
+headphone	NOUN	headphone	technology	headphones
+earphone	NOUN	earphone	technology	earphones
+missedcall	NOUN	missed call	technology	missed call
+videocall	NOUN	video call	technology	video call
+tollfree	ADJ	toll free	money,technology	toll free
+lte	NOUN	4g data	technology	
+volte	NOUN	volte calling	technology	
+unfriend	VERB	unfriend	media,actions	
+profilepic	NOUN	profile picture	media	profile pic
+webinar	NOUN	webinar	education,work	
+sms	NOUN	text message	technology	
+pls	INTJ	please	slang	plss
+plz	INTJ	please	slang	plzz
+lol	INTJ	laughing out loud	slang	
+omg	INTJ	oh my god	slang	
+btw	ADV	by the way	slang	
+brb	INTJ	be right back	slang	
+ttyl	INTJ	talk later	slang	
+idk	INTJ	i do not know	slang	
+fyi	INTJ	for your information	slang,work	
+hbd	INTJ	happy birthday	greetings	
+gn	INTJ	good night	greetings	
+lmao	INTJ	laughing hard	slang	
+thx	INTJ	thanks	greetings	thnx
+ghosting	NOUN	ignoring someone	slang,feelings	
+unsend	VERB	unsend message	technology,actions	
+popup	NOUN	pop up	technology,media	pop up
+pirated	ADJ	pirated	media	
+rj	NOUN	radio jockey	media	
+vj	NOUN	video jockey	media	
+promo	NOUN	promo offer	money,media	
+settop	NOUN	set top box	technology,media	set top
+biopic	NOUN	biopic	media	
+prequel	NOUN	prequel	media	
+housefull	ADJ	sold out	media	house full
+scifi	NOUN	sci fi	media	sci fi
+stuntman	NOUN	stuntman	media	
+dialogue	NOUN	movie dialogue	media	dialogues
+synth	NOUN	synthesizer	leisure	
+acapella	NOUN	acapella	leisure	a cappella
+edm	NOUN	edm	leisure	
+frontman	NOUN	front man	leisure	front man
+breakdance	NOUN	breakdance	leisure	break dance
+cardio	NOUN	cardio exercise	health	
+deadlift	NOUN	dead lift	health	dead lift
+lifting	NOUN	weight lifting	health	
+powerlifting	NOUN	power lifting	health	power lifting
+weight	NOUN	gym weight	health,leisure	weights
+rep	NOUN	repetition	health	reps
+uno	PROPN	uno	leisure	
+respawn	VERB	respawn	leisure	
+booyah	INTJ	game win	leisure,slang	
+op	ADJ	overpowered	slang,leisure	
+standup	NOUN	stand up comedy	media,leisure	stand up
+fresher	NOUN	new student	education	freshers
+rewind	VERB	rewind	media,actions	
+screencast	NOUN	screen cast	technology	screen cast
+goal	NOUN	goal	leisure	goals
+point	NOUN	point	leisure	points
+team	NOUN	team	leisure,work	teams
+coach	VERB	coach	leisure,actions	coached
+longjump	NOUN	long jump	leisure	long jump
+highjump	NOUN	high jump	leisure	high jump
+polevault	NOUN	pole vault	leisure	pole vault
+slowmotion	NOUN	slow motion	media	slow motion
+slowmo	NOUN	slow motion	media	slow mo
+drs	NOUN	umpire review	leisure	
+lap	NOUN	lap	leisure	laps
+stand	NOUN	stadium stand	leisure	stands
+sock	NOUN	sock	clothing	socks
+spike	NOUN	running spike	leisure	spikes
+glove	NOUN	glove	clothing	gloves
+pad	NOUN	cricket pad	leisure	pads
+mouthguard	NOUN	mouth guard	leisure,health	mouth guard
+accessory	NOUN	accessory	clothing	accessories
+admitted	VERB	admitted	education,health	
+ahh	INTJ	ahh	slang	
+anm	NOUN	health worker	health,civic	
+anybody	NOUN	anybody	community	
+anyday	ADV	any day	time	
+anything	NOUN	anything	community	
+anytime	ADV	any time	time	
+aww	INTJ	aww	feelings	
+ayurvedic	ADJ	ayurvedic	health	
+bean	NOUN	bean	food	beans
+bedsheet	NOUN	bed sheet	home	bed sheet
+betadine	NOUN	antiseptic solution	health	
+blind	NOUN	window blind	home	blinds
+bloodbank	NOUN	blood bank	health,places	blood bank
+bottled	ADJ	bottled	food	
+bournvita	PROPN	malt drink	food	
+bp	NOUN	blood pressure	health	b p
+breaktime	NOUN	break time	education,work	break time
+byebye	INTJ	bye bye	greetings	bye bye
+calorie	NOUN	calorie	health,food	calories
+capsule	NOUN	capsule	health	capsules
+casual	NOUN	casual wear	clothing	casuals
+ccu	NOUN	critical care unit	health	
+chappal	NOUN	sandal	clothing	
+chc	NOUN	health centre	health,civic	
+cheers	INTJ	cheers	greetings	
+chemo	NOUN	chemotherapy	health	
+chopping	NOUN	chopping board	food	
+chowmein	NOUN	chowmein	food	
+chowmin	NOUN	chowmin	food	chowmein
+chunk	NOUN	chunk	food	chunks
+complan	NOUN	health drink	food,health	
+cosmetic	NOUN	cosmetics	health,clothing	cosmetics
+compounder	NOUN	pharmacy dispenser	health	
+congrats	INTJ	congratulations	greetings	
+cookie	NOUN	biscuit	food	cookies
+cornflake	NOUN	cornflakes	food	cornflakes
+cringy	ADJ	cringe	slang,feelings	
+croc	NOUN	rubber clog	clothing	crocs
+crocin	NOUN	paracetamol tablet	health	
+croptop	NOUN	crop top	clothing	crop top
+crunchy	ADJ	crunchy	food	
+dayoff	NOUN	day off	work,time	day off
+deo	NOUN	deodorant	health	
+dettol	NOUN	antiseptic	health	
+dinnerset	NOUN	dinner set	home	dinner set
+disprin	NOUN	pain tablet	health	
+dosa	NOUN	dosa	food	
+drink	NOUN	drink	food	drinks
+drop	NOUN	eye drops	health	drops
+dryclean	VERB	dry clean	clothing,actions	dry clean
+dupatta	NOUN	dupatta	clothing	
+earring	NOUN	earring	clothing	earrings
+ent	NOUN	ear nose throat	health	
+everybody	NOUN	everybody	community	
+everyone	NOUN	everyone	community	
+everything	NOUN	everything	community	
+eww	INTJ	yuck	feelings,slang	
+fanta	NOUN	soft drink	food	
+fastfood	NOUN	fast food	food	fast food
+firstaid	NOUN	first aid	health	first aid
+fit	NOUN	seizure	health	fits
+flared	ADJ	flared	clothing	
+flipflop	NOUN	flip flop	clothing	flip flops,flipflops
+floater	NOUN	floating voter	civic	floaters
+formal	NOUN	formal wear	clothing	formals
+friedrice	NOUN	fried rice	food	fried rice
+frooti	NOUN	mango drink	food	
+fruit	NOUN	fruit	food	fruits
+fullsleeve	ADJ	full sleeve	clothing	full sleeve
+gasstove	NOUN	gas stove	home	gas stove
+glucometer	NOUN	blood sugar meter	health	
+goodmorning	INTJ	good morning	greetings	good morning
+goodnight	INTJ	good night	greetings	good night
+gosh	INTJ	gosh	feelings,slang	
+grape	NOUN	grape	food	grapes
+gumboot	NOUN	rubber boot	clothing	gumboots
+guy	NOUN	friend	community	guys
+hairband	NOUN	hair band	clothing	hair band
+hairclip	NOUN	hair clip	clothing	hair clip
+hairdryer	NOUN	hair dryer	home	hair dryer
+hairspray	NOUN	hair spray	clothing	hair spray
+halfsleeve	ADJ	half sleeve	clothing	half sleeve
+harpic	NOUN	toilet cleaner	home	
+heartattack	NOUN	heart attack	health	heart attack
+heel	NOUN	high heel	clothing	heels,highheels,high heels
+hmm	INTJ	hmm	feelings,slang	
+holiday	NOUN	holiday	time,leisure	holidays
+hoodie	NOUN	hoodie	clothing	
+horlicks	NOUN	malt drink	food	
+hospitalised	VERB	admit to hospital	health	
+hurray	INTJ	hooray	feelings	
+hotcase	NOUN	insulated food box	home	hot case
+idli	NOUN	idli	food	
+iodex	NOUN	pain balm	health	
+kabab	NOUN	kebab	food	kebap
+kajal	NOUN	kajal	clothing	
+kk	INTJ	okay	greetings,slang	
+kurti	NOUN	kurti	clothing	
+leggings	NOUN	legging	clothing	
+lehenga	NOUN	lehenga	clothing	
+lice	NOUN	head lice	health	
+limca	NOUN	lemon soda	food	
+loafer	NOUN	loafer	clothing	loafers
+lunchbox	NOUN	lunch box	food,home	lunch box
+lung	NOUN	lung	health	lungs
+maaza	NOUN	mango drink	food	
+maggi	NOUN	instant noodles	food	
+mcb	NOUN	circuit breaker	home	
+medical	NOUN	medical checkup	health,work	medicals
+mitten	NOUN	mitten	clothing	mittens
+mixie	NOUN	mixer grinder	home	
+month	NOUN	month	time	months
+moov	NOUN	pain balm	health	
+multiplug	NOUN	multi plug	home	multi plug
+nailpolish	NOUN	nail polish	clothing	nail polish
+nescafe	NOUN	instant coffee	food	
+newyear	NOUN	new year	time,greetings	new year
+nightlamp	NOUN	night lamp	home	night lamp
+nightsuit	NOUN	night suit	clothing	night suit
+nope	INTJ	no	slang	
+nugget	NOUN	nugget	food	nuggets
+oat	NOUN	oats	food	oats
+oclock	NOUN	o clock	time	o clock
+ofcourse	INTJ	of course	slang	of course
+offday	NOUN	off day	work,time	off day
+ohh	INTJ	oh	feelings	oh
+oki	INTJ	okay	greetings	okie
+okie	INTJ	okay	greetings	
+okk	INTJ	okay	greetings	ok
+oops	INTJ	oops	feelings	
+opd	NOUN	outpatient department	health	
+ors	NOUN	oral rehydration salt	health	
+ortho	NOUN	orthopaedics	health	
+ot	NOUN	operation theatre	health	
+ouch	INTJ	ouch	feelings	
+paracetamol	NOUN	fever tablet	health	
+paratha	NOUN	paratha	food	
+partywear	NOUN	party wear	clothing	party wear
+pattie	NOUN	potato patty	food	patty
+pea	NOUN	pea	food	peas
+phc	NOUN	primary health centre	health,civic	
+phenyl	NOUN	floor cleaner	home	
+pill	NOUN	pill	health	pills
+pimple	NOUN	pimple	health	pimples
+placemat	NOUN	place mat	home,food	place mat
+platelet	NOUN	blood platelet	health	platelets
+pleated	ADJ	pleated	clothing	
+poha	NOUN	poha	food	
+ppe	NOUN	protective gear	health	p p e
+prepone	VERB	advance schedule	actions,work	
+printed	ADJ	printed	clothing	
+rasna	NOUN	squash drink	food	
+razai	NOUN	quilt	home	
+readymade	ADJ	ready made	clothing	ready made
+recheck	VERB	check again	actions	
+redbull	NOUN	energy drink	food	red bull
+repairing	VERB	repairing	home,work	
+ripped	ADJ	torn	clothing	
+rubberband	NOUN	rubber band	home	rubber band
+sabzi	NOUN	vegetables	food	
+sandal	NOUN	sandal	clothing	sandals
+savlon	NOUN	antiseptic cream	health	
+second	NOUN	second	time	seconds
+sharbat	NOUN	sherbet drink	food	
+shh	INTJ	quiet	slang	
+since	ADV	since	time	
+sizzler	NOUN	sizzler	food	
+slipper	NOUN	slipper	clothing	slippers
+snack	NOUN	snack	food	snacks
+sneaker	NOUN	sneaker	clothing	sneakers
+soapcase	NOUN	soap case	home	soap case
+soapdish	NOUN	soap dish	home	soap dish
+something	NOUN	something	community	
+soyabean	NOUN	soya bean	food	soya bean,soybean
+spice	NOUN	spice	food	spices
+sry	INTJ	sorry	greetings	
+stitch	NOUN	stitch	health	stitches
+stocking	NOUN	stocking	clothing	stockings
+sugarfree	ADJ	sugar free	food,health	sugar free
+sunmica	NOUN	laminate sheet	home	sun mica
+sweet	NOUN	sweet	food	sweets
+symptom	NOUN	symptom	health	symptoms
+tablemat	NOUN	table mat	home,food	table mat
+tablet	NOUN	pill	health	tablets
+tailormade	ADJ	tailor made	clothing	tailor made
+tandoori	ADJ	tandoori	food	
+teeshirt	NOUN	tee shirt	clothing	tee shirt,t shirt
+thanku	INTJ	thank you	greetings	
+thankyou	INTJ	thank you	greetings	thank you
+threading	NOUN	facial threading	health	
+thukpa	NOUN	thukpa	food	
+tiffinbox	NOUN	tiffin box	food	tiffin box
+tikka	NOUN	tikka	food	
+tile	NOUN	tile	home	tiles
+timeout	NOUN	time out	time,leisure	time out
+timing	NOUN	timing	time	timings
+toiletpaper	NOUN	toilet paper	home	toilet paper
+tong	NOUN	tongs	home	
+tonsil	NOUN	tonsil	health	tonsils
+towelrail	NOUN	towel rail	home	towel rail
+tq	INTJ	thank you	greetings	
+trackpant	NOUN	track pant	clothing	track pants,trackpants
+tracksuit	NOUN	track suit	clothing	track suit
+trouser	NOUN	trouser	clothing	trousers
+tubelight	NOUN	tube light	home	tube light
+ty	INTJ	thank you	greetings	
+ugh	INTJ	ugh	feelings	
+uh	INTJ	uh	slang	
+um	INTJ	um	slang	
+umm	INTJ	umm	slang	
+unstitched	ADJ	unstitched	clothing	
+until	ADV	until	time	
+upma	NOUN	upma	food	
+utensil	NOUN	utensil	home,food	utensils
+vicks	NOUN	cold balm	health	
+volini	NOUN	pain balm	health	
+waterbottle	NOUN	water bottle	home	water bottle
+wedge	NOUN	wedge heel	clothing	wedges
+weekday	NOUN	weekday	time	weekdays
+week	NOUN	week	time	weeks
+welldone	INTJ	well done	greetings,feelings	well done
+whenever	ADV	whenever	time	
+whichever	ADV	whichever	community	
+whoever	ADV	whoever	community	
+xxl	NOUN	extra extra large	clothing	
+yaa	INTJ	yes	slang,greetings	
+yep	INTJ	yes	slang	
+yuck	INTJ	yuck	feelings	
+yum	INTJ	yum	food,feelings	
+yup	INTJ	yes	slang	
+due	NOUN	fee due	money	dues
+upi	NOUN	upi payment	money	
+share	NOUN	share stock	money	shares
+mrp	NOUN	maximum retail price	money	
+good	NOUN	merchandise	money,work	goods
+cashback	NOUN	cash back	money	cash back
+arrear	NOUN	arrears	money,work	arrears
+charge	NOUN	fee charge	money	charges
+cashless	ADJ	cashless	money	
+netbanking	NOUN	net banking	money	net banking
+earning	NOUN	income	money	
+expense	NOUN	expense	money	expenses
+kyc	NOUN	know your customer	money	
+cheapest	ADJ	cheapest	money	
+petrolpump	NOUN	petrol pump	travel,places	petrol pump
+autorickshaw	NOUN	auto rickshaw	travel	auto rickshaw
+scooty	NOUN	scooter	travel	
+maxicab	NOUN	minibus	travel	
+challan	NOUN	traffic fine receipt	travel,civic	
+mobil	NOUN	engine oil	travel	
+sparepart	NOUN	spare part	travel	spareparts,spare parts
+stepney	NOUN	spare tyre	travel	
+overspeed	NOUN	speeding	travel,civic	
+uturn	NOUN	u turn	travel	u turn
+busstop	NOUN	bus stop	travel,places	bus stop
+homestay	NOUN	homestay	travel,places	
+checkin	NOUN	check in	travel	check in
+idcard	NOUN	id card	civic	id card
+checkpost	NOUN	police checkpost	civic,travel	check post
+nursinghome	NOUN	nursing home	health,places	nursing home
+postoffice	NOUN	post office	civic,places	post office
+helipad	NOUN	helipad	travel,places	
+barrack	NOUN	army barracks	civic	barracks
+townhall	NOUN	town hall	civic,places	town hall
+nonac	ADJ	non ac	travel	non ac
+hiring	NOUN	hiring	work	
+rentcar	NOUN	car rental	travel	rent car
+carrent	NOUN	car rental	travel	car rent
+cng	NOUN	compressed natural gas	travel	
+lpg	NOUN	cooking gas	home	
+fillingstation	NOUN	filling station	travel,places	filling station
+dhaba	NOUN	roadside eatery	food,places	
+restro	NOUN	restaurant	food,places	resto
+waitingroom	NOUN	waiting room	places,health	waiting room
+gatepass	NOUN	gate pass	civic,work	gate pass
+parkingfee	NOUN	parking fee	travel,money	parking fee
+fastag	NOUN	toll tag	travel,money	
+uber	PROPN	uber taxi	travel	
+rapido	PROPN	bike taxi	travel	
+zomato	PROPN	food delivery app	food	
+swiggy	PROPN	food delivery app	food	
+flipkart	PROPN	online shop	money	
+checking	NOUN	security check	civic,travel	
+chowkidar	NOUN	watchman	civic	
+airhostess	NOUN	flight attendant	travel	air hostess
+shareride	NOUN	shared ride	travel	share ride
+fullbook	ADJ	fully booked	travel	full book
+stocklimit	NOUN	stock limit	money,work	
+outofstock	ADJ	out of stock	money	out of stock
+paytm	PROPN	payment app	money	
+gpay	PROPN	google pay	money	
+phonepe	PROPN	payment app	money	
+bhim	PROPN	payment app	money	
+neft	NOUN	bank transfer	money	
+rtgs	NOUN	bank transfer	money	
+imps	NOUN	instant bank transfer	money	
+ifsc	NOUN	bank branch code	money	
+micr	NOUN	cheque code	money	
+buck	NOUN	rupee	money	bucks
+fd	NOUN	fixed deposit	money	
+linking	NOUN	aadhaar linking	civic,money	
+fundraising	NOUN	fundraising	money,community	
+piece	NOUN	item	money	pieces
+towing	NOUN	vehicle towing	travel	
+rc	NOUN	registration certificate	travel,civic	
+overloading	NOUN	overloading	travel,civic	
+highbeam	NOUN	high beam	travel	high beam
+airway	NOUN	airline	travel	airways
+superfast	ADJ	express	travel	
+pnr	NOUN	train ticket number	travel	
+jcb	NOUN	excavator	work	
+volvo	PROPN	volvo bus	travel	
+seater	NOUN	vehicle seat	travel	
+checkgate	NOUN	check gate	civic,travel	check gate
+pumphouse	NOUN	pump house	places,home	pump house
+cab	NOUN	cab	travel	cabs
+bus	NOUN	bus	travel	buses
+auto	NOUN	auto rickshaw	travel	autos
+driver	NOUN	driver	travel,work	drivers
+highway	NOUN	highway	travel,places	highways
+busfare	NOUN	bus fare	travel	bus fare
+taxifare	NOUN	taxi fare	travel	taxi fare
+cashmemo	NOUN	cash memo	money	cash memo
+school	NOUN	school	education	iskul,skul
+college	NOUN	college	education	colleg,collage
+university	NOUN	university	education	univercity
+class	NOUN	class	education	classes
+exam	NOUN	exam	education	exams,examination
+test	NOUN	test	education	tests
+result	NOUN	exam result	education	results
+mark	NOUN	exam mark	education	marks
+grade	NOUN	grade	education	grades
+percentage	NOUN	percentage	education	percent
+distinction	NOUN	distinction	education	
+admission	NOUN	admission	education	admissions
+form	NOUN	form	education,civic	forms
+fee	NOUN	school fee	education,money	fees
+library	NOUN	library	education,places	libary
+teacher	NOUN	teacher	education	teachers
+principal	NOUN	school principal	education,work	principals
+student	NOUN	student	education	students
+hostel	NOUN	hostel	education,places	hostels
+uniform	NOUN	school uniform	education,clothing	uniforms
+bag	NOUN	school bag	education	bags
+textbook	NOUN	textbook	education	text book
+notebook	NOUN	notebook	education	note book
+pen	NOUN	pen	education,work	pens
+pencil	NOUN	pencil	education	pencils
+eraser	NOUN	eraser	education	rubber
+ruler	NOUN	ruler	education	rulers
+compass	NOUN	geometry compass	education	
+blackboard	NOUN	blackboard	education	black board
+duster	NOUN	board duster	education	dusters
+bench	NOUN	school bench	education,places	benches
+desk	NOUN	desk	education,work	desks
+assignment	NOUN	assignment	education	assignments
+project	NOUN	project	education,work	projects
+homework	NOUN	homework	education	home work
+tuition	NOUN	tuition	education,money	tuitions
+coaching	NOUN	coaching class	education	coaching centre
+syllabus	NOUN	syllabus	education	silabus
+subject	NOUN	subject	education	subjects
+course	NOUN	course	education	courses
+degree	NOUN	degree	education	degrees
+diploma	NOUN	diploma	education	diplomas
+paper	NOUN	exam paper	education,work	papers
+invigilator	NOUN	exam invigilator	education	
+revaluation	NOUN	marks revaluation	education	
+detention	NOUN	school detention	education	detentions
+scholarship	NOUN	scholarship	education,money	scholarships
+stipend	NOUN	stipend	education,money	stipends
+science	NOUN	science subject	education	sciences
+maths	NOUN	maths subject	education	math,mathematics
+english	NOUN	english subject	education	inglish
+history	NOUN	history subject	education	histories
+geography	NOUN	geography subject	education	
+computer	NOUN	computer	education,work	computers
+lab	NOUN	laboratory	education,places	labs,laboratory
+practical	NOUN	practical exam	education	practicals
+theory	NOUN	theory paper	education	theories
+seminar	NOUN	seminar	education,work	seminars
+convocation	NOUN	graduation ceremony	education	
+graduation	NOUN	graduation	education	
+pg	NOUN	postgraduate	education	postgraduate
+ug	NOUN	undergraduate	education	undergraduate
+semester	NOUN	semester	education	semesters
+session	NOUN	academic session	education,time	sessions
+vacation	NOUN	vacation	education,time	vacations
+timetable	NOUN	timetable	education,time	time table
+attendance	NOUN	attendance	education,work	
+absent	ADJ	absent	education	
+present	ADJ	present	education	
+quiz	NOUN	quiz	education,leisure	quizzes
+mock	ADJ	mock test	education	
+prospectus	NOUN	prospectus	education	prospectuses
+merit	NOUN	merit list	education	merits
+topper	NOUN	topper	education	toppers
+pass	VERB	pass exam	education,actions	passed
+fail	VERB	fail exam	education,actions	failed
+supply	NOUN	supplementary exam	education	supplementary
+backlog	NOUN	backlog	education,work	backlogs
+mess	NOUN	hostel mess	education,places	messes
+warden	NOUN	hostel warden	education,civic	wardens
+bell	NOUN	school bell	education	bells
+sportsday	NOUN	sports day	education,leisure	sports day
+annualday	NOUN	annual day	education,leisure	annual day
+farewell	NOUN	farewell	education,feelings	farewells
+lecturer	NOUN	lecturer	education	lecturers
+professor	NOUN	professor	education	professors
+hod	NOUN	head of department	education	
+dean	NOUN	dean	education	deans
+dictionary	NOUN	dictionary	education	dictionaries
+atlas	NOUN	atlas	education	atlases
+globe	NOUN	globe	education	globes
+chart	NOUN	chart	education,work	charts
+poster	NOUN	poster	education,media	posters
+projector	NOUN	projector	education,technology	projectors
+smartboard	NOUN	smart board	education,technology	smart board
+laptop	NOUN	laptop	technology,work	laptops
+keyboard	NOUN	keyboard	technology	keyboards
+mouse	NOUN	computer mouse	technology	mice
+monitor	NOUN	computer monitor	technology	monitors
+printer	NOUN	printer	technology,work	printers
+scanner	NOUN	scanner	technology,work	scanners
+calculator	NOUN	calculator	education,work	calculators
+folder	NOUN	folder	work,education	folders
+registrar	NOUN	registrar	education,civic	registrars
+language	NOUN	language	education	languages
+qualification	NOUN	qualification	education,work	qualifications
+office	NOUN	office	work,places	offices
+boss	NOUN	boss	work	bosses
+manager	NOUN	manager	work	managers
+staff	NOUN	staff	work	staffs
+employee	NOUN	employee	work	employees
+employer	NOUN	employer	work	employers
+colleague	NOUN	colleague	work	colleagues
+interview	NOUN	job interview	work	interviews
+cv	NOUN	curriculum vitae	work	
+resume	NOUN	resume	work	resumes
+salary	NOUN	salary	money,work	salaries
+bonus	NOUN	bonus	money,work	bonuses
+increment	NOUN	pay increment	money,work	increments
+promotion	NOUN	job promotion	work	promotions
+posting	NOUN	job posting	work	postings
+shift	NOUN	work shift	work	shifts
+duty	NOUN	duty	work	duties
+overtime	NOUN	overtime	work,money	
+leave	NOUN	leave	work	leaves
+pension	NOUN	pension	money,work	pensions
+retirement	NOUN	retirement	work	
+resignation	NOUN	resignation	work	resignations
+appointment	NOUN	appointment	work	appointments
+letter	NOUN	letter	work	letters
+joining	NOUN	joining letter	work	
+contract	NOUN	contract	work	contracts
+contractor	NOUN	contractor	work	contractors
+department	NOUN	department	work,civic	departments
+section	NOUN	section	work	sections
+record	NOUN	record	work	records
+meeting	NOUN	meeting	work	meetings
+agenda	NOUN	agenda	work	agendas
+minute	NOUN	minute	time	minutes
+memo	NOUN	memo	work	memos
+notice	NOUN	notice	civic,work	notices
+circular	NOUN	circular	civic,work	circulars
+envelope	NOUN	envelope	work	envelopes
+calendar	NOUN	calendar	work,time	calendars
+diary	NOUN	diary	work	diaries
+xerox	NOUN	photocopy	work	zerox
+photostat	NOUN	photocopy	work	photostats
+stationery	NOUN	stationery	work	stationary
+stapler	NOUN	stapler	work	staplers
+ink	NOUN	ink	work	inks
+cartridge	NOUN	printer cartridge	work,technology	cartridges
+internet	NOUN	internet	technology,work	
+network	NOUN	network	technology	networks
+server	NOUN	server	technology	servers
+password	NOUN	password	technology,work	passwords
+target	NOUN	target	work	targets
+progress	NOUN	progress	work	
+review	NOUN	review	work	reviews
+feedback	NOUN	feedback	work	
+training	NOUN	training	work	trainings
+trainee	NOUN	trainee	work	trainees
+intern	NOUN	intern	work	interns
+internship	NOUN	internship	work	internships
+apprentice	NOUN	apprentice	work	apprentices
+freelance	ADJ	freelance	work	
+freelancer	NOUN	freelancer	work	freelancers
+business	NOUN	business	money,work	businesses
+company	NOUN	company	work	companies
+firm	NOUN	firm	work	firms
+owner	NOUN	owner	work,money	owners
+partner	NOUN	partner	work	partners
+client	NOUN	client	work,money	clients
+customer	NOUN	customer	money	customers
+vendor	NOUN	vendor	work,money	vendors
+supplier	NOUN	supplier	work,money	suppliers
+invoice	NOUN	invoice	money,work	invoices
+bill	NOUN	bill	money	bills
+quotation	NOUN	quotation	money,work	quotations
+tender	NOUN	tender	civic,work	tenders
+inventory	NOUN	inventory	work,money	inventories
+warehouse	NOUN	warehouse	work,places	warehouses
+godown	NOUN	godown	work,places	godowns
+delivery	NOUN	delivery	work,travel	deliveries
+courier	NOUN	courier	work,travel	couriers
+labour	NOUN	labour	work	labourers,labor
+worker	NOUN	worker	work	workers
+supervisor	NOUN	supervisor	work	supervisors
+engineer	NOUN	engineer	work	engineers
+doctor	NOUN	doctor	health,work	doctors,dr
+nurse	NOUN	nurse	health,work	nurses
+clerk	NOUN	clerk	work	clerks
+peon	NOUN	office peon	work	peons
+accountant	NOUN	accountant	money,work	accountants
+cashier	NOUN	cashier	money,work	cashiers
+receptionist	NOUN	receptionist	work	receptionists
+typist	NOUN	typist	work	typists
+data	NOUN	data	technology,work	
+entry	NOUN	data entry	work	entries
+officer	NOUN	officer	civic,work	officers
+inspector	NOUN	inspector	civic,work	inspectors
+manpower	NOUN	manpower	work	
+vacancy	NOUN	vacancy	work	vacancies
+recruitment	NOUN	recruitment	work	
+experience	NOUN	work experience	work	experiences
+skill	NOUN	skill	work	skills
+communication	NOUN	communication	work	
+dresscode	NOUN	dress code	work,clothing	dress code
+hr	NOUN	human resources	work	h r
+headquarters	NOUN	headquarters	work	hq
+branch	NOUN	branch	money,work	branches
+zone	NOUN	zone	places,work	zones
+unit	NOUN	unit	work,civic	units
+sector	NOUN	sector	work	sectors
+cabin	NOUN	cabin	work,places	cabins
+chair	NOUN	chair	work,home	chairs
+compensation	NOUN	compensation	money,work	
+gratuity	NOUN	gratuity	money,work	
+pf	NOUN	provident fund	money,work	
+insurance	NOUN	insurance	money	
+workload	NOUN	workload	work	
+deadline	NOUN	deadline	work	deadlines
+agent	NOUN	agent	work,money	agents
+broker	NOUN	broker	money,work	brokers
+payslip	NOUN	payslip	money,work	pay slip
+union	NOUN	union	work,civic	unions
+strike	NOUN	strike	work,civic	strikes
+government	NOUN	government	civic	govt
+minister	NOUN	minister	civic	ministers
+mla	NOUN	mla legislator	civic	
+mp	NOUN	member of parliament	civic	
+councillor	NOUN	councillor	civic	councillors
+chairman	NOUN	chairman	civic	chairmen
+secretary	NOUN	secretary	civic,work	secretaries
+commissioner	NOUN	commissioner	civic	commissioners
+collector	NOUN	district collector	civic	
+sdm	NOUN	sub divisional magistrate	civic	
+dc	NOUN	deputy commissioner	civic	
+district	NOUN	district	civic,places	districts
+block	NOUN	development block	civic	blocks
+municipal	ADJ	municipal	civic	
+municipality	NOUN	municipality	civic	municipalities
+corporation	NOUN	corporation	civic	corporations
+panchayat	NOUN	village council	civic	
+ward	NOUN	ward	civic	wards
+election	NOUN	election	civic	elections
+voter	NOUN	voter	civic	voters
+polling	NOUN	polling	civic	
+booth	NOUN	polling booth	civic	booths
+party	NOUN	political party	civic,community	parties
+manifesto	NOUN	manifesto	civic	manifestos
+ballot	NOUN	ballot	civic	ballots
+evm	NOUN	voting machine	civic	
+nomination	NOUN	nomination	civic	nominations
+constituency	NOUN	constituency	civic	constituencies
+legislator	NOUN	legislator	civic	legislators
+parliament	NOUN	parliament	civic	
+assembly	NOUN	legislative assembly	civic	assemblies
+policy	NOUN	policy	civic,money	policies
+scheme	NOUN	government scheme	civic	schemes
+subsidy	NOUN	subsidy	civic,money	subsidies
+ration	NOUN	ration	civic,food	rations
+rationcard	NOUN	ration card	civic	ration card
+bpl	NOUN	below poverty line	civic	
+aadhaar	NOUN	aadhaar card	civic	aadhar
+pan	NOUN	pan card	civic,money	
+passport	NOUN	passport	civic,travel	passports
+visa	NOUN	visa	civic,travel	visas
+birth	NOUN	birth record	civic	births
+death	NOUN	death record	civic	deaths
+marriage	NOUN	marriage	civic,community	marriages
+affidavit	NOUN	affidavit	civic	affidavits
+notary	NOUN	notary	civic	notaries
+stamppaper	NOUN	stamp paper	civic	stamp paper
+complaint	NOUN	complaint	civic	complaints
+petition	NOUN	petition	civic	petitions
+fir	NOUN	first information report	civic	
+police	NOUN	police	civic	
+station	NOUN	police station	civic,places	stations
+thana	NOUN	police station	civic	
+constable	NOUN	constable	civic	constables
+subinspector	NOUN	sub inspector	civic	sub inspector
+sp	NOUN	superintendent of police	civic	
+dsp	NOUN	deputy superintendent	civic	
+jail	NOUN	jail	civic	jails
+prison	NOUN	prison	civic	prisons
+court	NOUN	court	civic	courts
+judge	NOUN	judge	civic	judges
+magistrate	NOUN	magistrate	civic	magistrates
+case	NOUN	legal case	civic	cases
+bail	NOUN	bail	civic	
+warrant	NOUN	warrant	civic	warrants
+summon	NOUN	court summons	civic	summons
+penalty	NOUN	penalty	civic,money	penalties
+offence	NOUN	offence	civic	offences,offense
+crime	NOUN	crime	civic	crimes
+theft	NOUN	theft	civic	thefts
+robbery	NOUN	robbery	civic	robberies
+murder	NOUN	murder	civic	murders
+fraud	NOUN	fraud	civic,money	frauds
+scam	NOUN	scam	civic,money	scams
+cheating	NOUN	cheating	civic	
+bribe	NOUN	bribe	civic	bribes
+corruption	NOUN	corruption	civic	
+vigilance	NOUN	vigilance	civic	
+rti	NOUN	right to information	civic	
+tax	NOUN	tax	civic,money	taxes
+gst	NOUN	goods and services tax	civic,money	
+tds	NOUN	tax deducted at source	civic,money	
+license	NOUN	licence	civic	licence
+road	NOUN	road	civic,places	roads
+bridge	NOUN	bridge	places,civic	bridges
+drain	NOUN	drain	civic	drains
+sewer	NOUN	sewer	civic	sewers
+garbage	NOUN	garbage	civic	
+dustbin	NOUN	dustbin	civic,home	dustbins
+sanitation	NOUN	sanitation	civic	
+current	NOUN	electric current	civic,home	
+power	NOUN	power supply	civic	
+meter	NOUN	meter	civic,home	meters
+cable	NOUN	cable	civic,technology	cables
+curfew	NOUN	curfew	civic	curfews
+emergency	NOUN	emergency	civic	emergencies
+flood	NOUN	flood	civic	floods
+earthquake	NOUN	earthquake	civic	earthquakes
+relief	NOUN	relief	civic	
+rescue	NOUN	rescue	civic	rescues
+army	NOUN	army	civic	armies
+soldier	NOUN	soldier	civic	soldiers
+border	NOUN	border	civic,travel	borders
+checkpoint	NOUN	checkpoint	civic	checkpoints
+public	NOUN	public	civic,community	
+tribe	NOUN	tribe	community,civic	tribes
+chief	NOUN	chief	civic	chiefs
+gaonburah	NOUN	village headman	civic	gaon burah
+headman	NOUN	village headman	civic	headmen
+council	NOUN	council	civic	councils
+committee	NOUN	committee	civic	committees
+member	NOUN	member	civic	members
+resident	NOUN	resident	civic	residents
+citizen	NOUN	citizen	civic	citizens
+identity	NOUN	identity	civic	
+verification	NOUN	verification	civic	
+oath	NOUN	oath	civic	oaths
+rule	NOUN	rule	civic	rules
+law	NOUN	law	civic	laws
+act	NOUN	act	civic	acts
+ordinance	NOUN	ordinance	civic	
+appeal	NOUN	appeal	civic	appeals
+hearing	NOUN	hearing	civic	hearings
+verdict	NOUN	verdict	civic	verdicts
+sentence	NOUN	sentence	civic	sentences
+witness	NOUN	witness	civic	witnesses
+evidence	NOUN	evidence	civic	
+accused	NOUN	accused	civic	
+victim	NOUN	victim	civic,community	victims
+suspect	NOUN	suspect	civic	suspects
+ngo	NOUN	ngo	civic	ngos
+address	NOUN	address	civic	addresses
+pincode	NOUN	pincode	civic	pin code
+gatekeeper	NOUN	gatekeeper	civic	gatekeepers
+leader	NOUN	leader	civic,community	leaders
+customs	NOUN	customs	civic,money	
+application	NOUN	application	civic,work	applications
+signature	NOUN	signature	civic,work	signatures
+bank	NOUN	bank	money,places	banks
+account	NOUN	bank account	money	accounts
+savings	NOUN	savings	money	
+loan	NOUN	loan	money	loans
+interest	NOUN	interest	money	interests
+rate	NOUN	rate	money	rates
+credit	NOUN	credit	money	credits
+debit	NOUN	debit	money	debits
+card	NOUN	card	money	cards
+atm	NOUN	atm	money,places	atms
+cheque	NOUN	cheque	money	cheques,check
+passbook	NOUN	passbook	money	passbooks
+statement	NOUN	statement	money	statements
+deposit	NOUN	deposit	money	deposits
+withdrawal	NOUN	withdrawal	money	withdrawals
+balance	NOUN	balance	money	balances
+cash	NOUN	cash	money	
+note	NOUN	currency note	money	notes
+rupee	NOUN	rupee	money	rupees
+paisa	NOUN	paisa	money	paise
+price	NOUN	price	money	prices
+cost	NOUN	cost	money	costs
+discount	NOUN	discount	money	discounts
+offer	NOUN	offer	money	offers
+sale	NOUN	sale	money	sales
+market	NOUN	market	money,places	markets
+bazaar	NOUN	bazaar	money,places	bazaars
+mall	NOUN	mall	money,places	malls
+supermarket	NOUN	supermarket	money,places	supermarkets
+store	NOUN	store	money,places	stores
+shop	NOUN	shop	money,places	shops
+receipt	NOUN	receipt	money	receipts
+wallet	NOUN	wallet	money	wallets
+budget	NOUN	budget	money	budgets
+premium	NOUN	premium	money	premiums
+mutualfund	NOUN	mutual fund	money	mutual fund
+stockmarket	NOUN	stock market	money	stock market
+investment	NOUN	investment	money	investments
+gold	NOUN	gold	money,clothing	
+silver	NOUN	silver	money,clothing	
+jewellery	NOUN	jewellery	money,clothing	jewelry
+ring	NOUN	ring	clothing	rings
+chain	NOUN	chain	clothing	chains
+locker	NOUN	locker	money,places	lockers
+emi	NOUN	monthly installment	money	emis
+installment	NOUN	installment	money	installments,instalment
+income	NOUN	income	money	incomes
+profit	NOUN	profit	money	profits
+loss	NOUN	loss	money	losses
+debt	NOUN	debt	money	debts
+mortgage	NOUN	mortgage	money	mortgages
+advance	NOUN	advance payment	money	advances
+token	NOUN	token	money,travel	tokens
+coupon	NOUN	coupon	money	coupons
+voucher	NOUN	voucher	money	vouchers
+counter	NOUN	counter	money,places	counters
+queue	NOUN	queue	places	queues
+item	NOUN	item	money	items
+product	NOUN	product	money	products
+brand	NOUN	brand	money	brands
+packet	NOUN	packet	money	packets
+carrybag	NOUN	carry bag	money	carry bag
+basket	NOUN	basket	money	baskets
+trolley	NOUN	trolley	money	trolleys
+kilo	NOUN	kilogram	money	kilos
+gram	NOUN	gram	money	grams
+litre	NOUN	litre	money	litres
+dozen	NOUN	dozen	money	dozens
+pair	NOUN	pair	money,clothing	pairs
+set	NOUN	set	money	sets
+shopkeeper	NOUN	shopkeeper	money	shopkeepers
+seller	NOUN	seller	money	sellers
+buyer	NOUN	buyer	money	buyers
+ledger	NOUN	ledger	money	ledgers
+vat	NOUN	vat	money	
+mart	NOUN	mart	money,places	marts
+showroom	NOUN	showroom	money,places	showrooms
+boutique	NOUN	boutique	money,clothing	boutiques
+tailor	NOUN	tailor	clothing,money	tailors
+laundry	NOUN	laundry	money,home	laundries
+salon	NOUN	salon	money,places	salons
+parlour	NOUN	parlour	money,places	parlours,parlor
+barber	NOUN	barber	money	barbers
+pharmacy	NOUN	pharmacy	health,places	pharmacies
+chemist	NOUN	chemist	health,money	chemists
+gasagency	NOUN	gas agency	money	gas agency
+qr	NOUN	qr code	money,technology	qr code
+code	NOUN	code	technology	codes
+pin	NOUN	atm pin	money	pins
+wifi	NOUN	wifi	technology	wi fi
+cart	NOUN	cart	money,travel	carts
+packing	NOUN	packing	money	
+transaction	NOUN	transaction	money	transactions
+payment	NOUN	payment	money	payments
+settlement	NOUN	settlement	money	settlements
+dealer	NOUN	dealer	money,travel	dealers
+car	NOUN	car	travel	cars
+bike	NOUN	motorbike	travel	bikes
+motorbike	NOUN	motorbike	travel	motorbikes
+scooter	NOUN	scooter	travel	scooters
+truck	NOUN	truck	travel	trucks
+lorry	NOUN	lorry	travel	lorries
+tempo	NOUN	tempo van	travel	tempos
+van	NOUN	van	travel	vans
+jeep	NOUN	jeep	travel	jeeps
+sumo	NOUN	tata sumo	travel	
+bolero	NOUN	bolero jeep	travel	
+scorpio	NOUN	scorpio jeep	travel	
+innova	NOUN	innova car	travel	
+maruti	NOUN	maruti car	travel	
+alto	NOUN	alto car	travel	
+taxi	NOUN	taxi	travel	taxis
+train	NOUN	train	travel	trains
+railway	NOUN	railway	travel	railways
+platform	NOUN	platform	travel	platforms
+track	NOUN	railway track	travel	tracks
+reservation	NOUN	reservation	travel	reservations
+berth	NOUN	berth	travel	berths
+seat	NOUN	seat	travel	seats
+window	NOUN	window	travel,home	windows
+compartment	NOUN	compartment	travel	compartments
+flight	NOUN	flight	travel	flights
+airport	NOUN	airport	travel,places	airports
+runway	NOUN	runway	travel	runways
+terminal	NOUN	terminal	travel	terminals
+boardingpass	NOUN	boarding pass	travel	boarding pass
+luggage	NOUN	luggage	travel	
+baggage	NOUN	baggage	travel	
+route	NOUN	route	travel	routes
+traffic	NOUN	traffic	travel	
+jam	NOUN	traffic jam	travel	jams
+petrol	NOUN	petrol	travel	
+diesel	NOUN	diesel	travel	
+engine	NOUN	engine	travel	engines
+tyre	NOUN	tyre	travel	tyres,tire,tires
+puncture	NOUN	puncture	travel	punctures
+battery	NOUN	battery	travel,technology	batteries
+helmet	NOUN	helmet	travel	helmets
+speed	NOUN	speed	travel	speeds
+speedbreaker	NOUN	speed bump	travel	speed breaker
+pothole	NOUN	pothole	travel	potholes
+mechanic	NOUN	mechanic	travel,work	mechanics
+garage	NOUN	garage	travel,places	garages
+accident	NOUN	accident	travel	accidents
+collision	NOUN	collision	travel	collisions
+crash	NOUN	crash	travel	crashes
+ambulance	NOUN	ambulance	travel,health	ambulances
+fireengine	NOUN	fire engine	civic,travel	fire engine
+wheel	NOUN	wheel	travel	wheels
+brake	NOUN	brake	travel	brakes
+clutch	NOUN	clutch	travel	clutches
+gear	NOUN	gear	travel	gears
+horn	NOUN	horn	travel	horns
+mirror	NOUN	mirror	travel,home	mirrors
+seatbelt	NOUN	seat belt	travel	seat belt
+key	NOUN	key	travel,home	keys
+plate	NOUN	number plate	travel	plates
+ferry	NOUN	ferry	travel	ferries
+boat	NOUN	boat	travel	boats
+ship	NOUN	ship	travel	ships
+bicycle	NOUN	bicycle	travel	bicycles,cycle
+rickshaw	NOUN	rickshaw	travel	rickshaws
+booking	NOUN	booking	travel	bookings
+tour	NOUN	tour	travel,leisure	tours
+trip	NOUN	trip	travel,leisure	trips
+journey	NOUN	journey	travel	journeys
+distance	NOUN	distance	travel	distances
+km	NOUN	kilometre	travel	kms
+map	NOUN	map	travel,education	maps
+gps	NOUN	gps	travel,technology	
+navigation	NOUN	navigation	travel	
+direction	NOUN	direction	travel	directions
+toll	NOUN	toll	travel,money	tolls
+tollbooth	NOUN	toll booth	travel	toll booth
+footpath	NOUN	footpath	travel,places	footpaths
+pavement	NOUN	pavement	travel,places	pavements
+zebracrossing	NOUN	zebra crossing	travel	zebra crossing
+flyover	NOUN	flyover	travel,places	flyovers,fly over
+subway	NOUN	subway	travel,places	subways
+underpass	NOUN	underpass	travel,places	underpasses
+bypass	NOUN	bypass	travel,places	bypasses
+ringroad	NOUN	ring road	travel,places	ring road
+driving	NOUN	driving	travel	
+vehicle	NOUN	vehicle	travel	vehicles
+twowheeler	NOUN	two wheeler	travel	two wheeler
+fourwheeler	NOUN	four wheeler	travel	four wheeler
+loader	NOUN	loader	travel,work	loaders
+trailer	NOUN	trailer	travel	trailers
+tractor	NOUN	tractor	travel,work	tractors
+cargo	NOUN	cargo	travel	
+load	NOUN	load	travel	loads
+tanker	NOUN	tanker	travel	tankers
+pilot	NOUN	pilot	travel	pilots
+conductor	NOUN	conductor	travel	conductors
+fare	NOUN	fare	travel,money	fares
+terminus	NOUN	terminus	travel,places	termini
+halt	NOUN	halt	travel	halts
+arrival	NOUN	arrival	travel	arrivals
+departure	NOUN	departure	travel	departures
+delay	NOUN	delay	travel	delays
+cancellation	NOUN	cancellation	travel	cancellations
+passenger	NOUN	passenger	travel	passengers
+tourist	NOUN	tourist	travel	tourists
+immigration	NOUN	immigration	travel,civic	
+resort	NOUN	resort	travel,places	resorts
+camp	NOUN	camp	travel,leisure	camps
+trek	NOUN	trek	travel,leisure	treks
+picnic	NOUN	picnic	travel,leisure	picnics
+sightseeing	NOUN	sightseeing	travel	
+signal	NOUN	signal	travel	signals
+gate	NOUN	gate	travel,places	gates
+exit	NOUN	exit	travel,places	exits
+entrance	NOUN	entrance	travel,places	entrances
+parking	NOUN	parking	travel,places	
+mileage	NOUN	mileage	travel	
+guide	NOUN	tourist guide	travel	guides
+busstand	NOUN	bus stand	travel,places	bus stand
+hospital	NOUN	hospital	health,places	hospitals
+clinic	NOUN	clinic	health,places	clinics
+dispensary	NOUN	dispensary	health,places	dispensaries
+museum	NOUN	museum	places	museums
+theatre	NOUN	theatre	places	theatres,theater
+cinema	NOUN	cinema	places,leisure	cinemas
+auditorium	NOUN	auditorium	places	auditoriums
+stadium	NOUN	stadium	places,leisure	stadiums
+playground	NOUN	playground	places,leisure	playgrounds
+garden	NOUN	garden	places	gardens
+lodge	NOUN	lodge	places	lodges
+guesthouse	NOUN	guest house	places	guest house
+hotel	NOUN	hotel	places	hotels
+restaurant	NOUN	restaurant	places,food	restaurants
+cafe	NOUN	cafe	places,food	cafes
+church	NOUN	church	places,community	churches
+temple	NOUN	temple	places,community	temples
+mosque	NOUN	mosque	places,community	mosques
+monastery	NOUN	monastery	places,community	monasteries
+cemetery	NOUN	cemetery	places	cemeteries
+crematorium	NOUN	crematorium	places	crematoriums
+hall	NOUN	hall	places	halls
+community	NOUN	community	community	communities
+clubhouse	NOUN	club house	places,leisure	club house
+factory	NOUN	factory	places,work	factories
+mill	NOUN	mill	places,work	mills
+site	NOUN	site	places,work	sites
+construction	NOUN	construction	places,work	
+toilet	NOUN	toilet	places,home	toilets
+washroom	NOUN	washroom	places	washrooms
+signboard	NOUN	signboard	places	signboards
+pillar	NOUN	pillar	places	pillars
+lift	NOUN	lift	places	lifts
+stairs	NOUN	stairs	places	stair
+escalator	NOUN	escalator	places	escalators
+reception	NOUN	reception	places,work	
+house	NOUN	house	places,home	houses
+home	NOUN	home	home	homes
+room	NOUN	room	places,home	rooms
+flat	NOUN	flat	places,home	flats
+apartment	NOUN	apartment	places,home	apartments
+building	NOUN	building	places	buildings
+complex	NOUN	complex	places	complexes
+plaza	NOUN	plaza	places	plazas
+tower	NOUN	tower	places	towers
+locality	NOUN	locality	places	localities
+lane	NOUN	lane	places	lanes
+street	NOUN	street	places	streets
+junction	NOUN	junction	places,travel	junctions
+crossing	NOUN	crossing	places,travel	crossings
+square	NOUN	square	places	squares
+chowk	NOUN	crossroad	places	chowks
+roundabout	NOUN	roundabout	places,travel	roundabouts
+fountain	NOUN	fountain	places	fountains
+pond	NOUN	pond	places	ponds
+lake	NOUN	lake	places	lakes
+river	NOUN	river	places	rivers
+hill	NOUN	hill	places	hills
+hilltop	NOUN	hilltop	places	hilltops
+ground	NOUN	ground	places,leisure	grounds
+centre	NOUN	centre	places	centres,center
+town	NOUN	town	places	towns
+city	NOUN	city	places	cities
+suburb	NOUN	suburb	places	suburbs
+corner	NOUN	corner	places	corners
+stall	NOUN	stall	places,money	stalls
+kiosk	NOUN	kiosk	places	kiosks
+inn	NOUN	inn	places	inns
+motel	NOUN	motel	places	motels
+colony	NOUN	colony	places	colonies
+bakery	NOUN	bakery	places,food	bakeries
+canteen	NOUN	canteen	places,food	canteens
+teashop	NOUN	tea shop	places,food	tea shop
+studio	NOUN	studio	places,media	studios
+bookshop	NOUN	bookshop	places,education	bookshops
+verify	VERB	verify document	civic,actions	
+submit	VERB	submit form	work,actions	
+apply	VERB	apply form	work,actions	
+transfer	VERB	transfer money	money,actions	
+sign	VERB	sign paper	work,actions	
+book	VERB	book ticket	travel,actions	
+pay	VERB	pay money	money,actions	
+park	VERB	park vehicle	travel,actions	
+withdraw	VERB	withdraw cash	money,actions	
+register	VERB	register name	civic,actions	
+enrol	VERB	enroll course	education,actions	enroll
+upload	VERB	upload file	technology,actions	
+download	VERB	download file	technology,actions	
+print	VERB	print paper	work,actions	
+scan	VERB	scan document	work,actions	
+cancel	VERB	cancel booking	actions	
+confirm	VERB	confirm booking	actions	
+update	VERB	update details	technology,actions	
+renew	VERB	renew licence	civic,actions	
+order	VERB	place order	money,actions	
+send	VERB	send money	actions	
+receive	VERB	receive money	actions	
+deliver	VERB	deliver goods	work,actions	
+install	VERB	install app	technology,actions	
+uninstall	VERB	uninstall app	technology,actions	
+reset	VERB	reset password	technology,actions	
+login	VERB	log in	technology,actions	log in
+logout	VERB	log out	technology,actions	log out
+reserve	VERB	reserve seat	travel,actions	
+issue	VERB	issue receipt	civic,actions	
+collect	VERB	collect money	money,actions	
+fill	VERB	fill form	actions	
+attach	VERB	attach file	work,actions	
+forward	VERB	forward message	technology,actions	
+reply	VERB	reply message	actions	
+copy	VERB	copy paper	work,actions	
+paste	VERB	paste text	technology,actions	
+save	VERB	save money	money,actions	
+delete	VERB	delete message	technology,actions	
+edit	VERB	edit document	work,actions	
+post	VERB	post online	media,actions	
+like	VERB	like post	media,actions	
+comment	VERB	comment online	media,actions	
+select	VERB	select option	actions	
+approve	VERB	approve application	civic,actions	
+reject	VERB	reject application	civic,actions	
+sanction	VERB	sanction approval	civic,actions	
+refund	VERB	give refund	money,actions	
+exchange	VERB	exchange item	money,actions	
+return	VERB	return item	money,actions	
+repair	VERB	repair item	home,actions	
+service	VERB	service vehicle	travel,actions	
+clean	VERB	clean	home,actions	
+wash	VERB	wash	home,actions	
+iron	VERB	iron clothes	clothing,actions	
+pack	VERB	pack bag	travel,actions	
+unpack	VERB	unpack bag	travel,actions	
+email	VERB	send email	technology,actions	e mail
+call	VERB	phone call	technology,actions	
+dial	VERB	dial number	technology,actions	
+text	VERB	send text	technology,actions	
+message	VERB	send message	technology,actions	
+miss	VERB	miss call	actions	
+carry	VERB	carry	actions	
+lease	VERB	lease property	money,actions	
+buy	VERB	buy	money,actions	
+sell	VERB	sell	money,actions	
+bargain	VERB	bargain price	money,actions	
+negotiate	VERB	negotiate price	money,actions	
+swap	VERB	swap	money,actions	
+borrow	VERB	borrow money	money,actions	
+lend	VERB	lend money	money,actions	
+invest	VERB	invest money	money,actions	
+insure	VERB	insure	money,actions	
+recharge	VERB	recharge phone	money,technology	
+plug	VERB	plug in	home,actions	
+switch	VERB	switch on	home,actions	
+press	VERB	press button	actions	
+click	VERB	click	technology,actions	
+type	VERB	type	technology,actions	
+search	VERB	search	technology,actions	
+watch	VERB	watch	media,actions	
+stream	VERB	stream	media,actions	
+vote	VERB	cast vote	civic,actions	
+campaign	VERB	campaign	civic,actions	
+protest	VERB	protest	civic,actions	
+arrest	VERB	arrest	civic,actions	
+complain	VERB	complain	civic,actions	
+inform	VERB	inform	civic,actions	
+report	VERB	report	civic,actions	
+notify	VERB	notify	civic,actions	
+reschedule	VERB	reschedule	work,actions	
+postpone	VERB	postpone	actions	
+check	VERB	check	actions	
+measure	VERB	measure	actions	
+weigh	VERB	weigh	money,actions	
+count	VERB	count	actions	
+calculate	VERB	calculate	work,actions	
+adjust	VERB	adjust	actions	
+fix	VERB	fix	home,actions	
+examine	VERB	examine	health,actions	
+inspect	VERB	inspect	civic,actions	
+certify	VERB	certify	civic,actions	
+attest	VERB	attest document	civic,actions	
+notarise	VERB	notarise	civic,actions	notarize
+lock	VERB	lock	home,actions	
+unlock	VERB	unlock	home,actions	
+open	VERB	open	actions	
+close	VERB	close	actions	
+shut	VERB	shut	actions	
+wait	VERB	wait	travel,actions	
+reach	VERB	reach	travel,actions	
+arrive	VERB	arrive	travel,actions	
+depart	VERB	depart	travel,actions	
+board	VERB	board train	travel,actions	
+land	VERB	land	travel,actions	
+start	VERB	start	actions	
+stop	VERB	stop	actions	
+continue	VERB	continue	actions	
+finish	VERB	finish	actions	
+complete	VERB	complete	actions	
+join	VERB	join	work,actions	
+resign	VERB	resign	work,actions	
+retire	VERB	retire	work,actions	
+hire	VERB	hire	work,actions	
+fire	VERB	fire	work,actions	
+promote	VERB	promote	work,actions	
+kidnap	VERB	kidnap	civic,actions	
+subscribe	VERB	subscribe	media,actions	
+enter	VERB	enter	actions	
+pick	VERB	pick up	actions	
+arrange	VERB	arrange	work,actions	
+prepare	VERB	prepare	work,actions	
+plan	VERB	plan	work,actions	
+discuss	VERB	discuss	work,actions	
+decide	VERB	decide	actions	
+explain	VERB	explain	education,actions	
+study	VERB	study	education,actions	
+learn	VERB	learn	education,actions	
+teach	VERB	teach	education,actions	
+revise	VERB	revise	education,actions	
+memorise	VERB	memorise	education,actions	memorize
+attend	VERB	attend	education,actions	
+bunk	VERB	bunk class	education,actions	
+rent	VERB	rent	money,actions	
+urgent	ADJ	urgent	describing	
+free	ADJ	free	money,describing	
+cheap	ADJ	cheap	money,describing	
+costly	ADJ	costly	money,describing	
+expensive	ADJ	expensive	money,describing	
+available	ADJ	available	describing	
+closed	ADJ	closed	places,describing	
+ready	ADJ	ready	describing	
+late	ADJ	late	time,describing	
+early	ADJ	early	time,describing	
+fine	ADJ	fine	describing	
+okay	ADJ	okay	describing	ok
+sure	ADJ	sure	describing	
+correct	ADJ	correct	describing	
+wrong	ADJ	wrong	describing	
+final	ADJ	final	describing	
+perfect	ADJ	perfect	describing	
+clear	ADJ	clear	describing	
+busy	ADJ	busy	describing	
+empty	ADJ	empty	describing	
+full	ADJ	full	describing	
+new	ADJ	new	describing	
+old	ADJ	old	describing	
+big	ADJ	big	describing	
+small	ADJ	small	describing	
+long	ADJ	long	describing	
+short	ADJ	short	describing	
+slow	ADJ	slow	describing	
+fast	ADJ	fast	describing	
+hot	ADJ	hot	describing	
+cold	ADJ	cold	describing	
+today	ADV	today	time	
+tomorrow	ADV	tomorrow	time	
+yesterday	ADV	yesterday	time	
+morning	NOUN	morning	time	
+evening	NOUN	evening	time	
+night	NOUN	night	time	nights
+afternoon	NOUN	afternoon	time	
+daily	ADJ	daily	time	
+weekly	ADJ	weekly	time	
+monthly	ADJ	monthly	time	
+yearly	ADJ	yearly	time	
+monday	PROPN	monday	time	
+tuesday	PROPN	tuesday	time	
+wednesday	PROPN	wednesday	time	
+thursday	PROPN	thursday	time	
+friday	PROPN	friday	time	
+saturday	PROPN	saturday	time	
+sunday	PROPN	sunday	time	
+hello	INTJ	hello	greetings	hallo,helo
+hi	INTJ	hi	greetings	
+bye	INTJ	bye	greetings	
+sorry	INTJ	sorry	greetings	sori
+please	INTJ	please	greetings	pleez
+thanks	INTJ	thanks	greetings	thanx
+welcome	INTJ	welcome	greetings	
+yes	INTJ	yes	greetings	
+no	INTJ	no	greetings	
+maybe	ADV	maybe	describing	
+wow	INTJ	wow	feelings	
+awesome	ADJ	awesome	feelings,describing	
+super	ADJ	super	describing	
+nice	ADJ	nice	feelings,describing	
+cool	ADJ	cool	slang,describing	
+bro	NOUN	brother	community,slang	
+dude	NOUN	dude	community,slang	
+buddy	NOUN	buddy	community	buddies
+bhai	NOUN	bhai brother	community	bhaiya
+sister	NOUN	sister	community	sisters
+brother	NOUN	brother	community	brothers
+uncle	NOUN	uncle	community	uncles
+aunty	NOUN	aunty	community	auntie,aunties
+madam	NOUN	madam	community	madams
+sir	NOUN	sir	community	
+friend	NOUN	friend	community	friends
+family	NOUN	family	community	families
+people	NOUN	people	community	
+birthday	NOUN	birthday	community,time	birthdays
+anniversary	NOUN	anniversary	community	anniversaries
+wedding	NOUN	wedding	community	weddings
+function	NOUN	function	community	functions
+celebration	NOUN	celebration	community	celebrations
+festival	NOUN	festival	community,leisure	festivals
+programme	NOUN	programme	community	programmes,program
+event	NOUN	event	community	events
+help	NOUN	help	community	
+problem	NOUN	problem	community	problems
+child	NOUN	child	community	children
+baby	NOUN	baby	community,health	babies
+girl	NOUN	girl	community	girls
+boy	NOUN	boy	community	boys
+man	NOUN	man	community	men
+woman	NOUN	woman	community	women
+youth	NOUN	youth	community	youths
+elder	NOUN	elder	community	elders
+neighbour	NOUN	neighbour	community	neighbours,neighbor
+father	NOUN	father	community	fathers
+mother	NOUN	mother	community	mothers
+husband	NOUN	husband	community	husbands
+wife	NOUN	wife	community	wives
+son	NOUN	son	community	sons
+daughter	NOUN	daughter	community	daughters
+sport	NOUN	sport	leisure	sports
+match	NOUN	match	leisure	matches
+game	NOUN	game	leisure	games
+competition	NOUN	competition	leisure	competitions
+winner	NOUN	winner	leisure	winners
+loser	NOUN	loser	leisure	losers
+prize	NOUN	prize	money,leisure	prizes
+trophy	NOUN	trophy	leisure	trophies
+medal	NOUN	medal	leisure	medals
+news	NOUN	news	media	
+newspaper	NOUN	newspaper	media	newspapers
+channel	NOUN	channel	media	channels
+radio	NOUN	radio	media	radios
+tv	NOUN	television	media	television
+phone	NOUN	phone	technology	phones,mobile
+mobile	NOUN	mobile phone	technology	mobiles
+hospitalized	VERB	admit to hospital	health	

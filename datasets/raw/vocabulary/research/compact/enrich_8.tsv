@@ -1,0 +1,434 @@
+pack	NOUN	VERB=to pack (with kori)	A bundle or package; with kori, to pack things.	pack;package;bundle	actions,travel	E	pack	base form,countable,inanimate	pak	Moi bag pack kori ase.	0.7	
+pagoda	NOUN		A tiered temple tower of East Asia.	pagoda;temple tower	religion,culture	E	pagoda	base form,countable,inanimate		Etu pagoda bisi sundor.	0.4	doubtful: rare foreign word
+panda	NOUN		A black and white bear from China.	panda;giant panda	nature	E	panda	base form,countable,animate		Panda bamboo khai.	0.5	
+parisele	VERB		Past or inflected form meaning recognised.	recognised;knew	actions	N	parisele	citation form		Tai moi ke parisele.	0.3	doubtful: unclear inflected form
+pdf	NOUN		A document file format.	pdf;document file	technology	E	PDF	base form,countable,inanimate		Moi pdf file pathabo.	0.7	
+pink	ADJ	NOUN=pink colour	Of a light red colour.	pink	colours,describing	E	pink	base form		Tai pink kapur pindhise.	0.7	
+polo	NOUN		A game played on horseback; also a type of shirt.	polo;horseback game	leisure	E	polo	base form,countable,inanimate		Manipur te polo khel ase.	0.4	
+port	NOUN		A harbour or a connection socket.	port;harbour;socket	travel,technology	E	port	base form,countable,inanimate		Phone laga charging port nosta.	0.6	
+premji	PROPN		A surname, as in Azim Premji.	Premji	community	PN	premji	base form,countable,animate		Premji ek boro manu.	0.3	doubtful: personal surname
+probiotics	NOUN		Good bacteria in food or medicine for the stomach.	probiotics;good bacteria	health,food	E	probiotics	base form,mass,inanimate		Dahi te probiotics ase.	0.4	
+purba	NOUN	ADJ=eastern	The east.	east;eastern	places,nature	S	পূর্ব	base form,mass,inanimate	purab	Purba pora suryo uthe.	0.7	
+rain	NOUN	VERB=to rain (with kori)	Water falling from clouds.	rain	weather	E	rain	base form,mass,inanimate		Aaji rain hobo.	0.7	
+rajasthan	PROPN		A state in western India.	Rajasthan	places	PN	rajasthan	base form,countable,inanimate		Rajasthan te desert ase.	0.6	
+ramakrishnan	PROPN		A South Indian personal name.	Ramakrishnan	community	PN	ramakrishnan	base form,countable,animate		Ramakrishnan sir amar teacher.	0.3	doubtful: personal name
+ratan	NOUN	PROPN=a name	A gem or jewel; also a name.	jewel;gem	money,culture	H	रतन	base form,countable,inanimate		Etu ratan bisi dami.	0.5	
+recycle	VERB		To process used material for reuse.	recycle	actions,home	E	recycle	citation form		Plastic recycle kori lage.	0.6	
+reef	NOUN		A ridge of rock or coral in the sea.	reef;coral reef	nature	E	reef	base form,countable,inanimate		Samudro te reef ase.	0.3	doubtful: rare foreign word
+rickshaw	NOUN		A small hired vehicle pulled or pedalled.	rickshaw	travel	E	rickshaw	base form,countable,inanimate	riksha	Rickshaw te jabo.	0.8	
+robot	NOUN		A machine that does work like a person.	robot	technology	E	robot	base form,countable,inanimate		Robot ei kam kori dibo.	0.7	
+rosun	NOUN		Garlic.	garlic	food	A	ৰসুন	base form,mass,inanimate	lahsun	Rosun daal te di.	0.7	
+ruins	NOUN		The broken remains of old buildings.	ruins;remains	places,culture	E	ruins	base form,countable,inanimate		Purani ghor ruins hoi gol.	0.5	
+rum	NOUN		A strong drink made from sugar cane.	rum	food	E	rum	base form,mass,inanimate		Rum khabole nalage.	0.5	
+safal	ADJ		Successful.	successful;fruitful	describing	H	सफल	base form	saphal	Tai safal hoise.	0.6	
+salah	NOUN		Advice or counsel.	advice;counsel	community,actions	P	सलाह	base form,countable,inanimate		Moi tai pora salah loise.	0.7	
+san	NOUN		A title of respect in Japanese, or a name part.	san;title	culture	PN	san	base form,countable,animate		San nam ase.	0.2	doubtful: foreign title or name fragment
+scam	NOUN		A trick to cheat people of money.	scam;fraud	money,technology	E	scam	base form,countable,inanimate		Etu scam call ase.	0.7	
+sen	PROPN		A surname, common in Bengal.	Sen	community	PN	sen	base form,countable,animate		Sen babu ahise.	0.3	doubtful: surname
+senapati	PROPN		A district in Manipur; also a commander.	Senapati;commander	places	PN	senapati	base form,countable,inanimate		Senapati Manipur te ase.	0.5	
+shot	NOUN		A try, a photo, or a drink.	shot;attempt;photo	leisure	E	shot	base form,countable,inanimate		Ek shot mari bol.	0.5	
+sikh	NOUN	PROPN=Sikh	A follower of the Sikh religion.	Sikh	religion,community	H	सिख	base form,countable,animate		Sikh manu pagri pindhe.	0.6	
+silicon	NOUN		A chemical element used in chips.	silicon	technology	E	silicon	base form,mass,inanimate		Chip silicon pora bonai.	0.4	
+sir	NOUN		Respectful word for a male teacher or senior.	sir;teacher	education,community	E	sir	base form,countable,animate		Sir class te ahise.	0.9	
+soil	NOUN		The earth in which plants grow.	soil;earth	farming,nature	E	soil	base form,mass,inanimate		Etu soil bisi bhal.	0.6	
+soya	NOUN		Soybean.	soya;soybean	food,farming	E	soya	base form,mass,inanimate		Soya chunk khabo.	0.7	
+ssd	NOUN		A fast computer storage drive.	ssd;storage drive	technology	E	SSD	base form,countable,inanimate		Laptop te ssd lagaise.	0.5	
+sticker	NOUN		A small sticky picture or label.	sticker	media,technology	E	sticker	base form,countable,inanimate		WhatsApp te sticker pathai di.	0.7	
+sub	NOUN		Short for substitute or submarine, or sub-.	sub;substitute	leisure	E	sub	base form,countable,animate		Tai sub hoi khelise.	0.3	doubtful: abbreviation or prefix
+sun	NOUN	VERB=to hear (Hindi)	The sun; also Hindi sun, to listen.	sun	nature	E	sun	base form,countable,inanimate		Sun bisi tatu ase.	0.4	doubtful: English sun or Hindi sun hear, ambiguous
+superhero	NOUN		A hero with special powers.	superhero	media,leisure	E	superhero	base form,countable,animate		Moi superhero film bhal pau.	0.6	
+swagat	NOUN		Welcome.	welcome;greeting	greetings	H	स्वागत	base form,mass,inanimate		Apunikhan ke swagat.	0.6	
+sydney	PROPN		A city in Australia.	Sydney	places	PN	sydney	base form,countable,inanimate		Sydney Australia te ase.	0.4	
+taoism	NOUN		A Chinese religion and philosophy.	Taoism	religion	E	Taoism	base form,mass,inanimate		Taoism China pora ahise.	0.3	doubtful: rare foreign word
+tarkari	NOUN		Vegetables or a vegetable dish.	vegetables;vegetable curry	food	H	तरकारी	base form,mass,inanimate	torkari	Aji tarkari ranhise.	0.8	
+thai	NOUN	PROPN=Thai	Of Thailand; Thai person or language.	Thai	places,community	E	Thai	base form,countable,animate		Thai khana bhal.	0.4	
+thak	VERB		To stay, remain or be tired (Hindi).	stay;be tired	actions	H	थक	citation form		Moi bisi thak gol.	0.4	doubtful: Hindi form, Nagamese usually thakibo
+this	DET		English word meaning this.	this	grammar	E	this	invariable		This phone bhal.	0.3	doubtful: English word used in code-mixing
+tip	NOUN		Extra money given, or a useful hint.	tip;hint	money,education	E	tip	base form,countable,inanimate		Moi tip dilu.	0.6	
+tormuj	NOUN		Watermelon.	watermelon	food	A	তৰমুজ	base form,countable,inanimate	tarmuj	Tormuj bisi mitha.	0.7	
+tourism	NOUN		Travel for pleasure and the trade around it.	tourism	travel,work	E	tourism	base form,mass,inanimate		Nagaland te tourism bare.	0.6	
+veg	ADJ	NOUN=vegetarian food	Vegetarian, without meat.	veg;vegetarian	food	E	veg	base form		Moi veg khai.	0.7	
+venki	PROPN		A South Indian personal name.	Venki	community	PN	venki	base form,countable,animate		Venki ahise.	0.2	doubtful: personal name
+verb	NOUN		A word that shows action.	verb	grammar,education	E	verb	base form,countable,inanimate		Etu kotha verb ase.	0.5	
+viral	ADJ		Spreading quickly online, or caused by a virus.	viral	media,health	E	viral	base form		Etu video viral hoise.	0.7	
+vitamins	NOUN		Nutrients the body needs.	vitamins	health,food	E	vitamins	base form,countable,inanimate		Phol te vitamins ase.	0.7	
+waka	NOUN		A name or word of unclear meaning.	waka	slang	N	waka	base form,countable,inanimate		Waka waka gaan.	0.1	doubtful: unclear, possibly song word or Naga name
+way	NOUN		A road, path or manner.	way;path;method	travel,describing	E	way	base form,countable,inanimate		Etu way te jabo.	0.5	
+web	NOUN		The internet or a spider web.	web;internet	technology	E	web	base form,countable,inanimate		Web site khuli dikha.	0.6	
+yogurt	NOUN		Soured milk, curd.	yogurt;curd	food	E	yogurt	base form,mass,inanimate	dahi	Moi yogurt khai.	0.6	
+york	PROPN		Part of the name New York or York.	York	places	PN	york	base form,countable,inanimate		New York bohut bor.	0.3	doubtful: place name fragment
+zero	NUM	NOUN=nothing	The number 0.	zero;nothing	numbers	E	zero	invariable		Moi marks zero pale.	0.8	
+ziro	PROPN		A valley town in Arunachal Pradesh; also zero.	Ziro	places	PN	ziro	base form,countable,inanimate		Ziro te music festival ase.	0.4	
+zutho	NOUN		Rice beer of the Angami Naga.	rice beer	food,culture	L	zutho	base form,mass,inanimate	zhutho	Zutho khabole nalage.	0.7	
+ayurveda	NOUN		Traditional Indian medicine.	ayurveda;herbal medicine	health,culture	S	आयुर्वेद	base form,mass,inanimate		Ayurveda dawai bhal.	0.6	
+bear	NOUN	VERB=to bear	A large furry wild animal; also to carry or endure.	bear	nature	E	bear	base form,countable,animate		Jongol te bear ase.	0.6	
+bhagai	VERB		Having run away; to flee.	run away;flee	actions	H	भागना	citation form	bhagi	Chor bhagai gol.	0.5	
+bone	NOUN		Hard part of the body frame.	bone	body	E	bone	base form,countable,inanimate		Moi ghat bone bhangise.	0.5	doubtful: usual Nagamese is haar
+butterfly	NOUN		An insect with colourful wings.	butterfly	nature	E	butterfly	base form,countable,animate		Butterfly phul te boise.	0.6	
+cane	NOUN		A stick or the cane plant.	cane;stick	nature,home	E	cane	base form,countable,inanimate		Cane laga chair bhal.	0.5	
+chot	NOUN		An injury or wound.	injury;hurt	health,body	H	चोट	base form,countable,inanimate		Moi chot pa gol.	0.7	
+dimaag	NOUN		The brain or mind.	brain;mind	body,feelings	P	दिमाग	base form,countable,inanimate	dimag	Tai dimaag bhal.	0.7	
+drum	NOUN		A musical instrument struck with sticks.	drum	culture,leisure	E	drum	base form,countable,inanimate		Drum baja bhal lage.	0.6	
+electrician	NOUN		A person who fixes electric wiring.	electrician	work	E	electrician	base form,countable,animate		Electrician ke dak.	0.7	
+guri	NOUN		Small stone or a round seed.	pebble;seed	nature	H	गुड़ी	base form,countable,inanimate		Guri nodi te ase.	0.3	doubtful: unclear meaning
+helpline	NOUN		A phone service that gives help.	helpline	technology,civic	E	helpline	base form,countable,inanimate		Helpline number dibi.	0.7	
+katibole	VERB		In order to cut.	to cut	actions	A	কাটিবলৈ	citation form		Moi lakri katibole jabo.	0.7	
+likhai	VERB		Having written; writing.	written;writing	education,actions	H	लिखाई	citation form	likhi	Tai likhai ase.	0.5	doubtful: could be Hindi noun writing
+pindile	VERB		If one wears.	if wear	clothing	A	পিন্ধিলে	citation form		Etu pindile bhal lagibo.	0.7	
+pradhan	NOUN		Chief or head of a place.	chief;head	civic,community	S	प्रधान	base form,countable,animate		Gaon laga pradhan ahise.	0.7	
+pwd	NOUN		Public Works Department.	PWD	civic	E	PWD	base form,countable,inanimate		PWD rasta bonaise.	0.5	
+rumi	PROPN		A Persian poet; also a name.	Rumi	culture	PN	rumi	base form,countable,animate		Rumi poem pori.	0.3	doubtful: personal name
+sagoli	NOUN		Goat.	goat	nature,farming	A	ছাগলী	base form,countable,animate	chagoli	Sagoli ghas khai.	0.7	
+sanitizer	NOUN		Liquid used to clean hands.	sanitizer	health	E	sanitizer	base form,mass,inanimate		Sanitizer hat te di.	0.8	
+sochi	VERB		Having thought.	thought;think	feelings,actions	H	सोचकर	citation form		Moi sochi dikhim.	0.5	
+stabilizer	NOUN		Device that keeps voltage steady.	stabilizer	technology,home	E	stabilizer	base form,countable,inanimate		TV laga stabilizer nai.	0.6	
+sufi	NOUN		A Muslim mystic.	Sufi	religion	P	सूफ़ी	base form,countable,animate		Sufi gaan bhal.	0.4	
+umpire	NOUN		Judge in a sports game.	umpire;referee	leisure	E	umpire	base form,countable,animate		Umpire out bolise.	0.6	
+aa	VERB		Come (Hindi aa).	come	actions	H	आ	citation form	aah	Aa ekhane.	0.4	doubtful: Hindi imperative
+aadmi	NOUN		A man or person.	man;person	community,family	P	आदमी	base form,countable,animate	admi	Etu aadmi bhal.	0.7	
+aagote	ADV		Before, earlier, in front.	before;earlier;ahead	time	A	আগতে	invariable	agote	Aagote moi ahilu.	0.7	
+aah	INTJ		An exclamation of relief or pain.	ah;oh	feelings	N	aah	invariable		Aah, bisi bhal!	0.5	
+aahibo	VERB		Will come.	will come	actions,travel	A	আহিবো	citation form	ahibo	Tai kali aahibo.	0.8	
+aahise	VERB		Came, has come.	came;has come	actions,travel	A	আহিছে	citation form	ahise	Tai aahise.	0.8	
+aaj	NOUN	ADV=today	Today.	today	time	H	आज	invariable	aaji	Aaj moi school nojabo.	0.6	
+aaja	VERB		Come (Hindi imperative).	come	actions	H	आजा	citation form		Aaja ekhane.	0.4	doubtful: Hindi imperative
+aaji	NOUN	ADV=today	Today.	today	time	A	আজি	invariable	aji	Aaji moi busy ase.	0.9	
+aajukal	ADV		These days, nowadays.	nowadays;these days	time	A	আজিকালি	invariable	ajukal	Aajukal bisi bhir ase.	0.6	
+aajukali	ADV		These days, nowadays.	nowadays;these days	time	A	আজিকালি	invariable	ajukali	Aajukali tai nai ase.	0.6	
+aakhon	PRON		Variant of akhon, plural pronoun or particle.	we;these	grammar	N	aakhon	invariable	akhon	Aakhon moi jabo.	0.2	doubtful: unclear, possibly typo
+aakhoni	NOUN		Unclear form.	unclear	slang	N	aakhoni	base form,countable,inanimate		Aakhoni ase.	0.1	doubtful: unclear meaning, possibly typo
+aalu	NOUN		Potato.	potato	food	H	आलू	base form,countable,inanimate	alu	Aalu khai bhal lage.	0.8	
+aalur	NOUN		Of the potato; potato (genitive).	of potato	food	H	आलू	base form,countable,inanimate	alur	Aalur torkari ranhi.	0.6	
+aanandam	NOUN		Joy, bliss.	joy;bliss	feelings	S	आनंदम्	base form,mass,inanimate	anand	Aanandam hoise.	0.4	
+aandha	ADJ		Blind.	blind	body,describing	H	अंधा	base form	andha	Etu manu aandha.	0.6	
+aankhi	NOUN		Eye (Hindi aankh).	eye	body	H	आँख	base form,countable,inanimate	akhi	Aankhi te dukh ase.	0.4	doubtful: mixes Hindi and Assamese forms
+aao	VERB		Come (polite Hindi).	come	actions	H	आओ	citation form		Aao ekhane.	0.4	doubtful: Hindi imperative
+aapne	PRON		You (formal Hindi).	you	pronouns	H	आपने	invariable		Aapne kya bolise?	0.3	doubtful: Hindi
+aasaan	ADJ		Easy.	easy	describing	P	आसान	base form	asaan	Etu kam aasaan.	0.7	
+aase	VERB		Is, are (variant of ase).	is;are;exists	grammar	A	আছে	citation form	ase	Tai ghor te aase.	0.7	
+aata	NOUN		Wheat flour.	flour;wheat flour	food	H	आटा	base form,mass,inanimate	ata	Aata kin ahi.	0.7	
+aati	VERB		Coming (Hindi).	coming	actions	H	आती	citation form		Tai aati ase.	0.3	doubtful: Hindi inflection
+aaya	VERB		Came (Hindi).	came	actions	H	आया	citation form		Tai aaya.	0.4	doubtful: Hindi past form
+aaye	VERB		Came (Hindi plural or polite).	came	actions	H	आए	citation form		Aaye hain.	0.3	doubtful: Hindi
+aayi	VERB		Came (Hindi feminine).	came	actions	H	आई	citation form		Tai aayi.	0.3	doubtful: Hindi
+abela	ADV		Just now, at this time.	now;at this moment	time	A	এতিয়া	invariable	ebela	Abela moi jabo.	0.4	doubtful: possibly variant of ebela
+abhi	ADV		Right now.	now;right now	time	H	अभी	invariable		Abhi moi jabo.	0.6	
+accha	ADJ	INTJ=okay	Good, fine; also okay.	good;fine;okay	describing	H	अच्छा	base form	acha	Accha, moi jabo.	0.7	
+achha	ADJ	INTJ=okay	Good, fine; also okay.	good;fine;okay	describing	H	अच्छा	base form	accha	Achha, thik ase.	0.7	
+adaa	NOUN		A style or manner; ginger in Assamese.	style;manner	describing	P	अदा	base form,countable,inanimate	ada	Tai adaa bhal.	0.3	doubtful: ambiguous
+adaab	INTJ		A formal greeting.	greeting;salutation	greetings	P	आदाब	invariable		Adaab, apuni kenekoi?	0.4	
+adaar	NOUN		Unclear, possibly ginger or support.	unclear	food	N	adaar	base form,countable,inanimate		Adaar khai.	0.2	doubtful: unclear meaning
+added	VERB		Past tense of add.	added	actions	E	added	citation form		Moi name added kori dilu.	0.5	
+additions	NOUN		Things that are added.	additions	describing	E	additions	base form,countable,inanimate		Notun additions ase.	0.4	
+ads	NOUN		Advertisements.	ads;advertisements	media,money	E	ads	base form,countable,inanimate		Phone te bisi ads ase.	0.7	
+agae	ADV		Ahead, earlier.	ahead;earlier	time	H	आगे	invariable	age	Tai agae gol.	0.5	
+against	ADP		Opposed to.	against	grammar	E	against	invariable		Moi etu against.	0.4	
+agi	NOUN		Fire (Assamese agni).	fire	nature	S	অগ্নি	base form,mass,inanimate	agni	Agi jolise.	0.4	doubtful: likely variant of agni
+agir	NOUN		Of fire; unclear.	of fire	nature	S	অগ্নি	base form,mass,inanimate		Agir khoborr ase.	0.2	doubtful: unclear
+ago	ADV		Back in time.	ago	time	E	ago	invariable		Duita din ago ahilu.	0.5	
+agophale	ADV		In front, ahead.	in front;ahead	places,time	A	আগফালে	invariable	agophale	Agophale jabo.	0.6	
+agosuwali	ADV		Unclear, ahead of.	ahead	time	N	agosuwali	invariable		Agosuwali jabo.	0.1	doubtful: unclear spelling
+ahu	NOUN		Winter rice, or a crop name.	rice crop	farming	A	আহু	base form,mass,inanimate		Ahu dhan kati ase.	0.4	
+ahuna	VERB		Not come; unclear.	not come	actions	N	ahuna	citation form		Tai ahuna.	0.2	doubtful: unclear
+aicf	NOUN		An organisation abbreviation.	aicf	civic	E	AICF	base form,countable,inanimate		AICF news ase.	0.1	doubtful: abbreviation, not a word
+aita	NOUN		Mother (Naga); also the Assamese word for grandmother.	mother;grandmother	family	A	আইতা	base form,countable,animate		Aita ghor te ase.	0.4	
+aitar	NOUN		Of the grandmother.	grandmother's	family	A	আইতা	base form,countable,animate		Aitar ghor bor.	0.3	
+akaash	NOUN		Sky.	sky	nature,weather	S	आकाश	base form,mass,inanimate	akash	Akaash nil.	0.7	
+akaashor	NOUN		Of the sky.	of the sky	nature	S	আকাশৰ	base form,mass,inanimate	akashor	Akaashor tara dikhi.	0.5	
+akhi	NOUN		Eye.	eye	body	A	আখি	base form,countable,inanimate		Akhi band kori.	0.4	
+almirah	NOUN		A cupboard.	cupboard;wardrobe	home	E	almirah	base form,countable,inanimate		Almirah te kapur ase.	0.8	
+alo	NOUN		Light.	light	nature,home	A	পোহৰ	base form,mass,inanimate		Alo jolai di.	0.6	
+alok	NOUN		Light; also a name.	light	nature	S	आलोक	base form,mass,inanimate		Alok ahise.	0.5	
+alokee	NOUN		Unclear, name or light.	light	nature	N	alokee	base form,mass,inanimate		Alokee dikha.	0.1	doubtful: unclear
+alphabetical	ADJ		In order of the alphabet.	alphabetical	education	E	alphabetical	base form		Alphabetical order te likhibi.	0.5	
+alur	NOUN		Of the potato; potato.	of potato	food	A	আলুৰ	base form,mass,inanimate		Alur torkari bhal.	0.6	
+amar	ADJ	PRON=our	Our or immortal.	our;immortal	pronouns	B	আমার	invariable		Amar ghor bor.	0.5	
+ameer	ADJ		Rich.	rich;wealthy	money,describing	P	अमीर	base form		Tai bisi ameer.	0.7	
+amikhanla	PRON		Our (possessive form of amikhan).	our	pronouns	N	amikhanla	invariable	amikhanlai	Amikhanla ghor.	0.5	
+amikhanr	PRON		Our (possessive).	our	pronouns	N	amikhanr	invariable	amikhanor	Amikhanr ghor bor.	0.6	
+amiphale	PRON		Our side, towards us.	our side	pronouns,places	N	amiphale	invariable		Amiphale ahi.	0.5	
+andhare	NOUN		In the dark.	in the dark	nature,describing	A	আন্ধাৰে	base form,mass,inanimate		Andhare dikha nai.	0.6	
+angol	NOUN		Finger; also a unit of measure.	finger	body	A	আঙুল	base form,countable,inanimate	anguli	Angol te chot pale.	0.4	
+angona	NOUN		Courtyard.	courtyard;yard	home	S	আঙ্গনা	base form,countable,inanimate	angan	Angona te khelibo.	0.6	
+angonare	NOUN		In the courtyard.	in the courtyard	home	S	আঙনাৰে	base form,countable,inanimate		Angonare bosi ase.	0.3	
+anugrahee	ADJ		Grateful, thankful.	grateful	feelings	S	अनुग्रही	base form		Moi anugrahee.	0.2	doubtful: unusual spelling
+apunba	PRON		Unclear, possibly Manipuri you.	you	pronouns	N	apunba	invariable		Apunba ke ki bolibo?	0.1	doubtful: unclear
+apunikhanr	PRON		Your (plural polite).	your	pronouns	N	apunikhanr	invariable	apunikhanor	Apunikhanr ghor kot?	0.6	
+are	CCONJ		Or; also alas.	or;and	grammar	H	अरे	invariable		Are, tumi kot?	0.4	doubtful: Hindi exclamation or Assamese aru
+arote	ADV		Unclear, possibly at the door.	unclear	describing	N	arote	invariable		Arote ase.	0.1	doubtful: unclear
+asaan	ADJ		Easy.	easy	describing	P	आसान	base form	aasaan	Etu kam asaan.	0.7	
+asey	VERB		Is, exists.	is;are;exists	grammar	A	আছে	citation form	ase	Tai asey.	0.5	
+ashar	NOUN		Hope; also a month name.	hope;Ashar month	feelings,time	S	আশা	base form,mass,inanimate		Moi ashar kori ase.	0.4	
+ashi	NOUN		Eighty.	eighty	numbers	H	अस्सी	invariable	assi	Ashi taka lage.	0.3	doubtful: variant of assi
+asho	VERB		Come (plural imperative).	come	actions	A	আহক	citation form	aao	Asho khabole.	0.5	
+asibo	VERB		Will come.	will come	actions	A	আহিব	citation form	ahibo	Tai asibo.	0.6	
+assamese	NOUN	ADJ=Assamese	The people or language of Assam.	Assamese	community,culture	E	Assamese	base form,mass,inanimate		Moi Assamese kotha buji.	0.7	
+asse	VERB		Is, exists.	is;are;exists	grammar	A	আছে	citation form	ase	Tai asse.	0.4	
+atha	NOUN		Glue or sticky substance.	glue;gum	home	N	atha	base form,mass,inanimate		Atha lagai di.	0.2	doubtful: unclear meaning
+athaish	NUM		Twenty-eight.	twenty-eight	numbers	H	अट्ठाईस	invariable		Athaish taka.	0.5	
+atmar	NOUN		Soul, spirit.	soul;spirit	religion	S	আত্মার	base form,countable,inanimate		Atmar shanti.	0.4	
+baad	ADV		After, later.	after;later	time	P	बाद	invariable	baad me	Baad te ahibo.	0.7	
+baalish	NOUN		Pillow.	pillow	home	P	बालिश	base form,countable,inanimate	balish	Baalish lagai di.	0.5	
+baans	NOUN		Bamboo.	bamboo	nature	H	बाँस	base form,countable,inanimate	bans	Baans te ghor bonai.	0.7	
+baap	NOUN		Father.	father	family	H	बाप	base form,countable,animate		Baap ghor te ase.	0.6	
+baat	NOUN		Talk, matter.	talk;matter	actions	H	बात	base form,countable,inanimate	bat	Etu baat bhal nohoi.	0.6	
+babar	NOUN		Of the father; also a Mughal name.	father's	family	H	बाबर	base form,countable,animate		Babar ghor.	0.3	doubtful: ambiguous
+babri	NOUN		Name in Babri Masjid.	Babri	religion	PN	babri	base form,countable,inanimate		Babri masjid itihaas.	0.2	doubtful: proper name fragment
+babu	NOUN		Term for a man or father.	babu;sir	family,community	H	बाबू	base form,countable,animate		Babu ahise.	0.7	
+baccha	NOUN		Child.	child	family	P	बच्चा	base form,countable,animate	bacha	Baccha khelise.	0.7	
+bada	NOUN		Big (Hindi); also a snack.	big	describing	H	बड़ा	base form,countable,inanimate		Bada ghor.	0.5	
+badami	ADJ	NOUN=almond	Brown; almond-coloured.	brown;almond	colours	P	बादामी	base form		Badami rong bhal.	0.5	
+badsurat	ADJ		Ugly.	ugly	describing	P	बदसूरत	base form		Etu bisi badsurat.	0.5	
+bagha	NOUN		Tiger.	tiger	nature	A	বাঘ	base form,countable,animate	bagh	Bagha jongol te ase.	0.6	
+bagmi	PROPN		Unclear, a river or person name.	Bagmi	places	PN	bagmi	base form,countable,inanimate		Bagmi nodi.	0.1	doubtful: unclear
+bahir	ADV		Outside.	outside	places	H	बाहिर	invariable	bahire	Bahir jabo.	0.7	
+bahire	ADV		Outside, out.	outside	places	A	বাহিৰে	invariable	bahir	Bahire thak.	0.7	
+bahirephale	ADV		Towards the outside.	outside	places	A	বাহিৰফালে	invariable		Bahirephale jabo.	0.5	
+bahut	ADV	ADJ=many	Very, a lot.	very;a lot;much	describing	H	बहुत	invariable	bohut	Bahut bhal.	0.8	
+baish	NUM		Twenty-two.	twenty-two	numbers	H	बाईस	invariable	bais	Baish manu ahise.	0.5	
+baitho	VERB		Sit (Hindi imperative).	sit	actions	H	बैठो	citation form		Baitho ekhane.	0.4	doubtful: Hindi imperative
+bajaanaa	VERB		To play or ring an instrument.	play;ring	leisure,actions	H	बजाना	citation form	bajana	Gitar bajaanaa bhal lage.	0.5	
+balishor	NOUN		Of the pillow.	of pillow	home	P	বালিছৰ	base form,countable,inanimate		Balishor khol.	0.2	doubtful: rare inflection
+banda	NOUN		Person, fellow.	fellow;guy	community,slang	P	बंदा	base form,countable,animate		Etu banda bhal.	0.5	
+bansuri	NOUN		Bamboo flute.	flute	culture,leisure	H	बांसुरी	base form,countable,inanimate		Tai bansuri bajai.	0.6	
+bapuk	NOUN		Father (to the father).	father	family	A	বাপুক	base form,countable,animate		Bapuk dak.	0.5	
+bapukar	NOUN		Of the father.	father's	family	A	বাপুকৰ	base form,countable,animate	bapukor	Bapukar ghor bor.	0.5	
+bara	NUM		Twelve.	twelve	numbers	H	बारह	invariable		Bara bojise.	0.6	
+bariha	NOUN		Rainy season; also a type of tree.	rainy season	weather,time	A	বাৰিষা	base form,mass,inanimate	barisha	Bariha te bisi brishti.	0.4	
+baro	NUM		Twelve.	twelve	numbers	A	বাৰ	invariable	bara	Baro bojise.	0.6	
+barsha	NOUN		Rain.	rain	weather	S	বৰ্ষা	base form,mass,inanimate		Barsha hoi ase.	0.6	
+barshar	NOUN		Of the rain.	of rain	weather	S	বৰ্ষাৰ	base form,mass,inanimate		Barshar pani.	0.4	
+basa	NOUN		Rented room; also nest.	rented room;nest	home	A	বাহা	base form,countable,inanimate		Moi basa te thaki.	0.6	
+basanta	NOUN		Spring season.	spring	weather,time	S	বসন্ত	base form,mass,inanimate		Basanta te phul phute.	0.6	
+basantar	NOUN		Of spring.	of spring	weather	S	বসন্তৰ	base form,mass,inanimate		Basantar batas.	0.4	
+basha	NOUN		Language; also a rented room.	language;rented room	culture,home	S	ভাষা	base form,countable,inanimate	bhasha	Etu basha bhal.	0.5	
+batikhon	NOUN		Plural of bati, bowls or lamps.	bowls;lamps	home	A	বাটিখন	base form,countable,inanimate		Batikhon dhua.	0.4	
+batoror	NOUN		Of the road.	of the road	travel	A	বাটৰৰ	base form,countable,inanimate		Batoror pora ahise.	0.4	
+bayu	NOUN		Wind, air.	wind;air	weather,nature	S	বায়ু	base form,mass,inanimate		Bayu bisi jora.	0.5	
+bayur	NOUN		Of the wind.	of the wind	weather	S	বায়ুৰ	base form,mass,inanimate		Bayur gati.	0.3	
+bazare	NOUN		At the market.	at the market	places,money	H	बाजारे	base form,countable,inanimate		Bazare jabo.	0.5	
+bea	NOUN		Unclear, maybe marriage.	marriage	family	N	bea	base form,countable,inanimate	biya	Bea kori ase.	0.2	doubtful: likely variant of biya
+bekaar	ADJ		Useless.	useless;unemployed	describing	P	बेकार	base form	bekar	Etu bekaar.	0.7	
+bekar	ADJ		Useless.	useless;unemployed	describing	P	बेकार	base form	bekaar	Tai bekar ase.	0.7	
+bela	NOUN		Time of day.	time;day period	time	A	বেলা	base form,countable,inanimate		Kiman bela hoise?	0.7	
+beneficiaries	NOUN		People who receive help.	beneficiaries	civic	E	beneficiaries	base form,countable,animate		Beneficiaries list ase.	0.5	
+beral	NOUN		Cat.	cat	nature	A	বিড়াল	base form,countable,animate	biral	Beral dudh khai.	0.5	
+berali	NOUN		Evening time.	evening	time	A	বেলি	base form,mass,inanimate		Berali jabo.	0.3	doubtful: unclear
+beshi	ADV	ADJ=more	More, too much.	more;too much	describing	B	বেশি	invariable	bisi	Beshi nokhabi.	0.6	
+bhaal	ADJ		Good.	good	describing	A	ভাল	base form	bhal	Etu bhaal.	0.7	
+bhaate	NOUN		With rice.	with rice	food	A	ভাতে	base form,mass,inanimate		Bhaate daal khai.	0.5	
+bhabikene	VERB		Having thought.	having thought	feelings,actions	A	ভাবিকৈ	citation form	bhabikena	Bhabikene dikha.	0.6	
+bhabol	VERB		Unclear, thought.	thought	feelings	N	bhabol	citation form		Moi bhabol.	0.2	doubtful: unclear
+bhabonar	NOUN		Of thought.	of thought	feelings	A	ভাবনাৰ	base form,countable,inanimate		Bhabonar kotha.	0.4	
+bhaboni	NOUN		Thought, worry.	thought;worry	feelings	A	ভাবনী	base form,countable,inanimate	bhabona	Bhaboni nokori.	0.5	
+bhaido	NOUN		Brother; unclear.	brother	family	N	bhaido	base form,countable,animate		Bhaido ahise.	0.2	doubtful: unclear
+bhaika	NOUN		Younger brother (dear).	brother	family	H	भैया	base form,countable,animate	bhaiya	Bhaika ahise.	0.4	
+bhaipou	NOUN		Younger brother.	younger brother	family	A	ভাইপো	base form,countable,animate		Bhaipou school jai.	0.4	
+bhaipour	NOUN		Of the nephew.	nephew's	family	A	ভাইপোৰ	base form,countable,animate		Bhaipour ghor.	0.3	
+bhaiya	NOUN		Elder brother.	brother;elder brother	family	H	भैया	base form,countable,animate	bhaia	Bhaiya ahise.	0.8	
+bhandari	NOUN		Storekeeper; a surname.	storekeeper	work	H	भंडारी	base form,countable,animate		Bhandari dokan te ase.	0.4	
+bharosar	NOUN		Of trust.	of trust	feelings	H	भरोसार	base form,mass,inanimate		Bharosar manu.	0.3	
+bhatar	NOUN		Husband.	husband	family	A	ভতাৰ	base form,countable,animate	bhatar	Tai bhatar ahise.	0.5	
+bhavi	VERB		Having thought.	thought	feelings	A	ভাবি	citation form	bhabi	Moi bhavi dikhim.	0.5	
+bhejna	VERB		To send.	send	actions	H	भेजना	citation form		Message bhejna lage.	0.5	
+bhelaki	NOUN		Illusion; lizard.	illusion	describing	N	bhelaki	base form,countable,inanimate		Bhelaki nohoi.	0.2	doubtful: unclear
+bhet	NOUN		Meeting; gift.	meeting;gift	community	H	भेंट	base form,countable,inanimate		Tai ke bhet kori.	0.5	
+bhibo	VERB		Unclear, will be.	will be	grammar	N	bhibo	citation form		Bhibo.	0.1	doubtful: unclear
+bhitorephale	ADV		Inside, towards inside.	inside	places	A	ভিতৰফালে	invariable		Bhitorephale jabo.	0.5	
+bhoja	NOUN		Feast; meal.	feast;meal	food,culture	A	ভোজ	base form,countable,inanimate	bhoj	Kali bhoja ase.	0.5	
+bhoni	NOUN		Younger sister.	younger sister	family	A	ভনী	base form,countable,animate		Moi bhoni ase.	0.7	
+bhonir	NOUN		Of the younger sister.	sister's	family	A	ভনীৰ	base form,countable,animate		Bhonir ghor.	0.5	
+bhool	NOUN		Mistake.	mistake	describing	H	भूल	base form,countable,inanimate	bhul	Moi bhool korise.	0.7	
+bhoomi	NOUN		Land, earth.	land;earth	nature,places	S	भूमि	base form,mass,inanimate	bhumi	Bhoomi bisi bor.	0.5	
+bhootjolokia	NOUN		Ghost pepper, a very hot chilli.	ghost pepper	food	A	ভূতজলকীয়া	base form,countable,inanimate		Bhootjolokia bisi jhal.	0.7	
+bhoy	NOUN		Fear.	fear	feelings	A	ভয়	base form,mass,inanimate	bhoi	Moi bhoy pau.	0.6	
+bhoyor	NOUN		Of fear.	of fear	feelings	A	ভয়ৰ	base form,mass,inanimate		Bhoyor kotha.	0.4	
+bhumi	NOUN		Land, earth.	land;earth	nature,places	S	भूमि	base form,mass,inanimate	bhoomi	Bhumi bhal.	0.5	
+bibahkhon	NOUN		Weddings.	weddings	family,culture	S	বিবাহখন	base form,countable,inanimate		Bibahkhon kali.	0.4	
+bibhor	ADJ		Absorbed, overwhelmed.	overwhelmed	feelings	S	বিভোৰ	base form		Tai gaan te bibhor.	0.4	
+bichari	VERB		To search; a poor person.	search;poor	actions	A	বিচাৰি	citation form	bisari	Moi bichari ase.	0.6	
+bichi	NOUN		Unclear, maybe seeds.	seeds	nature	N	bichi	base form,countable,inanimate	bij	Bichi phelai di.	0.2	doubtful: unclear
+bihan	NOUN		Morning.	morning	time	A	বিহান	base form,countable,inanimate		Bihan uthi.	0.6	
+bihanor	NOUN		Of the morning.	of morning	time	A	বিহানৰ	base form,countable,inanimate		Bihanor chah.	0.4	
+bihar	PROPN		A state in India.	Bihar	places	PN	Bihar	base form,countable,inanimate		Bihar India te ase.	0.5	
+bihin	NOUN		Unclear, maybe without.	without	grammar	N	bihin	base form,countable,inanimate		Bihin.	0.1	doubtful: unclear
+bijuli	NOUN		Electricity; lightning.	electricity;lightning	technology,weather	A	বিজুলী	base form,mass,inanimate		Bijuli nai.	0.7	
+bijulir	NOUN		Of electricity.	of electricity	technology	A	বিজুলীৰ	base form,mass,inanimate		Bijulir bill.	0.4	
+bilkul	ADV		Totally, absolutely.	totally;exactly	describing	P	बिल्कुल	invariable		Bilkul thik.	0.7	
+bimaar	ADJ		Sick.	sick;ill	health	P	बीमार	base form	bimar	Moi bimaar ase.	0.7	
+bindaas	ADJ		Carefree, cool.	carefree;cool	describing,slang	H	बिंदास	base form	bindas	Tai bindaas manu.	0.6	
+bindas	ADJ		Carefree, cool.	carefree;cool	describing,slang	H	बिंदास	base form	bindaas	Tai bindas ase.	0.6	
+birakt	ADJ		Annoyed.	annoyed;irritated	feelings	S	विरक्त	base form		Moi birakt hoise.	0.5	
+bish	NOUN		Poison.	poison	health	A	বিষ	base form,mass,inanimate		Etu bish ase.	0.6	
+bishwas	NOUN		Trust, faith.	trust;belief	feelings,religion	S	विश्वास	base form,mass,inanimate	biswas	Moi tai ke bishwas kori.	0.6	
+bistar	NOUN		Bed, bedding.	bed;bedding	home	P	बिस्तर	base form,countable,inanimate		Bistar te bosi.	0.5	
+bistare	ADV		Slowly; on the bed.	slowly	describing	P	बिस्तरे	invariable		Bistare jabi.	0.3	doubtful: unclear
+biswasee	ADJ		Trusting, faithful.	faithful	feelings	S	বিশ্বাসী	base form	biswasi	Tai biswasee manu.	0.5	
+biswasor	NOUN		Of trust.	of trust	feelings	S	বিশ্বাসৰ	base form,mass,inanimate		Biswasor kotha.	0.4	
+bivohor	NOUN		Of marriage.	of marriage	family	S	বিবাহৰ	base form,countable,inanimate		Bivohor din.	0.2	doubtful: odd spelling
+biyor	NOUN		Of the wedding.	of wedding	family	A	বিয়াৰ	base form,countable,inanimate		Biyor din.	0.5	
+blas	NOUN		Unclear.	unclear	slang	N	blas	base form,countable,inanimate		Blas.	0.1	doubtful: noise or typo
+blos	NOUN		Unclear.	unclear	slang	N	blos	base form,countable,inanimate		Blos.	0.1	doubtful: noise or typo
+bogi	NOUN		Railway coach; also a name.	coach;carriage	travel	H	बोगी	base form,countable,inanimate		Bogi te bosi.	0.5	
+bohtoi	ADV		Many; very.	very;many	describing	N	bohtoi	invariable	bohut	Bohtoi manu ahise.	0.3	doubtful: likely variant of bohut
+bohuter	ADJ		Of many.	of many	describing	A	বহুতৰ	base form		Bohuter kotha.	0.3	
+boi	NOUN		Book.	book	education	A	বই	base form,countable,inanimate		Boi pori ase.	0.7	
+boikene	VERB		Having sat.	sitting	actions	A	বহিকৈ	citation form	bosikena	Boikene khai.	0.5	
+boikhon	NOUN		Books.	books	education	A	বইখন	base form,countable,inanimate		Boikhon tebul te ase.	0.6	
+boka	ADJ		Stupid; mud.	stupid;foolish	describing	A	বোকা	base form		Tai boka.	0.5	
+bol	VERB		Say, speak; also ball.	say;speak	actions	H	बोल	citation form		Bol moi ke.	0.5	
+bolei	VERB		If saying; for saying.	saying	actions	A	বুলি	citation form		Bolei moi jabo.	0.4	
+bolek	VERB		Unclear, said.	said	actions	N	bolek	citation form		Tai bolek.	0.2	doubtful: unclear
+bolekh	VERB		Unclear, said.	said	actions	N	bolekh	citation form		Tai bolekh.	0.1	doubtful: noise or typo
+boleo	VERB		Even if said.	even if said	actions	A	বুলিও	citation form		Boleo nokori.	0.4	
+bolibo	VERB		Will say.	will say	actions	A	বুলিব	citation form		Moi tai ke bolibo.	0.8	
+bolna	VERB		To say or speak.	say;speak	actions	H	बोलना	citation form		Bolna lage.	0.5	
+bolo	VERB		Say, speak.	say;speak	actions	H	बोलो	citation form		Bolo ki lage?	0.6	
+bolta	VERB		Saying (Hindi).	says	actions	H	बोलता	citation form		Tai bolta ase.	0.3	doubtful: Hindi form
+bolti	VERB		Saying (Hindi).	says	actions	H	बोलती	citation form		Tai bolti ase.	0.3	doubtful: Hindi form
+boner	NOUN		Of the forest.	of the forest	nature	A	বনৰ	base form,countable,inanimate		Boner pakhi.	0.4	
+bonn	NOUN		Forest.	forest	nature	A	বন	base form,countable,inanimate	bon	Bonn te jabo.	0.4	
+bordanee	NOUN		A name.	Bordanee	community	PN	bordanee	base form,countable,animate		Bordanee ahise.	0.1	doubtful: personal name
+boro	ADJ		Big.	big;large	describing	A	বৰ	base form	bor	Etu ghor boro.	0.8	
+borol	NOUN		Unclear, maybe a fish.	fish	food	N	borol	base form,countable,animate		Borol khai.	0.2	doubtful: unclear
+boror	ADJ		Of the big.	of big	describing	A	বৰৰ	base form		Boror kotha.	0.3	
+borsha	NOUN		Rain.	rain	weather	S	বৰ্ষা	base form,mass,inanimate	barsha	Borsha hoi ase.	0.6	
+borshar	NOUN		Of the rain.	of rain	weather	S	বৰ্ষাৰ	base form,mass,inanimate		Borshar pani.	0.4	
+bosa	VERB		Sit, stay.	sit	actions	A	বহা	citation form		Bosa ekhane.	0.5	
+boshok	NOUN		Unclear.	unclear	slang	N	boshok	base form,countable,inanimate		Boshok.	0.1	doubtful: unclear
+bosibo	VERB		Will sit.	will sit	actions	A	বহিব	citation form		Moi ekhane bosibo.	0.7	
+botoh	NOUN		Unclear.	unclear	slang	N	botoh	base form,countable,inanimate		Botoh.	0.1	doubtful: noise or typo
+botor	NOUN		Of the weather; unclear.	of weather	weather	N	botor	base form,countable,inanimate		Botor bhal.	0.2	doubtful: unclear
+brishti	NOUN		Rain.	rain	weather	S	বৃষ্টি	base form,mass,inanimate		Brishti hoi ase.	0.7	
+brishtikhon	NOUN		Rains.	rains	weather	S	বৃষ্টিখন	base form,countable,inanimate		Brishtikhon bisi.	0.4	
+bro	NOUN		Brother, buddy.	bro;buddy	family,slang	E	bro	base form,countable,animate		Bro, kot jai ase?	0.8	
+browse	VERB		To look through web pages or items.	browse	technology,actions	E	browse	citation form		Moi phone te browse kori ase.	0.6	
+bujia	VERB		Having understood.	understood	actions	A	বুজি	citation form	buji	Bujia moi jabo.	0.4	
+buk	NOUN		Chest.	chest	body	A	বুক	base form,countable,inanimate		Buk te dukh ase.	0.6	
+bukor	NOUN		Of the chest.	of chest	body	A	বুকুৰ	base form,countable,inanimate		Bukor pora gaan ahise.	0.3	
+bukote	NOUN		In the chest.	in the chest	body	A	বুকুত	base form,countable,inanimate		Bukote bisi dukh.	0.4	
+bulana	VERB		To call or invite.	call;invite	actions	H	बुलाना	citation form		Tai ke bulana lage.	0.4	
+bull	NOUN		A male cow.	bull	nature,farming	E	bull	base form,countable,animate		Bull ghas khai.	0.5	
+bumrah	PROPN		Surname of a cricketer.	Bumrah	leisure	PN	bumrah	base form,countable,animate		Bumrah bhal bowling kore.	0.4	
+can	AUX		Is able to.	can;be able	grammar	E	can	invariable		Moi can kori.	0.4	doubtful: English word in code-mixing
+categories	NOUN		Groups or kinds.	categories	education	E	categories	base form,countable,inanimate		Categories bisi ase.	0.4	
+ceuta	PROPN		A Spanish city in Africa.	Ceuta	places	PN	ceuta	base form,countable,inanimate		Ceuta Spain laga.	0.1	doubtful: obscure place name
+chaa	NOUN		Tea.	tea	food	H	चा	base form,mass,inanimate	sah	Chaa khabo?	0.6	
+chaang	NOUN		A raised platform or a Naga house stage.	platform	home,culture	L	chaang	base form,countable,inanimate		Chaang te bosi.	0.3	doubtful: unclear
+chaar	NUM		Four.	four	numbers	H	चार	invariable	char	Chaar manu ahise.	0.6	
+chaawal	NOUN		Rice (uncooked).	rice	food	H	चावल	base form,mass,inanimate	chawal	Chaawal kin ahi.	0.7	
+chahiye	VERB		Is needed.	need;want	actions	H	चाहिए	citation form		Moi ke pani chahiye.	0.7	
+chai	NOUN		Tea.	tea	food	H	चाय	base form,mass,inanimate		Chai khabo?	0.8	
+chakri	NOUN		Job, service.	job;work	work,money	A	চাকৰি	base form,countable,inanimate	chakri	Tai chakri kore.	0.8	
+chakrikhon	NOUN		Jobs.	jobs	work	A	চাকৰিখন	base form,countable,inanimate		Chakrikhon nai.	0.4	
+chakur	NOUN		Servant; knife.	servant	work	P	चाकर	base form,countable,animate		Chakur ahise.	0.3	
+chakure	NOUN		By the servant.	servant	work	P	চাকুৰে	base form,countable,animate		Chakure kam kore.	0.2	doubtful: unclear
+chali	VERB		Walk, go.	walk;go	travel,actions	H	चली	citation form		Chali jabo.	0.4	doubtful: Hindi form
+chalibo	VERB		Will walk or run.	will walk;will run	travel,actions	A	চলিব	citation form		Gari chalibo.	0.6	
+challish	NUM		Forty-six.	forty-six	numbers	H	छियालीस	invariable		Challish.	0.2	doubtful: odd form, possibly chalis forty
+chalna	VERB		To walk or run.	walk;go	travel,actions	H	चलना	citation form		Chalna lage.	0.5	
+chalnaa	VERB		To walk or run.	walk;go	travel,actions	H	चलना	citation form	chalna	Chalnaa bhal.	0.4	
+chalo	VERB		Lets go.	lets go;go	travel,actions	H	चलो	citation form		Chalo jai.	0.8	
+chalti	VERB		Moving, going.	moving;walking	travel	H	चलती	citation form		Gari chalti ase.	0.3	doubtful: Hindi form
+chalu	ADJ		On, running, active.	on;running	technology,describing	H	चालू	base form		Phone chalu ase.	0.7	
+cheez	NOUN		Thing.	thing;object	describing	P	चीज़	base form,countable,inanimate	chij	Etu cheez bhal.	0.7	
+chhabbish	NUM		Twenty-six.	twenty-six	numbers	H	छब्बीस	invariable		Chhabbish taka.	0.4	
+chhodna	VERB		To leave, give up.	leave;quit	actions	H	छोड़ना	citation form		Chhodna lage.	0.5	
+chilo	VERB		Was.	was	grammar	B	ছিল	citation form		Tai chilo.	0.3	doubtful: Bengali form
+chintar	NOUN		Of worry.	of worry	feelings	S	চিন্তাৰ	base form,mass,inanimate		Chintar kotha nai.	0.4	
+chobiish	NUM		Twenty-four.	twenty-four	numbers	H	चौबीस	invariable	chaubis	Chobiish ghonta.	0.4	
+choda	VERB		Vulgar word.	vulgar	slang	H	चोदा	citation form		Choda.	0.3	doubtful: vulgar
+chokh	NOUN		Eye.	eye	body	B	চোখ	base form,countable,inanimate		Chokh khol.	0.4	
+chokhabatha	NOUN		Unclear.	unclear	describing	N	chokhabatha	base form,countable,inanimate		Chokhabatha.	0.1	doubtful: unclear
+chokhor	NOUN		Of the eye.	of eye	body	B	চোখর	base form,countable,inanimate		Chokhor jol.	0.3	
+chokora	NOUN		Boy.	boy	family	A	ছোকরা	base form,countable,animate	sokora	Chokora school jai.	0.5	
+chopra	PROPN		A surname.	Chopra	community	PN	chopra	base form,countable,animate		Chopra ahise.	0.3	doubtful: surname
+choy	NUM		Six.	six	numbers	H	छह	invariable	chhoy	Choy ghonta.	0.4	
+cokra	NOUN		Boy.	boy	family	A	চোকরা	base form,countable,animate	chokora	Cokra khelise.	0.4	
+contributors	NOUN		People who give or help.	contributors	community	E	contributors	base form,countable,animate		Contributors ke dhoinobad.	0.4	
+crackdown	NOUN		Strong official action.	crackdown	civic	E	crackdown	base form,countable,inanimate		Police crackdown kori ase.	0.4	
+crew	NOUN		A team working together.	crew;team	work	E	crew	base form,countable,animate		Crew ahise.	0.4	
+crore	NUM		Ten million.	crore	numbers,money	H	करोड़	invariable		Ek crore taka.	0.6	
+csos	NOUN		Civil society organisations.	CSOs	civic	E	CSOs	base form,countable,inanimate		CSOs sobha ase.	0.2	doubtful: abbreviation
+daahi	NOUN		Curd.	curd	food	H	दही	base form,mass,inanimate	dahi	Daahi khabo.	0.6	
+daaler	NOUN		Of the lentil.	of lentil	food	B	ডালের	base form,mass,inanimate		Daaler jhol.	0.3	
+daatar	NOUN		Of the tooth.	of tooth	body	A	দাঁতৰ	base form,countable,inanimate		Daatar dukh.	0.3	
+dadar	NOUN		Of the elder brother.	of brother	family	B	দাদার	base form,countable,animate		Dadar ghor.	0.3	
+daktar	NOUN		Doctor.	doctor	health,work	E	doctor	base form,countable,animate	dakutar	Daktar ke dikha.	0.8	
+dakutar	NOUN		Doctor.	doctor	health,work	E	doctor	base form,countable,animate	daktar	Dakutar ahise.	0.8	
+dangoria	NOUN		A title of respect; surname.	Dangoria	community	PN	dangoria	base form,countable,animate		Dangoria ahise.	0.2	doubtful: surname
+dar	NOUN		Fear; rate.	fear;rate	feelings,money	H	डर	base form,mass,inanimate		Moi ke dar lage.	0.5	
+dara	NOUN		Fear.	fear	feelings	H	डरा	base form,mass,inanimate		Dara nokori.	0.3	
+dari	NOUN		Beard.	beard	body	H	दाढ़ी	base form,countable,inanimate		Tai dari rakhise.	0.5	
+darire	NOUN		On the beard.	beard	body	H	दाढ़ीरे	base form,countable,inanimate		Darire pani.	0.1	doubtful: unclear
+daudna	VERB		To run.	run	actions	H	दौड़ना	citation form		Daudna lage.	0.4	
+days	NOUN		Plural of day.	days	time	E	days	base form,countable,inanimate		Tin days hoise.	0.6	
+db	NOUN		Database.	database	technology	E	DB	base form,countable,inanimate		DB te data ase.	0.2	doubtful: abbreviation
+ddma	NOUN		An abbreviation.	DDMA	civic	E	DDMA	base form,countable,inanimate		DDMA.	0.1	doubtful: abbreviation
+defcc	NOUN		An abbreviation.	DEFCC	civic	E	DEFCC	base form,countable,inanimate		DEFCC.	0.1	doubtful: abbreviation
+dega	VERB		Will give (Hindi).	will give	actions	H	देगा	citation form		Tai dega.	0.4	doubtful: Hindi form
+degi	VERB		Will give (Hindi feminine).	will give	actions	H	देगी	citation form		Tai degi.	0.4	doubtful: Hindi form
+dekh	VERB		See, look.	see;look	actions	H	देख	citation form		Dekh moi ke.	0.6	
+dekhibo	VERB		Will see.	will see	actions	A	দেখিব	citation form	dikhibo	Moi dekhibo.	0.5	
+dekhna	VERB		To see.	see	actions	H	देखना	citation form		Dekhna lage.	0.5	
+dekho	VERB		See, look.	see;look	actions	H	देखो	citation form		Dekho etu.	0.6	
+dekhta	VERB		Seeing (Hindi).	sees	actions	H	देखता	citation form		Tai dekhta ase.	0.3	doubtful: Hindi form
+dekhti	VERB		Seeing (Hindi feminine).	sees	actions	H	देखती	citation form		Tai dekhti ase.	0.3	doubtful: Hindi form
+dena	VERB		To give.	give	actions	H	देना	citation form		Dena lage.	0.5	
+departments	NOUN		Sections of an office or college.	departments	civic,work	E	departments	base form,countable,inanimate		Departments bisi ase.	0.5	
+dha	NOUN		Unclear, possibly a sword or a name.	dha	culture	N	dha	base form,countable,inanimate		Dha.	0.1	doubtful: unclear
+dhanar	NOUN		Of the rice paddy or wealth.	of paddy	farming	A	ধানৰ	base form,mass,inanimate		Dhanar khet.	0.4	
+dhapi	NOUN		Unclear.	unclear	slang	N	dhapi	base form,countable,inanimate		Dhapi.	0.1	doubtful: unclear
+dharil	VERB		Held, caught.	held;caught	actions	A	ধৰিল	citation form		Tai moi ke dharil.	0.4	
+dharm	NOUN		Religion, duty.	religion;duty	religion	S	धर्म	base form,mass,inanimate	dharma	Dharm bhal.	0.6	
+dharma	NOUN		Religion, duty.	religion;duty	religion	S	धर्म	base form,mass,inanimate	dharm	Dharma bisi dami.	0.6	
+dheere	ADV		Slowly.	slowly	describing	H	धीरे	invariable	dhire	Dheere bol.	0.7	
+dhheere	ADV		Slowly.	slowly	describing	H	धीरे	invariable	dheere	Dhheere chal.	0.6	
+dhoinobad	INTJ		Thank you.	thank you;thanks	greetings	A	ধন্যবাদ	invariable	dhonyobad	Dhoinobad, bhai.	0.8	
+dhola	ADJ		White.	white	colours	A	ধলা	base form		Dhola kapur.	0.6	
+dhowa	VERB		To wash.	wash	actions,home	A	ধোৱা	citation form		Kapur dhowa lage.	0.5	
+dhowaar	VERB		Of washing.	of washing	home	A	ধোৱাৰ	citation form		Dhowaar sabun.	0.3	
+dhulir	NOUN		Of dust.	of dust	nature	A	ধুলিৰ	base form,mass,inanimate		Dhulir pora bhal nai.	0.3	
+diboh	NOUN		Day.	day	time	S	দিবস	base form,countable,inanimate		Etu diboh bhal.	0.4	
+didir	NOUN		Of the elder sister.	of sister	family	B	দিদির	base form,countable,animate		Didir ghor.	0.3	
+dighi	NOUN		Large pond.	pond	nature	A	দীঘলী	base form,countable,inanimate		Dighi te mas ase.	0.4	
+digilocker	NOUN		Government app for documents.	DigiLocker	technology,civic	E	DigiLocker	base form,countable,inanimate		Digilocker te card ase.	0.5	
+dii	VERB		Give (variant of di).	give	actions	A	দি	citation form	di	Moi ke dii.	0.4	
+dishey	NOUN		In the direction of.	direction	travel	B	দিশে	base form,countable,inanimate		Dishey jabo.	0.2	doubtful: unclear
+dithalate	ADV		Unclear, on the surface.	unclear	describing	N	dithalate	invariable		Dithalate.	0.1	doubtful: unclear
+dobashi	NOUN		Interpreter, an Assam hill traders go-between.	interpreter	work,community	H	दुभाषी	base form,countable,animate		Dobashi ahise.	0.5	
+don	NOUN		Gang leader.	don	slang	E	don	base form,countable,animate		Tai don.	0.4	
+doriya	NOUN		Rope.	rope	home	H	डोरी	base form,countable,inanimate	dori	Doriya bandhi.	0.4	
+dorjaa	NOUN		Door; level.	door;grade	home	P	दरजा	base form,countable,inanimate	dorja	Dorjaa khul.	0.3	doubtful: ambiguous
+dost	NOUN		Friend.	friend	community	P	दोस्त	base form,countable,animate		Moi dost ahise.	0.8	
+dostar	NOUN		Of the friend.	of friend	community	P	দোস্তৰ	base form,countable,animate		Dostar ghor.	0.4	
+doubles	NOUN		Pairs; a game format.	doubles	leisure	E	doubles	base form,countable,inanimate		Doubles khel.	0.3	
+dpdb	NOUN		An abbreviation.	DPDB	civic	E	DPDB	base form,countable,inanimate		DPDB.	0.1	doubtful: abbreviation
+drug	NOUN		Medicine or illegal drug.	drug;medicine	health	E	drug	base form,countable,inanimate		Drug nokhabi.	0.6	
+dukhor	NOUN		Of sorrow.	of sorrow	feelings	A	দুখৰ	base form,mass,inanimate		Dukhor kotha.	0.4	
+dukkho	NOUN		Sorrow, pain.	sorrow;pain	feelings	S	दुःख	base form,mass,inanimate	dukh	Moi dukkho pau.	0.5	
+dukkhor	NOUN		Of sorrow.	of sorrow	feelings	S	दुःखर	base form,mass,inanimate		Dukkhor din.	0.3	
+dupur	NOUN		Noon, afternoon.	noon;afternoon	time	A	দুপৰ	base form,countable,inanimate		Dupur te khai.	0.7	
+dure	ADV		Far away.	far	places	S	দূৰে	invariable	dur	Dure ase.	0.6	
+duure	ADV		Far away.	far	places	S	দূৰে	invariable	dure	Duure thak.	0.5	
+dwsm	NOUN		An abbreviation.	DWSM	civic	E	DWSM	base form,countable,inanimate		DWSM.	0.1	doubtful: abbreviation
+dy	NOUN		Unclear.	unclear	slang	N	dy	base form,countable,inanimate		Dy.	0.1	doubtful: noise
+dzuleke	NOUN		A name or Naga word.	Dzuleke	community	L	dzuleke	base form,countable,animate		Dzuleke ahise.	0.1	doubtful: Naga name, unclear
+ebela	ADV		Now.	now	time	A	এতিয়া	invariable	ebala	Ebela moi jabo.	0.7	
+egara	NUM		Eleven.	eleven	numbers	A	এঘাৰ	invariable		Egara bojise.	0.7	
+eikhon	DET		This one.	this	grammar	A	এইখন	invariable		Eikhon bhal.	0.7	
+eita	PRON		This thing.	this	pronouns	A	এইটো	invariable		Eita ki?	0.8	
+eitei	PRON		Only this.	this only	pronouns	A	এইটোৱেই	invariable		Eitei lage.	0.5	
+eithate	ADV		Here, in this place.	here	places	A	এইখনত	invariable		Eithate thak.	0.5	
+eitia	ADV		Now.	now	time	A	এতিয়া	invariable	etia	Eitia jabo.	0.5	
+ejaak	NUM		One bunch; unclear.	unclear	numbers	N	ejaak	invariable		Ejaak.	0.1	doubtful: unclear
+ekhan	DET		One piece of.	one	numbers,grammar	A	এখন	invariable		Ekhan boi.	0.6	
+ekhi	DET		One; unclear.	one	numbers	A	একে	invariable		Ekhi.	0.2	doubtful: unclear
+ekhon	DET		One piece of.	one	numbers,grammar	A	এখন	invariable	ekhan	Ekhon boi.	0.6	
+ekhoni	ADV		Right now.	right now	time	A	এতিয়াই	invariable	ekhuni	Ekhoni jabo.	0.6	
+eksob	PRON		All of these.	all these	pronouns	A	এইসব	invariable	eisob	Eksob bhal.	0.4	
+ekush	NUM		Twenty-one.	twenty-one	numbers	H	इक्कीस	invariable	ekkis	Ekush taka.	0.4	
+emi	PRON		Unclear, possibly we.	we	pronouns	N	emi	invariable		Emi jabo.	0.1	doubtful: unclear
+entered	VERB		Past tense of enter.	entered	actions	E	entered	citation form		Tai ghor te entered hoise.	0.4	
+eti	NUM		One (of a thing).	one	numbers	A	এটি	invariable		Eti boi.	0.5	
+eton	NUM		One (of a person).	one	numbers	A	এটা	invariable	eta	Eton manu.	0.3	doubtful: unclear

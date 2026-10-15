@@ -282,13 +282,19 @@ function LexiconSection({ data }: { data: DataHealth }) {
         title="Lexicon"
         description={<span className="font-mono text-[13.5px] break-all">{lexicon.file}</span>}
       />
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         <StatTile label="Entries" value={fmt(lexicon.entries)} />
         <StatTile
-          label="With English glosses"
+          label="With English meanings"
           value={fmt(lexicon.glossed)}
           tone={lexicon.glossed ? "good" : "warning"}
-          context={`${pct(lexicon.glossed, lexicon.entries)} usable as a bilingual glossary.`}
+          context={`${pct(lexicon.glossed, lexicon.entries)} of entries. Researched or dictionary meanings, unverified until a speaker checks them.`}
+        />
+        <StatTile
+          label="Checked by speakers"
+          value={fmt(lexicon.verified)}
+          tone={lexicon.verified ? "good" : "warning"}
+          context={`${pct(lexicon.verified, lexicon.entries)} of entries confirmed in the review queue.`}
         />
         <StatTile
           label="Part-of-speech tagged"

@@ -249,6 +249,7 @@ class LexiconOut(BaseModel):
     exists: bool
     entries: int
     glossed: int
+    verified: int = 0  # entries a speaker has checked
     pos_tagged: int
     attested_in_corpus: int
     etymology: dict[str, int]

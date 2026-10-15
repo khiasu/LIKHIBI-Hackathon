@@ -1,0 +1,434 @@
+azaad	ADJ		Free, not bound or controlled.	free;independent	describing	H	आज़ाद	base form	azad	Tai azaad ase.	0.7	
+bean	NOUN		A small seed eaten as a vegetable.	bean	food	E	bean	base form,countable,inanimate		Moi bean khabo.	0.9	
+bhul	NOUN	VERB=to err (with kori)	A mistake or error.	mistake;error	describing	A	ভুল	base form,countable,inanimate	bhool	Moi bhul kori ase.	0.9	
+bollywood	PROPN		The Hindi film industry of India.	Bollywood	media,culture	PN	bollywood	base form,countable,inanimate		Moi Bollywood film dekhi.	0.8	
+box	NOUN		A container with sides and a lid.	box;container	home	E	box	base form,countable,inanimate	bax	Box te kitab ase.	0.9	
+bujhabi	VERB		Explain or make understand, said as a command.	explain;make understand	actions	A	বুজোৱা	imperative	bujhai bi	Moike bhal kori bujhabi.	0.7	
+colombia	PROPN		A country in South America.	Colombia	places	PN	colombia	base form,countable,inanimate		Colombia ek desh ase.	0.8	
+dekha	VERB	NOUN=sight, meeting	Saw or seen.	saw;seen	actions	A	দেখা	past	dekhaa	Moi tai ke dekha.	0.8	
+dekhabi	VERB		Show, said as a command.	show	actions	A	দেখুৱা	imperative	dekhai bi	Moike photo dekhabi.	0.8	
+dekhi	VERB		To see or look at.	see;look	actions	A	দেখি	citation form	dekhe	Moi tai ke dekhi.	0.95	
+dioxide	NOUN		A chemical compound with two oxygen atoms, as in carbon dioxide.	dioxide	education,nature	E	dioxide	base form,mass,inanimate		Carbon dioxide hawa te ase.	0.7	
+dr	NOUN		Short form of doctor.	doctor	health	E	doctor	base form,countable,animate		Dr tai ghor te ase.	0.6	doubtful: abbreviation
+ete	ADV		Possibly a short form of etia, now.	now	time	N	ete	invariable		Ete moi jabo.	0.2	doubtful: unclear word, maybe typo of etia
+foam	NOUN		Light bubbly mass, as on soap or milk.	foam;lather	home	E	foam	base form,mass,inanimate		Sabun te foam ase.	0.8	
+gao	NOUN		A village.	village	places,community	H	गाँव	base form,countable,inanimate	gaon,gaw	Moi gao te thake.	0.85	
+ghumabo	VERB		Will sleep.	will sleep	actions	A	ঘুমাব	future	ghumaibo	Moi ratite ghumabo.	0.8	
+go	VERB		English word meaning to go.	go	travel	E	go	citation form		Moi school go kori.	0.4	doubtful: English word, Nagamese uses jai
+gundhai	NOUN		Unclear word, possibly a thug or bully.	bully;thug	slang	N	gundhai	base form,countable,animate	gunda	Tai gundhai ase.	0.2	doubtful: unclear meaning, maybe from gunda
+hand	NOUN		The hand of the body.	hand	body	E	hand	base form,countable,inanimate		Moi hand dhua.	0.9	
+hikise	VERB		Has learned.	learned	education,actions	N	hikise	past	sikise	Moi Nagamese hikise.	0.85	
+kanchenjunga	PROPN		A high mountain on the Nepal-Sikkim border.	Kanchenjunga	places,nature	PN	kanchenjunga	base form,countable,inanimate		Kanchenjunga bor pahar ase.	0.7	
+khawa	NOUN	VERB=eaten	Eating, or food.	eating;food	food	A	খোৱা	base form,mass,inanimate	khoa	Khawa ready ase.	0.8	
+khulibole	VERB		To open.	to open	actions	A	খোলিবলৈ	purposive		Dorja khulibole laga.	0.8	
+kimchi	NOUN		A spicy fermented Korean cabbage dish.	kimchi	food	N	kimchi	base form,mass,inanimate		Moi kimchi bhal pai.	0.8	
+korai	NOUN		A deep iron pan used for cooking, a wok.	wok;pan	food,home	H	कड़ाही	base form,countable,inanimate	kadai	Korai te mach rondhi.	0.6	
+kurai	NOUN		A deep cooking pan, a wok.	wok;pan	food,home	H	कड़ाही	base form,countable,inanimate	korai	Kurai garam ase.	0.4	doubtful: probably variant of korai
+lagale	VERB		If needed or when required.	if needed	grammar	A	লাগিলে	conditional		Lagale moike bolibi.	0.75	
+likhile	VERB		If or when written.	if write;when write	grammar,education	A	লিখিলে	conditional		Tumi likhile moi dikhi.	0.7	
+loisele	VERB		Took, took it.	took	actions	A	লৈছিল	past	loisil	Tai kitab loisele.	0.5	doubtful: odd form, maybe loise
+longwa	PROPN		A Konyak village on the Nagaland-Myanmar border.	Longwa	places	L	longwa	base form,countable,inanimate		Longwa Mon te ase.	0.7	
+mach	NOUN		Fish.	fish	food,nature	A	মাছ	base form,countable,inanimate	maas	Moi mach khai.	0.9	
+mahabharata	PROPN		The great Indian epic.	Mahabharata	culture,religion	S	महाभारत	base form,countable,inanimate		Mahabharata bor kotha ase.	0.8	
+mahatma	NOUN		A great soul, title of respect.	great soul;saint	culture,religion	S	महात्मा	base form,countable,animate		Mahatma Gandhi bor manu ase.	0.75	
+mind	NOUN		The thinking part of a person.	mind	feelings	E	mind	base form,countable,inanimate		Moi mind te bhabi.	0.85	
+moribole	VERB		To die.	to die	actions,health	A	মৰিবলৈ	purposive		Tai moribole dor.	0.75	
+municipality	NOUN		A town or city council area.	municipality	civic,places	E	municipality	base form,countable,inanimate		Municipality ofis ase.	0.8	
+my	DET		English word meaning belonging to me.	my	pronouns	E	my	invariable		My ghor ase.	0.4	doubtful: English word, Nagamese uses mor
+nasile	AUX		If not, or if it were not.	if not	grammar	A	নাছিলে	conditional,negative		Tumi nasile moi jabo.	0.55	
+paka	ADJ		Ripe, cooked, or firm.	ripe;cooked;firm	describing,food	H	पका	base form	pakka	Aam paka ase.	0.8	
+peru	PROPN		A country in South America.	Peru	places	PN	peru	base form,countable,inanimate		Peru ek desh ase.	0.7	
+pindhibi	VERB		Wear, said as a command.	wear	clothing,actions	A	পিন্ধা	imperative		Jacket pindhibi.	0.8	
+poem	NOUN		A piece of verse.	poem	education,culture	E	poem	base form,countable,inanimate		Moi poem likhi.	0.85	
+poumai	PROPN		A Naga tribe of Manipur.	Poumai	community	L	poumai	base form,countable,animate		Poumai bhal manu ase.	0.7	
+ramayana	PROPN		The great Indian epic of Rama.	Ramayana	culture,religion	S	रामायण	base form,countable,inanimate		Ramayana kitab ase.	0.8	
+rod	NOUN		A long thin bar or stick.	rod;bar	describing	E	rod	base form,countable,inanimate		Rod bor lamba ase.	0.7	
+rongin	ADJ		Colourful.	colourful	colours,describing	P	रंगीन	base form	rangin	Phul rongin ase.	0.75	
+sach	NOUN	ADJ=true	Truth.	truth;true	describing	H	सच	base form,mass,inanimate		Tai sach bole.	0.8	
+sahi	ADJ		Correct or right.	correct;right	describing	P	सही	base form		Etu sahi ase.	0.85	
+sea	NOUN		A large body of salt water.	sea	nature	E	sea	base form,countable,inanimate		Sea bor ase.	0.85	
+settings	NOUN		Options of a phone or computer.	settings	technology	E	settings	base form,countable,inanimate		Phone settings dikhabi.	0.8	
+shillong	PROPN		The capital of Meghalaya.	Shillong	places	PN	shillong	base form,countable,inanimate		Moi Shillong jabo.	0.85	
+singh	PROPN		A common Indian surname.	Singh	community	PN	singh	base form,countable,animate		Singh sahab ahise.	0.7	
+trekking	NOUN		Walking long distances in the hills.	trekking;hiking	leisure,travel	E	trekking	base form,mass,inanimate		Moi trekking jabo.	0.8	
+vietnam	PROPN		A country in Southeast Asia.	Vietnam	places	PN	vietnam	base form,countable,inanimate		Vietnam ek desh ase.	0.8	
+aizaa	PROPN		Probably a typo of Aizawl, the capital of Mizoram.	Aizawl	places	PN	aizaa	base form,countable,inanimate		Moi Aizaa jabo.	0.2	doubtful: unclear, maybe Aizawl
+anjan	PROPN		A given name.	Anjan	community	PN	anjan	base form,countable,animate		Anjan moi laga bondhu.	0.5	doubtful: personal name
+austria	PROPN		A country in Europe.	Austria	places	PN	austria	base form,countable,inanimate		Austria ek desh ase.	0.8	
+baanh	NOUN		Bamboo.	bamboo	nature,farming	A	বাঁহ	base form,countable,inanimate	bah,baah	Baanh bor ase.	0.85	
+backup	NOUN	VERB=to back up (with kori)	A saved copy of data.	backup;copy	technology	E	backup	base form,countable,inanimate		Phone backup kori dibi.	0.85	
+batsman	NOUN		A player who bats in cricket.	batsman	leisure	E	batsman	base form,countable,animate		Tai bhal batsman ase.	0.8	
+bor	ADJ		Big, large, great.	big;large;great	describing	A	বৰ	base form	boro	Etu bor ghor ase.	0.95	
+burmese	ADJ	NOUN=Burmese person or language	Of Myanmar, or a person or language of Myanmar.	Burmese	community,culture	E	Burmese	base form		Tai Burmese kotha bole.	0.8	
+car	NOUN		A road vehicle with four wheels.	car	travel	E	car	base form,countable,inanimate	gari	Moi car kinibo.	0.9	
+chamuch	NOUN		A spoon.	spoon	food,home	H	चम्मच	base form,countable,inanimate	chamach	Chamuch dibi.	0.8	
+chandrasekhar	PROPN		A given name or surname.	Chandrasekhar	community	PN	chandrasekhar	base form,countable,animate		Chandrasekhar sir ahise.	0.6	doubtful: personal name
+chokri	PROPN		A Naga language and people of Nagaland.	Chokri	community	L	chokri	base form,countable,animate		Tai Chokri kotha bole.	0.75	
+down	ADV		Toward a lower place.	down	describing	E	down	invariable		Tai down jai ase.	0.7	
+epic	NOUN	ADJ=grand	A long story poem of heroes.	epic	culture	E	epic	base form,countable,inanimate		Etu epic kitab ase.	0.75	
+falls	NOUN		A waterfall.	falls;waterfall	nature	E	falls	base form,countable,inanimate		Falls bor shundor.	0.8	
+fit	ADJ		In good health or shape.	fit;healthy	health,describing	E	fit	base form		Moi fit ase.	0.8	
+flavour	NOUN		The taste of food.	flavour;taste	food	E	flavour	base form,countable,inanimate	flavor	Etu flavour bhal ase.	0.8	
+gaming	NOUN		Playing video games.	gaming	leisure,technology	E	gaming	base form,mass,inanimate		Moi gaming bhal pai.	0.85	
+ganga	PROPN		The Ganges river.	Ganga	nature,places	PN	ganga	base form,countable,inanimate		Ganga bor nodi ase.	0.8	
+ghasni	PROPN		Possibly Ghazni, a city in Afghanistan, or a name.	Ghazni	places	PN	ghasni	base form,countable,inanimate		Ghasni ek thai ase.	0.2	doubtful: unclear, maybe Ghazni
+gun	NOUN		A weapon that fires bullets.	gun	community	E	gun	base form,countable,inanimate	bondook	Tai gun loi ase.	0.85	
+guwahati	PROPN		The largest city of Assam.	Guwahati	places	PN	guwahati	base form,countable,inanimate		Moi Guwahati jabo.	0.9	
+har	NOUN		Defeat, or a necklace.	defeat;necklace	leisure,clothing	H	हार	base form,countable,inanimate	haar	Tai har pai.	0.5	
+head	NOUN		The head of the body, or a leader.	head;leader	body	E	head	base form,countable,inanimate		Head dukh pai.	0.85	
+helmet	NOUN		A hard hat for protecting the head.	helmet	travel,clothing	E	helmet	base form,countable,inanimate		Helmet pindhibi.	0.9	
+hills	NOUN		Hills, high land.	hills	nature	E	hills	base form,countable,inanimate		Hills te ghor ase.	0.7	
+kinile	VERB		If or when bought.	if buy	money,grammar	A	কিনিলে	conditional		Tumi kinile moi dibo.	0.7	
+kol	NOUN		A tap or a machine.	tap;machine	home	A	কল	base form,countable,inanimate	kal	Kol te pani nai.	0.6	
+kurishe	NUM		Twenty.	twenty	numbers	A	কুৰি	invariable	kuri	Kurishe manu ahise.	0.55	
+lakh	NUM		One hundred thousand.	lakh;hundred thousand	numbers,money	H	लाख	invariable		Ek lakh taka.	0.9	
+lakri	NOUN		Wood or a stick.	wood;stick	nature,home	H	लकड़ी	base form,mass,inanimate	lakdi	Lakri jolaibo.	0.75	
+lord	NOUN		God, or a ruler.	Lord;ruler	religion	E	lord	base form,countable,animate		Lord moi sathi ase.	0.8	
+mahal	NOUN		A palace or large building.	palace;mansion	places	P	महल	base form,countable,inanimate		Taj Mahal bor mahal ase.	0.6	
+mao	PROPN		A Naga tribe of Manipur and Nagaland.	Mao	community	L	mao	base form,countable,animate		Mao manu ahise.	0.75	
+milishe	VERB		Has met or joined.	met;joined	actions	A	মিলিছে	past	milise	Moi tai ke milishe.	0.7	
+mix	VERB	NOUN=a blend	To combine things together.	mix;blend	actions	E	mix	citation form		Tel aru pani mix kori.	0.75	
+mizoram	PROPN		A state in northeast India.	Mizoram	places	PN	mizoram	base form,countable,inanimate		Moi Mizoram jabo.	0.85	
+namaste	INTJ		A greeting with joined hands.	hello;greetings	greetings	H	नमस्ते	invariable	namaskar	Namaste, kenekua ase?	0.85	
+napibole	VERB		To be unable to.	to be unable	grammar,actions	A	নোৱাৰিবলৈ	purposive,negative	napabole	Moi napibole dor.	0.5	
+narikol	NOUN		A coconut.	coconut	food,nature	A	নাৰিকল	base form,countable,inanimate	narikel	Narikol pani khabo.	0.8	
+noodles	NOUN		Thin strips of dough, eaten as food.	noodles	food	E	noodles	base form,mass,inanimate	noodle	Moi noodles khai.	0.9	
+persian	ADJ	NOUN=Persian language or person	Of Persia or Iran.	Persian	culture	E	Persian	base form		Persian bhasha bhal ase.	0.7	
+pie	NOUN		A baked dish with a pastry crust.	pie	food	E	pie	base form,countable,inanimate		Pie bhal lagise.	0.7	
+pile	VERB		If or when drunk.	if drink	food,grammar	A	পিলে	conditional		Pani pile bhal lagibo.	0.4	doubtful: could be English pile
+pindhile	VERB		If or when worn.	if wear	clothing,grammar	A	পিন্ধিলে	conditional		Etu pindhile bhal lagibo.	0.7	
+pindibole	VERB		To wear.	to wear	clothing,actions	A	পিন্ধিবলৈ	purposive	pindhibole	Moi pindibole jacket loise.	0.65	
+purvaj	NOUN		Ancestors, forefathers.	ancestors	family,culture	S	पूर्वज	base form,countable,animate		Amikhan laga purvaj Naga ase.	0.7	
+rock	NOUN		A stone or large rock, or rock music.	rock;stone	nature,leisure	E	rock	base form,countable,inanimate		Rock bor ase.	0.8	
+saile	VERB		If or when looked at.	if look	actions,grammar	A	চাইলে	conditional		Tumi saile bujhibo.	0.5	
+salt	NOUN		Salt, used to season food.	salt	food	E	salt	base form,mass,inanimate	nimok	Salt kom dibi.	0.7	
+soy	NOUN		Soya, as in soy sauce.	soy	food	E	soy	base form,mass,inanimate		Soy sauce dibi.	0.8	
+sumo	PROPN		A Naga tribe, also a vehicle.	Sumo	community,travel	L	sumo	base form,countable,inanimate		Sumo gari ahise.	0.7	
+syrup	NOUN		A thick sweet liquid.	syrup	food,health	E	syrup	base form,mass,inanimate		Syrup khabi.	0.8	
+tar	DET	NOUN=wire	His or her.	his;her	pronouns	A	তাৰ	invariable		Tar ghor kot ase?	0.8	
+tattoo	NOUN		A design marked on the skin.	tattoo	body,culture	E	tattoo	base form,countable,inanimate		Tai tattoo kori ase.	0.85	
+tawang	PROPN		A town in Arunachal Pradesh.	Tawang	places	PN	tawang	base form,countable,inanimate		Moi Tawang jabo.	0.8	
+teresa	PROPN		A given name, as in Mother Teresa.	Teresa	community	PN	teresa	base form,countable,animate		Mother Teresa bhal manu.	0.7	
+tofu	NOUN		Soft food made from soy.	tofu	food	E	tofu	base form,mass,inanimate		Moi tofu khai.	0.8	
+tree	NOUN		A large woody plant.	tree	nature	E	tree	base form,countable,inanimate	gos	Tree bor ase.	0.85	
+tripura	PROPN		A state in northeast India.	Tripura	places	PN	tripura	base form,countable,inanimate		Moi Tripura jabo.	0.85	
+ufo	NOUN		An unidentified flying object.	UFO	technology	E	ufo	base form,countable,inanimate		Moi ufo dekha.	0.7	
+vdb	NOUN		Village Development Board.	village board	civic,community	E	vdb	base form,countable,inanimate		VDB meeting ase.	0.7	
+zeliangrong	PROPN		A Naga group of Manipur, Nagaland and Assam.	Zeliangrong	community	L	zeliangrong	base form,countable,animate		Zeliangrong manu ahise.	0.75	
+aadhaar	NOUN		The national identity card number of India.	Aadhaar;ID card	civic	H	आधार	base form,countable,inanimate	adhar	Moi Aadhaar card loise.	0.8	
+abhijit	PROPN		A male given name.	Abhijit	community	PN	abhijit	base form,countable,animate		Abhijit moi laga bondhu.	0.5	doubtful: personal name
+afghanistan	PROPN		A country in Asia.	Afghanistan	places	PN	afghanistan	base form,countable,inanimate		Afghanistan ek desh ase.	0.8	
+ahimsa	NOUN		Non-violence, not harming anyone.	non-violence	religion,culture	S	अहिंसा	base form,mass,inanimate		Ahimsa bhal kotha ase.	0.7	
+ambani	PROPN		A famous Indian business family name.	Ambani	money,community	PN	ambani	base form,countable,animate		Ambani bor bepari ase.	0.6	
+apartheid	NOUN		The former system of racial separation in South Africa.	apartheid	civic,culture	E	apartheid	base form,mass,inanimate		Apartheid kharap niyom ase.	0.7	
+bache	NOUN		Children.	children;kids	family	H	बच्चे	base form,countable,animate	bachche	Bache khan school jai.	0.5	
+badam	NOUN		Almond, a nut.	almond;nut	food	P	बादाम	base form,countable,inanimate		Badam khabi.	0.8	
+banerjee	PROPN		A common Bengali surname.	Banerjee	community	PN	banerjee	base form,countable,animate		Banerjee sir ahise.	0.6	
+bangalore	PROPN		A large city in south India.	Bangalore	places	PN	bangalore	base form,countable,inanimate		Moi Bangalore jabo.	0.85	
+barhibole	VERB		To grow or increase.	to grow;to increase	actions	A	বাঢ়িবলৈ	purposive		Gos barhibole somoy lage.	0.7	
+barta	NOUN		News or a message.	news;message	media	B	বার্তা	base form,countable,inanimate	batori	Notun barta ase.	0.55	
+bech	VERB		Sell, the stem of the verb to sell.	sell	money,actions	H	बेच	stem form		Moi ghor bech.	0.6	
+bhuli	VERB		To forget.	forget	actions	A	ভুলি	citation form	bhuli	Moi tai ke bhuli.	0.7	
+bimar	ADJ		Sick, unwell.	sick;ill	health	P	बीमार	base form	bemar	Moi bimar ase.	0.85	
+birong	NOUN		Unclear word of uncertain meaning.	unknown	slang	N	birong	base form,countable,inanimate		Etu birong ase.	0.15	doubtful: unclear meaning, maybe noise
+bonale	VERB		If or when made.	if make	actions,grammar	A	বনালে	conditional		Tumi bonale bhal hobo.	0.6	
+bowler	NOUN		A player who bowls in cricket.	bowler	leisure	E	bowler	base form,countable,animate		Tai bhal bowler ase.	0.8	
+bujai	VERB		Explains or makes understand.	explains	actions	A	বুজায়	present	bujhai	Tai moike bujai.	0.7	
+bujhabo	VERB		Will explain.	will explain	actions	A	বুজাম	future	bujhaibo	Moi tomake bujhabo.	0.75	
+chile	PROPN		A country in South America.	Chile	places	PN	chile	base form,countable,inanimate		Chile ek desh ase.	0.6	
+cholise	VERB		Is running or has gone on.	is running;has moved	actions	A	চলিছে	past	cholise	Gari cholise.	0.8	
+chutney	NOUN		A spicy sauce eaten with food.	chutney	food	H	चटनी	base form,mass,inanimate		Chutney bhal lagise.	0.85	
+covid	NOUN		The Covid-19 disease.	Covid	health	E	covid	base form,mass,inanimate		Covid ahile sob bondho hoise.	0.85	
+deodorant	NOUN		A spray or stick that stops body smell.	deodorant	health,home	E	deodorant	base form,countable,inanimate		Deodorant lagabi.	0.8	
+dhulabi	VERB		Wash, said as a command.	wash	home,actions	A	ধোৱা	imperative	dhuabi	Kapor dhulabi.	0.5	
+digha	ADJ		Long or tall.	long;tall	describing	A	দীঘল	base form	dighal	Tai digha manu ase.	0.7	
+documents	NOUN		Official papers.	documents;papers	civic,work	E	documents	base form,countable,inanimate		Documents loi ahibi.	0.85	
+dosti	NOUN		Friendship.	friendship	community,feelings	P	दोस्ती	base form,mass,inanimate		Amikhan laga dosti bhal ase.	0.8	
+duitai	NUM		Both, the two of them.	both	numbers	A	দুটা	invariable	duita	Duitai bhal ase.	0.55	
+egg	NOUN		A food laid by hens.	egg	food	E	egg	base form,countable,inanimate	ando	Moi egg khabo.	0.85	
+emperor	NOUN		A ruler of an empire.	emperor	culture	E	emperor	base form,countable,animate		Emperor bor raja ase.	0.7	
+everest	PROPN		The highest mountain in the world.	Everest	places,nature	PN	everest	base form,countable,inanimate		Everest bor pahar ase.	0.85	
+eye	NOUN		The eye, for seeing.	eye	body	E	eye	base form,countable,inanimate		Eye dukh pai.	0.8	
+face	NOUN		The front of the head.	face	body	E	face	base form,countable,inanimate	mukh	Face dhubi.	0.8	
+fee	NOUN		Money paid for a service or school.	fee	money,education	E	fee	base form,countable,inanimate		School fee dibo lagibo.	0.9	
+fish	NOUN		An animal living in water.	fish	food,nature	E	fish	base form,countable,inanimate	mach	Fish khabo.	0.8	
+fm	NOUN		FM radio.	FM radio	media,technology	E	fm	base form,countable,inanimate		Moi FM sunise.	0.8	
+fort	NOUN		A strong fortified building.	fort	places	E	fort	base form,countable,inanimate		Fort bor ase.	0.7	
+fossil	NOUN		Remains of ancient life in rock.	fossil	education,nature	E	fossil	base form,countable,inanimate		Fossil pai.	0.7	
+gala	NOUN		The throat or neck.	throat	body	H	गला	base form,countable,inanimate		Gala dukh pai.	0.7	
+gangtok	PROPN		The capital of Sikkim.	Gangtok	places	PN	gangtok	base form,countable,inanimate		Moi Gangtok jabo.	0.8	
+gele	VERB		If or when gone.	if go	travel,grammar	B	গেলে	conditional		Tumi gele moi jabo.	0.5	
+germs	NOUN		Tiny living things that cause disease.	germs	health	E	germs	base form,countable,inanimate		Germs mari dibi.	0.85	
+ghon	ADJ		Thick or dense.	thick;dense	describing	A	ঘন	base form	ghan	Ghon jongol ase.	0.7	
+gupha	NOUN		A cave.	cave	nature	S	गुफा	base form,countable,inanimate		Gupha te bhoy ase.	0.7	
+gura	NOUN	ADJ=powdery	Powder, or fine grains.	powder	food,describing	A	গুৰা	base form,mass,inanimate	guro	Gura bhal ase.	0.65	
+haddi	NOUN		A bone.	bone	body	H	हड्डी	base form,countable,inanimate	hadi	Haddi bhangise.	0.75	
+hi	PART	INTJ=hello	Only, just; emphasis.	only;just	grammar	H	ही	invariable		Moi hi jabo.	0.5	
+hikile	VERB		If or when learned.	if learn	education,grammar	N	hikile	conditional	sikile	Hikile bhal hobo.	0.65	
+hoikena	VERB		Having become or having happened.	having become	grammar	A	হৈকে	converb	hoi kena	Tai bor hoikena ahise.	0.55	
+hong	NOUN		Unclear word, maybe part of Hong Kong.	unknown	places	N	hong	base form,countable,inanimate		Hong ase.	0.15	doubtful: unclear, maybe noise
+hosiyar	ADJ		Clever, smart, alert.	clever;smart;alert	describing	P	होशियार	base form	hosiar	Tai hosiyar ase.	0.8	
+indo	ADJ		Of India, used in compounds like Indo-Naga.	Indo	places	E	indo	invariable		Indo desh ase.	0.2	doubtful: only a prefix
+iran	PROPN		A country in Asia.	Iran	places	PN	iran	base form,countable,inanimate		Iran ek desh ase.	0.8	
+islands	NOUN		Pieces of land surrounded by water.	islands	nature,places	E	islands	base form,countable,inanimate		Islands bor shundor.	0.8	
+istanbul	PROPN		A large city in Turkey.	Istanbul	places	PN	istanbul	base form,countable,inanimate		Istanbul Turkey te ase.	0.8	
+jain	NOUN		A follower of Jainism.	Jain	religion,community	H	जैन	base form,countable,animate		Tai Jain ase.	0.7	
+jowa	VERB		Going or gone.	going;gone	travel,actions	A	যোৱা	participle		Tai jowa dekhise.	0.65	
+kailash	PROPN		A holy mountain in Tibet.	Kailash	places,religion	PN	kailash	base form,countable,inanimate		Kailash holy pahar ase.	0.7	
+kombol	NOUN		A blanket.	blanket	home,clothing	A	কম্বল	base form,countable,inanimate	kambal	Kombol dibi.	0.8	
+kong	PROPN		Unclear word, maybe part of Hong Kong.	Kong	places	N	kong	base form,countable,inanimate		Kong ase.	0.15	doubtful: unclear, maybe noise
+koti	NUM		Ten million, a crore.	crore;ten million	numbers,money	S	कोटि	invariable	crore	Koti taka ase.	0.6	
+krishna	PROPN		A Hindu god.	Krishna	religion	PN	krishna	base form,countable,animate		Krishna bhagwan ase.	0.8	
+kurabole	VERB		To scrape or dig.	to scrape;to dig	actions	A	খুৰিবলৈ	purposive		Mati kurabole laga.	0.3	doubtful: meaning uncertain
+lab	NOUN		A laboratory.	lab	education,health	E	lab	base form,countable,inanimate		Lab te test kori.	0.8	
+lassi	NOUN		A yoghurt drink.	lassi	food	H	लस्सी	base form,mass,inanimate		Lassi khabi.	0.8	
+left	ADJ	ADV=to the left	On the left side.	left	describing	E	left	base form		Left te ghuribi.	0.8	
+lion	NOUN		A big wild cat.	lion	nature	E	lion	base form,countable,inanimate	singha	Lion bor ase.	0.85	
+login	NOUN	VERB=to log in (with kori)	Entering an account with a name and password.	login	technology	E	login	base form,countable,inanimate		Login kori dibi.	0.9	
+long	ADJ		Not short, of great length.	long	describing	E	long	base form	lamba	Etu long ase.	0.7	
+maps	NOUN		Drawings of places.	maps	travel	E	maps	base form,countable,inanimate		Maps dekhabi.	0.85	
+maram	PROPN		A Naga tribe of Manipur.	Maram	community	L	maram	base form,countable,animate		Maram manu ahise.	0.7	
+maribole	VERB		To hit, beat or kill.	to hit;to beat;to kill	actions	A	মাৰিবলৈ	purposive		Tai maribole dor.	0.7	
+mars	PROPN		The fourth planet from the sun.	Mars	nature,education	PN	mars	base form,countable,inanimate		Mars ek grah ase.	0.8	
+mircha	NOUN		Chilli pepper.	chilli	food	H	मिर्चा	base form,countable,inanimate	mirchi	Mircha bisi ase.	0.8	
+momo	NOUN		A steamed dumpling.	momo;dumpling	food	N	momo	base form,countable,inanimate		Momo khabo.	0.9	
+mughal	ADJ	NOUN=Mughal person	Of the Mughal empire.	Mughal	culture	P	मुग़ल	base form		Mughal raja ase.	0.7	
+nakuri	VERB		Without doing, not doing.	without doing	grammar	A	নকৰি	converb,negative	nakori	Nakuri moi gol.	0.25	doubtful: maybe variant of nakori
+naram	ADJ		Soft, gentle.	soft;gentle	describing	P	नरम	base form		Etu naram ase.	0.8	
+natok	NOUN		A drama or play.	drama;play	culture,media	B	নাটক	base form,countable,inanimate		Natok dekhibo.	0.75	
+nefa	PROPN		Old name of Arunachal Pradesh, North-East Frontier Agency.	NEFA	places,civic	PN	nefa	base form,countable,inanimate		NEFA purani nam ase.	0.5	
+nepali	NOUN	ADJ=Nepali	A person or language of Nepal.	Nepali	community,culture	E	Nepali	base form,countable,animate		Tai Nepali kotha bole.	0.85	
+ngai	NOUN		Unclear word, maybe from a Naga language.	unknown	culture	L	ngai	base form,countable,inanimate		Ngai ase.	0.15	doubtful: unclear, maybe Naga-language word
+nichoy	ADV		Surely, certainly.	surely;certainly	describing	B	নিশ্চয়	invariable	nishchoy,nichoi	Moi nichoy ahibo.	0.7	
+nigeria	PROPN		A country in Africa.	Nigeria	places	PN	nigeria	base form,countable,inanimate		Nigeria ek desh ase.	0.8	
+not	ADV		English word meaning no.	not	grammar	E	not	invariable		Not ase.	0.3	doubtful: English word, Nagamese uses nai
+oven	NOUN		A closed box for baking.	oven	food,home	E	oven	base form,countable,inanimate		Oven te bake kori.	0.85	
+over	ADV		Finished, above, or across.	over;finished	describing	E	over	invariable		Kam over hoise.	0.6	
+pindha	VERB		Wear, or worn.	wear;worn	clothing	A	পিন্ধা	participle	pindhaa	Pindha kapor ase.	0.6	
+plateau	NOUN		A flat high area of land.	plateau	nature	E	plateau	base form,countable,inanimate		Plateau bor ase.	0.7	
+poet	NOUN		A person who writes poems.	poet	culture,education	E	poet	base form,countable,animate		Tai poet ase.	0.8	
+prani	NOUN		A living creature.	creature;living being	nature	S	प्राणी	base form,countable,animate		Prani khan bhal pai.	0.6	
+race	NOUN		A contest of speed, or a people.	race;contest	leisure	E	race	base form,countable,inanimate		Race jitibo.	0.8	
+rare	ADJ		Not often found.	rare;uncommon	describing	E	rare	base form		Etu rare ase.	0.7	
+rio	PROPN		A surname, as in Neiphiu Rio.	Rio	community,civic	PN	rio	base form,countable,animate		Rio CM ase.	0.6	
+risk	NOUN		Danger or chance of harm.	risk	describing	E	risk	base form,countable,inanimate		Etu risk ase.	0.85	
+role	NOUN		A part played in a film or work.	role;part	work,media	E	role	base form,countable,inanimate		Tai laga role bhal ase.	0.85	
+root	NOUN		The part of a plant under the ground.	root	nature,farming	E	root	base form,countable,inanimate	mul	Root bor ase.	0.7	
+sapiens	NOUN		Homo sapiens, modern humans.	sapiens	education,nature	N	sapiens	base form,countable,animate		Sapiens kitab porhi.	0.5	doubtful: Latin scientific term
+satyarthi	PROPN		A surname, as in Kailash Satyarthi.	Satyarthi	community	PN	satyarthi	base form,countable,animate		Satyarthi sir ahise.	0.5	doubtful: personal name
+shah	PROPN		A surname or title.	Shah	community	PN	shah	base form,countable,animate		Shah sir ahise.	0.6	
+sikhibole	VERB		To learn.	to learn	education,actions	A	শিকিবলৈ	purposive	hikibole	Moi sikhibole mon ase.	0.75	
+sim	NOUN		A SIM card for a phone.	SIM card	technology	E	sim	base form,countable,inanimate		Notun sim kinibo.	0.9	
+site	NOUN		A place or website.	site;website	technology,places	E	site	base form,countable,inanimate		Site khulibi.	0.85	
+soybean	NOUN		The soya bean.	soybean	food,farming	E	soybean	base form,mass,inanimate		Soybean khai.	0.9	
+subidha	NOUN		Convenience, facility.	convenience;facility	describing	S	सुविधा	base form,countable,inanimate	subidha	Etu subidha ase.	0.6	
+tanka	NOUN		Money or a coin.	money;coin	money	A	টকা	base form,mass,inanimate	taka	Tanka nai.	0.45	doubtful: usually written taka
+thakishe	VERB		Has stayed or remained.	has stayed;has remained	actions	A	থাকিছে	past	thakise	Moi ekhane thakishe.	0.65	
+turant	ADV		Immediately, at once.	immediately;at once	time	H	तुरंत	invariable		Turant ahibi.	0.8	
+ukhrul	PROPN		A district town in Manipur.	Ukhrul	places	PN	ukhrul	base form,countable,inanimate		Moi Ukhrul jabo.	0.75	
+unit	NOUN		A single part or group.	unit	work	E	unit	base form,countable,inanimate		Etu unit bor ase.	0.7	
+us	PRON		English word meaning we as object.	us	pronouns	E	us	invariable		Us ke dibi.	0.3	doubtful: English word, Nagamese uses amikhan
+vedas	PROPN		The ancient Hindu holy books.	Vedas	religion,culture	S	वेद	base form,countable,inanimate		Vedas puran kitab ase.	0.7	
+victoria	PROPN		A given name or place.	Victoria	places	PN	victoria	base form,countable,inanimate		Victoria ek nam ase.	0.6	
+will	AUX		English word for future time.	will	grammar	E	will	invariable		Moi will jabo.	0.3	doubtful: English word, Nagamese uses -ibo
+windows	NOUN		Openings in a wall, or the Windows system.	windows	technology,home	E	windows	base form,countable,inanimate		Windows update kori.	0.8	
+your	DET		English word meaning belonging to you.	your	pronouns	E	your	invariable		Your ghor kot ase?	0.3	doubtful: English word, Nagamese uses tumar
+achar	NOUN		Pickle, preserved spicy vegetables or fruit.	pickle	food	H	अचार	base form,mass,inanimate		Achar bisi tikha ase.	0.85	
+ahanai	NOUN		Unclear word, maybe a form of the verb to come.	unknown	grammar	N	ahanai	base form,countable,inanimate		Ahanai ase.	0.15	doubtful: unclear, maybe noise
+al	NOUN		Unclear fragment, maybe an Arabic article.	unknown	grammar	N	al	base form,countable,inanimate		Al ase.	0.1	doubtful: fragment, likely noise
+amritsar	PROPN		A city in Punjab with the Golden Temple.	Amritsar	places	PN	amritsar	base form,countable,inanimate		Moi Amritsar jabo.	0.8	
+an	DET		English article a or an.	an	grammar	E	an	invariable		An apple khabo.	0.2	doubtful: English article
+anal	PROPN		A Naga tribe of Manipur.	Anal	community	L	anal	base form,countable,animate		Anal manu ahise.	0.5	doubtful: could be English word
+andes	PROPN		A mountain range in South America.	Andes	places,nature	PN	andes	base form,countable,inanimate		Andes bor pahar ase.	0.7	
+anthem	NOUN		A national or official song.	anthem	culture	E	anthem	base form,countable,inanimate		National anthem gabi.	0.8	
+bare	ADP		About, concerning.	about;concerning	grammar	H	बारे	invariable		Etu bare moike bolibi.	0.55	
+besibhaag	NOUN	ADV=mostly	The greater part, majority.	majority;most	describing	A	বেছিভাগ	base form,countable,inanimate	besi bhag	Besibhaag manu ahise.	0.65	
+bihu	NOUN		The main festival of Assam.	Bihu	culture	A	বিহু	base form,countable,inanimate		Bihu nach dekhi.	0.8	
+bina	ADP		Without.	without	grammar	H	बिना	invariable		Tumi bina moi jabo nai.	0.7	
+bohibole	VERB		To sit.	to sit	actions	A	বহিবলৈ	purposive		Bohibole jaga nai.	0.7	
+bolivia	PROPN		A country in South America.	Bolivia	places	PN	bolivia	base form,countable,inanimate		Bolivia ek desh ase.	0.7	
+calligraphy	NOUN		Beautiful handwriting.	calligraphy	culture,education	E	calligraphy	base form,mass,inanimate		Calligraphy bhal lagi.	0.8	
+cocktail	NOUN		A mixed drink.	cocktail	food	E	cocktail	base form,countable,inanimate		Cocktail khabo.	0.8	
+coding	NOUN		Writing computer programs.	coding	technology,work	E	coding	base form,mass,inanimate		Moi coding sikhi ase.	0.85	
+coke	NOUN		Cola, a fizzy soft drink.	coke;cola	food	E	coke	base form,mass,inanimate		Coke khabo.	0.9	
+crispy	ADJ		Crunchy and dry.	crispy;crunchy	food,describing	E	crispy	base form		Chicken crispy ase.	0.85	
+dahi	NOUN		Curd, yoghurt.	curd;yoghurt	food	H	दही	base form,mass,inanimate		Dahi khabo.	0.85	
+darjeeling	PROPN		A hill town in West Bengal known for tea.	Darjeeling	places	PN	darjeeling	base form,countable,inanimate		Darjeeling te cha ase.	0.8	
+dead	ADJ		No longer alive.	dead	health,describing	E	dead	base form	mora	Phone dead hoise.	0.7	
+dhubi	VERB		Wash, said as a command.	wash	home,actions	A	ধোৱা	imperative	dhuabi	Hath dhubi.	0.8	
+dzukou	PROPN		A valley on the Nagaland-Manipur border.	Dzukou	places,nature	L	dzukou	base form,countable,inanimate	dzuko,zuko	Dzukou valley shundor ase.	0.85	
+espresso	NOUN		Strong coffee made under pressure.	espresso	food	E	espresso	base form,mass,inanimate		Espresso khabo.	0.8	
+friends	NOUN		People who like each other.	friends	community	E	friends	base form,countable,animate		Friends khan ahise.	0.9	
+garlic	NOUN		A strong smelling bulb used in cooking.	garlic	food	E	garlic	base form,mass,inanimate		Garlic dibi.	0.9	
+headhunting	NOUN		The old Naga custom of taking enemy heads.	headhunting	culture	E	headhunting	base form,mass,inanimate		Headhunting purani kotha ase.	0.8	
+himalayas	PROPN		The great mountain range of Asia.	Himalayas	places,nature	PN	himalayas	base form,countable,inanimate		Himalayas bor pahar ase.	0.8	
+ilaj	NOUN		Medical treatment or cure.	treatment;cure	health	P	इलाज	base form,countable,inanimate		Ilaj kori dibi.	0.8	
+illuminati	PROPN		A secret society of conspiracy stories.	Illuminati	culture,slang	E	illuminati	base form,countable,animate		Illuminati kotha sunise.	0.7	
+inca	PROPN		An ancient people of South America.	Inca	culture	PN	inca	base form,countable,animate		Inca purani manu ase.	0.7	
+indus	PROPN		A great river of South Asia.	Indus	nature,places	PN	indus	base form,countable,inanimate		Indus bor nodi ase.	0.7	
+jainism	NOUN		The Jain religion.	Jainism	religion	E	jainism	base form,mass,inanimate		Jainism ek dhorom ase.	0.75	
+jale	VERB		Burns, is lit.	burns;is lit	actions	A	জ্বলে	present	jole	Aagun jale.	0.6	
+jhum	NOUN		Shifting cultivation on hill slopes.	jhum;shifting cultivation	farming	N	jhum	base form,mass,inanimate	jum	Jhum kheti kori.	0.85	
+kabita	NOUN		A poem.	poem	culture,education	A	কবিতা	base form,countable,inanimate		Moi kabita likhi.	0.75	
+kenya	PROPN		A country in Africa.	Kenya	places	PN	kenya	base form,countable,inanimate		Kenya ek desh ase.	0.7	
+khasi	PROPN		A people and language of Meghalaya.	Khasi	community	PN	khasi	base form,countable,animate		Khasi manu ahise.	0.8	
+korabole	VERB		To make someone do, to have done.	to have done;to cause to do	actions	A	কৰাবলৈ	purposive		Kam korabole laga.	0.5	
+laagi	ADP		For, for the sake of.	for;for the sake of	grammar	A	লাগি	invariable	lagi	Tumar laagi ahise.	0.7	
+luck	NOUN		Good or bad chance.	luck	feelings	E	luck	base form,mass,inanimate	bhagyo	Luck bhal ase.	0.85	
+malish	NOUN		A massage.	massage	body,health	P	मालिश	base form,countable,inanimate	malis	Malish kori dibi.	0.8	
+marx	PROPN		Karl Marx, the thinker.	Marx	education,culture	PN	marx	base form,countable,animate		Marx ek manu ase.	0.6	
+milibole	VERB		To meet or join.	to meet;to join	actions	A	মিলিবলৈ	purposive		Tai ke milibole jabo.	0.75	
+mithun	NOUN		A large semi-wild cattle of the hills, the gayal.	mithun;gayal	nature,culture	N	mithun	base form,countable,animate		Mithun bor pashu ase.	0.8	
+mosque	NOUN		A Muslim house of prayer.	mosque	religion,places	E	mosque	base form,countable,inanimate	masjid	Mosque kot ase?	0.85	
+mushroom	NOUN		A fungus eaten as food.	mushroom	food,nature	E	mushroom	base form,countable,inanimate		Mushroom khabo.	0.9	
+nadu	NOUN		Unclear word, maybe from another language.	unknown	culture	N	nadu	base form,countable,inanimate		Nadu ase.	0.15	doubtful: unclear, maybe noise
+naharibi	VERB		Do not leave or lose, said as a command.	do not leave	actions	A	নেৰিবি	imperative,negative		Naharibi, ahibi.	0.2	doubtful: unclear form
+nakurile	VERB		If not done.	if not do	grammar	A	নকৰিলে	conditional,negative	nakorile	Tumi nakurile moi kori.	0.6	
+nemu	NOUN		A lemon.	lemon	food	A	নেমু	base form,countable,inanimate	lemu	Nemu pani dibi.	0.85	
+or	CCONJ		English word meaning or.	or	grammar	E	or	invariable		Tea or coffee?	0.3	doubtful: English word, Nagamese uses nohole
+past	NOUN	ADJ=former	Time that has gone by.	past	time	E	past	base form,mass,inanimate		Past kotha bhulibi.	0.7	
+pawa	VERB		Getting or found.	getting;found	actions	A	পোৱা	participle	powa	Kam pawa nai.	0.65	
+qr	NOUN		A QR code.	QR code	technology	E	qr	base form,countable,inanimate		QR code scan kori.	0.85	
+registrar	NOUN		An official who keeps records.	registrar	civic,work	E	registrar	base form,countable,animate		Registrar sir ahise.	0.8	
+rongmei	PROPN		A Naga tribe of Manipur, Assam and Nagaland.	Rongmei	community	L	rongmei	base form,countable,animate		Rongmei manu ahise.	0.75	
+sadharan	ADJ		Ordinary, common.	ordinary;common	describing	S	साधारण	base form		Etu sadharan kotha.	0.7	
+sundarbans	PROPN		A large mangrove forest in Bengal.	Sundarbans	places,nature	PN	sundarbans	base form,countable,inanimate		Sundarbans te bagh ase.	0.7	
+supplies	NOUN		Goods and things needed.	supplies	money,work	E	supplies	base form,countable,inanimate		Supplies ahise.	0.8	
+taj	PROPN		The Taj Mahal.	Taj	places	PN	taj	base form,countable,inanimate		Taj Mahal bor shundor.	0.75	
+topping	NOUN		Something added on top of food.	topping	food	E	topping	base form,countable,inanimate		Pizza te topping dibi.	0.85	
+uk	PROPN		The United Kingdom.	UK	places	PN	uk	base form,countable,inanimate		Tai UK te thake.	0.8	
+wiring	NOUN		The electric wires in a building.	wiring	home,technology	E	wiring	base form,mass,inanimate		Wiring kori dibi.	0.85	
+aaram	NOUN		Rest, comfort.	rest;comfort	feelings	P	आराम	base form,mass,inanimate	aram	Aaram kori thako.	0.85	
+aboriginal	ADJ	NOUN=native person	Native, of the first people of a land.	aboriginal;native	community	E	aboriginal	base form		Aboriginal manu khan.	0.7	
+act	NOUN	VERB=to act (with kori)	A law, or a deed, or a play act.	act;law	civic,media	E	act	base form,countable,inanimate		Act kori dikha.	0.8	
+ad	NOUN		An advertisement.	ad;advertisement	media	E	ad	base form,countable,inanimate		Ad dekhise.	0.85	
+aid	NOUN		Help given to people in need.	aid;help	community	E	aid	base form,mass,inanimate		Aid ahise.	0.8	
+air	NOUN		The gas around us that we breathe.	air	nature	E	air	base form,mass,inanimate	hawa	Air bhal ase.	0.85	
+amartya	PROPN		A male given name, as in Amartya Sen.	Amartya	community	PN	amartya	base form,countable,animate		Amartya bor manu ase.	0.5	doubtful: personal name
+animation	NOUN		Moving cartoons or drawings.	animation	media,technology	E	animation	base form,countable,inanimate		Moi animation dekhi.	0.85	
+anti	ADJ		Against, opposed to.	anti;against	grammar	E	anti	invariable		Anti kotha bole.	0.4	doubtful: only a prefix
+antiperspirant	NOUN		A product that stops sweating.	antiperspirant	health,home	E	antiperspirant	base form,countable,inanimate		Antiperspirant lagabi.	0.7	
+antivirus	NOUN		Computer software that blocks viruses.	antivirus	technology	E	antivirus	base form,countable,inanimate		Antivirus install kori.	0.85	
+apatani	PROPN		A tribe of Arunachal Pradesh.	Apatani	community	L	apatani	base form,countable,animate		Apatani manu ahise.	0.7	
+archery	NOUN		The sport of shooting with a bow.	archery	leisure	E	archery	base form,mass,inanimate		Archery khel khelibo.	0.85	
+azim	PROPN		A male given name.	Azim	community	PN	azim	base form,countable,animate		Azim moi laga bondhu.	0.5	doubtful: personal name
+bakery	NOUN		A shop that sells bread and cakes.	bakery	food,places	E	bakery	base form,countable,inanimate		Bakery te cake kinibo.	0.9	
+band	ADJ	NOUN=music group	Closed, shut off.	closed;shut	describing	P	बंद	base form	bondho	Dokan band ase.	0.8	
+barhabole	VERB		To increase something, to make bigger.	to increase;to raise	actions	A	বঢ়াবলৈ	purposive		Daam barhabole nai.	0.6	
+barhe	VERB		Grows or increases.	grows;increases	actions	A	বাঢ়ে	present		Gos barhe.	0.7	
+basho	PROPN		Probably the Japanese poet Basho.	Basho	culture	PN	basho	base form,countable,animate		Basho poet ase.	0.2	doubtful: unclear, maybe Japanese poet
+bay	NOUN		A curve of sea into the land.	bay	nature	E	bay	base form,countable,inanimate		Bay te jahaj ase.	0.7	
+be	AUX		English word for to be.	be	grammar	E	be	invariable		Be ready.	0.2	doubtful: English word, Nagamese uses ase
+beijing	PROPN		The capital of China.	Beijing	places	PN	beijing	base form,countable,inanimate		Beijing China te ase.	0.8	
+berale	VERB		If or when you visit.	if visit;if roam	travel,grammar	A	বেড়ালে	conditional		Tumi berale moi dikhi.	0.35	doubtful: uncertain meaning
+bhagyo	NOUN		Luck or fate.	luck;fate	feelings	S	भाग्य	base form,mass,inanimate	bhagya	Moi laga bhagyo bhal ase.	0.7	
+birla	PROPN		A famous Indian industrial family name.	Birla	money,community	PN	birla	base form,countable,animate		Birla bor company ase.	0.6	
+biryani	NOUN		A rice dish with meat and spices.	biryani	food	P	बिरयानी	base form,mass,inanimate		Moi biryani khabo.	0.9	
+bisaribole	VERB		To search or look for.	to search;to look for	actions	A	বিচাৰিবলৈ	purposive		Kitab bisaribole jabo.	0.7	
+biyar	NOUN		Beer, an alcoholic drink.	beer	food	E	beer	base form,mass,inanimate	beer	Biyar khabo.	0.4	doubtful: could be other word
+bluetooth	NOUN		Wireless short range phone connection.	Bluetooth	technology	E	bluetooth	base form,mass,inanimate		Bluetooth on kori.	0.9	
+bomb	NOUN		An explosive weapon.	bomb	community	E	bomb	base form,countable,inanimate		Bomb phatise.	0.8	
+cat	NOUN		A small pet animal that purrs.	cat	nature	E	cat	base form,countable,inanimate	biral	Cat ghor te ase.	0.85	
+cave	NOUN		A hollow place in a hill or rock.	cave	nature	E	cave	base form,countable,inanimate	gupha	Cave bor ase.	0.7	
+cell	NOUN		A small room, or a mobile phone.	cell;mobile	technology	E	cell	base form,countable,inanimate		Cell phone nai.	0.7	
+chana	NOUN		Chickpeas.	chickpea	food	H	चना	base form,mass,inanimate		Chana khabo.	0.8	
+charibo	VERB		Will leave or give up.	will leave;will give up	actions	A	এৰিম	future	sharibo	Moi etu charibo.	0.6	
+children	NOUN		Young people, kids.	children;kids	family	E	children	base form,countable,animate		Children khan school jai.	0.8	
+chobi	NOUN		A picture or photo.	picture;photo	media	A	ছবি	base form,countable,inanimate	chhobi	Chobi dekhabi.	0.75	
+cholabo	VERB		Will run or operate something.	will run;will drive	actions	A	চলাম	future		Gari cholabo.	0.65	
+cholaile	VERB		If or when run or driven.	if drive;if run	actions,grammar	A	চলালে	conditional		Tumi cholaile bhal hobo.	0.5	
+cinnamon	NOUN		A sweet spice from tree bark.	cinnamon	food	E	cinnamon	base form,mass,inanimate		Cinnamon dibi.	0.85	
+confucianism	NOUN		The teachings of Confucius.	Confucianism	religion,culture	E	confucianism	base form,mass,inanimate		Confucianism China laga dhorom.	0.7	
+confucius	PROPN		An ancient Chinese thinker.	Confucius	culture,education	PN	confucius	base form,countable,animate		Confucius bor guru ase.	0.7	
+curd	NOUN		Thick soured milk, yoghurt.	curd;yoghurt	food	E	curd	base form,mass,inanimate	dahi	Curd khabo.	0.8	
+da	NOUN		A machete or hill knife, often called dao.	machete;knife	farming,culture	L	da	base form,countable,inanimate	dao	Da loi jongol jabo.	0.4	doubtful: usually written dao
+dekhabole	VERB		To show.	to show	actions	A	দেখুৱাবলৈ	purposive		Moi dekhabole ahise.	0.75	
+dekhe	VERB		Sees, looks at.	sees	actions	A	দেখে	present		Tai moike dekhe.	0.8	
+dhakka	NOUN	VERB=to push (with dibo)	A push or shove.	push;shove	actions	H	धक्का	base form,countable,inanimate		Dhakka dibi.	0.8	
+dhalai	NOUN		Casting or pouring, as of metal or concrete.	casting;pouring	work	B	ঢালাই	base form,mass,inanimate		Dhalai kam hoise.	0.3	doubtful: meaning uncertain, maybe place name
+dhubole	VERB		To wash.	to wash	home,actions	A	ধুবলৈ	purposive		Kapor dhubole jabo.	0.75	
+do	NUM	VERB=give (imperative)	Two.	two	numbers	H	दो	invariable		Do kitab ase.	0.5	
+dravidian	ADJ		Of the south Indian peoples and languages.	Dravidian	culture	E	Dravidian	base form		Dravidian bhasha.	0.7	
+dry	ADJ		Not wet.	dry	describing,weather	E	dry	base form		Kapor dry hoise.	0.85	
+dto	NOUN		Short for District Transport Officer.	DTO	civic	E	dto	base form,countable,animate		DTO ofis te jabo.	0.5	doubtful: abbreviation
+dye	NOUN	VERB=to dye	A colouring for cloth or hair.	dye	colours,clothing	E	dye	base form,countable,inanimate		Chul dye kori.	0.8	
+ed	NOUN		Short for education or editor.	ed	education	E	ed	base form,countable,inanimate		Ed kam ase.	0.15	doubtful: fragment, likely noise
+eksho	NUM		One hundred.	one hundred	numbers	H	एक सौ	invariable	ek sau	Eksho taka dibi.	0.7	
+etia	ADV		Now, at this time.	now	time	A	এতিয়া	invariable	eitia	Etia moi jabo.	0.9	
+fa	NOUN		Unclear fragment.	unknown	slang	N	fa	base form,countable,inanimate		Fa ase.	0.1	doubtful: fragment, likely noise
+failai	VERB		Throws away.	throws away	actions	A	পেলায়	present	felai	Tai kitab failai.	0.6	
+famine	NOUN		A severe lack of food.	famine	food,civic	E	famine	base form,countable,inanimate		Famine hoise.	0.75	
+favourite	ADJ		Best liked.	favourite	feelings	E	favourite	base form	favorite	Etu moi laga favourite.	0.85	
+fold	VERB	NOUN=a fold	To bend cloth or paper over itself.	fold	actions	E	fold	citation form		Kapor fold kori.	0.75	
+format	NOUN	VERB=to format (with kori)	The layout of a file, or to wipe a disk.	format	technology	E	format	base form,countable,inanimate		Phone format kori dibi.	0.85	
+from	ADP		English word meaning starting at.	from	grammar	E	from	invariable		From Kohima ahise.	0.3	doubtful: English word, Nagamese uses pora
+garam	ADJ		Hot, warm.	hot;warm	describing,weather	P	गरम	base form		Pani garam ase.	0.9	
+ghats	NOUN		Hill slopes or river steps.	ghats	nature,places	E	ghats	base form,countable,inanimate	ghat	Western Ghats bor ase.	0.7	
+ghorolu	ADJ		Of the home, domestic.	domestic;homemade	home,describing	A	ঘৰুৱা	base form	ghoroa	Ghorolu kam bor ase.	0.7	
+girile	VERB		If or when fallen.	if fall	actions,grammar	A	পৰিলে	conditional		Tumi girile moi dhorbo.	0.5	
+gluten	NOUN		A protein in wheat.	gluten	food,health	E	gluten	base form,mass,inanimate		Gluten free khabo.	0.8	
+goa	PROPN		A coastal state of India.	Goa	places	PN	goa	base form,countable,inanimate		Moi Goa jabo.	0.85	
+gold	NOUN		A yellow precious metal.	gold	money	E	gold	base form,mass,inanimate	sona	Gold daam bor.	0.85	
+gst	NOUN		Goods and Services Tax.	GST	money,civic	E	gst	base form,mass,inanimate		GST dibo lagibo.	0.85	
+guesthouse	NOUN		A house where visitors stay.	guesthouse	travel,places	E	guesthouse	base form,countable,inanimate		Guesthouse te thakibo.	0.9	
+guinea	PROPN		A country in Africa.	Guinea	places	PN	guinea	base form,countable,inanimate		Guinea ek desh ase.	0.6	
+half	NUM	ADJ=half	One of two equal parts.	half	numbers	E	half	invariable	aadha	Half kom ase.	0.8	
+hathi	NOUN		An elephant.	elephant	nature	H	हाथी	base form,countable,animate	hati	Hathi bor ase.	0.85	
+heraise	VERB		Has lost or is lost.	lost	actions	A	হেৰুৱাইছে	past	herase	Moi laga phone heraise.	0.8	
+hijai	NOUN		Unclear word.	unknown	slang	N	hijai	base form,countable,inanimate		Hijai ase.	0.1	doubtful: unclear, maybe noise
+hikabi	VERB		Teach, said as a command.	teach	education,actions	A	শিকোৱা	imperative	sikhabi	Moike hikabi.	0.8	
+hikabole	VERB		To teach.	to teach	education,actions	A	শিকাবলৈ	purposive	sikhabole	Tai hikabole ahise.	0.8	
+hike	NOUN	VERB=to hike	A rise in price, or a long walk.	hike;rise	money,leisure	E	hike	base form,countable,inanimate		Daam hike hoise.	0.8	
+hope	NOUN	VERB=to hope	Wish that good will happen.	hope	feelings	E	hope	base form,mass,inanimate	asha	Moi hope kori ase.	0.85	
+howrah	PROPN		A city near Kolkata.	Howrah	places	PN	howrah	base form,countable,inanimate		Howrah station kot ase?	0.8	
+hub	NOUN		A central place of activity.	hub	places,technology	E	hub	base form,countable,inanimate		Etu bor hub ase.	0.8	
+hygiene	NOUN		Keeping clean to stay healthy.	hygiene	health	E	hygiene	base form,mass,inanimate		Hygiene bhal rakhibi.	0.8	
+icon	NOUN		A small picture symbol on a screen.	icon	technology	E	icon	base form,countable,inanimate		Icon tip kori.	0.85	
+ijjot	NOUN		Respect, honour.	respect;honour	feelings,community	P	इज़्ज़त	base form,mass,inanimate	izzat	Ijjot dibi.	0.8	
+ilp	NOUN		Inner Line Permit, needed to enter some states.	ILP	civic,travel	E	ilp	base form,countable,inanimate		ILP lagibo.	0.85	
+industrialist	NOUN		A person who owns factories.	industrialist	work,money	E	industrialist	base form,countable,animate		Tai industrialist ase.	0.8	
+inverter	NOUN		A device giving power when electricity goes off.	inverter	home,technology	E	inverter	base form,countable,inanimate		Inverter chalu kori.	0.9	
+itanagar	PROPN		The capital of Arunachal Pradesh.	Itanagar	places	PN	itanagar	base form,countable,inanimate		Moi Itanagar jabo.	0.8	
+jaikene	VERB		Having gone.	having gone	travel,grammar	A	গৈ	converb	jai kena	Jaikene tai ke dekhi.	0.6	
+jallianwala	PROPN		Jallianwala Bagh, a place in Amritsar.	Jallianwala	places,culture	PN	jallianwala	base form,countable,inanimate		Jallianwala Bagh itihas ase.	0.7	
+jhaal	ADJ	NOUN=spice	Spicy, hot to taste.	spicy;hot	food,describing	A	ঝাল	base form	jhal	Etu bisi jhaal ase.	0.8	
+jheel	NOUN		A lake.	lake	nature	H	झील	base form,countable,inanimate	jhil	Jheel bor ase.	0.8	
+jikun	NOUN		Unclear word, maybe from a Naga language.	unknown	culture	L	jikun	base form,countable,inanimate		Jikun ase.	0.15	doubtful: unclear, maybe noise
+jiyai	VERB		Brings back to life, keeps alive.	revives;keeps alive	health,actions	A	জীয়াই	present		Tai jiyai thake.	0.5	
+kathmandu	PROPN		The capital of Nepal.	Kathmandu	places	PN	kathmandu	base form,countable,inanimate		Moi Kathmandu jabo.	0.85	
+khorot	NOUN		Expense, cost.	expense;cost	money	P	खर्च	base form,countable,inanimate	khoros	Khorot bisi ase.	0.65	
+kigo	NOUN		Unclear word, maybe from a Naga language.	unknown	culture	L	kigo	base form,countable,inanimate		Kigo ase.	0.15	doubtful: unclear, maybe noise
+komjuri	ADJ		Weak, feeble.	weak;feeble	health,describing	P	कमज़ोरी	base form	kamjori	Tai komjuri ase.	0.75	
+latte	NOUN		Coffee with steamed milk.	latte	food	E	latte	base form,mass,inanimate		Latte khabo.	0.85	
+leaf	NOUN		The flat green part of a plant.	leaf	nature	E	leaf	base form,countable,inanimate	pat	Leaf bor ase.	0.7	
+lights	NOUN		Lamps or electric light.	lights	home	E	lights	base form,countable,inanimate		Lights on kori.	0.85	
+literacy	NOUN		The ability to read and write.	literacy	education	E	literacy	base form,mass,inanimate		Literacy bhal ase.	0.8	
+logor	ADP		Near, next to.	near;next to	grammar	A	লগৰ	invariable	logot	Moi logor ase.	0.3	doubtful: maybe variant of logot or osor
+lowa	VERB		Taking or taken.	taking;taken	actions	A	লোৱা	participle		Lowa kitab ase.	0.65	
+maharashtra	PROPN		A large state in western India.	Maharashtra	places	PN	maharashtra	base form,countable,inanimate		Maharashtra bor state ase.	0.85	
+malaysia	PROPN		A country in Southeast Asia.	Malaysia	places	PN	malaysia	base form,countable,inanimate		Malaysia ek desh ase.	0.8	
+malware	NOUN		Harmful computer software.	malware	technology	E	malware	base form,mass,inanimate		Phone te malware ase.	0.85	
+mandela	PROPN		Nelson Mandela, the South African leader.	Mandela	culture,civic	PN	mandela	base form,countable,animate		Mandela bor leader ase.	0.7	
+matibole	VERB		To call out or invite.	to call;to invite	actions	A	মাতিবলৈ	purposive		Tai ke matibole jabo.	0.75	
+mauka	NOUN		A chance or opportunity.	chance;opportunity	time	H	मौका	base form,countable,inanimate		Mauka pai.	0.8	
+maya	NOUN		Love, affection.	love;affection	feelings	A	মায়া	base form,mass,inanimate		Moi tomar maya kori.	0.7	
+me	PRON		English word meaning I as object.	me	pronouns	E	me	invariable		Me ke dibi.	0.3	doubtful: English word, Nagamese uses moike
+meat	NOUN		The flesh of an animal eaten as food.	meat	food	E	meat	base form,mass,inanimate	mangsho	Meat khabo.	0.85	
+mela	NOUN		A fair or festival gathering.	fair;festival	culture,community	H	मेला	base form,countable,inanimate		Mela te jabo.	0.8	
+mistri	NOUN		A craftsman or skilled worker.	craftsman;mechanic	work	H	मिस्त्री	base form,countable,animate	mistry	Mistri kam kori ase.	0.8	
+moksha	NOUN		Spiritual freedom from rebirth.	moksha;liberation	religion	S	मोक्ष	base form,mass,inanimate		Moksha pabole chesta.	0.6	
+morung	NOUN		A traditional Naga youth house.	morung	culture,community	N	morung	base form,countable,inanimate		Morung te ladka khan thake.	0.8	
+mustard	NOUN		A plant with seeds used for oil and spice.	mustard	food,farming	E	mustard	base form,mass,inanimate		Mustard tel dibi.	0.85	
+nache	VERB		Dances.	dances	leisure,actions	A	নাচে	present		Tai bhal nache.	0.8	
+nagas	PROPN		The Naga peoples.	Nagas	community	PN	nagas	base form,countable,animate		Nagas khan ekotha ase.	0.85	
+name	NOUN		What a person is called.	name	community	E	name	base form,countable,inanimate	nam	Tomar name ki?	0.8	
+napale	VERB		If not able to get or find.	if not get	actions,grammar	A	নোপোৱালে	conditional,negative		Napale moi kenekua?	0.5	
+narayan	PROPN		A Hindu god name, also a given name.	Narayan	religion,community	PN	narayan	base form,countable,animate		Narayan sir ahise.	0.6	
+neck	NOUN		The part joining head and body.	neck	body	E	neck	base form,countable,inanimate	gala	Neck dukh pai.	0.8	
+nelson	PROPN		A given name or surname.	Nelson	community	PN	nelson	base form,countable,animate		Nelson moi laga bondhu.	0.5	doubtful: personal name
+ni	PART		Unclear short word, maybe a Naga particle.	unknown	grammar	L	ni	invariable		Ni ase.	0.1	doubtful: fragment, likely noise
+nl	NOUN		Short for Nagaland.	NL	places	E	nl	base form,countable,inanimate		NL te thake.	0.4	doubtful: abbreviation
+nutrients	NOUN		Substances in food that help the body.	nutrients	food,health	E	nutrients	base form,countable,inanimate		Nutrients lagibo.	0.8	
+nuts	NOUN		Hard seeds eaten as food.	nuts	food	E	nuts	base form,countable,inanimate		Nuts khabo.	0.85	
+oscar	PROPN		A given name, or the film award.	Oscar	media,community	PN	oscar	base form,countable,inanimate		Oscar award jitise.	0.6	
+osor	ADP	ADV=nearby	Near, close to.	near;close	describing,places	A	ওচৰ	invariable	ochor	Moi ghor osor ase.	0.85	

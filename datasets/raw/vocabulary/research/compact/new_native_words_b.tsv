@@ -1,0 +1,287 @@
+mur	NOUN		Head of a person.	head;mur;matha	body	A	মূৰ	base form,countable,inanimate	matha	Mur bisi bethe.	0.8	
+angul	NOUN		Finger of the hand or foot.	finger;angul	body	A	আঙুলি	base form,countable,inanimate	anguli	Angul kat gelu.	0.8	
+nakh	NOUN		Fingernail or toenail.	nail;nakh	body	A	নখ	base form,countable,inanimate	nokh	-	0.7	
+pithi	NOUN		Back of the body.	back;pithi	body	A	পিঠি	base form,countable,inanimate	pithi;pithe	Pithi byatha kore.	0.8	
+buku	NOUN		Chest or breast of a person.	chest;breast;buku	body	A	বুকু	base form,countable,inanimate	buk	Buku bisi halise.	0.7	
+gaa	NOUN		The body of a person.	body;gaa;shorir	body	A	গা	base form,countable,inanimate	ga;gaa	Mur gaa bisi jor ase.	0.9	
+shorir	NOUN		The physical body.	body;shorir	body	A	শৰীৰ	base form,countable,inanimate	sorir;shorir	Shorir bhal nai.	0.8	
+sokoo	NOUN		Eye of a person.	eye;sokoo	body	A	চকু	base form,countable,inanimate	soku;soku	Sokoo khola.	0.9	
+ghaa	NOUN		Wound or cut on the body.	wound;sore;ghaa	health,body	A	ঘা	base form,countable,inanimate	gha	Ghaa bisi bagise.	0.7	
+byatha	NOUN		Pain or ache in the body.	pain;ache;byatha	health	A	ব্যথা	base form,countable,inanimate	bytha;byatha	Byatha bisi ase.	0.8	
+sordi	NOUN		Common cold with a runny nose.	cold;sordi	health	A	চৰ্দি	base form,countable,inanimate	sordi;sardi	Sordi laga ase.	0.8	
+khasi	NOUN		Cough.	cough;khasi	health	A	খহঁ	base form,countable,inanimate	khosi	Khasi bisi hoise.	0.7	
+osudh	NOUN		Medicine or drug.	medicine;drug;osudh	health	A	ঔষধ	base form,countable,inanimate	oushudh;oushad	Osudh khai ja.	0.8	
+osudhi	NOUN		Herbal medicine or remedy.	remedy;herbal medicine;osudhi	health	A	ঔষধি	base form,countable,inanimate		-	0.5	doubtful
+klanto	ADJ		Tired or fatigued in body.	tired;fatigued;klanto	health	A	ক্লান্ত	base form	klanta;klanto	Mai klanto ase.	0.6	
+ghamo	NOUN		Sweat on the body.	sweat;ghamo	body,weather	A	ঘামা	base form,countable,inanimate	ghami;gham	Ghamo bohut.	0.8	
+dom	NOUN		Breath or breathing.	breath;dom	body	A	দম	base form,countable,inanimate	dom	Dom bisi nai.	0.5	
+ragi	ADJ		Angry or quick to anger.	angry;ragi	feelings	A	ৰগী	base form	ragi	Ei bisi ragi.	0.7	
+mayaa	NOUN		Love or affection.	love;affection;mayaa	feelings	A	মায়া	base form,countable,inanimate	maya	Mayaa kore.	0.8	
+dushtu	ADJ		Naughty or mischievous.	naughty;mischievous;dushtu	feelings	A	দুষ্ট	base form	dushto	-	0.5	
+laaju	ADJ		Shy or bashful.	shy;bashful;laaju	feelings	A	লাজুক	base form	lajuk	Ei bisi laaju.	0.7	
+lajuk	ADJ		Shy or modest.	shy;modest;lajuk	feelings	A	লাজুক	base form	laju;lajuk	Lajuk manuh.	0.7	
+xohoj	ADJ		Easy, simple, or natural.	easy;simple;xohoj	describing	A	সহজ	base form	sohoj;sohoj	Xohoj kaam.	0.8	
+dhemalu	ADJ		Slow or lazy in doing things.	slow;lazy;dhemalu	describing	A	ধেমেলীয়া	base form	dhemali	Dhemalu manuh.	0.6	
+kopal	ADJ		Lucky or fortunate.	lucky;fortunate;kopal	describing	A	কপাল	base form	kopal;kopal	Kopal bhal.	0.6	
+bhokat	ADJ		Foolish or stupid.	foolish;stupid;bhokat	describing	A	ভকত	base form	bhokat;bhokot	Bhokat manuh.	0.5	doubtful
+sahasi	ADJ		Brave or courageous.	brave;courageous;sahasi	describing,feelings	A	সাহসী	base form	xahosi;sahosi	Sahasi manuh ase.	0.7	
+bhadro	ADJ		Gentle, polite, or well-mannered.	gentle;polite;bhadro	feelings,describing	A	ভদ্ৰ	base form	bhadro;bhodro	Bhadro manuh ase.	0.7	
+khisiya	ADJ		Jealous or envious.	jealous;envious;khisiya	feelings	A	খিচিয়া	base form	khisiya;khisia	-	0.5	
+xohosi	ADJ		Courageous or bold.	courageous;bold;xohosi	feelings,describing	A	সাহসী	base form	sahosi	Xohosi manuh.	0.6	
+ronga	ADJ		Red in colour.	red;ronga	colours	A	ৰঙা	base form	ronga;rongaa	Ronga kapor.	0.8	
+dhunia	ADJ		White in colour.	white;dhunia	colours	A	ধুনীয়া	base form	dhunia	-	0.7	
+halodhia	ADJ		Yellow in colour.	yellow;halodhia	colours	A	হালধীয়া	base form	haldhia;halodhia	-	0.8	
+xeuji	ADJ		Green in colour.	green;xeuji	colours	A	সেউজীয়া	base form	seuji;seuji	-	0.8	
+dighol	ADJ		Long in length.	long;dighol	describing	A	দীঘল	base form	dighal;digol	Dighol rasta.	0.8	
+ukha	ADJ		Tall or high.	tall;high;ukha	describing	A	ওখ	base form	okh;ukha	Ukha gos.	0.7	
+patol	ADJ		Thin or slender.	thin;slender;patol	describing	A	পাতল	base form	patla;patol	Patol gaa.	0.8	
+lohoi	ADJ		Light in weight.	light;lohoi	describing	A	লঘু	base form	lohu;lohoi	Lohoi samaan.	0.6	
+siki	ADJ		Smooth or slippery.	smooth;slippery;siki	describing	A	চিকণ	base form	chikon;siki	Siki gaa.	0.6	
+chikon	ADJ		Smooth, fine, or glossy.	smooth;fine;chikon	describing	A	চিকণ	base form	siki;chikon	Chikon kapor.	0.7	
+bhiza	ADJ		Wet or soaked.	wet;soaked;bhiza	describing,weather	A	ভিজা	base form	bhija;bhiza	Kapor bhiza.	0.8	
+poriskar	ADJ		Clean or tidy.	clean;tidy;poriskar	describing	A	পৰিষ্কাৰ	base form	poriskar;poriskar	Ghor poriskar.	0.8	
+puron	ADJ		Old, of long standing.	old;ancient;puron	describing,time	A	পুৰণি	base form	puran;puron	Puron gos.	0.8	
+jowan	ADJ		Young, youthful.	young;youthful;jowan	describing	A	যুৱা	base form	juwan;jowan	Jowan manuh.	0.8	
+xitol	ADJ		Cool or cold in temperature.	cool;cold;xitol	weather,describing	A	শীতল	base form	xitol;sitol	-	0.6	
+chapor	ADJ		Flat or flattened.	flat;chapor	describing	A	চাপৰ	base form	chapor;chapa	Chapor pothar.	0.7	
+dharal	ADJ		Sharp or keen.	sharp;keen;dharal	describing	A	ধাৰাল	base form	dharal	-	0.6	
+xoju	ADJ		Straight, upright.	straight;upright;xoju	describing	A	সোজা	base form	soja;xoju	Xoju thiyo.	0.8	
+benka	ADJ		Bent or crooked.	bent;crooked;benka	describing	A	বেঁকা	base form	benka;benka	Benka gos.	0.7	
+bhora	ADJ		Full or filled.	full;filled;bhora	describing	A	ভৰা	base form	bhora;bhora	Bhat bhora.	0.8	
+gobhir	ADJ		Deep in depth.	deep;gobhir	describing	A	গভীৰ	base form	gobhir;gobhir	Gobhir pani.	0.7	
+xostha	ADJ		Cheap, inexpensive.	cheap;inexpensive;xostha	describing,money	A	সস্তা	base form	sosta;sosta	-	0.5	
+xundor	ADJ		Beautiful, pretty.	beautiful;pretty;xundor	describing	A	সুন্দৰ	base form	sundor;sundor	Xundor kuri.	0.9	
+kaal	ADV		Tomorrow or the next day.	tomorrow;kaal	time	A	কাইলৈ	base form	kal;kaal	-	0.5	
+mathon	ADV		Only, just, merely.	only;just;mathon	grammar	A	মাথোন	base form	mathon;mathon	Mathon eta.	0.7	
+mathou	ADV		Only, just.	only;just;mathou	grammar	A	মাথোঁ	base form	mathou;mathon	-	0.6	
+aaru	CCONJ		And, also, or moreover.	and;also;aaru	grammar	A	আৰু	base form	aru;aru	Aaru ki?	0.9	
+ebar	ADV		This time, this once.	this time;once;ebar	time	A	এইবাৰ	base form	ebar	Ebar bhal.	0.6	
+pasot	ADV		Afterwards, later.	after;later;pasot	time	A	পাছত	base form	pasot;pasoot	Pasot jabo.	0.7	
+baire	ADV		Outside, out.	outside;out;baire	places	A	বাহিৰত	base form	bairey;baire	Baire jaa.	0.8	
+ikhoni	ADV		Here, at this place.	here;this place;ikhoni	places	A	ইয়াত	base form	iyat;ikhoni	Ikhoni thaka.	0.6	
+ikhai	ADV		Here, in this place.	here;ikhai	places	A	ইয়াত	base form	iyat	-	0.5	doubtful
+xikhai	ADV		There, in that place.	there;in that place;xikhai	places	A	সিয়াত	base form	sikhat;xikhai	-	0.5	doubtful
+xikhoni	ADV		There, at that place.	there;that place;xikhoni	places	A	সিয়াত	base form	sikhoni	-	0.5	doubtful
+emaan	ADV		This much, so much.	this much;emaan	numbers	A	ইমান	base form	imaan	-	0.5	doubtful
+temaan	ADV		That much, so much.	that much;temaan	numbers	A	তিমান	base form	timaan	-	0.5	doubtful
+kenekoi	ADV		In what way, how.	how;in what way;kenekoi	grammar	A	কেনেকৈ	base form	kenekoi	-	0.5	doubtful
+tene	ADV		Like that, in that way.	like that;that way;tene	grammar	A	তেনে	base form	tene	Tene kore.	0.7	
+kiyo	ADV		Why, for what reason.	why;for what reason;kiyo	grammar	A	কিয়	base form	kiyo;kiyo	Kiyo aahi nai?	0.7	
+tatei	ADV		Then, at that time.	then;at that time;tatei	time	A	তেতিয়া	base form	tetiya;tatei	-	0.6	
+tetiya	ADV		Then, at that time.	then;at that time;tetiya	time	A	তেতিয়া	base form	tatei	Tetiya ahisil.	0.8	
+ochor	ADV		Near, close.	near;close;ochor	places	A	ওচৰ	base form	ochor;ochor	Ochor ase.	0.8	
+upore	ADV		Above, on top.	above;on top;upore	places	A	ওপৰত	base form	upore;upore	Upore thaka.	0.7	
+tole	ADV		Below, down.	below;down;tole	places	A	তলত	base form	tole;tolot	Tole jaa.	0.7	
+pichat	ADV		Behind, after.	behind;after;pichat	places	A	পিছত	base form	pisot;pichat	Pichat thakise.	0.6	
+dubar	ADV		Twice, two times.	twice;two times;dubar	numbers	A	দুবাৰ	base form	dubar	-	0.6	
+tinibar	ADV		Three times.	three times;tinibar	numbers	A	তিনিবাৰ	base form	tinibar	-	0.5	
+dupohor	NOUN		Noon or midday.	noon;midday;dupohor	time	A	দুপৰ	base form,countable,inanimate	dupor	Dupohor khaa.	0.8	
+sundhya	NOUN		Evening or dusk.	evening;dusk;sundhya	time	A	সন্ধিয়া	base form,countable,inanimate	sondhya;xondhia	Sundhya hoi gelu.	0.7	
+robibar	NOUN		Sunday, the first day of the week.	Sunday;robibar	time,religion	A	ৰবিবাৰ	base form,countable,inanimate	robiwar	Robibar gir.	0.7	
+xukurbar	NOUN		Friday, the sixth day of the week.	Friday;xukurbar	time	A	শুকুৰবাৰ	base form,countable,inanimate	sukurbar	-	0.6	
+xonibar	NOUN		Saturday, the seventh day of the week.	Saturday;xonibar	time	A	শনিবাৰ	base form,countable,inanimate	sonibar	-	0.6	
+xumbar	NOUN		Monday, the second day of the week.	Monday;xumbar	time	A	সোমবাৰ	base form,countable,inanimate	sombar	-	0.6	
+budhbar	NOUN		Wednesday, the fourth day of the week.	Wednesday;budhbar	time	A	বুধবাৰ	base form,countable,inanimate	budhbar	-	0.6	
+brihospotibar	NOUN		Thursday, the fifth day of the week.	Thursday;brihospotibar	time	A	বৃহস্পতিবাৰ	base form,countable,inanimate	brihospotibar	-	0.5	
+bohag	NOUN		Bohag, the first Assamese month, roughly April to May.	April;May;bohag	time,culture	A	বহাগ	base form,countable,inanimate	boha	Bohag bihu.	0.9	
+zeth	NOUN		Zeth, the second Assamese month, roughly May to June.	June;zeth	time	A	জেঠ	base form,countable,inanimate	jeth	-	0.7	
+ahar	NOUN		Ahar, the third Assamese month, roughly June to July.	July;ahar	time	A	আহাৰ	base form,countable,inanimate	ahar	-	0.7	
+xaun	NOUN		Saun, the fourth Assamese month, roughly July to August.	August;xaun	time	A	শাওণ	base form,countable,inanimate	saun	-	0.7	
+bhado	NOUN		Bhado, the fifth Assamese month, roughly August to September.	September;bhado	time	A	ভাদ	base form,countable,inanimate	bhadou	-	0.7	
+ahin	NOUN		Ahin, the sixth Assamese month, roughly September to October.	October;ahin	time	A	আহিন	base form,countable,inanimate	ahin	-	0.7	
+aghun	NOUN		Aghun, the eighth Assamese month, roughly November to December.	December;aghun	time	A	আঘোণ	base form,countable,inanimate	aghon	-	0.7	
+puh	NOUN		Puh, the ninth Assamese month, roughly December to January.	January;puh	time	A	পুহ	base form,countable,inanimate	poh	-	0.7	
+magh	NOUN		Magh, the tenth Assamese month, roughly January to February.	February;magh	time,culture	A	মাঘ	base form,countable,inanimate	mag	Magh bihu.	0.8	
+fagun	NOUN		Fagun, the eleventh Assamese month, roughly February to March.	March;fagun	time	A	ফাগুন	base form,countable,inanimate	fagun	-	0.7	
+xot	NOUN		Sot, the twelfth Assamese month, roughly March to April.	March to April;sot;xot	time	A	চ'ত	base form,countable,inanimate	sot	-	0.6	
+xorot	NOUN		Autumn season.	autumn;xorot	time,weather	A	শৰৎ	base form,countable,inanimate	sorot	-	0.6	
+ritu	NOUN		A season of the year.	season;ritu	time,weather	A	ঋতু	base form,countable,inanimate	ritu	-	0.7	
+parhi	ADV		Day after tomorrow or the day after.	day after;parhi	time	A	পৰহি	base form	parhi	-	0.6	
+porsu	ADV		Day after tomorrow.	day after tomorrow;porsu	time	A	পৰ্শু	base form	porsu	-	0.5	
+xesh	ADJ		Last, final in order.	last;final;xesh	numbers,time	A	শেষ	base form	xesh	Xesh din.	0.8	
+xat	NUM		Seven, the number seven.	seven;xat	numbers	A	সাত	base form	sat	Xat ta.	0.9	
+aat	NUM		Eight, the number eight.	eight;aat	numbers	A	আঠ	base form	aath	Aat ta.	0.8	
+nowo	NUM		Nine, the number nine.	nine;nowo	numbers	A	নয়	base form	noy	Nowo ta.	0.9	
+xo	NUM		Hundred, the number one hundred.	hundred;xo	numbers	A	শ	base form	sho	Xo ta.	0.6	
+dwitiyo	ADJ		Second, the second in order.	second;dwitiyo	numbers	A	দ্বিতীয়	base form	dwitiyo	-	0.6	
+totiyo	ADJ		Third, the third in order.	third;totiyo	numbers	A	তৃতীয়	base form	totiyo	-	0.5	
+paathar	NOUN		Stone or rock.	stone;rock;pathar	places	A	পাথৰ	base form,countable,inanimate	pathar;pathar	-	0.5	
+xomaj	NOUN		Society or community.	society;community;xomaj	community	A	সমাজ	base form,countable,inanimate	somaj;samaj	Xomaj bisi bhal.	0.8	
+bap	NOUN		Father.	father;bap	community	A	বাপেক	base form,countable,animate	bap;baap	-	0.6	
+ghoroni	NOUN		Wife.	wife;ghoroni	community	A	ঘৰণী	base form,countable,animate	ghoroni;gharoni	Ghoroni bhal ase.	0.8	
+xoami	NOUN		Husband.	husband;xoami	community	A	স্বামী	base form,countable,animate	xoami;swami	-	0.6	
+bua	NOUN		Aunt, father's sister.	aunt;bua	community	A	বাই	base form,countable,animate	bua;bai	Bua ghor ahise.	0.7	
+dadai	NOUN		Grandfather.	grandfather;dadai	community	A	দাদা	base form,countable,animate	dada;dadai	-	0.5	doubtful
+mohajon	NOUN		Moneylender or wealthy trader.	moneylender;trader;mohajon	money,community	A	মহাজন	base form,countable,animate	mohajon	-	0.6	
+rajah	NOUN		King or ruler.	king;ruler;rajah	community	A	ৰজা	base form,countable,animate	raja;rajah	-	0.6	
+raani	NOUN		Queen.	queen;raani	community	A	ৰাণী	base form,countable,animate	rani	-	0.6	
+xomuh	NOUN		Group or assembly of people.	group;assembly;xomuh	community	A	সমূহ	base form,countable,inanimate	somuh;somuh	-	0.5	
+bisha	NOUN		Poison.	poison;bisha	health	A	বিষ	base form,countable,inanimate	bish;bisha	Bisha khabi nai.	0.7	
+xotru	NOUN		Enemy.	enemy;xotru	community	A	শত্ৰু	base form,countable,animate	shotru	-	0.6	
+xoma	NOUN		Forgiveness.	forgiveness;xoma	feelings	A	ক্ষমা	base form,countable,inanimate	khoma;xoma	Xoma kor.	0.7	
+xobd	NOUN		Word, sound, or speech.	word;speech;xobd	community	A	শব্দ	base form,countable,inanimate	shobd	Ei xobd bhal.	0.5	
+jhogra	NOUN		Quarrel or fight.	quarrel;fight;jhogra	feelings	A	ঝগৰা	base form,countable,inanimate	jhogora;jhogra	-	0.5	
+jhogora	NOUN		Quarrel or dispute.	quarrel;dispute;jhogora	feelings	A	ঝগৰা	base form,countable,inanimate	jhogra	-	0.5	
+xomoy	NOUN		Time or occasion.	time;occasion;xomoy	time	A	সময়	base form,countable,inanimate	somoy;somoy	Xomoy nai.	0.8	
+xawal	NOUN		Rice, uncooked grain.	rice;xawal	culture	A	চাউল	base form,countable,inanimate	sawal	-	0.5	
+bili	NOUN		Cat.	cat;bili	places	A	বিৰাল	base form,countable,animate	biral;bili	Bili bisi ase.	0.6	
+kukuta	NOUN		Chicken or hen.	chicken;hen;kukuta	places	A	কুকুৰা	base form,countable,animate	kukura;kukuta	-	0.6	
+xuwar	NOUN		Pig.	pig;xuwar	places	A	শুৱৰ	base form,countable,animate	suwar;xuwar	Xuwar bisi ase.	0.8	
+suwar	NOUN		Pig.	pig;suwar	places	A	শুৱৰ	base form,countable,animate	xuwar	-	0.6	
+xial	NOUN		Jackal.	jackal;xial	places	A	শিয়াল	base form,countable,animate	xiyal	-	0.5	
+xap	NOUN		Snake.	snake;xap	places	A	সাপ	base form,countable,animate	sap;xap	Xap bisi bhoy.	0.9	
+bhomor	NOUN		Bee or wasp.	bee;wasp;bhomor	places	A	ভোমোৰা	base form,countable,animate	bhomora;bhomor	-	0.5	
+xipa	NOUN		Root.	root;xipa	places	A	শিপা	base form,countable,inanimate	sipa;xipa	-	0.6	
+habi	NOUN		Forest or jungle.	forest;jungle;habi	places	A	হাবি	base form,countable,inanimate	habi;habi	-	0.6	
+noi	NOUN		River or stream.	river;stream;noi	places	A	নৈ	base form,countable,inanimate	noi;noi	-	0.6	
+beel	NOUN		Lake or marsh.	lake;marsh;beel	places	A	বিল	base form,countable,inanimate	bil;bil	-	0.7	
+sagor	NOUN		Sea or ocean.	sea;ocean;sagor	places	A	সাগৰ	base form,countable,inanimate	sagor;sagar	-	0.7	
+ali	NOUN		Lane, road, or path.	lane;road;ali	places	A	আলি	base form,countable,inanimate	ali;ali	-	0.6	
+maati	NOUN		Soil or mud.	soil;mud;maati	places	A	মাটি	base form,countable,inanimate	mati	-	0.5	
+kapur	NOUN		Cloth or garment.	cloth;garment;kapur	clothing	A	কাপোৰ	base form,countable,inanimate	kapor	-	0.5	
+chadar	NOUN		Shawl or wrap worn over the upper body.	shawl;wrap;chadar	clothing,culture	A	চাদৰ	base form,countable,inanimate	sadar;chadar	Chadar gaat diya.	0.9	
+sadar	NOUN		Shawl or wrap cloth.	shawl;wrap;sadar	clothing	A	চাদৰ	base form,countable,inanimate	chadar	-	0.5	
+gamosa	NOUN		Traditional woven white cloth with red border used as a gift and shawl.	gamosa;towel;cloth	clothing,culture	A	গামোচা	base form,countable,inanimate	gamosa;gamocha	Gamosa diya.	0.9	
+gamocha	NOUN		Traditional woven cloth with red border given as a gift.	gamocha;towel;cloth	clothing,culture	A	গামোচা	base form,countable,inanimate	gamosa	-	0.6	
+dhoti	NOUN		Men's lower garment wrapped around the waist.	dhoti;lower garment	clothing	A	ধুতি	base form,countable,inanimate	dhoti	Dhoti pindhi ase.	0.8	
+jaama	NOUN		Shirt or clothing top.	shirt;jaama	clothing	A	জামা	base form,countable,inanimate	jama	-	0.5	
+xut	NOUN		Thread for weaving or sewing.	thread;yarn;xut	clothing	A	সূতা	base form,countable,inanimate	sutaa;sut	Xut bisi ase.	0.7	
+sutaa	NOUN		Thread or yarn.	thread;yarn;sutaa	clothing	A	সূতা	base form,countable,inanimate	sut	-	0.7	
+sut	NOUN		Thread or yarn.	thread;sut	clothing	A	সূতা	base form,countable,inanimate	sutaa	-	0.5	
+ranga	ADJ		Coloured or dyed in colour.	coloured;dyed;ranga	colours,clothing	A	ৰঙা	base form	ronga	Ranga kapor.	0.5	doubtful
+poisha	NOUN		Paisa, small coin.	paisa;coin;poisha	money	A	পইচা	base form,countable,inanimate	poisa	-	0.5	
+dami	ADJ		Expensive or costly.	expensive;costly;dami	money,describing	A	দামী	base form	dami	Dami bastu.	0.7	
+laabh	NOUN		Profit or gain.	profit;gain;laabh	money	A	লাভ	base form,countable,inanimate	labh;laabh	-	0.6	
+khoroch	NOUN		Expense or spending.	expense;spending;khoroch	money	A	খৰচ	base form,countable,inanimate	khorosh;khoroch	Khoroch bisi.	0.8	
+khorosh	NOUN		Expense.	expense;khorosh	money	A	খৰচ	base form,countable,inanimate	khoroch	-	0.5	
+tokuri	NOUN		Basket of woven cane or bamboo.	basket;tokuri	money,culture	A	টোকৰী	base form,countable,inanimate	tokuri	-	0.6	
+pujaa	NOUN		Worship.	worship;pujaa	religion	A	পূজা	base form,countable,inanimate	puja	-	0.5	
+xatra	NOUN		Monastery or Vaishnavite religious institution.	monastery;institution;xatra	religion,places	A	সত্ৰ	base form,countable,inanimate	sotro;xatra	-	0.6	
+sotro	NOUN		Vaishnavite monastery in Assam.	monastery;sotro	religion,places	A	সত্ৰ	base form,countable,inanimate	xatra	-	0.5	
+namghar	NOUN		Prayer hall of Assamese Vaishnavites.	prayer hall;namghar	religion,places	A	নামঘৰ	base form,countable,inanimate	namghor	-	0.6	
+bhokot	NOUN		Devotee or believer.	devotee;believer;bhokot	religion,community	A	ভকত	base form,countable,animate	bhokot;bhokot	-	0.5	
+bhagowan	NOUN		God.	god;lord;bhagowan	religion	A	ভগৱান	base form,countable,animate	bhogoban;bhagoban	Bhagowan ase.	0.8	
+dewa	NOUN		God or deity.	god;dewa	religion	A	দেৱ	base form,countable,animate	deuta;dev	-	0.5	
+xopun	NOUN		Dream.	dream;xopun	feelings,religion	A	সপোন	base form,countable,inanimate	sopun;sopon	Xopun dekhilu.	0.8	
+xobha	NOUN		Meeting or assembly.	meeting;assembly;xobha	community	A	সভা	base form,countable,inanimate	sobha;sova	-	0.5	
+xongsar	NOUN		The world or worldly life.	world;worldly life;xongsar	religion,community	A	সংসাৰ	base form,countable,inanimate	songsar;sonsar	Xongsar bisi bhal.	0.6	
+sonsar	NOUN		The world or worldly household.	world;household;sonsar	religion,community	A	সংসাৰ	base form,countable,inanimate	songsar	-	0.5	
+mohapurush	NOUN		Great man or saint.	great man;saint;mohapurush	religion	A	মহাপুৰুষ	base form,countable,animate	mohapurush	-	0.6	
+xotyo	NOUN		Truth.	truth;xotyo	religion	A	সত্য	base form,countable,inanimate	sotyo;shotyo	Xotyo kotha.	0.7	
+pap	NOUN		Sin or wrongdoing.	sin;wrongdoing;pap	religion	A	পাপ	base form,countable,inanimate	pap	Pap koribo nai.	0.8	
+xorgo	NOUN		Heaven.	heaven;xorgo	religion	A	স্বৰ্গ	base form,countable,inanimate	sorgo;xorgo	-	0.6	
+narok	NOUN		Hell.	hell;narok	religion	A	নৰক	base form,countable,inanimate	norok;narok	-	0.6	
+boroxun	NOUN		Rain.	rain;boroxun	weather	A	বৰষুণ	base form,countable,inanimate	borxun;boroxun	Boroxun hoise.	0.9	
+boroph	NOUN		Snow or hail.	snow;hail;boroph	weather	A	বৰফ	base form,countable,inanimate	borof;boroph	-	0.5	
+zun	NOUN		Moon.	moon;zun	weather	A	জোন	base form,countable,inanimate	jun;zun	-	0.6	
+ondhar	NOUN		Darkness.	darkness;ondhar	weather,time	A	আন্ধাৰ	base form,countable,inanimate	andhar;ondhar	-	0.6	
+aalo	NOUN		Light.	light;aalo	weather	A	পোহৰ	base form,countable,inanimate	alo;alo	Alo jalao.	0.7	
+phatphat	ADJ		Making a sudden crackling or flapping sound.	crackling;flapping;phatphat	describing	A	ফটফট	base form	phatphat	-	0.6	
+dhokdhok	ADV		Quickly or in a pounding way, as of the heart.	pounding;quickly;dhokdhok	feelings,describing	A	ধকধক	base form	dhokdhok	-	0.5	
+jhilmil	ADJ		Glittering or shimmering in light.	glittering;shimmering;jhilmil	describing	A	ঝিলিমিলি	base form	jilmil;jhilmil	Taara jhilmil kore.	0.7	
+jhikmik	ADJ		Twinkling or flickering light.	twinkling;flickering;jhikmik	describing	A	ঝিকমিক	base form	jhikmik;jhikmik	-	0.6	
+khatkhat	ADJ		Making a sharp knocking sound.	knocking;rattling;khatkhat	describing	A	খটখট	base form	khatkhat	-	0.5	
+ghurghur	ADV		With a continuous rumbling or buzzing sound.	rumbling;buzzing;ghurghur	describing	A	ঘুৰঘুৰ	base form	ghurghur	-	0.5	
+dhopdhap	ADV		With a heavy falling thud.	thud;dhop;dhopdhap	describing	A	ধপধপ	base form	dhopdhap	-	0.5	
+dhakdhak	ADV		With a fast beating or pounding, as the heart.	pounding;beating;dhakdhak	feelings,describing	A	ধকধক	base form	dhakdhak;dhokdhok	Mur hiya dhakdhak kore.	0.6	
+tupotup	ADV		With the sound or action of dripping drops.	dripping;drip;tupotup	describing	A	টুপটুপ	base form	tupotup	Pani tupotup kori poris.	0.6	
+tupotap	ADV		With the sound of dripping water.	dripping;drip;tupotap	describing	A	টুপটাপ	base form	tupotap	-	0.5	
+chupchap	ADV		Silently, quietly, without speaking.	silently;quietly;chupchap	describing	A	চুপচাপ	base form	chupchap;chupchap	Chupchap thak.	0.8	
+chupchup	ADV		Quietly, in silence.	quietly;silently;chupchup	describing	A	চুপচাপ	base form	chupchap	-	0.5	
+jhoom	NOUN		Shower or light rainfall with drizzle.	shower;drizzle;jhoom	weather	A	ঝুমু	base form,countable,inanimate	jhum	Jhoom jhoom boroxun.	0.5	
+bhanbhan	ADV		With a buzzing or humming sound.	buzzing;humming;bhanbhan	describing	A	ভনভন	base form	bhonbhon;bhanbhan	-	0.5	
+bhonbhon	ADV		With a buzzing sound, as of bees.	buzzing;humming;bhonbhon	describing	A	ভনভন	base form	bhanbhan	-	0.5	
+tipti	ADV		Dripping or trickling drop by drop.	dripping;trickling;tipti	describing	A	টিপটিপ	base form	tipti	Tipti tipti boroxun.	0.5	
+phapha	ADJ		Hollow or puffed up inside.	hollow;puffed;phapha	describing	A	ফাঁপা	base form	phapha	Phapha bostu.	0.5	
+latapata	ADJ		Loose, hanging, or dangling.	loose;hanging;latapata	describing	A	লটপট	base form	latapata	-	0.5	
+lahelahe	ADV		Slowly, gradually, bit by bit.	slowly;gradually;lahelahe	time	A	লাহে লাহে	base form	lahe lahe	-	0.5	
+jhuli	NOUN		Small bag or sack.	bag;sack;jhuli	money,clothing	A	ঝুলি	base form,countable,inanimate	juli;jhuli	Jhuli nao.	0.5	
+bondho	ADJ		Closed or shut.	closed;shut;bondho	describing	A	বন্ধ	base form	bondho;bondho	Dorajah bondho.	0.8	
+akol	ADJ		Alone or solitary.	alone;solitary	describing	A	অকল	base form		-	0.7	
+achinaki	ADJ		Strange or unfamiliar.	strange;unfamiliar	describing	A	অচিনাকি	base form		-	0.7	
+atil	ADJ		Complicated or difficult.	complicated;difficult	describing	A	আটিল	base form		-	0.7	
+adhorua	ADJ		Incomplete or unfinished.	incomplete;unfinished	describing	A	আধৰুৱা	base form		-	0.7	
+ujola	ADJ		Bright or shining.	bright;shining	describing,colours	A	উজলা	base form		-	0.7	
+udong	ADJ		Bare or naked.	bare;naked	describing	A	উদং	base form		-	0.7	
+okh	ADJ		High or tall.	high;tall	describing	A	ওখ	base form		-	0.7	
+olota	ADJ		Upside down or reversed.	upside down;reversed	describing	A	ওলটা	base form		-	0.7	
+kumoliya	ADJ		Tender or soft.	tender;soft	describing	A	কুমলীয়া	base form		-	0.7	
+ghai	ADJ		Main or chief.	main;chief	describing	A	ঘাই	base form		-	0.7	
+ghurnia	ADJ		Rotating or round.	rotating;round	describing	A	ঘূৰণীয়া	base form		-	0.7	
+somu	ADJ		Short or brief.	short;brief	describing	A	চমু	base form		-	0.7	
+sapor	ADJ		Flat or level.	flat;level	describing	A	চাপৰ	base form		-	0.7	
+salak	ADJ		Clever or smart.	clever;smart	describing	A	চালাক	base form		-	0.7	
+sikon	ADJ		Smooth or glossy.	smooth;glossy	describing	A	চিকণ	base form		-	0.7	
+sepa	ADJ		Pressed or flattened.	pressed;flattened	describing	A	চেপা	base form		-	0.7	
+soka	ADJ		Sharp or pointed.	sharp;pointed	describing	A	চোকা	base form		-	0.7	
+sigha	ADJ		Torn or ripped.	torn;ripped	describing	A	ছিগা	base form		-	0.7	
+gabhoru	NOUN		Young woman or girl.	young woman;girl	community	A	গাভৰু	base form		-	0.7	
+gotei	ADJ		Whole or entire.	whole;entire	describing	A	গোটেই	base form		-	0.7	
+gram	NOUN		Village.	village	places	A	গ্ৰাম	base form		-	0.7	
+gela	ADJ		Rotten or spoilt.	rotten;spoilt	describing	A	গেলা	base form		-	0.7	
+bechi	ADV		More or extra.	more;extra	numbers	A	বেছি	base form		-	0.7	
+sonkale	ADV		Early or quickly.	early;quickly	time	A	সোনকালে	base form		-	0.7	
+agotiyakoi	ADV		In advance or earlier.	in advance;earlier	time	A	আগতীয়াকৈ	base form		-	0.7	
+ajikali	ADV		Nowadays or these days.	nowadays;these days	time	A	আজিকালি	base form		-	0.7	
+iyat	ADV		Here or in this place.	here;in this place	places	A	ইয়াত	base form		-	0.7	
+jimaan	ADV		As much as.	as much as	numbers	A	যিমান	base form		-	0.7	
+somukoi	ADV		Briefly or in short.	briefly;in short	describing	A	চমুকৈ	base form		-	0.7	
+ahakali	ADV		Tomorrow or in the future.	tomorrow;in the future	time	A	অহাকালি	base form		-	0.7	
+ahabosor	ADV		Next year.	next year	time	A	অহাবছৰ	base form		-	0.7	
+daudau	ADV		Blazing or flaring brightly.	blazing;flaring brightly	describing	A	দাউদাউ	base form		-	0.7	
+beporowa	ADJ		Reckless or careless.	reckless;careless	feelings	A	বেপৰোৱা	base form		-	0.7	
+bishal	ADJ		Vast or huge.	vast;huge	describing	A	ৱিশাল	base form		-	0.7	
+bishes	ADJ		Special or particular.	special;particular	describing	A	ৱিশেষ	base form		-	0.7	
+sofol	ADJ		Successful or fruitful.	successful;fruitful	describing	A	সফল	base form		-	0.7	
+athu	NOUN		Knee.	knee	body	A	ãthu	base form		-	0.7	
+dingi	NOUN		Neck.	neck	body	A	diṅi	base form		-	0.7	
+jokrit	NOUN		Liver.	liver	body	A	jokrit	base form		-	0.7	
+koliza	NOUN		Heart.	heart	body	A	koliza	base form		-	0.7	
+sorri	NOUN		Fat.	fat	body	A	sorri	base form		-	0.7	
+nemokh	NOUN		Salt.	salt	describing	A	নিমখ	base form		-	0.7	
+kuwoli	NOUN		Fog or mist.	fog;mist	weather	A	কুঁৱলী	base form		-	0.7	
+sesa	ADJ		Cold or chilly.	cold;chilly	weather	A	শেঁতা	base form		-	0.7	
+pun	ADJ		Straight or upright.	straight;upright	describing	A	পূণ	base form		-	0.7	
+gul	ADJ		Round or circular.	round;circular	describing	A	গোল	base form		-	0.7	
+suka	ADJ		Sharp or pointed.	sharp;pointed	describing	A	চোকা	base form		-	0.7	
+bhuta	ADJ		Dull or blunt.	dull;blunt	describing	A	ভুতা	base form		-	0.7	
+suddho	ADJ		Correct or right.	correct;right	describing	A	শুদ্ধ	base form		-	0.7	
+bakoli	NOUN		Bark of a tree.	bark of a tree	places	A	বাকলি	base form		-	0.7	
+ukoni	NOUN		Louse.	louse	places	A	উকুনি	base form		-	0.7	
+pelu	NOUN		Worm.	worm	places	A	পেলু	base form		-	0.7	
+jiwjontu	NOUN		Animal or living creature.	animal;living creature	places	A	জীৱজন্তু	base form		-	0.7	
+ghoini	NOUN		Wife.	wife	community	A	ঘৈনী	base form		-	0.7	
+poi	NOUN		Husband.	husband	community	A	পইচা	base form		-	0.7	
+amma	NOUN		Mother.	mother	community	A	আম্মা	base form		-	0.7	
+nam	NOUN		Name.	name	community	A	নাম	base form		-	0.7	
+zodi	SCONJ		If or whether.	if;whether	grammar	A	যদি	base form		-	0.7	
+onno	ADJ		Other or different.	other;different	describing	A	অন্য	base form		-	0.7	
+oboidho	ADJ		Illegal or unlawful.	illegal;unlawful	describing	A	অবৈধ	base form		-	0.7	
+atur	ADJ		Far away or distant.	far away;distant	places	A	আঁতৰ	base form		-	0.7	
+aul	ADJ		Confused or lost in mind.	confused;lost in mind	feelings	A	আউল	base form		-	0.7	
+alogh	ADJ		Separate or apart.	separate;apart	describing	A	আলগ	base form		-	0.7	
+alsua	ADJ		Lazy or idle.	lazy;idle	describing	A	আলসুৱা	base form		-	0.7	
+itor	ADJ		Mean or low in conduct.	mean;low in conduct	feelings	A	ইতৰ	base form		-	0.7	
+ujoni	NOUN		East or the eastern side.	east;the eastern side	places	A	উজনি	base form		-	0.7	
+utola	ADJ		Restless or agitated.	restless;agitated	feelings	A	উতলা	base form		-	0.7	
+ei	DET		This.	this	grammar	A	এই	base form		-	0.7	
+elehua	ADJ		Careless or lazy.	careless;lazy	feelings	A	এলেহুৱা	base form		-	0.7	
+kisu	DET		Some or a little.	some;a little	numbers	A	কিছু	base form		-	0.7	
+kuja	ADJ		Hunched or bent over.	hunched;bent over	body	A	কুঁজা	base form		-	0.7	
+kencha	ADJ		Raw or unripe.	raw;unripe	describing	A	কেঁচা	base form		-	0.7	
+khelimeli	ADJ		Messy or in confusion.	messy;in confusion	describing	A	খেলিমেলি	base form		-	0.7	
+chikmikia	ADJ		Sparkling or glittering.	sparkling;glittering	describing	A	চিকমিকিয়া	base form		-	0.7	
+akole	ADV		Alone or by oneself.	alone;by oneself	describing	A	অকলে	base form		-	0.7	
+ojanite	ADV		Unknowingly or without knowing.	unknowingly;without knowing	feelings	A	অজানিতে	base form		-	0.7	
+akou	ADV		Again or once more.	again;once more	time	A	আকৌ	base form		-	0.7	
+enekoi	ADV		In this way.	in this way	grammar	A	এনেকৈ	base form		-	0.7	
+kaile	ADV		Tomorrow.	tomorrow	time	A	কাইলৈ	base form		-	0.7	
+kiyono	ADV		Why or for what reason.	why;for what reason	grammar	A	কিয়নো	base form		-	0.7	
+ketiyaba	ADV		Sometimes or at times.	sometimes;at times	time	A	কেতিয়াবা	base form		-	0.7	
+kelei	ADV		Why or for what reason.	why;for what reason	grammar	A	কেলেই	base form		-	0.7	
+punu	ADV		Again or once more.	again;once more	time	A	পুনু	base form		-	0.7	
+prothome	ADV		First or at first.	first;at first	time	A	প্ৰথমে	base form		-	0.7	
+belegkoi	ADV		Differently or otherwise.	differently;otherwise	describing	A	বেলেগকৈ	base form		-	0.7	
+sokolutokoi	ADV		Most or the most.	most;the most	numbers	A	সকলোতকৈ	base form		-	0.7	
+sobatokoi	ADV		Most or the most.	most;the most	numbers	A	সবাতোকৈ	base form		-	0.7	
+dore	ADP		Like or as.	like;as	grammar	A	দৰে	base form		-	0.7	

@@ -1,0 +1,434 @@
+gali	NOUN	VERB=to scold (with dibo)	A scolding or abusive word; with dibo, to scold or curse.	scolding;abuse;curse	actions,feelings	H	गाली	base form,countable,inanimate		-	0.85	
+jolai	VERB		Having lit or burned something; to burn or set on fire.	burn;light;set fire	actions	A	জ্বলোৱা	citation form	jolua	-	0.8	
+apnike	PRON		Yourself (polite), object form of apuni.	yourself;you	pronouns	H	अपने को	invariable	apunike	-	0.6	doubtful: Hindi-flavoured reflexive form
+draikha	NOUN		Grapes.	grapes;wine	food,farming	A	দ্ৰাক্ষা	base form,mass,inanimate	draksha	-	0.6	
+duth	NOUN		Angel or messenger, from Bible usage.	angel;messenger	religion	S	दूत	base form,countable,animate	doot	-	0.7	
+hikhok	NOUN		Teacher.	teacher;instructor	education,work	A	শিক্ষক	base form,countable,animate	sikhok	-	0.85	
+jamana	NOUN		An age, era or generation; times.	generation;era;age	time	P	ज़माना	base form,countable,inanimate	zamana	-	0.8	
+khomir	NOUN		Yeast; leaven used in bread.	yeast;leaven	food,religion	P	ख़मीर	base form,mass,inanimate		-	0.6	
+nogor	NOUN		Town or city.	town;city	places	A	নগৰ	base form,countable,inanimate	nagar	-	0.9	
+le	VERB		Take; short form of loi, used in the past as loise.	take;get	actions	H	ले	citation form	lo	-	0.5	doubtful: Hindi imperative, or fragment of loise
+pata	NOUN		Leaf.	leaf;leaves	nature	A	পাত	base form,countable,inanimate	paat	-	0.85	
+dimag	NOUN		Mind or brain.	mind;brain	body,feelings	P	दिमाग़	base form,countable,inanimate		-	0.85	
+nuksan	NOUN		Loss or damage.	loss;damage;harm	money,actions	P	नुक़सान	base form,mass,inanimate	nukhsan	-	0.85	
+kaan	NOUN		Ear.	ear	body	H	कान	base form,countable,inanimate	kan	-	0.85	
+julai	VERB		Having set fire to; to burn or kindle.	burn;kindle;set fire	actions	A	জ্বলোৱা	citation form	jolai	-	0.75	
+binti	NOUN	VERB=to plead (with kori)	A request or plea; with kori, to beg or petition.	plea;request;petition	actions,religion	H	बिनती	base form,countable,inanimate		-	0.85	
+jiba	NOUN		Tongue.	tongue	body	S	জিভা	base form,countable,inanimate	jibha	-	0.8	
+joborjosti	NOUN	ADV=forcibly	Force or compulsion; by force.	force;compulsion	actions	P	ज़बरदस्ती	base form,mass,inanimate	zabardasti	-	0.8	
+lalchi	ADJ		Greedy; wanting too much.	greedy;covetous	describing,feelings	H	लालची	base form		-	0.8	
+lathi	NOUN		Stick, rod or staff.	stick;rod;staff	home	H	लाठी	base form,countable,inanimate		-	0.85	
+ghanta	NOUN		Hour; also a bell.	hour;bell	time	H	घंटा	base form,countable,inanimate	ghonta	-	0.9	
+norom	ADJ	NOUN=gentleness	Soft, gentle, mild.	soft;gentle;mild	describing	A	নৰম	base form	narom	-	0.85	
+pohor	NOUN		Light or brightness; also a watch of the day.	light;brightness	nature,time	H	पहर	base form,mass,inanimate		-	0.5	doubtful: usually means a period of time
+hathiar	NOUN		Weapon or tool of war.	weapon;armor	actions	H	हथियार	base form,countable,inanimate	hatiyar	-	0.85	
+koisele	VERB		Past of koi: had said.	said;had said	actions	N	koisele	past	koisile	-	0.6	
+sahab	NOUN		Sir or master; a respectful title.	sir;master;mister	community	P	साहब	base form,countable,animate	saheb	-	0.85	
+mara	VERB	NOUN=a beating	To hit or kill; also a blow.	hit;kill;strike	actions	H	मारा	citation form	maara	-	0.8	
+bhijili	NOUN		Lightning.	lightning	weather	A	বিজুলী	base form,mass,inanimate	bijuli	-	0.85	
+chalis	NUM		Forty.	forty	numbers	H	चालीस	invariable		-	0.95	
+daal	NOUN		Branch of a tree.	branch	nature	H	डाल	base form,countable,inanimate	dal	-	0.8	
+ghusa	NOUN		Anger; with kori, to be angry.	anger;rage	feelings	H	ग़ुस्सा	base form,mass,inanimate	gussa	-	0.85	
+jal	NOUN		Net, fishing net.	net;fishing net	home,farming	A	জাল	base form,countable,inanimate		-	0.85	
+oliv	PROPN		Olive, as in the Mount of Olives.	olive	nature,religion	E	olive	invariable	olive	-	0.7	
+prokahit	NOUN		Revelation; something made known.	revelation;disclosure	religion	S	প্ৰকাশিত	base form,mass,inanimate	prokashit	-	0.6	doubtful: probably from prokash
+roikhya	NOUN		Protector; shepherd.	shepherd;protector	work,religion	S	ৰক্ষা	base form,countable,animate	rokhya	-	0.7	
+tinjon	NUM		Three people.	three people;three	numbers	N	tinjon	invariable		-	0.9	
+thanda	ADJ	NOUN=cold	Cold.	cold;cool	weather,describing	H	ठंडा	base form	thanta	-	0.9	
+chalak	ADJ		Clever, cunning.	clever;cunning;sly	describing	P	चालाक	base form		-	0.85	
+dhorom	NOUN		Religion or righteousness.	religion;faith	religion	S	ধৰ্ম	base form,mass,inanimate	dharam	-	0.85	
+kutta	NOUN		Dog.	dog	nature	H	कुत्ता	base form,countable,animate	kukur	-	0.8	
+guru	NOUN		Cattle or cow; also a teacher.	cattle;cow;ox	farming	A	গৰু	base form,countable,animate	goru	-	0.8	
+khuri	NOUN		Wood or firewood.	wood;firewood	nature,home	A	খৰি	base form,mass,inanimate	kuri	-	0.75	
+safar	NOUN	VERB=to travel (with kori)	Journey or trip.	journey;trip;travel	travel	P	सफ़र	base form,countable,inanimate		-	0.85	
+pans	NUM		Five.	five	numbers	H	पाँच	invariable	panch	-	0.7	doubtful: usual Nagamese form is pas or panch
+namila	VERB		Past of nami: asked or came down.	asked;came down	actions	N	namila	past		-	0.4	doubtful: unclear form
+boli	NOUN		Sacrifice or offering.	sacrifice;offering	religion	S	বলি	base form,countable,inanimate		-	0.85	
+bostu	NOUN		Thing, object, matter.	thing;object;matter	describing	S	বস্তু	base form,countable,inanimate	bastu	-	0.85	
+dhuwa	NOUN		Smoke.	smoke	nature	A	ধোৱা	base form,mass,inanimate	dhua	-	0.85	
+dosta	NUM		Ten of something; a group of ten.	ten	numbers	N	dosta	invariable		-	0.4	doubtful: probably dos plus ta
+hajira	NOUN		Daily wage; hired worker.	wage;hired worker	work,money	P	हाज़िरा	base form,countable,animate	hazira	-	0.6	
+hoija	VERB		Become; to turn into.	become;turn into	actions	A	হৈ যোৱা	citation form	hoi ja	-	0.6	doubtful: joined hoi ja
+kamra	NOUN		Room.	room	home	P	कमरा	base form,countable,inanimate		-	0.9	
+maha	ADJ		Great, chief; as in maha purohit.	great;chief;high	describing	S	महा	base form		-	0.7	
+nadikha	VERB		Not seen; unseen.	unseen;not seen	actions	N	nadikha	citation form		-	0.5	
+rabbi	PROPN		Rabbi, a Jewish teacher; Teacher.	rabbi;teacher	religion	BN	rabbi	invariable		-	0.8	
+uphar	NOUN		Gift or present.	gift;present	community	S	উপহাৰ	base form,countable,inanimate		-	0.85	
+bajar	NOUN		Market.	market;bazaar	places,money	P	बाज़ार	base form,countable,inanimate		-	0.95	
+tinta	NUM		Three; three items.	three	numbers	A	তিনিটা	invariable		-	0.9	
+khana	NOUN	VERB=to eat	Food or meal.	food;meal	food	H	खाना	base form,mass,inanimate		-	0.9	
+phojur	NOUN		Early morning.	morning;dawn	time	P	फ़ज्र	base form,countable,inanimate	fojor	-	0.75	
+baki	ADJ	NOUN=remainder|VERB=to owe	Remaining; left over; owed.	remaining;left;owed	describing,money	P	बाक़ी	base form		-	0.85	
+bagan	NOUN		Garden or orchard.	garden;orchard	farming,nature	A	বাগান	base form,countable,inanimate		-	0.9	
+oh	INTJ		Oh; cry of woe or surprise.	oh;alas	feelings	N	oh	invariable		-	0.6	
+bati	NOUN		Bowl or small dish.	bowl;cup	home,food	A	বাটি	base form,countable,inanimate		-	0.85	
+loha	NOUN		Iron.	iron;metal	nature	H	लोहा	base form,mass,inanimate		-	0.9	
+ajgar	NOUN		Large snake; dragon.	dragon;python	nature	P	अजगर	base form,countable,animate		-	0.75	
+bhetimul	NOUN		Foundation of a building.	foundation;base	home	A	ভেটিমূল	base form,countable,inanimate		-	0.7	
+choi	NUM		Six.	six	numbers	A	ছয়	invariable	chhoy,soy	-	0.8	
+chuma	NOUN	VERB=to kiss (with dibo)	A kiss; with dibo, to kiss.	kiss	feelings,actions	H	चूमा	base form,countable,inanimate		-	0.8	
+daruga	NOUN		Officer or guard.	officer;guard	civic,work	P	दारोग़ा	base form,countable,animate	daroga	-	0.75	
+dimoru	NOUN		Fig.	fig	food,nature	A	ডিমৰু	base form,countable,inanimate		-	0.85	
+morija	VERB		Having died; to die and be gone.	die;pass away	actions,health	A	মৰি যোৱা	citation form	mori ja	-	0.6	doubtful: joined mori ja
+prodhan	ADJ	NOUN=head	Chief, main.	chief;main;head	describing,civic	S	প্ৰধান	base form		-	0.85	
+sugandh	NOUN		Sweet smell; perfume.	fragrance;perfume	describing	S	সুগন্ধ	base form,mass,inanimate		-	0.8	
+thali	NOUN		Plate or platter.	plate;platter	home,food	H	थाली	base form,countable,inanimate		-	0.9	
+udhar	NOUN		Debt or loan; with dibo or lobo, to lend or borrow.	loan;debt;credit	money	H	उधार	base form,mass,inanimate		-	0.85	
+gorom	ADJ	NOUN=heat	Hot, warm.	hot;warm	weather,describing	A	গৰম	base form		-	0.9	
+bhasa	NOUN		Language.	language;speech	culture	S	ভাষা	base form,countable,inanimate		-	0.85	
+phul	NOUN		Flower.	flower	nature	A	ফুল	base form,countable,inanimate		-	0.95	
+gira	VERB		To fall.	fall;drop	actions	A	পৰা	citation form	gir	-	0.5	doubtful: usually gir or gira in sense of fall
+mojbut	ADJ		Strong, firm.	strong;firm	describing	P	मज़बूत	base form	mazbut	-	0.85	
+abiswasi	ADJ	NOUN=unbeliever	Unbelieving, faithless.	unbelieving;faithless	religion,describing	S	অবিশ্বাসী	base form		-	0.7	
+adar	NOUN		Respect or honor.	respect;honor	community,feelings	H	आदर	base form,mass,inanimate		-	0.85	
+darshan	NOUN		Vision, sight; seeing something holy.	vision;sight	religion	S	दर्शन	base form,countable,inanimate		-	0.7	
+hissi	VERB		To scatter or sow; ending of a verb.	sow;scatter	farming	N	hissi	citation form		-	0.3	doubtful: unclear form
+mata	VERB		To call or invite.	call;invite	actions	A	মতা	citation form		-	0.8	
+mukti	NOUN		Freedom or salvation.	freedom;salvation	religion	S	মুক্তি	base form,mass,inanimate		-	0.85	
+pyaas	NOUN		Thirst.	thirst	body,health	H	प्यास	base form,mass,inanimate	pyas	-	0.9	
+tukri	NOUN		Basket.	basket	home	H	टोकरी	base form,countable,inanimate		-	0.7	
+yogya	ADJ		Worthy, suitable.	worthy;suitable	describing	S	योग्य	base form		-	0.7	
+umor	NOUN		Age.	age;years	time	A	বয়স	base form,mass,inanimate		-	0.6	
+tukra	NOUN		Piece or bit.	piece;bit	describing	H	टुकड़ा	base form,countable,inanimate		-	0.85	
+apaste	ADV		Quietly, softly.	quietly;softly	describing	H	आहिस्ते	invariable	aste	-	0.5	
+asishit	ADJ		Blessed.	blessed	religion	S	आशीर्वाद	base form		-	0.7	
+buja	VERB		To understand.	understand;know	actions	A	বুজা	citation form		-	0.8	
+gadha	NOUN		Donkey.	donkey	nature,farming	H	गधा	base form,countable,animate		-	0.85	
+hilai	VERB		To shake or move.	shake;move	actions	A	হলোৱা	citation form		-	0.75	
+hunai	VERB		To tell or make hear.	tell;make hear	actions	A	শুনোৱা	citation form		-	0.8	
+jadu	NOUN		Magic or sorcery.	magic;sorcery	culture	P	जादू	base form,mass,inanimate		-	0.9	
+kopoti	NOUN		Hypocrite or deceiver.	hypocrite;deceiver	describing	S	কপটী	base form,countable,animate		-	0.7	
+layak	ADJ		Worthy, fit.	worthy;fit	describing	P	लायक़	base form		-	0.85	
+napuncha	VERB		Not reached; until not reaching.	not reach	actions	N	napuncha	past		-	0.6	
+saguli	NOUN		Goat.	goat	farming,nature	A	ছাগলী	base form,countable,animate	sagol,sagoli	-	0.8	
+shrap	NOUN		Curse.	curse	religion	S	शाप	base form,countable,inanimate		-	0.8	
+sristi	NOUN		Creation.	creation	religion	S	सृष्टि	base form,mass,inanimate		-	0.8	
+tisra	ADJ		Third.	third	numbers	H	तीसरा	base form		-	0.85	
+sapna	NOUN		Dream.	dream	feelings	H	सपना	base form,countable,inanimate		-	0.9	
+adat	NOUN		Habit or custom.	habit;custom	culture	P	आदत	base form,countable,inanimate		-	0.85	
+faisla	NOUN		Decision or judgment.	decision;judgment	civic	P	फ़ैसला	base form,countable,inanimate		-	0.85	
+nabhabi	VERB		Do not think.	do not think	actions	N	nabhabi	citation form		-	0.7	
+patha	VERB		To send.	send	actions	A	পঠোৱা	citation form		-	0.8	
+tita	ADJ	NOUN=bitterness	Bitter.	bitter	food,describing	A	তিতা	base form		-	0.9	
+chati	NOUN		Chest.	chest	body	H	छाती	base form,countable,inanimate		-	0.85	
+jimedari	NOUN		Responsibility.	responsibility	work	P	ज़िम्मेदारी	base form,mass,inanimate		-	0.85	
+adharmik	ADJ		Unrighteous.	unrighteous	religion	S	अधार्मिक	base form		-	0.7	
+baya	ADJ		Left.	left	describing	A	বাওঁ	base form		-	0.8	
+bharosa	NOUN		Trust.	trust	feelings	H	भरोसा	base form,mass,inanimate		-	0.85	
+dagi	NOUN		Stain or spot.	stain;spot	describing	P	दाग़	base form,countable,inanimate		-	0.7	
+dana	NOUN		Grain or seed.	grain;seed	farming	P	दाना	base form,countable,inanimate		-	0.8	
+dhora	VERB		To catch.	catch;hold	actions	A	ধৰা	citation form		-	0.85	
+eksoh	NUM		One hundred.	hundred	numbers	N	eksoh	invariable		-	0.7	
+ene	ADV		Like this; thus.	thus;like this	describing	A	এনে	invariable		-	0.7	
+ephale	ADV		Here and there.	here and there	describing	N	ephale	invariable		-	0.4	
+gondugol	NOUN		Noise and trouble.	noise;trouble	community	H	गड़बड़	base form,mass,inanimate	goldugol	-	0.7	
+kolsi	NOUN		Pot or jar.	pot;jar	home	A	কলহ	base form,countable,inanimate		-	0.85	
+luha	NOUN		Iron.	iron	nature	A	লোহা	base form,mass,inanimate	loha	-	0.7	
+nakoribole	VERB		Not to do.	not to do	actions	N	nakoribole	citation form		-	0.7	
+prosansa	NOUN		Praise.	praise	feelings	S	प्रशंसा	base form,mass,inanimate	prosongsa	-	0.8	
+sharir	NOUN		Body.	body	body	S	शरीर	base form,countable,inanimate		-	0.9	
+tombu	NOUN		Tent.	tent	home	H	तंबू	base form,countable,inanimate		-	0.8	
+uphale	ADV		Here and there; in various places (paired with ephale).	here and there;scattered	describing	N	uphale	invariable		-	0.4	doubtful: only seen paired with ephale
+tenehoile	CCONJ		So, then, therefore.	so;then;therefore	grammar	N	tenehoile	invariable	tinehoile	-	0.85	
+bhaat	NOUN		Cooked rice; a meal.	rice;meal	food	A	ভাত	base form,mass,inanimate	bhat	-	0.95	
+chand	NOUN		Moon.	moon	nature	H	चाँद	base form,countable,inanimate		-	0.9	
+anguli	NOUN		Finger.	finger	body	S	অঙ্গুলি	base form,countable,inanimate		-	0.8	
+sukhi	VERB		Having dried; to dry up or wither.	dry;wither	actions	A	শুকোৱা	citation form	sukai	-	0.75	
+jawab	NOUN	VERB=to answer (with dibo)	An answer; with dibo, to reply.	answer;reply	actions	P	जवाब	base form,countable,inanimate	jowab	-	0.9	
+sa	NOUN		Tea.	tea	food	A	চাহ	base form,mass,inanimate	cha	-	0.3	doubtful: unclear in this sentence, may be a typo for sab or sai
+bisna	NOUN		Bed.	bed	home	H	बिस्तर	base form,countable,inanimate	bichana	-	0.8	
+dukhiya	ADJ	NOUN=poor person	Poor, in need.	poor;needy;sad	describing,money	A	দুখীয়া	base form		-	0.85	
+kanda	VERB		To cry or weep.	cry;weep	feelings,actions	A	কান্দা	citation form		-	0.9	
+mez	NOUN		Table.	table	home	P	मेज़	base form,countable,inanimate		-	0.9	
+murga	NOUN		Rooster or chicken.	rooster;chicken	farming,nature	H	मुर्गा	base form,countable,animate		-	0.9	
+nahe	CCONJ		Until, or else; used in the sense of nohoile.	until;or else	grammar	N	nahe	invariable		-	0.4	doubtful: unclear form
+rokhiya	NOUN		Shepherd or guard.	shepherd;guard	work	S	ৰক্ষক	base form,countable,animate	roikhya	-	0.7	
+ses	NOUN		End.	end	time	S	শেষ	base form,countable,inanimate	sesh	-	0.9	
+stuti	NOUN		Praise or worship.	praise;worship	religion	S	स्तुति	base form,mass,inanimate		-	0.8	
+uttoradhikari	NOUN		Heir; one who inherits.	heir;successor	family,civic	S	उत्तराधिकारी	base form,countable,animate		-	0.7	
+bhat	NOUN		Rice; food.	rice;food	food	A	ভাত	base form,mass,inanimate	bhaat	-	0.9	
+dhormik	ADJ		Righteous; religious.	righteous;religious	religion,describing	S	ধাৰ্মিক	base form		-	0.8	
+sukha	ADJ		Dry.	dry	describing,weather	A	শুকান	base form		-	0.85	
+dhulai	VERB		To wash.	wash	actions,home	A	ধোৱা	citation form	dhuai	-	0.8	
+bhari	ADJ		Heavy.	heavy	describing	H	भारी	base form		-	0.9	
+hardi	NOUN		Bone.	bone	body	A	হাড়	base form,countable,inanimate	har	-	0.6	
+jaisele	VERB		Past of ja: had gone.	had gone	actions	N	jaisele	past	jaisile	-	0.7	
+alsi	ADJ		Lazy.	lazy	describing	A	আলসী	base form		-	0.9	
+dokait	NOUN		Robber or bandit.	robber;bandit	community	H	डकैत	base form,countable,animate	dakait	-	0.85	
+hijira	NOUN		Eunuch.	eunuch	community	H	हिजड़ा	base form,countable,animate		-	0.6	
+imandar	ADJ		Honest, faithful.	honest;faithful	describing	P	ईमानदार	base form		-	0.85	
+komor	NOUN		Waist.	waist	body	P	कमर	base form,countable,inanimate		-	0.85	
+majuli	NOUN		Island.	island	nature,places	A	মাজুলী	base form,countable,inanimate		-	0.5	doubtful: Assamese river island name
+mil	NOUN		Agreement or friendship; also a mile.	agreement;mile	community	H	मेल	base form,mass,inanimate		-	0.7	
+naap	NOUN	VERB=to measure (with kori)	Measure.	measure;size	describing	H	नाप	base form,countable,inanimate		-	0.8	
+nadiya	VERB		Not giving; without giving.	not giving	actions	N	nadiya	citation form		-	0.6	
+nahuna	VERB		Not hear.	not hear	actions	N	nahuna	citation form		-	0.6	
+namora	VERB		Not die; before dying.	not die	actions	N	namora	citation form		-	0.6	
+swekar	VERB		To accept (with kori).	accept;welcome	actions	S	स्वीकार	citation form		-	0.8	
+thoga	ADJ		Tall; also dumb.	tall	describing	A	ঠেঙা	base form		-	0.3	doubtful: unclear meaning
+utsah	NOUN		Encouragement or enthusiasm.	encouragement;enthusiasm	feelings	S	उत्साह	base form,mass,inanimate		-	0.8	
+dudh	NOUN		Milk.	milk	food	H	दूध	base form,mass,inanimate		-	0.95	
+howa	VERB		To become, to happen.	become;happen	actions	A	হোৱা	citation form	hoba	-	0.7	
+kagos	NOUN		Paper.	paper	education	P	काग़ज़	base form,countable,inanimate	kagaz	-	0.9	
+nimok	NOUN		Salt.	salt	food	P	नमक	base form,mass,inanimate	namak	-	0.9	
+lal	ADJ		Red.	red	colours	H	लाल	base form		-	0.95	
+daat	NOUN		Tooth.	tooth	body	H	दाँत	base form,countable,inanimate	dat	-	0.85	
+gola	NOUN		Neck or throat.	neck;throat	body	H	गला	base form,countable,inanimate		-	0.85	
+bagh	NOUN		Tiger.	tiger;lion	nature	H	बाघ	base form,countable,animate		-	0.85	
+dabai	VERB		To press or push down.	press;push	actions	H	दबाना	citation form		-	0.8	
+sath	NUM		Sixty.	sixty	numbers	H	साठ	invariable		-	0.8	
+juta	NOUN		Shoe.	shoe;sandal	clothing	H	जूता	base form,countable,inanimate		-	0.9	
+balu	NOUN		Sand.	sand	nature	A	বালি	base form,mass,inanimate	bali	-	0.8	
+apatti	NOUN		Objection or trouble.	objection;complaint	civic	H	आपत्ति	base form,countable,inanimate		-	0.8	
+ath	NUM		Eight.	eight	numbers	H	आठ	invariable		-	0.9	
+begoni	NOUN		Purple.	purple	colours	A	বেগুনীয়া	base form,mass,inanimate	beguni	-	0.7	
+bodla	NOUN		Change or exchange.	change;exchange	actions	H	बदला	base form,countable,inanimate		-	0.85	
+chipai	VERB		To squeeze or press.	squeeze;press	actions	H	चिपकाना	citation form		-	0.6	
+diwar	NOUN		Wall.	wall	home	P	दीवार	base form,countable,inanimate		-	0.9	
+dol	NOUN		Group or party.	group;party	community	H	दल	base form,countable,inanimate		-	0.8	
+gawah	NOUN		Witness.	witness	civic	P	गवाह	base form,countable,animate		-	0.85	
+hey	INTJ		Hey; used to call attention.	hey;oh	greetings	E	hey	invariable		-	0.7	
+huda	VERB		To ask.	ask	actions	A	সোধা	citation form	hudi	-	0.8	
+jivit	ADJ		Alive.	alive;living	health,describing	S	जीवित	base form		-	0.85	
+jothor	ADJ		Paralyzed; stiff.	paralyzed;stiff	health	A	জঠৰ	base form		-	0.5	
+kapi	VERB		To tremble or shake.	tremble;shake	body,actions	A	কঁপি	citation form		-	0.8	
+kona	NOUN		Corner or edge.	corner;edge	describing	H	कोना	base form,countable,inanimate		-	0.85	
+kumari	NOUN		Virgin; unmarried girl.	virgin;maiden	family	S	कुमारी	base form,countable,animate		-	0.7	
+monjur	ADJ		Allowed, approved.	approved;agreed	civic	P	मंज़ूर	base form		-	0.85	
+moti	NOUN		Pearl.	pearl	clothing	H	मोती	base form,countable,inanimate		-	0.8	
+nosto	NOUN		Ruin or waste.	ruin;waste	actions	S	नष्ट	base form,mass,inanimate		-	0.7	
+pindhai	VERB		To dress someone, make wear.	dress;make wear	clothing,actions	A	পিন্ধোৱা	citation form		-	0.8	
+purab	NOUN		East.	east	places	H	पूरब	base form,countable,inanimate		-	0.9	
+puwali	NOUN		Early morning.	dawn;morning	time	A	পুৱা	base form,countable,inanimate		-	0.4	doubtful: here appears as donkey colt in text
+rupai	VERB		To plant or sow.	plant;sow	farming	A	ৰোৱা	citation form		-	0.8	
+seing	NOUN		Horn.	horn	body,nature	L	seing	base form,countable,inanimate		-	0.6	
+shristi	NOUN		Creation; the world.	creation;world	religion	S	सृष्टि	base form,mass,inanimate	sristi	-	0.8	
+taiyari	NOUN		Preparation; with kori, to prepare.	preparation	actions	P	तैयारी	base form,mass,inanimate		-	0.85	
+hapta	NOUN		Week.	week	time	P	हफ़्ता	base form,countable,inanimate		-	0.9	
+kolom	NOUN	VERB=to graft	Pen; a cutting for grafting.	pen;graft	education,farming	P	क़लम	base form,countable,inanimate		-	0.8	
+kripa	NOUN		Grace or kindness.	grace;mercy	religion	S	कृपा	base form,mass,inanimate		-	0.8	
+goru	NOUN		Cow or cattle.	cow;cattle	farming	A	গৰু	base form,countable,animate	guru	-	0.85	
+raat	NOUN		Night.	night	time	H	रात	base form,countable,inanimate	rati	-	0.95	
+saas	NOUN		Breath.	breath	body	H	साँस	base form,mass,inanimate		-	0.85	
+ahisele	VERB		Past of ahi: had come.	had come	actions	N	ahisele	past	ahisile	-	0.7	
+bisara	NOUN		Judgment or search; also a judge.	judgment;search	civic	A	বিচাৰা	base form,mass,inanimate		-	0.5	
+duibar	ADV		Twice.	twice	numbers	A	দুবাৰ	invariable		-	0.9	
+chap	ADJ		Silent; in chup chap, quiet.	quiet;silent	describing	H	चुप	base form	chup	-	0.7	
+phati	VERB		To tear or burst.	tear;burst	actions	H	फटना	citation form		-	0.85	
+bajana	NOUN		Music or sound; instrument playing.	music;sound	leisure	H	बजाना	base form,mass,inanimate		-	0.7	
+chabuk	NOUN		Whip.	whip	home	P	चाबुक	base form,countable,inanimate		-	0.75	
+chatai	NOUN		Mat.	mat	home	H	चटाई	base form,countable,inanimate		-	0.85	
+chingi	VERB		To snatch.	snatch;seize	actions	H	छीनना	citation form		-	0.7	
+dakshin	NOUN		South.	south	places	S	दक्षिण	base form,countable,inanimate		-	0.85	
+dhura	NOUN		Dust or powder.	dust	nature	H	धूल	base form,mass,inanimate		-	0.4	doubtful: unclear meaning in text
+gehu	NOUN		Wheat.	wheat	food,farming	H	गेहूँ	base form,mass,inanimate		-	0.9	
+huru	ADJ		Narrow.	narrow	describing	A	চিকুণ	base form		-	0.6	
+khamba	NOUN		Pole or pillar.	pole;pillar	home	H	खंभा	base form,countable,inanimate		-	0.85	
+khyama	NOUN		Forgiveness.	forgiveness;pardon	religion,feelings	S	क्षमा	base form,mass,inanimate	kshama	-	0.85	
+kusto	NOUN		Leprosy; suffering.	leprosy;suffering	health	S	कुष्ठ	base form,mass,inanimate		-	0.7	
+latkai	VERB		To hang.	hang	actions	H	लटकाना	citation form		-	0.85	
+lengra	ADJ		Lame.	lame	health	A	লেঙ্গৰা	base form		-	0.85	
+loija	VERB		Having taken away; to take along.	take along	actions	N	loija	citation form	loi ja	-	0.6	
+milap	NOUN		Meeting or friendship.	meeting;friendship	community	H	मिलाप	base form,mass,inanimate		-	0.8	
+naja	VERB		Not go.	not go	actions	N	naja	citation form		-	0.7	
+pachas	NUM		Fifty.	fifty	numbers	H	पचास	invariable		-	0.95	
+porisorja	NOUN		Service or ministry.	service;ministry	work,religion	S	परिचर्या	base form,mass,inanimate		-	0.5	
+rugi	NOUN		Sick person; patient.	patient;sick person	health	H	रोगी	base form,countable,animate		-	0.85	
+sou	NUM		Hundred.	hundred	numbers	A	শ	invariable	so	-	0.85	
+tambu	NOUN		Tent.	tent	home	H	तंबू	base form,countable,inanimate	tombu	-	0.8	
+tulona	NOUN	VERB=to compare (with kori)	Comparison.	comparison	describing	S	তুলনা	base form,mass,inanimate		-	0.8	
+bukha	VERB		To count or understand.	count;understand	actions	N	bukha	citation form		-	0.3	doubtful: unclear form
+hati	VERB		To move away.	move away;remove	actions	H	हटना	citation form		-	0.8	
+de	VERB		Give; imperative of dibo.	give	actions	H	दे	citation form	dei	-	0.7	
+bikhai	VERB		Having sold; to sell.	sell	money,actions	A	বিক্ৰী	citation form		-	0.5	doubtful: unclear form
+pi	VERB		To drink.	drink	food,actions	H	पीना	citation form	pee	-	0.85	
+athens	PROPN		Athens, a city in Greece.	athens	places	BN	athens	invariable		-	0.85	
+kara	ADJ		Hard, strict.	hard;strict	describing	H	कड़ा	base form		-	0.85	
+puka	NOUN		Insect or worm.	insect;worm	nature	A	পোক	base form,countable,animate		-	0.85	
+nadile	SCONJ		If not given; unless.	unless	grammar	N	nadile	invariable		-	0.6	
+chaya	NOUN		Shadow or shade.	shadow;shade	nature	S	ছায়া	base form,countable,inanimate		-	0.85	
+anidise	VERB		Past of ani: brought.	brought	actions	N	anidise	past		-	0.6	
+bhar	NOUN		Load or burden.	load;burden	describing	H	भार	base form,countable,inanimate		-	0.85	
+boha	VERB		To sit.	sit	actions	A	বহা	citation form		-	0.85	
+bojaise	VERB		Past of bojai: played an instrument or sounded.	sounded;played	actions,leisure	N	bojaise	past		-	0.6	
+buddhiman	ADJ		Wise.	wise;clever	describing	S	बुद्धिमान	base form		-	0.85	
+deevat	NOUN		Lamp.	lamp	home	P	दवात	base form,countable,inanimate	dibat	-	0.3	doubtful: unclear source, perhaps from dibyo
+dubi	VERB		To sink or dive.	sink;dive;drown	actions	A	ডুবি	citation form		-	0.85	
+egaroh	NUM		Eleven.	eleven	numbers	H	ग्यारह	invariable		-	0.85	
+guna	NOUN		Times (multiplier); quality.	times;quality	numbers	S	गुण	base form,countable,inanimate		-	0.7	
+gunga	ADJ		Mute, dumb.	mute;dumb	health	H	गूँगा	base form		-	0.85	
+hashua	NOUN		Sickle.	sickle	farming	A	হাঁচুৱা	base form,countable,inanimate		-	0.4	doubtful: spelling unclear
+jonabi	VERB		Imperative of jonai: let know, greet.	greet;inform	actions	N	jonabi	imperative		-	0.6	
+kheda	VERB		To drive away or chase.	chase;drive away	actions	H	खदेड़ना	citation form		-	0.8	
+lalos	NOUN		Greed or desire.	greed;desire	feelings	H	लालच	base form,mass,inanimate	lalach	-	0.7	
+mila	VERB		To match, mix or meet.	match;mix	actions	H	मिलना	citation form		-	0.8	
+mohor	NOUN		Seal or stamp.	seal;stamp	civic	P	मुहर	base form,countable,inanimate		-	0.8	
+mussi	VERB		To wipe.	wipe	actions	H	पोंछना	citation form		-	0.4	doubtful: unclear spelling
+nabuje	VERB		Does not understand.	does not understand	actions	N	nabuje	negative		-	0.8	
+nagrik	NOUN		Citizen.	citizen	civic	S	नागरिक	base form,countable,animate		-	0.8	
+nakorikena	ADV		Without doing.	without doing	grammar	N	nakorikena	invariable		-	0.7	
+napa	VERB		Not find; not get.	not find	actions	N	napa	negative		-	0.7	
+paschim	NOUN		West.	west	places	S	पश्चिम	base form,countable,inanimate		-	0.85	
+phela	VERB		To throw or cast.	throw;cast	actions	H	फेंकना	citation form		-	0.85	
+pobitrota	NOUN		Holiness.	holiness	religion	S	पवित्रता	base form,mass,inanimate		-	0.8	
+puncha	VERB		To reach.	reach;arrive	travel,actions	A	পোৱা	citation form		-	0.7	
+shikor	NOUN		Root.	root	nature	A	শিপা	base form,countable,inanimate		-	0.75	
+sikka	NOUN		Coin.	coin	money	P	सिक्का	base form,countable,inanimate		-	0.85	
+thapor	NOUN		A slap or blow.	slap;blow	actions	H	थप्पड़	base form,countable,inanimate		-	0.8	
+ukil	NOUN		Lawyer.	lawyer	civic,work	P	वकील	base form,countable,animate		-	0.85	
+chabi	NOUN		Key.	key	home	H	चाबी	base form,countable,inanimate		-	0.9	
+tufan	NOUN		Storm.	storm	weather	P	तूफ़ान	base form,countable,inanimate		-	0.9	
+aste	ADV		Slowly, gently.	slowly;gently	describing	H	आहिस्ते	invariable		-	0.85	
+chini	VERB		To recognize.	recognize;know	actions	A	চিনি	citation form		-	0.85	
+gundh	NOUN		Smell or fragrance.	smell;fragrance	describing	H	गंध	base form,mass,inanimate		-	0.85	
+hasi	VERB		To laugh.	laugh	feelings,actions	A	হাঁহি	citation form		-	0.9	
+moila	ADJ		Dirty.	dirty	describing	H	मैला	base form		-	0.85	
+ajadi	NOUN		Freedom.	freedom	civic	P	आज़ादी	base form,mass,inanimate		-	0.85	
+bhanga	ADJ	VERB=to break	Broken.	broken	describing	A	ভঙা	base form		-	0.9	
+gusa	NOUN		Anger.	anger	feelings	H	ग़ुस्सा	base form,mass,inanimate	ghusa	-	0.85	
+adharmikta	NOUN		Unrighteousness.	unrighteousness;wickedness	religion	S	अधार्मिकता	base form,mass,inanimate		-	0.6	
+agya	NOUN		Order or command.	order;command	civic	S	आज्ञा	base form,countable,inanimate		-	0.8	
+ahijai	VERB		Subjunctive of ahi: may come (and be there).	come	actions	N	ahijai	citation form	ahi jai	-	0.6	doubtful: joined ahi ja
+alchi	NOUN		Neglect or laziness.	neglect;laziness	describing	A	আলসী	base form,mass,inanimate		-	0.4	doubtful: unclear form
+anond	NOUN		Joy or happiness.	joy;happiness	feelings	S	आनंद	base form,mass,inanimate	anondo	-	0.85	
+atta	NOUN		Wheat flour.	flour	food	H	आटा	base form,mass,inanimate	ata	-	0.9	
+baari	NOUN		Garden or field; also house compound.	garden;field	farming,home	A	বাৰী	base form,countable,inanimate	bari	-	0.85	
+ban	NOUN		Flood.	flood	weather,nature	H	बाढ़	base form,countable,inanimate		-	0.6	
+bhuka	ADJ		Hungry.	hungry	body,feelings	A	ভোকাতুৰ	base form	bhukha	-	0.9	
+choubees	NUM		Twenty-four.	twenty-four	numbers	H	चौबीस	invariable		-	0.9	
+choudah	NUM		Fourteen.	fourteen	numbers	H	चौदह	invariable		-	0.9	
+daba	NOUN		Box or container; also a pressing.	box;container	home	H	डब्बा	base form,countable,inanimate	dabba	-	0.5	
+dhan	NOUN		Wealth, or rice plant.	wealth;rice	money,farming	A	ধন	base form,mass,inanimate		-	0.8	
+hosanna	INTJ		Hosanna, a cry of praise.	hosanna	religion	BN	hosanna	invariable		-	0.8	
+namuna	NOUN		Example or sample.	example;sample	describing	P	नमूना	base form,countable,inanimate		-	0.9	
+nathakibole	VERB		Not to be; in order not to exist.	not to be	actions	N	nathakibole	citation form		-	0.7	
+niom	NOUN		Law or rule.	law;rule	civic	S	नियम	base form,countable,inanimate	niyom	-	0.7	
+nou	NUM		Nine.	nine	numbers	H	नौ	invariable	noy	-	0.8	
+peti	NOUN		Belt, box or case.	belt;box	clothing,home	H	पेटी	base form,countable,inanimate		-	0.8	
+pitol	NOUN		Brass.	brass	nature	H	पीतल	base form,mass,inanimate		-	0.85	
+protima	NOUN		Image or statue.	image;statue	religion	S	प्रतिमा	base form,countable,inanimate		-	0.8	
+puchur	NOUN		Tail.	tail	body	A	নেজ	base form,countable,inanimate		-	0.4	doubtful: unclear spelling
+pukhuri	NOUN		Pond.	pond;pool	nature	A	পুখুৰী	base form,countable,inanimate	pukhri	-	0.9	
+saat	VERB		To stay or spend time.	stay;spend	actions	N	saat	citation form		-	0.3	doubtful: unclear; may be saat meaning seven
+safai	NOUN		Cleaning, or defense.	cleaning;defense	home,actions	P	सफ़ाई	base form,mass,inanimate		-	0.85	
+samjai	VERB		To explain or advise.	explain;advise	actions	H	समझाना	citation form		-	0.85	
+sewkai	NOUN		Service.	service	work	A	সেৱা	base form,mass,inanimate		-	0.3	doubtful: unclear form
+sikha	VERB		To learn or teach.	learn;teach	education	A	শিকা	citation form	sikhai	-	0.8	
+sunsan	ADJ		Empty, deserted.	deserted;empty	describing,places	H	सुनसान	base form		-	0.85	
+tilla	NOUN		Hill.	hill;mound	nature,places	H	टीला	base form,countable,inanimate		-	0.8	
+uth	NOUN		Camel.	camel	nature	H	ऊँट	base form,countable,animate		-	0.85	
+uthijabo	VERB		Future of uthijai: will rise.	will rise	actions	N	uthijabo	future		-	0.7	
+utsov	NOUN		Festival.	festival	culture	S	उत्सव	base form,countable,inanimate	utsab	-	0.85	
+veranda	NOUN		Porch or veranda.	veranda;porch	home	E	veranda	base form,countable,inanimate		-	0.8	
+taka	NOUN		Money; rupee.	money;rupee	money	A	টকা	base form,countable,inanimate		-	0.95	
+asan	ADJ		Easy.	easy	describing	P	आसान	base form		-	0.9	
+dawai	NOUN		Medicine.	medicine	health	P	दवाई	base form,countable,inanimate	dawa	-	0.9	
+halka	ADJ		Light in weight.	light;mild	describing	H	हल्का	base form		-	0.9	
+jona	VERB		To tell or let know.	inform;greet	actions	A	জনোৱা	citation form	jonai	-	0.6	
+kala	ADJ		Black.	black	colours	H	काला	base form		-	0.95	
+alexander	PROPN		Alexander, a man's name.	alexander	family	BN	alexander	invariable		-	0.85	
+sorkari	ADJ		Official or governmental.	government;official	civic	P	सरकारी	base form		-	0.85	
+kharcha	NOUN	VERB=to spend (with kori)	Expense; with kori, to spend.	expense;cost	money	P	ख़र्चा	base form,mass,inanimate		-	0.9	
+kanun	NOUN		Law.	law	civic	P	क़ानून	base form,countable,inanimate		-	0.85	
+hara	ADJ		Green.	green	colours	H	हरा	base form		-	0.9	
+italy	PROPN		Italy.	italy	places	PN	italy	invariable		-	0.9	
+choli	VERB		To walk or continue.	walk;go on	actions	H	चलना	citation form		-	0.5	
+dhula	NOUN		Dust.	dust	nature	H	धूल	base form,mass,inanimate		-	0.8	
+boja	NOUN		Load or burden.	load;burden	describing	A	বোজা	base form,countable,inanimate		-	0.85	
+ana	VERB		To bring.	bring	actions	A	আনা	citation form	ani	-	0.8	
+toka	NOUN		Money; also a rupee coin.	money;coin	money	A	টকা	base form,countable,inanimate	taka	-	0.7	
+chenda	VERB		To cut or chop.	cut;chop	actions	A	ছেদা	citation form		-	0.3	doubtful: unclear meaning
+abhishek	NOUN		Anointing.	anointing	religion	S	अभिषेक	base form,mass,inanimate		-	0.6	
+adesh	NOUN		Order or command.	order;command	civic	S	आदेश	base form,countable,inanimate		-	0.8	
+akaal	NOUN		Famine.	famine	nature,community	H	अकाल	base form,countable,inanimate		-	0.85	
+alohi	NOUN		Stranger or guest.	stranger;guest	community	N	alohi	base form,countable,animate		-	0.3	doubtful: unclear form
+atmik	ADJ		Spiritual.	spiritual	religion	S	आत्मिक	base form		-	0.7	
+bahana	NOUN		Excuse.	excuse	describing	P	बहाना	base form,countable,inanimate		-	0.9	
+basuri	NOUN		Flute.	flute	leisure	H	बाँसुरी	base form,countable,inanimate	bansuri	-	0.85	
+bemari	NOUN		Sickness.	sickness;illness	health	P	बीमारी	base form,mass,inanimate	bimari	-	0.9	
+bhabisele	VERB		Past of bhabi: had thought.	had thought	actions	N	bhabisele	past	bhabisile	-	0.65	
+bhajan	NOUN		Hymn or devotional song.	hymn;psalm	religion,leisure	H	भजन	base form,countable,inanimate		-	0.85	
+bhichoo	NOUN		Scorpion.	scorpion	nature	H	बिच्छू	base form,countable,animate	bichhu	-	0.8	
+bhik	NOUN		Begging; alms.	begging;alms	money	H	भीख	base form,mass,inanimate	bhikh	-	0.85	
+bhirodhi	ADJ	NOUN=opponent	Opposed; an enemy.	opposed;enemy	civic,describing	S	विरोधी	base form		-	0.8	
+bichai	VERB		To spread out.	spread;lay out	actions	H	बिछाना	citation form		-	0.8	
+bohai	VERB		To seat someone.	seat;make sit	actions	A	বহোৱা	citation form		-	0.8	
+borkhon	NOUN		Rain.	rain	weather	A	বৰষুণ	base form,mass,inanimate	borsun	-	0.7	
+borop	NOUN		Snow or ice.	snow;ice	weather	H	बर्फ़	base form,mass,inanimate	baraf	-	0.85	
+borton	NOUN		Pot or vessel.	vessel;pot	home	H	बर्तन	base form,countable,inanimate		-	0.9	
+buka	NOUN		Mud.	mud	nature	A	বোকা	base form,mass,inanimate		-	0.8	
+bukhar	NOUN		Fever.	fever	health	H	बुखार	base form,mass,inanimate		-	0.95	
+choita	ADJ		Sixth.	sixth	numbers	A	ছয়ঠা	base form		-	0.6	
+dayalu	ADJ		Kind, merciful.	merciful;kind	describing,religion	H	दयालु	base form		-	0.85	
+dhormikta	NOUN		Righteousness.	righteousness	religion	S	धार्मिकता	base form,mass,inanimate		-	0.6	
+dukhia	ADJ		Poor, sad.	poor;sad	feelings,describing	A	দুখীয়া	base form	dukhiya	-	0.85	
+gushi	VERB		To sink or enter.	enter;sink	actions	H	घुसना	citation form	ghusi	-	0.7	
+haali	NOUN		Pouring; a filling.	pouring	actions	N	haali	base form,mass,inanimate		-	0.3	doubtful: unclear form
+hila	VERB		To shake.	shake	actions	A	হলা	citation form	hilai	Pahar hila ase.	0.5	doubtful: unclear form
+jaal	NOUN		Net.	net	home,farming	H	जाल	base form,countable,inanimate	jal	-	0.85	
+jesse	PROPN		Jesse, a man's name.	jesse	family	BN	jesse	invariable		-	0.85	
+kafi	ADJ	ADV=enough	Enough; sufficient.	enough;sufficient	describing	P	काफ़ी	base form		-	0.9	
+khata	VERB		To work or toil.	work;toil	work,actions	P	खटना	citation form		-	0.6	
+kuwa	VERB		To say or call.	say;call	actions	A	কোৱা	citation form		-	0.7	
+manna	PROPN		Manna, bread from heaven.	manna	food,religion	BN	manna	invariable		-	0.8	
+modhu	NOUN		Honey; also wine.	honey;wine	food	S	মধু	base form,mass,inanimate		-	0.8	
+nachina	ADJ		Unknown, stranger.	strange;unknown	describing	A	অচিনাকী	base form		-	0.6	
+nicodemus	PROPN		Nicodemus, a man's name.	nicodemus	family	BN	nicodemus	invariable		-	0.85	
+niyai	VERB		To take away.	take away	actions	N	niyai	citation form		-	0.4	doubtful: unclear form
+norok	NOUN		Hell.	hell	religion	S	নৰক	base form,countable,inanimate		-	0.85	
+opman	NOUN		Insult or dishonor.	insult;dishonor	feelings	S	অপমান	base form,mass,inanimate	apman	-	0.85	
+pakki	ADJ		Ripe, firm, sure.	ripe;firm	describing	H	पक्का	base form	pakka	-	0.8	
+peth	NOUN		Stomach.	stomach;belly	body	H	पेट	base form,countable,inanimate	pet	-	0.9	
+phatai	VERB		To tear.	tear	actions	H	फाड़ना	citation form		-	0.8	
+purdah	NOUN		Curtain or veil.	curtain;veil	home	P	पर्दा	base form,countable,inanimate	parda	-	0.85	
+puwa	NOUN		Morning.	morning	time	A	পুৱা	base form,countable,inanimate		-	0.4	doubtful: sentence suggests another meaning
+sewak	NOUN		Servant.	servant	work	S	सेवक	base form,countable,animate		-	0.8	
+sorso	NOUN		Mustard.	mustard	food,farming	H	सरसों	base form,mass,inanimate	sorisha	-	0.8	
+tenga	ADJ	NOUN=sour	Sour.	sour	food,describing	A	টেঙা	base form		-	0.85	
+thakilebi	VERB		If one stays, even if staying.	even if staying	actions	N	thakilebi	conditional		-	0.7	
+thogar	NOUN		Hit or stumble; a stumbling.	stumble;hit	actions	H	ठोकर	base form,countable,inanimate	thokor	-	0.5	
+thuk	NOUN		Spit; saliva.	spit;saliva	body	H	थूक	base form,mass,inanimate		-	0.8	
+trista	NUM		Thirty.	thirty	numbers	H	तीस	invariable	tis	-	0.5	doubtful: usual form is tis
+uri	VERB		To fly.	fly	actions,nature	A	উৰি	citation form		-	0.9	
+utcha	ADJ		High, tall.	high;tall	describing	H	ऊँचा	base form	untcha	-	0.8	
+uthija	VERB		Having risen; to get up and go.	rise;get up	actions	N	uthija	citation form	uthi ja	-	0.6	
+waris	NOUN		Heir.	heir	family	P	वारिस	base form,countable,animate		-	0.85	
+gari	NOUN		Vehicle or car.	vehicle;car	travel	H	गाड़ी	base form,countable,inanimate		-	0.95	
+shakti	NOUN		Power or strength.	power;strength	feelings	S	शक्ति	base form,mass,inanimate		-	0.85	
+murgi	NOUN		Hen.	hen;chicken	farming	H	मुर्गी	base form,countable,animate		-	0.9	
+kheli	VERB		Having played; to play.	play	leisure,actions	A	খেলি	citation form		-	0.8	
+judi	SCONJ		If.	if	grammar	H	जदि	invariable	jodi	-	0.6	
+hoisele	VERB		Past of hoi: had been.	had been	actions	N	hoisele	past	hoisile	-	0.7	
+sorkar	NOUN		Government.	government	civic	P	सरकार	base form,countable,inanimate		-	0.95	
+moja	NOUN		Fun or enjoyment.	fun;pleasure	feelings,leisure	P	मज़ा	base form,mass,inanimate	maja	-	0.9	
+porha	VERB		To read or study.	read;study	education	A	পঢ়া	citation form	porhai	-	0.9	
+khatra	NOUN		Danger.	danger;risk	describing	P	ख़तरा	base form,countable,inanimate		-	0.9	
+swadh	NOUN		Taste.	taste	food	S	स्वाद	base form,mass,inanimate	swad	-	0.85	
+mou	NOUN		Honey.	honey	food	A	মৌ	base form,mass,inanimate		-	0.85	
+phuli	VERB		To swell or puff up.	swell;puff up	actions	A	ফুলি	citation form		-	0.8	
+rani	NOUN		Queen.	queen	civic	H	रानी	base form,countable,animate		-	0.9	
+ujon	NOUN		Weight or measure.	weight	describing	P	वज़न	base form,mass,inanimate	wajan	-	0.4	doubtful: unclear form
+sida	ADJ	ADV=straight	Straight, upright.	straight;upright	describing	H	सीधा	base form		-	0.85	
+manga	VERB		To ask or beg for.	ask for;beg	actions	A	মাগা	citation form		-	0.8	
+sobhab	NOUN		Nature or habit.	nature;habit	describing	P	स्वभाव	base form,countable,inanimate		-	0.8	
+kendra	NOUN		Center.	center	places	S	केंद्र	base form,countable,inanimate		-	0.85	
+ahijabo	VERB		Future of ahijai: will come.	will come	actions	N	ahijabo	future		-	0.7	
+andhi	NOUN		Storm or strong wind.	storm;gale	weather	H	आँधी	base form,countable,inanimate		-	0.85	
+baja	VERB		To play a musical instrument.	play music;ring	leisure,actions	H	बजना	citation form		-	0.8	
+bhithor	ADV	NOUN=inside	Inside, within.	inside;within	places	A	ভিতৰ	invariable	bhitor	-	0.85	
+bosta	NOUN		Sack or cloth.	sack;bag	home,clothing	P	बोरा	base form,countable,inanimate		-	0.7	
+chapal	NOUN		Sandals or slippers.	sandals;slippers	clothing	H	चप्पल	base form,countable,inanimate		-	0.95	
+charpai	NOUN		Woven bed or cot.	cot;bed	home	H	चारपाई	base form,countable,inanimate		-	0.8	
+cholauta	NOUN		Leader or ruler.	leader;ruler	civic	H	चलानेवाला	base form,countable,animate		-	0.6	
+choutha	ADJ		Fourth.	fourth	numbers	H	चौथा	base form		-	0.85	
+chulah	NOUN		Stove or fireplace.	stove;hearth	home	H	चूल्हा	base form,countable,inanimate	chula	-	0.85	
+dath	NOUN		Tooth.	tooth	body	H	दाँत	base form,countable,inanimate	daat	-	0.7	
+denarius	NOUN		Denarius, a Roman coin.	denarius;coin	money	E	denarius	base form,countable,inanimate		-	0.6	
+devi	NOUN		Goddess.	goddess	religion	S	देवी	base form,countable,animate		Ta devi laga mondir ase.	0.8	
+dewar	NOUN		Wall.	wall	home	P	दीवार	base form,countable,inanimate	diwar	-	0.7	
+dhoinyo	ADJ		Blessed, happy.	blessed;happy	religion,feelings	S	धन्य	base form	dhonyo	-	0.75	
+dhoka	NOUN		Deceit or trick.	deceit;trick	describing	H	धोखा	base form,mass,inanimate		-	0.9	
+dhona	NOUN		Incense, resin.	incense	religion	H	धूना	base form,mass,inanimate	dhuna	-	0.6	
+doshi	ADJ		Guilty.	guilty	civic,describing	S	दोषी	base form		-	0.85	
+dushmani	NOUN		Enmity.	enmity;hostility	feelings	P	दुश्मनी	base form,mass,inanimate		Tai logot moi laga dushmani nai.	0.85	
+epaphras	PROPN		Epaphras, a man's name.	epaphras	family	BN	epaphras	invariable		-	0.85	

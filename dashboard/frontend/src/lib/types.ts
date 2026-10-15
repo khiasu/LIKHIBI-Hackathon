@@ -143,6 +143,7 @@ export interface DataHealth {
     exists: boolean;
     entries: number;
     glossed: number;
+    verified: number;
     pos_tagged: number;
     attested_in_corpus: number;
     etymology: Record<string, number>;

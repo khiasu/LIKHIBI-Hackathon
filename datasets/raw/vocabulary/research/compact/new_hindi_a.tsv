@@ -1,0 +1,607 @@
+bhabhi	NOUN		An elder brother's wife, a sister-in-law.	sister-in-law;elder brother's wife	family	H	भाभी	base form,countable,animate	bhabi	Bhabhi ye bhal khana banaise.	0.95	
+chacha	NOUN		A father's younger brother, an uncle.	uncle;father's younger brother	family	H	चाचा	base form,countable,animate	chaca	Chacha ghor te ase.	0.9	
+chachi	NOUN		An aunt, an uncle's wife.	aunt;uncle's wife	family	H	चाची	base form,countable,animate	chaci	Chachi ye moi ke bhat dise.	0.85	
+phupa	NOUN		A father's sister's husband, an uncle.	uncle;aunt's husband	family	H	फूफा	base form,countable,animate	phupha	Phupa ajir ahise.	0.6	
+phupi	NOUN		A father's sister, a paternal aunt.	paternal aunt;father's sister	family	H	फूफी	base form,countable,animate	phuphi	Phupi ye moi ke ladu dise.	0.55	
+mausi	NOUN		A mother's sister, a maternal aunt.	maternal aunt;mother's sister	family	H	मौसी	base form,countable,animate	mosi,mousi	Mausi Shillong pora ahise.	0.7	
+mausa	NOUN		A mother's sister's husband, a maternal uncle.	maternal uncle;uncle	family	H	मौसा	base form,countable,animate	mosa,mousa	Mausa ajir ghor te ase.	0.6	
+tau	NOUN		A father's elder brother, an elder uncle.	elder uncle;father's elder brother	family	H	ताऊ	base form,countable,animate	tao	Tau ye ghor banaise.	0.6	
+dadi	NOUN		A father's mother, a paternal grandmother.	grandmother;paternal grandmother	family	H	दादी	base form,countable,animate		Dadi ye moi ke golpo kohise.	0.8	
+patni	NOUN		A wife, a female spouse.	wife;spouse	family	H	पत्नी	base form,countable,animate	potni	Tar patni ghor te ase.	0.6	
+biwi	NOUN		A wife, a married woman.	wife	family	P	बीवी	base form,countable,animate	bibi,bivi	Tar biwi bhal manuh.	0.6	
+shauhar	NOUN		A husband, a word used more in formal or Urdu speech.	husband	family	P	शौहर	base form,countable,animate	shohor,shohar	Shauhar ghor te ase.	0.5	
+aurat	NOUN		A woman, a wife.	woman;wife	family	P	औरत	base form,countable,animate	aurot,orat	Aurat sobe khana banaise.	0.8	
+mard	NOUN		A man, a male person.	man;male	family	P	मर्द	base form,countable,animate	mordo	Mard ta ghor te ase.	0.6	
+larka	NOUN		A boy, a young male child.	boy	family	H	लड़का	base form,countable,animate	laraka,ladka	Larka ta khela khelise.	0.85	
+larki	NOUN		A girl, a young female child.	girl	family	H	लड़की	base form,countable,animate	laraki,ladki	Larki ta bhal gaan gaise.	0.85	
+bachcha	NOUN		A child, a small kid.	child;kid	family	H	बच्चा	base form,countable,animate	bacha,bachha	Bachcha ta kanise.	0.9	
+bhanja	NOUN		A sister's son, a nephew.	nephew	family	H	भांजा	base form,countable,animate	bhanjo	Bhanja ye moi ke dekhise.	0.5	
+bhanji	NOUN		A sister's daughter, a niece.	niece	family	H	भांजी	base form,countable,animate		Bhanji ye bhal padhise.	0.5	
+jija	NOUN		A sister's husband, a brother-in-law.	brother-in-law;sister's husband	family	H	जीजा	base form,countable,animate	jeeja,jiza	Jija ahise ghor te.	0.7	
+saali	NOUN		A wife's younger sister, a sister-in-law.	sister-in-law;wife's sister	family	H	साली	base form,countable,animate	sali	Saali ye moi ke gaali dise.	0.5	
+devar	NOUN		A husband's younger brother, a brother-in-law.	brother-in-law;husband's younger brother	family	H	देवर	base form,countable,animate	dewor,dewar	Devar ta bhal manuh.	0.4	
+nanad	NOUN		A husband's sister, a sister-in-law.	sister-in-law;husband's sister	family	H	ननद	base form,countable,animate	nonod	Nanad ye bhal manuh.	0.4	
+rishtedar	NOUN		A relative, a person from one's extended family.	relative;kin	family	P	रिश्तेदार	base form,countable,animate	rishtedaar,rishtedor	Tai moi laga rishtedar ase.	0.8	
+padosi	NOUN		A neighbour, a person who lives next door.	neighbour	community	H	पड़ोसी	base form,countable,animate	parosi,porosi	Padosi ye bhal manuh ase.	0.85	
+mehmaan	NOUN		A guest visiting a home.	guest;visitor	community	P	मेहमान	base form,countable,animate	mehman	Mehmaan ahise ghor te.	0.8	
+naukar	NOUN		A servant or domestic worker.	servant;worker	work	P	नौकर	base form,countable,animate	naukor	Tar naukar ta bhal manuh.	0.7	
+afsar	NOUN		An officer or senior official.	officer;official	civic	P	अफ़सर	base form,countable,animate	afsor	Afsar ye kaghoj dekhise.	0.6	
+chowkidar	NOUN		A watchman or guard.	watchman;guard	work	H	चौकीदार	base form,countable,animate	chowkidaar,choukidar	Chowkidar ye raat te jagise.	0.75	
+shikari	NOUN		A hunter who hunts animals.	hunter	work	P	शिकारी	base form,countable,animate	sikari	Shikari ye jungle te gaise.	0.6	
+mazdur	NOUN		A labourer, a day worker.	labourer;worker	work	P	मज़दूर	base form,countable,animate	mazdoor,majdur	Mazdur sobe kam kore.	0.7	
+bhikhari	NOUN		A beggar, a person who asks for money.	beggar	civic	H	भिखारी	base form,countable,animate	bhikari,bhikaari	Bhikhari ta rasta te ase.	0.7	
+pandit	NOUN		A learned Hindu teacher or priest.	priest;scholar;teacher	religion	H	पंडित	base form,countable,animate	pondit	Pandit ye puja kore.	0.6	
+maulvi	NOUN		A Muslim religious teacher.	Muslim teacher;cleric	religion	P	मौलवी	base form,countable,animate	moulvi,moulobi	Maulvi ye bayan dise.	0.6	
+imam	NOUN		The leader who leads the prayers in a mosque.	imam;prayer leader	religion	P	इमाम	base form,countable,animate	emam	Imam ye namaz porai.	0.6	
+dukandar	NOUN		A shopkeeper.	shopkeeper;trader	work	P	दुकानदार	base form,countable,animate	dukaandar,dokandar	Dukandar ye bhal jinis dise.	0.8	
+fauji	NOUN	ADJ=military	A soldier in the army.	soldier;army man	civic	P	फ़ौजी	base form,countable,animate	fouji	Tar bhai fauji ase.	0.6	
+sardar	NOUN		A chief or leader of a group.	chief;leader;head	civic	P	सरदार	base form,countable,animate	sordar	Sardar ye sobe ke bolise.	0.55	
+nawab	NOUN		A ruler or wealthy landowner of the Mughal period.	nawab;nobleman	culture	P	नवाब	base form,countable,animate	nowab	Nawab ar ghor bhal ase.	0.4	
+badshah	NOUN		An emperor or king.	emperor;king	culture	P	बादशाह	base form,countable,animate	badsha	Badshah ye raj kore.	0.5	
+hakim	NOUN		A ruler, or a traditional doctor.	ruler;physician	civic	P	हाकिम	base form,countable,animate	hakeem	Hakim ye dawai dise.	0.55	
+kaidi	NOUN		A prisoner held in jail.	prisoner;convict	civic	P	क़ैदी	base form,countable,animate	kaidhi	Kaidi ta jail te ase.	0.65	
+dhokebaaz	NOUN	ADJ=deceitful	A cheat or trickster.	cheat;trickster;fraud	slang	P	धोखेबाज़	base form,countable,animate	dhokebaz,dhokebaj	Tai bhal dhokebaaz nai.	0.6	
+ustad	NOUN		A master teacher, an expert in a craft.	master;teacher;expert	education	P	उस्ताद	base form,countable,animate	ustaad,ustaz	Ustad ye bhal gaan shikaise.	0.7	
+shagird	NOUN		A student or disciple of a teacher.	student;disciple;pupil	education	P	शागिर्द	base form,countable,animate	shagirad,sagird	Moi tar shagird hoi ase.	0.5	
+dulhan	NOUN		A bride, a newly married woman.	bride	culture	H	दुल्हन	base form,countable,animate	dulhon,dulhun	Dulhan ta bhal sajise.	0.8	
+dulha	NOUN		A bridegroom, a newly married man.	groom;bridegroom	culture	H	दूल्हा	base form,countable,animate	dulah	Dulha ahise.	0.8	
+dahej	NOUN		Dowry, the money or goods given at marriage.	dowry	culture	P	दहेज	base form,countable,inanimate	dohej	Dahej ta bisi lagise.	0.6	
+rishta	NOUN		A relationship, a marriage proposal or connection.	relationship;proposal;bond	community	P	रिश्ता	base form,countable,inanimate	rishtaa,rista	Tar sathe moi laga rishta ase.	0.7	
+dil	NOUN		The heart, the seat of feelings.	heart;mind	feelings	P	दिल	base form,countable,inanimate		Tar dil bisi bhal ase.	0.9	
+mehboob	NOUN		A beloved person, a sweetheart.	beloved;sweetheart	feelings	P	महबूब	base form,countable,animate	mehbub	Tai mor mehboob ase.	0.5	
+ashiq	NOUN		A lover, an admirer.	lover;admirer	feelings	P	आशिक़	base form,countable,animate	aashiq,asik	Tai ekta ashiq ase.	0.5	
+raaz	NOUN		A secret or a hidden matter.	secret;mystery	culture	P	राज़	base form,countable,inanimate	raz	Ei raaz kaonu ke nakobi.	0.6	
+kasam	NOUN		An oath or vow taken in the name of God.	oath;vow;swear	religion	P	क़सम	base form,countable,inanimate	kosom	Kasam, moi jani nai.	0.85	
+wada	NOUN		A promise or pledge.	promise;pledge;vow	community	P	वादा	base form,countable,inanimate	oda	Tumi wada korise, mone ase?	0.85	
+ishq	NOUN		Passionate love or romance.	love;passion;romance	feelings	P	इश्क़	base form,mass,inanimate	ishk	Tar ishq ta bisi.	0.6	
+mazaak	NOUN		A joke or a jest.	joke;jest;fun	leisure	P	मज़ाक़	base form,countable,inanimate	mojak,mazak	Mazaak nokoribi.	0.9	
+gappa	NOUN		Chat, gossip, a casual talk.	chat;gossip;chitchat	leisure,slang	H	गप्प	base form,countable,inanimate	gappo	Amikhan raatit gappa kore.	0.85	
+chugli	NOUN		Gossip, talking behind someone's back.	gossip;backbiting	slang	H	चुग़ली	base form,countable,inanimate	chugoli	Tai chugli kori ase.	0.6	
+nakhra	NOUN		Attitude, a tantrum, a show of pride or sulking.	tantrum;attitude;sulk	slang	H	नख़रा	base form,countable,inanimate	nokhra	Tar bisi nakhra ase.	0.7	
+gaali	NOUN		A curse, an abusive word.	curse;abuse;insult	slang	H	गाली	base form,countable,inanimate	gali	Tai moi ke gaali dise.	0.8	
+behen	NOUN		A sister, a female sibling.	sister	family	H	बहन	base form,countable,animate	bohen,bahen	Moi ar behen ghor te ase.	0.7	
+beta	NOUN		A son, a male child.	son;boy	family	H	बेटा	base form,countable,animate	bita	Tar beta bisi bhal ase.	0.85	
+beti	NOUN		A daughter, a female child.	daughter;girl	family	H	बेटी	base form,countable,animate	biti	Tar beti school jaise.	0.8	
+bahu	NOUN		A daughter-in-law, a son's wife.	daughter-in-law	family	H	बहू	base form,countable,animate	bohu,bou	Bahu ye bhal khana banaise.	0.75	
+damaad	NOUN		A son-in-law.	son-in-law	family	P	दामाद	base form,countable,animate	damad	Damaad ahise.	0.4	
+ammi	NOUN		Mother, a word used for mother.	mother;mum	family	P	अम्मी	base form,countable,animate	ammu	Ammi ye khana banaise.	0.5	
+khala	NOUN		A mother's sister, an aunt.	aunt;maternal aunt	family	P	ख़ाला	base form,countable,animate	khalaa,khola	Khala ghor te ase.	0.4	
+khalu	NOUN		A mother's brother, an uncle.	uncle;maternal uncle	family	P	ख़ालू	base form,countable,animate	khalo	Khalu ahise.	0.35	
+ghus	NOUN		A bribe, money given to get a favour.	bribe;graft	civic	H	घूस	base form,countable,inanimate	ghoos	Tai ghus khai ase.	0.7	
+rishwat	NOUN		A bribe.	bribe	civic	P	रिश्वत	base form,countable,inanimate	rishwot	Rishwat dile kam hoi.	0.7	
+chhutti	NOUN		A holiday or leave from work or school.	holiday;leave;break	work	H	छुट्टी	base form,countable,inanimate	chuti	Moi chhutti loise.	0.85	
+hadtaal	NOUN		A strike, a work stoppage.	strike;protest	civic	P	हड़ताल	base form,countable,inanimate	hartal,hortal	Aaji hadtaal ase.	0.6	
+faqir	NOUN		A Muslim ascetic, a holy beggar.	ascetic;mendicant	religion	P	फ़क़ीर	base form,countable,animate	fokir	Faqir ta rasta te ase.	0.5	
+pir	NOUN		A Sufi saint or holy man.	saint;holy man	religion	P	पीर	base form,countable,animate	peer	Pir ye dua dise.	0.45	
+bhaichara	NOUN		Brotherhood, harmony between communities.	brotherhood;harmony	community	H	भाईचारा	base form,mass,inanimate	bhaisara	Amar gaon te bhaichara ase.	0.6	
+dhaba	NOUN		A roadside food stall or small eatery.	roadside eatery;food stall	food	H	ढाबा	base form,countable,inanimate		Dhaba te chai khai ase.	0.8	
+maidan	NOUN		An open field or playground.	field;playground;ground	places	P	मैदान	base form,countable,inanimate	moidan	Lora maidan te khelise.	0.8	
+hamsafar	NOUN		A life partner or a travelling companion.	partner;companion	family	P	हमसफ़र	base form,countable,animate		Tai moi laga hamsafar hobo.	0.4	
+chamcha	NOUN		A flatterer, a yes-man who agrees with everything.	flatterer;yes-man	slang	H	चमचा	base form,countable,animate	chamach	Tai bisi chamcha ase.	0.6	
+tanaav	NOUN		Tension or stress between people or in a situation.	tension;stress	feelings	H	तनाव	base form,mass,inanimate	tonaw,tanav	Ghorot bisi tanaav ase.	0.7	
+sabzi	NOUN		A vegetable.	vegetable	food	P	सब्ज़ी	base form,countable,inanimate	sabji	Sabzi bhal ase.	0.9	
+gosht	NOUN		Meat, the flesh of an animal.	meat;flesh	food	P	गोश्त	base form,mass,inanimate	gosh	Ajir gosht khai ase.	0.85	
+kheema	NOUN		Minced meat cooked with spices.	minced meat	food	P	क़ीमा	base form,mass,inanimate	keema,kima	Kheema ta bisi bhal.	0.6	
+kebab	NOUN		Pieces of grilled or fried meat.	kebab;grilled meat	food	P	कबाब	base form,countable,inanimate	kabab	Kebab khai ase.	0.7	
+halwa	NOUN		A sweet dessert made from semolina or flour.	sweet;dessert	food	P	हलवा	base form,mass,inanimate	halua	Halwa banaise.	0.7	
+doodh	NOUN		Milk.	milk	food	H	दूध	base form,mass,inanimate	dudh,dud	Doodh khai ase?	0.9	
+makkhan	NOUN		Butter.	butter	food	H	मक्खन	base form,mass,inanimate	makhon,makhan	Makkhan roti te deise.	0.75	
+shakkar	NOUN		Sugar, a sweetener.	sugar	food	P	शक्कर	base form,mass,inanimate	sakkar,sokkor	Shakkar diya chai bhal.	0.75	
+lehsun	NOUN		Garlic.	garlic	food	H	लहसुन	base form,mass,inanimate	losun,lahsun	Lehsun diya khana bhal.	0.7	
+cheeni	NOUN		Sugar, the white granulated sweetener.	sugar	food	H	चीनी	base form,mass,inanimate	chini	Cheeni diya chai dile.	0.75	
+besan	NOUN		Gram flour made from chickpeas.	gram flour;chickpea flour	food	H	बेसन	base form,mass,inanimate	besen	Besan diya pakoda banaise.	0.7	
+sewai	NOUN		Thin vermicelli, usually eaten sweet.	vermicelli;noodles	food	H	सेवई	base form,mass,inanimate	shewai	Sewai khai ase.	0.5	
+kulfi	NOUN		A frozen dessert, like ice cream.	ice cream;kulfi	food	P	कुल्फ़ी	base form,countable,inanimate	kulphi	Kulfi bisi bhal.	0.7	
+jalebi	NOUN		A sweet fried spiral soaked in syrup.	sweet;jalebi	food	H	जलेबी	base form,countable,inanimate	jilapi,jilebi	Jalebi khai bhal lage.	0.7	
+samosa	NOUN		A fried pastry with a spiced filling.	samosa;pastry	food	P	समोसा	base form,countable,inanimate	samusa	Samosa khai ase.	0.8	
+pakoda	NOUN		A fried snack of vegetables in gram flour batter.	fritter;snack	food	H	पकौड़ा	base form,countable,inanimate	pakora,pokora	Pakoda ghar te banaise.	0.8	
+achaar	NOUN		Pickle, a spicy preserved relish.	pickle	food	P	अचार	base form,mass,inanimate	achar	Achaar bisi jhal.	0.8	
+sharbat	NOUN		A sweet cold drink.	cordial;sherbet	food	P	शर्बत	base form,mass,inanimate	sorbot,sarbat	Sharbat khai bhal lage.	0.6	
+ande	NOUN		Eggs, or an egg.	egg;eggs	food	H	अंडे	base form,countable,inanimate	anda,onda	Ande khai ase.	0.7	
+chhola	NOUN		Chickpeas, or a spiced chickpea curry.	chickpea;chickpeas	food	H	छोला	base form,mass,inanimate	chola	Chhola banaise.	0.5	
+rajma	NOUN		Kidney beans, or a bean curry.	kidney beans	food	H	राजमा	base form,mass,inanimate	rajmah	Rajma bhat khai ase.	0.6	
+kadhai	NOUN		A deep round iron cooking pan.	wok;pan	food	H	कड़ाही	base form,countable,inanimate	karai,kadai	Kadhai ta ghor te ase.	0.7	
+tawa	NOUN		A flat iron pan for baking rotis.	griddle;pan	food	H	तवा	base form,countable,inanimate	tava	Tawa te roti banaise.	0.7	
+degchi	NOUN		A small cooking pot.	pot;cooking pot	food	H	देगची	base form,countable,inanimate	degci	Degchi te bhat banaise.	0.5	
+katori	NOUN		A small bowl.	bowl;small bowl	food	H	कटोरी	base form,countable,inanimate	katuri	Katori te dal dise.	0.7	
+pyali	NOUN		A small cup for tea.	cup;small cup	food	P	प्याली	base form,countable,inanimate	piyali,piyala	Pyali te chai dile.	0.6	
+tarbooj	NOUN		A watermelon.	watermelon	food	P	तरबूज़	base form,countable,inanimate	tarbuj,torbuj	Tarbooj bisi mitha.	0.5	
+anaar	NOUN		A pomegranate.	pomegranate	food	P	अनार	base form,countable,inanimate	anar	Anaar khai ase.	0.6	
+angoor	NOUN		Grapes.	grape;grapes	food	P	अंगूर	base form,countable,inanimate	angur	Angoor bisi mitha.	0.6	
+sev	NOUN		An apple.	apple	food	P	सेब	base form,countable,inanimate	seb	Sev khai ase.	0.6	
+poori	NOUN		A deep-fried puffed bread.	puri;fried bread	food	H	पूरी	base form,countable,inanimate	puri	Poori banaise.	0.7	
+kachori	NOUN		A fried pastry filled with spiced lentils.	kachori;fried pastry	food	H	कचौरी	base form,countable,inanimate	kochuri,kochori	Kachori khai ase.	0.6	
+bhaji	NOUN		A vegetable fritter, or a vegetable dish.	vegetable dish;fritter	food	H	भाजी	base form,countable,inanimate	baji	Bhaji bisi bhal.	0.55	
+kheer	NOUN		Rice pudding sweetened with milk.	rice pudding;pudding	food	H	खीर	base form,mass,inanimate	khir	Kheer bisi bhal.	0.7	
+gajar	NOUN		A carrot.	carrot	food	P	गाजर	base form,countable,inanimate	gajor	Gajar khai ase.	0.65	
+mooli	NOUN		A radish.	radish	food	H	मूली	base form,countable,inanimate	muli	Mooli diya dal banaise.	0.5	
+baingan	NOUN		An aubergine, an eggplant.	aubergine;eggplant	food	P	बैंगन	base form,countable,inanimate	bengun,baigun	Baingan bhaja khai ase.	0.6	
+gobhi	NOUN		Cauliflower.	cauliflower	food	H	गोभी	base form,countable,inanimate	gobi	Gobhi bhaji bhal.	0.75	
+tamatar	NOUN		A tomato.	tomato	food	H	टमाटर	base form,countable,inanimate	tomatar,tamater	Tamatar diya dal banaise.	0.75	
+nimbu	NOUN		A lime or lemon.	lime;lemon	food	H	नींबू	base form,countable,inanimate	nimboo,nibu	Nimbu chai te dile bhal.	0.7	
+sooji	NOUN		Semolina, coarse wheat flour.	semolina	food	H	सूजी	base form,mass,inanimate	suji	Sooji diya halwa banaise.	0.5	
+bhutta	NOUN		Maize, or corn on the cob.	maize;corn	food	H	भुट्टा	base form,countable,inanimate	bhuta	Bhutta khai ase.	0.5	
+chhachh	NOUN		Buttermilk, thinned sour curd.	buttermilk	food	H	छाछ	base form,mass,inanimate	chach	Chhachh khai ase.	0.45	
+baadal	NOUN		A cloud.	cloud	nature	H	बादल	base form,countable,inanimate	badol,badal	Baadal ase aaji.	0.7	
+chhaon	NOUN		Shade, a shadow.	shade;shadow	nature	H	छाँव	base form,mass,inanimate	chao	Gos tole chhaon ase.	0.55	
+chaand	NOUN		The moon.	moon	nature	H	चाँद	base form,countable,inanimate	chand	Chaand ase aaji.	0.8	
+aasman	NOUN		The sky.	sky;heaven	nature	P	आसमान	base form,countable,inanimate	asman	Aasman nil ase.	0.7	
+samandar	NOUN		The sea, the ocean.	sea;ocean	nature	P	समंदर	base form,countable,inanimate	samundar,samudar	Samandar bisi bor.	0.5	
+toofaan	NOUN		A storm or cyclone.	storm;cyclone;gale	nature	P	तूफ़ान	base form,countable,inanimate	tufan,toofan	Toofaan ahise.	0.75	
+sailaab	NOUN		A flood, a strong rush of water.	flood;deluge	nature	P	सैलाब	base form,countable,inanimate	sailab,shailab	Sailaab ahise gaon te.	0.6	
+kichad	NOUN		Mud, slush.	mud;slush	nature	H	कीचड़	base form,mass,inanimate	kichor,kichar	Kichad bisi.	0.6	
+patthar	NOUN		A stone or a rock.	stone;rock	nature	H	पत्थर	base form,countable,inanimate	pothor,pathar	Patthar ta bhari.	0.75	
+ped	NOUN		A tree.	tree	nature	H	पेड़	base form,countable,inanimate	per	Ped ta bor ase.	0.6	
+patta	NOUN		A leaf.	leaf	nature	H	पत्ता	base form,countable,inanimate	pata	Patta bor ase.	0.6	
+jhaad	NOUN		A bush or shrub.	bush;shrub	nature	H	झाड़	base form,countable,inanimate	jhar	Jhaad te phool ase.	0.5	
+jangal	NOUN		A forest or jungle.	forest;jungle	places	H	जंगल	base form,countable,inanimate	jungol,jongol	Jangal bor ase.	0.8	
+ghaas	NOUN		Grass.	grass	nature	H	घास	base form,mass,inanimate	ghas	Ghaas bor ase.	0.7	
+bagicha	NOUN		A garden or orchard.	garden;orchard	places	P	बगीचा	base form,countable,inanimate	bagisa	Bagicha te phool ase.	0.6	
+fasal	NOUN		A crop, the harvest.	crop;harvest	farming	P	फ़सल	base form,countable,inanimate	fosol,fasol	Fasal bhal hoise.	0.8	
+paudha	NOUN		A plant or sapling.	plant;sapling	farming	H	पौधा	base form,countable,inanimate	poudha	Paudha ta boro hoise.	0.6	
+jaanwar	NOUN		An animal.	animal;beast	nature	P	जानवर	base form,countable,animate	janwar	Jaanwar ta jungle te ase.	0.7	
+machhli	NOUN		A fish.	fish	food	H	मछली	base form,countable,animate	machli	Machhli dhora.	0.7	
+bhains	NOUN		A buffalo.	buffalo	nature	H	भैंस	base form,countable,animate	bhais,bhoins	Bhains ta khet te ase.	0.7	
+chooha	NOUN		A rat or mouse.	rat;mouse	nature	H	चूहा	base form,countable,animate	chuha,sua	Chooha ghor te ase.	0.75	
+saap	NOUN		A snake.	snake	nature	H	साँप	base form,countable,animate	sap	Saap ta jungle te ase.	0.75	
+sher	NOUN		A tiger or a lion.	tiger;lion	nature	P	शेर	base form,countable,animate	xer	Sher jungle te ase.	0.6	
+bandar	NOUN		A monkey.	monkey	nature	H	बंदर	base form,countable,animate	bondor,bandor	Bandar gos te uthise.	0.75	
+haathi	NOUN		An elephant.	elephant	nature	H	हाथी	base form,countable,animate	hathi,hati	Haathi jungle te ase.	0.6	
+chidiya	NOUN		A bird.	bird;sparrow	nature	H	चिड़िया	base form,countable,animate	chiria,chirai	Chidiya gos te bosise.	0.7	
+tota	NOUN		A parrot.	parrot	nature	H	तोता	base form,countable,animate	toto	Tota bisi sundor.	0.5	
+kabootar	NOUN		A pigeon or dove.	pigeon;dove	nature	P	कबूतर	base form,countable,animate	kabutar,kabutor	Kabootar chhat te ase.	0.6	
+kauwa	NOUN		A crow.	crow	nature	H	कौवा	base form,countable,animate	kowa	Kauwa ahise.	0.6	
+machhar	NOUN		A mosquito.	mosquito	nature	H	मच्छर	base form,countable,animate	mosor,mosur	Machhar bisi ase raat te.	0.8	
+makkhi	NOUN		A house fly.	fly;house fly	nature	H	मक्खी	base form,countable,animate	makhi	Makkhi bisi ase.	0.7	
+chhipkali	NOUN		A lizard or gecko.	lizard;gecko	nature	H	छिपकली	base form,countable,animate	chipkoli,chipkali	Chhipkali deewar te ase.	0.6	
+bichchhu	NOUN		A scorpion.	scorpion	nature	H	बिच्छू	base form,countable,animate	bichhu,bichu	Bichchhu dangise.	0.55	
+keeda	NOUN		An insect, a worm or a bug.	insect;worm;bug	nature	H	कीड़ा	base form,countable,animate	kira	Keeda bisi.	0.6	
+mitti	NOUN		Soil, earth, clay.	soil;earth;clay	nature	H	मिट्टी	base form,mass,inanimate	mati	Mitti bisi bhal khet te.	0.7	
+lakdi	NOUN		Wood, or firewood.	wood;firewood	nature	H	लकड़ी	base form,mass,inanimate	lokori,lakri	Lakdi jala.	0.8	
+chaandi	NOUN		Silver.	silver	money	H	चाँदी	base form,mass,inanimate	chandi	Chaandi ta bhal.	0.7	
+lohaa	NOUN		Iron, or a metal.	iron;metal	money	H	लोहा	base form,mass,inanimate	loha	Lohaa bhari.	0.7	
+pahaar	NOUN		A mountain or a hill.	mountain;hill	places	H	पहाड़	base form,countable,inanimate	pahar	Pahaar te jao.	0.75	
+chehra	NOUN		A face.	face	body	P	चेहरा	base form,countable,inanimate	chahera	Chehra bisi sundor.	0.8	
+jigar	NOUN		The liver, or courage and spirit.	liver;courage	body	P	जिगर	base form,countable,inanimate	jigor	Tar jigar bisi.	0.5	
+sina	NOUN		The chest.	chest;breast	body	P	सीना	base form,countable,inanimate	xina	Sina te dard ase.	0.6	
+kamar	NOUN		The waist, or the lower back.	waist;lower back	body	P	कमर	base form,countable,inanimate	komor	Kamar te dard ase.	0.7	
+bukhaar	NOUN		A fever.	fever	health	P	बुखार	base form,mass,inanimate	bukhar,bokhar	Bukhaar ase.	0.85	
+dard	NOUN		Pain or an ache.	pain;ache	health	P	दर्द	base form,mass,inanimate	dord	Dard bisi.	0.85	
+khaansi	NOUN		A cough.	cough	health	H	खाँसी	base form,mass,inanimate	khasi,kashi	Khaansi ase.	0.7	
+zukaam	NOUN		A cold, a runny nose.	cold;common cold	health	P	ज़ुकाम	base form,mass,inanimate	jukam,zukam	Zukaam hoise.	0.75	
+garmi	NOUN		Heat, hot weather.	heat;hot weather	nature	P	गर्मी	base form,mass,inanimate	gormi	Bisi garmi ase.	0.85	
+bhookh	NOUN		Hunger.	hunger	body	H	भूख	base form,mass,inanimate	bhok	Bhookh lagise.	0.85	
+neend	NOUN		Sleep.	sleep	body	H	नींद	base form,mass,inanimate	nid,nind	Neend ahise.	0.8	
+ilaaj	NOUN		Treatment, a cure.	treatment;cure	health	P	इलाज	base form,mass,inanimate	ilaj	Ilaaj kori dise.	0.7	
+pasina	NOUN		Sweat.	sweat	body	P	पसीना	base form,mass,inanimate	poshina	Pasina bisi.	0.7	
+dast	NOUN		Loose motion, diarrhoea.	diarrhoea;loose motion	health	H	दस्त	base form,mass,inanimate		Tar dast hoise.	0.5	
+bimari	NOUN		An illness or disease.	illness;disease;sickness	health	P	बीमारी	base form,countable,inanimate	bimary,bemari	Bimari ase tar.	0.8	
+dawakhana	NOUN		A clinic or dispensary.	clinic;dispensary	health	P	दवाख़ाना	base form,countable,inanimate		Dawakhana te jao.	0.45	
+shareer	NOUN		The body.	body	body	P	शरीर	base form,countable,inanimate	sharir,sorir	Shareer bisi kamzor.	0.5	
+zakhm	NOUN		A wound or injury.	wound;injury	health	P	ज़ख़्म	base form,countable,inanimate	jokhom	Zakhm hoise.	0.6	
+khoon	NOUN		Blood.	blood	body	P	ख़ून	base form,mass,inanimate	khun,xun	Khoon bisi ase.	0.6	
+badan	NOUN		The body.	body	body	P	बदन	base form,countable,inanimate	bodon	Tar badan bisi bhal ase.	0.5	
+tabiyat	NOUN		Health, the condition of the body.	health;condition	health	P	तबीयत	base form,mass,inanimate	tobiyot	Tar tabiyat bhal nai.	0.7	
+dawa	NOUN		Medicine.	medicine	health	P	दवा	base form,countable,inanimate	dawai,dowa	Dawa khai.	0.85	
+subah	NOUN		Morning.	morning	time	P	सुबह	base form,mass,inanimate	subha,xubah	Subah subah uthise.	0.85	
+shaam	NOUN		Evening.	evening	time	P	शाम	base form,mass,inanimate	sham	Shaam te ahibi.	0.85	
+mahina	NOUN		A month.	month	time	H	महीना	base form,countable,inanimate	mohina	Ei mahina bisi garam.	0.75	
+tareekh	NOUN		A date.	date	time	P	तारीख़	base form,countable,inanimate	tarikh	Aaji tareekh kiman?	0.7	
+waqt	NOUN		Time, a moment.	time;moment	time	P	वक़्त	base form,mass,inanimate	wokhot	Waqt nai.	0.8	
+dopahar	NOUN		Afternoon, midday.	afternoon;midday	time	H	दोपहर	base form,mass,inanimate	dophor,dupohor	Dopahar te khana khai.	0.8	
+bachpan	NOUN		Childhood.	childhood	time	H	बचपन	base form,mass,inanimate	bochpon	Bachpan te moi bisi khelise.	0.6	
+budhapa	NOUN		Old age.	old age	time	H	बुढ़ापा	base form,mass,inanimate		Budhapa ahise.	0.5	
+umar	NOUN		Age, the number of years lived.	age;years	time	P	उम्र	base form,mass,inanimate	omor,umor	Tar umar kiman?	0.9	
+zamaana	NOUN		An era, a time period.	era;time;world	time	P	ज़माना	base form,countable,inanimate	zamana	Zamaana bisi bodle.	0.6	
+daur	NOUN		An era or period of time.	era;period	time	P	दौर	base form,countable,inanimate		Ei daur bisi bodle.	0.5	
+savera	NOUN		Early morning, dawn.	dawn;early morning	time	H	सवेरा	base form,mass,inanimate	sawera	Savera te uthibi.	0.6	
+lamhaa	NOUN		A moment, an instant.	moment;instant	time	P	लम्हा	base form,countable,inanimate	lomha	Ek lamhaa wait kor.	0.4	
+aaina	NOUN		A mirror.	mirror	home	P	आईना	base form,countable,inanimate	aina	Aaina ta bhangi gaise.	0.7	
+almari	NOUN		A cupboard or wardrobe.	cupboard;wardrobe	home	P	अलमारी	base form,countable,inanimate	almira	Almari te kitaab ase.	0.7	
+baksa	NOUN		A box or trunk.	box;trunk	home	H	बक्सा	base form,countable,inanimate	bokso	Baksa te kapda ase.	0.6	
+bandook	NOUN		A gun or a rifle.	gun;rifle	civic	P	बंदूक़	base form,countable,inanimate	bondok	Sipahi ar bandook ase.	0.6	
+batti	NOUN		A lamp, a light, or a wick.	light;lamp;wick	home	H	बत्ती	base form,countable,inanimate	bati	Batti jala.	0.7	
+bindi	NOUN		A small dot worn on the forehead.	dot;forehead mark	home	H	बिंदी	base form,countable,inanimate	bindee	Tar bindi bisi sundor.	0.7	
+burqa	NOUN		A full veil worn by some Muslim women.	veil;burqa	home	P	बुर्क़ा	base form,countable,inanimate	burka,borka	Tai burqa pindhise.	0.6	
+chaadar	NOUN		A sheet, a wrap, or a bed cover.	sheet;wrap	home	P	चादर	base form,countable,inanimate	chadar	Chaadar ta ghor te ase.	0.7	
+chashma	NOUN		Spectacles or glasses.	glasses;spectacles	home	P	चश्मा	base form,countable,inanimate	chasma	Chashma kot?	0.8	
+chhatri	NOUN		An umbrella.	umbrella	home	H	छतरी	base form,countable,inanimate	chatri	Chhatri lo, barish ase.	0.75	
+chhuri	NOUN		A knife.	knife	home	H	छुरी	base form,countable,inanimate	churi	Chhuri diya kat.	0.6	
+chiraag	NOUN		A lamp or a small oil light.	lamp;oil light	home	P	चिराग़	base form,countable,inanimate	chirag	Chiraag jala.	0.4	
+chitthi	NOUN		A letter or a note.	letter;note	home	H	चिट्ठी	base form,countable,inanimate	chithi	Chitthi ahise.	0.8	
+chudi	NOUN		A glass or metal bangle.	bangle	home	H	चूड़ी	base form,countable,inanimate	choodi	Tar chudi bisi sundor.	0.7	
+chappal	NOUN		A sandal or slipper.	sandal;slipper	home	H	चप्पल	base form,countable,inanimate	sepal,chapal	Chappal pindh.	0.8	
+dhaaga	NOUN		A thread or a string.	thread;string	home	H	धागा	base form,countable,inanimate	dhaga	Dhaaga lo.	0.6	
+dak	NOUN		Post, the mail service.	post;mail	home	H	डाक	base form,mass,inanimate		Dak ahise.	0.6	
+darwaza	NOUN		A door or gate.	door;gate	home	P	दरवाज़ा	base form,countable,inanimate	darwaja,dorwaja	Darwaza bondho kor.	0.85	
+deewar	NOUN		A wall.	wall	home	P	दीवार	base form,countable,inanimate	diwal,diwar	Deewar te chhobi ase.	0.75	
+dupatta	NOUN		A long scarf worn with a suit.	scarf;stole	clothing	H	दुपट्टा	base form,countable,inanimate	duppata	Dupatta ta bisi bhal.	0.6	
+gaadi	NOUN		A vehicle, a car or a train.	vehicle;car;train	home	H	गाड़ी	base form,countable,inanimate	gari	Gaadi ahise.	0.85	
+gaddi	NOUN		A cushion or a seat.	cushion;seat	home	H	गद्दी	base form,countable,inanimate	goddi	Gaddi te bosibo.	0.5	
+gahna	NOUN		Jewellery, ornaments.	jewellery;ornaments	clothing	H	गहना	base form,countable,inanimate	gehna,gohona	Gahna bisi sundor.	0.6	
+ghadi	NOUN		A watch or a clock.	watch;clock	home	H	घड़ी	base form,countable,inanimate	ghori	Ghadi te kot baje?	0.8	
+haar	NOUN		A necklace, or a garland.	necklace;garland	clothing	H	हार	base form,countable,inanimate	har	Haar bisi sundor.	0.6	
+jahaaz	NOUN		A ship, or an aeroplane.	ship;aeroplane	travel	P	जहाज़	base form,countable,inanimate	jahaj	Jahaaz ahise.	0.7	
+joota	NOUN		A shoe.	shoe	clothing	H	जूता	base form,countable,inanimate	juta,jute	Joota pindh.	0.8	
+jhoola	NOUN		A swing.	swing	leisure	H	झूला	base form,countable,inanimate	jhula	Jhoola te khelise.	0.6	
+kambal	NOUN		A blanket.	blanket	home	H	कंबल	base form,countable,inanimate	kombol,kambol	Kambal ta ghor te ase.	0.7	
+kangan	NOUN		A bracelet or bangle.	bracelet;bangle	clothing	H	कंगन	base form,countable,inanimate	kongon	Kangan bisi sundor.	0.5	
+kangi	NOUN		A comb.	comb	home	H	कंघी	base form,countable,inanimate	kanghi	Kangi ta kot?	0.5	
+kapda	NOUN		Cloth, or clothes.	cloth;clothes	clothing	H	कपड़ा	base form,mass,inanimate	kopra,kapra	Kapda dhua.	0.8	
+kaghaz	NOUN		Paper.	paper	home	P	काग़ज़	base form,mass,inanimate	kagoj,kagaz	Kaghaz ase?	0.7	
+kitaab	NOUN		A book.	book	education	P	किताब	base form,countable,inanimate	kitab,kitap	Kitaab porise.	0.85	
+khidki	NOUN		A window.	window	home	H	खिड़की	base form,countable,inanimate	khirki	Khidki khol.	0.75	
+kursi	NOUN		A chair.	chair	home	P	कुर्सी	base form,countable,inanimate		Kursi te bos.	0.8	
+kulhari	NOUN		An axe.	axe	home	H	कुल्हाड़ी	base form,countable,inanimate	kuthar	Kulhari diya kat.	0.5	
+lungi	NOUN		A sarong or wrap-around cloth worn on the waist.	sarong;lungi	clothing	H	लुंगी	base form,countable,inanimate	lunghi	Lungi pindhise.	0.6	
+mombatti	NOUN		A candle, or an incense stick.	candle;incense stick	home	H	मोमबत्ती	base form,countable,inanimate	mombati	Mombatti jala.	0.6	
+palang	NOUN		A bed or a cot.	bed;cot	home	H	पलंग	base form,countable,inanimate	palong	Palang te suise.	0.6	
+parda	NOUN		A curtain.	curtain	home	P	पर्दा	base form,countable,inanimate	porda	Parda lagao.	0.7	
+pinjra	NOUN		A cage.	cage	home	H	पिंजरा	base form,countable,inanimate	pinjora	Chidiya pinjra te ase.	0.5	
+rassi	NOUN		A rope.	rope	home	H	रस्सी	base form,countable,inanimate	rosi,rasi	Rassi diya bandh.	0.6	
+rumaal	NOUN		A handkerchief or a cloth.	handkerchief	clothing	P	रूमाल	base form,countable,inanimate	rumal	Rumaal ta lo.	0.5	
+saamaan	NOUN		Goods, luggage, belongings.	goods;luggage;belongings	home	H	सामान	base form,mass,inanimate	samaan	Saamaan loi ahise.	0.8	
+saaz	NOUN		A musical instrument.	instrument	leisure	P	साज़	base form,countable,inanimate	saj	Saaz bajaise.	0.4	
+sherwani	NOUN		A long formal coat worn at weddings.	coat;formal wear	clothing	P	शेरवानी	base form,countable,inanimate	shervani	Sherwani pindhi dulha ahise.	0.4	
+sui	NOUN		A needle.	needle	home	H	सुई	base form,countable,inanimate	shui	Sui diya kap.	0.6	
+takiya	NOUN		A pillow.	pillow	home	P	तकिया	base form,countable,inanimate	tokiya,takia	Takiya te matha de.	0.7	
+tamancha	NOUN		A pistol.	pistol	civic	P	तमंचा	base form,countable,inanimate	tomancha	Tamancha lukai ase.	0.4	
+tarazu	NOUN		A weighing scale or balance.	scale;balance	home	P	तराज़ू	base form,countable,inanimate	taraju	Tarazu te tul.	0.5	
+tauliya	NOUN		A towel.	towel	home	H	तौलिया	base form,countable,inanimate	toliya	Tauliya diya muh mol.	0.6	
+thaila	NOUN		A bag or a sack.	bag;sack	home	H	थैला	base form,countable,inanimate	thela	Thaila lo.	0.7	
+zanjeer	NOUN		A chain or a shackle.	chain;shackle	home	P	ज़ंजीर	base form,countable,inanimate	zonjir,zanjir	Zanjeer diya bandh.	0.5	
+angoothi	NOUN		A ring.	ring	clothing	H	अंगूठी	base form,countable,inanimate	angothi	Angoothi bisi sundor.	0.6	
+paijama	NOUN		Loose trousers, pyjamas.	pyjamas;trousers	clothing	P	पायजामा	base form,countable,inanimate	pajama,pajoma	Paijama pindh.	0.7	
+payal	NOUN		An anklet.	anklet	clothing	H	पायल	base form,countable,inanimate	payol	Payal bisi sundor.	0.6	
+jang	NOUN		A war or a battle.	war;battle	civic	P	जंग	base form,countable,inanimate	jong,jung	Jang hoise.	0.6	
+fauj	NOUN		An army.	army	civic	P	फ़ौज	base form,countable,inanimate	fouj,foj	Fauj ahise.	0.7	
+tabla	NOUN		A pair of small hand drums.	drum	leisure	P	तबला	base form,countable,inanimate	tobla	Tabla bajao.	0.5	
+dhol	NOUN		A large drum played with the hands.	drum	leisure	H	ढोल	base form,countable,inanimate		Dhol bajaise.	0.7	
+ahmiyat	NOUN		Importance, significance.	importance;significance	culture	P	अहमियत	base form,mass,inanimate	ahemiyot	Ei kotha ar bisi ahmiyat ase.	0.6	
+zaroorat	NOUN		A need, a necessity.	need;necessity	civic	P	ज़रूरत	base form,countable,inanimate	zorurot,jorurot	Moi tar zaroorat ase.	0.85	
+nuqsaan	NOUN		A loss, harm or damage.	loss;harm;damage	civic	P	नुक़सान	base form,mass,inanimate	nuksan,nokhsan	Bisi nuqsaan hoise.	0.8	
+khayal	NOUN		A thought, an idea.	thought;idea	feelings	P	ख़याल	base form,countable,inanimate	khyal	Tar khayal ta bhal nai.	0.7	
+imtehan	NOUN		An exam or a test.	exam;test	education	P	इम्तिहान	base form,countable,inanimate	imtihan,emtihan	Kal imtehan ase.	0.85	
+naseehat	NOUN		Advice, counsel.	advice;counsel	community	P	नसीहत	base form,countable,inanimate	nasihat	Tar naseehat sun.	0.6	
+sabak	NOUN		A lesson, a moral.	lesson;moral	education	P	सबक़	base form,countable,inanimate	sobok	Ei ghotona te sabak ase.	0.6	
+padhai	NOUN		Studies, education, reading.	studies;education;reading	education	H	पढ़ाई	base form,mass,inanimate	porai,podhai	Padhai bisi mushkil ase.	0.85	
+tareef	NOUN		Praise or a compliment.	praise;compliment	feelings	P	तारीफ़	base form,countable,inanimate	tarif	Tar tareef kori ase.	0.7	
+shikayat	NOUN		A complaint or grievance.	complaint;grievance	civic	P	शिकायत	base form,countable,inanimate	sikayat,xikayot	Tar shikayat nai.	0.7	
+jhagda	NOUN		A quarrel or a fight.	quarrel;fight;dispute	community	H	झगड़ा	base form,countable,inanimate	jhogra,jhogda	Jhagda nokoribi.	0.85	
+ladai	NOUN		A fight, a battle, a struggle.	fight;battle;struggle	community	H	लड़ाई	base form,countable,inanimate	lorai	Dui jon manuh ladai kore.	0.7	
+sazaa	NOUN		A punishment or a sentence.	punishment;sentence	civic	P	सज़ा	base form,countable,inanimate	saza,shaza	Tar sazaa hoise.	0.7	
+inaam	NOUN		A reward or a prize.	reward;prize	community	P	इनाम	base form,countable,inanimate	inam	Tai inaam paise.	0.7	
+kamaal	NOUN		A marvel or a wonder.	marvel;wonder	feelings	P	कमाल	base form,mass,inanimate	kamal,komal	Tar kamaal ase.	0.8	
+himmat	NOUN		Courage, boldness.	courage;boldness	feelings	P	हिम्मत	base form,mass,inanimate	himmot,himot	Tar himmat bisi.	0.8	
+shaq	NOUN		A hobby, a fondness or passion.	hobby;fondness	leisure	P	शौक़	base form,countable,inanimate	shauk,shok	Gaan gaan kora tar shaq.	0.7	
+shararat	NOUN		Mischief, naughtiness.	mischief;naughtiness	community	P	शरारत	base form,countable,inanimate	sharart	Shararat nokoribi.	0.6	
+sharm	NOUN		Shame, embarrassment.	shame;embarrassment	feelings	P	शर्म	base form,mass,inanimate	sorom	Tor sharm nai?	0.7	
+izzat	NOUN		Honour, respect, dignity.	honour;respect;dignity	feelings	P	इज़्ज़त	base form,mass,inanimate	ijjat,izzot	Izzat rakhibi.	0.9	
+fikar	NOUN		Worry, concern.	worry;concern	feelings	P	फ़िक्र	base form,mass,inanimate	fikir	Fikar nokoribi.	0.7	
+umeed	NOUN		Hope, expectation.	hope;expectation	feelings	P	उम्मीद	base form,countable,inanimate	ummid,umid	Umeed ase.	0.75	
+taqdeer	NOUN		Fate, destiny.	fate;destiny	religion	P	तक़दीर	base form,countable,inanimate	takdir,taqdir	Taqdeer te lekha ase.	0.5	
+dua	NOUN		A prayer or supplication.	prayer;supplication	religion	P	दुआ	base form,countable,inanimate	dowa	Dua kor.	0.8	
+ibaadat	NOUN		Worship, prayer.	worship;prayer	religion	P	इबादत	base form,mass,inanimate	ibadat	Ibaadat kori ase.	0.5	
+jannat	NOUN		Paradise, heaven.	paradise;heaven	religion	P	जन्नत	base form,countable,inanimate	jonnot	Jannat bisi sundor.	0.5	
+dozakh	NOUN		Hell.	hell	religion	P	दोज़ख़	base form,countable,inanimate	dojokh	Dozakh te jabi.	0.4	
+gunaah	NOUN		A sin, a wrong.	sin;wrong	religion	P	गुनाह	base form,countable,inanimate	gunah,gunaho	Gunaah nokoribi.	0.6	
+sawaab	NOUN		Merit, a good deed.	merit;good deed	religion	P	सवाब	base form,countable,inanimate	sawab	Sawaab ase.	0.4	
+imaan	NOUN		Faith, belief, integrity.	faith;belief;integrity	religion	P	ईमान	base form,mass,inanimate	iman	Tar imaan ase.	0.5	
+eid	NOUN		The Eid festival.	Eid festival	religion	P	ईद	base form,countable,inanimate	id,eed	Eid ahise.	0.8	
+ramzan	NOUN		Ramadan, the month of fasting.	Ramadan	religion	P	रमज़ान	base form,countable,inanimate	ramadan,romjan	Ramzan ahise.	0.8	
+roza	NOUN		A fast, fasting.	fast;fasting	religion	P	रोज़ा	base form,countable,inanimate	roja	Roza rakhise.	0.7	
+namaaz	NOUN		Prayer, namaz.	prayer;namaz	religion	P	नमाज़	base form,countable,inanimate	namaz,namaj	Namaaz porise.	0.8	
+fariyaad	NOUN		A complaint or a plea.	complaint;plea	civic	P	फ़रियाद	base form,countable,inanimate	foriyad	Fariyaad korise.	0.5	
+mehfil	NOUN		A gathering or a party.	gathering;party	leisure	P	महफ़िल	base form,countable,inanimate	mohofil	Mehfil bisi bhal.	0.6	
+jashn	NOUN		A celebration, a festival.	celebration;festival	culture	P	जश्न	base form,countable,inanimate	joshn,jeshn	Jashn hobo.	0.5	
+afwaah	NOUN		A rumour.	rumour	slang	P	अफ़वाह	base form,countable,inanimate	afwa	Afwaah suna.	0.5	
+bahaana	NOUN		An excuse or a pretext.	excuse;pretext	community	H	बहाना	base form,countable,inanimate	bahana	Bahaana nokoribi.	0.7	
+kahaani	NOUN		A story or a tale.	story;tale	culture	H	कहानी	base form,countable,inanimate	kohani,kahini	Kahaani shuno.	0.7	
+daulat	NOUN		Wealth, riches.	wealth;riches	money	P	दौलत	base form,mass,inanimate	dowlot	Tar bisi daulat ase.	0.5	
+qarz	NOUN		A debt or a loan.	debt;loan	money	P	क़र्ज़	base form,countable,inanimate	karz,korz	Qarz ase.	0.6	
+mehnat	NOUN		Hard work, labour.	hard work;labour	work	P	मेहनत	base form,mass,inanimate	mehnot,mehanot	Mehnat bisi.	0.85	
+naukri	NOUN		A job or employment.	job;employment	work	P	नौकरी	base form,countable,inanimate	naukari,naukori	Naukri pai ase.	0.85	
+tankhwah	NOUN		A salary or pay.	salary;pay	money	P	तनख़्वाह	base form,countable,inanimate	tonkha,tankha	Tankhwah kiman?	0.5	
+kirayaa	NOUN		Rent or fare.	rent;fare	money	P	किराया	base form,mass,inanimate	kiraya	Kirayaa kiman?	0.5	
+hisaab	NOUN		An account, a calculation.	account;calculation	money	P	हिसाब	base form,mass,inanimate	hisab	Hisaab kori dile.	0.6	
+dhandha	NOUN		Business, trade.	business;trade	work	H	धंधा	base form,mass,inanimate	dhonda	Tar dhandha bhal.	0.6	
+adalat	NOUN		A court of law.	court	civic	P	अदालत	base form,countable,inanimate	adalot,odalot	Adalat te jabo.	0.7	
+qanoon	NOUN		A law.	law	civic	P	क़ानून	base form,countable,inanimate	kanun,kanoon	Qanoon manibi.	0.8	
+jurmaana	NOUN		A fine or a penalty.	fine;penalty	civic	P	जुर्माना	base form,countable,inanimate	jormana	Jurmaana diye.	0.5	
+ghulam	NOUN		A slave or a servant.	slave;servant	civic	P	ग़ुलाम	base form,countable,animate	gulam	Ghulam hobi nai.	0.5	
+mazhab	NOUN		Religion, faith.	religion;faith	religion	P	मज़हब	base form,countable,inanimate	mojhob,mozhab	Mazhab ek.	0.5	
+tyohaar	NOUN		A festival.	festival	culture	H	त्योहार	base form,countable,inanimate	tyohar,toihar	Tyohaar ahise.	0.7	
+mohalla	NOUN		A neighbourhood or locality.	neighbourhood;locality	places	P	मोहल्ला	base form,countable,inanimate	mohollo	Mohalla te bisi manuh ase.	0.8	
+shehar	NOUN		A city or a town.	city;town	places	P	शहर	base form,countable,inanimate	sohor,shohor	Shehar te jabo.	0.85	
+sadak	NOUN		A road or street.	road;street	places	H	सड़क	base form,countable,inanimate	sarok,sorok	Sadak bisi bhal.	0.8	
+chowk	NOUN		A crossroads or a square.	crossroads;square	places	H	चौक	base form,countable,inanimate	chouk,choke	Chowk te bhetise.	0.7	
+chauraha	NOUN		A crossroads.	crossroads	places	H	चौराहा	base form,countable,inanimate	chouraha	Chauraha te ruk.	0.5	
+pul	NOUN		A bridge.	bridge	places	H	पुल	base form,countable,inanimate	pool	Pul pora jabo.	0.7	
+kinara	NOUN		A bank, an edge or a shore.	bank;edge;shore	places	P	किनारा	base form,countable,inanimate	kinar	Nodir kinara te.	0.5	
+sarai	NOUN		An inn or rest house for travellers.	inn;rest house	places	P	सराय	base form,countable,inanimate	saray	Sarai te thakise.	0.4	
+aangan	NOUN		A courtyard, the open space in front of a house.	courtyard	home	H	आँगन	base form,countable,inanimate	angon,angan	Aangan te khela.	0.6	
+chhat	NOUN		A roof or a terrace.	roof;terrace	home	H	छत	base form,countable,inanimate	chat	Chhat te uthise.	0.7	
+dukaan	NOUN		A shop.	shop;store	work	P	दुकान	base form,countable,inanimate	dokan,dokaan	Dukaan te jabo.	0.85	
+daftar	NOUN		An office.	office	work	P	दफ़्तर	base form,countable,inanimate	daftor	Daftar te ase.	0.7	
+madarsa	NOUN		An Islamic religious school.	Islamic school	education	P	मदरसा	base form,countable,inanimate	madrasa,modrasa	Madarsa te porise.	0.6	
+maktab	NOUN		A school or an Islamic religious school.	school;office	education	P	मकतब	base form,countable,inanimate	maktob	Maktab te jabo.	0.4	
+dargah	NOUN		A shrine of a Sufi saint.	shrine	religion	P	दरगाह	base form,countable,inanimate	dorgah	Dargah te gaise.	0.45	
+qabristan	NOUN		A graveyard, a cemetery.	graveyard;cemetery	religion	P	क़ब्रिस्तान	base form,countable,inanimate	kobristan,kabristan	Qabristan te gaise.	0.4	
+kabr	NOUN		A grave or a tomb.	grave;tomb	religion	P	क़ब्र	base form,countable,inanimate	kobor	Kabr te phul dile.	0.5	
+thana	NOUN		A police station.	police station	civic	H	थाना	base form,countable,inanimate	thona	Thana te jabo.	0.85	
+aabadi	NOUN		Population, an inhabited area.	population;settlement	civic	P	आबादी	base form,countable,inanimate	abadi	Ei gaon ar aabadi bisi.	0.5	
+bakwas	NOUN		Nonsense, rubbish.	nonsense;rubbish	slang	P	बकवास	base form,mass,inanimate	bokwas	Ei bakwas bondho kor.	0.9	
+chakkar	NOUN		Trouble, a whirl, a bother.	trouble;whirl;bother	slang	H	चक्कर	base form,countable,inanimate	chokkor	Ei chakkar bisi.	0.7	
+dhamaal	NOUN		Uproar, a riot, or great fun.	uproar;riot;fun	slang	H	धमाल	base form,countable,inanimate	dhamal	Bisi dhamaal hoise.	0.6	
+ghapla	NOUN		A scam, a fraud, a mess-up.	scam;fraud;mess	slang	H	घपला	base form,countable,inanimate	ghotala	Ghapla hoise.	0.6	
+gadbad	NOUN		A mess, confusion.	mess;confusion	slang	H	गड़बड़	base form,mass,inanimate	gorbor	Gadbad hoise.	0.7	
+ghamand	NOUN		Pride, arrogance.	pride;arrogance	feelings	H	घमंड	base form,mass,inanimate	gomond	Tar bisi ghamand ase.	0.7	
+ulloo	NOUN		An owl, or a fool.	owl;fool	nature	H	उल्लू	base form,countable,animate	ullu	Tai ulloo ase.	0.6	
+jhooth	NOUN		A lie, a falsehood.	lie;falsehood	feelings	H	झूठ	base form,mass,inanimate	jhut	Jhooth nokoribi.	0.7	
+shaitaan	NOUN		A devil, or a mischievous person.	devil;mischief-maker	religion	P	शैतान	base form,countable,animate	saitan,shoitan	Tai bisi shaitaan.	0.6	
+bewakoof	NOUN		A fool, an idiot.	fool;idiot	slang	P	बेवकूफ़	base form,countable,animate	bewkuf	Tai bisi bewakoof.	0.7	
+dhokha	NOUN		Deception, a trick or betrayal.	deception;trick	feelings	H	धोखा	base form,countable,inanimate	dhoka	Tai dhokha dise.	0.75	
+bhaari	ADJ		Heavy, serious, or important.	heavy;serious	describing	H	भारी	base form	bhari	Ei bag bhaari.	0.8	
+bechain	ADJ		Restless, uneasy.	restless;uneasy	feelings	P	बेचैन	base form	bechen	Moi bechain ase.	0.6	
+behtar	ADJ	ADV=better	Better, more good.	better	describing	P	बेहतर	base form	behtor,behter	Ei kotha behtar.	0.8	
+beimaan	ADJ		Dishonest, untrustworthy.	dishonest	feelings	P	बेईमान	base form	beiman	Tai beimaan ase.	0.7	
+bekhabar	ADJ		Unaware, uninformed.	unaware;uninformed	describing	P	बेख़बर	base form	bekhobor	Moi bekhabar ase.	0.5	
+bewafa	ADJ		Unfaithful, disloyal.	unfaithful;disloyal	feelings	P	बेवफ़ा	base form	bewafaa	Tai bisi bewafa.	0.7	
+wafadar	ADJ		Loyal, faithful.	loyal;faithful	feelings	P	वफ़ादार	base form	wofadar	Kukur ta bisi wafadar.	0.6	
+gehra	ADJ		Deep.	deep	describing	H	गहरा	base form	gohra	Pukhuri gehra ase.	0.6	
+ghatiya	ADJ		Low quality, inferior.	low quality;inferior	describing	H	घटिया	base form	ghotiya	Ei jinis bisi ghatiya.	0.7	
+gulabi	ADJ		Pink.	pink	colours	P	गुलाबी	base form	golabi	Tar kapor gulabi.	0.7	
+hoshiyaar	ADJ		Clever, smart, alert.	clever;smart;alert	describing	P	होशियार	base form	hoshiar,hoshyar	Tai bisi hoshiyaar.	0.8	
+ajab	ADJ		Strange, surprising.	strange;surprising	describing	P	अजब	base form	ajob	Ajab kotha.	0.5	
+ajeeb	ADJ		Strange, odd, unusual.	strange;odd	describing	P	अजीब	base form	ajib	Ei kotha bisi ajeeb.	0.8	
+aalsi	ADJ		Lazy.	lazy	describing	P	आलसी	base form	alsi	Tai bisi aalsi.	0.8	
+aasan	ADJ		Easy.	easy	describing	P	आसान	base form	asan,asaan	Ei kam aasan.	0.85	
+badmaash	ADJ		Mischievous, a rascal.	rascal;mischievous	describing	P	बदमाश	base form	badmas	Tai badmaash.	0.7	
+bhoora	ADJ		Brown.	brown	colours	H	भूरा	base form	bhura	Bhoora rong.	0.6	
+baaqi	ADJ		Remaining, the rest.	remaining;rest	describing	P	बाक़ी	base form	baki	Baaqi kotha kal.	0.6	
+khoobsoorat	ADJ		Beautiful, pretty.	beautiful;pretty	describing	P	ख़ूबसूरत	base form	khubsurat,khubsurot	Tai bisi khoobsoorat.	0.85	
+mazedar	ADJ		Tasty, enjoyable, fun.	tasty;enjoyable;fun	describing	P	मज़ेदार	base form	mojedar,mezedar	Khana bisi mazedar.	0.7	
+mehenga	ADJ		Expensive, costly.	expensive;costly	describing	H	महँगा	base form	mahanga,moinga	Ei jinis bisi mehenga.	0.85	
+sasta	ADJ		Cheap, inexpensive.	cheap	describing	H	सस्ता	base form	shosta,sosta	Ei jinis sasta.	0.85	
+mashhoor	ADJ		Famous, well-known.	famous	describing	P	मशहूर	base form	moshhur,moshur	Ei manuh bisi mashhoor.	0.6	
+adhura	ADJ		Incomplete, unfinished.	incomplete;unfinished	describing	H	अधूरा	base form	odhura	Kam adhura ase.	0.6	
+khaali	ADJ		Empty, vacant.	empty;vacant	describing	P	ख़ाली	base form	khali	Bottle khaali ase.	0.8	
+taza	ADJ		Fresh, new.	fresh;new	describing	P	ताज़ा	base form	taja,toja	Taza machh bisi bhal.	0.8	
+baasi	ADJ		Stale, not fresh.	stale	food	H	बासी	base form	basi	Roti baasi hoise.	0.7	
+kachcha	ADJ		Raw, unripe, temporary.	raw;unripe;temporary	describing	H	कच्चा	base form	kacha	Kachcha ghor ase.	0.6	
+nanga	ADJ		Naked, bare.	naked;bare	describing	H	नंगा	base form	nonga	Tai nanga.	0.5	
+sarkari	ADJ		Government, official.	government;official	civic	P	सरकारी	base form	sorkari	Sarkari chakri.	0.7	
+mehfooz	ADJ		Safe, secure.	safe;secure	describing	P	महफ़ूज़	base form	mohfuz,mehfuz	Ghor mehfooz.	0.6	
+mohtaaj	ADJ		Needy, dependent.	needy;dependent	describing	P	मोहताज	base form	mohtaj	Tai ekjon mohtaaj.	0.4	
+mazboor	ADJ		Helpless, forced by circumstance.	helpless;forced	feelings	P	मजबूर	base form	majboor,mojbur	Tai bisi mazboor ase.	0.6	
+chhota	ADJ		Small, short.	small;short	describing	H	छोटा	base form	chota,sota	Ghor chhota.	0.8	
+gandaa	ADJ		Dirty, filthy.	dirty;filthy	describing	H	गंदा	base form	gonda,gondo	Rasta gandaa ase.	0.7	
+geela	ADJ		Wet, damp.	wet;damp	describing	H	गीला	base form	gila	Kapda geela ase.	0.6	
+neela	ADJ		Blue.	blue	colours	H	नीला	base form	nila	Aasman neela ase.	0.7	
+laal	ADJ		Red.	red	colours	H	लाल	base form	lal	Tor kapor laal.	0.8	
+peela	ADJ		Yellow.	yellow	colours	H	पीला	base form	pila	Phool peela ase.	0.7	
+kaala	ADJ		Black.	black	colours	H	काला	base form	kala,kola	Kaala bilai.	0.8	
+safed	ADJ		White.	white	colours	P	सफ़ेद	base form	shofed	Kapda safed.	0.8	
+baingani	ADJ		Purple, violet.	purple;violet	colours	H	बैंगनी	base form	baigoni	Baingani rong.	0.4	
+rangeen	ADJ		Colourful, bright.	colourful;bright	colours	P	रंगीन	base form	rongin,rangin	Ei kapor bisi rangeen.	0.6	
+mast	ADJ		Cool, fun, great, or happy.	cool;fun;great	slang	P	मस्त	base form	most	Ei gaan bisi mast.	0.9	
+khafa	ADJ		Annoyed, upset with someone.	annoyed;upset	feelings	P	ख़फ़ा	base form	khofa	Tai moi laga khafa.	0.7	
+naraz	ADJ		Angry, displeased.	angry;displeased	feelings	P	नाराज़	base form	narajh,naraj	Tai naraz ase.	0.8	
+hairaan	ADJ		Surprised, astonished.	surprised;astonished	feelings	P	हैरान	base form	hairan	Moi hairaan hoise.	0.7	
+dukhi	ADJ		Sad, sorrowful.	sad;sorrowful	feelings	H	दुखी	base form		Tai dukhi ase.	0.7	
+pyara	ADJ		Dear, lovely, sweet.	dear;lovely;sweet	feelings	H	प्यारा	base form	piyara	Tar bachcha bisi pyara.	0.85	
+khatta	ADJ		Sour.	sour	food	H	खट्टा	base form	khotta	Ei tenga bisi khatta.	0.7	
+meetha	ADJ		Sweet.	sweet	food	H	मीठा	base form	mitha	Ei jalebi bisi meetha.	0.8	
+teekha	ADJ		Spicy, sharp, hot.	spicy;sharp	food	H	तीखा	base form	tikha	Mirchi bisi teekha.	0.7	
+kadwa	ADJ		Bitter.	bitter	food	H	कड़वा	base form	kodwa	Ei dawa bisi kadwa.	0.6	
+namkeen	ADJ		Salty.	salty	food	P	नमकीन	base form	namkin,nomkin	Khana namkeen hoise.	0.7	
+chatpata	ADJ		Tangy and spicy.	tangy;spicy	food	H	चटपटा	base form	chotpota	Chaat bisi chatpata.	0.7	
+sakht	ADJ		Hard, strict, tough.	hard;strict;tough	describing	P	सख़्त	base form	sokht,shokht	Baap bisi sakht.	0.7	
+unchaa	ADJ		High, tall.	high;tall	describing	H	ऊँचा	base form	unchu,oncha	Pahaar bisi unchaa.	0.6	
+saada	ADJ		Plain, simple.	plain;simple	describing	H	सादा	base form	sada	Khana saada.	0.6	
+tedha	ADJ		Crooked, bent, tricky.	crooked;bent;tricky	describing	H	टेढ़ा	base form	tera	Rasta tedha.	0.6	
+sachcha	ADJ		True, honest, sincere.	true;honest;sincere	feelings	H	सच्चा	base form	sacha	Tai bisi sachcha manuh.	0.6	
+jhoota	ADJ		False, lying.	false;lying	feelings	H	झूठा	base form	juta	Tai jhoota.	0.5	
+kharab	ADJ		Bad, spoiled, broken.	bad;spoiled;broken	describing	P	ख़राब	base form	kharap,xarap	Ghor kharab hoise.	0.9	
+kanjoos	ADJ		Stingy, mean with money.	stingy;mean	feelings	P	कंजूस	base form	konjus,kanjus	Tai bisi kanjoos.	0.75	
+tang	ADJ		Irritated, annoyed, fed up.	annoyed;irritated	feelings	H	तंग	base form	tong	Moi bisi tang.	0.6	
+khatam	ADJ		Finished, over, ended.	finished;over	describing	P	ख़त्म	base form	khotom	Kam khatam hoise.	0.85	
+aakhri	ADJ		Last, final.	last;final	describing	P	आख़िरी	base form	akhri	Aakhri din ase.	0.6	
+pehla	ADJ		First.	first	describing	H	पहला	base form	pohla	Tar pehla kam.	0.7	
+doosra	ADJ		Second, other.	second;other	describing	H	दूसरा	base form	dusra	Doosra manuh.	0.6	
+agla	ADJ		Next, following.	next;following	describing	H	अगला	base form	ogla	Agla din.	0.6	
+pichhla	ADJ		Previous, last.	previous;last	describing	H	पिछला	base form	pisla	Pichhla bochor.	0.5	
+zaroori	ADJ		Necessary, important.	necessary;important	describing	P	ज़रूरी	base form	zoruri,joruri	Ei kam zaroori.	0.85	
+lazmi	ADJ		Compulsory, obligatory.	compulsory;obligatory	describing	P	लाज़मी	base form	lajmi	Lazmi kam.	0.4	
+mumkin	ADJ		Possible, perhaps.	possible;maybe	describing	P	मुमकिन	base form	momkin	Mumkin nai.	0.7	
+jhakaas	ADJ		Excellent, great.	excellent;great	slang	H	झकास	base form	jhakas	Ei gaan jhakaas.	0.6	
+zabardast	ADJ		Excellent, superb, powerful.	excellent;superb	slang	P	ज़बरदस्त	base form	jobordost	Ei khana zabardast.	0.8	
+shandaar	ADJ		Magnificent, excellent.	magnificent;excellent	slang	P	शानदार	base form	shandar	Ei kaam shandaar.	0.7	
+lajawaab	ADJ		Matchless, superb.	matchless;superb	slang	P	लाजवाब	base form	lajwab	Khana lajawaab.	0.7	
+khatarnak	ADJ		Dangerous, risky.	dangerous;risky	slang	P	ख़तरनाक	base form	khotornak	Ei rasta khatarnak.	0.7	
+nalayak	ADJ		Good-for-nothing, useless.	good-for-nothing;useless	slang	P	नालायक़	base form	nalaik	Tai nalayak.	0.6	
+shareef	ADJ		Decent, gentle, well-mannered.	decent;gentle	feelings	P	शरीफ़	base form	sharif	Tai bisi shareef manuh.	0.6	
+imaandaar	ADJ		Honest, trustworthy.	honest;trustworthy	feelings	P	ईमानदार	base form	imandar	Tai imaandaar.	0.8	
+samajhdaar	ADJ		Wise, understanding.	wise;understanding	feelings	P	समझदार	base form	somjhdar	Tai bisi samajhdaar.	0.6	
+naasamajh	ADJ		Foolish, without understanding.	foolish;stupid	feelings	H	नासमझ	base form	nasomjh	Tai naasamajh.	0.5	
+taqatwar	ADJ		Strong, powerful.	strong;powerful	describing	P	ताक़तवर	base form	taqatbor	Tai bisi taqatwar.	0.6	
+chalaak	ADJ		Clever, cunning, sharp.	clever;cunning;sharp	describing	P	चालाक	base form	chalak	Tai bisi chalaak.	0.7	
+akhbar	NOUN		A newspaper.	newspaper	media	P	अख़बार	base form,countable,inanimate	akhbaar,okhbar	Akhbar ta padh.	0.8	
+aankh	NOUN		An eye.	eye	body	H	आँख	base form,countable,inanimate	ankh,akh	Tar aankh bisi bhal ase.	0.6	
+aaraam	NOUN		Rest, comfort, relaxation.	rest;comfort;relaxation	feelings	P	आराम	base form,mass,inanimate	aram	Ektu aaraam kor.	0.8	
+awaaz	NOUN		A voice or a sound.	voice;sound	describing	P	आवाज़	base form,countable,inanimate	awaj,awaz	Tar awaaz bisi mitha.	0.8	
+badbu	NOUN		A bad smell, a stink.	bad smell;stink	describing	H	बदबू	base form,mass,inanimate	bodbu,badboo	Ei jaga te badbu ase.	0.6	
+badhai	NOUN		Congratulations.	congratulations	community	H	बधाई	base form,countable,inanimate	bodhai,badai	Badhai ho.	0.8	
+bakri	NOUN		A goat.	goat	nature	H	बकरी	base form,countable,animate	bokri,bokori	Bakri ta ghor te ase.	0.6	
+basti	NOUN		A settlement, a colony of houses.	settlement;colony	places	H	बस्ती	base form,countable,inanimate	bosti	Basti te bisi manuh ase.	0.6	
+bawarchi	NOUN		A cook.	cook	work	P	बावर्ची	base form,countable,animate	bawarci,bawarchee	Bawarchi ye khana banaise.	0.6	
+bidi	NOUN		A thin cigarette rolled in leaf.	cigarette;bidi	slang	H	बीड़ी	base form,countable,inanimate	biri	Tai bidi khai ase.	0.7	
+chulha	NOUN		A stove or hearth.	stove;hearth	food	H	चूल्हा	base form,countable,inanimate	chula,chulo	Chulha te aag jala.	0.7	
+daawat	NOUN		A feast or an invitation to a meal.	feast;invitation	culture	P	दावत	base form,countable,inanimate	dawat,dawot	Daawat ase aaji.	0.8	
+dakiya	NOUN		A postman.	postman	work	H	डाकिया	base form,countable,animate	dakia	Dakiya ahise.	0.5	
+dalchini	NOUN		Cinnamon.	cinnamon	food	H	दालचीनी	base form,mass,inanimate		Dalchini diya chai.	0.45	
+darji	NOUN		A tailor.	tailor	work	P	दर्ज़ी	base form,countable,animate	darzi	Darji ye kapda sile.	0.7	
+daroga	NOUN		A police officer.	police officer	civic	P	दारोगा	base form,countable,animate	darogha	Daroga ahise.	0.5	
+daru	NOUN		Liquor, alcohol.	liquor;alcohol	slang	P	दारू	base form,mass,inanimate	daroo	Daru nakhai.	0.8	
+dehleez	NOUN		A threshold, a doorstep.	threshold;doorstep	home	P	दहलीज़	base form,countable,inanimate	dehleej,dohliz	Dehleez te bosi ase.	0.4	
+dhoop	NOUN		Sunshine.	sunshine	nature	H	धूप	base form,mass,inanimate	dhup	Dhoop bisi ase.	0.8	
+faujdar	NOUN		An army officer.	army officer	civic	P	फ़ौजदार	base form,countable,animate	fojdar	Faujdar ahise.	0.4	
+ghazal	NOUN		A lyrical poem or song.	ghazal;lyric	leisure	P	ग़ज़ल	base form,countable,inanimate	gazal,gozol	Ghazal sun.	0.7	
+gwala	NOUN		A milkman.	milkman	work	H	ग्वाला	base form,countable,animate	gowala,goala	Gwala doodh dise.	0.5	
+halwai	NOUN		A sweet-seller or confectioner.	sweet-seller	work	H	हलवाई	base form,countable,animate	holwai	Halwai ye mithai banaise.	0.6	
+hadd	NOUN		A limit or boundary.	limit;boundary	civic	P	हद	base form,countable,inanimate	had,hod	Hadd ot jabo nai.	0.5	
+hansi	NOUN		Laughter, a laugh.	laughter;laugh	feelings	H	हँसी	base form,mass,inanimate	hasi,hashi	Tar hansi bisi bhal.	0.8	
+havaldar	NOUN		A constable, a junior police officer.	constable	civic	P	हवलदार	base form,countable,animate	hobaldar	Havaldar ahise.	0.6	
+imarat	NOUN		A building, a large house.	building;mansion	places	P	इमारत	base form,countable,inanimate	emarot	Imarat bisi uchu.	0.5	
+imli	NOUN		Tamarind.	tamarind	food	H	इमली	base form,countable,inanimate	amli	Imli diya dal.	0.5	
+ittar	NOUN		Perfume, attar.	perfume;attar	home	P	इत्र	base form,mass,inanimate	attar,itar	Ittar lagao.	0.5	
+jamadar	NOUN		A junior officer or head of a team.	junior officer	civic	P	जमादार	base form,countable,animate	jomadar	Jamadar ahise.	0.5	
+jeera	NOUN		Cumin seeds.	cumin	food	H	ज़ीरा	base form,mass,inanimate	jira,zeera	Jeera diya dal.	0.7	
+jhopdi	NOUN		A small hut or cottage.	hut;cottage	home	H	झोपड़ी	base form,countable,inanimate	jhopri,jupdi	Jhopdi ot thake.	0.5	
+jhuggi	NOUN		A slum hut.	slum hut	places	H	झुग्गी	base form,countable,inanimate	jhugi	Jhuggi te thake.	0.5	
+jism	NOUN		The body.	body	body	P	जिस्म	base form,countable,inanimate	jisim	Jism bisi kamzor.	0.35	
+kaju	NOUN		Cashew nuts.	cashew nut	food	H	काजू	base form,countable,inanimate	kazu	Kaju khai ase.	0.7	
+kasai	NOUN		A butcher.	butcher	work	P	कसाई	base form,countable,animate	kosai	Kasai ghor te ase.	0.5	
+khajoor	NOUN		A date, the fruit.	date	food	P	खजूर	base form,countable,inanimate	khajur	Khajoor bisi mitha.	0.5	
+khamoshi	NOUN		Silence.	silence	feelings	P	ख़ामोशी	base form,mass,inanimate	khamosi	Khamoshi bisi.	0.6	
+khidmat	NOUN		Service, help offered to others.	service;help	community	P	ख़िदमत	base form,mass,inanimate	khedmot,khidmot	Moi tar khidmat kori.	0.6	
+khushbu	NOUN		A fragrance, a pleasant smell.	fragrance;scent	home	P	ख़ुशबू	base form,mass,inanimate	khusbu,khusboo	Ei phool ar khushbu bisi.	0.7	
+kirana	NOUN		Grocery goods, a grocery shop.	grocery	work	H	किराना	base form,mass,inanimate	kiraana	Kirana dukaan te jabo.	0.6	
+kishmish	NOUN		Raisins.	raisin	food	P	किशमिश	base form,mass,inanimate	kismis,kishmis	Kishmish khai ase.	0.5	
+kissa	NOUN		A story, a tale, an affair.	story;tale;affair	culture	P	क़िस्सा	base form,countable,inanimate	kisa	Kissa suno.	0.6	
+kothi	NOUN		A big house or mansion.	mansion;big house	home	H	कोठी	base form,countable,inanimate	kothee	Kothi ta bisi boro.	0.6	
+kothri	NOUN		A small room.	small room	home	H	कोठरी	base form,countable,inanimate	kotari	Kothri ot thake.	0.5	
+kumhar	NOUN		A potter.	potter	work	H	कुम्हार	base form,countable,animate	kumar	Kumhar ye matir bartan banaise.	0.5	
+kunwara	NOUN		An unmarried man.	unmarried man;bachelor	family	H	कुंवारा	base form,countable,animate	kunwar	Tai ekhon kunwara ase.	0.5	
+laung	NOUN		Cloves.	clove	food	H	लौंग	base form,countable,inanimate	long,lowng	Laung diya chai.	0.5	
+lohar	NOUN		A blacksmith.	blacksmith	work	H	लोहार	base form,countable,animate	lohor	Lohar ye daa banaise.	0.5	
+maafi	NOUN		Forgiveness, an apology.	forgiveness;apology	feelings	P	माफ़ी	base form,mass,inanimate	mafi	Maafi chai.	0.8	
+masti	NOUN		Fun, frolic, merrymaking.	fun;frolic	leisure	P	मस्ती	base form,mass,inanimate	mosti	Masti korise.	0.85	
+mazaa	NOUN		Fun, enjoyment, taste.	fun;enjoyment	leisure	P	मज़ा	base form,mass,inanimate	moja	Mazaa aahise.	0.85	
+mazar	NOUN		A shrine or a grave of a saint.	shrine;tomb	religion	P	मज़ार	base form,countable,inanimate	mozar	Mazar te gaise.	0.4	
+mazdoori	NOUN		Labour, daily wage work.	labour;wage work	work	P	मज़दूरी	base form,mass,inanimate	majdoori,mojduri	Mazdoori kori ase.	0.7	
+mehnati	ADJ		Hardworking.	hardworking	describing	P	मेहनती	base form	mehnoti	Tai bisi mehnati.	0.7	
+mehrbaani	NOUN		Kindness, a favour.	kindness;favour	feelings	P	मेहरबानी	base form,mass,inanimate	meherbani,mehorbani	Tar mehrbaani.	0.7	
+mochi	NOUN		A cobbler or shoemaker.	cobbler;shoemaker	work	H	मोची	base form,countable,animate		Mochi joota thik kore.	0.5	
+munshi	NOUN		A clerk, a secretary, a teacher.	clerk;secretary	work	P	मुंशी	base form,countable,animate	monshi	Munshi ye hisaab kore.	0.5	
+nakli	ADJ		Fake, imitation.	fake;imitation	describing	P	नक़ली	base form	naqli,nokli	Ei kitaab nakli.	0.8	
+nariyal	NOUN		A coconut.	coconut	food	H	नारियल	base form,countable,inanimate	narial	Nariyal diya chai.	0.6	
+nasha	NOUN		Intoxication, addiction.	intoxication;addiction	slang	P	नशा	base form,mass,inanimate	nesha,nosha	Nasha nokoribi.	0.8	
+naukrani	NOUN		A female servant.	female servant	work	H	नौकरानी	base form,countable,animate		Naukrani ahise.	0.5	
+pair	NOUN		A foot or a leg.	foot;leg	body	H	पैर	base form,countable,inanimate	pai	Pair dhoi.	0.7	
+pareshani	NOUN		Trouble, worry, distress.	trouble;worry	feelings	P	परेशानी	base form,mass,inanimate	poreshani	Pareshani ase.	0.8	
+patwari	NOUN		A village land-record officer.	land-record officer	civic	H	पटवारी	base form,countable,animate	potwari	Patwari ahise.	0.4	
+pehar	NOUN		A watch, a period of about three hours.	watch;period	time	H	पहर	base form,countable,inanimate	pohor,pahar	Ek pehar baad.	0.5	
+pista	NOUN		Pistachio nuts.	pistachio	food	P	पिस्ता	base form,mass,inanimate	pesta	Pista khai ase.	0.4	
+pyaasa	ADJ		Thirsty.	thirsty	body	H	प्यासा	base form	piyasa	Moi pyaasa ase.	0.6	
+pyar	NOUN		Love.	love	feelings	P	प्यार	base form,mass,inanimate	pyaar	Tar pyar bisi.	0.95	
+qalam	NOUN		A pen.	pen	home	P	क़लम	base form,countable,inanimate	kolom,kalam	Qalam kot?	0.6	
+rehdi	NOUN		A roadside cart or stall.	roadside cart;stall	work	H	रेहड़ी	base form,countable,inanimate	redi,rehri	Rehdi te fal ase.	0.5	
+rishtedari	NOUN		Kinship, the network of relatives.	kinship;relationship	family	P	रिश्तेदारी	base form,mass,inanimate	rishtedaari	Amar rishtedari bisi.	0.6	
+roshni	NOUN		Light, brightness.	light;brightness	nature	P	रोशनी	base form,mass,inanimate	rosni	Roshni nai.	0.8	
+sabr	NOUN		Patience.	patience	feelings	P	सब्र	base form,mass,inanimate	sobor	Sabr kor.	0.8	
+santra	NOUN		An orange.	orange	food	H	संतरा	base form,countable,inanimate	shantra	Santra bisi mitha.	0.5	
+sarangi	NOUN		A bowed string instrument.	instrument;sarangi	leisure	H	सारंगी	base form,countable,inanimate	sarongi	Sarangi bajaise.	0.4	
+sawari	NOUN		A ride, a vehicle, a passenger.	ride;vehicle	travel	P	सवारी	base form,countable,inanimate	sowari	Sawari ahise.	0.7	
+sehat	NOUN		Health, good condition of the body.	health	health	P	सेहत	base form,mass,inanimate	shehot,sohot	Tar sehat bhal ase.	0.8	
+shahad	NOUN		Honey.	honey	food	P	शहद	base form,mass,inanimate	shohod,sahad	Shahad khai ase.	0.6	
+shahzadi	NOUN		A princess.	princess	culture	P	शहज़ादी	base form,countable,animate	shohzadi	Shahzadi dekhise.	0.4	
+shehzaada	NOUN		A prince.	prince	culture	P	शहज़ादा	base form,countable,animate	shahzada,shohjada	Shehzaada ahise.	0.4	
+shayari	NOUN		Poetry, verse.	poetry;verse	culture	P	शायरी	base form,mass,inanimate	shayri	Shayari sun.	0.7	
+shor	NOUN		Noise, loud sound.	noise;loud sound	describing	P	शोर	base form,mass,inanimate	sor,xor	Bisi shor.	0.7	
+sirka	NOUN		Vinegar.	vinegar	food	P	सिरका	base form,mass,inanimate	sirkaa	Sirka diya khana.	0.4	
+sitar	NOUN		A sitar, a string instrument.	sitar	leisure	P	सितार	base form,countable,inanimate	sitaar	Sitar bajaise.	0.5	
+suhagan	NOUN		A married woman whose husband is alive.	married woman	family	H	सुहागन	base form,countable,animate	suhaagan	Tai suhagan ase.	0.4	
+sukoon	NOUN		Peace, calm, comfort.	peace;calm	feelings	P	सुकून	base form,mass,inanimate	sukun	Sukoon paise.	0.6	
+sunar	NOUN		A goldsmith.	goldsmith	work	H	सुनार	base form,countable,animate	sonar	Sunar ye gahna banaise.	0.5	
+taaqat	NOUN		Strength, power.	strength;power	body	P	ताक़त	base form,mass,inanimate	taqat,taakat	Tar taaqat bisi.	0.8	
+taara	NOUN		A star.	star	nature	H	तारा	base form,countable,inanimate	tara	Taara ahise.	0.6	
+tambaku	NOUN		Tobacco.	tobacco	slang	P	तंबाकू	base form,mass,inanimate	tamak,tamaku	Tambaku nakhai.	0.8	
+tandoor	NOUN		A clay oven.	clay oven	food	P	तंदूर	base form,countable,inanimate	tondur,tandur	Tandoor te roti banaise.	0.6	
+tandurust	ADJ		Healthy, fit.	healthy;fit	health	P	तंदुरुस्त	base form	tandurosto	Tai tandurust ase.	0.6	
+tanki	NOUN		A water tank.	tank	home	H	टंकी	base form,countable,inanimate	tonki	Tanki ot pani ase.	0.5	
+tasveer	NOUN		A picture, a photograph.	picture;photograph	media	P	तस्वीर	base form,countable,inanimate	tasvir,taswir	Tasveer tula.	0.8	
+tehsildar	NOUN		A revenue officer.	revenue officer	civic	P	तहसीलदार	base form,countable,animate	tehshildar	Tehsildar ahise.	0.4	
+thanedar	NOUN		The officer in charge of a police station.	police officer	civic	H	थानेदार	base form,countable,animate	thanedaar	Thanedar ahise.	0.4	
+thela	NOUN		A handcart.	handcart	travel	H	ठेला	base form,countable,inanimate	thella	Thela ot aam ase.	0.5	
+zameen	NOUN		Land, ground.	land;ground	nature	P	ज़मीन	base form,mass,inanimate	jomin,zomin	Zameen bisi bhal.	0.85	
+zehar	NOUN		Poison.	poison	health	P	ज़हर	base form,mass,inanimate	johor,zohor	Zehar nakhai.	0.6	
+ziddi	ADJ		Stubborn, obstinate.	stubborn;obstinate	feelings	P	ज़िद्दी	base form	jidi,zidi	Tai bisi ziddi.	0.7	
+zindagi	NOUN		Life.	life	feelings	P	ज़िंदगी	base form,mass,inanimate	jindagi,jindogi	Zindagi bisi bhal.	0.85	
+bhadda	ADJ		Ugly, bad-looking, or of poor quality.	ugly;poor quality	describing	H	भद्दा	base form	bhaddha	Ei kapor bhadda ase.	0.5	
+bhola	ADJ		Simple, innocent, naive.	simple;innocent;naive	feelings	H	भोला	base form		Tai bisi bhola manuh.	0.6	
+bhookha	ADJ		Hungry.	hungry	body	H	भूखा	base form	bhukha	Moi bhookha ase.	0.7	
+behra	ADJ		Deaf.	deaf	body	H	बहरा	base form	bohra	Tai behra ase.	0.5	
+langda	ADJ		Lame, limping.	lame;limping	body	H	लंगड़ा	base form	langra	Tar pair langda.	0.5	
+sharmila	ADJ		Shy, timid.	shy;timid	feelings	H	शर्मीला	base form	sormila	Tai bisi sharmila.	0.6	
+gussaila	ADJ		Short-tempered, quick to anger.	short-tempered;quick to anger	feelings	H	गुस्सैला	base form	gussoila	Tai bisi gussaila.	0.5	
+ghamandi	ADJ		Proud, arrogant.	proud;arrogant	feelings	H	घमंडी	base form	gomondi	Tai bisi ghamandi.	0.6	
+gora	ADJ		Fair-skinned, white.	fair-skinned;white	describing	H	गोरा	base form		Tai gora ase.	0.6	
+kamina	ADJ		Wicked, mean, a scoundrel.	wicked;mean;scoundrel	slang	P	कमीना	base form	kaminaa,kominay	Tai kamina manuh.	0.6	
+pagri	NOUN		A turban.	turban	clothing	H	पगड़ी	base form,countable,inanimate	pagdi	Pagri pindha.	0.4	
+kohra	NOUN		Fog, mist.	fog;mist	nature	H	कोहरा	base form,mass,inanimate		Kohra bisi ase subah te.	0.5	
+ghaat	NOUN		A riverbank or landing steps by water.	riverbank;ghat	places	H	घाट	base form,countable,inanimate	ghat	Ghaat te jabo.	0.5	
+bhed	NOUN		A sheep.	sheep	nature	H	भेड़	base form,countable,animate	bhedo	Bhed ta chorise.	0.5	
+titli	NOUN		A butterfly.	butterfly	nature	H	तितली	base form,countable,animate	titili	Titli ta phulot ase.	0.5	
+chaukhat	NOUN		A doorframe, a threshold.	doorframe;threshold	home	H	चौखट	base form,countable,inanimate	chowkhot	Chaukhat te bosi ase.	0.3	
+jaali	NOUN		A lattice, a mesh or a net-like screen.	lattice;mesh	home	P	जाली	base form,countable,inanimate	jali	Jaali lagao.	0.4	
+koshish	NOUN	VERB=to try (with kori)	An attempt or effort.	attempt;effort;try	actions	P	कोशिश	base form,countable,inanimate	kosis	Moi koshish kori ase.	0.8	
+afsos	NOUN		Regret, sorrow.	regret;sorrow	feelings	P	अफ़सोस	base form,mass,inanimate	afsoss	Afsos bisi.	0.5	
+shukr	NOUN		Thanks, gratitude.	thanks;gratitude	religion	P	शुक्र	base form,mass,inanimate	shukur	Shukr ase.	0.5	
+tarah	NOUN		A way, a manner, a sort.	way;manner;sort	describing	P	तरह	base form,countable,inanimate	torah	Ekta tarah ase.	0.5	
+sahara	NOUN		Support, help, a shelter.	support;help	community	P	सहारा	base form,mass,inanimate	sohara	Tar sahara lo.	0.6	
+tarakki	NOUN		Progress, advancement.	progress;advancement	civic	P	तरक़्क़ी	base form,mass,inanimate	torakki	Tarakki hoise.	0.5	
+tarika	NOUN		A method, a way of doing something.	method;way	describing	P	तरीका	base form,countable,inanimate	toreka	Ei tarika bhal.	0.7	
+tasalli	NOUN		Comfort, consolation, reassurance.	comfort;consolation	feelings	P	तसल्ली	base form,mass,inanimate	taslli,tosolli	Tasalli dile.	0.5	
+tohfa	NOUN		A gift, a present.	gift;present	community	P	तोहफ़ा	base form,countable,inanimate	tohfo	Tohfa dile.	0.7	
+mohabbat	NOUN		Love, affection.	love;affection	feelings	P	मोहब्बत	base form,mass,inanimate	mohobbot	Tar mohabbat bisi.	0.7	
+mulaqat	NOUN		A meeting, a visit.	meeting;visit	community	P	मुलाक़ात	base form,countable,inanimate	mulakat	Mulaqat hoise.	0.7	
+nafrat	NOUN		Hatred, aversion.	hatred;aversion	feelings	P	नफ़रत	base form,mass,inanimate	nofrot	Nafrat nokoribi.	0.6	
+naseeb	NOUN		Fortune, luck, fate.	fortune;luck;fate	religion	P	नसीब	base form,mass,inanimate	nosib,nasib	Naseeb bhal.	0.8	
+nazar	NOUN		Sight, a look, the evil eye.	sight;look;glance	feelings	P	नज़र	base form,countable,inanimate	najar,nojor	Tar nazar bhal nai.	0.7	
+pasand	NOUN		Liking, choice.	liking;choice	feelings	P	पसंद	base form,mass,inanimate	posondo	Tar pasand ki?	0.85	
+sachchai	NOUN		Truth.	truth	culture	H	सच्चाई	base form,mass,inanimate	sacchai	Sachchai ta kho.	0.5	
+sarhad	NOUN		A border, a frontier.	border;frontier	civic	P	सरहद	base form,countable,inanimate	sorhod	Sarhad te jabo.	0.5	
+sawal	NOUN		A question.	question	education	P	सवाल	base form,countable,inanimate	sawaal,soal	Sawal ase.	0.8	
+shaadi	NOUN		A wedding, a marriage.	wedding;marriage	culture	P	शादी	base form,countable,inanimate	shadi	Shaadi ase.	0.9	
+galati	NOUN		A mistake, an error.	mistake;error	civic	P	ग़लती	base form,countable,inanimate	golotti	Moi galati kori dilo.	0.7	
+bhaav	NOUN		A price, a rate.	price;rate	money	H	भाव	base form,countable,inanimate	bhao	Bhaav bisi.	0.6	
+bachat	NOUN		Savings, saving.	savings;saving	money	H	बचत	base form,mass,inanimate	bosot	Bachat kori ase.	0.6	
+izhar	NOUN		An expression, a display or declaration.	expression;declaration	feelings	P	इज़हार	base form,mass,inanimate	ijhar	Tar izhar kori dise.	0.4	
+hosh	NOUN		Consciousness, sense, wits.	consciousness;sense;wits	feelings	P	होश	base form,mass,inanimate		Hosh ase?	0.6	
+aadat	NOUN		A habit, a usual way of doing something.	habit;custom	describing	P	आदत	base form,countable,inanimate	adot,odot	Aadat bisi kharab.	0.8	
+azmaish	NOUN		A test or trial.	test;trial	education	P	आज़माइश	base form,countable,inanimate		Azmaish kori dekhise.	0.4	
+buzurg	NOUN		An elder, a respected older person.	elder;elder person	family	P	बुज़ुर्ग	base form,countable,animate	bujurg	Buzurg manuh ahise.	0.6	
+chahat	NOUN		Desire, longing, love.	desire;longing;love	feelings	P	चाहत	base form,mass,inanimate	chahot	Tar chahat bisi.	0.6	
+dhadkan	NOUN		A heartbeat, a throb.	heartbeat;throb	body	H	धड़कन	base form,mass,inanimate	dhadkon	Dhadkan tez hoise.	0.5	
+dilchasp	ADJ		Interesting, engaging.	interesting;engaging	describing	P	दिलचस्प	base form	dilchosp	Ei kitaab bisi dilchasp.	0.5	
+fitna	NOUN		Mischief, trouble-making.	mischief;trouble	slang	P	फ़ितना	base form,mass,inanimate		Fitna nokoribi.	0.5	
+fitrat	NOUN		Nature, innate disposition.	nature;disposition	feelings	P	फ़ितरत	base form,mass,inanimate	fitrot	Tar fitrat bhal.	0.4	
+hairat	NOUN		Astonishment, amazement.	astonishment;amazement	feelings	P	हैरत	base form,mass,inanimate	hairot	Hairat hoise.	0.6	
+insaaf	NOUN		Justice, fairness.	justice;fairness	civic	P	इंसाफ़	base form,mass,inanimate	insaf	Insaaf paise.	0.6	
+insan	NOUN		A human being, a person.	human being;person	community	P	इंसान	base form,countable,animate	insaan	Insan bisi bhal.	0.7	
+khwaish	NOUN		A wish, a desire.	wish;desire	feelings	P	ख़्वाहिश	base form,countable,inanimate	khoyesh	Moi ekta khwaish ase.	0.5	
+lazzat	NOUN		Taste, delight, relish.	taste;delight;relish	food	P	लज़्ज़त	base form,mass,inanimate	lojjot	Ei khanar lazzat bisi.	0.6	
+maahaul	NOUN		Environment, atmosphere.	environment;atmosphere	places	P	माहौल	base form,mass,inanimate	mahol	Ei maahaul bisi bhal.	0.6	
+manzar	NOUN		A scene, a view.	scene;view	places	P	मंज़र	base form,countable,inanimate	monzor	Manzar bisi sundor.	0.5	
+manzil	NOUN		A destination, a goal.	destination;goal	travel	P	मंज़िल	base form,countable,inanimate	monzil	Manzil pai gaise.	0.6	
+mauj	NOUN		Fun, enjoyment, a wave.	fun;enjoyment;wave	leisure	P	मौज	base form,countable,inanimate	mouj	Mauj kori ase.	0.6	
+mehak	NOUN		A fragrance, a sweet smell.	fragrance;sweet smell	home	H	महक	base form,mass,inanimate	mohok	Phoolor mehak bisi.	0.5	
+mizaaj	NOUN		Temperament, mood, nature.	temperament;mood	feelings	P	मिज़ाज	base form,mass,inanimate	mijaz	Tar mizaaj bhal nai.	0.6	
+musafir	NOUN		A traveller.	traveller	travel	P	मुसाफ़िर	base form,countable,animate	musafer	Musafir ahise.	0.5	
+nasl	NOUN		A lineage, a breed, a generation.	lineage;breed	family	P	नस्ल	base form,countable,inanimate	nosol	Ei nasl bhal.	0.4	
+nazaara	NOUN		A view, a sight, a spectacle.	view;sight	places	P	नज़ारा	base form,countable,inanimate	nojara	Nazaara bisi sundor.	0.6	
+phanda	NOUN		A noose, a trap, a snare.	noose;trap	home	H	फंदा	base form,countable,inanimate	fonda	Phanda diya dhora.	0.4	
+rahbar	NOUN		A guide, a leader.	guide;leader	civic	P	रहबर	base form,countable,animate	rohbor	Rahbar ahise.	0.4	
+rasm	NOUN		A ritual, a custom.	ritual;custom	culture	P	रस्म	base form,countable,inanimate	rosm	Rasm bisi.	0.5	
+riwaaz	NOUN		A custom, a tradition.	custom;tradition	culture	P	रिवाज़	base form,countable,inanimate	riwaj,rewaj	Riwaaz bisi purana.	0.6	
+saadgi	NOUN		Simplicity, plainness.	simplicity;plainness	feelings	P	सादगी	base form,mass,inanimate	sadgi	Saadgi bhal.	0.4	
+sharmindagi	NOUN		Shame, embarrassment.	shame;embarrassment	feelings	P	शर्मिंदगी	base form,mass,inanimate	sormindogi	Sharmindagi hoise.	0.4	
+shaukeen	ADJ		Fond of a hobby or luxury.	fond;keen	feelings	P	शौक़ीन	base form	shokin,shaukin	Tai bisi shaukeen.	0.6	
+sitam	NOUN		Cruelty, oppression.	cruelty;oppression	civic	P	सितम	base form,mass,inanimate	sitom	Sitam nokoribi.	0.4	
+sitara	NOUN		A star.	star	nature	P	सितारा	base form,countable,inanimate		Sitara bisi sundor.	0.4	
+tafreeh	NOUN		Fun, recreation, amusement.	fun;recreation	leisure	P	तफ़रीह	base form,mass,inanimate	tofrih	Tafreeh kori ase.	0.4	
+tamanna	NOUN		A wish, a longing.	wish;longing	feelings	P	तमन्ना	base form,countable,inanimate	tomonna	Tamanna ase.	0.4	
+tehzeeb	NOUN		Culture, manners, civility.	culture;manners	culture	P	तहज़ीब	base form,mass,inanimate	tohzib	Tehzeeb bisi bhal.	0.5	
+zaiqa	NOUN		Taste, flavour.	taste;flavour	food	P	ज़ायक़ा	base form,countable,inanimate	jaika,zaika	Zaiqa bisi bhal.	0.5	
+zulm	NOUN		Cruelty, injustice.	cruelty;injustice	civic	P	ज़ुल्म	base form,mass,inanimate	jolum,zulum	Zulm nokoribi.	0.5	

@@ -85,12 +85,15 @@ def trie_json(counts: Counter[str]) -> dict:
 
 LEXICON_JSON = REPO_ROOT / "datasets" / "processed" / "lexical_database" / "nagamese_lexicon.json"
 DEFAULT_CURATED_WEIGHT = 15  # a curated word that the keyboard's own list does not weight
+RESEARCHED_WEIGHT = 8  # a researched everyday word or loanword, below anything a person listed
 
 
 def lexicon_tables() -> tuple[dict[str, int], dict[str, str]]:
     """Everyday-word weights and display forms from the lexicon (nlp_research/lexicon/build_lexicon.py).
 
-    Candidates are left out: they reach the keyboard only after a speaker accepts them.
+    Candidates and derived forms are left out: candidates reach the keyboard only after a
+    speaker accepts them, and derived forms were generated, not seen. Researched words
+    (everyday loanwords such as school and office) come in at a low weight.
     """
     if not LEXICON_JSON.is_file():
         return {}, {}
@@ -98,13 +101,23 @@ def lexicon_tables() -> tuple[dict[str, int], dict[str, str]]:
     prior: dict[str, int] = {}
     display: dict[str, str] = {}
     for entry in entries:
-        if entry["status"] == "candidate" and not entry.get("is_validated"):
+        if entry["status"] in ("candidate", "derived") and not entry.get("is_validated"):
+            continue
+        # Profanity stays in the lexicon for NLP but is never suggested unless a speaker validated it.
+        if {"vulgar", "offensive"} & set(entry.get("features") or []) and not entry.get("is_validated"):
             continue
         word = entry["lemma"]
         if entry["keyboard_weight"] or entry["status"] == "curated" or entry.get("is_validated"):
             prior[word] = entry["keyboard_weight"] or DEFAULT_CURATED_WEIGHT
+        elif entry["status"] == "researched" and not entry.get("note"):
+            prior[word] = RESEARCHED_WEIGHT
         if entry.get("display") and entry["display"] != word:
             display[word] = entry["display"]
+    # Names the lexicon leaves out for its origin shares keep their capitals from the New Testament.
+    from nlp_research.lexicon.build_lexicon import nt_counts_and_display
+
+    for word, proper in nt_counts_and_display()[1].items():
+        display.setdefault(word, proper)
     return prior, display
 
 

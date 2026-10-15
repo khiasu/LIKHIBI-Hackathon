@@ -1,6 +1,23 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
+
+
+def test_researched_meanings_still_need_a_speaker(make_client, datasets_dir: Path) -> None:
+    # The current lexicon fills english_definition from research, so a word stays open
+    # until a speaker verifies it; derived forms are never asked about.
+    lexicon = datasets_dir / "processed" / "lexical_database" / "nagamese_lexicon.json"
+    lexicon.write_text(json.dumps([
+        {"lemma": "school", "english_definition": "A place where children are taught.", "status": "researched",
+         "is_validated": False, "frequency_count": 0, "gloss_candidates": [{"english": "school"}]},
+        {"lemma": "isor", "english_definition": "God", "status": "attested", "is_validated": True, "frequency_count": 900},
+        {"lemma": "korise", "english_definition": "Past form of kori.", "status": "derived", "is_validated": False},
+    ]), encoding="utf-8")
+    body = make_client().get("/api/lexicon/needs-meaning", params={"count": 5}).json()
+    assert [task["lemma"] for task in body["tasks"]] == ["school"]
+    assert body["tasks"][0]["guesses"] == ["school"]
+    assert body["total"] == 1
 
 
 def test_words_needing_a_meaning(make_client, datasets_dir: Path) -> None:

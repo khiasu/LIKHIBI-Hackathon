@@ -1,0 +1,18 @@
+laura	NOUN		Vulgar word for the penis; also used as an expletive.	penis (vulgar);expletive	slang,body	H	लौड़ा	base form,countable,vulgar	lora,lauda	-	0.6	
+haramjada	NOUN		Bastard; a strong insult.	bastard;scoundrel	slang	P	हरामज़ादा	base form,countable,animate,vulgar,offensive	haramzada	-	0.6	
+harami	ADJ	NOUN=bastard	Wicked, bastardly; a common insult.	wicked;bastard	slang,describing	P	हरामी	base form,offensive	haraami	Tai bisi harami ase.	0.65	
+randi	NOUN		Prostitute; used as a vulgar insult for a woman.	prostitute;whore	slang	H	रंडी	base form,countable,animate,vulgar,offensive		-	0.6	
+chutiya	NOUN	ADJ=stupid	Idiot, fool; a vulgar insult.	idiot;fool	slang	H	चूतिया	base form,countable,animate,vulgar,offensive	chutia	-	0.6	
+balor	ADJ		Fucking (intensifier); vulgar Assamese genitive of bal.	fucking;damn	slang	A	বালৰ	base form,vulgar		-	0.6	
+matal	ADJ	NOUN=drunkard	Drunk, intoxicated.	drunk;drunkard	slang,describing	A	মতলীয়া	base form	matol	Tai matal hoise.	0.65	
+khepa	ADJ		Crazy, mad; hot-headed.	crazy;mad	slang,describing	B	খেপা		khyapa	Tai khepa ase.	0.6	
+kanjus	ADJ	NOUN=miser	Stingy, miserly.	stingy;miser	slang,describing,money	P	कंजूस	base form	kanjoos	Tai bisi kanjus ase.	0.65	
+dadagiri	NOUN		Bullying, bossing people around.	bullying;high-handedness	slang,community	H	दादागिरी	base form,mass		Dadagiri nakoribi.	0.65	
+goonda	NOUN		Thug, hooligan.	thug;goon	slang,community	H	गुंडा	base form,countable,animate	gunda	Goonda khan ahise.	0.65	
+nesha	NOUN		Intoxication, a high.	intoxication;addiction	slang,health	P	नशा	base form,mass	nisa	-	0.6	
+fatafati	ADJ		Awesome, excellent (slang).	awesome;excellent	slang,describing	B	ফাটাফাটি	base form		Etu fatafati ase.	0.55	
+lafanga	NOUN		Loafer, a good-for-nothing.	loafer;vagabond	slang	H	लफंगा	base form,countable,animate,offensive		-	0.6	
+besharam	ADJ		Shameless.	shameless	slang,describing	P	बेशर्म	base form,offensive	besaram	Tai besharam ase.	0.65	
+ullu	NOUN		Owl; a fool (insult).	fool;owl	slang	H	उल्लू	base form,countable,animate,offensive		-	0.6	
+kamchor	ADJ	NOUN=shirker	Work-shy, lazy.	lazy;shirker	slang,describing,work	H	कामचोर	base form		Tai kamchor ase.	0.6	
+phokat	ADJ	ADV=for free	Free of cost; useless, for nothing.	free;useless	slang,describing,money	H	फोकट	base form	fokat	Etu phokat te paise.	0.6	

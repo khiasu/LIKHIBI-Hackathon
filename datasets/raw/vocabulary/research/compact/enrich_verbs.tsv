@@ -1,0 +1,76 @@
+kori	VERB		To do or make; also forms compound verbs with nouns and English words (call kori, help kori).	do;make;perform	actions,compounds	A	কৰি	citation form	kore	-	1	
+koi	VERB	AUX=saying (koi kene)|SCONJ=that (koi kene)	To say or tell; also used to introduce speech.	say;tell;speak	actions	A	কোৱা	citation form	koy	-	0.95	
+hoi	VERB	INTJ=yes	To become or happen; also means yes, okay.	become;be;happen	actions	A	হোৱা	citation form	hoy	-	0.95	
+jai	VERB		To go or depart.	go;depart;leave	actions,travel	A	যোৱা	citation form	jay	-	0.95	
+loi	VERB	AUX=with (loi jai: take away)	To take or receive; also to carry along.	take;receive;get	actions	A	লোৱা	citation form	loy	-	0.95	
+ahi	VERB		To come or arrive.	come;arrive	actions,travel	A	আহি	citation form	aahi	-	0.95	
+nohoi	VERB	SCONJ=otherwise, lest	Is not, does not happen; also otherwise or lest.	not be;otherwise;lest	grammar	A	নহয়	citation form	nohoy	-	0.7	doubtful: not a verb citation form
+pai	VERB		To get, find or receive.	get;find;receive	actions	A	পাই	citation form	pay	-	0.9	
+jani	VERB		To know or understand a fact.	know;be aware	actions	A	জানি	citation form		-	0.95	
+sai	VERB		To look or see; used in the sense of looking at.	look;see;watch	actions	A	চাই	citation form	chai	-	0.8	
+dikhi	VERB		To see or to appear.	see;look;notice	actions	A	দেখি	citation form	dekhi	-	0.9	
+pari	VERB	AUX=can, be able to	To be able to; also an auxiliary meaning can.	be able;can	actions,grammar	A	পাৰি	citation form		-	0.95	
+lagi	VERB	AUX=need, must|ADP=for	To be needed or required; to feel (hunger, fear).	need;be required;feel	actions,feelings	A	লাগি	citation form		-	0.9	
+ulai	VERB		To take out or bring down.	take out;bring down;remove	actions	A	উলিয়াই	citation form	ulia	-	0.6	
+mati	VERB		To call or summon someone.	call;summon;invite	actions	A	মাতি	citation form		-	0.85	
+chari	VERB		To leave, abandon or let go.	leave;abandon;release	actions	A	এৰি	citation form		-	0.9	
+mani	VERB		To obey or accept; to believe.	obey;accept;believe	actions	A	মানি	citation form		-	0.85	
+ani	VERB		To bring something.	bring;fetch	actions	A	আনি	citation form		-	0.95	
+dikhai	VERB		To show or reveal something.	show;reveal;display	actions	A	দেখুৱাই	citation form	dekhai	-	0.85	
+mori	VERB		To die.	die;pass away	actions,health	A	মৰি	citation form		-	0.95	
+morai	VERB		To kill.	kill;murder	actions	A	মৰাই	citation form		-	0.85	
+likhi	VERB		To write.	write;record	actions,education	A	লিখি	citation form		-	0.95	
+hudi	VERB		To ask a question.	ask;enquire	actions	A	সোধি	citation form	sudi	-	0.85	
+giri	VERB		To fall down.	fall;drop	actions	A	পৰি	citation form		-	0.8	
+lagai	VERB		To apply, put on or attach.	apply;put on;attach	actions,clothing	A	লগাই	citation form		-	0.8	
+loijai	VERB		To take away or carry off.	take away;carry off	actions	A	লৈ যাই	citation form	loi jai	-	0.8	
+rukhi	VERB		To wait or stay.	wait;stay;stop	actions	A	ৰৈ	citation form	roki	-	0.85	
+harai	VERB		To lose or perish.	lose;perish;be lost	actions	A	হেৰাই	citation form		-	0.85	
+mangi	VERB		To ask for or beg.	ask for;beg;request	actions	A	মাগি	citation form		-	0.9	
+bachai	VERB		To save or rescue.	save;rescue;protect	actions	A	বচাই	citation form		-	0.85	
+berai	VERB		To walk, wander or go around.	walk;wander;visit	actions,travel	A	বেৰাই	citation form		-	0.85	
+mili	VERB		To join, meet or agree.	join;meet;mix	actions	A	মিলি	citation form		-	0.8	
+thogai	VERB		To cheat or deceive.	cheat;deceive;betray	actions	A	ঠগাই	citation form		-	0.8	
+polai	VERB		To run away or flee.	flee;run away;escape	actions	A	পলাই	citation form		-	0.9	
+hali	VERB		To pour or put into something.	pour;put in;spill	actions	A	ঢালি	citation form	dhali	-	0.6	
+dhuri	VERB		To hold, catch or arrest.	hold;catch;arrest	actions	A	ধৰি	citation form		-	0.9	
+ghusi	VERB		To enter.	enter;go in	actions	H	घुसी	citation form		-	0.7	
+milai	VERB		To mix or join together; to reconcile.	mix;combine;reconcile	actions	A	মিলাই	citation form		-	0.75	
+rakhidi	VERB		To put down or lay aside.	put down;lay;keep	actions	A	থৈ দি	citation form	rakhi di	-	0.6	
+bandi	VERB		To tie or bind.	tie;bind;imprison	actions	A	বান্ধি	citation form		-	0.85	
+bhangai	VERB		To break something.	break;smash	actions	A	ভাঙি	citation form		-	0.85	
+punchi	VERB		To reach or arrive.	reach;arrive	actions,travel	H	पहुँचकर	citation form	ponchi	-	0.7	
+jiti	VERB		To win or conquer.	win;conquer;overcome	actions	A	জিকি	citation form		-	0.8	
+bachi	VERB		To be saved, to survive.	survive;be saved;escape	actions,health	A	বাচি	citation form		-	0.85	
+ponchi	VERB		To reach or arrive.	reach;arrive	actions,travel	H	पहुँचकर	citation form	punchi	-	0.8	
+rukhai	VERB		To prevent, stop or protect.	prevent;stop;protect	actions	A	ৰখাই	citation form		-	0.75	
+nokoi	VERB		Does not say; negative of koi (do not say).	not say;do not tell	grammar	A	নকয়	citation form		-	0.6	doubtful: not a verb citation form
+khedai	VERB		To chase away or drive out.	chase away;drive out	actions	A	খেদাই	citation form		-	0.8	
+bukhi	VERB		To understand, or poke.	understand;poke	actions	N	bukhi	citation form		-	0.3	doubtful: unclear verb, may be a variant of buji
+chui	VERB		To touch.	touch;feel	actions	A	চুই	citation form		-	0.85	
+juli	VERB		To burn or shine.	burn;shine;blaze	actions	A	জ্বলি	citation form		-	0.7	
+noloi	VERB		Does not take; negative of loi (do not take).	not take;do not get	grammar	A	নলয়	citation form		-	0.6	doubtful: not a verb citation form
+kini	VERB		To buy.	buy;purchase	actions,money	A	কিনি	citation form		-	0.95	
+athukari	VERB		To kneel down.	kneel;bow down	actions,religion	A	আঁঠু কৰি	citation form	athu kori	-	0.7	
+nahi	VERB		Not come; negative of ahi.	not come;not arrive	grammar	A	নাহি	citation form		-	0.5	doubtful: not a verb citation form
+nami	VERB		To come down or get off.	descend;get off;come down	actions,travel	A	নামি	citation form		-	0.85	
+girai	VERB		To make fall or drop.	drop;throw down;fell	actions	A	পেলাই	citation form		-	0.7	
+pahori	VERB		To forget.	forget;neglect	actions	A	পাহৰি	citation form		-	0.85	
+porhi	VERB		To read or study.	read;study	actions,education	A	পঢ়ি	citation form	porhi	-	0.9	
+joli	VERB		To burn or be lit.	burn;be lit;glow	actions	A	জ্বলি	citation form		-	0.8	
+dhui	VERB		To wash.	wash;bathe	actions,home	A	ধুই	citation form		-	0.85	
+tirai	VERB		To pay back or settle.	pay;repay;settle	actions,money	A	তিৰাই	citation form		-	0.4	doubtful: meaning uncertain
+buji	VERB		To understand.	understand;realise;think	actions	A	বুজি	citation form		-	0.95	
+pati	VERB		To spread out, lay or believe.	spread;lay;believe	actions	A	পাতি	citation form		-	0.6	
+nachari	VERB		Do not leave; negative of chari.	not leave;do not abandon	grammar	A	নাছাৰি	citation form		-	0.5	doubtful: not a verb citation form
+kamuri	VERB		To bite.	bite;chew	actions,body	A	কামুৰি	citation form		-	0.85	
+jhuki	VERB		To bend or stoop.	bend;stoop;bow	actions,body	A	জুকি	citation form		-	0.75	
+namai	VERB		To lower or bring down.	lower;bring down;unload	actions	A	নমাই	citation form		-	0.8	
+puchi	VERB		To ask a question.	ask;enquire	actions	H	पूछकर	citation form		-	0.7	
+pali	VERB		To raise or look after.	raise;rear;nurture	actions,family	A	পালি	citation form		-	0.75	
+khundi	VERB		To dig.	dig;scratch	actions,farming	A	খুন্দি	citation form		-	0.7	
+namili	VERB		Did not meet; negative of mili.	not meet;not join	grammar	A	নামিলি	citation form		-	0.4	doubtful: not a verb citation form
+jhari	VERB		To shake off, sweep or discard.	shake off;sweep;discard	actions	A	জাৰি	citation form		-	0.65	
+banai	VERB		To make or build.	make;build;create	actions	A	বনাই	citation form		-	0.85	
+khili	VERB		Unclear verb; perhaps to chew or play.	chew;play	actions	N	khili	citation form		-	0.25	doubtful: meaning unclear
+manai	VERB		To persuade or make obey.	persuade;convince	actions	A	মনাই	citation form		-	0.7	

@@ -1,0 +1,392 @@
+haathi	NOUN		Elephant.	elephant	nature	A	haathi	base form,countable,animate		Haathi bohut boro.	0.7	
+bandor	NOUN		Monkey.	monkey	nature	A	bandor	base form,countable,animate		Bandor gos te uporot ase.	0.7	
+hoin	NOUN		Squirrel.	squirrel	nature	A	hoin	base form,countable,animate		Hoin gos te daui ase.	0.7	
+sagol	NOUN		Goat.	goat	nature,farming	A	sagol	base form,countable,animate		Sagol ghah khai ase.	0.7	
+bhera	NOUN		Sheep.	sheep	nature,farming	A	bhera	base form,countable,animate		Bhera pahar te ase.	0.7	
+moh	NOUN		Buffalo.	buffalo	nature,farming	A	moh	base form,countable,animate		Moh khetit kam kore.	0.7	
+mekuri	NOUN		Cat.	cat	nature,home	A	mekuri	base form,countable,animate		Mekuri doi khai ase.	0.7	
+kaiyoi	NOUN		Hen.	hen	nature,farming	N	kaiyoi	base form,countable,animate		Kaiyoi ou pare.	0.7	
+haah	NOUN		Duck.	duck	nature,farming	A	haah	base form,countable,animate		Haah pukhuri te soli ase.	0.7	
+suroi	NOUN		Sparrow.	sparrow	nature	A	suroi	base form,countable,animate		Suroi gos te gaan gai.	0.7	
+kauri	NOUN		Crow.	crow	nature	A	kauri	base form,countable,animate		Kauri bhat khabole ahise.	0.7	
+tuta	NOUN		Parrot.	parrot	nature	A	tuta	base form,countable,animate		Tuta kotha koboloi sikhe.	0.7	
+bogoli	NOUN		Crane heron.	crane heron	nature	A	bogoli	base form,countable,animate		Bogoli khet te ase.	0.7	
+sengun	NOUN		Eagle kite.	eagle kite	nature	A	sengun	base form,countable,animate		Sengun akax te uri ase.	0.7	
+ulu	NOUN		Owl.	owl	nature	A	ulu	base form,countable,animate		Ulu rati dake.	0.7	
+mosa	NOUN		Mosquito.	mosquito	nature,health	A	mosa	base form,countable,animate		Mosa rati kamur dise.	0.7	
+poruwa	NOUN		Ant.	ant	nature	A	poruwa	base form,countable,animate		Poruwa line kori jai ase.	0.7	
+kortal	NOUN		Cricket.	cricket	nature	A	kortal	base form,countable,animate		Kortal rati gaan gai.	0.7	
+jonaki	NOUN		Firefly.	firefly	nature	A	jonaki	base form,countable,animate		Jonaki rati jole.	0.7	
+projapoti	NOUN		Butterfly.	butterfly	nature	S	projapoti	base form,countable,animate		Projapoti phul uporot uri ase.	0.7	
+makorah	NOUN		Spider.	spider	nature	A	makorah	base form,countable,animate		Makorah ghor te ase.	0.7	
+bichha	NOUN		Scorpion.	scorpion	nature	A	bichha	base form,countable,animate		Bichha kamur dise.	0.7	
+kekura	NOUN		Crab.	crab	nature,food	A	kekura	base form,countable,animate		Kekura nodi te ase.	0.7	
+sap	NOUN		Snake.	snake	nature	A	sap	base form,countable,animate		Sap dekhi moi bhoi korilu.	0.7	
+beng	NOUN		Frog.	frog	nature	A	beng	base form,countable,animate		Beng borxa te dake.	0.7	
+jok	NOUN		Leech.	leech	nature	A	jok	base form,countable,animate		Jok khet te ase.	0.7	
+kiti	NOUN		Insect worm.	insect worm	nature	A	kiti	base form,countable,animate		Kiti pat te ase.	0.7	
+pokha	NOUN		Wing.	wing	nature,body	A	pokha	base form,countable,animate		Suroi laga pokha chutu.	0.7	
+singho	NOUN		Lion.	lion	nature	S	singho	base form,countable,animate		Singho jongolor raja.	0.7	
+bhaluk	NOUN		Bear.	bear	nature	A	bhaluk	base form,countable,animate		Bhaluk mou khai.	0.7	
+xiyal	NOUN		Fox jackal.	fox jackal	nature	A	xiyal	base form,countable,animate		Xiyal rati ahe.	0.7	
+gos	NOUN		Tree.	tree	nature	A	gos	base form,countable,inanimate		Gos uporot suroi ase.	0.7	
+paat	NOUN		Leaf.	leaf	nature	A	paat	base form,countable,inanimate		Gos laga paat jori ase.	0.7	
+mul	NOUN		Root.	root	nature	A	mul	base form,countable,inanimate		Gos laga mul boro.	0.7	
+bij	NOUN		Seed.	seed	nature,farming	S	bij	base form,countable,inanimate		Bij mati te dia.	0.7	
+bakolo	NOUN		Bark.	bark	nature	A	bakolo	base form,countable,inanimate		Gos laga bakolo tapa.	0.7	
+bans	NOUN		Bamboo.	bamboo	nature	A	bans	base form,countable,inanimate		Bans diya ghor bonai.	0.7	
+xagor	NOUN		Sea.	sea	nature	A	xagor	base form,countable,inanimate		Xagor bohut boro.	0.7	
+bil	NOUN		Marsh lake.	marsh lake	nature	A	bil	base form,countable,inanimate		Bil te haah ase.	0.7	
+bato	NOUN		Road path.	road path	nature,travel	A	bato	base form,countable,inanimate		Bato xoru ase.	0.7	
+sakoi	NOUN		Bridge.	bridge	travel	N	sakoi	base form,countable,inanimate		Nodi te sakoi ase.	0.7	
+akax	NOUN		Sky.	sky	nature	A	akax	base form,countable,inanimate		Akax nila ase.	0.7	
+suruj	NOUN		Sun.	sun	nature	A	suruj	base form,countable,inanimate		Suruj uthise.	0.7	
+tora	NOUN		Star.	star	nature	A	tora	base form,countable,inanimate		Rati tora bohut ase.	0.7	
+borxun	NOUN		Rain.	rain	weather	A	borxun	base form,countable,inanimate		Aji borxun hobo.	0.7	
+xit	NOUN		Cold winter.	cold winter	weather	A	xit	base form,countable,inanimate		Xit bisi lagise.	0.7	
+botah	NOUN		Wind.	wind	weather	A	botah	base form,countable,inanimate		Botah bohut ase.	0.7	
+juwal	NOUN		Plough.	plough	farming	A	juwal	base form,countable,inanimate		Juwal diya khet chas kore.	0.7	
+kodal	NOUN		Spade hoe.	spade hoe	farming	A	kodal	base form,countable,inanimate		Kodal diya mati khone.	0.7	
+konsi	NOUN		Sickle.	sickle	farming	A	konsi	base form,countable,inanimate		Konsi diya dhan kate.	0.7	
+tokari	NOUN		Basket.	basket	farming,home	A	tokari	base form,countable,inanimate		Tokari te phol anise.	0.7	
+jaki	NOUN		Fishing net.	fishing net	farming	A	jaki	base form,countable,inanimate		Jaki diya mas dhore.	0.7	
+phosol	NOUN		Crop.	crop	farming	A	phosol	base form,countable,inanimate		Phosol bhal hoise.	0.7	
+ghah	NOUN		Grass.	grass	nature,farming	A	ghah	base form,countable,inanimate		Gorur ghah khai ase.	0.7	
+pual	NOUN		Straw.	straw	farming	A	pual	base form,countable,inanimate		Pual diya ghor bonai.	0.7	
+nun	NOUN		Salt.	salt	food	A	nun	base form,countable,inanimate		Nun bisi hoise.	0.7	
+halodhi	NOUN		Turmeric.	turmeric	food	A	halodhi	base form,countable,inanimate		Halodhi mas te dibi.	0.7	
+alu	NOUN		Potato.	potato	food	A	alu	base form,countable,inanimate		Alu siju kori dibi.	0.7	
+mula	NOUN		Radish.	radish	food	A	mula	base form,countable,inanimate		Mula khet te ase.	0.7	
+bengena	NOUN		Brinjal eggplant.	brinjal eggplant	food	A	bengena	base form,countable,inanimate		Bengena bhaji kori dibi.	0.7	
+lau	NOUN		Bottle gourd.	bottle gourd	food	A	lau	base form,countable,inanimate		Lau sak bonai ase.	0.7	
+komora	NOUN		Pumpkin.	pumpkin	food	A	komora	base form,countable,inanimate		Komora siju kori dibi.	0.7	
+tamatar	NOUN		Tomato.	tomato	food	A	tamatar	base form,countable,inanimate		Tamatar lal ase.	0.7	
+sak	NOUN		Greens vegetables.	greens vegetables	food	A	sak	base form,countable,inanimate		Sak tupi kori anise.	0.7	
+bhendi	NOUN		Okra.	okra	food	A	bhendi	base form,countable,inanimate		Bhendi bhaji kori dibi.	0.7	
+jamu	NOUN		Black plum.	black plum	food	A	jamu	base form,countable,inanimate		Jamu khai jibha bohut nila hoi.	0.7	
+amlokhi	NOUN		Gooseberry.	gooseberry	food	A	amlokhi	base form,countable,inanimate		Amlokhi khabole tita lage.	0.7	
+khar	NOUN		Alkaline dish.	alkaline dish	food	A	khar	base form,countable,inanimate		Khar khabole bhal.	0.7	
+pitika	NOUN		Mashed dish.	mashed dish	food	A	pitika	base form,countable,inanimate		Alu pitika bonai ase.	0.7	
+chira	NOUN		Flattened rice.	flattened rice	food	A	chira	base form,countable,inanimate		Chira doi logot khai.	0.7	
+gur	NOUN		Jaggery.	jaggery	food	A	gur	base form,countable,inanimate		Gur khai ase.	0.7	
+sah	NOUN		Tea.	tea	food	A	sah	base form,countable,inanimate		Sah khabo nila?	0.7	
+moda	NOUN		Rice beer.	rice beer	food	N	moda	base form,countable,inanimate		Moda khai ase.	0.7	
+mangxo	NOUN		Meat.	meat	food	A	mangxo	base form,countable,inanimate		Mangxo siju kori dibi.	0.7	
+ou	NOUN		Egg.	egg	food	A	ou	base form,countable,inanimate		Ou siju kori dibi.	0.7	
+ata	NOUN		Flour.	flour	food	A	ata	base form,countable,inanimate		Ata mati bhal.	0.7	
+hang	NOUN		Bamboo shoot.	bamboo shoot	food	N	hang	base form,countable,inanimate		Bans laga hang khabole bhal.	0.7	
+jhal	ADJ		Describes something spicy hot.	spicy hot	food	A	jhal	base form		Eitu bisi jhal.	0.7	
+nunia	ADJ		Describes something salty.	salty	food	A	nunia	base form		Soh bisi nunia.	0.7	
+kosa	ADJ		Describes something astringent raw.	astringent raw	food	A	kosa	base form		Phol kosa lage.	0.7	
+pak	ADJ		Describes something ripe.	ripe	food,farming	A	pak	base form		Aam pak hoise.	0.7	
+kasa	ADJ		Describes something raw unripe.	raw unripe	food,farming	A	kasa	base form		Aam kasa ase.	0.7	
+sowad	NOUN		Taste.	taste	food	A	sowad	base form,countable,inanimate		Eitu laga sowad bhal.	0.7	
+gondh	NOUN		Smell.	smell	food	S	gondh	base form,countable,inanimate		Gondh bisi bhal.	0.7	
+rondhoni	NOUN		Cook.	cook	food	A	rondhoni	base form,countable,inanimate		Rondhoni ghor te ase.	0.7	
+rondhi	VERB		To cook.	to cook	food,actions	A	rondhi	citation form		Ma bhat rondhi ase.	0.7	
+siju	VERB		To boil.	to boil	food,actions	A	siju	citation form		Alu siju kori dibi.	0.7	
+bhaji	VERB		To fry.	to fry	food,actions	A	bhaji	citation form		Mas bhaji kori dibi.	0.7	
+kuti	VERB		To pound chop.	to pound chop	food,actions	A	kuti	citation form		Tez kuti dibi.	0.7	
+chanki	VERB		To filter strain.	to filter strain	food,actions	A	chanki	citation form		Pani chanki dibi.	0.7	
+mejhi	VERB		To knead.	to knead	food,actions	A	mejhi	citation form		Ata mejhi dibi.	0.7	
+nibai	VERB		To put out.	to put out	home,actions	A	nibai	citation form		Jui nibai dibi.	0.7	
+piyi	VERB		To drink.	to drink	food,actions	A	piyi	citation form		Pani piyi dibi.	0.7	
+chapi	VERB		To taste sip.	to taste sip	food,actions	A	chapi	citation form		Chapi dikhibi.	0.7	
+kolosi	NOUN		Water pot.	water pot	home	A	kolosi	base form,countable,inanimate		Kolosi te pani ase.	0.7	
+sulha	NOUN		Hearth stove.	hearth stove	home,food	A	sulha	base form,countable,inanimate		Sulha jaal dibi.	0.7	
+sup	NOUN		Winnowing tray.	winnowing tray	home,farming	A	sup	base form,countable,inanimate		Sup diya sal jhor.	0.7	
+dheki	NOUN		Rice pounder.	rice pounder	home,farming	A	dheki	base form,countable,inanimate		Dheki diya dhan kute.	0.7	
+jata	NOUN		Grinding stone.	grinding stone	home,food	A	jata	base form,countable,inanimate		Jata diya moshla pise.	0.7	
+sil	NOUN		Grinding slab.	grinding slab	home,food	A	sil	base form,countable,inanimate		Sil te moshla pise.	0.7	
+bhoral	NOUN		Storeroom.	storeroom	home	A	bhoral	base form,countable,inanimate		Bhoral te dhan ase.	0.7	
+dwar	NOUN		Door.	door	home	S	dwar	base form,countable,inanimate		Dwar khuli dibi.	0.7	
+janala	NOUN		Window.	window	home	A	janala	base form,countable,inanimate		Janala khuli dibi.	0.7	
+angina	NOUN		Courtyard.	courtyard	home	A	angina	base form,countable,inanimate		Angina te bosi ase.	0.7	
+bichana	NOUN		Bed.	bed	home	A	bichana	base form,countable,inanimate		Bichana pati dibi.	0.7	
+tula	NOUN		Pillow.	pillow	home	A	tula	base form,countable,inanimate		Tula ane dibi.	0.7	
+jaapi	NOUN		Hat.	hat	home,clothing	A	jaapi	base form,countable,inanimate		Jaapi matha te dibi.	0.7	
+jhar	VERB		To sweep.	to sweep	home,actions	A	jhar	citation form		Ghor jhar dibi.	0.7	
+chokhu	NOUN		Eye.	eye	body	A	chokhu	base form,countable,inanimate		Chokhu mele dibi.	0.7	
+jibha	NOUN		Tongue.	tongue	body	A	jibha	base form,countable,inanimate		Jibha pori gol.	0.7	
+dat	NOUN		Tooth.	tooth	body	A	dat	base form,countable,inanimate		Dat bis kore.	0.7	
+thot	NOUN		Lip.	lip	body	A	thot	base form,countable,inanimate		Thot phati gol.	0.7	
+kanth	NOUN		Neck.	neck	body	S	kanth	base form,countable,inanimate		Kanth te mala ase.	0.7	
+kandh	NOUN		Shoulder.	shoulder	body	A	kandh	base form,countable,inanimate		Kandh te bhar ase.	0.7	
+nokh	NOUN		Nail.	nail	body	A	nokh	base form,countable,inanimate		Nokh kati dibi.	0.7	
+bukur	NOUN		Chest.	chest	body	A	bukur	base form,countable,inanimate		Bukur bis kore.	0.7	
+nabhi	NOUN		Navel.	navel	body	S	nabhi	base form,countable,inanimate		Nabhi te tel dibi.	0.7	
+pith	NOUN		Back.	back	body	A	pith	base form,countable,inanimate		Pith bis kore.	0.7	
+kombor	NOUN		Waist.	waist	body	A	kombor	base form,countable,inanimate		Kombor bis kore.	0.7	
+chaamsa	NOUN		Skin.	skin	body	A	chaamsa	base form,countable,inanimate		Chaamsa sukai gol.	0.7	
+haar	NOUN		Bone.	bone	body	A	haar	base form,countable,inanimate		Haar bhangi gol.	0.7	
+hiya	NOUN		Heart.	heart	body,feelings	A	hiya	base form,countable,inanimate		Hiya bhal ase.	0.7	
+phephura	NOUN		Lung.	lung	body	A	phephura	base form,countable,inanimate		Phephura bhal ase.	0.7	
+ghaam	NOUN		Sweat.	sweat	body	A	ghaam	base form,countable,inanimate		Ghaam bohut ulai ase.	0.7	
+lur	NOUN		Tear.	tear	body	A	lur	base form,countable,inanimate		Chokhu pora lur ulai.	0.7	
+paw	NOUN		Foot.	foot	body	A	paw	base form,countable,inanimate		Paw bis kore.	0.7	
+kapal	NOUN		Forehead.	forehead	body	A	kapal	base form,countable,inanimate		Kapal te ghaam ase.	0.7	
+gal	NOUN		Cheek.	cheek	body	A	gal	base form,countable,inanimate		Gal phulise.	0.7	
+jaar	NOUN		Fever cold.	fever cold	health	A	jaar	base form,countable,inanimate		Moi laga jaar hoise.	0.7	
+kakhi	NOUN		Cough.	cough	health	A	kakhi	base form,countable,inanimate		Kakhi hoise.	0.7	
+ghow	NOUN		Wound.	wound	health	A	ghow	base form,countable,inanimate		Ghow bhal hoise.	0.7	
+phola	NOUN		Boil blister.	boil blister	health	A	phola	base form,countable,inanimate		Gaw te phola hoise.	0.7	
+bomi	NOUN		Vomit.	vomit	health	A	bomi	base form,countable,inanimate		Bomi hoise.	0.7	
+nind	NOUN		Sleep.	sleep	body	A	nind	base form,countable,inanimate		Moi laga nind ahise.	0.7	
+nidra	NOUN		Sleep.	sleep	body	S	nidra	base form,countable,inanimate		Nidra bhal hoise.	0.7	
+bhok	NOUN		Hunger.	hunger	body	A	bhok	base form,countable,inanimate		Bhok lagise.	0.7	
+tiyah	NOUN		Thirst.	thirst	body	A	tiyah	base form,countable,inanimate		Tiyah lagise.	0.7	
+xas	NOUN		Breath.	breath	body	A	xas	base form,countable,inanimate		Xas lobo nuwaare.	0.7	
+khah	NOUN		Cough.	cough	health	A	khah	base form,countable,inanimate		Khah hoise.	0.7	
+heri	VERB		To lose.	to lose	actions	A	heri	citation form		Moi paisa heri gol.	0.7	
+hah	VERB		To laugh.	to laugh	feelings,actions	A	hah	citation form		Tai hah ase.	0.7	
+xuwi	VERB		To lie sleep.	to lie sleep	body,actions	A	xuwi	citation form		Moi xuwi ase.	0.7	
+jagi	VERB		To wake.	to wake	body,actions	A	jagi	citation form		Moi jagi ase.	0.7	
+dour	VERB		To run.	to run	body,actions	A	dour	citation form		Suwali dour ase.	0.7	
+sumai	VERB		To kiss.	to kiss	body,actions	A	sumai	citation form		Ma suwali ke sumai ase.	0.7	
+suwa	VERB		To touch.	to touch	body,actions	A	suwa	citation form		Suwa nokoribi.	0.7	
+thel	VERB		To push.	to push	actions	A	thel	citation form		Dwar thel dibi.	0.7	
+luk	VERB		To hide.	to hide	actions	A	luk	citation form		Suwali luk ase.	0.7	
+suti	VERB		To pour.	to pour	actions	A	suti	citation form		Pani suti dibi.	0.7	
+deuta	NOUN		Father.	father	family	A	deuta	base form,countable,animate		Deuta khet te ase.	0.7	
+baideu	NOUN		Elder sister.	elder sister	family	A	baideu	base form,countable,animate		Baideu ghor te ase.	0.7	
+khura	NOUN		Paternal uncle.	paternal uncle	family	A	khura	base form,countable,animate		Khura gaw te ase.	0.7	
+mahi	NOUN		Aunt.	aunt	family	A	mahi	base form,countable,animate		Mahi ahise.	0.7	
+pehi	NOUN		Paternal aunt.	paternal aunt	family	A	pehi	base form,countable,animate		Pehi ghor te ase.	0.7	
+jethai	NOUN		Elder uncle.	elder uncle	family	A	jethai	base form,countable,animate		Jethai ahise.	0.7	
+bapu	NOUN		Grandfather.	grandfather	family	A	bapu	base form,countable,animate		Bapu ahise.	0.7	
+dadu	NOUN		Grandfather.	grandfather	family	A	dadu	base form,countable,animate		Dadu ghor te ase.	0.7	
+ghoinik	NOUN		Wife.	wife	family	A	ghoinik	base form,countable,animate		Ghoinik ghor te ase.	0.7	
+bou	NOUN		Wife daughter-in-law.	wife daughter-in-law	family	A	bou	base form,countable,animate		Bou ghor te ase.	0.7	
+bohu	NOUN		Daughter-in-law.	daughter-in-law	family	A	bohu	base form,countable,animate		Bohu bhal ase.	0.7	
+jamai	NOUN		Son-in-law.	son-in-law	family	A	jamai	base form,countable,animate		Jamai ahise.	0.7	
+sasu	NOUN		Mother-in-law.	mother-in-law	family	A	sasu	base form,countable,animate		Sasu ghor te ase.	0.7	
+dewor	NOUN		Husband's brother.	husband's brother	family	A	dewor	base form,countable,animate		Dewor ahise.	0.7	
+nanad	NOUN		Husband's sister.	husband's sister	family	A	nanad	base form,countable,animate		Nanad ahise.	0.7	
+sowali	NOUN		Child.	child	family	A	sowali	base form,countable,animate		Sowali khelise.	0.7	
+tiruta	NOUN		Woman.	woman	family	A	tiruta	base form,countable,animate		Tiruta ahise.	0.7	
+kutum	NOUN		Relative.	relative	family	A	kutum	base form,countable,animate		Kutum ahise.	0.7	
+atmiyo	NOUN		Relative.	relative	family	S	atmiyo	base form,countable,animate		Atmiyo ahise.	0.7	
+porihal	NOUN		Neighbour.	neighbour	community	A	porihal	base form,countable,animate		Porihal ahise.	0.7	
+borua	NOUN		Elder.	elder	community	A	borua	base form,countable,animate		Borua kotha koi ase.	0.7	
+gaonburha	NOUN		Village headman.	village headman	community	N	gaonburha	base form,countable,animate		Gaonburha ahise.	0.7	
+bondhu	NOUN		Friend.	friend	family	A	bondhu	base form,countable,animate		Bondhu ahise.	0.7	
+mitro	NOUN		Friend.	friend	family	S	mitro	base form,countable,animate		Mitro ahise.	0.7	
+ropi	VERB		To transplant.	to transplant	farming,actions	A	ropi	citation form		Dhan ropi ase.	0.7	
+sas	VERB		To cultivate.	to cultivate	farming,actions	A	sas	citation form		Moi khet sas kori ase.	0.7	
+sukai	VERB		To dry.	to dry	farming,actions	A	sukai	citation form		Dhan rod te sukai dibi.	0.7	
+khone	VERB		To dig.	to dig	farming,actions	A	khone	citation form		Mati khone dibi.	0.7	
+poka	ADJ		Describes something ripe.	ripe	farming	A	poka	base form		Dhan poka hoise.	0.7	
+sukan	ADJ		Describes something dry.	dry	describing,farming	A	sukan	base form		Paat sukan hoise.	0.7	
+bhijha	ADJ		Describes something wet.	wet	describing	A	bhijha	base form		Kapor bhijha hoise.	0.7	
+kadu	NOUN		Mud.	mud	nature,farming	A	kadu	base form,countable,inanimate		Khet te kadu ase.	0.7	
+sora	NOUN		Chaff husk.	chaff husk	farming	A	sora	base form,countable,inanimate		Sora phele dibi.	0.7	
+khorikha	NOUN		Firewood.	firewood	home,farming	N	khorikha	base form,countable,inanimate		Khorikha anise.	0.7	
+khori	NOUN		Firewood.	firewood	home	A	khori	base form,countable,inanimate		Khori jaal dibi.	0.7	
+garom	ADJ		Describes something hot warm.	hot warm	weather,describing	A	garom	base form		Pani garom ase.	0.7	
+sanda	NOUN		Shade.	shade	nature	A	sanda	base form,countable,inanimate		Gos laga sanda bhal.	0.7	
+pokhi	NOUN		Bird.	bird	nature	A	pokhi	base form,countable,animate		Pokhi uri ase.	0.7	
+jontu	NOUN		Animal.	animal	nature	S	jontu	base form,countable,animate		Jontu bon te ase.	0.7	
+poku	NOUN		Animal.	animal	nature	A	poku	base form,countable,animate		Poku bon te ase.	0.7	
+kitpotongo	NOUN		Insect.	insect	nature	A	kitpotongo	base form,countable,animate		Kitpotongo ghor te ase.	0.7	
+chah	NOUN		Tea.	tea	farming	A	chah	base form,countable,inanimate		Chah bagan te ase.	0.7	
+gua	NOUN		Areca nut.	areca nut	food,culture	A	gua	base form,countable,inanimate		Gua kati dibi.	0.7	
+reshom	NOUN		Silk.	silk	culture	A	reshom	base form,countable,inanimate		Reshom kapor bhal.	0.7	
+kuhiyar	NOUN		Sugarcane.	sugarcane	farming	A	kuhiyar	base form,countable,inanimate		Kuhiyar khabole mitha.	0.7	
+sorioh	NOUN		Mustard.	mustard	farming	A	sorioh	base form,countable,inanimate		Sorioh tel bonai.	0.7	
+til	NOUN		Sesame.	sesame	farming	A	til	base form,countable,inanimate		Til khet te ase.	0.7	
+makoi	NOUN		Maize.	maize	farming	A	makoi	base form,countable,inanimate		Makoi pora ase.	0.7	
+masur	NOUN		Red lentil.	red lentil	food	A	masur	base form,countable,inanimate		Masur dal bonai.	0.7	
+bhut	NOUN		Ghost chilli.	ghost chilli	food	A	bhut	base form,countable,inanimate		Bhut jolokia bisi jhal.	0.7	
+dhonia	NOUN		Coriander.	coriander	food	A	dhonia	base form,countable,inanimate		Dhonia dibi.	0.7	
+tulosi	NOUN		Basil.	basil	nature,religion	A	tulosi	base form,countable,inanimate		Tulosi gos ase.	0.7	
+bot	NOUN		Banyan.	banyan	nature	A	bot	base form,countable,inanimate		Bot gos boro.	0.7	
+xal	NOUN		Sal tree.	sal tree	nature	A	xal	base form,countable,inanimate		Xal gos bohut boro.	0.7	
+kolpat	NOUN		Banana leaf.	banana leaf	food	A	kolpat	base form,countable,inanimate		Kolpat te bhat khai.	0.7	
+bogori	NOUN		Jujube.	jujube	food	A	bogori	base form,countable,inanimate		Bogori khabole tak.	0.7	
+leteku	NOUN		Burmese grape.	burmese grape	food	A	leteku	base form,countable,inanimate		Leteku mitha.	0.7	
+outenga	NOUN		Elephant apple.	elephant apple	food	A	outenga	base form,countable,inanimate		Outenga tenga bonai.	0.7	
+morol	NOUN		Small fish.	small fish	food	A	morol	base form,countable,inanimate		Morol mas tenga bonai.	0.7	
+rou	NOUN		Rohu fish.	rohu fish	food	A	rou	base form,countable,inanimate		Rou mas bohut boro.	0.7	
+magur	NOUN		Catfish.	catfish	food	A	magur	base form,countable,inanimate		Magur mas jhol bhal.	0.7	
+puthi	NOUN		Small fish.	small fish	food	A	puthi	base form,countable,inanimate		Puthi mas bhaji kori dibi.	0.7	
+sorai	NOUN		Brass tray.	brass tray	culture	A	sorai	base form,countable,inanimate		Sorai te tamul dibi.	0.7	
+gamusa	NOUN		Towel cloth.	towel cloth	clothing,culture	A	gamusa	base form,countable,inanimate		Gamusa dhui dibi.	0.7	
+kapor	NOUN		Cloth.	cloth	clothing	A	kapor	base form,countable,inanimate		Kapor dhui dibi.	0.7	
+riha	NOUN		Scarf.	scarf	clothing	A	riha	base form,countable,inanimate		Riha pindhe.	0.7	
+kholi	VERB		To take off.	to take off	clothing,actions	A	kholi	citation form		Kapor kholi dibi.	0.7	
+nuwai	VERB		To bathe.	to bathe	body,actions	A	nuwai	citation form		Moi nuwai ase.	0.7	
+gondhoraj	NOUN		Gardenia.	gardenia	nature	A	gondhoraj	base form,countable,inanimate		Gondhoraj phul bisi gondh.	0.7	
+kodom	NOUN		Kadam tree.	kadam tree	nature	A	kodom	base form,countable,inanimate		Kodom gos boro.	0.7	
+simolu	NOUN		Silk cotton tree.	silk cotton tree	nature	A	simolu	base form,countable,inanimate		Simolu phul lal.	0.7	
+pipol	NOUN		Peepal tree.	peepal tree	nature	A	pipol	base form,countable,inanimate		Pipol gos boro.	0.7	
+tentoli	NOUN		Tamarind.	tamarind	food,nature	A	tentoli	base form,countable,inanimate		Tentoli bisi tak.	0.7	
+bhomora	NOUN		Bumblebee.	bumblebee	nature	A	bhomora	base form,countable,animate		Bhomora phul te ase.	0.7	
+gorh	NOUN		Rhino.	rhino	nature	A	gorh	base form,countable,animate		Gorh Kaziranga te ase.	0.7	
+gondar	NOUN		Rhinoceros.	rhinoceros	nature	A	gondar	base form,countable,animate		Gondar bon te ase.	0.7	
+gaai	NOUN		Cow.	cow	farming	A	gaai	base form,countable,animate		Gaai dudh dise.	0.7	
+bolod	NOUN		Bullock.	bullock	farming	A	bolod	base form,countable,animate		Bolod juwal tane.	0.7	
+puchh	NOUN		Tail.	tail	nature	A	puchh	base form,countable,inanimate		Kukur laga puchh lore.	0.7	
+sinh	NOUN		Horn.	horn	nature	A	sinh	base form,countable,inanimate		Moh laga sinh boro.	0.7	
+khur	NOUN		Hoof.	hoof	nature	A	khur	base form,countable,inanimate		Ghora laga khur boro.	0.7	
+khowa	NOUN		Nest.	nest	nature	A	khowa	base form,countable,inanimate		Suroi laga khowa gos te ase.	0.7	
+dhekia	NOUN		Fern.	fern	food,nature	A	dhekia	base form,countable,inanimate		Dhekia sak khai.	0.7	
+kolmou	NOUN		Water spinach.	water spinach	food	A	kolmou	base form,countable,inanimate		Kolmou sak khai.	0.7	
+manimuni	NOUN		Pennywort.	pennywort	food	A	manimuni	base form,countable,inanimate		Manimuni sak khabole bhal.	0.7	
+jilmil	NOUN		Spinach.	spinach	food	A	jilmil	base form,countable,inanimate		Jilmil sak khai.	0.7	
+lai	NOUN		Mustard greens.	mustard greens	food	A	lai	base form,countable,inanimate		Lai sak rondhi dibi.	0.7	
+gajor	NOUN		Carrot.	carrot	food	A	gajor	base form,countable,inanimate		Gajor khabole mitha.	0.7	
+muga	NOUN		Golden silk.	golden silk	culture	A	muga	base form,countable,inanimate		Muga kapor bisi bhal.	0.7	
+kapali	NOUN		Skull.	skull	body	A	kapali	base form,countable,inanimate		Kapali bis kore.	0.7	
+bhru	NOUN		Eyebrow.	eyebrow	body	S	bhru	base form,countable,inanimate		Bhru kola ase.	0.7	
+jira	NOUN		Cumin.	cumin	food	A	jira	base form,countable,inanimate		Jira dibi.	0.7	
+lobongo	NOUN		Clove.	clove	food	A	lobongo	base form,countable,inanimate		Lobongo dibi.	0.7	
+dalsini	NOUN		Cinnamon.	cinnamon	food	A	dalsini	base form,countable,inanimate		Dalsini dibi.	0.7	
+tejpat	NOUN		Bay leaf.	bay leaf	food	A	tejpat	base form,countable,inanimate		Tejpat dibi.	0.7	
+laru	NOUN		Sweet ball.	sweet ball	food	A	laru	base form,countable,inanimate		Laru khabole mitha.	0.7	
+payox	NOUN		Rice pudding.	rice pudding	food	A	payox	base form,countable,inanimate		Payox bhal lage.	0.7	
+luchi	NOUN		Fried bread.	fried bread	food	A	luchi	base form,countable,inanimate		Luchi bhaji kori dibi.	0.7	
+hatur	NOUN		Hammer.	hammer	home	N	hatur	base form,countable,inanimate		Hatur diya mari dibi.	0.7	
+borsi	NOUN		Fishing rod.	fishing rod	farming	A	borsi	base form,countable,inanimate		Borsi diya mas dhore.	0.7	
+jakoi	NOUN		Fish trap.	fish trap	farming	A	jakoi	base form,countable,inanimate		Jakoi nodi te ase.	0.7	
+rosi	NOUN		Rope.	rope	home,farming	A	rosi	base form,countable,inanimate		Rosi bandhi dibi.	0.7	
+khuta	NOUN		Pillar.	pillar	home	A	khuta	base form,countable,inanimate		Khuta pothi dibi.	0.7	
+sanga	NOUN		Bridge plank.	bridge plank	home	A	sanga	base form,countable,inanimate		Sanga diya nodi pari.	0.7	
+mojia	NOUN		Floor.	floor	home	A	mojia	base form,countable,inanimate		Mojia dhui dibi.	0.7	
+jopa	NOUN		Bunch.	bunch	farming	A	jopa	base form,countable,inanimate		Kol jopa pakise.	0.7	
+kaakh	NOUN		Armpit.	armpit	body	A	kaakh	base form,countable,inanimate		Kaakh te ghaam ase.	0.7	
+dobha	NOUN		Puddle.	puddle	nature	A	dobha	base form,countable,inanimate		Dobha te pani ase.	0.7	
+xila	NOUN		Rock.	rock	nature	A	xila	base form,countable,inanimate		Xila uporot boi.	0.7	
+nolkup	NOUN		Tubewell.	tubewell	home	A	nolkup	base form,countable,inanimate		Nolkup te pani ase.	0.7	
+kothari	NOUN		Bedroom.	bedroom	home	A	kothari	base form,countable,inanimate		Kothari te xuwi.	0.7	
+roxui	NOUN		Kitchen.	kitchen	home,food	A	roxui	base form,countable,inanimate		Roxui ghor te ase.	0.7	
+pohar	ADJ		Describes something clean.	clean	describing,home	A	pohar	base form		Ghor pohar kori dibi.	0.7	
+holukua	ADJ		Describes something light.	light	describing	A	holukua	base form		Eitu holukua ase.	0.7	
+lombha	ADJ		Describes something long tall.	long tall	describing	A	lombha	base form		Tai bisi lombha.	0.7	
+gota	ADJ		Describes something whole.	whole	describing	A	gota	base form		Gota phol dibi.	0.7	
+bhonga	ADJ		Describes something broken.	broken	describing	A	bhonga	base form		Glas bhonga hoise.	0.7	
+puroni	ADJ		Describes something old thing.	old thing	describing	A	puroni	base form		Puroni ghor bhonga hoise.	0.7	
+khoroh	ADJ		Describes something hard stiff.	hard stiff	describing	A	khoroh	base form		Mati khoroh ase.	0.7	
+nomoniya	ADJ		Describes something soft.	soft	describing	A	nomoniya	base form		Bichana nomoniya ase.	0.7	
+mosin	ADJ		Describes something smooth.	smooth	describing	A	mosin	base form		Pathor mosin ase.	0.7	
+khotkhoti	ADJ		Describes something rough.	rough	describing	A	khotkhoti	base form		Bato khotkhoti ase.	0.7	
+pachol	ADJ		Describes something thin liquid.	thin liquid	describing	A	pachol	base form		Dal pachol ase.	0.7	
+sipa	ADJ		Describes something thin.	thin	describing	A	sipa	base form		Kapor sipa ase.	0.7	
+bhotha	ADJ		Describes something blunt.	blunt	describing	A	bhotha	base form		Dao bhotha hoise.	0.7	
+motha	ADJ		Describes something fat.	fat	body	A	motha	base form		Tai motha hoise.	0.7	
+khatu	ADJ		Describes something short.	short	body	N	khatu	base form		Tai khatu ase.	0.7	
+pagol	ADJ		Describes something mad.	mad	health	A	pagol	base form		Tai pagol hoise.	0.7	
+kana	ADJ		Describes something blind in one eye.	blind in one eye	health	A	kana	base form		Tai kana ase.	0.7	
+khora	ADJ		Describes something lame.	lame	health	A	khora	base form		Tai khora ase.	0.7	
+sudha	ADJ		Describes something healthy.	healthy	health	A	sudha	base form		Moi sudha ase.	0.7	
+bolia	ADJ		Describes something strong.	strong	health	A	bolia	base form		Tai bolia ase.	0.7	
+dubol	ADJ		Describes something weak.	weak	health	A	dubol	base form		Moi dubol hoise.	0.7	
+dukhi	ADJ		Describes something sad.	sad	feelings	A	dukhi	base form		Tai dukhi ase.	0.7	
+kamur	VERB		To bite.	to bite	body,actions	A	kamur	citation form		Kukur kamur dise.	0.7	
+chaboi	VERB		To chew.	to chew	body,actions	A	chaboi	citation form		Chaboi khai.	0.7	
+gilibi	VERB		To swallow.	to swallow	body,actions	A	gilibi	citation form		Gilibi nuwaare.	0.7	
+chinti	VERB		To think.	to think	feelings,actions	A	chinti	citation form		Moi chinti ase.	0.7	
+soli	VERB		To move walk.	to move walk	actions	A	soli	citation form		Gari soli ase.	0.7	
+dak	VERB		To call.	to call	actions	A	dak	citation form		Kukura dak ase.	0.7	
+dake	VERB		To crow call.	to crow call	nature,actions	A	dake	citation form		Kukura bhor te dake.	0.7	
+gorji	VERB		To roar.	to roar	nature,actions	A	gorji	citation form		Bagh gorji ase.	0.7	
+pahi	VERB		To spread.	to spread	actions	A	pahi	citation form		Pati pahi dibi.	0.7	
+mochi	VERB		To wipe.	to wipe	home,actions	A	mochi	citation form		Table mochi dibi.	0.7	
+tuli	VERB		To lift.	to lift	actions	A	tuli	citation form		Bhar tuli dibi.	0.7	
+pelai	VERB		To throw.	to throw	actions	A	pelai	citation form		Pathor pelai dibi.	0.7	
+tangi	VERB		To hang.	to hang	home,actions	A	tangi	citation form		Kapor tangi dibi.	0.7	
+bhaag	VERB		To divide.	to divide	actions	A	bhaag	citation form		Bhat bhaag kori dibi.	0.7	
+jokh	VERB		To weigh.	to weigh	actions	A	jokh	citation form		Jokh kori dibi.	0.7	
+mapi	VERB		To measure.	to measure	actions	A	mapi	citation form		Mapi dikhibi.	0.7	
+gonibi	VERB		To count.	to count	actions	A	gonibi	citation form		Paisa gonibi.	0.7	
+goni	VERB		To count.	to count	actions	A	goni	citation form		Goni dikhibi.	0.7	
+phut	VERB		To bloom.	to bloom	nature,actions	A	phut	citation form		Phul phut ase.	0.7	
+ganthi	VERB		To string.	to string	actions	A	ganthi	citation form		Mala ganthi dibi.	0.7	
+buni	VERB		To weave.	to weave	culture,actions	A	buni	citation form		Tai kapor buni ase.	0.7	
+bun	VERB		To weave.	to weave	culture,actions	A	bun	citation form		Tai kapor bun kore.	0.7	
+sraddho	NOUN		Funeral rite.	funeral rite	family,culture	S	sraddho	base form,countable,inanimate		Sraddho hobo.	0.7	
+cheta	NOUN		Leopard.	leopard	nature	A	cheta	base form,countable,animate		Cheta bon te ase.	0.7	
+nehar	NOUN		Wildcat.	wildcat	nature	A	nehar	base form,countable,animate		Nehar bon te ase.	0.7	
+khorgus	NOUN		Rabbit.	rabbit	nature	A	khorgus	base form,countable,animate		Khorgus ghah khai.	0.7	
+ixor	NOUN		Rat.	rat	nature	A	ixor	base form,countable,animate		Ixor dhan khai.	0.7	
+gui	NOUN		Monitor lizard.	monitor lizard	nature	A	gui	base form,countable,animate		Gui bon te ase.	0.7	
+tiktiki	NOUN		House lizard.	house lizard	nature	A	tiktiki	base form,countable,animate		Tiktiki dewal te ase.	0.7	
+bogula	NOUN		Egret.	egret	nature	A	bogula	base form,countable,animate		Bogula khet te ase.	0.7	
+pikok	NOUN		Peacock.	peacock	nature	A	pikok	base form,countable,animate		Pikok nasi ase.	0.7	
+dhonesh	NOUN		Hornbill.	hornbill	nature	A	dhonesh	base form,countable,animate		Dhonesh bon te ase.	0.7	
+hanh	NOUN		Goose.	goose	nature	A	hanh	base form,countable,animate		Hanh nodi te ase.	0.7	
+chorai	NOUN		Bird.	bird	nature	A	chorai	base form,countable,animate		Chorai gai ase.	0.7	
+bonoriya	ADJ		Describes something wild.	wild	nature	A	bonoriya	base form		Bonoriya poku bon te ase.	0.7	
+paalu	ADJ		Describes something tame.	tame	nature	A	paalu	base form		Paalu poku ghor te ase.	0.7	
+paal	VERB		To rear animals.	to rear animals	farming,actions	A	paal	citation form		Moi sagol pale.	0.7	
+dohi	VERB		To milk.	to milk	farming,actions	A	dohi	citation form		Gaai dohi dibi.	0.7	
+khuwai	VERB		To feed.	to feed	farming,actions	A	khuwai	citation form		Kukur ke khuwai dibi.	0.7	
+sarai	VERB		To graze.	to graze	farming,actions	A	sarai	citation form		Gorur sarai ase.	0.7	
+puli	VERB		To burn.	to burn	home,actions	A	puli	citation form		Kath puli gol.	0.7	
+nibhai	VERB		To extinguish.	to extinguish	home,actions	A	nibhai	citation form		Bati nibhai dibi.	0.7	
+sijai	VERB		To boil.	to boil	food,actions	A	sijai	citation form		Pani sijai dibi.	0.7	
+garomai	VERB		To heat.	to heat	food,actions	A	garomai	citation form		Dudh garomai dibi.	0.7	
+sitolai	VERB		To cool.	to cool	food,actions	A	sitolai	citation form		Bhat sitolai dibi.	0.7	
+kuthi	VERB		To pound.	to pound	food,actions	A	kuthi	citation form		Dhan kuthi dibi.	0.7	
+chuloi	VERB		To peel.	to peel	food,actions	N	chuloi	citation form		Alu chuloi dibi.	0.7	
+khosa	VERB		To peel.	to peel	food,actions	A	khosa	citation form		Kol khosa dibi.	0.7	
+khetior	NOUN		Farmer.	farmer	farming	A	khetior	base form,countable,inanimate		Khetior khet te ase.	0.7	
+maiya	NOUN		Harrow.	harrow	farming	A	maiya	base form,countable,inanimate		Maiya diya mati bhal kori dibi.	0.7	
+anaj	NOUN		Grain.	grain	farming	A	anaj	base form,countable,inanimate		Anaj bhoral te rakhi.	0.7	
+bhoji	NOUN		Feast.	feast	culture,food	A	bhoji	base form,countable,inanimate		Bhoji hobo.	0.7	
+alpona	NOUN		Decoration.	decoration	culture	A	alpona	base form,countable,inanimate		Alpona dibi.	0.7	
+uloo	NOUN		Thatch grass.	thatch grass	home,farming	A	uloo	base form,countable,inanimate		Uloo diya chal bonai.	0.7	
+alah	NOUN		Footpath.	footpath	travel	A	alah	base form,countable,inanimate		Alah diya jabo.	0.7	
+nao	NOUN		Boat.	boat	travel	A	nao	base form,countable,inanimate		Nao diya nodi pari.	0.7	
+kuthali	NOUN		Small hut.	small hut	home	A	kuthali	base form,countable,inanimate		Kuthali khet te ase.	0.7	
+pital	NOUN		Brass.	brass	home	A	pital	base form,countable,inanimate		Pital thali.	0.7	
+gohona	NOUN		Jewellery.	jewellery	culture	A	gohona	base form,countable,inanimate		Gohona pindhe.	0.7	
+muthi	NOUN		Handful.	handful	farming	A	muthi	base form,countable,inanimate		Muthi bhori sal.	0.7	
+dhon	NOUN		Wealth.	wealth	money	A	dhon	base form,countable,inanimate		Dhon bhal.	0.7	
+kosoli	NOUN		Pitcher.	pitcher	home	A	kosoli	base form,countable,inanimate		Kosoli te pani.	0.7	
+sandha	NOUN		Evening.	evening	time	A	sandha	base form,countable,inanimate		Sandha hol.	0.7	
+dupor	NOUN		Noon.	noon	time	A	dupor	base form,countable,inanimate		Dupor hol.	0.7	
+jolpan	NOUN		Snack.	snack	food	A	jolpan	base form,countable,inanimate		Jolpan khai.	0.7	
+mouchak	NOUN		Beehive.	beehive	nature	A	mouchak	base form,countable,inanimate		Mouchak gos te ase.	0.7	
+poluwa	NOUN		Worm.	worm	nature	A	poluwa	base form,countable,animate		Poluwa mati te ase.	0.7	
+kechua	NOUN		Earthworm.	earthworm	nature	A	kechua	base form,countable,animate		Kechua mati te ase.	0.7	
+jonakipoka	NOUN		Firefly.	firefly	nature	A	jonakipoka	base form,countable,animate		Jonakipoka rati jole.	0.7	
+khejur	NOUN		Date palm.	date palm	nature	A	khejur	base form,countable,inanimate		Khejur gos ase.	0.7	
+tal	NOUN		Palm.	palm	nature	A	tal	base form,countable,inanimate		Tal phol khai.	0.7	
+sapari	NOUN		Areca.	areca	food	A	sapari	base form,countable,inanimate		Sapari kati dibi.	0.7	
+jamir	NOUN		Citron.	citron	food	A	jamir	base form,countable,inanimate		Jamir nemu.	0.7	
+tilpitha	NOUN		Sesame cake.	sesame cake	food	A	tilpitha	base form,countable,inanimate		Tilpitha khai.	0.7	
+ghila	NOUN		Steamed cake.	steamed cake	food	A	ghila	base form,countable,inanimate		Ghila pitha khai.	0.7	
+xandoh	NOUN		Rice flour.	rice flour	food	A	xandoh	base form,countable,inanimate		Xandoh pisi dibi.	0.7	
+komolpul	NOUN		Sticky rice.	sticky rice	food	A	komolpul	base form,countable,inanimate		Komolpul khai.	0.7	
+bora	NOUN		Sticky rice.	sticky rice	food	A	bora	base form,countable,inanimate		Bora sal khai.	0.7	
+dhekisal	NOUN		Rice mill shed.	rice mill shed	home,farming	A	dhekisal	base form,countable,inanimate		Dhekisal te dhan kute.	0.7	
+chakoi	NOUN		Lamp.	lamp	home	A	chakoi	base form,countable,inanimate		Chakoi jolai dibi.	0.7	
+sakiya	NOUN		Lamp.	lamp	home	A	sakiya	base form,countable,inanimate		Sakiya jole.	0.7	
+dhol	NOUN		Drum.	drum	culture	A	dhol	base form,countable,inanimate		Dhol bajai.	0.7	
+pepa	NOUN		Horn pipe.	horn pipe	culture	A	pepa	base form,countable,inanimate		Pepa bajai.	0.7	
+dolong	NOUN		Small basket.	small basket	home	A	dolong	base form,countable,inanimate		Dolong bhori dibi.	0.7	
+chata	NOUN		Umbrella.	umbrella	home	A	chata	base form,countable,inanimate		Chata dhori.	0.7	
+okhud	NOUN		Medicine.	medicine	health	A	okhud	base form,countable,inanimate		Okhud khai dibi.	0.7	
+ushud	NOUN		Medicine.	medicine	health	A	ushud	base form,countable,inanimate		Ushud khai dibi.	0.7	
+bez	NOUN		Healer.	healer	health	A	bez	base form,countable,inanimate		Bez ahise.	0.7	
+kolija	NOUN		Liver.	liver	body	A	kolija	base form,countable,inanimate		Kolija bis.	0.7	
+mugoj	NOUN		Brain.	brain	body	A	mugoj	base form,countable,inanimate		Mugoj bhal.	0.7	
+chamdi	NOUN		Skin.	skin	body	A	chamdi	base form,countable,inanimate		Chamdi bis.	0.7	
+xewali	NOUN		Jasmine.	jasmine	nature	A	xewali	base form,countable,inanimate		Xewali phul bhal.	0.7	
+padum	NOUN		Lotus.	lotus	nature	A	padum	base form,countable,inanimate		Padum pukhuri te ase.	0.7	
+dhumuha	NOUN		Mist.	mist	weather	A	dhumuha	base form,countable,inanimate		Dhumuha ase.	0.7	
+ujaa	ADJ		Describes something bright.	bright	describing	A	ujaa	base form		Ujaa ase.	0.7	
+koheli	NOUN		Riddle.	riddle	culture	A	koheli	base form,countable,inanimate		Koheli kobi.	0.7	
+logori	NOUN		Companion.	companion	community	A	logori	base form,countable,animate		Logori ahise.	0.7	
+kamla	NOUN		Labourer.	labourer	work	A	kamla	base form,countable,animate		Kamla khet te ase.	0.7	
+kamiya	NOUN		Farm labourer.	farm labourer	work	A	kamiya	base form,countable,animate		Kamiya khet te kam kore.	0.7	
+sunar	NOUN		Goldsmith.	goldsmith	work	A	sunar	base form,countable,animate		Sunar gohona bonai.	0.7	
+kamar	NOUN		Blacksmith.	blacksmith	work	A	kamar	base form,countable,animate		Kamar dao bonai.	0.7	
+ghat	NOUN		Riverbank.	riverbank	nature	A	ghat	base form,countable,inanimate		Ghat te nao ase.	0.7	
+sorok	NOUN		Road.	road	travel	A	sorok	base form,countable,inanimate		Sorok bhal.	0.7	
+bhaiti	NOUN		Nephew.	nephew	family	A	bhaiti	base form,countable,animate		Bhaiti ahise.	0.7	
+bhagin	NOUN		Niece.	niece	family	A	bhagin	base form,countable,animate		Bhagin ahise.	0.7	
+aai	NOUN		Mother.	mother	family	A	aai	base form,countable,animate		Aai ahise.	0.7	
+poriyal	NOUN		Family.	family	family	A	poriyal	base form,countable,inanimate		Poriyal bhal.	0.7	
+songsar	NOUN		Household.	household	family	A	songsar	base form,countable,inanimate		Songsar bhal.	0.7	
+bongsho	NOUN		Lineage.	lineage	family	S	bongsho	base form,countable,inanimate		Bongsho.	0.7	

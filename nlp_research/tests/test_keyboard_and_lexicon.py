@@ -91,3 +91,97 @@ def test_vocabulary_sections_give_domains_and_trust(tmp_path: Path) -> None:
     assert domain_for("FOOD & COOKING") == "food" and domain_for("INFORMAL SLANG & COLLOQUIAL") == "slang"
     assert section_kind("Automated Web Scraped Vocabulary Additions") == "scraped"
     assert section_kind("HINDI LOANWORDS — COMMON") == "hindi"
+
+
+def test_derived_forms_fill_exactly_and_never_repeat() -> None:
+    from nlp_research.lexicon.build_lexicon import Entry, derive_forms
+
+    entries = {}
+    for word, pos, features in (("kori", "VERB", ["citation form"]), ("korise", "VERB", ["past"]),
+                                ("manu", "NOUN", ["base form", "countable", "animate"]),
+                                ("pani", "NOUN", ["base form", "mass"]), ("jai", "VERB", ["citation form"])):
+        e = Entry(word)
+        e.pos, e.features, e.nt_count = pos, features, 5
+        e.glosses = [{"english": "do" if word == "kori" else word}]
+        entries[word] = e
+    assert len(derive_forms(entries, 50)) == 17  # 16 new forms of kor- and one plural: all there is
+    made = derive_forms(entries, 17)
+    words = [d.word for d in made]
+    assert len(made) == 17 and len(set(words)) == 17
+    assert "korise" not in words and "koribo" in words and "nakoribo" in words and "nakora" in words
+    assert "manukhan" in words and "panikhan" not in words  # mass nouns get no plural
+    assert not any(w.startswith(("ja", "naja")) for w in words)  # vowel-final roots are irregular (gaise, jabo)
+    koribo = next(d for d in made if d.word == "koribo")
+    assert koribo.root == "kor" and "future" in koribo.morphology and koribo.definition and koribo.usage_example
+    assert len(derive_forms(entries, 0)) == 0
+    entries["ghor"] = Entry("ghor", pos="NOUN", features=["base form", "countable"], domains={"home"})
+    more = [d.word for d in derive_forms(entries, 50)]
+    assert more.index("ghorkhan") < more.index("ghorte")  # locatives come only after every plural
+    assert "panite" not in more  # pani has no place, time or body domain here
+
+
+def test_ai_verbs_inflect_on_the_stem_and_origin_shares_hold() -> None:
+    from nlp_research.lexicon.build_lexicon import Entry, apply_origin_shares, derive_forms
+
+    bonai = Entry("bonai")
+    bonai.pos, bonai.features, bonai.origin, bonai.nt_count = "VERB", ["citation form"], "Assamese", 5
+    bonai.glosses = [{"english": "make"}]
+    words = {d.word for d in derive_forms({"bonai": bonai}, 50)}
+    assert {"bonaise", "bonabo", "bonabole", "nabonai", "nabonabo"} <= words and "bonaiise" not in words
+
+    kept = []
+    for i in range(100):
+        for origin, status in (("Assamese", "derived"), ("English loanword", "curated"), ("Hindi loanword", "curated")):
+            e = Entry(f"{origin[0].lower()}{i}")
+            e.origin = origin
+            kept.append((e.word, e, status))
+    chosen, rejected = apply_origin_shares(kept, 1000)
+    origins = [e.origin for _, e, _ in chosen]
+    # 100 native words carry 68%, so the lexicon shrinks to 147 with 32 English and 15 other.
+    assert len(chosen) == 147 and origins.count("Assamese") == 100
+    assert origins.count("English loanword") == 32 and origins.count("Hindi loanword") == 15
+    assert len(rejected) == 68 + 85
+
+
+def test_compact_rows_expand_to_valid_research_rows(tmp_path: Path) -> None:
+    from nlp_research.lexicon.auto_annotate import parse_compact
+    from nlp_research.lexicon.validate_research import check_row
+
+    shard = tmp_path / "new_test.tsv"
+    shard.write_text(
+        "koshish\tNOUN\tVERB=to try (with kori)\tAn attempt; with kori, to try.\ttry;effort\tactions\tH\tकोशिश"
+        "\tbase form,countable,inanimate\tkosis\t-\t0.8\t\n"
+        "hai\tAUX\t\tIs.\tis\tgrammar\tH\tहै\tinvariable\t\tTai hai.\t0.5\t\n"
+        "badrow\tXYZ\n",
+        encoding="utf-8",
+    )
+    rows, errors = parse_compact(shard, {"koshish": "Tai koshish korise."}, {})
+    assert [r["word"] for r in rows] == ["koshish"]  # a Hindi function word and a broken row are skipped
+    koshish = rows[0]
+    assert check_row(koshish) == []
+    assert koshish["origin"] == "Hindi loanword" and koshish["usage_example"] == "Tai koshish korise."
+    assert koshish["pos_alternatives"] == [{"tag": "VERB", "gloss": "to try (with kori)"}]
+    assert "kori" in koshish["morphology"] and len(errors) == 2
+
+
+def test_patches_correct_rows_and_keep_them_valid(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    from nlp_research.lexicon import auto_annotate
+    from nlp_research.lexicon.validate_research import check_row
+
+    bravo = auto_annotate.row("bravo", "NOUN", "A murderer who is hired.", ["bravo"], ["community"], "English loanword",
+                              features=["base form", "countable", "animate"], method="dictionary (WordNet)",
+                              urls=["https://wordnet.princeton.edu/"])
+    manu = auto_annotate.row("manu", "NOUN", "A person.", ["person"], ["community"], "Assamese")
+    (tmp_path / "patch_senses.tsv").write_text(
+        "word\tpos\tenglish_definition\tglosses\nbravo\tINTJ\tWell done!\twell done;bravo\nnosuch\tNOUN\tX.\tx\n",
+        encoding="utf-8")
+    (tmp_path / "patch_script.tsv").write_text("word\tsource_form\nmanu\tমানুহ\n", encoding="utf-8")
+    monkeypatch.setattr(auto_annotate, "COMPACT_DIR", tmp_path)
+    errors: list[str] = []
+    assert auto_annotate.apply_patches([bravo, manu], errors) == 2
+    assert len(errors) == 1  # the word with no row is reported, not added
+    assert bravo["pos"] == "INTJ" and bravo["english_definition"] == "Well done!" and bravo["glosses"] == ["well done", "bravo"]
+    assert bravo["features"] == ["invariable"] and bravo["method"] == "model-annotated"
+    assert bravo["usage_example"] == auto_annotate.example_for("bravo", "INTJ", ["invariable"])
+    assert manu["source_form"] == "মানুহ" and manu["english_definition"] == "A person."
+    assert check_row(bravo) == [] and check_row(manu) == []

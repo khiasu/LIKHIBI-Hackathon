@@ -1,0 +1,434 @@
+jaldi	ADV	INTJ=hurry up!	Quickly, without delay.	quickly;soon;hurry	actions,time	H	जल्दी	invariable	jaldee	Tai jaldi aha.	0.95	
+bilkul	ADV	INTJ=absolutely!	Completely, totally, absolutely.	absolutely;totally;exactly	describing	P	बिल्कुल	invariable	bilkool	Moi bilkul bhal ase.	0.95	
+jarur	ADV	INTJ=definitely!	Certainly, for sure; it must be done.	surely;certainly;must	describing	P	ज़रूर	invariable	zaroor,zarur	Apuni jarur aha.	0.95	
+ekdum	ADV	ADJ=complete, total	Completely, exactly; right away.	completely;totally;exactly	describing	P	एकदम	invariable	ekdam	Kaam ekdum bhal hoise.	0.9	
+sayad	ADV		Perhaps, maybe.	perhaps;maybe;possibly	describing	P	शायद	invariable	shayad,shayed	Sayad tai kali ahibo.	0.9	
+hamesa	ADV		Always, every time.	always;forever;every time	time	P	हमेशा	invariable	hamesha	Tai hamesa ghorot thake.	0.9	
+aksar	ADV		Often, frequently.	often;frequently;usually	time	P	अक्सर	invariable	aksaar	Moi aksar ei pathot jai.	0.8	
+kabhi	ADV		At some time; ever; sometimes.	ever;sometimes;once	time	H	कभी	invariable		Tumi kabhi Dimapur gaisa ne?	0.9	
+fauran	ADV		Immediately, at once.	immediately;at once;right away	time	P	फ़ौरन	invariable	fouran	Tai fauran aha.	0.7	
+turant	ADV		Right away, at once.	immediately;instantly;at once	time	H	तुरंत	invariable		Moi turant ahibo.	0.8	
+achanak	ADV		Suddenly, unexpectedly.	suddenly;unexpectedly	time	H	अचानक	invariable		Achanak borokha aha.	0.85	
+zyada	ADV	ADJ=more, many	More, too much.	more;too much;many	describing	P	ज़्यादा	invariable	jyada,zada	Tai zyada khai.	0.9	
+kaafi	ADV	ADJ=enough, sufficient	Quite a lot, enough.	enough;quite;fairly	describing	P	काफ़ी	invariable	kafi	Kaam kaafi hoise.	0.85	
+lagbhag	ADV		Almost, nearly, about.	almost;nearly;about	numbers	H	लगभग	invariable	logbhag	Lagbhag ek ghanta lagise.	0.75	
+bahut	ADV	ADJ=much, many	Very, very much.	very;much;many	describing	H	बहुत	invariable	bohot,bohut	Moi bahut khushi ase.	0.7	
+thoda	ADV	DET=a little, a few	A little, slightly.	a little;slightly;a bit	describing	H	थोड़ा	invariable	thora	Thoda pani de.	0.85	
+zara	ADV		A little, a bit.	a little;slightly;a bit	describing	P	ज़रा	invariable	jara	Zara ruk, moi ahi ase.	0.85	
+sirf	ADV	ADJ=only, mere	Only, just, merely.	only;just;merely	describing	P	सिर्फ़	invariable	shirf	Moi sirf eta khabo.	0.85	
+khaas	ADV	ADJ=special, particular	Especially, particularly.	especially;particularly;special	describing	P	ख़ास	invariable	khas	Moi khaas tumar bawe aha.	0.75	
+seedha	ADV	ADJ=straight, direct	Straight, directly.	straight;directly;honest	describing	H	सीधा	invariable	sidha	Seedha ghor jabi.	0.75	
+dhire	ADV	INTJ=take it easy!	Slowly, gently.	slowly;gently;softly	describing	H	धीरे	invariable	dhiree	Dhire koi.	0.8	
+tez	ADV	ADJ=fast, sharp	Fast, quickly.	fast;quick;sharp	describing	P	तेज़	invariable	tej	Bus tez jai ase.	0.8	
+sahi	ADV	INTJ=right!|ADJ=correct, right	Correctly, rightly.	correctly;rightly;exactly	describing	P	सही	invariable	sahee	Tumi sahi kotha koise.	0.85	
+galat	ADV	ADJ=wrong, incorrect	Wrongly, incorrectly.	wrongly;incorrectly;mistaken	describing	P	ग़लत	invariable		Tumi galat kori ase.	0.8	
+behtar	ADV	ADJ=better	Better, more.	better;preferable	describing	P	बेहतर	invariable	behter	Ajikal behtar ase.	0.65	
+bekar	ADV	ADJ=useless, idle	Uselessly; for nothing.	uselessly;for nothing;idle	describing	P	बेकार	invariable	bekaar	Samay bekar nakoribi.	0.75	
+phir	ADV	INTJ=and then?	Again, then, afterwards.	again;then;afterwards	time	H	फिर	invariable	fir	Tai phir aha.	0.9	
+abhi	ADV		Now, right now.	now;right now;at present	time	H	अभी	invariable	ebhi	Moi abhi ahi ase.	0.85	
+ab	ADV		Now, from now on.	now;from now on	time	H	अब	invariable		Ab moi ghor jabo.	0.8	
+pehle	ADV	ADJ=first, earlier	Before, first.	before;first;earlier	time	H	पहले	invariable	pehla	Pehle khabo, tarpaor jabo.	0.85	
+baad	ADV	NOUN=aftermath	Later, after; afterwards.	later;after;afterwards	time	P	बाद	invariable		Kaam korar baad moi ghor jabo.	0.8	
+kal	ADV	NOUN=yesterday or tomorrow	Yesterday or tomorrow, depending on context.	yesterday;tomorrow	time	H	कल	invariable		Moi kal ahise.	0.8	
+aaj	ADV	NOUN=today	Today, at this time.	today;now	time	H	आज	invariable		Aaj moi ghor thaki ase.	0.85	
+kahin	ADV		Somewhere; anywhere.	somewhere;anywhere	places	H	कहीं	invariable		Tai kahin gaise.	0.7	
+waise	ADV	INTJ=by the way	By the way; in any case.	anyway;by the way;actually	slang	H	वैसे	invariable	vaise	Waise, tumi kot thaka?	0.85	
+ulta	ADV	ADJ=reverse, upside down	Backwards; the other way round.	backwards;reverse;upside down	describing	H	उल्टा	invariable		Tumi shirt ulta pindhise.	0.7	
+saaf	ADV	ADJ=clean, clear	Clearly, frankly; cleanly.	clearly;frankly;cleanly	describing	P	साफ़	invariable	saf	Moi saaf kotha koi dibo.	0.7	
+pakka	ADV	ADJ=sure, firm, solid	Definitely, for sure.	definitely;surely;firmly	describing	H	पक्का	invariable		Moi pakka ahibo.	0.9	
+theek	ADV	INTJ=okay!|ADJ=fine, proper	Fine, properly, okay.	fine;okay;properly	describing	H	ठीक	invariable	thik	Sob theek ase.	0.95	
+dobara	ADV		Again, a second time.	again;once more;second time	time	P	दोबारा	invariable		Dobara koi.	0.75	
+pura	ADV	ADJ=whole, full	Completely, entirely.	completely;entirely;whole	describing	H	पूरा	invariable	poora	Kaam pura hoise.	0.8	
+behad	ADV	ADJ=extreme, limitless	Extremely, to a great degree.	extremely;greatly;very	describing	P	बेहद	invariable		Moi behad khushi ase.	0.6	
+ahista	ADV	INTJ=slowly, take it easy!	Slowly and softly.	slowly;softly;gently	describing	P	आहिस्ता	invariable	ahesta	Ahista ahibi.	0.65	
+kareeb	ADV	ADJ=near, close	Near, close by.	near;close;nearby	places	P	क़रीब	invariable	kareb	Ghor kareeb ase.	0.7	
+dur	ADV	ADJ=far, distant	Far, far away.	far;distant;away	places	H	दूर	invariable	door	Ghor bisi dur nai.	0.7	
+zyadatar	ADV		Mostly, for the most part.	mostly;for the most part;generally	describing	P	ज़्यादातर	invariable	jyadatar	Zyadatar manu ahise.	0.5	
+kam	ADV	ADJ=few, less	Less, a little; not much.	less;few;little	describing	H	कम	invariable		Kam khai.	0.8	
+fatafat	ADV	INTJ=hurry up!	Very quickly, at once.	quickly;at once;fast	actions,time	H	फटाफट	invariable		Fatafat kori dibi.	0.6	
+akhir	ADV		Finally, at last.	finally;at last;in the end	time	P	आख़िर	invariable	akhir	Akhir tai aha.	0.7	
+lagatar	ADV		Continuously, non-stop.	continuously;non-stop;repeatedly	time	P	लगातार	invariable	lagataar	Tai lagatar kotha koi ase.	0.6	
+khoob	ADV	ADJ=good, very good	Very much; very well.	very much;a lot;very well	describing	P	ख़ूब	invariable	khub	Tai khoob khai.	0.8	
+lazmi	ADV		Necessarily, certainly.	necessarily;certainly;must	describing	P	लाज़मी	invariable		Tumi lazmi ahibi.	0.55	
+yakayak	ADV		Suddenly, all at once.	suddenly;all at once;abruptly	time	P	यकायक	invariable		Yakayak tai aha.	0.5	
+chupke	ADV	ADJ=quiet	Quietly, secretly.	quietly;secretly;silently	describing	H	चुपके	invariable		Tai chupke gaise.	0.7	
+isliye	ADV		Therefore, that's why.	therefore;so;that's why	slang	H	इसलिए	invariable	islie	Isliye moi ahi nai.	0.6	
+yani	ADV		I mean, that is to say.	I mean;that is;namely	slang	P	यानी	invariable		Yani, tumi ahibi nai?	0.6	
+arre	INTJ		Exclamation of surprise, or to call out to someone.	hey;oh;wow	slang	H	अरे	invariable	are,arrey	Arre, tumi aha ne?	0.95	
+wah	INTJ		Exclamation of praise or delight.	wow;great;brilliant	slang	P	वाह	invariable	waah,vaah,vah	Wah, bhal kaam!	0.95	
+chalo	INTJ	VERB=to walk, to move	Let's go; come on.	let's go;come on;okay	actions	H	चलो	invariable		Chalo, jai ami.	0.95	
+yaar	INTJ	NOUN=friend, buddy	Buddy, mate; a casual way to address someone.	buddy;mate;friend	slang	P	यार	invariable	yaaar	Yaar, kot aso?	0.95	
+bas	INTJ	ADV=only, just	Enough, that's all, stop.	enough;stop;that's all	slang	P	बस	invariable		Bas, ekhon ghor jabo.	0.95	
+haan	INTJ		Yes, yeah, sure.	yes;yeah;sure	slang	H	हाँ	invariable	han,haa	Haan, moi aha.	0.95	
+accha	INTJ	ADJ=good, nice|ADV=well	Okay, alright; good.	okay;alright;good	slang	H	अच्छा	invariable	achha,acha	Accha, moi ahibo.	0.95	
+ji	INTJ		Yes, sir or madam (polite).	yes;sir;madam	greetings	H	जी	invariable	jee	Ji, moi bujhise.	0.9	
+haanji	INTJ		Yes, sir (respectful yes).	yes sir;yes;respectfully	greetings	H	हाँजी	invariable	hanji	Haanji, moi ahi ase.	0.6	
+bhai	INTJ	NOUN=brother, buddy	Hey buddy, dude; a chat address.	brother;buddy;dude	slang	H	भाई	invariable		Bhai, kot aso?	0.9	
+oho	INTJ		Oh! Exclamation of surprise or teasing.	oh;oho;aha	slang	H	ओहो	invariable		Oho, tumi aha!	0.75	
+oye	INTJ		Hey! A casual call to get attention.	hey;oi;oye	slang	H	ओए	invariable	oi	Oye, ki koribi?	0.8	
+abe	INTJ		Hey! A rough casual call, can be rude.	hey;you;oi	slang	H	अबे	invariable	abey	Abe, kot jabi?	0.6	
+bapre	INTJ		Oh my! Exclamation of shock.	oh my;goodness;wow	slang	H	बापरे	invariable	bapri	Bapre, bisi bor hoise!	0.7	
+haye	INTJ		Oh no! Exclamation of sorrow or surprise.	oh no;alas;dear me	feelings	H	हाय	invariable	hayre	Haye, kiman hoise?	0.7	
+uff	INTJ		Ugh! Exclamation of annoyance or heat.	ugh;phew;oh	feelings	H	उफ़	invariable	uf	Uff, bisi garam!	0.8	
+shabaash	INTJ	NOUN=praise, applause	Well done! Bravo!	bravo;well done;congratulations	feelings	P	शाबाश	invariable	shabash,shabas	Shabaash, bhal kaam!	0.85	
+shukriya	INTJ	NOUN=thanks, gratitude	Thank you.	thank you;thanks;gratitude	greetings	P	शुक्रिया	invariable	shukria,sukriya	Shukriya, moi bhal ase.	0.85	
+alvida	INTJ		Goodbye, farewell.	goodbye;farewell;bye	greetings	P	अलविदा	invariable		Alvida, phir bhetibo.	0.65	
+chup	INTJ	ADJ=quiet, silent	Be quiet, hush!	quiet;silence;hush	describing	H	चुप	invariable		Chup thaka.	0.8	
+ruko	INTJ	VERB=to stop, to wait	Wait, stop!	wait;stop;hold on	actions	H	रुको	invariable	ruk	Ruko, moi ahi ase.	0.8	
+suno	INTJ	VERB=to listen, to hear	Listen! Hey, listen!	listen;hear;hey	media	H	सुनो	invariable	shuno	Suno, tumi kot aha?	0.7	
+dekho	INTJ	VERB=to look, to see	Look! See!	look;see;behold	media	H	देखो	invariable	dekh	Dekho, tai aha!	0.7	
+bolo	INTJ	VERB=to say, to speak	Say it! Tell me!	say;tell;speak	media	H	बोलो	invariable		Bolo, ki hoise?	0.75	
+toh	PART	ADV=so, then	So, then; a discourse particle.	so;then;well	slang	H	तो	invariable		Toh, kiman ase?	0.7	
+matlab	INTJ	NOUN=meaning, purpose	Meaning; that is to say.	meaning;that is;purpose	slang	P	मतलब	invariable		Matlab ki?	0.85	
+sach	INTJ	NOUN=truth	Really? Is that true?	really;truth;true	slang	H	सच	invariable		Sach ne?	0.85	
+mast	INTJ	ADJ=cool, great	Cool! Great! Fun!	cool;great;fun	slang	P	मस्त	invariable		Mast, bhal lagise!	0.75	
+jhakaas	INTJ	ADJ=awesome, great	Awesome, fantastic.	awesome;fantastic;brilliant	slang	H	झकास	invariable		Jhakaas, bhal ase!	0.6	
+zabardast	INTJ	ADJ=great, amazing	Great! Amazing!	great;amazing;superb	slang	P	ज़बरदस्त	invariable	jabardast	Zabardast, tumi bhal gaan gao!	0.7	
+kamaal	INTJ	NOUN=marvel, wonder	Wonderful! Amazing! A marvel.	wonderful;amazing;marvel	slang	P	कमाल	invariable		Kamaal, tai bhal naach kore!	0.7	
+bakwaas	INTJ	NOUN=nonsense, rubbish	Nonsense! Rubbish! Said when rejecting something.	nonsense;rubbish;trash	slang	P	बकवास	invariable	bakwas	Bakwaas kotha nakoi.	0.75	
+chalega	INTJ		It's okay, it will do; fine.	it's okay;will do;fine	slang	H	चलेगा	invariable		Chalega, moi lobo.	0.6	
+dhat	INTJ		Shoo! Nonsense! A dismissive exclamation.	shoo;nonsense;tut	slang	H	धत्	invariable		Dhat, moi nakoribo!	0.5	doubtful: dismissive exclamation, Nagamese use unclear
+hatt	INTJ		Shoo! Go away!	shoo;go away;get out	slang	H	हट	invariable	hat	Hatt, duru hoi ja!	0.6	
+jaan	INTJ	NOUN=life, darling	Darling, dear; literally life.	darling;dear;life	slang	P	जान	invariable		Jaan, tumi kot aso?	0.65	
+meherbani	INTJ	NOUN=kindness, favour	Please; thank you for the favour.	please;kindness;favour	greetings	P	मेहरबानी	invariable	meherbaani,meharbani	Meherbani, pani de.	0.6	
+inshallah	INTJ	ADV=God willing	God willing; hopefully.	God willing;hopefully;if God wills	religion	P	इंशाअल्लाह	invariable	insallah,inshaallah	Inshallah, kali ahibo.	0.8	
+mashallah	INTJ		Praise be to God; how wonderful.	wow;praise be;how wonderful	religion	P	माशाअल्लाह	invariable	masallah,mashaallah	Mashallah, bisi bhal dekhise!	0.65	
+lo	INTJ	VERB=to take	Here, take it! Look!	here;take it;there	slang	H	लो	invariable		Lo, khabi.	0.6	
+tauba	INTJ		Oh no! God forbid!	oh no;god forbid;repent	religion	P	तौबा	invariable		Tauba, bisi bor!	0.5	
+khair	INTJ	ADV=anyway	Anyway, never mind.	anyway;never mind;well	slang	P	ख़ैर	invariable		Khair, moi jabo.	0.6	
+wakai	INTJ	ADV=really	Really? Truly?	really;truly;indeed	slang	P	वाक़ई	invariable	waqai	Wakai, tumi aha?	0.7	
+chhodo	INTJ	VERB=to leave, to let go	Leave it! Forget it!	leave it;forget it;let go	slang	H	छोड़ो	invariable	chhod	Chhodo, koi baat nai.	0.7	
+pata	NOUN	VERB=to know	Address, information, or knowledge; in "pata nai", I don't know.	address;knowledge;information	slang	H	पता	base form,mass,inanimate	pata	Moi pata nai.	0.8	
+malum	INTJ		I know; it is known.	I know;known;understood	slang	P	मालूम	invariable	maloom	Malum ase, tumi aha.	0.5	
+maafi	INTJ	NOUN=apology, pardon	Sorry, I beg your pardon.	sorry;pardon;apology	feelings	P	माफ़ी	invariable	maafee,mafi	Maafi, moi deri kori dilu.	0.8	
+intezar	NOUN	VERB=to wait (with kori)	A waiting period; with kori, to wait for someone.	waiting;wait;expectation	feelings	P	इंतज़ार	base form,mass,inanimate	intezaar,intizar	Moi tumar intezar kori ase.	0.9	
+koshish	NOUN	VERB=to try (with kori)	An attempt or effort; with kori, to try.	try;effort;attempt	actions	H	कोशिश	base form,countable,inanimate	kosis	Moi koshish kori ase.	0.8	
+maaf	NOUN	VERB=to forgive (with kori)	Forgiveness; with kori, to forgive someone.	forgiveness;pardon;excuse	feelings	P	माफ़	base form,mass,inanimate	maf	Moi tumak maaf kori dilu.	0.9	
+shaadi	NOUN	VERB=to marry (with kori)	A wedding; with kori, to marry.	wedding;marriage;marry	culture,family	P	शादी	base form,countable,inanimate	shadi	Tai kali shaadi koribo.	0.9	
+pyar	NOUN	VERB=to love (with kori)	Love or affection; with kori, to love someone.	love;affection;fondness	feelings	P	प्यार	base form,mass,inanimate	pyaar	Moi tumak bisi pyar kori ase.	0.9	
+madad	NOUN	VERB=to help (with kori)	Help or assistance; with kori, to help.	help;assistance;aid	actions,community	P	मदद	base form,mass,inanimate	madat	Tumi moi ke madad kori dibi?	0.95	
+bharosa	NOUN	VERB=to trust (with kori)	Trust or reliance; with kori, to trust someone.	trust;faith;reliance	feelings	H	भरोसा	base form,mass,inanimate	bharosha	Moi tumar upore bharosa kori ase.	0.85	
+taiyari	NOUN	VERB=to prepare (with kori)	Preparation; with kori, to get ready.	preparation;readiness;arrangement	actions,work	H	तैयारी	base form,mass,inanimate	taiyaari	Amikhan taiyari kori ase.	0.85	
+intezam	NOUN	VERB=to arrange (with kori)	Arrangement or management; with kori, to arrange something.	arrangement;management;provision	work,civic	P	इंतज़ाम	base form,mass,inanimate	intezaam,intazam	Amikhan bhojor intezam kori ase.	0.7	
+fikar	NOUN	VERB=to worry (with kori)	Worry or concern; with kori, to worry.	worry;concern;anxiety	feelings	P	फ़िक्र	base form,mass,inanimate	fikr	Moi tumar fikar kori ase.	0.8	
+yaad	NOUN	VERB=to remember (with kori)	Memory; with kori, to remember.	memory;remembrance;recollection	feelings	P	याद	base form,mass,inanimate	yad	Moi tumar yaad kori ase.	0.9	
+sharam	NOUN	VERB=to feel ashamed (with kori)	Shame or embarrassment; with kori, to feel ashamed.	shame;embarrassment;modesty	feelings	P	शरम	base form,mass,inanimate	sharm	Sharam nokori.	0.7	
+gussa	NOUN	VERB=to get angry (with kori)	Anger; with kori, to get angry.	anger;rage;irritation	feelings	P	ग़ुस्सा	base form,mass,inanimate	ghussa	Tai bisi gussa kori ase.	0.85	
+shikayat	NOUN	VERB=to complain (with kori)	A complaint; with kori, to complain.	complaint;grievance;grumble	feelings	P	शिकायत	base form,countable,inanimate	shikayet,sikayat	Moi tumar shikayat kori ase.	0.8	
+tareef	NOUN	VERB=to praise (with kori)	Praise; with kori, to praise someone.	praise;compliment;applause	feelings	P	तारीफ़	base form,mass,inanimate	tarif	Tai moi ke tareef kori dise.	0.8	
+izzat	NOUN	VERB=to respect (with kori)	Respect or honour; with kori, to respect.	respect;honour;dignity	feelings	P	इज़्ज़त	base form,mass,inanimate	ijjat	Moi tumak izzat kori.	0.85	
+ummeed	NOUN	VERB=to hope (with kori)	Hope or expectation; with kori, to hope.	hope;expectation;wish	feelings	P	उम्मीद	base form,mass,inanimate	ummid,umid	Moi ummeed kori ase, tumi ahibi.	0.8	
+izhaar	NOUN	VERB=to express (with kori)	Expression or declaration; with kori, to express.	expression;declaration;confession	culture	P	इज़हार	base form,mass,inanimate	izaar,izhar	Moi tumak mor pyar izhaar kori ase.	0.6	
+mulaqat	NOUN	VERB=to meet (with kori)	A meeting; with kori, to meet someone.	meeting;encounter;visit	community	P	मुलाक़ात	base form,countable,inanimate	mulakat	Kali tumar logot mulaqat koribo.	0.7	
+jawab	NOUN	VERB=to answer (with kori)	An answer; with kori, to reply.	answer;reply;response	media	P	जवाब	base form,countable,inanimate	jabab,jawaab	Tumi jawab kori dibi?	0.85	
+sawal	NOUN	VERB=to ask (with kori)	A question; with kori, to ask.	question;query;ask	education	P	सवाल	base form,countable,inanimate	sawaal	Moi tumak sawal kori ase.	0.8	
+khoj	NOUN	VERB=to search (with kori)	A search; with kori, to search.	search;hunt;quest	actions	H	खोज	base form,countable,inanimate		Police khoj kori ase.	0.8	
+talaash	NOUN	VERB=to search for (with kori)	A search or quest; with kori, to look for.	search;quest;look for	actions	P	तलाश	base form,countable,inanimate	talash	Moi chabi talaash kori ase.	0.7	
+hisaab	NOUN	VERB=to calculate (with kori)	An account or calculation; with kori, to count.	account;calculation;reckoning	money	P	हिसाब	base form,mass,inanimate	hisab	Moi hisaab kori ase.	0.85	
+kaam	NOUN	VERB=to work (with kori)	Work or a task; with kori, to do work.	work;task;job	work	H	काम	base form,countable,inanimate		Moi kaam kori ase.	0.9	
+bhool	NOUN	VERB=to make a mistake (with kori)	A mistake or error; with kori, to err.	mistake;error;slip	actions	H	भूल	base form,countable,inanimate	bhul	Moi bhool kori dilu.	0.8	
+dhoka	NOUN	VERB=to cheat (with kori)	Deception or cheating; with kori, to deceive.	deception;cheat;fraud	feelings,slang	H	धोखा	base form,countable,inanimate	dhokha	Tai moi ke dhoka kori dise.	0.8	
+chhutti	NOUN	VERB=to take leave (with kori)	A holiday or leave from work; with kori, to take leave.	leave;holiday;vacation	work,leisure	H	छुट्टी	base form,countable,inanimate	chutti	Moi kali chhutti loi ase.	0.85	
+bahas	NOUN	VERB=to discuss (with kori)	A debate or discussion; with kori, to argue.	discussion;debate;argument	culture,media	P	बहस	base form,countable,inanimate	bahs	Tai bisi bahas kori ase.	0.8	
+jhagra	NOUN	VERB=to quarrel (with kori)	A quarrel or fight; with kori, to quarrel.	quarrel;fight;argument	community	H	झगड़ा	base form,countable,inanimate	jhagda	Amikhan logot jhagra kori ase.	0.85	
+faisla	NOUN	VERB=to decide (with kori)	A decision; with kori, to decide.	decision;verdict;settlement	civic	P	फ़ैसला	base form,countable,inanimate	fesla	Moi faisla kori dilu.	0.8	
+shuru	NOUN	VERB=to start (with kori)	Start or beginning; with kori, to start.	start;beginning;commencement	actions,time	P	शुरू	base form,mass,inanimate		Kaam shuru kori dilu.	0.9	
+khatam	ADJ	VERB=to finish (with kori)	Finished, over; with kori, to finish.	finished;over;done	actions	P	ख़त्म	base form	khatm	Kaam khatam hoise.	0.9	
+band	ADJ	VERB=to close (with kori)	Closed, shut; with kori, to close.	closed;shut;off	actions	H	बंद	base form	bondh	Dukaan band ase.	0.9	
+chalu	ADJ	VERB=to start (with kori)	Running, working; with kori, to start.	running;working;open	actions	H	चालू	base form	chalu	Bus chalu ase.	0.7	
+hamla	NOUN	VERB=to attack (with kori)	An attack; with kori, to attack.	attack;assault;raid	civic	P	हमला	base form,countable,inanimate		Dusman hamla kori ase.	0.8	
+jang	NOUN	VERB=to fight a war (with kori)	War or battle; with kori, to wage war.	war;battle;fight	civic	P	जंग	base form,countable,inanimate		Duyi desh jang kori ase.	0.6	
+pehra	NOUN	VERB=to guard (with kori)	Guard duty or watch; with kori, to keep watch.	guard;watch;patrol	civic	H	पहरा	base form,countable,inanimate	pahra	Fauji raat pehra dise.	0.8	
+mazaa	NOUN	VERB=to have fun (with kori)	Fun or enjoyment; with kori, to have fun.	fun;enjoyment;pleasure	feelings,leisure	P	मज़ा	base form,mass,inanimate	maza	Amikhan bisi mazaa kori ase.	0.85	
+masti	NOUN	VERB=to play around (with kori)	Fun or playful mischief; with kori, to have fun.	fun;playfulness;mischief	leisure,slang	P	मस्ती	base form,mass,inanimate		Bacha khan masti kori ase.	0.8	
+shor	NOUN	VERB=to make noise (with kori)	Noise or uproar; with kori, to make noise.	noise;uproar;racket	culture	P	शोर	base form,mass,inanimate		Bacha khan bisi shor kori ase.	0.8	
+hungama	NOUN	VERB=to create a fuss (with kori)	Uproar or commotion; with kori, to make a fuss.	uproar;commotion;fuss	culture,slang	P	हंगामा	base form,countable,inanimate	hangama	Tai hungama kori ase.	0.75	
+tamasha	NOUN	VERB=to make a scene (with kori)	A show or scene; with kori, to make a fuss.	scene;show;fuss	culture,slang	P	तमाशा	base form,countable,inanimate	tamasa	Tumi tamasha nokoribi.	0.75	
+kharcha	NOUN	VERB=to spend (with kori)	An expense; with kori, to spend money.	expense;cost;spending	money	H	खर्च	base form,countable,inanimate	kharch	Moi bisi kharcha kori ase.	0.85	
+kamai	NOUN	VERB=to earn (with kori)	Earnings or income; with kori, to earn money.	earnings;income;wages	money,work	H	कमाई	base form,mass,inanimate	kamaai	Tai bisi kamai kori ase.	0.85	
+bachat	NOUN	VERB=to save (with kori)	Savings; with kori, to save money.	savings;saving;economy	money	H	बचत	base form,mass,inanimate		Moi bachat kori ase.	0.8	
+sauda	NOUN	VERB=to make a deal (with kori)	A deal or bargain; with kori, to strike a deal.	deal;bargain;transaction	money,work	P	सौदा	base form,countable,inanimate	souda	Tai sauda kori dise.	0.8	
+bhugtan	NOUN	VERB=to pay (with kori)	Payment; with kori, to pay.	payment;paying;settlement	money	H	भुगतान	base form,mass,inanimate	bhugtaan	Moi bhugtan kori dibo.	0.6	
+jama	NOUN	VERB=to deposit (with kori)	Deposit or savings; with kori, to deposit.	deposit;savings;collect	money	P	जमा	base form,mass,inanimate		Moi taka jama kori dilu.	0.8	
+shikar	NOUN	VERB=to hunt (with kori)	Hunting or a hunt; with kori, to hunt.	hunt;hunting;game	nature	P	शिकार	base form,countable,inanimate	shikaar	Tai jungle te shikar kori ase.	0.7	
+safar	NOUN	VERB=to travel (with kori)	A journey; with kori, to travel.	journey;trip;travel	travel	P	सफ़र	base form,countable,inanimate	safr	Moi bisi safar kori ase.	0.7	
+salaam	NOUN	VERB=to greet (with kori)	A greeting or salute; with kori, to greet.	greeting;salute;hello	greetings	P	सलाम	base form,countable,inanimate	salam	Tai moi ke salaam kori dise.	0.8	
+ghoom	NOUN	VERB=to roam or stroll (with kori)	A stroll or tour; with kori, to roam.	stroll;tour;roam	travel,leisure	H	घूम	base form,countable,inanimate	ghum	Amikhan ghoom kori ase.	0.6	
+gaur	NOUN	VERB=to pay attention (with kori)	Attention or notice; with kori, to notice.	attention;notice;heed	feelings	P	ग़ौर	base form,mass,inanimate	gour	Tumi gaur kori dekha ne?	0.6	
+jaanch	NOUN	VERB=to examine (with kori)	Examination or check; with kori, to examine.	check;examination;inspection	civic,education	H	जाँच	base form,countable,inanimate	janch	Doctor jaanch kori ase.	0.8	
+ilaaj	NOUN	VERB=to treat (with kori)	Treatment or cure; with kori, to treat someone.	treatment;cure;remedy	health	P	इलाज	base form,mass,inanimate	ilaj	Tai ilaaj kori ase.	0.85	
+kasam	NOUN	VERB=to swear (with kori)	An oath or vow; with kori, to swear.	oath;vow;promise	feelings	P	क़सम	base form,countable,inanimate	kasom	Moi kasam kori ase.	0.8	
+wada	NOUN	VERB=to promise (with kori)	A promise; with kori, to promise.	promise;vow;pledge	feelings	P	वादा	base form,countable,inanimate	vada	Moi wada kori ase.	0.85	
+dua	NOUN	VERB=to pray (with kori)	A prayer or blessing; with kori, to pray.	prayer;blessing;wish	religion	P	दुआ	base form,countable,inanimate	dooa	Moi tumar bhal dua kori ase.	0.75	
+ishq	NOUN	VERB=to fall in love (with kori)	Romantic love or passion; with kori, to love deeply.	love;passion;romance	feelings	P	इश्क़	base form,mass,inanimate	ishk	Tai tumak ishq kori ase.	0.6	
+mohabbat	NOUN	VERB=to love (with kori)	Love or affection; with kori, to love.	love;affection;fondness	feelings	P	मोहब्बत	base form,mass,inanimate	mohobbat	Tai moi ke mohabbat kori ase.	0.6	
+pasand	NOUN	VERB=to like (with kori)	Liking or choice; with kori, to like something.	liking;choice;preference	feelings	P	पसंद	base form,mass,inanimate		Moi ei gaan pasand kori ase.	0.85	
+naap	NOUN	VERB=to measure (with kori)	A measurement or size; with kori, to measure.	measurement;size;measure	actions,numbers	H	नाप	base form,countable,inanimate	nap	Darji naap kori ase.	0.7	
+badlaav	NOUN	VERB=to change (with kori)	A change; with kori, to change something.	change;alteration;transformation	actions	H	बदलाव	base form,countable,inanimate	badlaav	Amikhan badlaav kori ase.	0.7	
+ijazat	NOUN	VERB=to permit (with kori)	Permission; with kori, to allow.	permission;leave;allowance	civic	P	इजाज़त	base form,mass,inanimate	izazat,ijaazat	Moi tumar ijazat loi ase.	0.8	
+mehnat	NOUN	VERB=to work hard (with kori)	Hard work or effort; with kori, to work hard.	hard work;effort;labour	work	P	मेहनत	base form,mass,inanimate	mehenat	Tai bisi mehnat kori ase.	0.85	
+tajurba	NOUN	VERB=to try out (with kori)	Experience; with kori, to try something out.	experience;trial;knowledge	education	P	तजुर्बा	base form,mass,inanimate	tajuraba	Moi ei kamot tajurba kori ase.	0.6	
+pakad	NOUN	VERB=to catch (with kori)	A grip or catch; with kori, to catch someone.	grip;catch;hold	actions	H	पकड़	base form,countable,inanimate	pokor	Police tai ke pakad kori dise.	0.7	
+dhakka	NOUN	VERB=to push (with kori)	A push or shove; with kori, to push.	push;shove;jolt	actions	H	धक्का	base form,countable,inanimate	dhakkaa	Moi gari ke dhakka dilu.	0.7	
+nakal	NOUN	VERB=to copy (with kori)	A copy or imitation; with kori, to copy.	copy;imitation;mimicry	education	P	नक़ल	base form,countable,inanimate	nokol	Tai exam te nakal kori ase.	0.75	
+bahaana	NOUN	VERB=to make an excuse (with kori)	An excuse or pretext; with kori, to make an excuse.	excuse;pretext;reason	feelings	P	बहाना	base form,countable,inanimate	bahana	Tai bisi bahaana kori ase.	0.8	
+shaq	NOUN	VERB=to doubt (with kori)	Doubt or suspicion; with kori, to doubt.	doubt;suspicion;uncertainty	feelings	P	शक	base form,mass,inanimate	shak	Moi tumar upore shaq kori ase.	0.8	
+yakeen	NOUN	VERB=to be certain (with kori)	Certainty or belief; with kori, to be sure.	certainty;belief;confidence	feelings	P	यकीन	base form,mass,inanimate	yakin	Moi yakeen kori ase.	0.6	
+mazak	NOUN	VERB=to joke or tease (with kori)	A joke or teasing; with kori, to tease someone.	joke;teasing;fun	feelings,slang	P	मज़ाक	base form,mass,inanimate	mazaak,majaak	Tai moi ke mazak kori ase.	0.85	
+jhooth	NOUN	VERB=to lie (with kori)	A lie; with kori, to tell a lie.	lie;falsehood;untruth	feelings	H	झूठ	base form,mass,inanimate	jhuth	Tai jhooth kori ase.	0.7	
+chori	NOUN	VERB=to steal (with kori)	Theft or stealing; with kori, to steal.	theft;stealing;robbery	civic,slang	H	चोरी	base form,countable,inanimate	chorii	Tai chori kori ase.	0.9	
+jeet	NOUN	VERB=to win (with kori)	Victory or a win; with kori, to win.	victory;win;triumph	leisure	H	जीत	base form,countable,inanimate	jit	Amikhan jeet kori dilu.	0.7	
+haar	NOUN	VERB=to lose (with kori)	Defeat or loss; with kori, to lose.	defeat;loss;failure	leisure	H	हार	base form,countable,inanimate		Amikhan haar kori dilu.	0.7	
+dosti	NOUN	VERB=to befriend (with kori)	Friendship; with kori, to befriend someone.	friendship;friendliness;bond	community	P	दोस्ती	base form,mass,inanimate		Tai amar logot dosti kori ase.	0.75	
+pahchaan	NOUN	VERB=to recognise (with kori)	Recognition or identity; with kori, to recognise someone.	recognition;identity;acquaintance	community	H	पहचान	base form,mass,inanimate	pehchan	Moi tumak pahchaan kori ase.	0.7	
+bandobast	NOUN	VERB=to arrange (with kori)	Arrangements; with kori, to make arrangements.	arrangement;provision;setup	work	P	बंदोबस्त	base form,mass,inanimate	bondobost	Moi bandobast kori ase.	0.6	
+istemaal	NOUN	VERB=to use (with kori)	Use or usage; with kori, to use something.	use;usage;application	technology	P	इस्तेमाल	base form,mass,inanimate	istemal	Moi eta istemaal kori ase.	0.7	
+inkar	NOUN	VERB=to refuse (with kori)	A refusal or denial; with kori, to refuse.	refusal;denial;rejection	feelings	P	इनकार	base form,mass,inanimate	inkaar	Tai inkar kori dise.	0.75	
+iqrar	NOUN	VERB=to confess (with kori)	A confession or vow; with kori, to confess.	confession;acknowledgement;vow	feelings	P	इक़रार	base form,mass,inanimate	ikrar	Tai iqrar kori dise.	0.5	
+khushamad	NOUN	VERB=to flatter (with kori)	Flattery; with kori, to flatter someone.	flattery;adulation;praise	feelings	P	ख़ुशामद	base form,mass,inanimate	khushaamad	Tai khushamad kori ase.	0.5	
+zor	NOUN	VERB=to force (with kori)	Force or strength; with kori, to push or insist.	force;strength;pressure	actions	P	ज़ोर	base form,mass,inanimate	jor	Tai zor kori ase.	0.7	
+baat	NOUN	VERB=to talk (with kori)	A word or talk; with kori, to talk or chat.	talk;word;chat	media	H	बात	base form,countable,inanimate	bat	Moi tumar logot baat kori ase.	0.9	
+kabul	NOUN	VERB=to accept (with kori)	Acceptance; with kori, to accept something.	acceptance;agreement;approval	feelings	P	क़बूल	base form,mass,inanimate	kabool	Tai kabul kori dise.	0.6	
+dawat	NOUN	VERB=to invite (with kori)	An invitation or feast; with kori, to invite someone.	invitation;feast;party	culture	P	दावत	base form,countable,inanimate	dawot	Moi tumak dawat kori ase.	0.7	
+salah	NOUN	VERB=to advise (with kori)	Advice; with kori, to advise someone.	advice;counsel;suggestion	community	P	सलाह	base form,countable,inanimate	salaah	Moi tumak salah kori ase.	0.8	
+tasalli	NOUN	VERB=to comfort (with kori)	Comfort or reassurance; with kori, to comfort someone.	comfort;reassurance;solace	feelings	P	तसल्ली	base form,mass,inanimate		Moi tumak tasalli kori ase.	0.6	
+gustakhi	NOUN	VERB=to be rude (with kori)	Rudeness or impertinence; with kori, to be rude.	rudeness;impertinence;disrespect	feelings,slang	P	गुस्ताख़ी	base form,mass,inanimate	gustaakhi	Tumi gustakhi nokoribi.	0.5	
+hukum	NOUN	VERB=to order (with kori)	An order or command; with kori, to order.	order;command;decree	civic	P	हुक्म	base form,countable,inanimate	hukam	Officer hukum dise.	0.7	
+kabza	NOUN	VERB=to occupy (with kori)	Possession or occupation; with kori, to seize.	possession;occupation;seizure	civic	P	क़ब्ज़ा	base form,mass,inanimate	kabja	Tai zameen kabza kori ase.	0.6	
+barbaadi	NOUN	VERB=to destroy (with kori)	Ruin or destruction; with kori, to destroy.	ruin;destruction;devastation	feelings	P	बर्बादी	base form,mass,inanimate	barbaad	Nasha barbaadi kori dise.	0.6	
+nuksaan	NOUN	VERB=to harm (with kori)	Loss or harm; with kori, to harm.	loss;harm;damage	money	P	नुक़सान	base form,mass,inanimate	nuksan,nukshan	Tai amar nuksaan kori dise.	0.75	
+pesh	NOUN	VERB=to present (with kori)	A presentation; with kori, to present or submit.	presentation;submission;offer	work	P	पेश	base form,mass,inanimate	pes	Tai pesh kori dise.	0.5	
+tarakki	NOUN	VERB=to progress (with kori)	Progress or advancement; with kori, to progress.	progress;advancement;development	work	P	तरक़्क़ी	base form,mass,inanimate	tarakee	Tai bisi tarakki kori ase.	0.6	
+tawajjo	NOUN	VERB=to pay attention (with kori)	Attention or care; with kori, to pay attention.	attention;care;heed	feelings	P	तवज्जो	base form,mass,inanimate	tawajo	Tumi tawajjo nokoribi?	0.5	
+shifaarish	NOUN	VERB=to recommend (with kori)	A recommendation; with kori, to recommend someone.	recommendation;referral;support	civic	P	सिफ़ारिश	base form,countable,inanimate	sifarish	Tai moi ke shifaarish kori dise.	0.6	
+tasdeeq	NOUN	VERB=to verify (with kori)	Verification or confirmation; with kori, to verify.	verification;confirmation;endorsement	civic	P	तस्दीक़	base form,mass,inanimate	tasdik	Tai tasdeeq kori dise.	0.5	
+kharid	NOUN	VERB=to buy (with kori)	Purchase or buying; with kori, to buy.	purchase;buying;shopping	money	H	ख़रीद	base form,countable,inanimate		Moi kapor kharid kori dilu.	0.8	
+bikri	NOUN	VERB=to sell (with kori)	Sale or selling; with kori, to sell.	sale;selling;trade	money	H	बिक्री	base form,mass,inanimate		Tai bikri kori ase.	0.75	
+ilzaam	NOUN	VERB=to accuse (with kori)	An accusation; with kori, to accuse someone.	accusation;blame;charge	civic	P	इल्ज़ाम	base form,countable,inanimate	ilzaam	Tai moi ke ilzaam dise.	0.6	
+chanda	NOUN	VERB=to donate (with kori)	A donation or fund; with kori, to donate money.	donation;fund;contribution	community,money	H	चंदा	base form,mass,inanimate		Moi chanda kori dilu.	0.7	
+ailaan	NOUN	VERB=to announce (with kori)	An announcement; with kori, to announce.	announcement;notice;declaration	media	P	ऐलान	base form,countable,inanimate	elaan,elan	Tai ailaan kori dise.	0.6	
+bulaava	NOUN	VERB=to call (with kori)	A call or summons; with kori, to call someone.	call;summons;invitation	media	H	बुलावा	base form,countable,inanimate	bulava	Tai moi ke bulaava kori dise.	0.5	
+pahal	NOUN	VERB=to take the initiative (with kori)	A first move or initiative; with kori, to take the first step.	initiative;first move;start	actions	H	पहल	base form,countable,inanimate		Tai pahal kori dise.	0.5	
+ijaad	NOUN	VERB=to create (with kori)	Creation or invention; with kori, to create.	creation;invention;making	work	P	ईजाद	base form,countable,inanimate		Tai nawa ijaad kori dise.	0.4	
+parwah	NOUN	VERB=to care (with kori)	Care or concern; with kori, to care about someone.	care;concern;regard	feelings	P	परवाह	base form,mass,inanimate	parwa	Tai amar parwah kori ase.	0.7	
+chakkar	NOUN	VERB=to scheme (with kori)	A trick or scheme; with kori, to plot something.	trick;scheme;trouble	slang	H	चक्कर	base form,countable,inanimate		Tai chakkar kori ase.	0.7	
+jadu	NOUN	VERB=to use magic (with kori)	Magic or sorcery; with kori, to cast a spell.	magic;sorcery;spell	culture	P	जादू	base form,mass,inanimate	jaadu	Tai jadu kori dise.	0.6	
+khidmat	NOUN	VERB=to serve (with kori)	Service or help; with kori, to serve someone.	service;help;duty	work	P	ख़िदमत	base form,mass,inanimate	khidmot	Moi tumar khidmat kori ase.	0.6	
+ehtram	NOUN	VERB=to respect (with kori)	Respect or honour; with kori, to respect someone.	respect;honour;esteem	feelings	P	एहतराम	base form,mass,inanimate	ehtaram	Moi tumar ehtram kori ase.	0.5	
+hifazat	NOUN	VERB=to protect (with kori)	Protection or safety; with kori, to protect.	protection;safety;care	civic	P	हिफ़ाज़त	base form,mass,inanimate	hifajat	Police amar hifazat kori ase.	0.6	
+hamdardi	NOUN	VERB=to sympathise (with kori)	Sympathy or compassion; with kori, to show sympathy.	sympathy;compassion;solidarity	feelings	P	हमदर्दी	base form,mass,inanimate		Moi tor hamdardi kori ase.	0.6	
+shauk	NOUN	VERB=to enjoy doing something (with kori)	A hobby or fondness; with kori, to enjoy doing something.	hobby;fondness;liking	leisure	P	शौक़	base form,countable,inanimate	shaukh	Tai bisi shauk kori ase.	0.7	
+tabdeel	NOUN	VERB=to change (with kori)	A change or alteration; with kori, to change something.	change;alteration;replacement	actions	P	तब्दील	base form,mass,inanimate	tabdil	Moi ghor tabdeel kori dilu.	0.6	
+pareshaani	NOUN	VERB=to trouble (with kori)	Trouble or worry; with kori, to trouble someone.	trouble;worry;difficulty	feelings	P	परेशानी	base form,mass,inanimate	pareshani	Moi tumar pareshaani kori dilu.	0.7	
+ishaara	NOUN	VERB=to signal (with kori)	A sign or signal; with kori, to signal.	sign;signal;gesture	media	P	इशारा	base form,countable,inanimate	ishara	Tai mok ishaara kori dise.	0.6	
+kissa	NOUN	VERB=to tell a story (with kori)	A story or tale; with kori, to narrate.	story;tale;narrative	culture	P	किस्सा	base form,countable,inanimate		Tai bisi kissa kori ase.	0.7	
+gapshap	NOUN	VERB=to gossip (with kori)	Gossip or chatter; with kori, to gossip.	gossip;chatter;rumour	slang,community	H	गपशप	base form,mass,inanimate	gappa	Tai bisi gapshap kori ase.	0.75	
+tafteesh	NOUN	VERB=to investigate (with kori)	An investigation or inquiry; with kori, to investigate.	investigation;inquiry;probe	civic	P	तफ़्तीश	base form,countable,inanimate	taftish	Police tafteesh kori ase.	0.6	
+nafrat	NOUN	VERB=to hate (with kori)	Hatred or dislike; with kori, to hate someone.	hatred;dislike;hate	feelings	P	नफ़रत	base form,mass,inanimate		Moi tumak nafrat nokori.	0.7	
+ghabrahat	NOUN	VERB=to panic (with kori)	Panic or nervousness; with kori, to panic.	panic;nervousness;agitation	feelings	P	घबराहट	base form,mass,inanimate		Tai ghabrahat kori ase.	0.5	
+tanqeed	NOUN	VERB=to criticise (with kori)	Criticism; with kori, to criticise.	criticism;critique;censure	feelings	P	तनक़ीद	base form,countable,inanimate	tanqid	Tai moi ke tanqeed kori ase.	0.5	
+sabar	NOUN	VERB=to be patient (with kori)	Patience; with kori, to be patient.	patience;endurance;tolerance	feelings	P	सब्र	base form,mass,inanimate	sabr,sobor	Sabar kori thaka.	0.8	
+rozana	ADV		Daily, every day.	daily;every day;each day	time	P	रोज़ाना	invariable	rozaana,rojana	Moi rozana ghor jai.	0.7	
+taqreeban	ADV		Approximately, roughly.	approximately;roughly;about	numbers	P	तक़रीबन	invariable	takriban,takreeban	Taqreeban dui ghanta lagibo.	0.6	
+mumkin	ADV	ADJ=possible	Possibly, perhaps; if it is possible.	possibly;perhaps;if possible	describing	P	मुमकिन	invariable	mumkin	Mumkin moi ahibo.	0.6	
+baarbaar	ADV		Again and again, repeatedly.	repeatedly;again and again;often	time	P	बारबार	invariable	barbar	Tai baarbaar kotha koi ase.	0.6	
+bharpur	ADV	ADJ=full, abundant	Fully, completely.	fully;completely;abundantly	describing	P	भरपूर	invariable	bharpoor	Pani bharpur ase.	0.5	
+nazdeek	ADV	ADJ=near	Near, close by.	near;close;nearby	places	P	नज़दीक	invariable	nazdik	Ghor nazdeek ase.	0.6	
+tabhi	ADV		Then, only then; that is why.	then;that's why;only then	time	H	तभी	invariable	tobhi	Tabhi moi ahi nai.	0.6	
+barabar	ADV	ADJ=equal, same	Equally; exactly the same.	equally;same;equal	describing	P	बराबर	invariable	barabor	Dui jon barabar ase.	0.6	
+mubarak	INTJ		Congratulations! Best wishes!	congratulations;best wishes;blessings	greetings	P	मुबारक	invariable	mubaarak	Mubarak, bhal hobo!	0.8	
+subhanallah	INTJ		Glory to God! Wonderful!	glory to God;wonderful;amazing	religion	P	सुभानअल्लाह	invariable	subhanalla	Subhanallah, bisi bhal!	0.5	
+alhamdulillah	INTJ		Thanks be to God!	thanks be to God;praise God;thank God	religion	P	अलहमदुलिल्लाह	invariable	alhamdullilah	Alhamdulillah, tai bhal ase.	0.6	
+bismillah	INTJ		In the name of God; let's begin.	in the name of God;let's begin;in God's name	religion	P	बिस्मिल्लाह	invariable	bismilla	Bismillah, ekhon shuru koribo.	0.5	
+hatao	INTJ	VERB=to remove	Remove it! Get rid of it!	remove it;get rid of;take away	actions	H	हटाओ	invariable	hato	Hatao eta!	0.5	
+samjhe	INTJ		Understood? Got it?	understood;got it;you know	slang	H	समझे	invariable	samje	Samjhe? Moi ahibo.	0.6	
+jaanu	INTJ	NOUN=darling	Darling, sweetheart.	darling;sweetheart;dear	slang	P	जानू	invariable	janu	Jaanu, tumi kot aso?	0.5	
+safai	NOUN	VERB=to clean (with kori)	Cleanliness or cleaning; with kori, to clean up.	cleaning;cleanliness;sanitation	home	P	सफ़ाई	base form,mass,inanimate	safaai,safayi	Moi ghor safai kori ase.	0.8	
+kharabi	NOUN	VERB=to damage (with kori)	Damage or defect; with kori, to damage something.	damage;defect;fault	actions	P	ख़राबी	base form,mass,inanimate	kharaabi	Tai gari ke kharabi kori dise.	0.6	
+bigaad	NOUN	VERB=to spoil (with kori)	Spoiling or damage; with kori, to spoil something.	spoiling;damage;ruin	actions	H	बिगाड़	base form,mass,inanimate	bigad	Tai kaam bigaad kori dise.	0.6	
+dakhal	NOUN	VERB=to interfere (with kori)	Interference or intervention; with kori, to interfere.	interference;intervention;meddling	civic	P	दख़ल	base form,mass,inanimate	dakhol	Tai amar kaamot dakhal kori ase.	0.6	
+sawaari	NOUN	VERB=to ride (with kori)	A ride or a seat in a vehicle; with kori, to ride.	ride;transport;passenger	travel	P	सवारी	base form,countable,inanimate	sawari	Moi gari te sawaari kori ase.	0.6	
+gali	NOUN	VERB=to abuse (with kori)	An insult or abuse; with kori, to abuse someone.	insult;abuse;curse	feelings,slang	H	गाली	base form,countable,inanimate	gaali	Tai moi ke gali dise.	0.6	
+shikwa	NOUN	VERB=to complain (with kori)	A complaint or grievance; with kori, to complain.	complaint;grievance;grudge	feelings	P	शिकवा	base form,countable,inanimate		Moi tumar shikwa kori ase.	0.5	
+takleef	NOUN	VERB=to trouble (with kori)	Trouble or pain; with kori, to trouble someone.	trouble;pain;inconvenience	feelings	P	तकलीफ़	base form,countable,inanimate	taklif	Moi tumak takleef kori dilu.	0.7	
+ehtiyaat	NOUN	VERB=to be careful (with kori)	Caution or care; with kori, to be careful.	caution;care;precaution	feelings	P	एहतियात	base form,mass,inanimate	ehtiyat	Ehtiyaat kori jabi.	0.6	
+shukar	NOUN	VERB=to thank (with kori)	Thanks or gratitude; with kori, to thank God.	thanks;gratitude;thankfulness	religion	P	शुक्र	base form,mass,inanimate	shukr	Shukar, tai bhal ase.	0.4	
+hosla	NOUN	VERB=to encourage (with kori)	Courage or encouragement; with kori, to encourage.	courage;encouragement;morale	feelings	P	हौसला	base form,mass,inanimate	hausla	Tai moi ke hosla dise.	0.5	
+sharaarat	NOUN	VERB=to misbehave (with kori)	Mischief or naughtiness; with kori, to misbehave.	mischief;naughtiness;prank	feelings,slang	P	शरारत	base form,countable,inanimate	sharart	Bacha khan sharaarat kori ase.	0.7	
+bahaduri	NOUN	VERB=to show bravery (with kori)	Bravery or heroism; with kori, to show bravery.	bravery;heroism;valour	feelings	H	बहादुरी	base form,mass,inanimate	bahadri	Tai bisi bahaduri kori dise.	0.5	
+himmat	NOUN	VERB=to dare (with kori)	Courage or nerve; with kori, to dare.	courage;nerve;daring	feelings	P	हिम्मत	base form,mass,inanimate	himmot	Tai himmat kori dise.	0.8	
+parda	NOUN	VERB=to cover (with kori)	A curtain or screen; with kori, to cover up.	curtain;screen;cover	home	P	पर्दा	base form,countable,inanimate	pardah	Parda lagai dibi.	0.6	
+tadbeer	NOUN	VERB=to plan (with kori)	A plan or strategy; with kori, to plan.	plan;strategy;measure	work	P	तदबीर	base form,countable,inanimate	tadbir	Moi tadbeer kori ase.	0.5	
+shikast	NOUN	VERB=to defeat (with kori)	A defeat; with kori, to defeat someone.	defeat;loss;rout	leisure,civic	P	शिकस्त	base form,countable,inanimate		Amikhan shikast kori dilu.	0.5	
+fatah	NOUN	VERB=to conquer (with kori)	A victory or conquest; with kori, to conquer.	victory;conquest;triumph	civic	P	फ़तह	base form,countable,inanimate	fateh	Tai fatah kori dise.	0.5	
+takraar	NOUN	VERB=to argue (with kori)	An argument or dispute; with kori, to argue.	argument;dispute;quarrel	community	H	तकरार	base form,countable,inanimate	takrar	Tai moi logot takraar kori ase.	0.6	
+bahaal	NOUN	VERB=to restore (with kori)	Restoration or recovery; with kori, to restore.	restoration;revival;recovery	work	P	बहाल	base form,mass,inanimate	bahal	Tai bahaal kori dise.	0.4	
+saamna	NOUN	VERB=to face (with kori)	Facing or confrontation; with kori, to face something.	facing;confrontation;encounter	actions	H	सामना	base form,countable,inanimate	samna	Amikhan bisi saamna kori ase.	0.6	
+laparwahi	NOUN	VERB=to be careless (with kori)	Carelessness; with kori, to be careless.	carelessness;negligence;neglect	feelings	P	लापरवाही	base form,mass,inanimate	laparvahi	Tumi laparwahi nokoribi.	0.5	
+fareb	NOUN	VERB=to deceive (with kori)	Deception or trickery; with kori, to deceive.	deception;trickery;fraud	feelings,slang	P	फ़रेब	base form,mass,inanimate		Tai fareb kori dise.	0.6	
+tahqiq	NOUN	VERB=to investigate (with kori)	Inquiry or investigation; with kori, to investigate.	inquiry;investigation;probe	civic	P	तहक़ीक़	base form,mass,inanimate	tahkik	Police tahqiq kori ase.	0.5	
+izafa	NOUN	VERB=to add (with kori)	Addition or increase; with kori, to add.	addition;increase;extra	money	P	इज़ाफ़ा	base form,countable,inanimate	izaafa	Tai izafa kori dise.	0.5	
+tarjuma	NOUN	VERB=to translate (with kori)	Translation; with kori, to translate.	translation;interpretation;version	education	P	तर्जुमा	base form,countable,inanimate	tarzuma	Moi tarjuma kori dibo.	0.5	
+gunah	NOUN	VERB=to sin (with kori)	A sin or wrongdoing; with kori, to sin.	sin;wrongdoing;offence	religion	P	गुनाह	base form,countable,inanimate	gunaah	Tai gunah kori ase.	0.5	
+ghalti	NOUN	VERB=to make a mistake (with kori)	A mistake or error; with kori, to err.	mistake;error;fault	actions	P	ग़लती	base form,countable,inanimate	galti	Moi ghalti kori dilu.	0.6	
+kharidari	NOUN	VERB=to shop (with kori)	Shopping or purchase; with kori, to shop.	shopping;purchase;buying	money,leisure	H	ख़रीदारी	base form,mass,inanimate	kharidaari	Amikhan bazaar te kharidari kori ase.	0.6	
+hansi	NOUN	VERB=to laugh (with kori)	Laughter; with kori, to laugh.	laughter;laugh;giggle	feelings	H	हँसी	base form,mass,inanimate	hasi	Tar hansi bhal ase.	0.5	
+fauj	NOUN		An army or the armed forces.	army;armed forces;soldiers	civic	P	फ़ौज	base form,countable,inanimate	fouj	Amar bhai fauj te ase.	0.85	
+sarhad	NOUN		A border between two countries.	border;frontier;boundary	places,civic	P	सरहद	base form,countable,inanimate	sarhed,sarhaad	Sarhad te fauj ase.	0.8	
+chowki	NOUN		A checkpost or a small police or army post.	checkpost;post;station	civic,places	H	चौकी	base form,countable,inanimate	chouki	Chowki te fauji ase.	0.7	
+goli	NOUN		A bullet, or a pill.	bullet;pellet;pill	civic	H	गोली	base form,countable,inanimate		Goli lagise.	0.8	
+bandook	NOUN		A gun or rifle.	gun;rifle;firearm	civic	P	बंदूक़	base form,countable,inanimate	bondok	Fauji bandook loi ase.	0.8	
+barood	NOUN		Gunpowder or explosive powder.	gunpowder;explosive;powder	civic	P	बारूद	base form,mass,inanimate	barud	Barood te aag lagise.	0.6	
+dhamaka	NOUN		An explosion or blast; also a big hit.	explosion;blast;bang	civic,slang	H	धमाका	base form,countable,inanimate	dhamaaka	Dhamaka hoise.	0.8	
+shaheed	NOUN		A martyr who died for a cause.	martyr;hero;martyred	civic	P	शहीद	base form,countable,animate	shahid	Tai desh te shaheed hoise.	0.6	
+mukabla	NOUN		An encounter or confrontation.	encounter;confrontation;match	civic,leisure	P	मुक़ाबला	base form,countable,inanimate	mukabala	Fauji logot mukabla hoise.	0.7	
+nishana	NOUN	VERB=to aim (with kori)	A target or an aim.	target;aim;mark	civic,leisure	P	निशाना	base form,countable,inanimate	nishaan	Tor nishana bhal ase.	0.6	
+salami	NOUN	VERB=to salute (with kori)	A salute.	salute;salutation;tribute	civic	P	सलामी	base form,countable,inanimate	salaami	Fauji salami dise.	0.7	
+lashkar	NOUN		An army or troop.	army;troops;force	civic	P	लश्कर	base form,countable,inanimate	lashkor	Lashkar ahise.	0.6	
+hathiyar	NOUN		A weapon or arms.	weapon;arms;tool	civic	H	हथियार	base form,countable,inanimate	hathiyaar	Hathiyar nokoribi.	0.6	
+morcha	NOUN		A front-line position or trench; also a protest.	front;trench;protest	civic	H	मोर्चा	base form,countable,inanimate	morca	Fauji morcha te ase.	0.6	
+khufiya	ADJ		Secret, or about intelligence work.	secret;hidden;intelligence	civic	P	ख़ुफ़िया	base form	khufia	Khufiya khobor ase.	0.5	
+dhanda	NOUN		A trade or business.	business;trade;occupation	work,money	H	धंधा	base form,countable,inanimate	dhandha	Tar dhanda bhal ase.	0.85	
+karobaar	NOUN		Business or commerce.	business;trade;commerce	work,money	P	कारोबार	base form,mass,inanimate	karobar,kaarobaar	Tar karobaar bisi bhal ase.	0.85	
+dukaan	NOUN		A shop or store.	shop;store;stall	places,money	P	दुकान	base form,countable,inanimate	dukan	Dukaan khola ase.	0.9	
+bazaar	NOUN		A market or bazaar.	market;bazaar;mart	places,money	P	बाज़ार	base form,countable,inanimate	bajar,bazar	Bazaar te bisi manu ase.	0.9	
+udhaar	NOUN	VERB=to lend or borrow (with kori)	Credit or a loan; on credit.	credit;loan;debt	money	H	उधार	base form,mass,inanimate	udhar	Moi tumar pasot udhaar loi ase.	0.85	
+munafa	NOUN		Profit or gain from trade.	profit;gain;earnings	money	P	मुनाफ़ा	base form,mass,inanimate	munafaa	Dukaanot bisi munafa hoise.	0.8	
+byaj	NOUN		Interest charged on money lent.	interest;interest rate;usury	money	H	ब्याज	base form,mass,inanimate	byaaj,biyaj	Byaj bisi ase.	0.7	
+kimat	NOUN		A price or cost.	price;cost;value	money	P	क़ीमत	base form,countable,inanimate	kimot,keemat	Kimat kiman?	0.9	
+rasid	NOUN		A receipt for payment.	receipt;voucher;slip	money	P	रसीद	base form,countable,inanimate	rashid	Rasid lobi.	0.7	
+nakad	NOUN		Cash or ready money.	cash;money;ready cash	money	P	नक़द	base form,mass,inanimate	nokod,nakd	Nakad diba?	0.7	
+kisht	NOUN		An instalment payment.	instalment;installment;part payment	money	P	किस्त	base form,countable,inanimate	kist	Kisht te dibo.	0.7	
+qarz	NOUN		A debt or loan owed.	debt;loan;obligation	money	P	क़र्ज़	base form,mass,inanimate	karz,karj	Moi tor qarz ase.	0.6	
+faayda	NOUN		A benefit or advantage.	benefit;advantage;profit	money	P	फ़ायदा	base form,mass,inanimate	fayda	Etar faayda ki?	0.7	
+paisa	NOUN		Money or cash.	money;cash;coin	money	H	पैसा	base form,mass,inanimate	paise	Mor paisa nai.	0.95	
+chhoot	NOUN		A discount or concession.	discount;concession;rebate	money	H	छूट	base form,countable,inanimate	chhut	Dukaanot chhoot ase.	0.7	
+mazdoori	NOUN		Wages for manual labour.	wages;labour pay;pay	work,money	H	मज़दूरी	base form,mass,inanimate	mazduri	Mazdoori bisi kom.	0.6	
+tankhwah	NOUN		A monthly salary.	salary;pay;wages	work,money	P	तनख़्वाह	base form,countable,inanimate	tankhwa	Tar tankhwah bisi ase.	0.7	
+naukri	NOUN	VERB=to work at a job (with kori)	A job or employment.	job;employment;work	work	P	नौकरी	base form,countable,inanimate	naukari	Tar naukri bhal ase.	0.85	
+zameen	NOUN		Land or ground; property.	land;ground;property	places,money	P	ज़मीन	base form,countable,inanimate	zamin	Zameen bisi ase.	0.7	
+jaayedaad	NOUN		Property or assets.	property;assets;estate	money	P	जायदाद	base form,countable,inanimate	jaydad	Tar jaayedaad bisi ase.	0.5	
+bakaaya	NOUN		Dues or arrears owed.	dues;arrears;outstanding	money	P	बकाया	base form,mass,inanimate	bakaya	Tar bakaaya ase.	0.5	
+parchi	NOUN		A slip or small note.	slip;note;chit	money	H	पर्ची	base form,countable,inanimate	parchi	Parchi lobi.	0.5	
+dalali	NOUN	VERB=to broker (with kori)	Brokerage or commission.	brokerage;commission;agency	money,work	P	दलाली	base form,mass,inanimate	dalaali	Tai dalali kori ase.	0.5	
+ishtehaar	NOUN		An advertisement or notice.	advertisement;ad;notice	media,money	P	इश्तिहार	base form,countable,inanimate	ishtehar	Ishtehaar dekhise.	0.6	
+tijori	NOUN		A safe or strongbox.	safe;strongbox;vault	money	P	तिजोरी	base form,countable,inanimate		Tijori te taka ase.	0.6	
+tarazu	NOUN		A weighing scale or balance.	scales;balance;weighing scale	money,work	P	तराज़ू	base form,countable,inanimate		Dukaanor tarazu bhal ase.	0.6	
+daulat	NOUN		Wealth or riches.	wealth;riches;fortune	money	P	दौलत	base form,mass,inanimate	daulot	Tar bisi daulat ase.	0.6	
+baazi	NOUN	VERB=to bet (with kori)	A bet, wager, or game.	bet;wager;game	leisure	P	बाज़ी	base form,countable,inanimate	bazi	Tai baazi kori ase.	0.6	
+jugaad	NOUN	VERB=to improvise (with kori)	A clever makeshift arrangement.	improvisation;makeshift;workaround	slang	H	जुगाड़	base form,countable,inanimate	jugaar	Tai jugaad kori ase.	0.7	
+bahi	NOUN		A ledger or account book.	ledger;account book;register	money	H	बही	base form,countable,inanimate		Bahi te likhise.	0.4	
+khata	NOUN		An account book or an account.	account;ledger;account book	money	H	खाता	base form,countable,inanimate		Tar khata ase.	0.5	
+maal	NOUN		Goods or merchandise.	goods;merchandise;stock	money,work	P	माल	base form,mass,inanimate		Dukaanot bisi maal ase.	0.6	
+ghotala	NOUN		A scam or fraud.	scam;fraud;scandal	slang,civic	H	घोटाला	base form,countable,inanimate		Bisi bor ghotala hoise.	0.6	
+wajah	NOUN		A reason or cause.	reason;cause;ground	feelings	P	वजह	base form,countable,inanimate	wajha	Kiman wajah?	0.6	
+tarkeeb	NOUN		A method or way of doing something.	method;way;technique	work	P	तरकीब	base form,countable,inanimate	tarkib	Tar tarkeeb bhal ase.	0.4	
+waqt	NOUN		Time, or the right moment.	time;moment;occasion	time	P	वक़्त	base form,mass,inanimate	wakt	Waqt nai.	0.8	
+khoon	NOUN		Blood; also murder.	blood;murder;killing	slang,body	P	ख़ून	base form,mass,inanimate	khun	Khoon hoise.	0.7	
+badla	NOUN	VERB=to take revenge (with kori)	Revenge or retaliation.	revenge;retaliation;vengeance	feelings,slang	H	बदला	base form,countable,inanimate	badlaa	Tai badla kori ase.	0.8	
+saazish	NOUN	VERB=to conspire (with kori)	A conspiracy or plot.	conspiracy;plot;scheme	slang	P	साज़िश	base form,countable,inanimate	sazish	Tai saazish kori ase.	0.6	
+raaz	NOUN		A secret.	secret;mystery;confidence	feelings,media	P	राज़	base form,countable,inanimate	raz	Ei raaz kowa nakoi.	0.7	
+zahar	NOUN		Poison.	poison;venom;toxin	slang	P	ज़हर	base form,mass,inanimate	zohor	Zahar nakhai.	0.5	
+ilaqa	NOUN		An area or locality.	area;locality;region	places,civic	P	इलाक़ा	base form,countable,inanimate	ilaka	Ei ilaqa bisi bhal.	0.6	
+shehar	NOUN		A city or town.	city;town;urban area	places	P	शहर	base form,countable,inanimate	sohor,shohor	Shehar bisi bor.	0.6	
+rasta	NOUN		A road or path.	road;path;way	places,travel	P	रास्ता	base form,countable,inanimate	raasta	Rasta bisi bhal.	0.6	
+gaana	NOUN		A song or music.	song;tune;music	culture,leisure	H	गाना	base form,countable,inanimate	gaan,gana	Tai bhal gaana ase.	0.8	
+naach	NOUN	VERB=to dance (with kori)	A dance.	dance;dancing;performance	leisure,culture	H	नाच	base form,mass,inanimate	nach	Tai naach kori ase.	0.8	
+dhun	NOUN		A tune or melody.	tune;melody;rhythm	media,culture	H	धुन	base form,countable,inanimate		Dhun bhal lagise.	0.6	
+kahani	NOUN		A story or tale.	story;tale;plot	culture,media	H	कहानी	base form,countable,inanimate	kahanee	Kahani bisi bhal ase.	0.8	
+sitara	NOUN		A star or celebrity.	star;celebrity;luminary	culture,media	P	सितारा	base form,countable,inanimate	sitaara	Tai bisi bor sitara ase.	0.6	
+dhamaal	NOUN		Fun, ruckus, or a big party.	fun;ruckus;uproar	leisure,slang	H	धमाल	base form,mass,inanimate	dhamal	Party te bisi dhamaal hoise.	0.6	
+khel	NOUN	VERB=to play (with kori)	A game or sport.	game;play;sport	leisure	H	खेल	base form,countable,inanimate		Amikhan football khel ase.	0.8	
+gazal	NOUN		A lyrical song form.	ghazal;lyric;song	culture	P	ग़ज़ल	base form,countable,inanimate	ghazal	Tai gazal gao.	0.5	
+qawwali	NOUN		A devotional music form.	qawwali;devotional song;music	culture,religion	P	क़व्वाली	base form,countable,inanimate	kawali	Qawwali bisi bhal lagise.	0.4	
+shayari	NOUN	VERB=to recite poetry (with kori)	Poetry or verse.	poetry;verse;poem	culture	P	शायरी	base form,mass,inanimate	shayri	Tai shayari kori ase.	0.6	
+kirdaar	NOUN		A character in a story or film.	character;role;part	media,culture	P	किरदार	base form,countable,inanimate	kirdar	Tar kirdaar bhal ase.	0.6	
+awaaz	NOUN		A voice or sound.	voice;sound;noise	media	P	आवाज़	base form,countable,inanimate	awaz	Tar awaaz bisi bor.	0.8	
+akhbar	NOUN		A newspaper.	newspaper;paper;news	media	P	अख़बार	base form,countable,inanimate	akhabar	Akhbar te likhise.	0.8	
+khabar	NOUN		News or information.	news;information;report	media	P	ख़बर	base form,countable,inanimate	khobor,khabor	Khabar ki?	0.9	
+chitthi	NOUN		A letter or note.	letter;note;message	media	H	चिट्ठी	base form,countable,inanimate	chithi	Chitthi aha.	0.8	
+paigam	NOUN		A message.	message;note;dispatch	media	P	पैग़ाम	base form,countable,inanimate	paigaam	Paigam aha.	0.6	
+tasveer	NOUN		A picture or photograph.	picture;photo;image	media	P	तस्वीर	base form,countable,inanimate	tasir	Tasveer bhal ase.	0.7	
+mehfil	NOUN		A social gathering or party.	gathering;party;assembly	culture	P	महफ़िल	base form,countable,inanimate	mehphil	Mehfil te bisi manu ase.	0.5	
+barat	NOUN		A wedding procession.	wedding procession;wedding party;procession	culture,family	H	बारात	base form,countable,inanimate	baraat	Barat aha.	0.6	
+mehndi	NOUN		Henna, or a henna ceremony.	henna;henna ceremony	culture	P	मेहंदी	base form,mass,inanimate	mehendi	Mehndi lagise.	0.6	
+nikaah	NOUN	VERB=to marry (with kori)	A marriage contract or ceremony.	marriage;nikah;wedding	religion,family	P	निकाह	base form,countable,inanimate	nikah	Tai nikaah kori ase.	0.5	
+rishta	NOUN		A relationship, match, or proposal.	relationship;match;proposal	family,community	P	रिश्ता	base form,countable,inanimate	rista	Tar rishta aha.	0.7	
+zindagi	NOUN		Life or living.	life;living;existence	culture,feelings	P	ज़िंदगी	base form,countable,inanimate	jindagi	Zindagi bhal ase.	0.9	
+kismat	NOUN		Fate or destiny.	fate;destiny;luck	feelings,religion	P	क़िस्मत	base form,countable,inanimate	kismot	Kismat bhal ase.	0.9	
+duniya	NOUN		The world, or the people around.	world;universe;people	places,culture	P	दुनिया	base form,countable,inanimate	dunia	Duniya bisi bor.	0.8	
+dard	NOUN		Pain or sorrow.	pain;ache;sorrow	feelings,health	P	दर्द	base form,mass,inanimate	dord	Mor bisi dard ase.	0.85	
+khwaab	NOUN		A dream.	dream;vision;wish	feelings	P	ख़्वाब	base form,countable,inanimate	khwab	Moi khwaab dekhise.	0.8	
+sapna	NOUN		A dream.	dream;vision;fancy	feelings	H	सपना	base form,countable,inanimate	sopna	Moi sapna dekhise.	0.8	
+ehsaas	NOUN	VERB=to feel (with kori)	A feeling or awareness.	feeling;awareness;sense	feelings	P	एहसास	base form,mass,inanimate	ehsas	Moi tor ehsaas kori ase.	0.7	
+wafa	NOUN		Loyalty or faithfulness.	loyalty;faithfulness;fidelity	feelings	P	वफ़ा	base form,mass,inanimate	vafa	Tar wafa bhal ase.	0.6	
+judaai	NOUN		Separation or parting.	separation;parting;absence	feelings	P	जुदाई	base form,mass,inanimate		Judaai bisi kastokor.	0.5	
+rooh	NOUN		A soul or spirit.	soul;spirit;being	religion,feelings	P	रूह	base form,countable,inanimate	ruh	Tar rooh bhal ase.	0.5	
+aarzoo	NOUN	VERB=to desire (with kori)	A desire or longing.	desire;longing;wish	feelings	P	आरज़ू	base form,countable,inanimate	arzoo,aarzu	Moi tor aarzoo kori ase.	0.5	
+tamanna	NOUN	VERB=to wish (with kori)	A wish or desire.	wish;desire;longing	feelings	P	तमन्ना	base form,countable,inanimate	tamana	Moi tamanna kori ase.	0.5	
+gham	NOUN		Grief or sorrow.	grief;sorrow;sadness	feelings	P	ग़म	base form,mass,inanimate	gom	Tar gham ase.	0.7	
+sukoon	NOUN		Peace of mind or calm.	peace;calm;comfort	feelings	P	सुकून	base form,mass,inanimate	sukun	Mon te sukoon ase.	0.6	
+aansu	NOUN		Tears.	tears;weeping;crying	feelings,body	H	आँसू	base form,countable,inanimate	ansu	Tar aansu aha.	0.7	
+muskaan	NOUN	VERB=to smile (with kori)	A smile.	smile;grin;smirk	feelings	H	मुस्कान	base form,countable,inanimate	muskan	Tar muskaan bisi bhal.	0.5	
+tohfa	NOUN		A gift or present.	gift;present;token	culture	P	तोहफ़ा	base form,countable,inanimate		Tai moi ke tohfa dise.	0.6	
+chauka	NOUN		A boundary hit for four runs in cricket.	boundary;four;four runs	leisure,media	H	चौका	base form,countable,inanimate	chouka	Tai ek chauka marise.	0.6	
+chhakka	NOUN		A six in cricket.	six;six runs;maximum	leisure,media	H	छक्का	base form,countable,inanimate	chhaka	Tai chhakka marise.	0.6	
+maidan	NOUN		A ground or open field.	ground;field;playground	places,leisure	P	मैदान	base form,countable,inanimate	maidaan	Maidan te khel ase.	0.7	
+daav	NOUN	VERB=to bet (with kori)	A turn, or a bet.	turn;bet;wager	leisure	H	दाँव	base form,countable,inanimate	daw	Mor daav ase.	0.6	
+gadbad	NOUN	VERB=to mess up (with kori)	A mess, confusion, or mix-up.	mess;confusion;mix-up	slang	H	गड़बड़	base form,mass,inanimate	gadbod	Kot gadbad hoise?	0.8	
+ghapla	NOUN	VERB=to cheat (with kori)	A scam or cheating.	scam;cheating;fraud	slang	H	घपला	base form,countable,inanimate		Bisi ghapla hoise.	0.5	
+jhol	NOUN		A mess or trouble.	mess;trouble;problem	slang	H	झोल	base form,countable,inanimate		Bisi jhol ase.	0.5	
+dhamki	NOUN	VERB=to threaten (with kori)	A threat or warning.	threat;warning;menace	feelings,slang	H	धमकी	base form,countable,inanimate		Tai dhamki dise.	0.8	
+nautanki	NOUN	VERB=to make a drama (with kori)	Drama or overacting; a fuss.	drama;overacting;fuss	slang,culture	H	नौटंकी	base form,countable,inanimate		Nautanki nokoribi.	0.6	
+chutkula	NOUN		A short witty joke.	joke;witty remark;pun	slang	H	चुटकुला	base form,countable,inanimate		Tar chutkula bisi bhal.	0.6	
+thagi	NOUN	VERB=to cheat (with kori)	Cheating or fraud.	cheating;fraud;trickery	feelings,slang	H	ठगी	base form,mass,inanimate		Tai thagi kori ase.	0.6	
+sharab	NOUN		Alcohol or liquor.	alcohol;liquor;wine	slang,food	P	शराब	base form,mass,inanimate		Tai bisi sharab khai.	0.6	
+nasha	NOUN		Intoxication or addiction.	intoxication;addiction;high	slang,health	P	नशा	base form,mass,inanimate	nesha	Nasha nokoribi.	0.6	
+chhed	NOUN	VERB=to tease (with kori)	Teasing or provocation.	teasing;provocation;pestering	slang	H	छेड़	base form,mass,inanimate		Tai chhed kori ase.	0.5	
+sarkar	NOUN		The government or the state.	government;state;authorities	civic	P	सरकार	base form,countable,inanimate		Sarkar kaam kori ase.	0.9	
+adalat	NOUN		A court of law.	court;tribunal;judiciary	civic	P	अदालत	base form,countable,inanimate	adalot	Tai adalat te gaise.	0.8	
+kanoon	NOUN		A law or rule.	law;rule;regulation	civic	P	क़ानून	base form,countable,inanimate	kanun	Kanoon ar bahar nokoribi.	0.7	
+rishwat	NOUN	VERB=to take a bribe (with kori)	A bribe.	bribe;bribery;kickback	civic	P	रिश्वत	base form,countable,inanimate	rishwot	Rishwat nokoribi.	0.8	
+mulk	NOUN		A country or nation.	country;nation;land	civic,places	P	मुल्क	base form,countable,inanimate		Mulk ar bahar gaise.	0.6	
+jurm	NOUN	VERB=to commit a crime (with kori)	A crime or offence.	crime;offence;wrongdoing	civic	P	जुर्म	base form,countable,inanimate		Tai jurm kori dise.	0.7	
+saza	NOUN	VERB=to punish (with kori)	A punishment or sentence.	punishment;sentence;penalty	civic	P	सज़ा	base form,countable,inanimate	saja	Tai saza pai ase.	0.8	
+thana	NOUN		A police station.	police station;station;police post	civic,places	H	थाना	base form,countable,inanimate	thaana	Thana te gaise.	0.8	
+bandh	NOUN	VERB=to call a shutdown (with kori)	A general strike or shutdown.	strike;shutdown;bandh	civic	H	बंद	base form,countable,inanimate		Aaj bandh ase.	0.9	
+dharna	NOUN	VERB=to protest (with kori)	A sit-in protest.	sit-in;protest;demonstration	civic	H	धरना	base form,countable,inanimate		Manu dharna kori ase.	0.8	
+jalsa	NOUN		A gathering, meeting, or public function.	gathering;meeting;function	civic,culture	P	जलसा	base form,countable,inanimate		Aaj jalsa ase.	0.6	
+jaloos	NOUN		A procession or parade.	procession;parade;march	civic,culture	P	जुलूस	base form,countable,inanimate	julus	Jaloos jai ase.	0.6	
+madrasa	NOUN		An Islamic school.	school;madrasa;seminary	education,religion	P	मदरसा	base form,countable,inanimate		Tai madrasa te pore.	0.5	
+padhai	NOUN	VERB=to study (with kori)	Studying or education.	study;studies;education	education	H	पढ़ाई	base form,mass,inanimate	padhaai	Tai bisi padhai kori ase.	0.85	
+imtihaan	NOUN		An examination or test.	exam;test;examination	education	P	इम्तिहान	base form,countable,inanimate	imtihan	Imtihaan bisi kothin.	0.7	
+taleem	NOUN		Education or teaching.	education;teaching;instruction	education	P	तालीम	base form,mass,inanimate	talim	Taleem bisi bhal.	0.5	
+daftar	NOUN		An office or workplace.	office;workplace;bureau	places,work	P	दफ़्तर	base form,countable,inanimate	daftor	Moi daftar te ase.	0.8	
+mauka	NOUN		An opportunity or chance.	chance;opportunity;occasion	actions	P	मौक़ा	base form,countable,inanimate	mouka	Ei mauka bhal.	0.8	
+zarurat	NOUN		A need or necessity.	need;necessity;requirement	feelings	P	ज़रूरत	base form,countable,inanimate	zaroorot	Mor zarurat ase.	0.8	
+beshak	ADV		Of course, certainly.	of course;certainly;surely	describing	P	बेशक	invariable	beshaq	Beshak, moi ahibo.	0.7	
+ajkal	ADV		Nowadays, these days.	nowadays;these days;at present	time	H	आजकल	invariable		Ajkal bisi garmi ase.	0.7	
+sachchi	INTJ	ADJ=true	Really? Is it true?	really;is it true;truly	slang	H	सच्ची	invariable	sachi	Sachchi? Tumi aha?	0.6	
+bindaas	INTJ	ADJ=carefree	Carefree! Cool!	carefree;cool;fearless	slang	P	बिंदास	invariable	bindas	Bindaas, bhal lagise!	0.5	
+shaandar	INTJ	ADJ=magnificent	Splendid! Wonderful!	splendid;magnificent;wonderful	slang	P	शानदार	invariable	shandar	Shaandar, bhal lagise!	0.6	
+lajawaab	INTJ	ADJ=unmatched, superb	Superb! Matchless!	superb;matchless;excellent	slang	P	लाजवाब	invariable	lajawab	Lajawaab, bhal ase!	0.5	
+yaallah	INTJ		Oh God! Good heavens!	oh God;good heavens;my God	religion	P	या अल्लाह	invariable		Yaallah, kiman hoise?	0.5	
+bemisaal	INTJ	ADJ=unmatched	Matchless! Peerless!	matchless;peerless;unique	slang	P	बेमिसाल	invariable	bemisal	Bemisaal, tai bhal ase!	0.4	
+dekhbhal	NOUN	VERB=to look after (with kori)	Supervision or care; with kori, to look after.	supervision;care;management	home,work	H	देखभाल	base form,mass,inanimate	dekhbhaal	Tai ghor dekhbhal kori ase.	0.6	
+khabardaari	NOUN	VERB=to take care (with kori)	Caution or care; with kori, to take care.	caution;care;vigilance	feelings	H	ख़बरदारी	base form,mass,inanimate	khabardari	Khabardaari kori jabi.	0.4	
+vidai	NOUN	VERB=to say goodbye (with kori)	A farewell or send-off; with kori, to bid farewell.	farewell;send-off;parting	greetings	H	विदाई	base form,countable,inanimate	vidaai,bidai	Moi vidai kori dilu.	0.5	
+bhent	NOUN	VERB=to offer a gift (with kori)	A gift or meeting; with kori, to offer a gift.	gift;offering;meeting	culture	H	भेंट	base form,countable,inanimate	bhet	Moi tumak bhent kori dilu.	0.6	
+imdaad	NOUN	VERB=to help (with kori)	Help or assistance; with kori, to help.	help;assistance;support	actions	P	इमदाद	base form,mass,inanimate	imdad	Tai moi ke imdaad kori dise.	0.4	
+tawaqqo	NOUN	VERB=to expect (with kori)	An expectation or hope; with kori, to expect.	expectation;hope;anticipation	feelings	P	तवक़्क़ो	base form,mass,inanimate	tawaqo	Moi tumar tawaqqo kori ase.	0.4	
+mahal	NOUN		A palace or a large house.	palace;mansion;large house	places,culture	P	महल	base form,countable,inanimate	mohol	Mahal bisi bor.	0.5	
+qila	NOUN		A fort or fortress.	fort;fortress;castle	places,culture	P	क़िला	base form,countable,inanimate	kila	Qila bisi purono.	0.5	
+darbar	NOUN		A royal court or assembly.	court;assembly;royal court	culture,civic	P	दरबार	base form,countable,inanimate	darbaar	Darbar te manu ase.	0.5	
+takht	NOUN		A throne or royal seat.	throne;seat;royal seat	culture	P	तख़्त	base form,countable,inanimate		Takht bor ase.	0.5	
+taaj	NOUN		A crown.	crown;royal crown;diadem	culture	P	ताज	base form,countable,inanimate	taj	Taaj bisi bhal.	0.4	
+tilism	NOUN		A magic spell or mystery.	magic;spell;enchantment	culture	P	तिलिस्म	base form,countable,inanimate		Ei tilism bisi bor.	0.4	
+khazana	NOUN		A treasure or store of wealth.	treasure;hoard;wealth	money,culture	P	ख़ज़ाना	base form,countable,inanimate	khajana	Khazana bisi bor.	0.5	
+mazhab	NOUN		A religion or faith.	religion;faith;creed	religion	P	मज़हब	base form,countable,inanimate		Tar mazhab bhal ase.	0.5	
+rasam	NOUN		A custom or ritual.	custom;ritual;tradition	culture	P	रस्म	base form,countable,inanimate	rasm	Ei rasam bisi bhal.	0.6	
+riwaaz	NOUN		A custom or tradition.	custom;tradition;practice	culture	P	रिवाज	base form,countable,inanimate	riwaj	Riwaaz bisi bhal.	0.6	
+bakshish	NOUN		A tip or a gift of money.	tip;gratuity;alms	money	P	बख़्शीश	base form,countable,inanimate	bakshis	Bakshish dibi.	0.5	
+lalach	NOUN		Greed or temptation.	greed;temptation;desire	feelings	H	लालच	base form,mass,inanimate	lalaach	Tar bisi lalach ase.	0.7	
+dushmani	NOUN		Enmity or hostility.	enmity;hostility;feud	feelings	P	दुश्मनी	base form,mass,inanimate	dusmani	Tar amar logot dushmani ase.	0.6	
+tufaan	NOUN		A storm or cyclone.	storm;cyclone;tempest	nature,weather	P	तूफ़ान	base form,countable,inanimate	tufan	Tufaan aha.	0.5	

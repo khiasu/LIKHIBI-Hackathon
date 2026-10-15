@@ -1,0 +1,191 @@
+thal	NOUN		A large metal plate for serving food.	plate;platter;tray	home,food	A	thal	base form,countable,inanimate		Thal-t bhat ase.	0.75	
+bisona	NOUN		A bed or sleeping mat.	bed;sleeping mat	home	A	bisona	base form,countable,inanimate	bisana;bisonaa	Bisona-t suisi.	0.70	
+balish	NOUN		A pillow for the head.	pillow	home	A	balish	base form,countable,inanimate	bali	Balish-t mundu thoise.	0.75	
+mosari	NOUN		A mosquito net hung over a bed.	mosquito net	home	A	mosari	base form,countable,inanimate	mosoari	Raat-te mosari lagao.	0.70	
+bhit	NOUN		A wall of a house.	wall	home	A	bhit	base form,countable,inanimate	bhitti	Bhit-t chobi ase.	0.70	
+uthan	NOUN		A open courtyard in front of a house.	courtyard;yard;compound	home,places	A	uthan	base form,countable,inanimate		Uthan-t kukura charise.	0.60	
+jhat	NOUN		A broom made of grass or sticks for sweeping.	broom	home	A	jhat	base form,countable,inanimate	jhaat	Jhat diya ghor sap kor.	0.70	
+ukhol	NOUN		A wooden or stone mortar for pounding.	mortar;wooden mortar	home,food	A	ukhol	base form,countable,inanimate	ukhal	Ukhol-t mosla diya kut.	0.70	
+musol	NOUN		A wooden pestle for pounding in a mortar.	pestle	home,food	A	musol	base form,countable,inanimate	mushol;musal	Musol diya masala bat.	0.70	
+chalni	NOUN		A sieve for straining flour or grain.	sieve;strainer	home,food	A	chalni	base form,countable,inanimate	chalani	Chalni diya atta chal.	0.75	
+handi	NOUN		A cooking pot made of metal or clay.	cooking pot;pot;vessel	home,food	A	handi	base form,countable,inanimate	handee	Handi-t bhat ranbo.	0.80	
+chamuc	NOUN		A spoon for eating or serving.	spoon	home,food	A	chamuc	base form,countable,inanimate	chamuch;chamus	Chamuc diya bhat kha.	0.80	
+kop	NOUN		A cup for drinking tea.	cup;mug	home,food	A	kop	base form,countable,inanimate	kap	Kop-t cha dile.	0.75	
+aag	NOUN		Fire or flame.	fire;flame	home,nature	A	aag	base form,mass	aagun	Aag jolise.	0.90	
+angar	NOUN		A glowing coal or ember from a fire.	coal;ember;charcoal	home	A	angar	base form,countable,inanimate	angaar	Angar-t mas deo.	0.75	
+kathi	NOUN		A matchstick or small stick.	matchstick;stick	home	A	kathi	base form,countable,inanimate		Kathi diya aag jolao.	0.60	
+dori	NOUN		A rope or string made of twisted fibre.	rope;string	home,work	A	dori	base form,countable,inanimate	dhori	Dori diya bandhao.	0.80	
+kua	NOUN		A well dug to draw water.	well;water well	home,nature,places	A	kua	base form,countable,inanimate	kuwa	Kua-t pani ase.	0.80	
+joa	NOUN		A wooden yoke for a pair of oxen.	yoke	farming	A	joa	base form,countable,inanimate		Goru-r joa.	0.60	doubtful
+gobor	NOUN		Cow dung used as manure.	dung;manure	farming	A	gobor	base form,mass	gobar	Gobor diya kheti kor.	0.80	
+khoni	NOUN		A digging tool or spade used by farmers.	digging tool;spade	farming,work	A	khoni	base form,countable,inanimate		Khoni diya mati kha.	0.50	doubtful
+kawoi	NOUN		A crow.	crow	nature	A	kawoi	base form,countable,animate	kaowoi	Kawoi-e kakot pai.	0.60	
+murhi	NOUN		Puffed rice.	puffed rice;murmura	food	A	murhi	base form,mass	muri	Murhi-t masala dile.	0.80	
+xaaj	NOUN		Fermented rice beer.	rice beer;beer	food	A	xaaj	base form,mass	saaj;haaj	-	0.60	doubtful
+zu	NOUN		Rice beer or local alcohol made by Naga people.	rice beer;local liquor;zutho	food	L	zu	base form,mass	zhu	Zu bisi ase.	0.85	
+dail	NOUN		Cooked pulses or lentil soup.	dal;lentil soup;pulses	food	A	dail	base form,mass	dal;daal	Dail bhat-t dise.	0.85	
+mangsho	NOUN		Meat.	meat	food	A	mangsho	base form,mass	mangso	Mangsho bisi bhal.	0.85	
+diam	NOUN		An egg of a bird or fowl.	egg	food	A	diam	base form,countable,inanimate	dim	Diam-r bhitor ki ase?	0.80	
+makhon	NOUN		Butter made from cream.	butter	food	A	makhon	base form,mass	makhan	Makhon bhat-t dile.	0.75	
+ikhu	NOUN		Sugarcane.	sugarcane	food,farming	A	ikhu	base form,countable,inanimate	ikku	Ikhu khet-t ase.	0.80	
+kosu	NOUN		Taro, a root vegetable with edible stem and leaves.	taro;colocasia	food,farming	A	kosu	base form,countable,inanimate		Kosu-r paat khabo.	0.85	
+paleng	NOUN		Spinach, a leafy green vegetable.	spinach	food,farming	A	paleng	base form,countable,inanimate	palong	Paleng saak bhal.	0.85	
+morisa	NOUN		Amaranth, a leafy green vegetable.	amaranth;green	food,farming	A	morisa	base form,countable,inanimate	morisha	Morisa saak khabo.	0.85	
+sariyah	NOUN		Mustard seed used for oil and spice.	mustard seed	food,farming	A	sariyah	base form,mass	sorisha;xoriyah	Sariyah tel.	0.75	
+methi	NOUN		Fenugreek leaves or seeds.	fenugreek	food,farming	A	methi	base form,countable,inanimate		Methi diya bhaji.	0.85	
+podina	NOUN		Mint leaves used for chutney and tea.	mint	food,farming	A	podina	base form,countable,inanimate	pudina	Podina chutney.	0.85	
+dhoniya	NOUN		Coriander leaves or seeds.	coriander;cilantro	food,farming	A	dhoniya	base form,countable,inanimate	dhania	Dhoniya kur.	0.85	
+xulpha	NOUN		Dill, a herb with fine leaves.	dill	food,farming	A	xulpha	base form,countable,inanimate	sulpha	-	0.55	doubtful
+tetuli	NOUN		Tamarind fruit used for sour flavour.	tamarind	food,farming	A	tetuli	base form,countable,inanimate	tetoli;tetul	Tetuli diya dal.	0.85	
+guwa	NOUN		Areca nut, chewed with betel leaf.	areca nut;betel nut	food,farming	A	guwa	base form,countable,inanimate	guwaa	Guwa khabo.	0.80	
+kolphul	NOUN		Banana flower, used as a vegetable.	banana flower	food	A	kolphul	base form,countable,inanimate		Kolphul bhaji.	0.80	
+posola	NOUN		Banana stem used as a vegetable.	banana stem	food	A	posola	base form,countable,inanimate	pasola	Posola bhaji.	0.70	
+kathal	NOUN		Jackfruit.	jackfruit	food,farming	A	kathal	base form,countable,inanimate	kothal;kothol	Kathal bisi mitha.	0.90	
+jomir	NOUN		A sour citrus fruit.	citrus;lemon	food,farming	A	jomir	base form,countable,inanimate	jomira	Jomir diya tenga.	0.70	
+dalim	NOUN		Pomegranate fruit.	pomegranate	food,farming	A	dalim	base form,countable,inanimate	dalimb	Dalim khabo.	0.85	
+modhuriam	NOUN		Guava fruit.	guava	food,farming	A	modhuriam	base form,countable,inanimate	modhuri	Modhuriam pakise.	0.85	
+omita	NOUN		Papaya fruit.	papaya	food,farming	A	omita	base form,countable,inanimate		Omita bhal.	0.90	
+thekera	NOUN		Garcinia, a sour fruit used in curries.	garcinia;kokum	food,farming	A	thekera	base form,countable,inanimate	thekra	Thekera diya mas.	0.85	
+meowa	NOUN		Giant granadilla, a passion fruit.	passion fruit	food,farming	A	meowa	base form,countable,inanimate		-	0.50	doubtful
+khezur	NOUN		Date fruit.	date	food,farming	A	khezur	base form,countable,inanimate	khejur	Khezur bhal.	0.60	
+tiyoh	NOUN		Cucumber.	cucumber	food,farming	A	tiyoh	base form,countable,inanimate	tioh;tihu	Tiyoh kha.	0.90	
+phulkobi	NOUN		Cauliflower.	cauliflower	food,farming	A	phulkobi	base form,countable,inanimate	fulkobi	Phulkobi bhaji.	0.90	
+bondhakobi	NOUN		Cabbage.	cabbage	food,farming	A	bondhakobi	base form,countable,inanimate	bandhakobi	Bondhakobi bhaji.	0.90	
+bit	NOUN		Beetroot.	beetroot;beet	food,farming	A	bit	base form,countable,inanimate		Bit-r pitha.	0.80	
+salgum	NOUN		Turnip.	turnip	food,farming	A	salgum	base form,countable,inanimate	salgom	Salgum bhaja.	0.80	
+ulkobi	NOUN		Kohlrabi, a swollen stem vegetable.	kohlrabi	food,farming	A	ulkobi	base form,countable,inanimate	olkobi	Ulkobi bhaji.	0.70	
+mugu	NOUN		Mung bean.	mung bean;green gram	food,farming	A	mugu	base form,countable,inanimate	muga	Mugu dal.	0.85	
+arhor	NOUN		Pigeon pea, a pulse.	pigeon pea;arhar	food,farming	A	arhor	base form,countable,inanimate	arhar;orhor	Arhor dal.	0.80	
+dangbodi	NOUN		Yardlong bean or cowpea.	yardlong bean;cowpea	food,farming	A	dangbodi	base form,countable,inanimate	dangboi	Dangbodi bhaji.	0.70	
+kumura	NOUN		Ash gourd or white gourd.	ash gourd;white gourd	food,farming	A	kumura	base form,countable,inanimate	kumra;kumora	Kumura bhaji.	0.80	
+jika	NOUN		Ridge gourd or sponge gourd.	ridge gourd;sponge gourd	food,farming	A	jika	base form,countable,inanimate	jiga;zika	Jika bhaji.	0.85	
+dhunduli	NOUN		Snake gourd.	snake gourd	food,farming	A	dhunduli	base form,countable,inanimate	dhundoli;dhundul	Dhunduli bhaji.	0.85	
+potol	NOUN		Pointed gourd.	pointed gourd	food,farming	A	potol	base form,countable,inanimate	potal	Potol bhaja.	0.90	
+kunduli	NOUN		Ivy gourd.	ivy gourd	food,farming	A	kunduli	base form,countable,inanimate	kundoli	Kunduli bhaji.	0.75	
+kerela	NOUN		Bitter gourd.	bitter gourd	food,farming	A	kerela	base form,countable,inanimate	kerala	Kerela bhaja.	0.90	
+sozina	NOUN		Drumstick, the pod of moringa.	drumstick;moringa	food,farming	A	sozina	base form,countable,inanimate	sojina	Sozina diya jhol.	0.85	
+kepsikam	NOUN		Capsicum or bell pepper.	capsicum;bell pepper	food,farming	A	kepsikam	base form,countable,inanimate	kepsicum	Kepsikam bhaja.	0.80	
+jaluk	NOUN		Black pepper.	black pepper	food,farming	A	jaluk	base form,mass	jalok;zaluk	Jaluk diya mas.	0.85	
+dalseni	NOUN		Cinnamon.	cinnamon	food,farming	A	dalseni	base form,mass	dalchini;dalcheni	Dalseni chah-t.	0.85	
+elaichi	NOUN		Cardamom.	cardamom	food,farming	A	elaichi	base form,countable,inanimate	elachi;ilachi	Elaichi chah-t.	0.85	
+lawang	NOUN		Clove, a dried flower bud used as spice.	clove	food,farming	A	lawang	base form,countable,inanimate	long;lawong	Lawang bhaji-t.	0.75	
+hing	NOUN		Asafoetida, a pungent spice.	asafoetida	food	A	hing	base form,mass		Hing diya dal.	0.80	
+kutura	NOUN		A dog.	dog	home,nature	A	kutura	base form,countable,animate	kutur	Kutura bhuk.	0.50	doubtful
+kakora	NOUN		A crab.	crab	nature,food	A	kakora	base form,countable,animate	kokora	Kakora pani-t ase.	0.80	
+bong	NOUN		A frog.	frog	nature,food	A	bong	base form,countable,animate	bang	Bong pukhuri-t ase.	0.85	
+muhuri	NOUN		A rat or mouse.	rat;mouse	home,nature	A	muhuri	base form,countable,animate	muhur	Muhuri ghor-t ase.	0.85	
+hoina	NOUN		A deer.	deer	nature	A	hoina	base form,countable,animate	horina	Hoina bon-t ase.	0.70	
+polou	NOUN		A pigeon or dove.	pigeon;dove	nature,food	A	polou	base form,countable,animate	polao	Polou gharo-t ase.	0.80	
+dom	NOUN		A mosquito.	mosquito	nature,home	A	dom	base form,countable,animate		Dom bisi ase.	0.90	
+mouri	NOUN		A honeybee.	honeybee;bee	nature	A	mouri	base form,countable,animate	mauri	Mouri mou dise.	0.80	
+pipori	NOUN		An ant.	ant	nature,home	A	pipori	base form,countable,animate	pipoli	Pipori bisi ase.	0.90	
+makori	NOUN		A spider.	spider	nature,home	A	makori	base form,countable,animate	makuri	Makori jal bonai.	0.85	
+pokhila	NOUN		A butterfly.	butterfly	nature	A	pokhila	base form,countable,animate		Pokhila phul-t ase.	0.80	
+upoi	NOUN		A termite.	termite;white ant	nature,home	A	upoi	base form,countable,animate		Upoi-e kath khai.	0.70	
+katla	NOUN		Catla, a large carp fish.	catla;carp	food,nature	A	katla	base form,countable,animate		Katla mas bisi bhal.	0.90	
+ilish	NOUN		Hilsa, a prized river fish.	hilsa;shad	food,nature	B	ilish	base form,countable,animate	ilisha	Ilish mas bisi mitha.	0.85	
+singi	NOUN		A type of freshwater fish with spines.	spiny fish;catfish	food,nature	A	singi	base form,countable,animate	singhi	Singi mas khai.	0.80	
+pabda	NOUN		A small freshwater catfish.	pabda catfish	food,nature	A	pabda	base form,countable,animate		Pabda mas.	0.75	
+tengra	NOUN		A type of freshwater catfish.	catfish	food,nature	A	tengra	base form,countable,animate		Tengra mas bhal.	0.75	
+borali	NOUN		A small freshwater fish.	small fish	food,nature	A	borali	base form,countable,animate	boroli	Borali mas.	0.60	doubtful
+mohi	NOUN		A buffalo.	buffalo	farming,nature	A	mohi	base form,countable,animate	moh	Mohi-r dudh bisi.	0.85	
+naahor	NOUN		Nahar tree, a tree with fragrant flowers.	nahar tree;ironwood	nature	A	naahor	base form,countable,inanimate	nahor;nahar	Naahor gos bisi bhal.	0.75	
+sewali	NOUN		Night-flowering jasmine.	night jasmine	nature	A	sewali	base form,countable,inanimate	shewali	Sewali phul raat-te phule.	0.80	
+bokul	NOUN		Bakul tree, with fragrant white flowers.	bakul tree;mimusops	nature	A	bokul	base form,countable,inanimate	bakul	Bokul phul sundor.	0.80	
+tulsi	NOUN		Holy basil, a sacred aromatic herb.	holy basil;basil	nature,health	A	tulsi	base form,countable,inanimate	tulosi;tulshi	Tulsi-r gos ghor-t.	0.90	
+bel	NOUN		Wood apple tree or fruit.	wood apple;bael	nature,food	A	bel	base form,countable,inanimate	bael	Bel khabo.	0.80	
+sirish	NOUN		Siris tree with pods.	siris tree;albizia	nature	A	sirish	base form,countable,inanimate	shirish	Sirish gos.	0.60	doubtful
+agor	NOUN		Agar tree, which yields fragrant wood.	agar tree;aloewood	nature	A	agor	base form,countable,inanimate	agaru	Agor gos bhal.	0.70	
+bahgaaz	NOUN		Bamboo shoot used as a vegetable.	bamboo shoot	nature,food	A	bahgaaz	base form,countable,inanimate	bahgaz	-	0.70	
+bangsankur	NOUN		Bamboo shoot, the young tender shoot.	bamboo shoot	food,nature	A	bangsankur	base form,countable,inanimate	bongshankur	Bangsankur bhaji.	0.75	
+roud	NOUN		Sunlight or heat of the sun.	sunlight;sun	nature,weather	A	roud	base form,mass	rod	Roud bisi kora.	0.70	
+suri	NOUN		The sun.	sun	nature	A	suri	base form,countable,inanimate	suruj	Suri uthise.	0.65	
+borokha	NOUN		Rain.	rain	weather	A	borokha	base form,mass	barokha;borsha	Borokha bisi ase.	0.90	
+kuhua	NOUN		Fog or mist.	fog;mist	weather	A	kuhua	base form,mass	kuhuwa;kohua	Kuhua bisi.	0.85	
+bhukomp	NOUN		Earthquake.	earthquake	nature,weather	A	bhukomp	base form,mass	bhukampa	Bhukomp hoise.	0.80	
+baadol	NOUN		Cloud.	cloud	weather	A	baadol	base form,countable,inanimate	badol;baadal	Baadol ase.	0.85	
+ondhar	NOUN		Darkness or night dark.	darkness;dark	weather,nature	A	ondhar	base form,mass	andhar;andar	Ondhar hoise.	0.70	
+nisha	NOUN		Night time.	night	weather	A	nisha	base form,countable,inanimate		Nisha-t suin.	0.50	doubtful
+ajei	NOUN		Grandmother.	grandmother;grandma	family	A	ajei	base form,countable,animate	ajeei;ajai	Ajei-e kahini kohe.	0.85	
+ajah	NOUN		Grandfather.	grandfather;grandpa	family	A	ajah	base form,countable,animate	ajaa	Ajah bisi budha.	0.80	
+putek	NOUN		Son.	son	family	A	putek	base form,countable,animate	putok	Putek ghor-t ase.	0.85	
+jiyoroni	NOUN		Daughter.	daughter	family	A	jiyoroni	base form,countable,animate	jiyori;jiyaroni	Jiyoroni skul-t jay.	0.85	
+burha	NOUN		Old man.	old man;elderly man	family	A	burha	base form,countable,animate	budha	Burha manu ase.	0.85	
+burhi	NOUN		Old woman.	old woman;elderly woman	family	A	burhi	base form,countable,animate	budhi	Burhi ghor-t ase.	0.85	
+bhoriyal	NOUN		Wife.	wife	family	A	bhoriyal	base form,countable,animate	bhariyal	Bhoriyal ghor-t ase.	0.80	
+bhoriya	NOUN		Husband.	husband	family	A	bhoriya	base form,countable,animate	bhariya	Bhoriya kheti-t ase.	0.50	doubtful
+sanduk	NOUN		A wooden box or chest for storing things.	box;chest	home	A	sanduk	base form,countable,inanimate	sandook;sanduq	Sanduk-t kapor thoise.	0.80	
+kapah	NOUN		Cotton plant or raw cotton.	cotton	farming,work	A	kapah	base form,mass	kapaah	Kapah khet-t ase.	0.80	
+sutaa	NOUN		A thread or yarn.	thread;yarn	work	A	sutaa	base form,countable,inanimate		Sutaa bisi.	0.70	
+sakal	NOUN		Morning.	morning	weather	A	sakal	base form,mass	subah	Sakal-e uthu.	0.75	
+dupohor	NOUN		Noon or midday.	noon;midday	weather	A	dupohor	base form,mass	dupur	Dupohor-t bhat khabo.	0.75	
+gadhuli	NOUN		Evening, dusk.	evening;dusk	weather	A	gadhuli	base form,mass	godhuli	Gadhuli-t ghor aah.	0.80	
+bosonta	NOUN		Spring season.	spring	weather	A	bosonta	base form,mass	bosonto	-	0.60	doubtful
+grisma	NOUN		Summer season.	summer	weather	A	grisma	base form,mass	grishmo	-	0.60	doubtful
+sorot	NOUN		Autumn season.	autumn;fall	weather	A	sorot	base form,mass	soroth	-	0.50	doubtful
+aahu	NOUN		Autumn rice, a short-season variety.	autumn rice	farming,food	A	aahu	base form,mass	ahu	Aahu dhan.	0.70	
+sali	NOUN		Winter rice, a main paddy crop.	winter rice	farming,food	A	sali	base form,mass	shali	Sali dhan bisi.	0.70	
+maah	NOUN		A pulse or bean.	pulse;bean	food,farming	A	maah	base form,countable,inanimate	mah	Maah dal.	0.70	
+joba	NOUN		Hibiscus flower.	hibiscus;shoe flower	nature	A	joba	base form,countable,inanimate	jaba	Joba phul.	0.85	
+podum	NOUN		Lotus flower or plant.	lotus	nature,food	A	podum	base form,countable,inanimate	podumi;padum	Podum pukhuri-t.	0.85	
+dhutura	NOUN		Datura, a poisonous flowering plant.	datura;thorn apple	nature	A	dhutura	base form,countable,inanimate	dhuturah;dhutora	Dhutura bish.	0.70	
+kah	NOUN		Wild grass with white flowers that grows on banks.	kash grass;reed grass	nature	A	kah	base form,mass	kash	Kah bil-r pare.	0.75	
+khagori	NOUN		A tall reed grass used for thatch.	reed;tall grass	nature	A	khagori	base form,mass	khagari	-	0.50	doubtful
+akhuni	NOUN		Fermented soybean paste used in Naga cooking.	fermented soybean;soybean paste	food	L	akhuni	base form,mass	axone	Akhuni diya jhol.	0.75	
+anishi	NOUN		Fermented colocasia leaves or stems, a Naga dish.	fermented colocasia	food	L	anishi	base form,mass	anisi	Anishi bhaji.	0.60	doubtful
+kokil	NOUN		A cuckoo bird.	cuckoo	nature	A	kokil	base form,countable,animate	koyal;kokila	Kokil gos-t gaise.	0.80	
+bulbuli	NOUN		A bulbul bird.	bulbul	nature	A	bulbuli	base form,countable,animate	bulbul	Bulbuli gaise.	0.80	
+ghughu	NOUN		A dove or wood pigeon.	dove;pigeon	nature	A	ghughu	base form,countable,animate	ghugu	Ghughu chal-t thakise.	0.75	
+hans	NOUN		A swan or goose.	swan;goose	nature	A	hans	base form,countable,animate	hansa	Hans pukhuri-t.	0.70	
+chingri	NOUN		A prawn or shrimp.	prawn;shrimp	food,nature	B	chingri	base form,countable,animate		Chingri bhaja.	0.85	
+jamuk	NOUN		Black plum or java plum fruit.	black plum;java plum	food,farming	A	jamuk	base form,countable,inanimate	jamu	Jamuk khabo.	0.80	
+xaak	NOUN		A green leafy vegetable.	leafy vegetable;greens	food,farming	A	xaak	base form,countable,inanimate	saak;haak	Xaak khabo.	0.90	
+saak	NOUN		A green leafy vegetable.	leafy vegetable;greens	food,farming	A	saak	base form,countable,inanimate	saag;xaak	Saak bhal lage.	0.90	
+moxondori	NOUN		A small herb with leaves used as a green vegetable.	herb;greens	food,farming	A	moxondori	base form,countable,inanimate		-	0.55	doubtful
+korosi	NOUN		Black nightshade, a leafy vegetable.	black nightshade;nightshade	food,farming	A	korosi	base form,countable,inanimate		Korosi saak khabo.	0.70	
+bhekuri	NOUN		Indian nightshade, a bitter leafy vegetable.	nightshade;bitter vegetable	food,farming	A	bhekuri	base form,countable,inanimate	bhekri	Bhekuri bhaji.	0.75	
+sokola	NOUN		Key lime or small lime fruit.	key lime;small lime	food,farming	A	sokola	base form,countable,inanimate		Sokola tenga diya mas.	0.60	doubtful
+bhedai	NOUN		Stinkvine, a wild leafy herb.	stinkvine;wild herb	food,farming	A	bhedai	base form,countable,inanimate		-	0.50	doubtful
+korphul	NOUN		A fragrant herb chewed with betel nut.	betel herb;herb	food,farming	A	korphul	base form,countable,inanimate	korfol	-	0.60	doubtful
+ghontakoron	NOUN		Rattlebox, a wild plant with pods.	rattlebox;crotalaria	farming,nature	A	ghontakoron	base form,countable,inanimate	ghontakoran	-	0.50	doubtful
+jau	NOUN		Tamarisk tree.	tamarisk	nature	A	jau	base form,countable,inanimate	jaw	-	0.60	doubtful
+sukolati	NOUN		Perilla or shiso herb.	perilla;shiso	food,farming	A	sukolati	base form,countable,inanimate	sukoloti	-	0.65	
+kolful	NOUN		Banana flower used as a vegetable.	banana flower	food,farming	A	kolful	base form,countable,inanimate	kolphul;kolphool	Kolful bhaji.	0.80	
+kaskol	NOUN		Curry banana, a variety of banana.	curry banana;banana	food,farming	A	kaskol	base form,countable,inanimate	kaskal	-	0.60	doubtful
+bhringraj	NOUN		False daisy, a medicinal herb.	false daisy;herb	nature,health	A	bhringraj	base form,countable,inanimate		-	0.70	
+mohanim	NOUN		Margosa or neem tree.	neem;margosa	nature,health	A	mohanim	base form,countable,inanimate		-	0.70	
+sukloti	NOUN		Patchouli, a fragrant herb.	patchouli;herb	food,farming	A	sukloti	base form,countable,inanimate	xukloti	-	0.60	doubtful
+mosundori	NOUN		Fish mint, a herb used in cooking.	fish mint;herb	food,farming	A	mosundori	base form,countable,inanimate	mosondori	-	0.60	doubtful
+bhoira	NOUN		Belleric myrobalan tree and its fruit.	belleric myrobalan;myrobalan	nature,food	A	bhoira	base form,countable,inanimate		-	0.60	doubtful
+puroi	NOUN		Red vine spinach, a leafy green.	red vine spinach;spinach	food,farming	A	puroi	base form,countable,inanimate		Puroi saak bhal.	0.60	doubtful
+kathphula	NOUN		Mushroom.	mushroom	food,farming	A	kathphula	base form,countable,inanimate	kathphul;kathfula	Kathphula bhaji.	0.85	
+ahot	NOUN		Peepal or sacred fig tree.	peepal tree;fig tree;sacred fig	nature	A	ahot	base form,countable,inanimate		-	0.70	
+amrata	NOUN		Hog plum, a sour tropical fruit.	hog plum;ambarella	food,farming	A	amrata	base form,countable,inanimate		-	0.70	
+amlaki	NOUN		Indian gooseberry, a sour fruit used in medicine.	gooseberry;amla	food,farming,health	A	amlaki	base form,countable,inanimate	amlokhi;amloki	-	0.80	
+amora	NOUN		Hog plum or ambarella fruit.	hog plum;ambarella	food,farming	A	amora	base form,countable,inanimate	amra	-	0.60	doubtful
+apel	NOUN		Apple.	apple	food,farming	A	apel	base form,countable,inanimate	apple	-	0.70	
+athiya	NOUN		A type of banana, sweet silk fig banana.	silk fig banana;banana	food,farming	A	athiya	base form,countable,inanimate		-	0.60	doubtful
+baluka	NOUN		A bamboo species.	bamboo;bamboo species	nature,farming	A	baluka	base form,countable,inanimate	balukah	-	0.50	doubtful
+bedana	NOUN		Pomegranate fruit.	pomegranate	food,farming	A	bedana	base form,countable,inanimate	dalim	-	0.50	doubtful
+birina	NOUN		Vetiver grass with fragrant roots.	vetiver;vetiver grass	nature,farming	A	birina	base form,mass	birna	-	0.60	doubtful
+bohot	NOUN		Breadfruit or wild jackfruit.	breadfruit;wild jackfruit	food,farming	A	bohot	base form,countable,inanimate		-	0.50	doubtful
+brahmi	NOUN		Brahmi, a medicinal herb.	brahmi;herb	nature,health	A	brahmi	base form,countable,inanimate		-	0.70	
+debodaru	NOUN		Deodar, a tall cedar tree.	deodar;cedar	nature	A	debodaru	base form,countable,inanimate	debodar;dewdaru	-	0.60	doubtful
+drakhya	NOUN		Grape.	grape	food,farming	A	drakhya	base form,countable,inanimate	dakhya	-	0.50	doubtful
+hijol	NOUN		Barringtonia tree, a tree of wet places.	barringtonia;tree	nature	A	hijol	base form,countable,inanimate	hijal;hendol	-	0.50	doubtful
+horitoki	NOUN		Chebulic myrobalan tree and its fruit.	myrobalan;harad	nature,food	A	horitoki	base form,countable,inanimate	horitaki	-	0.60	doubtful
+ikhyu	NOUN		Sugarcane.	sugarcane	food,farming	A	ikhyu	base form,countable,inanimate	ikhu	-	0.60	doubtful
+jatibah	NOUN		A type of bamboo.	bamboo	nature,farming	A	jatibah	base form,countable,inanimate	jatibaah	-	0.60	doubtful
+joroth	NOUN		Annatto plant, used for red colour.	annatto;lipstick tree	food,farming	A	joroth	base form,countable,inanimate		-	0.50	doubtful
+kalmegh	NOUN		Andrographis, a bitter medicinal herb.	andrographis;bitter herb	nature,health	A	kalmegh	base form,countable,inanimate	kalmeg	-	0.60	doubtful
+komol	NOUN		Lotus plant.	lotus	nature,food	A	komol	base form,countable,inanimate	komal;kumol	-	0.70	
+komolini	NOUN		Lotus flower.	lotus flower	nature	A	komolini	base form,countable,inanimate	komalini	-	0.50	doubtful
+konthal	NOUN		Jackfruit.	jackfruit	food,farming	A	konthal	base form,countable,inanimate	kothal	-	0.60	doubtful
+kordoi	NOUN		Carambola or star fruit.	carambola;star fruit	food,farming	A	kordoi	base form,countable,inanimate	kardoi	-	0.70	
+kornikar	NOUN		Golden shower tree, with yellow flowers.	golden shower tree;cassia	nature	A	kornikar	base form,countable,inanimate		-	0.50	doubtful
+kohuwa	NOUN		Wild sugarcane grass.	wild sugarcane;grass	nature	A	kohuwa	base form,mass	kohuva	-	0.60	doubtful
+kusmando	NOUN		White pumpkin or ash gourd.	white pumpkin;ash gourd	food,farming	A	kusmando	base form,countable,inanimate	kushmando	-	0.50	doubtful
+lesera	NOUN		Cowpea or black-eyed pea.	cowpea;black-eyed pea	food,farming	A	lesera	base form,countable,inanimate	leseri	-	0.70	
+megela	NOUN		A tall cane grass.	cane;tall grass	nature,farming	A	megela	base form,mass	megelah	-	0.50	doubtful
+modhuri	NOUN		Guava fruit.	guava	food,farming	A	modhuri	base form,countable,inanimate	modhuriam	-	0.60	doubtful
+mogu	NOUN		Mung bean, a small green pulse.	mung bean;green gram	food,farming	A	mogu	base form,countable,inanimate	mugu	-	0.70	

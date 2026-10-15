@@ -179,6 +179,7 @@ def _lexicon_report(path: Path, root: Path, corpus_types: frozenset[str]) -> dic
         "exists": path.is_file(),
         "entries": 0,
         "glossed": 0,
+        "verified": 0,
         "pos_tagged": 0,
         "attested_in_corpus": 0,
         "etymology": {},
@@ -194,6 +195,8 @@ def _lexicon_report(path: Path, root: Path, corpus_types: frozenset[str]) -> dic
         gloss = str(entry.get("english_definition") or "").strip()
         if gloss and not _PLACEHOLDER_GLOSS.match(gloss):
             report["glossed"] += 1
+        if entry.get("is_validated"):
+            report["verified"] += 1
         if str(entry.get("pos_category") or "").strip().lower() not in {"", "unknown"}:
             report["pos_tagged"] += 1
         if str(entry.get("lemma") or "").lower() in corpus_types:
@@ -297,10 +300,11 @@ def build_data_health(
         ),
         _check(
             "glossary",
-            "Lexicon entries with English glosses",
-            files["lexicon"]["glossed"],
+            "Lexicon meanings checked by speakers",
+            files["lexicon"]["verified"],
             500,
-            "Gloss the most frequent corpus words first. Leave generated forms out.",
+            "Researched meanings are unverified. Have speakers confirm the most frequent words first, "
+            "on the Contribute page or in lexicon_review_queue.tsv.",
         ),
         _check(
             "eval_runs",

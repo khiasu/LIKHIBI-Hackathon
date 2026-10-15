@@ -1,0 +1,94 @@
+boshi	VERB		To sit.	sit;sit down	body	A	বহি	citation form	bosh	Tui ei thai boshi.	0.85	
+randhi	VERB		To cook.	cook;prepare food	food	A	ৰান্ধি	citation form	randh	Mai bhat randhise.	0.9	
+asi	VERB		To be; to exist; to stay.	be;exist;stay;have	actions	A	asi	citation form	as	Mui ghoro asi.	0.8	
+dei	VERB		To give.	give;hand over	actions	A	dei	citation form	dia;di	Tomak taka dei.	0.9	
+xuni	VERB		To hear; to listen.	hear;listen	body,community	A	xuni	citation form	suni;shuni	Mui xuni thaki.	0.85	
+gaji	VERB		To grow.	grow;sprout	nature	A	gaji	citation form	goj	Gos gaji ase.	0.75	
+chahi	VERB		To farm; to cultivate.	farm;cultivate	farming	A	chahi	citation form	chah	Bapu khet chahi.	0.7	
+khoni	VERB		To dig.	dig;excavate	farming	A	khoni	citation form	khon	Mati khoni.	0.8	
+kadhi	VERB		To take out; to pull out.	take out;pull out;extract	actions	A	kadhi	citation form	kadh	Gaadi-ta kadhi dibi.	0.7	
+jali	VERB		To burn.	burn;be on fire	home	A	jali	citation form	jol;joli	Kath jali ase.	0.85	
+bhuji	VERB		To roast.	roast;toast	food	A	bhuji	citation form	bhuj	Chana bhuji dibi.	0.75	
+siji	VERB		To boil; to cook by boiling.	boil;simmer	food	A	siji	citation form	sij	Alu siji dibi.	0.8	
+boti	VERB		To grind.	grind;crush	food	A	boti	citation form	bot	Masala boti dibi.	0.7	
+dhali	VERB		To pour.	pour;spill	food,home	A	dhali	citation form	dhal	Chah dhali dibi.	0.8	
+meli	VERB		To mix.	mix;stir;blend	food	A	meli	citation form	mil	Masala meli dibi.	0.8	
+chopi	VERB		To chop; to hack.	chop;hack	food	A	chopi	citation form	chop	Pitaka chopi dibi.	0.6	doubtful
+tepi	VERB		To roast; to scorch.	roast;scorch	food	A	tepi	citation form		Chana tepi dibi.	0.5	doubtful
+chusi	VERB		To suck.	suck;sip	food,body	A	chusi	citation form	chus	Bhau chusi khai.	0.6	
+gili	VERB		To swallow.	swallow;gulp	food,body	A	gili	citation form	gil	Bhat gili lobi.	0.8	
+koraai	VERB		To make (someone) do; to get done.	cause to do;get done	actions	A	koraai	citation form	korai;korwai	Tai kaam koraai.	0.8	
+xunai	VERB		To tell; to make hear.	inform;make hear	community	A	xunai	citation form	shunai	Mak xunai dibi.	0.7	
+suwai	VERB		To put to sleep.	lull;put to sleep	body	A	suwai	citation form	shuwai;xuwai	Bacha suwai.	0.6	
+boshai	VERB		To seat; to make sit.	seat;make sit	body	A	boshai	citation form	boshao	Mehman boshai dibi.	0.6	
+bhengai	VERB		To break (something) on purpose.	break;smash	actions	A	bhengai	citation form	bhangai	Mui bhengai dim.	0.6	
+hoai	VERB		To cause to happen.	cause;make happen	actions	A	hoai	citation form	hoao	Ki hoai?	0.4	doubtful
+khedi	VERB		To chase; to drive away.	chase;drive away	actions	A	khedi	citation form	khed	Kukur khedi dibi.	0.8	
+theli	VERB		To push.	push;shove	actions	A	theli	citation form	thel	Gaadi theli dibi.	0.8	
+jonmi	VERB		To be born.	be born;arise	health	A	jonmi	citation form	jonm	Mui Dimapur-t jonmi.	0.7	
+ghami	VERB		To sweat.	sweat;perspire	body,health	A	ghami	citation form	gham	Garam-t mui ghami gei.	0.8	
+hapi	VERB		To pant; to breathe heavily.	pant;breathe hard	body,health	A	hapi	citation form	hap	Dourat hapi gei.	0.6	
+sohi	VERB		To endure; to bear.	endure;bear;tolerate	feelings	A	sohi	citation form	soh	Mui sohi nopare.	0.7	
+kahi	VERB		To cough.	cough	health	A	kahi	citation form	kah	Bhal kahi ase.	0.7	
+henchi	VERB		To sneeze.	sneeze	health	A	henchi	citation form	hench	Hench chi ahise.	0.6	
+suwi	VERB		To sleep; to lie down.	sleep;lie down	body	A	শুই	citation form	shui;xui	Bacha suwi ase.	0.85	
+tapi	VERB		To heat; to get hot.	heat;make hot	weather	A	tapi	citation form	tap	Ghoror chal tapi ase.	0.6	
+gondhi	VERB		To smell.	smell;sniff	body	A	gondhi	citation form	gondh	Phul-ta gondhi dekh.	0.7	
+bhalpai	VERB		To like; to love.	like;love	feelings	A	bhalpai	citation form	bhalpa	Mui tumak bhalpai.	0.8	
+jhulai	VERB		To swing.	swing;rock	leisure	A	jhulai	citation form	jhulao	Bacha jhulai.	0.7	
+jhuli	VERB		To hang.	hang;dangle	home	A	jhuli	citation form	jhul	Kapra jhuli ase.	0.6	
+dourai	VERB		To run.	run;race	actions	A	dourai	citation form	dour	Bacha dourai gei.	0.85	
+phuri	VERB		To roam; to travel around.	roam;travel;wander	travel	A	phuri	citation form	phur	Mui Assam-t phuri ase.	0.7	
+peli	VERB		To throw.	throw;toss	actions	A	peli	citation form	pel	Pathar peli nadibi.	0.8	
+anai	VERB		To bring.	bring;fetch	actions	A	anai	citation form	ana;ani	Pani anai dibi.	0.8	
+lepi	VERB		To smear; to plaster.	smear;plaster;wipe	home	A	lepi	citation form	lep	Gharor bhit lepi dibi.	0.7	
+sophai	VERB		To clean; to tidy.	clean;tidy	home	A	sophai	citation form	sopha;sofai	Ghar sophai dibi.	0.7	
+gori	VERB		To build; to make.	build;construct;make	home,work	A	gori	citation form	gorh	Ghor gori dibi.	0.7	
+chindi	VERB		To tear.	tear;rip	clothing,actions	A	chindi	citation form	chind	Kapor chindi gel.	0.7	
+saji	VERB		To dress up; to prepare.	dress;prepare;decorate	clothing,home	A	saji	citation form	soj	Tai nijok sajise.	0.6	
+biki	VERB		To sell.	sell;market	money	A	biki	citation form	bik	Tai maach biki.	0.85	
+dhari	VERB		To borrow.	borrow;take on credit	money	A	dhari	citation form	dhar	Mui taka dhari nisu.	0.7	
+bhagi	VERB		To divide; to share.	divide;share	money,work	A	bhagi	citation form	bhag	Taka bhagi lobi.	0.7	
+guchi	VERB		To gather; to arrange.	gather;collect;arrange	home	A	guchi	citation form	guch	Phul guchi lobi.	0.7	
+goti	VERB		To gather.	gather;collect	community	A	goti	citation form	got;gotai	Manuh goti ase.	0.6	doubtful
+magi	VERB		To beg; to ask for.	beg;ask for	community	A	magi	citation form	mag	Mui taka magi nisu.	0.7	
+sodhi	VERB		To ask; to inquire.	ask;inquire	community	A	sodhi	citation form	sudh;sodh	Tai ki sodhise?	0.8	
+chinhori	VERB		To shout; to yell.	shout;yell	community	A	chinhori	citation form	chinhor;chinghor	Tai chinhori ase.	0.8	
+lori	VERB		To hurry; to rush.	hurry;rush	actions	A	lori	citation form	lor	Lori kor.	0.7	
+jiri	VERB		To rest.	rest;relax	body	A	jiri	citation form	jir	Thoka jiri lobi.	0.7	
+puji	VERB		To worship.	worship;pray to	religion	A	puji	citation form	puj	Mandir-t puji kori.	0.8	
+thandai	VERB		To cool; to make cold.	cool;chill	weather	A	thandai	citation form	thanda;thandai	Pani thandai dibi.	0.6	doubtful
+borokhi	VERB		To rain.	rain	weather	A	borokhi	citation form	borokh;borokhun	Ajir borokhi ase.	0.85	
+lamphi	VERB		To jump; to leap.	jump;leap	actions	A	lamphi	citation form	lamph;lamp	Bacha lamphi dei.	0.6	doubtful
+khujli	VERB		To scratch.	scratch;itch	body	A	khujli	citation form	khujuwa	Mui khujli ase.	0.7	
+kamri	VERB		To bite.	bite;nip	body	A	kamri	citation form	kamor;kamro	Kukurye kamri dise.	0.8	
+kanpi	VERB		To shiver; to tremble.	shiver;tremble	health	A	kanpi	citation form	kanp	Jaar-t kanpi ase.	0.7	
+chikuti	VERB		To pinch.	pinch;nip	body	A	chikuti	citation form	chikut	Bhoi chikuti dise.	0.6	
+sachi	VERB		To shave; to scrape.	shave;scrape	body,home	A	sachi	citation form	sach	Dari sachi dibi.	0.6	
+khonsi	VERB		To poke; to prod.	poke;prod	actions	A	khonsi	citation form	khonsa	Tai khonsi dise.	0.6	
+anki	VERB		To draw; to sketch.	draw;sketch	education,leisure	A	anki	citation form	anka;ank	Chitra anki dibi.	0.7	
+ancori	VERB		To grab; to snatch.	grab;snatch	actions	A	ancori	citation form	ancora	Tai bag ancori nise.	0.5	doubtful
+lekhi	VERB		To write (formal).	write	education	A	lekhi	citation form	lekh	Tai lekhi.	0.5	doubtful
+lekhai	VERB		To cause to write; to record.	make write;record	education	A	lekhai	citation form	lekhai	Naam lekhai dibi.	0.5	doubtful
+aanki	VERB		To draw a picture.	draw;paint;sketch	leisure,education	A	aanki	citation form	aanka	Chobi aanki dibi.	0.5	doubtful
+bhusi	VERB		To rub; to scrub.	rub;scrub	home	A	bhusi	citation form	bhus	Bhaat-ta bhusi dibi.	0.5	doubtful
+chiki	VERB		To flash; to glitter.	flash;glitter;shine	nature	A	chiki	citation form	chik	Bijuli chiki gol.	0.5	doubtful
+dhoni	VERB		To boil over; to spill.	boil over;spill	food	A	dhoni	citation form	dhon	Chah dhoni gel.	0.5	doubtful
+ghisi	VERB		To rub; to grind (by rubbing).	rub;grind	home	A	ghisi	citation form	ghis	Chandan ghisi dibi.	0.5	doubtful
+gosi	VERB		To wash the body; to rub clean.	rub clean;scrub	home,health	A	gosi	citation form	gosh	Gaa gosi nahi.	0.5	doubtful
+kheki	VERB		To spit out.	spit out	body	A	kheki	citation form	khek	Bhat kheki dile.	0.5	doubtful
+lowai	VERB		To make take.	make take;cause to take	actions	A	lowai	citation form	lowa	Taka lowai dibi.	0.5	doubtful
+maari	VERB		To hit hard.	hit hard	actions	A	maari	citation form	mar	Tai maari dise.	0.5	doubtful
+moni	VERB		To think; to meditate.	think;meditate	feelings	A	moni	citation form	mon	Mui moni kori.	0.5	doubtful
+ngoni	VERB		To gather strength.	gather strength	body	A	ngoni	citation form	ngon	Tai ngoni ase.	0.4	doubtful
+pheri	VERB		To return.	return;come back	travel	A	pheri	citation form	pher	Mui pheri ahi.	0.6	
+phukuri	VERB		To puff; to blow out.	puff;blow out	actions	A	phukuri	citation form	phukur	Chaki phukuri dibi.	0.5	doubtful
+pithi	VERB		To mark with paste.	mark;smear	religion	A	pithi	citation form	pith	Kopal-t pithi dibi.	0.4	doubtful
+rowai	VERB		To cry out loud.	wail;cry out	feelings	A	rowai	citation form	row	Bacha rowai ase.	0.5	doubtful
+sokhai	VERB		To dry up.	dry up	nature	A	sokhai	citation form	sok	Pani sokhai gel.	0.5	doubtful
+tholi	VERB		To stop; to halt.	stop;halt	actions	A	tholi	citation form	thol	Gaadi tholi gel.	0.5	doubtful
+tuki	VERB		To peck; to poke.	peck;poke	actions	A	tuki	citation form	tuk	Kukurye tuki dise.	0.5	doubtful
+xuwai	VERB		To make sleep.	make sleep;lull	body	A	xuwai	citation form	shuwai	Bacha xuwai.	0.5	doubtful
+xukai	VERB		To dry.	dry	farming	A	xukai	citation form	shuka;xuka	Kapra xukai dibi.	0.5	doubtful
+xukhi	VERB		To be dry; to dry up.	be dry;dry up	nature	A	xukhi	citation form	shukh	Pukhuri xukhi gel.	0.5	doubtful
+xoi	VERB		To spread out; to dry in sun.	spread out;sun dry	farming	A	xoi	citation form	xoi	Dhan xoi dibi.	0.4	doubtful

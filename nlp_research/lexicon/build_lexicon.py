@@ -26,6 +26,16 @@ Annotations, each with its method recorded:
     register         scripture, everyday or both, from which sources attest the word
     display form     capitalised names (Jisu, Khrista) learned from mid-sentence capitals
 
+Two further blocks grow the lexicon past what the sources attest, each marked as such:
+    researched       research shards (datasets/raw/vocabulary/research/, checked by
+                     validate_research.py): everyday English and Hindi loanwords and
+                     everyday words, plus definitions, alternative parts of speech, domains,
+                     origins and usage examples for words already listed. Each row says
+                     whether a web page supports it ("web-verified") or not ("model-annotated").
+    derived          regular forms of known verb roots (kor- + -ise), -khan plurals of nouns
+                     and te written attached to nouns of place and time (ghorte), generated
+                     only to fill the lexicon up to its target size and kept off the keyboard.
+
 Nothing here is marked verified: a speaker verifies entries with the review file.
 
     python -m nlp_research.lexicon.build_lexicon
@@ -43,6 +53,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from nlp_research.lexicon.closed_class import CLOSED_CLASS, ENGLISH_BOILERPLATE, HINDI_FUNCTION_WORDS, NAGA_PROPER_NOUNS
+from nlp_research.lexicon.validate_research import RESEARCH_DIR, check_row
 from nlp_research.prediction.build_keyboard_assets import REPO_ROOT, sentences
 from nlp_research.prediction.evaluate_keyboard import builtin_words
 from nlp_research.preprocessing.tokenizer import NagameseTokenizer
@@ -59,6 +70,42 @@ VOCAB_DIR = REPO_ROOT / "datasets" / "raw" / "vocabulary"
 VOCAB_FILES = ("regional_nagamese_glossary.txt", "additional_nagamese_vocab.txt", "english_hindi_loanwords.txt")
 NT_SOURCE = "isv-nagamese-nt"
 KEYBOARD_SOURCE = "likhibi-keyboard"
+TARGET_ENTRIES = 20000
+
+# Final shares of the lexicon by origin: native Nagamese (Assamese-based, Naga languages) dominates,
+# then everyday English loanwords, then every other loan stratum and names together.
+ORIGIN_SHARES = {"native": 0.68, "english": 0.22, "other": 0.10}
+
+# Origin-based caps on what goes into the pool the shares are drawn from.
+# These limit how many BASE (non-derived) researched words of each origin are kept.
+# Derived forms have their own caps inside derive_forms().
+MAX_ENGLISH_BASE = 2000      # top everyday English loanwords only
+MAX_HINDI_BASE = 1200         # Hindi + Persian-Arabic via Hindi
+MAX_ENGLISH_DERIVED = 2000    # -khan plurals and X-kori compounds from English roots
+MAX_NON_NAGAMESE_DERIVED = 3000  # total non-Nagamese derived forms
+
+# Essential names to keep (everything else biblical/proper gets dropped unless attested in corpus)
+KEEP_NAMES = frozenset({
+    "jisu", "khrista", "jerusalem", "kohima", "dimapur", "nagaland", "india", "assam",
+    "manipur", "meghalaya", "mizoram", "arunachal", "tripura", "sikkim", "myanmar",
+    "bangladesh", "delhi", "kolkata", "guwahati", "shillong", "mumbai", "bengal",
+    "peter", "paul", "mary", "john", "moses", "david", "abraham", "matthew",
+    "mark", "luke", "james", "timothy", "titus", "philemon", "jude",
+    "israel", "egypt", "rome", "greece", "asia", "europe", "africa", "america",
+    "japan", "china", "korea", "nepal", "bhutan", "thailand",
+    "mokokchung", "zunheboto", "wokha", "tuensang", "phek", "kiphire", "longleng",
+    "peren", "mon", "noklak", "tseminyu", "pfutsero", "meluri", "niuland", "shamator",
+    "chumoukedima", "senapati",
+})
+
+_ENGLISH_ORIGINS = frozenset({"English loanword"})
+_HINDI_ORIGINS = frozenset({"Hindi loanword", "Hindi loanword (to check)", "Persian-Arabic via Hindi"})
+_NAGAMESE_ORIGINS = frozenset({"Nagamese", "Assamese", "Naga languages", ""})
+
+
+def origin_bucket(origin: str) -> str:
+    """native, english or other (Hindi, Persian-Arabic, Bengali, Sanskrit loans and names)."""
+    return "native" if origin in _NAGAMESE_ORIGINS else "english" if origin in _ENGLISH_ORIGINS else "other"
 
 # Section headings (lowercased, matched by keyword) -> domain tag.
 DOMAIN_KEYWORDS = [
@@ -126,6 +173,16 @@ class Entry:
     glosses: list = field(default_factory=list)
     canonical: str = ""
     variants: list = field(default_factory=list)
+    pos_alternatives: list = field(default_factory=list)
+    definition: str = ""
+    definition_method: str = ""
+    usage_example: str = ""
+    source_form: str = ""
+    register: str = ""
+    note: str = ""
+    research: dict | None = None
+    research_only: bool = False
+    everyday: bool = False
 
 
 def fold(word: str) -> str:
@@ -263,6 +320,348 @@ def load_glosses() -> dict[str, list[dict]]:
     return found
 
 
+def _score_research_row(row: dict) -> float:
+    """Score a researched word for how likely it is to be used in everyday Nagamese.
+
+    Higher = more likely to keep. Used to rank English/Hindi words and keep only top N.
+    """
+    score = float(row.get("confidence", 0.5))
+    # Boost everyday register words
+    if row.get("register") == "everyday":
+        score += 0.3
+    # Boost words with web verification
+    if row.get("method") == "web-verified":
+        score += 0.2
+    # Boost words in high-frequency domains
+    high_freq_domains = {"food", "education", "health", "travel", "money", "home", "slang", "technology", "work"}
+    if set(row.get("domains", [])) & high_freq_domains:
+        score += 0.15
+    # Penalise very long words (obscure dictionary terms)
+    if len(row.get("word", "")) > 12:
+        score -= 0.3
+    return score
+
+
+def read_research(research_dir: Path = RESEARCH_DIR) -> tuple[list[tuple[str, dict]], list[tuple[str, dict]], int]:
+    """(shard name, row) for new words and for annotations of listed words, and the number of invalid rows skipped.
+
+    Rows that fail validate_research.check_row are skipped, so a half-finished shard
+    never puts an empty field into the lexicon.
+
+    NEW words from English and Hindi origins are scored and capped at MAX_ENGLISH_BASE
+    and MAX_HINDI_BASE respectively, keeping only the most everyday/useful words.
+    """
+    all_new_rows: list[tuple[str, dict]] = []
+    enrich_rows: list[tuple[str, dict]] = []
+    skipped = 0
+    for path in sorted(research_dir.glob("*.jsonl")):
+        target = all_new_rows if path.name.startswith("new_") else enrich_rows
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            try:
+                row = json.loads(line)
+            except json.JSONDecodeError:
+                skipped += 1
+                continue
+            if check_row(row):
+                skipped += 1
+                continue
+            target.append((path.stem, row))
+
+    # Cap new English and Hindi words by keeping only the top-scoring ones.
+    english_new = [(s, r) for s, r in all_new_rows if r.get("origin", "") in _ENGLISH_ORIGINS]
+    hindi_new = [(s, r) for s, r in all_new_rows if r.get("origin", "") in _HINDI_ORIGINS]
+    other_new = [(s, r) for s, r in all_new_rows if r.get("origin", "") not in _ENGLISH_ORIGINS | _HINDI_ORIGINS]
+
+    english_new.sort(key=lambda x: _score_research_row(x[1]), reverse=True)
+    hindi_new.sort(key=lambda x: _score_research_row(x[1]), reverse=True)
+
+    capped_english = english_new[:MAX_ENGLISH_BASE]
+    capped_hindi = hindi_new[:MAX_HINDI_BASE]
+    skipped += len(english_new) - len(capped_english) + len(hindi_new) - len(capped_hindi)
+
+    new_rows = other_new + capped_english + capped_hindi
+    return new_rows, enrich_rows, skipped
+
+
+# Regular verb endings used to fill the lexicon up to its target: (ending, negated, features).
+# Only consonant-final roots are inflected; vowel-final ones (ja-, kha-) are irregular
+# (jabo, not jaibo), so they keep just their attested forms.
+DERIVED_VERB_FORMS = [
+    ("e", False, "present, habitual"), ("ise", False, "past"), ("ibo", False, "future"),
+    ("ibi", False, "imperative, future (you)"), ("ibole", False, "infinitive, purpose"),
+    ("ikena", False, "having done"), ("ile", False, "conditional, when"), ("isile", False, "past perfect"),
+    ("a", False, "verbal noun, participle"), ("i", False, "citation form, non-finite"),
+    ("e", True, "negative, present"), ("ibo", True, "negative, future"), ("ibi", True, "negative, imperative"),
+    # Negatives the New Testament attests (nakora, nakori, nakoribole, nakorile, nakorikena); na- + -ise is not.
+    ("a", True, "negative, verbal noun"), ("i", True, "negative, non-finite"), ("ibole", True, "negative, infinitive"),
+    ("ile", True, "negative, conditional"), ("ikena", True, "negative, having done"),
+]
+DERIVED_EXAMPLES = {
+    "present, habitual": "Tai hodai {w}.", "past": "Tai kali {w}.", "future": "Moi kali {w}.",
+    "imperative, future (you)": "Tumi etu {w}.", "infinitive, purpose": "Moi {w} ahise.",
+    "having done": "{W} ghor te jabo.", "conditional, when": "Tumi {w} bhal hobo.",
+    "past perfect": "Tai age {w}.", "verbal noun, participle": "Etu {w} kaam ase.",
+    "citation form, non-finite": "Moi {w} ase.", "negative, present": "Tai {w}.",
+    "negative, future": "Moi {w}.", "negative, imperative": "Tumi {w}.",
+    "negative, verbal noun": "Etu {w} kaam ase.", "negative, non-finite": "Moi {w} thakibo.",
+    "negative, infinitive": "Tai {w} koise.", "negative, conditional": "Tumi {w} kineka hobo?",
+    "negative, having done": "{W} ghor te ahise.",
+}
+# Verbs in -ai (bonai, dikhai, sikhai, khai, pai) inflect on the stem before -ai; every ending
+# here is attested in the New Testament (bonaise, sikhabo, dikhabi, sikhabole, nadikhai).
+DERIVED_AI_FORMS = [
+    ("aise", False, "past"), ("abo", False, "future"), ("abi", False, "imperative, future (you)"),
+    ("abole", False, "infinitive, purpose"), ("aikena", False, "having done"), ("aile", False, "conditional, when"),
+    ("ai", True, "negative, non-finite"), ("abo", True, "negative, future"), ("abi", True, "negative, imperative"),
+    ("abole", True, "negative, infinitive"), ("aile", True, "negative, conditional"), ("aikena", True, "negative, having done"),
+]
+_VOWELS = set("aeiou")
+LOCATIVE_DOMAINS = {"places", "home", "travel", "education", "work", "religion", "time", "nature", "body"}
+
+
+def _first_gloss(e: Entry) -> str:
+    if e.glosses:
+        return e.glosses[0]["english"]
+    return e.definition.rstrip(".") if e.definition else e.word
+
+
+def apply_research(e: Entry, row: dict) -> None:
+    """Fill an entry from its research row without overriding stronger evidence.
+
+    Research replaces only a weak tag (a projection with under 60% of the votes, or a
+    list heading's guess); hand-tagged function words, verb paradigms and names stay,
+    and a research tag that disagrees with them becomes an alternative.
+    """
+    method = row["method"]
+    replaceable = e.pos == "Unknown" or e.pos_confidence < 0.6 or e.pos_method == "domain of a curated word list"
+    alternatives = list(row.get("pos_alternatives") or [])
+    if replaceable:
+        e.pos, e.pos_method, e.pos_confidence = row["pos"], f"researched ({method})", float(row["confidence"])
+    elif row["pos"] != e.pos:
+        alternatives.insert(0, {"tag": row["pos"], "gloss": row["english_definition"]})
+    seen = {e.pos}
+    e.pos_alternatives = []
+    for alt in alternatives:
+        if alt["tag"] not in seen:
+            seen.add(alt["tag"])
+            e.pos_alternatives.append({"tag": alt["tag"], "gloss": alt["gloss"]})
+    e.definition, e.definition_method = row["english_definition"], method
+    known = {g["english"].lower() for g in e.glosses}
+    for gloss in row["glosses"]:
+        if gloss.lower() not in known and len(e.glosses) < 4:
+            known.add(gloss.lower())
+            e.glosses.append({"english": gloss, "method": f"research ({method})"})
+    e.domains.update(row["domains"][:3])
+    e.origin = row["origin"]
+    if not e.morphology or e.morphology == "simple stem (no affix)":
+        e.morphology = row["morphology"]
+    if not e.features:
+        e.features = list(row["features"])
+    e.usage_example, e.source_form = row["usage_example"], row["source_form"]
+    e.register = row["register"]
+    if row.get("flag"):
+        e.note = f"{row['flag']}: {row.get('note', '')}".strip(": ")
+    for variant in row.get("variants") or []:
+        if variant != e.word and variant not in e.variants:
+            e.variants.append(variant)
+
+
+def derive_forms(entries: dict[str, Entry], needed: int) -> list[Entry]:
+    """Up to `needed` regular forms that no source lists.
+
+    PRIORITY ORDER (70/20/10 redistribution):
+    1. Nagamese/Assamese verb paradigms (all 13 forms per root, most frequent first)
+    2. Nagamese/Assamese noun -khan plurals
+    3. Nagamese locative -te attached forms
+    4. English/Hindi -khan plurals (CAPPED at MAX_ENGLISH_DERIVED for English)
+    5. English/Hindi locative -te forms (only if still under cap)
+
+    This ensures Nagamese-origin derived forms dominate the lexicon.
+    """
+    def weight(e: Entry) -> tuple:
+        return (-e.nt_count, -e.keyboard_weight, -(e.research or {}).get("confidence", 0), e.word)
+
+    made: list[Entry] = []
+    taken = set(entries)
+    # Track how many non-Nagamese derived forms we produce
+    non_nag_derived = 0
+    eng_derived = 0
+
+    def add(form: str, base: Entry, root: str, morphology: str, features: list, pos: str, definition: str, gloss: str, example: str) -> bool:
+        nonlocal non_nag_derived, eng_derived
+        if form in taken or not re.match(r"^[a-z]{2,}$", form):
+            return False
+        # Enforce origin-based caps on derived forms
+        origin = base.origin
+        if origin in _ENGLISH_ORIGINS:
+            if eng_derived >= MAX_ENGLISH_DERIVED:
+                return False  # skip, don't count toward total
+            eng_derived += 1
+            non_nag_derived += 1
+        elif origin not in _NAGAMESE_ORIGINS:
+            if non_nag_derived >= MAX_NON_NAGAMESE_DERIVED:
+                return False
+            non_nag_derived += 1
+        taken.add(form)
+        d = Entry(form)
+        d.root, d.morphology, d.features = root, morphology, features
+        d.pos, d.pos_method, d.pos_confidence = pos, f"derived from {base.word}", 0.7
+        d.definition, d.definition_method = definition, "derived from root"
+        d.glosses = [{"english": gloss, "method": "derived from root"}]
+        d.domains, d.origin, d.source_form = set(base.domains), base.origin, base.source_form or base.word
+        d.register, d.usage_example = base.register or "everyday", example
+        d.sources = [{"name": "derived-from-root", "root": base.word}]
+        d.noisy_only = False
+        made.append(d)
+        return len(made) >= needed
+
+    # ── Step 1: Nagamese/Assamese verb paradigms FIRST ──
+    roots: dict[str, Entry] = {}
+    for e in sorted(entries.values(), key=weight):
+        if e.pos != "VERB" or e.note:
+            continue
+        if e.root and e.root != e.word and "+ -" in e.morphology and "-khan" not in e.morphology:
+            root = e.root
+        elif e.word.endswith("i") and "+" not in e.morphology:
+            root = e.word[:-1]
+        else:
+            continue
+        if len(root) >= 2 and root[-1] not in _VOWELS and re.match(r"^[a-z]+$", root):
+            citation = entries.get(root + "i")
+            roots.setdefault(root, citation if citation is not None and citation.pos == "VERB" else e)
+    if needed <= 0:
+        return made
+
+    # Split roots by origin: Nagamese first, then others
+    nag_roots = {r: e for r, e in roots.items() if e.origin in _NAGAMESE_ORIGINS}
+    other_roots = {r: e for r, e in roots.items() if e.origin not in _NAGAMESE_ORIGINS}
+
+    # Derive from Nagamese roots first (the bulk of the 70%)
+    for root, base in sorted(nag_roots.items(), key=lambda item: weight(item[1])):
+        gloss = _first_gloss(base)
+        for ending, negated, meaning in DERIVED_VERB_FORMS:
+            form = ("na" if negated else "") + root + ending
+            features = [meaning]
+            if add(form, base, root, f"{'na- + ' if negated else ''}{root}- + -{ending} ({meaning})", features, "VERB",
+                   f"{meaning.capitalize()} form of {base.word} ('{gloss}').", f"{gloss} ({meaning})",
+                   DERIVED_EXAMPLES[meaning].format(w=form, W=form.capitalize())):
+                return made
+
+    # ── Step 1b: Nagamese -ai verbs ──
+    ai_verbs = [e for e in entries.values() if e.pos == "VERB" and not e.note and e.origin in _NAGAMESE_ORIGINS
+                and re.match(r"^[a-z]*[aeiou][a-z]*ai$", e.word) and "+" not in e.morphology]  # not ja-i, kha-i, pa-i
+    for base in sorted(ai_verbs, key=weight):
+        stem, gloss = base.word[:-2], _first_gloss(base)
+        for ending, negated, meaning in DERIVED_AI_FORMS:
+            form = ("na" if negated else "") + stem + ending
+            if add(form, base, base.word, f"{'na- + ' if negated else ''}{stem}- + -{ending} ({meaning})", [meaning], "VERB",
+                   f"{meaning.capitalize()} form of {base.word} ('{gloss}').", f"{gloss} ({meaning})",
+                   DERIVED_EXAMPLES[meaning].format(w=form, W=form.capitalize())):
+                return made
+
+    # ── Step 2: Nagamese noun -khan plurals ──
+    nag_nouns = [e for e in entries.values()
+                 if e.pos == "NOUN" and e.origin in _NAGAMESE_ORIGINS
+                 and not e.word.endswith("khan") and "mass" not in e.features and not e.note
+                 and (e.research or {}).get("confidence", 1) >= 0.5]
+    nag_nouns.sort(key=lambda e: ("animate" not in e.features, "countable" not in e.features) + weight(e))
+    for base in nag_nouns:
+        form, gloss = base.word + "khan", _first_gloss(base)
+        example = f"{form.capitalize()} ahise." if "animate" in base.features else f"{form.capitalize()} ghor te ase."
+        if add(form, base, base.word, f"{base.word} + -khan (plural)", ["plural"], "NOUN",
+               f"Plural of {base.word} ('{gloss}').", f"{gloss} (plural)", example):
+            return made
+
+    # ── Step 3: Nagamese locative -te ──
+    nag_settings = [e for e in entries.values()
+                    if e.pos == "NOUN" and e.origin in _NAGAMESE_ORIGINS
+                    and e.domains & LOCATIVE_DOMAINS and not e.note and not e.word.endswith(("te", "khan"))
+                    and (e.research or {}).get("confidence", 1) >= 0.5]
+    for base in sorted(nag_settings, key=weight):
+        form, gloss = base.word + "te", _first_gloss(base)
+        if add(form, base, base.word, f"{base.word} + te (attached postposition)", ["attached te", "locative"], "NOUN",
+               f"In, at or to {base.word} ('{gloss}'), with the postposition te written attached.", f"in, at {gloss}",
+               f"Moi {form} ase." if base.domains & {"places", "home", "travel", "education", "work", "religion"} else f"Etu {form} ase."):
+            return made
+
+    # ── Step 4: Non-Nagamese verb paradigms (capped) ──
+    for root, base in sorted(other_roots.items(), key=lambda item: weight(item[1])):
+        gloss = _first_gloss(base)
+        for ending, negated, meaning in DERIVED_VERB_FORMS:
+            form = ("na" if negated else "") + root + ending
+            features = [meaning]
+            if add(form, base, root, f"{'na- + ' if negated else ''}{root}- + -{ending} ({meaning})", features, "VERB",
+                   f"{meaning.capitalize()} form of {base.word} ('{gloss}').", f"{gloss} ({meaning})",
+                   DERIVED_EXAMPLES[meaning].format(w=form, W=form.capitalize())):
+                return made
+
+    # ── Step 5: Non-Nagamese noun -khan plurals (capped) ──
+    other_nouns = [e for e in entries.values()
+                   if e.pos == "NOUN" and e.origin not in _NAGAMESE_ORIGINS
+                   and not e.word.endswith("khan") and "mass" not in e.features and not e.note
+                   and (e.research or {}).get("confidence", 1) >= 0.5]
+    other_nouns.sort(key=lambda e: ("animate" not in e.features, "countable" not in e.features) + weight(e))
+    for base in other_nouns:
+        form, gloss = base.word + "khan", _first_gloss(base)
+        example = f"{form.capitalize()} ahise." if "animate" in base.features else f"{form.capitalize()} ghor te ase."
+        if add(form, base, base.word, f"{base.word} + -khan (plural)", ["plural"], "NOUN",
+               f"Plural of {base.word} ('{gloss}').", f"{gloss} (plural)", example):
+            return made
+
+    # ── Step 6: Non-Nagamese locative -te (if still needed) ──
+    other_settings = [e for e in entries.values()
+                      if e.pos == "NOUN" and e.origin not in _NAGAMESE_ORIGINS
+                      and e.domains & LOCATIVE_DOMAINS and not e.note and not e.word.endswith(("te", "khan"))
+                      and (e.research or {}).get("confidence", 1) >= 0.5]
+    for base in sorted(other_settings, key=weight):
+        form, gloss = base.word + "te", _first_gloss(base)
+        if add(form, base, base.word, f"{base.word} + te (attached postposition)", ["attached te", "locative"], "NOUN",
+               f"In, at or to {base.word} ('{gloss}'), with the postposition te written attached.", f"in, at {gloss}",
+               f"Moi {form} ase." if base.domains & {"places", "home", "travel", "education", "work", "religion"} else f"Etu {form} ase."):
+            return made
+    return made
+
+
+STATUS_ORDER = {"attested": 0, "curated": 1, "candidate": 2, "researched": 3, "derived": 4}
+
+
+def apply_origin_shares(kept: list[tuple[str, "Entry", str]], target: int) -> tuple[list, list[tuple[str, str, str]]]:
+    """Keep at most `target` entries split by ORIGIN_SHARES, and the rejected rest.
+
+    Within a bucket, attested words come first, then curated, candidate, researched and derived
+    ones; doubtful research comes last of its status. If there are too few native words for their
+    share, the other buckets shrink with them, so the shares hold at a smaller size.
+    """
+    buckets: dict[str, list] = defaultdict(list)
+    for index, item in enumerate(kept):
+        buckets[origin_bucket(item[1].origin)].append((index, item))
+    def rank(item: tuple[str, Entry, str]) -> float:
+        word, e, status = item
+        if e.register == "slang" and status in ("candidate", "researched"):
+            return 1.5  # slang is everyday speech that written sources rarely show
+        if e.origin in ("Biblical name", "Proper name") and word not in KEEP_NAMES and e.nt_count < 10:
+            return 2.5  # rare scripture names after everyday loanwords
+        return STATUS_ORDER[status]
+
+    for items in buckets.values():
+        items.sort(key=lambda x: (rank(x[1]), bool(x[1][1].note), -x[1][1].nt_count, -x[1][1].keyboard_weight,
+                                  -(x[1][1].research or {}).get("confidence", 0), x[0]))
+    total = min(target, int(len(buckets["native"]) / ORIGIN_SHARES["native"]))
+    caps = {name: round(total * share) for name, share in ORIGIN_SHARES.items()}
+    caps["native"] = total - caps["english"] - caps["other"]
+    selected, rejected = [], []
+    for name, items in buckets.items():
+        cap = caps.get(name, 0)
+        selected += items[:cap]
+        rejected += [(item[0], "; ".join(s["name"] for s in item[1].sources) or "derived-from-root",
+                      f"over the {name} share ({ORIGIN_SHARES[name]:.0%} of {total})") for _, item in items[cap:]
+                     if item[2] != "derived"]
+    selected.sort(key=lambda x: x[0])
+    return [item for _, item in selected], rejected
+
+
 DECISION_COLUMNS = ("word", "decision", "correct_pos", "correct_gloss", "note", "reviewer", "date")
 
 
@@ -294,7 +693,20 @@ def collect_decisions(reviewer: str) -> dict[str, dict]:
     return decisions
 
 
-def build(reviewer: str = "speaker") -> dict:
+# What "filled" means for each annotated field, reported in lexicon_stats.json.
+FILLED_CHECKS = {
+    "pos": lambda r: r["pos_category"] != "Unknown",
+    "english_definition": lambda r: bool(r["english_definition"]),
+    "gloss_candidates": lambda r: bool(r["gloss_candidates"]),
+    "domains": lambda r: bool(r["domains"]),
+    "etymology_origin": lambda r: r["etymology_origin"] != "unknown",
+    "morphology": lambda r: bool(r["morphology"]),
+    "features": lambda r: bool(r["features"]),
+    "usage_example": lambda r: bool(r["usage_example"]),
+}
+
+
+def build(reviewer: str = "speaker", target: int = TARGET_ENTRIES) -> dict:
     tokenizer_word = re.compile(r"^[a-z]{2,}$")
     decisions = collect_decisions(reviewer)
     entries: dict[str, Entry] = {}
@@ -348,6 +760,28 @@ def build(reviewer: str = "speaker") -> dict:
             if pos_hint and kind == "nagamese" and not e.section_pos:
                 e.section_pos = pos_hint
 
+    # Everyday evidence from the sources themselves, before research gives every word a domain.
+    for e in entries.values():
+        e.everyday = bool(e.keyboard_weight or e.domains)
+
+    # Research shards: annotations for listed words, and new words (the first shard to list a word wins).
+    new_rows, enrich_rows, skipped_research = read_research()
+    for shard, row in enrich_rows:
+        if row["word"] in entries and entries[row["word"]].research is None:
+            entries[row["word"]].research = row
+    for shard, row in new_rows:
+        word = row["word"]
+        if word in entries:
+            if entries[word].research is None:
+                entries[word].research = row
+            continue
+        e = entry(word)
+        e.research, e.research_only, e.noisy_only = row, True, False
+        # Only a capitalised form is a display form: it marks the word as a name.
+        display = row.get("display") or ""
+        e.display = display if display != word and display.lower() == word else ""
+        e.sources.append({"name": f"web-research:{shard}", "method": row["method"], "urls": row.get("source_urls") or []})
+
     # Part of speech: hand-tagged function words, then verb paradigms, then projection, then list domains.
     from nlp_research.translation.bank import DEFAULT_DATASETS_DIR, load_examples
 
@@ -396,8 +830,14 @@ def build(reviewer: str = "speaker") -> dict:
                         break
         if not e.glosses and word in glosses:
             e.glosses = glosses[word][:2]
+        if e.research:
+            apply_research(e, e.research)
         if not e.origin:
             e.origin = "Nagamese" if e.nt_count or e.keyboard_weight else ""
+        if not e.morphology:
+            e.morphology = "simple stem (no affix)"
+        if not e.features:
+            e.features = ["base form"] if e.pos in ("NOUN", "VERB", "ADJ", "PROPN", "Unknown") else ["invariable"]
 
     # Spelling variants: the most frequent spelling in each fold group is the headword.
     groups: dict[str, list[str]] = defaultdict(list)
@@ -408,7 +848,7 @@ def build(reviewer: str = "speaker") -> dict:
             continue
         members.sort(key=lambda w: (-entries[w].nt_count, -entries[w].keyboard_weight, w))
         head = members[0]
-        entries[head].variants = members[1:]
+        entries[head].variants = members[1:] + [v for v in entries[head].variants if v not in members]
         for other in members[1:]:
             entries[other].canonical = head
 
@@ -429,8 +869,17 @@ def build(reviewer: str = "speaker") -> dict:
             if decision.get("correct_pos"):
                 e.pos, e.pos_method, e.pos_confidence = decision["correct_pos"], "verified by a speaker", 1.0
             verified[word] = decision
+        # Filter out obscure biblical/proper names (keep only essential ones and those attested in corpus)
+        if e.origin in ("Biblical name", "Proper name") and not e.nt_count and word not in KEEP_NAMES:
+            rejected.append((word, "; ".join(s["name"] for s in e.sources), "obscure name, not in KEEP_NAMES and not attested in corpus"))
+            continue
         if e.nt_count:
             status = "attested"
+        elif e.research_only:
+            if word in HINDI_FUNCTION_WORDS:
+                rejected.append((word, "; ".join(s["name"] for s in e.sources), "Hindi function word, not Nagamese"))
+                continue
+            status = "researched"
         elif e.noisy_only:
             in_scraped = any(s.get("kind") == "scraped" for s in e.sources)
             if word in HINDI_FUNCTION_WORDS:
@@ -445,10 +894,27 @@ def build(reviewer: str = "speaker") -> dict:
         statuses[status] += 1
         kept.append((word, e, status))
 
-    kept.sort(key=lambda item: (-item[1].nt_count, -item[1].keyboard_weight, item[0]))
+    # Derived forms join the pool after everything a source lists; the origin shares then pick
+    # the lexicon from it, so a word a source lists always beats a derived one of its bucket.
+    if target:
+        for e in derive_forms({word: e for word, e, _ in kept}, target):
+            kept.append((e.word, e, "derived"))
+        kept, share_rejected = apply_origin_shares(kept, target)
+        rejected.extend(share_rejected)
+        names = {word for word, _, _ in kept}
+        for _, e, _ in kept:
+            if e.canonical and e.canonical not in names:
+                e.canonical = ""
+    statuses = Counter(status for _, _, status in kept)
+
+    kept.sort(key=lambda item: (STATUS_ORDER[item[2]] > 2, -item[1].nt_count, -item[1].keyboard_weight, STATUS_ORDER[item[2]], item[0]))
     records = []
     for index, (word, e, status) in enumerate(kept, start=1):
-        register = "both" if e.nt_count and (e.keyboard_weight or e.domains) else "scripture" if e.nt_count else "everyday"
+        if status in ("researched", "derived"):
+            register = e.register or "everyday"
+        else:
+            register = "both" if e.nt_count and e.everyday else "scripture" if e.nt_count else "everyday"
+        speaker_gloss = (verified.get(word) or {}).get("correct_gloss", "")
         records.append({
             "id": f"LKB-{index:05d}",
             "lemma": word,
@@ -456,19 +922,24 @@ def build(reviewer: str = "speaker") -> dict:
             "root": e.root or word,
             "pos_category": e.pos,
             "pos": {"tag": e.pos, "method": e.pos_method, "confidence": e.pos_confidence},
+            "pos_alternatives": e.pos_alternatives,
             "morphology": e.morphology,
             "features": e.features,
-            "english_definition": (verified.get(word) or {}).get("correct_gloss", ""),  # only a speaker-verified meaning
+            "english_definition": speaker_gloss or e.definition,
+            "definition_method": "verified by a speaker" if speaker_gloss else e.definition_method,
             "gloss_candidates": e.glosses,
+            "usage_example": e.usage_example,
             "frequency_count": e.nt_count,
             "keyboard_weight": e.keyboard_weight,
             "register": register,
             "etymology_origin": e.origin or "unknown",
+            "source_form": e.source_form or word,
             "domains": sorted(e.domains),
             "canonical": e.canonical or word,
             "orthographic_variants": e.variants,
             "sources": e.sources,
             "status": status,
+            "note": e.note,
             "is_validated": word in verified,
             "verified_by": (verified.get(word) or {}).get("reviewer") or None,
         })
@@ -476,28 +947,35 @@ def build(reviewer: str = "speaker") -> dict:
     LEXICON_DIR.mkdir(parents=True, exist_ok=True)
     LEXICON_JSON.write_text(json.dumps(records, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     with LEXICON_TSV.open("w", encoding="utf-8", newline="") as handle:
-        handle.write("id\tword\tdisplay\tstatus\tpos\tpos_method\troot\tmorphology\tgloss_candidates\tnt_count\tkeyboard_weight\tregister\torigin\tdomains\tcanonical\tvariants\tsources\n")
+        handle.write("id\tword\tdisplay\tstatus\tpos\tpos_method\tpos_alternatives\troot\tmorphology\tfeatures\tenglish_definition"
+                     "\tdefinition_method\tgloss_candidates\tusage_example\tnt_count\tkeyboard_weight\tregister\torigin\tsource_form"
+                     "\tdomains\tcanonical\tvariants\tsources\tnote\n")
         for r in records:
-            handle.write("\t".join([
-                r["id"], r["lemma"], r["display"], r["status"], r["pos_category"], r["pos"]["method"], r["root"],
-                r["morphology"], "; ".join(g["english"] for g in r["gloss_candidates"]), str(r["frequency_count"]),
-                str(r["keyboard_weight"]), r["register"], r["etymology_origin"], ",".join(r["domains"]),
-                r["canonical"], ",".join(r["orthographic_variants"]), "; ".join(s["name"] for s in r["sources"]),
+            handle.write("\t".join(str(v).replace("\t", " ").replace("\n", " ") for v in [
+                r["id"], r["lemma"], r["display"], r["status"], r["pos_category"], r["pos"]["method"],
+                ",".join(a["tag"] for a in r["pos_alternatives"]), r["root"], r["morphology"], ",".join(r["features"]),
+                r["english_definition"], r["definition_method"], "; ".join(g["english"] for g in r["gloss_candidates"]),
+                r["usage_example"], r["frequency_count"], r["keyboard_weight"], r["register"], r["etymology_origin"],
+                r["source_form"], ",".join(r["domains"]), r["canonical"], ",".join(r["orthographic_variants"]),
+                "; ".join(s["name"] for s in r["sources"]), r["note"],
             ]) + "\n")
     with REJECTED_TSV.open("w", encoding="utf-8", newline="") as handle:
         handle.write("word\tsource\treason\n")
         handle.writelines(f"{w}\t{s}\t{reason}\n" for w, s, reason in rejected)
 
-    # Review queue for a speaker: function words, then the most frequent words, then candidates.
+    # Review queue for a speaker: function words, then the most frequent words, then candidates,
+    # then the researched words the research was least sure of.
     open_records = [r for r in records if r["lemma"] not in decisions]
     queue = [r for r in open_records if r["pos"]["method"] == "hand-tagged function word"]
     queue += [r for r in open_records if r["status"] == "attested" and r not in queue][:300]
     queue += [r for r in open_records if r["status"] == "candidate"]
+    researched = [r for r in open_records if r["status"] == "researched"]
+    queue += sorted(researched, key=lambda r: (not r["note"], r["pos"]["confidence"], r["lemma"]))[:300]
     with REVIEW_TSV.open("w", encoding="utf-8", newline="") as handle:
-        handle.write("id\tword\tstatus\tpos\tgloss_candidates\tmorphology\tvariants\tdomains\tdecision\tcorrect_pos\tcorrect_gloss\tnote\n")
+        handle.write("id\tword\tstatus\tpos\tenglish_definition\tgloss_candidates\tmorphology\tvariants\tdomains\tdecision\tcorrect_pos\tcorrect_gloss\tnote\n")
         for r in queue:
-            handle.write("\t".join([
-                r["id"], r["lemma"], r["status"], r["pos_category"],
+            handle.write("\t".join(str(v).replace("\t", " ") for v in [
+                r["id"], r["lemma"], r["status"], r["pos_category"], r["english_definition"],
                 "; ".join(g["english"] for g in r["gloss_candidates"]), r["morphology"],
                 ",".join(r["orthographic_variants"]), ",".join(r["domains"]), "", "", "", "",
             ]) + "\n")
@@ -522,6 +1000,17 @@ def build(reviewer: str = "speaker") -> dict:
         "domains": dict(Counter(d for r in records for d in r["domains"]).most_common()),
         "review_queue": len(queue),
         "verified_by_speakers": sum(1 for r in records if r["is_validated"]),
+        "origins": dict(Counter(r["etymology_origin"] for r in records).most_common()),
+        "origin_shares": {name: round(n / len(records), 4) for name, n in
+                          Counter(origin_bucket(r["etymology_origin"] if r["etymology_origin"] != "unknown" else "") for r in records).most_common()},
+        "definition_methods": dict(Counter(r["definition_method"] or "none" for r in records).most_common()),
+        "entries_with_pos_alternatives": sum(1 for r in records if r["pos_alternatives"]),
+        "research_rows_skipped_as_invalid": skipped_research,
+        "flagged_doubtful": sum(1 for r in records if r["note"]),
+        "filled_share": {
+            name: round(sum(1 for r in records if test(r)) / len(records), 4)
+            for name, test in FILLED_CHECKS.items()
+        },
     }
     STATS_JSON.write_text(json.dumps(stats, indent=2) + "\n", encoding="utf-8")
     return stats
@@ -533,8 +1022,9 @@ def main(argv: list[str] | None = None) -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description="Build the Likhibi Nagamese lexicon.")
     parser.add_argument("--reviewer", default="speaker", help="name recorded with decisions newly filled in the review queue")
+    parser.add_argument("--target", type=int, default=TARGET_ENTRIES, help="lexicon size that derived forms fill up to (0: none)")
     args = parser.parse_args(argv)
-    print(json.dumps(build(args.reviewer), indent=2))
+    print(json.dumps(build(args.reviewer, args.target), indent=2))
     return 0
 
 

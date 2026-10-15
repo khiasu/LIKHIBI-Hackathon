@@ -1,0 +1,342 @@
+khushi	ADJ	NOUN=happiness	Happy, glad.	happy;glad;joy	feelings	A	khushi	base form		Moi bisi khushi ase.	0.8	
+dukh	NOUN	ADJ=sad	Sorrow or pain of the heart.	sorrow;grief;pain	feelings	A	dukh	base form,countable,inanimate		Tai laga dukh bisi ase.	0.8	
+sukh	NOUN		Comfort, ease and happiness.	comfort;ease;happiness	feelings	A	sukh	base form,countable,inanimate		Ghor te sukh ase.	0.8	
+bhoi	NOUN	VERB=to fear (with kha)	Fear.	fear;fright	feelings	A	bhoi	base form,countable,inanimate		Moi andhar te bhoi kha.	0.8	
+laaj	NOUN		Shame or shyness.	shame;shyness	feelings	A	laaj	base form,countable,inanimate		Tai laaj kha ase.	0.8	
+rag	NOUN		Anger.	anger;rage	feelings	A	rag	base form,countable,inanimate		Tai laga rag bisi ase.	0.8	
+maya	NOUN	VERB=to love (with kori)	Love, affection.	love;affection	feelings	A	maya	base form,countable,inanimate		Ma laga maya bisi ase.	0.8	
+morom	NOUN		Deep affection and care.	affection;tenderness	feelings	A	morom	base form,countable,inanimate		Tai laga morom bisi ase.	0.8	
+hahi	NOUN		Laughter.	laughter;smile	feelings	A	hahi	base form,countable,inanimate		Tai laga hahi bhal ase.	0.8	
+kandon	NOUN		Crying, weeping.	crying;weeping	feelings	A	kandon	base form,countable,inanimate		Pola laga kandon hunise.	0.8	
+anondo	NOUN		Great joy and delight.	delight;joy	feelings	S	anondo	base form,countable,inanimate		Amikhan anondo kori ase.	0.8	
+chinta	NOUN	VERB=to worry (with kori)	Worry, anxious thought.	worry;concern	feelings	S	chinta	base form,countable,inanimate		Tumi chinta nakoribi.	0.8	
+ghina	NOUN	VERB=to hate (with kori)	Hatred, disgust.	hatred;disgust	feelings	A	ghina	base form,countable,inanimate		Moi etu khabor ke ghina kori.	0.8	
+jalon	NOUN		Jealousy.	jealousy;envy	feelings	A	jalon	base form,countable,inanimate		Tai laga jalon bisi ase.	0.8	
+ahonkar	NOUN		Pride, arrogance.	pride;arrogance	feelings	S	ahonkar	base form,countable,inanimate		Tai laga ahonkar bisi ase.	0.8	
+lojja	NOUN		Embarrassment, shame.	embarrassment;shame	feelings	S	lojja	base form,countable,inanimate		Moi bisi lojja pai ase.	0.8	
+santi	NOUN		Peace, calm.	peace;calm	feelings	S	santi	base form,countable,inanimate		Amikhan santi te thake.	0.8	
+asha	NOUN	VERB=to hope (with kori)	Hope.	hope;expectation	feelings	S	asha	base form,countable,inanimate		Moi laga asha ase.	0.8	
+biswas	NOUN	VERB=to trust (with kori)	Trust, belief.	trust;belief	feelings	S	biswas	base form,countable,inanimate		Moi tai ke biswas kori.	0.8	
+sandeh	NOUN		Doubt, suspicion.	doubt;suspicion	feelings	S	sandeh	base form,countable,inanimate		Moi laga sandeh ase.	0.8	
+ashcharjo	NOUN		Surprise, wonder.	surprise;wonder	feelings	S	ashcharjo	base form,countable,inanimate		Moi ashcharjo hoise.	0.8	
+bhok	NOUN		Hunger.	hunger	body,feelings	A	bhok	base form,countable,inanimate		Pola ke bhok lagise.	0.8	
+piyah	NOUN		Thirst.	thirst	body,feelings	A	piyah	base form,countable,inanimate		Moi ke piyah lagise.	0.8	
+nind	NOUN		Sleep, sleepiness.	sleep;drowsiness	body,feelings	A	nind	base form,countable,inanimate		Moi ke nind lagise.	0.8	
+shok	NOUN		Grief at a loss.	grief;mourning	feelings	S	shok	base form,countable,inanimate		Gaon te shok hoise.	0.8	
+atmo	NOUN		Self, spirit.	spirit;soul	religion,feelings	S	atmo	base form,countable,inanimate		Tai laga atmo bhal ase.	0.8	
+mon	NOUN		Mind, heart, wish.	mind;heart;wish	feelings	A	mon	base form,countable,inanimate		Moi laga mon bhal nai.	0.8	
+hiya	NOUN		Heart, chest as seat of feeling.	heart;chest	body,feelings	A	hiya	base form,countable,inanimate		Tai laga hiya bisi bhal ase.	0.8	
+dhoirjo	NOUN		Patience.	patience	feelings	S	dhoirjo	base form,countable,inanimate		Dhoirjo rakhibi.	0.8	
+soru	ADJ		Small, little.	small;little	describing	A	soru	base form		Etu soru ghor ase.	0.8	
+bor	ADJ		Big, large.	big;large	describing	A	bor	base form		Etu bor gos ase.	0.8	
+dighal	ADJ		Long, tall.	long;tall	describing	A	dighal	base form		Etu dighal rasta ase.	0.8	
+topa	ADJ		Short.	short	describing	A	topa	base form		Tai topa manu ase.	0.8	
+bisal	ADJ		Wide, vast.	wide;vast	describing	S	bisal	base form		Etu bisal jaga ase.	0.8	
+gabhir	ADJ		Deep.	deep	describing	S	gabhir	base form		Nodi gabhir ase.	0.8	
+gol	ADJ		Round.	round	describing	A	gol	base form		Etu gol bol ase.	0.8	
+sapta	ADJ		Flat.	flat	describing	A	sapta	base form		Etu jaga sapta ase.	0.8	
+bhari	ADJ		Heavy.	heavy	describing	A	bhari	base form		Etu pothor bisi bhari ase.	0.8	
+holuka	ADJ		Light in weight.	light	describing	A	holuka	base form		Etu bag holuka ase.	0.8	
+mota	ADJ		Fat, thick.	fat;thick	describing	A	mota	base form		Etu mota kitap ase.	0.8	
+pateli	ADJ		Thin, slender.	thin;slim	describing	A	pateli	base form		Etu pateli cadar ase.	0.8	
+tita	ADJ		Bitter.	bitter	food,describing	A	tita	base form		Etu pani tita ase.	0.8	
+mitha	ADJ		Sweet.	sweet	food,describing	A	mitha	base form		Etu phol bisi mitha ase.	0.8	
+tup	ADJ		Sour.	sour	food,describing	A	tup	base form		Etu phol tup ase.	0.8	
+khoriya	ADJ		Salty.	salty	food,describing	A	khoriya	base form		Torkari khoriya ase.	0.8	
+jhal	ADJ	NOUN=chilli heat	Spicy hot.	spicy;hot	food,describing	A	jhal	base form		Etu bisi jhal ase.	0.8	
+hukan	ADJ		Dry.	dry	describing	A	hukan	base form		Kapor hukan ase.	0.8	
+bhijha	ADJ		Wet.	wet	describing	A	bhijha	base form		Kapor bhijha ase.	0.8	
+nodun	ADJ		New.	new	describing	A	nodun	base form		Moi nodun jama pindhise.	0.8	
+purani	ADJ		Old, used.	old	describing	A	purani	base form		Etu purani ghor ase.	0.8	
+soku	ADJ		Clean.	clean	describing	A	soku	base form		Ghor soku ase.	0.8	
+bhulo	ADJ		Wrong, mistaken.	wrong	describing	A	bhulo	base form		Etu bhulo ase.	0.8	
+kothin	ADJ		Hard, difficult.	hard;difficult	describing	S	kothin	base form		Etu kam kothin ase.	0.8	
+bol	NOUN		Strength, power.	strength;power	describing	A	bol	base form,countable,inanimate		Tai laga bol ase.	0.8	
+dorbol	ADJ		Weak.	weak	describing	A	dorbol	base form		Tai dorbol ase.	0.8	
+buddhi	NOUN		Intelligence, wisdom.	intelligence;wisdom	describing	S	buddhi	base form,countable,inanimate		Tai laga buddhi bisi ase.	0.8	
+sahosi	ADJ		Brave.	brave;bold	describing	S	sahosi	base form		Tai sahosi manu ase.	0.8	
+dorpok	ADJ		Cowardly.	cowardly	describing	A	dorpok	base form		Tai dorpok ase.	0.8	
+alsia	ADJ		Lazy.	lazy	describing	A	alsia	base form		Tai bisi alsia ase.	0.8	
+porishrami	ADJ		Hardworking.	hardworking	describing	S	porishrami	base form		Tai porishrami manu ase.	0.8	
+dhuni	ADJ		Rich.	rich	describing,money	A	dhuni	base form		Tai dhuni manu ase.	0.8	
+sundor	ADJ		Beautiful.	beautiful;pretty	describing	S	sundor	base form		Tai sundor ase.	0.8	
+mohon	ADJ		Charming, lovely.	charming;lovely	describing	S	mohon	base form		Etu phul mohon ase.	0.8	
+bhodro	ADJ		Polite, gentle.	polite;gentle	describing	S	bhodro	base form		Tai bhodro manu ase.	0.8	
+nomro	ADJ		Humble, soft.	humble;soft	describing	S	nomro	base form		Tai nomro ase.	0.8	
+jibon	NOUN		Life.	life	describing	S	jibon	base form,countable,inanimate		Jibon bhal ase.	0.8	
+hosa	ADJ		Fresh, new.	fresh	describing	A	hosa	base form		Etu mas hosa ase.	0.8	
+pocha	ADJ		Rotten.	rotten	describing	A	pocha	base form		Etu phol pocha ase.	0.8	
+kaancha	ADJ		Raw, unripe.	raw;unripe	food,describing	A	kaancha	base form		Etu kaancha ase.	0.8	
+paki	ADJ		Ripe, cooked.	ripe;cooked	food,describing	A	paki	base form		Etu phol paki ase.	0.8	
+nomol	ADJ		Soft.	soft	describing	A	nomol	base form		Etu bichana nomol ase.	0.8	
+bhonga	ADJ		Broken.	broken	describing	A	bhonga	base form		Etu glass bhonga ase.	0.8	
+bhoral	ADJ		Full.	full	describing	A	bhoral	base form		Etu bag bhoral ase.	0.8	
+sobhaw	NOUN		Nature, character.	nature;character	describing	A	sobhaw	base form,countable,inanimate		Tai laga sobhaw bhal ase.	0.8	
+alop	ADJ	ADV=a little	A little, small amount.	little;a bit	describing	A	alop	base form		Alop pani dibi.	0.8	
+shighro	ADV		Quickly, soon.	soon;quickly	describing	S	shighro	invariable		Shighro aahibi.	0.8	
+dhori	VERB		To hold or catch.	hold;catch;grab	actions	A	dhori	citation form		Tumi etu dhori thakibi.	0.8	
+phelai	VERB		To throw away.	throw;discard	actions	A	phelai	citation form		Etu phelai dibi.	0.8	
+tuli	VERB		To lift or pick up.	lift;pick up	actions	A	tuli	citation form		Etu pothor tuli lobi.	0.8	
+tani	VERB		To pull or drag.	pull;drag	actions	A	tani	citation form		Dora tani dibi.	0.8	
+thelle	VERB		To push.	push	actions	A	thelle	citation form		Dorja thelle dibi.	0.8	
+bhangi	VERB		To break.	break	actions	A	bhangi	citation form		Moi glass bhangi dise.	0.8	
+juri	VERB		To join or fix together.	join;connect;fix	actions	A	juri	citation form		Etu juri dibi.	0.8	
+kati	VERB		To cut.	cut	actions	A	kati	citation form		Moi bash kati ase.	0.8	
+phari	VERB		To tear.	tear;rip	actions	A	phari	citation form		Tai kagoj phari dise.	0.8	
+bandhi	VERB		To tie or bind.	tie;bind	actions	A	bandhi	citation form		Dora diye bandhi dibi.	0.8	
+khuli	VERB		To open or untie.	open;untie	actions	A	khuli	citation form		Dorja khuli dibi.	0.8	
+mari	VERB		To hit or kill.	hit;beat;kill	actions	A	mari	citation form		Tumi pola ke nemari.	0.8	
+sukhi	VERB		To search or look for.	search;look for	actions	A	sukhi	citation form		Moi kolom sukhi ase.	0.8	
+paai	VERB		To get or find.	get;find	actions	A	paai	citation form		Moi kitap paise.	0.8	
+rakhi	VERB		To keep or put.	keep;put;place	actions	A	rakhi	citation form		Etu tebul te rakhi dibi.	0.8	
+dhuwai	VERB		To wash.	wash	actions,home	A	dhuwai	citation form		Moi hath dhuwai ase.	0.8	
+bhaji	VERB		To fry.	fry	food,actions	A	bhaji	citation form		Mas bhaji dibi.	0.8	
+sijai	VERB		To boil.	boil	food,actions	A	sijai	citation form		Pani sijai dibi.	0.8	
+rondhi	VERB		To cook.	cook	food,actions	A	rondhi	citation form		Ma bhat rondhi ase.	0.8	
+khati	VERB		To work hard; to labour.	labour;toil	actions,work	A	khati	citation form		Tai bisi khati ase.	0.8	
+heri	VERB		To lose; to leave behind.	lose;leave	actions	A	heri	citation form		Moi kolom heri dise.	0.8	
+pori	VERB		To fall; to read or study.	fall;read;study	actions	A	pori	citation form		Tai pori goise.	0.8	
+uthi	VERB		To get up or rise.	get up;rise	actions	A	uthi	citation form		Bhor te uthibi.	0.8	
+bohi	VERB		To sit.	sit	actions	A	bohi	citation form		Ethai bohi thakibi.	0.8	
+nasi	VERB		To dance.	dance	culture,actions	A	nasi	citation form		Amikhan nasi ase.	0.8	
+gai	VERB		To sing.	sing	culture,actions	A	gai	citation form		Tai gan gai ase.	0.8	
+bajai	VERB		To play an instrument; to ring.	play;ring	culture,actions	A	bajai	citation form		Tai guitar bajai ase.	0.8	
+kandi	VERB		To cry.	cry;weep	feelings,actions	A	kandi	citation form		Pola kandi ase.	0.8	
+sumai	VERB		To kiss.	kiss	actions	A	sumai	citation form		Ma pola ke sumai dise.	0.8	
+dhaki	VERB		To cover.	cover	actions	A	dhaki	citation form		Etu dhaki dibi.	0.8	
+hojai	VERB		To arrange or make ready.	arrange;prepare	actions	A	hojai	citation form		Ghor hojai dibi.	0.8	
+bonai	VERB		To make or build.	make;build	actions	A	bonai	citation form		Tai ghor bonai ase.	0.8	
+pindhi	VERB		To wear clothes.	wear;put on	clothing,actions	A	pindhi	citation form		Moi jama pindhi ase.	0.8	
+khulai	VERB		To take off.	take off;remove	clothing,actions	A	khulai	citation form		Jama khulai dibi.	0.8	
+dekhai	VERB		To show.	show	actions	A	dekhai	citation form		Moi ke dekhai dibi.	0.8	
+sikhai	VERB		To teach.	teach	education,actions	A	sikhai	citation form		Sir amikhan ke sikhai ase.	0.8	
+sikhi	VERB		To learn.	learn	education,actions	A	sikhi	citation form		Moi Nagamese sikhi ase.	0.8	
+bujhi	VERB		To understand.	understand	actions	A	bujhi	citation form		Moi kotha bujhi pai.	0.8	
+bujhai	VERB		To explain.	explain	actions	A	bujhai	citation form		Moi ke bujhai dibi.	0.8	
+sudhi	VERB		To ask a question.	ask	actions	A	sudhi	citation form		Moi tai ke sudhi ase.	0.8	
+khuji	VERB		To seek.	seek;search	actions	A	khuji	citation form		Moi tai ke khuji ase.	0.8	
+bhetai	VERB		To meet.	meet	community,actions	A	bhetai	citation form		Moi tai ke bhetai pai.	0.8	
+bhabi	VERB		To think or ponder.	think;ponder	actions	A	bhabi	citation form		Moi bisi bhabi ase.	0.8	
+pathai	VERB		To send.	send	actions	A	pathai	citation form		Moi tai ke kitap pathai dise.	0.8	
+phurai	VERB		To go around or roam.	roam;stroll	actions,leisure	A	phurai	citation form		Moi bazar phurai ase.	0.8	
+ghuri	VERB		To turn or return.	turn;return	actions	A	ghuri	citation form		Ghuri aahibi.	0.8	
+thaki	VERB		To stay or live.	stay;live	actions	A	thaki	citation form		Moi Kohima te thaki ase.	0.8	
+bisari	VERB		To search or look carefully.	search	actions	A	bisari	citation form		Moi bisari ase.	0.8	
+bhasi	VERB		To float.	float	actions	A	bhasi	citation form		Nao pani te bhasi ase.	0.8	
+dubi	VERB		To sink or dive.	sink;dive	actions	A	dubi	citation form		Tai pani te dubi goise.	0.8	
+khuwai	VERB		To feed.	feed	food,actions	A	khuwai	citation form		Ma pola ke khuwai ase.	0.8	
+piyai	VERB		To give a drink.	give drink	food,actions	A	piyai	citation form		Ma pola ke pani piyai ase.	0.8	
+sinai	VERB		To bathe.	bathe	home,actions	A	sinai	citation form		Pola sinai ase.	0.8	
+uthai	VERB		To wake someone; to lift.	wake;lift	actions	A	uthai	citation form		Moi ke bhor te uthai dibi.	0.8	
+hamai	VERB		To enter.	enter	actions	A	hamai	citation form		Tai ghor te hamai goise.	0.8	
+bhoroi	VERB		To fill.	fill	actions	A	bhoroi	citation form		Bottle bhoroi dibi.	0.8	
+khai	VERB		To eat.	eat	food,actions	A	khai	citation form		Tai bhat khai ase.	0.8	
+hukhai	VERB		To dry.	dry	actions	A	hukhai	citation form		Kapor hukhai dibi.	0.8	
+bhijai	VERB		To wet.	wet	actions	A	bhijai	citation form		Bristi te moi bhijai goise.	0.8	
+jalai	VERB		To burn or light.	burn;light	actions	A	jalai	citation form		Agun jalai dibi.	0.8	
+nibhai	VERB		To put out.	extinguish	actions	A	nibhai	citation form		Agun nibhai dibi.	0.8	
+jolai	VERB		To light a fire.	light	actions	A	jolai	citation form		Bati jolai dibi.	0.8	
+pakai	VERB		To cook, ripen.	cook;ripen	food,actions	A	pakai	citation form		Ma bhat pakai ase.	0.8	
+phuti	VERB		To bloom or burst.	bloom;burst	nature,actions	A	phuti	citation form		Phul phuti ase.	0.8	
+dhoi	VERB		To flow.	flow	nature,actions	A	dhoi	citation form		Nodi dhoi ase.	0.8	
+borhi	VERB		To grow or increase.	grow;increase	actions	A	borhi	citation form		Pola borhi ase.	0.8	
+komi	VERB		To decrease.	decrease	actions	A	komi	citation form		Dam komi goise.	0.8	
+chuwai	VERB		To touch.	touch	actions	A	chuwai	citation form		Etu nachuwabi.	0.8	
+huni	VERB		To hear.	hear	actions	A	huni	citation form		Moi hunise.	0.8	
+bhor	NOUN		Early morning, dawn.	dawn;early morning	time	A	bhor	base form,countable,inanimate		Bhor te uthibi.	0.8	
+sokal	NOUN		Morning.	morning	time	A	sokal	base form,countable,inanimate		Sokal te moi school jabo.	0.8	
+dupor	NOUN		Noon, midday.	noon;midday	time	A	dupor	base form,countable,inanimate		Dupor te bhat khabo.	0.8	
+bikal	NOUN		Afternoon, late afternoon.	afternoon	time	A	bikal	base form,countable,inanimate		Bikal te aahibo.	0.8	
+hanjh	NOUN		Evening.	evening	time	A	hanjh	base form,countable,inanimate		Hanjh te ghor te aahibo.	0.8	
+rati	NOUN		Night.	night	time	A	rati	base form,countable,inanimate		Rati te nind jabo.	0.8	
+aaj	NOUN	ADV=today	Today.	today	time	A	aaj	base form,countable,inanimate		Aaj bisi thanda ase.	0.8	
+kali	NOUN	ADV=tomorrow, yesterday	Tomorrow or yesterday by context.	tomorrow;yesterday	time	A	kali	base form,countable,inanimate		Kali moi aahibo.	0.8	
+porouka	NOUN		The day after tomorrow.	day after tomorrow	time	A	porouka	base form,countable,inanimate		Porouka moi jabo.	0.8	
+poila	ADV		Before, earlier, first.	before;first	time	A	poila	invariable		Moi poila jabo.	0.8	
+pisot	ADV		Later, afterwards.	later;afterwards	time	A	pisot	invariable		Pisot kobo.	0.8	
+ekhon	ADV		Now.	now	time	A	ekhon	invariable		Ekhon jabi.	0.8	
+tetia	ADV		Then, at that time.	then	time	A	tetia	invariable		Tetia moi school te ase.	0.8	
+etia	ADV		Now, at this time.	now	time	A	etia	invariable		Etia jabo.	0.8	
+hodai	ADV		Always.	always	time	A	hodai	invariable		Tai hodai hahi thake.	0.8	
+dinbar	NOUN		Weekday.	weekday	time	A	dinbar	base form,countable,inanimate		Dinbar te moi kam kori.	0.8	
+somoi	NOUN		Time.	time	time	A	somoi	base form,countable,inanimate		Somoi nai.	0.8	
+mah	NOUN		Month.	month	time	A	mah	base form,countable,inanimate		Etu mah bisi thanda.	0.8	
+bosor	NOUN		Year.	year	time	A	bosor	base form,countable,inanimate		Etu bosor bhal ase.	0.8	
+raviwar	NOUN		Sunday.	Sunday	time	S	raviwar	base form,countable,inanimate		Raviwar te church jai.	0.8	
+somwar	NOUN		Monday.	Monday	time	S	somwar	base form,countable,inanimate		Somwar te kam ase.	0.8	
+mongolwar	NOUN		Tuesday.	Tuesday	time	S	mongolwar	base form,countable,inanimate		Mongolwar te bazar jabo.	0.8	
+budhwar	NOUN		Wednesday.	Wednesday	time	S	budhwar	base form,countable,inanimate		Budhwar te aahibo.	0.8	
+brihospotiwar	NOUN		Thursday.	Thursday	time	S	brihospotiwar	base form,countable,inanimate		Brihospotiwar te mela ase.	0.8	
+sukrawar	NOUN		Friday.	Friday	time	S	sukrawar	base form,countable,inanimate		Sukrawar te kam bondho.	0.8	
+sonibar	NOUN		Saturday.	Saturday	time	S	sonibar	base form,countable,inanimate		Sonibar te moi ghor te thakibo.	0.8	
+bosonto	NOUN		Spring.	spring	time,weather	S	bosonto	base form,countable,inanimate		Bosonto te phul phute.	0.8	
+grishmo	NOUN		Summer.	summer	time,weather	S	grishmo	base form,countable,inanimate		Grishmo te garom hoi.	0.8	
+borshaa	NOUN		Rainy season.	rainy season	time,weather	S	borshaa	base form,countable,inanimate		Borshaa te bristi hoi.	0.8	
+shoroth	NOUN		Autumn.	autumn	time,weather	S	shoroth	base form,countable,inanimate		Shoroth te akash soku hoi.	0.8	
+hemonto	NOUN		Late autumn.	late autumn	time,weather	S	hemonto	base form,countable,inanimate		Hemonto te thanda hoi.	0.8	
+hit	NOUN		Winter, cold season.	winter	time,weather	A	hit	base form,countable,inanimate		Hit te bisi thanda ase.	0.8	
+bristi	NOUN		Rain.	rain	weather	S	bristi	base form,countable,inanimate		Aaj bristi hoise.	0.8	
+akash	NOUN		Sky.	sky	weather,nature	S	akash	base form,countable,inanimate		Akash nil ase.	0.8	
+megh	NOUN		Cloud.	cloud	weather	S	megh	base form,countable,inanimate		Akash te megh ase.	0.8	
+bijuli	NOUN		Lightning, electricity.	lightning	weather	A	bijuli	base form,countable,inanimate		Bijuli mari ase.	0.8	
+bojro	NOUN		Thunder.	thunder	weather	S	bojro	base form,countable,inanimate		Bojro hunise.	0.8	
+batah	NOUN		Wind.	wind	weather	A	batah	base form,countable,inanimate		Bisi batah ase.	0.8	
+jhor	NOUN		Storm.	storm	weather	A	jhor	base form,countable,inanimate		Jhor aahise.	0.8	
+kuwahi	NOUN		Fog, mist.	fog;mist	weather	A	kuwahi	base form,countable,inanimate		Bhor te kuwahi ase.	0.8	
+beli	NOUN		Sun, day (daylight).	sun;daylight	weather	A	beli	base form,countable,inanimate		Beli uthise.	0.8	
+jun	NOUN		Moon.	moon	nature	A	jun	base form,countable,inanimate		Jun uthise.	0.8	
+tora	NOUN		Star.	star	nature	A	tora	base form,countable,inanimate		Akash te tora ase.	0.8	
+andhar	NOUN	ADJ=dark	Darkness.	darkness;dark	weather	A	andhar	base form,countable,inanimate		Rati te andhar ase.	0.8	
+rodh	NOUN		Sunshine.	sunshine	weather	A	rodh	base form,countable,inanimate		Aaj rodh ase.	0.8	
+bonya	NOUN		Flood.	flood	weather	S	bonya	base form,countable,inanimate		Bonya aahise.	0.8	
+bhumikompo	NOUN		Earthquake.	earthquake	weather	S	bhumikompo	base form,countable,inanimate		Bhumikompo hoise.	0.8	
+somaj	NOUN		Society.	society	community	S	somaj	base form,countable,inanimate		Somaj laga kam kori.	0.8	
+gaon	NOUN		Village.	village	community,places	A	gaon	base form,countable,inanimate		Moi gaon te thake.	0.8	
+gaonbura	NOUN		Village elder or headman.	headman;village elder	community	N	gaonbura	base form,countable,inanimate		Gaonbura aahise.	0.8	
+dolpoti	NOUN		Leader of a group.	leader	community	S	dolpoti	base form,countable,inanimate		Dolpoti kotha koise.	0.8	
+sobha	NOUN		Meeting, assembly.	meeting;assembly	community	S	sobha	base form,countable,inanimate		Aaj sobha ase.	0.8	
+songho	NOUN		Union, association.	association;union	community	S	songho	base form,countable,inanimate		Amikhan laga songho ase.	0.8	
+bichar	NOUN		Judgment, court case.	judgment;trial	civic	S	bichar	base form,countable,inanimate		Gaon te bichar ase.	0.8	
+niyom	NOUN		Rule, custom.	rule;custom	civic	S	niyom	base form,countable,inanimate		Etu amikhan laga niyom.	0.8	
+rit	NOUN		Custom, tradition.	custom;tradition	culture	S	rit	base form,countable,inanimate		Etu amikhan laga rit.	0.8	
+sanskriti	NOUN		Culture.	culture	culture	S	sanskriti	base form,countable,inanimate		Amikhan laga sanskriti bhal ase.	0.8	
+parompora	NOUN		Tradition.	tradition	culture	S	parompora	base form,countable,inanimate		Etu amikhan laga parompora.	0.8	
+bhasa	NOUN		Language.	language	culture	S	bhasa	base form,countable,inanimate		Etu amikhan laga bhasa.	0.8	
+itihas	NOUN		History.	history	culture	S	itihas	base form,countable,inanimate		Itihas porhibo.	0.8	
+kahini	NOUN		Story, tale.	story;tale	culture	S	kahini	base form,countable,inanimate		Aji kahini koise.	0.8	
+gan	NOUN		Song.	song	culture	A	gan	base form,countable,inanimate		Etu bhal gan ase.	0.8	
+utsob	NOUN		Festival.	festival	culture	S	utsob	base form,countable,inanimate		Aaj utsob ase.	0.8	
+parbon	NOUN		Festival, religious observance.	festival	culture	S	parbon	base form,countable,inanimate		Etu parbon bisi bor ase.	0.8	
+bhoj	NOUN		Feast.	feast	culture,food	A	bhoj	base form,countable,inanimate		Aji bhoj ase.	0.8	
+biya	NOUN		Wedding.	wedding	culture	A	biya	base form,countable,inanimate		Kali biya ase.	0.8	
+bihu	NOUN		Bihu festival.	Bihu	culture	A	bihu	base form,countable,inanimate		Bihu te nach ase.	0.8	
+gamusa	NOUN		Traditional cloth.	gamosa	culture,clothing	A	gamusa	base form,countable,inanimate		Gamusa pindhi ase.	0.8	
+poja	NOUN		Worship, prayer rite.	worship	religion	A	poja	base form,countable,inanimate		Poja kori ase.	0.8	
+prarthona	NOUN		Prayer.	prayer	religion	S	prarthona	base form,countable,inanimate		Prarthona kori ase.	0.8	
+bhogoban	NOUN		God.	God	religion	A	bhogoban	base form,countable,inanimate		Bhogoban ke dhonyobad.	0.8	
+isshor	NOUN		God, divine lord.	God	religion	S	isshor	base form,countable,inanimate		Isshor bhal ase.	0.8	
+mondir	NOUN		Temple.	temple	religion	S	mondir	base form,countable,inanimate		Mondir te jabo.	0.8	
+dharmo	NOUN		Religion, faith.	religion;faith	religion	S	dharmo	base form,countable,inanimate		Amikhan laga dharmo.	0.8	
+puran	NOUN		Ancient scripture.	scripture	religion	S	puran	base form,countable,inanimate		Puran porhibo.	0.8	
+paap	NOUN		Sin.	sin	religion	S	paap	base form,countable,inanimate		Etu paap ase.	0.8	
+punyo	NOUN		Merit, good deed.	merit	religion	S	punyo	base form,countable,inanimate		Etu punyo ase.	0.8	
+swargo	NOUN		Heaven.	heaven	religion	S	swargo	base form,countable,inanimate		Swargo bhal ase.	0.8	
+norok	NOUN		Hell.	hell	religion	S	norok	base form,countable,inanimate		Norok bhoi lage.	0.8	
+ashirbad	NOUN		Blessing.	blessing	religion	S	ashirbad	base form,countable,inanimate		Bhogoban laga ashirbad ase.	0.8	
+dhonyobad	INTJ	NOUN=thanks	Thank you.	thanks	greetings	S	dhonyobad	invariable		Dhonyobad dise.	0.8	
+bondhu	NOUN		Friend.	friend	community	S	bondhu	base form,countable,inanimate		Moi laga bondhu ase.	0.8	
+porohi	NOUN		Neighbour.	neighbour	community	A	porohi	base form,countable,inanimate		Porohi bhal ase.	0.8	
+atithi	NOUN		Guest.	guest	community	S	atithi	base form,countable,inanimate		Atithi aahise.	0.8	
+bidesi	NOUN		Foreigner.	foreigner	community	S	bidesi	base form,countable,inanimate		Bidesi aahise.	0.8	
+raja	NOUN		King.	king	civic	S	raja	base form,countable,inanimate		Raja ase.	0.8	
+rani	NOUN		Queen.	queen	civic	S	rani	base form,countable,inanimate		Rani ase.	0.8	
+dukhin	NOUN		South.	south	places	A	dukhin	base form,countable,inanimate		Dukhin dikot jabi.	0.8	
+uttor	NOUN		North.	north	places	S	uttor	base form,countable,inanimate		Uttor dikot jabi.	0.8	
+purb	NOUN		East.	east	places	S	purb	base form,countable,inanimate		Purb dikot jabi.	0.8	
+pasim	NOUN		West.	west	places	S	pasim	base form,countable,inanimate		Pasim dikot jabi.	0.8	
+dika	NOUN		Direction, side.	side;direction	places	A	dika	base form,countable,inanimate		Ei dika te aahibi.	0.8	
+bahire	ADV		Outside.	outside	places	A	bahire	invariable		Tai bahire ase.	0.8	
+oporot	ADV		Above, on top.	above	places	A	oporot	invariable		Oporot ase.	0.8	
+tolot	ADV		Below, underneath.	below;under	places	A	tolot	invariable		Tebul tolot ase.	0.8	
+modhyot	ADP		In the middle of.	in the middle	places	S	modhyot	invariable		Gaon modhyot ase.	0.8	
+kasot	ADV		Near, close.	near	places	A	kasot	invariable		Ghor kasot ase.	0.8	
+dur	ADV	ADJ=far	Far.	far	places	S	dur	invariable		Ghor dur ase.	0.8	
+thoi	NOUN		Place.	place	places	A	thoi	base form,countable,inanimate		Etu bhal thoi.	0.8	
+nodi	NOUN		River.	river	nature,places	A	nodi	base form,countable,inanimate		Nodi bor ase.	0.8	
+pukhuri	NOUN		Pond.	pond	nature,places	A	pukhuri	base form,countable,inanimate		Pukhuri te mas ase.	0.8	
+bon	NOUN		Forest.	forest	nature,places	A	bon	base form,countable,inanimate		Bon te hati ase.	0.8	
+bari	NOUN		Garden, homestead.	garden;homestead	farming,places	A	bari	base form,countable,inanimate		Bari te phul ase.	0.8	
+hat	NOUN		Market, weekly market.	market	places,money	A	hat	base form,countable,inanimate		Hat te jabo.	0.8	
+pul	NOUN		Bridge.	bridge	places	A	pul	base form,countable,inanimate		Pul paar kori.	0.8	
+paar	NOUN		Bank, far shore.	bank;shore	places	A	paar	base form,countable,inanimate		Nodi paar ase.	0.8	
+janala	NOUN		Window.	window	home	A	janala	base form,countable,inanimate		Janala khuli dibi.	0.8	
+bichana	NOUN		Bed.	bed	home	A	bichana	base form,countable,inanimate		Bichana nomol ase.	0.8	
+chal	NOUN		Roof.	roof	home	A	chal	base form,countable,inanimate		Chal te bristi poi.	0.8	
+ghat	NOUN		Landing place by the river.	riverbank landing	places	A	ghat	base form,countable,inanimate		Ghat te jabo.	0.8	
+sobar	PRON		Everyone, all.	everyone;all	pronouns	A	sobar	invariable		Sobar aahise.	0.8	
+kotoba	ADV		Somewhere.	somewhere	places	A	kotoba	invariable		Kotoba ase.	0.8	
+aru	ADV		More, again.	more;again	grammar	A	aru	invariable		Aru dibi.	0.8	
+lage	VERB		To be needed.	need;be necessary	grammar	A	lage	citation form		Moi ke pani lage.	0.8	
+kintu	CCONJ		But.	but	grammar	A	kintu	invariable		Moi jabo kintu tai nijabo.	0.8	
+nohole	SCONJ		Otherwise, or else.	otherwise	grammar	A	nohole	invariable		Nohole moi jabo.	0.8	
+jetia	SCONJ		When.	when	grammar	A	jetia	invariable		Jetia aahibi, kobi.	0.8	
+jodi	SCONJ		If.	if	grammar	S	jodi	invariable		Jodi aahibi, moi khushi.	0.8	
+karon	SCONJ		Because.	because	grammar	S	karon	invariable		Moi nijao, karon bristi ase.	0.8	
+ekebare	ADV		Completely, entirely.	completely	describing	A	ekebare	invariable		Ekebare bhal ase.	0.8	
+nisoi	ADV		Certainly.	certainly	describing	A	nisoi	invariable		Nisoi aahibo.	0.8	
+shudhu	ADV		Only, just.	only	describing	S	shudhu	invariable		Shudhu ekta ase.	0.8	
+bisesh	ADJ		Special.	special	describing	S	bisesh	base form		Etu bisesh dinor.	0.8	
+ekelge	ADV		Together.	together	describing	A	ekelge	invariable		Ekelge jabo.	0.8	
+ekla	ADJ		Alone.	alone	describing	A	ekla	base form		Moi ekla ase.	0.8	
+alag	ADJ		Separate.	separate	describing	A	alag	base form		Etu alag ase.	0.8	
+sapon	NOUN		A dream.	dream	feelings	A	sapon	base form,countable,inanimate		Moi sapon dekhise.	0.8	
+ghum	NOUN		Sleep.	sleep	body	A	ghum	base form,countable,inanimate		Moi ke ghum lagise.	0.8	
+ghumai	VERB		To sleep.	sleep	actions	A	ghumai	citation form		Pola ghumai ase.	0.8	
+krodh	NOUN		Anger, rage.	anger;rage	feelings	S	krodh	base form,countable,inanimate		Tai krodh te ase.	0.8	
+irsha	NOUN		Envy.	envy	feelings	S	irsha	base form,countable,inanimate		Tai laga irsha ase.	0.8	
+doya	NOUN		Pity, mercy.	pity;mercy	feelings	S	doya	base form,countable,inanimate		Bhogoban laga doya ase.	0.8	
+kshoma	NOUN	VERB=to forgive (with kori)	Forgiveness.	forgiveness;pardon	feelings,religion	S	kshoma	base form,countable,inanimate		Moi ke kshoma kori dibi.	0.8	
+utsaho	NOUN		Enthusiasm.	enthusiasm	feelings	S	utsaho	base form,countable,inanimate		Tai laga utsaho bisi ase.	0.8	
+obhiman	NOUN		Hurt pride, sulking.	hurt pride;sulk	feelings	S	obhiman	base form,countable,inanimate		Tai obhiman kori ase.	0.8	
+ullas	NOUN		Joy, excitement.	joy;excitement	feelings	S	ullas	base form,countable,inanimate		Amikhan ullas kori ase.	0.8	
+bhrom	NOUN		Confusion, mistake.	confusion	feelings	S	bhrom	base form,countable,inanimate		Moi laga bhrom hoise.	0.8	
+lobh	NOUN		Greed.	greed	feelings	S	lobh	base form,countable,inanimate		Lobh bhal nohoi.	0.8	
+moh	NOUN		Attachment, fondness.	attachment;fondness	feelings	S	moh	base form,countable,inanimate		Tai ke moh lage.	0.8	
+sahas	NOUN		Courage.	courage	feelings	S	sahas	base form,countable,inanimate		Tai laga sahas bor ase.	0.8	
+dosh	NOUN		Fault, blame.	fault;blame	feelings	S	dosh	base form,countable,inanimate		Etu moi laga dosh.	0.8	
+gun	NOUN		Virtue, good quality.	virtue;quality	describing	S	gun	base form,countable,inanimate		Tai laga gun bisi ase.	0.8	
+dukhi	ADJ		Sad, sorrowful.	sad;sorrowful	feelings	S	dukhi	base form		Tai bisi dukhi ase.	0.8	
+khushal	ADJ		Cheerful.	cheerful;prosperous	feelings	P	khushal	base form		Tai khushal manu ase.	0.8	
+hotash	ADJ		Disappointed.	disappointed	feelings	S	hotash	base form		Moi hotash hoise.	0.8	
+ghona	ADJ		Thick, dense.	dense;thick	describing	A	ghona	base form		Etu bon ghona ase.	0.8	
+mihi	ADJ		Fine, thin, delicate.	fine;delicate	describing	A	mihi	base form		Etu kapor mihi ase.	0.8	
+lahe	ADV		Slowly, gently.	slowly;gently	describing	A	lahe	invariable		Lahe lahe jabi.	0.8	
+hohoje	ADV		Easily.	easily	describing	A	hohoje	invariable		Hohoje kori pare.	0.8	
+bhalkoi	ADV		Well, properly.	well;properly	describing	A	bhalkoi	invariable		Bhalkoi kam kori.	0.8	
+kom	ADJ	ADV=less	Few, little, less.	few;less	describing	A	kom	base form		Kom manu ase.	0.8	
+beya	ADJ		Bad.	bad	describing	A	beya	base form		Etu beya kotha.	0.8	
+sodai	ADV		Always.	always	time	A	sodai	invariable		Tai sodai kam kori.	0.8	
+agote	ADV		Formerly, in the past.	formerly;in the past	time	A	agote	invariable		Agote moi Dimapur te ase.	0.8	
+sondhiya	NOUN		Evening.	evening	time	A	sondhiya	base form,countable,inanimate		Sondhiya moi aahibo.	0.8	
+pahor	NOUN		Period of the day.	watch;period	time	S	pahor	base form,countable,inanimate		Dui pahor hoise.	0.8	
+din	NOUN		Day.	day	time	A	din	base form,countable,inanimate		Etu bhal din.	0.8	
+juga	NOUN		Age, era.	age;era	time	S	juga	base form,countable,inanimate		Etu nodun juga.	0.8	
+jar	NOUN		Cold.	cold	weather	A	jar	base form,countable,inanimate		Aaj bisi jar.	0.8	
+borhun	NOUN		Rain.	rain	weather	A	borhun	base form,countable,inanimate		Aaj borhun hoise.	0.8	
+dhuwa	NOUN		Smoke.	smoke	weather	A	dhuwa	base form,countable,inanimate		Dhuwa ase.	0.8	
+gormi	NOUN		Heat.	heat	weather	S	gormi	base form,countable,inanimate		Aaj bisi gormi.	0.8	
+poribar	NOUN		Family.	family	family,community	S	poribar	base form,countable,inanimate		Moi laga poribar bor.	0.8	
+gram	NOUN		Village.	village	community	S	gram	base form,countable,inanimate		Gram te thake.	0.8	
+desh	NOUN		Country.	country	places,civic	S	desh	base form,countable,inanimate		Etu amikhan laga desh.	0.8	
+rajyo	NOUN		State.	state	civic	S	rajyo	base form,countable,inanimate		Nagaland etu rajyo.	0.8	
+jati	NOUN		Community, tribe.	community;tribe	community	S	jati	base form,countable,inanimate		Amikhan laga jati.	0.8	
+sodosyo	NOUN		Member.	member	community	S	sodosyo	base form,countable,inanimate		Moi etu songho laga sodosyo.	0.8	
+sahay	NOUN		Help.	help	community	S	sahay	base form,countable,inanimate		Moi ke sahay dibi.	0.8	
+ekota	NOUN		Unity.	unity	community	S	ekota	base form,countable,inanimate		Amikhan laga ekota ase.	0.8	
+adhikar	NOUN		Right, authority.	right;authority	civic	S	adhikar	base form,countable,inanimate		Etu amikhan laga adhikar.	0.8	
+kortobyo	NOUN		Duty.	duty	civic	S	kortobyo	base form,countable,inanimate		Etu moi laga kortobyo.	0.8	
+sewa	NOUN		Service.	service	community	S	sewa	base form,countable,inanimate		Sewa kori ase.	0.8	
+nirbachon	NOUN		Election.	election	civic	S	nirbachon	base form,countable,inanimate		Nirbachon ase.	0.8	
+bhot	NOUN		Vote.	vote	civic	A	bhot	base form,countable,inanimate		Bhot dibole jabo.	0.8	
+lok	NOUN		People.	people	community	S	lok	base form,countable,inanimate		Gaon laga lok aahise.	0.8	
+dol	NOUN		Group, team.	group;team	community	A	dol	base form,countable,inanimate		Etu bhal dol.	0.8	
+jonota	NOUN		The public.	public	community	S	jonota	base form,countable,inanimate		Jonota aahise.	0.8	
+puroit	NOUN		Priest.	priest	religion	S	puroit	base form,countable,inanimate		Puroit aahise.	0.8	
+pujari	NOUN		Priest.	priest	religion	S	pujari	base form,countable,inanimate		Pujari aahise.	0.8	
+bhokti	NOUN		Devotion.	devotion	religion	S	bhokti	base form,countable,inanimate		Tai laga bhokti bor.	0.8	
+mukti	NOUN		Salvation.	salvation	religion	S	mukti	base form,countable,inanimate		Mukti pabo.	0.8	
+pabitro	ADJ		Holy.	holy	religion	S	pabitro	base form		Etu pabitro thoi.	0.8	
+bidhi	NOUN		Ritual, rule.	ritual;rule	religion	S	bidhi	base form,countable,inanimate		Etu bidhi.	0.8	
+gyan	NOUN		Knowledge.	knowledge	education	S	gyan	base form,countable,inanimate		Tai laga gyan bor.	0.8	
+morung	NOUN		Traditional Naga youth house.	morung	culture	L	morung	base form,countable,inanimate		Morung te sobha ase.	0.8	
+khel	NOUN		Clan quarter of a Naga village.	clan ward	community	N	khel	base form,countable,inanimate		Amikhan khel te thake.	0.8	
+dao	NOUN		Machete.	machete	farming	A	dao	base form,countable,inanimate		Dao diye kati.	0.8	
+jhum	NOUN		Shifting hill farming.	jhum	farming	A	jhum	base form,countable,inanimate		Jhum kam kori.	0.8	
+tikhi	ADJ		Sharp.	sharp	describing	A	tikhi	base form		Dao tikhi ase.	0.8	
+bhonta	ADJ		Blunt.	blunt	describing	A	bhonta	base form		Dao bhonta ase.	0.8	
+puri	VERB		To burn.	burn	actions	A	puri	citation form		Ghor puri goise.	0.8	
+bosai	VERB		To seat or place.	seat;place	actions	A	bosai	citation form		Tai ke bosai dibi.	0.8	
+lukai	VERB		To hide.	hide	actions	A	lukai	citation form		Moi lukai ase.	0.8	
+hunai	VERB		To tell or make heard.	tell	actions	A	hunai	citation form		Moi ke kahini hunai dibi.	0.8	
+ghurai	VERB		To roam about.	roam	actions	A	ghurai	citation form		Moi ghurai ase.	0.8	
+eri	VERB		To leave or give up.	leave;give up	actions	A	eri	citation form		Etu eri dibi.	0.8	

@@ -1,0 +1,434 @@
+masala	NOUN		Spice or spice mix used in cooking.	spice;masala	food	H	मसाला	base form,mass,inanimate		Tai masala bisi dise.	0.85	
+bhalu	NOUN		A bear.	bear	nature	A	ভালুক	base form,countable,animate		-	0.9	
+kura	NOUN		A contest or race, as used in the New Testament.	race;contest	leisure	N	kura	base form,countable,inanimate		-	0.3	doubtful: meaning inferred from one verse
+pibole	VERB		To drink; purpose form of pi.	to drink	food,actions	N	pibole	infinitive		-	0.8	
+bhor	NOUN	ADV=through, all along	Dawn or early morning; in raat bhor, all night long.	dawn;morning;all through	time	A	ভোৰ	base form,mass,inanimate		-	0.7	
+sal	NOUN		A year.	year	time	H	साल	base form,countable,inanimate		Eitu sal bhal ase.	0.7	
+anda	NOUN		An egg.	egg	food	H	अंडा	base form,countable,inanimate		-	0.9	
+nila	ADJ	NOUN=blue colour	Blue.	blue	colours	H	नीला	base form		Akas nila ase.	0.85	
+kina	PART	VERB=bought	Whether, or not; also bought.	whether;or not	grammar	A	কিনা	invariable		Tai ahibo kina moi najani.	0.5	
+stoic	ADJ	NOUN=a stoic person	Calm and not showing pain or feeling.	stoic;calm	feelings	E	stoic	base form		Tai stoic manu.	0.5	doubtful: rare English word
+hiki	VERB		To learn.	to learn	education,actions	A	শিকি	citation form	sikhi	Moi Nagamese hiki ase.	0.85	
+maida	NOUN		Fine wheat flour.	flour	food	H	मैदा	base form,mass,inanimate		-	0.85	
+dhul	NOUN		Dust.	dust	nature	H	धूल	base form,mass,inanimate		-	0.9	
+dhua	NOUN		Smoke.	smoke	nature	A	ধোঁৱা	base form,mass,inanimate	dhuwa	Ghor te dhua ase.	0.9	
+gash	NOUN		A tree or plant.	tree;plant	nature	A	গছ	base form,countable,inanimate	gos	Gash te phol ase.	0.9	
+haldi	NOUN		Turmeric.	turmeric	food	H	हल्दी	base form,mass,inanimate		Dal te haldi dibi.	0.9	
+roman	ADJ	NOUN=a Roman	Roman, of Rome.	Roman	culture	E	Roman	base form		Tai Roman manu.	0.7	
+samaj	NOUN		Society or community.	society;community	community	H	समाज	base form,countable,inanimate		Amikhan laga samaj bhal ase.	0.8	
+feet	NOUN		Feet, the measure of length.	feet;foot	describing	E	feet	base form,countable,inanimate		Etu pach feet lamba.	0.7	
+hikibo	VERB		Future of hiki: will learn, to learn.	will learn;to learn	education,actions	A	শিকি	future		-	0.8	
+bujha	VERB		Participle of buji: understood.	understood	actions	A	বুজা	participle		-	0.8	
+korisele	VERB		Past perfect of kori: had done.	had done	actions	A	কৰি	past		Tai kaam korisele.	0.8	
+dubai	PROPN		The city of Dubai.	Dubai	places	PN	Dubai	invariable		Tai Dubai te thake.	0.6	doubtful: no context
+hole	SCONJ		If, when; spelling of hoile.	if;when	grammar	N	hoile	invariable	hoile	Tai ahi hole moi jabo.	0.4	doubtful: could be English hole
+jankari	NOUN		Information.	information;knowledge	media	H	जानकारी	base form,mass,inanimate		-	0.85	
+jhamela	NOUN		Trouble, a hassle.	trouble;hassle	describing	H	झमेला	base form,countable,inanimate		-	0.85	
+kadam	NOUN		A step or pace.	step;pace	actions	H	कदम	base form,countable,inanimate		Ek kadam age jabi.	0.6	
+pudina	NOUN		Mint.	mint	food	H	पुदीना	base form,mass,inanimate		Chutney te pudina dibi.	0.9	
+tir	NOUN		An arrow.	arrow	culture	H	तीर	base form,countable,inanimate		-	0.85	
+phula	ADJ		Swollen, puffed up.	swollen;puffed	health,describing	A	ফুলা	base form		-	0.7	
+aalphaeus	PROPN		A personal name in the Bible: Aalphaeus.	Aalphaeus	religion	BN	aalphaeus	invariable		Baibel te Aalphaeus laga naam ase.	0.9	
+aas	NOUN		Hope, expectation.	hope	feelings	H	आस	base form,mass,inanimate		Moi laga aas ase.	0.4	doubtful: no context
+abaddon	PROPN		A personal name in the Bible: Abaddon. A name for the angel of the pit.	Abaddon	religion	BN	abaddon	invariable		-	0.9	
+abiathar	PROPN		A personal name in the Bible: Abiathar.	Abiathar	religion	BN	abiathar	invariable		Baibel te Abiathar laga naam ase.	0.9	
+abilene	PROPN		A place name in the Bible: Abilene.	Abilene	places,religion	BN	abilene	invariable		Abilene Baibel te ase.	0.9	
+abiud	PROPN		A personal name in the Bible: Abiud.	Abiud	religion	BN	abiud	invariable		-	0.9	
+achaicus	PROPN		A personal name in the Bible: Achaicus.	Achaicus	religion	BN	achaicus	invariable		-	0.9	
+addi	PROPN		A personal name in the Bible: Addi.	Addi	religion	BN	addi	invariable		-	0.9	
+admin	PROPN		A personal name in the Bible: Admin.	Admin	religion	BN	admin	invariable		-	0.9	
+adot	NOUN		Habit.	habit	actions	P	आदत	base form,countable,inanimate		-	0.7	
+adramyttium	PROPN		A place name in the Bible: Adramyttium.	Adramyttium	places,religion	BN	adramyttium	invariable		-	0.9	
+adriatic	PROPN		A place name in the Bible: Adriatic.	Adriatic	places,religion	BN	adriatic	invariable		Adriatic Baibel te ase.	0.9	
+aenon	PROPN		A place name in the Bible: Aenon.	Aenon	places,religion	BN	aenon	invariable		-	0.9	
+agate	NOUN		A kind of gemstone.	agate;gemstone	religion	E	agate	base form,countable,inanimate		-	0.6	
+akeldama	PROPN		A place name in the Bible: Akeldama.	Akeldama	places,religion	BN	akeldama	invariable		Akeldama Baibel te ase.	0.9	
+alabaster	NOUN		A soft white stone used for jars.	alabaster	religion	E	alabaster	base form,mass,inanimate		Alabaster laga bottle.	0.5	
+alexandra	PROPN		A personal name in the Bible: Alexandra.	Alexandra	religion	BN	alexandra	invariable		-	0.9	
+aloe	NOUN		Aloe plant or its resin.	aloe	nature	E	aloe	base form,mass,inanimate		-	0.6	
+alpheus	PROPN		A personal name in the Bible: Alpheus.	Alpheus	religion	BN	alpheus	invariable		Baibel te Alpheus laga naam ase.	0.9	
+amethyst	NOUN		A purple gemstone.	amethyst	religion	E	amethyst	base form,countable,inanimate		Amethyst pathor.	0.6	
+amos	PROPN		A personal name in the Bible: Amos.	Amos	religion	BN	amos	invariable		-	0.9	
+amphipolis	PROPN		A place name in the Bible: Amphipolis.	Amphipolis	places,religion	BN	amphipolis	invariable		Amphipolis Baibel te ase.	0.9	
+ampliatus	PROPN		A personal name in the Bible: Ampliatus.	Ampliatus	religion	BN	ampliatus	invariable		-	0.9	
+ananais	PROPN		A personal name in the Bible: Ananais.	Ananais	religion	BN	ananais	invariable		-	0.9	
+anath	ADJ	NOUN=orphan	Orphaned, without a parent; helpless.	orphaned;helpless	family	S	अनाथ	base form		-	0.7	
+andronicus	PROPN		A personal name in the Bible: Andronicus.	Andronicus	religion	BN	andronicus	invariable		-	0.9	
+anguthi	NOUN		A finger ring.	ring	clothing	A	আঙঠি	base form,countable,inanimate		Tai anguthi pindhise.	0.8	
+anjam	NOUN		Result or consequence.	result;consequence	describing	P	अंजाम	base form,countable,inanimate		-	0.7	
+anna	PROPN		A personal name in the Bible: Anna.	Anna	religion	BN	anna	invariable		-	0.9	
+antipas	PROPN		A personal name in the Bible: Antipas.	Antipas	religion	BN	antipas	invariable		Baibel te Antipas laga naam ase.	0.9	
+antipatris	PROPN		A place name in the Bible: Antipatris.	Antipatris	places,religion	BN	antipatris	invariable		-	0.9	
+anumati	NOUN		Permission.	permission	civic	S	अनुमति	base form,mass,inanimate		Moi anumati dibo.	0.7	
+apelles	PROPN		A personal name in the Bible: Apelles.	Apelles	religion	BN	apelles	invariable		-	0.9	
+apman	NOUN		Insult or disrespect.	insult;disrespect	feelings	S	अपमान	base form,countable,inanimate		-	0.8	
+apnilaga	DET		Your own, yours.	your;your own	pronouns	N	apnilaga	invariable	apuni laga	-	0.5	doubtful: joined form of apuni laga
+apollonia	PROPN		A place name in the Bible: Apollonia.	Apollonia	places,religion	BN	apollonia	invariable		Apollonia Baibel te ase.	0.9	
+apollyon	PROPN		A personal name in the Bible: Apollyon.	Apollyon	religion	BN	apollyon	invariable		-	0.9	
+apphia	PROPN		A personal name in the Bible: Apphia.	Apphia	religion	BN	apphia	invariable		-	0.9	
+appius	PROPN		A personal name in the Bible: Appius.	Appius	religion	BN	appius	invariable		-	0.9	
+arab	PROPN	ADJ=Arab	Arab or Arabia.	Arab;Arabia	places	PN	Arab	invariable		Tai Arab pora ahise.	0.6	
+archelaus	PROPN		A personal name in the Bible: Archelaus.	Archelaus	religion	BN	archelaus	invariable		-	0.9	
+aretas	PROPN		A personal name in the Bible: Aretas.	Aretas	religion	BN	aretas	invariable		Baibel te Aretas laga naam ase.	0.9	
+arimathia	PROPN		A place name in the Bible: Arimathia.	Arimathia	places,religion	BN	arimathia	invariable		Arimathia Baibel te ase.	0.9	
+aristarach	PROPN		A personal name in the Bible: Aristarach.	Aristarach	religion	BN	aristarach	invariable		-	0.9	
+aristobulus	PROPN		A personal name in the Bible: Aristobulus.	Aristobulus	religion	BN	aristobulus	invariable		-	0.9	
+ark	NOUN		A chest or boat; the ark.	ark	religion	E	ark	base form,countable,inanimate		-	0.7	
+armaggedon	PROPN		A place name in the Bible: Armaggedon.	Armaggedon	places,religion	BN	armaggedon	invariable		-	0.9	
+arni	PROPN		A personal name in the Bible: Arni.	Arni	religion	BN	arni	invariable		-	0.9	
+arop	NOUN		A charge or accusation.	charge;accusation	civic	S	आरोप	base form,countable,inanimate		Tai pora arop dise.	0.4	doubtful: no context
+aropagus	PROPN		A place name in the Bible: Aropagus.	Aropagus	places,religion	BN	aropagus	invariable		-	0.9	
+arphaxad	PROPN		A personal name in the Bible: Arphaxad.	Arphaxad	religion	BN	arphaxad	invariable		-	0.9	
+artemas	PROPN		A personal name in the Bible: Artemas.	Artemas	religion	BN	artemas	invariable		Baibel te Artemas laga naam ase.	0.9	
+artis	NOUN		Arthritis, joint pain.	arthritis	health	E	arthritis	base form,mass,inanimate		-	0.4	doubtful: likely short for arthritis
+ashikar	NOUN		Rejection or refusal.	rejection;refusal	actions	H	अस्वीकार	base form,countable,inanimate		Tai ashikar korise.	0.2	doubtful: unclear word
+assi	NUM		Eighty.	eighty	numbers	H	अस्सी	invariable		Assi taka lage.	0.7	
+asyncritus	PROPN		A personal name in the Bible: Asyncritus.	Asyncritus	religion	BN	asyncritus	invariable		-	0.9	
+attalia	PROPN		A place name in the Bible: Attalia.	Attalia	places,religion	BN	attalia	invariable		-	0.9	
+azadi	NOUN		Freedom.	freedom	civic	P	आज़ादी	base form,mass,inanimate		Amikhan azadi pabo.	0.85	
+azotus	PROPN		A place name in the Bible: Azotus.	Azotus	places,religion	BN	azotus	invariable		Azotus Baibel te ase.	0.9	
+baal	PROPN		A personal name in the Bible: Baal. A false god.	Baal	religion	BN	baal	invariable		-	0.9	
+bahi	VERB		To flow.	to flow	nature,actions	A	বই	citation form		-	0.6	
+balak	PROPN	NOUN=boy	Balak, a king in the Bible; also boy.	Balak;boy	religion	BN	Balak	invariable		Balak raja thakise.	0.5	doubtful: ambiguous
+bandh	ADJ	NOUN=strike|VERB=to close	Closed; also a shutdown or strike.	closed;strike	civic	H	बंद	base form		Dokan bandh ase.	0.8	
+barachias	PROPN		A personal name in the Bible: Barachias.	Barachias	religion	BN	barachias	invariable		Baibel te Barachias laga naam ase.	0.9	
+barak	PROPN		A personal name in the Bible: Barak.	Barak	religion	BN	barak	invariable		Baibel te Barak laga naam ase.	0.9	
+barbad	ADJ		Ruined, destroyed.	ruined;destroyed	describing	P	बरबाद	base form		-	0.85	
+bardas	NOUN		Endurance, tolerance; with kori, to tolerate.	tolerance;endurance	feelings	P	बर्दाश्त	base form,mass,inanimate		Moi bardas kori nopora.	0.5	
+barley	NOUN		Barley, a grain.	barley	farming,food	E	barley	base form,mass,inanimate		Barley laga roti.	0.6	
+bartimaeus	PROPN		A personal name in the Bible: Bartimaeus.	Bartimaeus	religion	BN	bartimaeus	invariable		Baibel te Bartimaeus laga naam ase.	0.9	
+bechara	ADJ		Poor thing, helpless.	poor;helpless	feelings	H	बेचारा	base form		Bechara manu.	0.8	
+behera	PROPN		A surname.	Behera	community	PN	behera	invariable		Behera ekjon manu.	0.3	doubtful: surname, no context
+behosh	ADJ		Unconscious, fainted.	unconscious;fainted	health	P	बेहोश	base form		-	0.85	
+belial	PROPN		A personal name in the Bible: Belial. A name for the devil.	Belial	religion	BN	belial	invariable		-	0.9	
+bengh	NOUN		A frog.	frog	nature	N	bengh	base form,countable,animate	beng	Bengh pani te ase.	0.4	doubtful: no context
+beor	PROPN		A personal name in the Bible: Beor.	Beor	religion	BN	beor	invariable		-	0.9	
+bernice	PROPN		A personal name in the Bible: Bernice.	Bernice	religion	BN	bernice	invariable		-	0.9	
+beryl	NOUN		A green gemstone.	beryl	religion	E	beryl	base form,countable,inanimate		Beryl pathor.	0.5	
+bet	NOUN		A cane or lash.	cane;lash	describing	H	बेंत	base form,countable,inanimate		-	0.6	
+bethesda	PROPN		A place name in the Bible: Bethesda.	Bethesda	places,religion	BN	bethesda	invariable		-	0.9	
+bhaba	NOUN		Thought or feeling.	thought;feeling	feelings	A	ভাৱ	base form,countable,inanimate		Moi laga bhaba bhal ase.	0.5	
+bhabobadini	NOUN		A woman prophet.	prophetess	religion	S	भविष्यवादिनी	base form,countable,animate		-	0.6	
+bhagsak	NOUN		Partiality, favouritism.	partiality	community	N	bhagsak	base form,mass,inanimate		-	0.3	doubtful: unclear, one verse
+bhandar	NOUN		A storehouse or store room.	storehouse;store	home	H	भंडार	base form,countable,inanimate		-	0.75	
+bhap	NOUN		Steam or vapour.	steam;vapour	nature	H	भाप	base form,mass,inanimate		-	0.8	
+bhidai	NOUN		A farewell.	farewell	community	H	विदाई	base form,countable,inanimate	bidai	Amikhan bhidai dibo.	0.4	doubtful: spelling of bidai
+bhikai	NOUN	VERB=to beg	Begging or alms.	begging;alms	money	H	भीख	base form,mass,inanimate	bhikhai	Tai bhikai kore.	0.4	
+bhirod	NOUN		Opposition.	opposition	civic	S	विरोध	base form,mass,inanimate	birod	Taikhan bhirod korise.	0.4	doubtful: spelling of birod
+bhirorte	ADP	ADV=inside	Inside, in.	inside;in	grammar	N	bhirorte	invariable	bhitorte	-	0.8	
+bhitore	ADV	ADP=inside	Inside.	inside	grammar	H	भीतर	invariable	bhitor	Tai bhitore ase.	0.8	
+bhojan	NOUN		A meal, food.	meal;food	food	S	भोजन	base form,mass,inanimate		-	0.85	
+bhorali	NOUN		A treasurer, keeper of the store.	treasurer	work	A	ভঁৰালী	base form,countable,animate		-	0.7	
+bhukh	NOUN		Hunger.	hunger	health,food	H	भूख	base form,mass,inanimate		Moi bhukh lagise.	0.9	
+bhuki	NOUN		Hunger; spelling of bhukh.	hunger	food	N	bhuki	base form,mass,inanimate		-	0.2	doubtful: context unclear
+bhutibole	VERB		To forget.	to forget	actions	N	bhutibole	infinitive		Moi bhutibole nai.	0.2	doubtful: unclear word
+biji	NOUN		A needle.	needle	home	N	biji	base form,countable,inanimate		-	0.3	doubtful: one verse
+bikhabole	VERB		To feel pain or pains.	to ache	health	N	bikhabole	infinitive		-	0.3	doubtful: derived from bikha
+bisarisele	VERB		Past perfect of bisari: had judged.	had judged	civic,actions	A	বিচাৰি	past		-	0.7	
+blastus	PROPN		A personal name in the Bible: Blastus.	Blastus	religion	BN	blastus	invariable		-	0.9	
+boanergas	PROPN		A personal name in the Bible: Boanergas.	Boanergas	religion	BN	boanergas	invariable		-	0.9	
+bojai	VERB		To explain or convince.	to explain	actions	A	বুজাই	citation form	bujai	Moi taike bojai dibo.	0.4	doubtful: spelling of bujai
+boksa	NOUN		A box.	box	home	E	box	base form,countable,inanimate	boxsa	-	0.8	
+bon	NOUN		A forest; in the verse, closed or held shut.	forest;wood	nature	A	বন	base form,countable,inanimate		-	0.4	doubtful: sentence use unclear
+botol	NOUN		A bottle, or a measure in a jar.	bottle	home	E	bottle	base form,countable,inanimate		-	0.9	
+boxsa	NOUN		A box or basket.	box;basket	home	E	box	base form,countable,inanimate	boksa	-	0.8	
+buswasi	NOUN		A believer.	believer	religion	S	विश्वासी	base form,countable,animate	biswasi	Tai ekjon buswasi.	0.6	doubtful: spelling of biswasi
+candace	PROPN		A personal name in the Bible: Candace.	Candace	religion	BN	candace	invariable		Baibel te Candace laga naam ase.	0.9	
+cannan	PROPN		A place name in the Bible: Cannan.	Cannan	places,religion	BN	cannan	invariable		-	0.9	
+carpus	PROPN		A personal name in the Bible: Carpus.	Carpus	religion	BN	carpus	invariable		Baibel te Carpus laga naam ase.	0.9	
+cauda	PROPN		A place name in the Bible: Cauda.	Cauda	places,religion	BN	cauda	invariable		-	0.9	
+chababo	VERB		Future of chabi: will look at.	will look	actions	A	চাব	future		Moi chababo.	0.4	doubtful: unclear form
+chabai	VERB		To chew.	to chew	food,actions	A	চোবাই	citation form		-	0.5	
+chaka	NOUN		A wheel or disc.	wheel;disc	describing	H	चक्का	base form,countable,inanimate		-	0.7	
+chaldea	PROPN		A place name in the Bible: Chaldea.	Chaldea	places,religion	BN	chaldea	invariable		Chaldea Baibel te ase.	0.9	
+chamki	VERB		To shine, glitter.	to shine;to glitter	describing	H	चमकी	citation form		-	0.7	
+chamkise	VERB		Past of chamki: shone.	shone	describing	H	चमकी	past		Bijili chamkise.	0.7	
+chani	VERB		To sift or sieve.	to sift	farming,actions	H	छानना	citation form		-	0.7	
+chaurasi	NUM		Eighty-four.	eighty-four	numbers	H	चौरासी	invariable		-	0.7	
+cherubim	NOUN		Angels of a high order.	cherubim	religion	E	cherubim	base form,countable,animate		Cherubim sorgote ase.	0.5	
+chetai	NOUN		A mat or bed to carry someone.	mat;stretcher	home	H	चटाई	base form,countable,inanimate	chatai	-	0.6	
+chetak	NOUN		A leopard or similar wild cat.	leopard;cheetah	nature	H	चीता	base form,countable,animate		-	0.4	doubtful: one verse
+chheyalis	NUM		Forty-six.	forty-six	numbers	H	छयालिस	invariable		-	0.7	
+chilai	NOUN		Sewing.	sewing	clothing	A	চিলাই	base form,mass,inanimate	silai	Tai chilai kore.	0.3	doubtful: unclear word
+chinikene	VERB		Having snatched away; from chini.	snatching;having snatched	actions	H	छीनकर	participle		-	0.4	doubtful: sentence use unclear
+chios	PROPN		A place name in the Bible: Chios.	Chios	places,religion	BN	chios	invariable		Chios Baibel te ase.	0.9	
+chipa	VERB		To trample or press down.	to trample;to press	actions	A	চেপা	citation form		-	0.5	
+chitai	VERB		To scatter or spread; unclear.	to scatter	actions	N	chitai	citation form		Tai chitai dise.	0.15	doubtful: unclear word
+chloe	PROPN		A personal name in the Bible: Chloe.	Chloe	religion	BN	chloe	invariable		-	0.9	
+chokidar	NOUN		A watchman, guard.	watchman;guard	work	P	चौकीदार	base form,countable,animate		Chokidar gate te ase.	0.9	
+chowki	NOUN		A guard post, or a bench.	guard post;bench	home,civic	H	चौकी	base form,countable,inanimate		Chowki te bohi thakibi.	0.7	
+chrysolite	NOUN		A gemstone.	chrysolite	religion	E	chrysolite	base form,countable,inanimate		Chrysolite pathor.	0.5	
+chrysoprase	NOUN		A green gemstone.	chrysoprase	religion	E	chrysoprase	base form,countable,inanimate		Chrysoprase pathor.	0.5	
+chuishe	VERB		Past of chui: touched.	touched	actions	A	চুইছে	past		-	0.7	
+chulai	VERB		Unclear; possibly to stir or bend.	to stir	actions	N	chulai	citation form		Tai chulai dise.	0.15	doubtful: unclear word
+chumai	VERB		To kiss.	to kiss	actions	A	চুমাই	citation form	chuma	Tai bacha ke chumai dise.	0.5	
+chuni	VERB		To choose, pick out.	to choose;to pick	actions	H	चुनना	citation form		-	0.6	
+chuza	PROPN		A personal name in the Bible: Chuza.	Chuza	religion	BN	chuza	invariable		Baibel te Chuza laga naam ase.	0.9	
+citron	NOUN		A citrus fruit.	citron	food	E	citron	base form,countable,inanimate		Citron phol.	0.5	
+claudia	PROPN		A personal name in the Bible: Claudia.	Claudia	religion	BN	claudia	invariable		-	0.9	
+clement	PROPN		A personal name in the Bible: Clement.	Clement	religion	BN	clement	invariable		Baibel te Clement laga naam ase.	0.9	
+cleopas	PROPN		A personal name in the Bible: Cleopas.	Cleopas	religion	BN	cleopas	invariable		-	0.9	
+clopas	PROPN		A personal name in the Bible: Clopas.	Clopas	religion	BN	clopas	invariable		-	0.9	
+cnidus	PROPN		A place name in the Bible: Cnidus.	Cnidus	places,religion	BN	cnidus	invariable		Cnidus Baibel te ase.	0.9	
+colossae	PROPN		A place name in the Bible: Colossae.	Colossae	places,religion	BN	colossae	invariable		-	0.9	
+corban	NOUN		A gift offered to God.	offering;gift to God	religion	N	corban	base form,countable,inanimate		Corban Isor laga.	0.5	
+cos	PROPN		A place name in the Bible: Cos.	Cos	places,religion	BN	cos	invariable		Cos Baibel te ase.	0.9	
+cosam	PROPN		A personal name in the Bible: Cosam.	Cosam	religion	BN	cosam	invariable		-	0.9	
+crescens	PROPN		A personal name in the Bible: Crescens.	Crescens	religion	BN	crescens	invariable		Baibel te Crescens laga naam ase.	0.9	
+creta	PROPN		A place name in the Bible: Creta.	Creta	places,religion	BN	creta	invariable		Creta Baibel te ase.	0.9	
+cyrenia	PROPN		A place name in the Bible: Cyrenia.	Cyrenia	places,religion	BN	cyrenia	invariable		Cyrenia Baibel te ase.	0.9	
+daami	ADJ		Costly, valuable.	costly;valuable	money,describing	H	दामी	base form		Etu bisi daami.	0.7	
+dabba	NOUN		A tin or box.	tin;box	home	H	डब्बा	base form,countable,inanimate		Dabba te bhat ase.	0.85	
+dakaiti	NOUN		Robbery.	robbery	civic	H	डकैती	base form,countable,inanimate	dokaiti	-	0.85	
+daku	NOUN		A robber.	robber;bandit	civic	H	डाकू	base form,countable,animate		-	0.85	
+dalmanutha	PROPN		A place name in the Bible: Dalmanutha.	Dalmanutha	places,religion	BN	dalmanutha	invariable		-	0.9	
+dalmatia	PROPN		A place name in the Bible: Dalmatia.	Dalmatia	places,religion	BN	dalmatia	invariable		Dalmatia Baibel te ase.	0.9	
+damaris	PROPN		A personal name in the Bible: Damaris.	Damaris	religion	BN	damaris	invariable		Baibel te Damaris laga naam ase.	0.9	
+daniel	PROPN		A personal name in the Bible: Daniel.	Daniel	religion	BN	daniel	invariable		Baibel te Daniel laga naam ase.	0.9	
+darbar	NOUN		A royal court.	court;palace	civic	P	दरबार	base form,countable,inanimate		-	0.7	
+denarii	NOUN		Roman silver coins.	denarii;coins	money	E	denarii	base form,countable,inanimate		-	0.6	
+dhakna	NOUN		A lid or cover.	lid;cover	home	H	ढक्कन	base form,countable,inanimate		Dhakna dhaki dibi.	0.7	
+dhal	NOUN		A shield.	shield	culture	H	ढाल	base form,countable,inanimate		-	0.85	
+dhala	VERB		To pour; participle poured.	to pour	actions	A	ঢালা	participle		-	0.7	
+dham	NOUN		A holy place or abode.	holy place;abode	religion	S	धाम	base form,countable,inanimate		Etu pobitro dham.	0.3	doubtful: no context
+dhaniya	NOUN		Coriander.	coriander	food	H	धनिया	base form,mass,inanimate		Dhaniya pata dibi.	0.9	
+dhara	NOUN		A stream or flow.	stream;flow	nature	H	धारा	base form,countable,inanimate		-	0.75	
+dhobi	NOUN		A washerman.	washerman	work	H	धोबी	base form,countable,animate		-	0.8	
+dholai	VERB		To wash.	to wash	actions,home	A	ধোলাই	citation form		-	0.5	
+dhum	NOUN		Great fuss or celebration.	fuss;celebration	culture	H	धूम	base form,countable,inanimate		Bisi dhum ase.	0.4	
+dhup	NOUN		Incense.	incense	religion	H	धूप	base form,mass,inanimate		-	0.85	
+dhur	NOUN		Dust, dirt.	dust;dirt	nature	A	ধূলি	base form,mass,inanimate		-	0.5	
+digdari	NOUN		Trouble, difficulty.	trouble;difficulty	describing	H	दिक्कत	base form,countable,inanimate	digdar	Bisi digdari hoise.	0.6	
+dikhawa	NOUN		Show or outward display.	show;display	describing	H	दिखावा	base form,mass,inanimate		-	0.8	
+dikhibow	VERB		To see; infinitive of dikhi.	to see	actions	A	দেখিবলৈ	infinitive	dikhibo	-	0.6	
+dikri	NOUN		Unclear; tax collecting place.	tax office	money	N	dikri	base form,countable,inanimate		-	0.2	doubtful: unclear word
+dilebi	VERB		Even if given; from di.	even if given	actions	A	দিলেও	conditional		Dilebi moi nalobo.	0.6	
+dinar	NOUN		A coin of money.	dinar;coin	money	E	dinar	base form,countable,inanimate		Ek dinar dibi.	0.6	
+dinarii	NOUN		Roman coins.	dinarii;coins	money	E	denarii	base form,countable,inanimate		Dinarii dise.	0.5	
+dionysius	PROPN		A personal name in the Bible: Dionysius.	Dionysius	religion	BN	dionysius	invariable		Baibel te Dionysius laga naam ase.	0.9	
+diotrephes	PROPN		A personal name in the Bible: Diotrephes.	Diotrephes	religion	BN	diotrephes	invariable		-	0.9	
+diuta	NUM		Two (of things or people).	two	numbers	A	দুটা	invariable	duita	-	0.6	
+diyi	VERB		Giving; participle of di.	giving	actions	A	দি	participle		-	0.6	
+dokaiti	NOUN		Robbery.	robbery	civic	H	डकैती	base form,countable,inanimate	dakaiti	Dokaiti hoise.	0.8	
+dorpok	NOUN	ADJ=cowardly	A coward.	coward	feelings	H	डरपोक	base form,countable,animate		Tai dorpok manu.	0.7	
+dristant	NOUN		A parable or example.	parable;example	religion	S	दृष्टांत	base form,countable,inanimate	dristanto	Jisu dristant dise.	0.6	
+drusilla	PROPN		A personal name in the Bible: Drusilla.	Drusilla	religion	BN	drusilla	invariable		Baibel te Drusilla laga naam ase.	0.9	
+dukhai	VERB		To hurt or cause pain.	to hurt;to grieve	feelings	A	দুখাই	citation form		-	0.6	
+eber	PROPN		A personal name in the Bible: Eber.	Eber	religion	BN	eber	invariable		-	0.9	
+ekdum	ADV		Completely, suddenly.	completely;suddenly;very	describing	H	एकदम	invariable		-	0.9	
+ekela	ADV	ADJ=alone	Alone, by oneself.	alone;only	describing	A	একেলা	invariable	ekla	-	0.9	
+elam	PROPN		A place name in the Bible: Elam.	Elam	places,religion	BN	elam	invariable		-	0.9	
+eliezer	PROPN		A personal name in the Bible: Eliezer.	Eliezer	religion	BN	eliezer	invariable		-	0.9	
+elisha	PROPN		A personal name in the Bible: Elisha.	Elisha	religion	BN	elisha	invariable		-	0.9	
+elmadam	PROPN		A personal name in the Bible: Elmadam.	Elmadam	religion	BN	elmadam	invariable		-	0.9	
+emmaus	PROPN		A place name in the Bible: Emmaus.	Emmaus	places,religion	BN	emmaus	invariable		-	0.9	
+enos	PROPN		A personal name in the Bible: Enos.	Enos	religion	BN	enos	invariable		-	0.9	
+epaenetus	PROPN		A personal name in the Bible: Epaenetus.	Epaenetus	religion	BN	epaenetus	invariable		-	0.9	
+ephphatha	X		Aramaic word meaning be opened.	be opened	religion	N	ephphatha	invariable		-	0.4	
+ephraim	PROPN		A personal name in the Bible: Ephraim.	Ephraim	religion	BN	ephraim	invariable		Baibel te Ephraim laga naam ase.	0.9	
+epicurean	NOUN		A follower of Epicurus.	Epicurean	religion	E	Epicurean	base form,countable,animate		Epicurean manu.	0.4	
+er	PROPN		A personal name in the Bible: Er.	Er	religion	BN	er	invariable		-	0.9	
+esli	PROPN		A personal name in the Bible: Esli.	Esli	religion	BN	esli	invariable		-	0.9	
+eturaea	PROPN		A place name in the Bible: Eturaea.	Eturaea	places,religion	BN	eturaea	invariable		Eturaea Baibel te ase.	0.9	
+eubulus	PROPN		A personal name in the Bible: Eubulus.	Eubulus	religion	BN	eubulus	invariable		-	0.9	
+eunice	PROPN		A personal name in the Bible: Eunice.	Eunice	religion	BN	eunice	invariable		Baibel te Eunice laga naam ase.	0.9	
+euodia	PROPN		A personal name in the Bible: Euodia.	Euodia	religion	BN	euodia	invariable		-	0.9	
+eutychus	PROPN		A personal name in the Bible: Eutychus.	Eutychus	religion	BN	eutychus	invariable		Baibel te Eutychus laga naam ase.	0.9	
+fansi	NOUN		Hanging, the gallows.	hanging;gallows	civic	H	फाँसी	base form,countable,inanimate		-	0.8	
+fortunatus	PROPN		A personal name in the Bible: Fortunatus.	Fortunatus	religion	BN	fortunatus	invariable		-	0.9	
+freedmen	NOUN		Freed slaves.	freedmen	community	E	freedmen	base form,countable,animate		Freedmen khan ahise.	0.4	
+gaal	NOUN		Cheek.	cheek	body	H	गाल	base form,countable,inanimate		Gaal te chumai dise.	0.5	
+gaari	NOUN		A cart, car or vehicle.	cart;car;vehicle	travel	H	गाड़ी	base form,countable,inanimate	gari	-	0.9	
+gabbatha	PROPN		A place name in the Bible: Gabbatha.	Gabbatha	places,religion	BN	gabbatha	invariable		Gabbatha Baibel te ase.	0.9	
+gabo	VERB		Future of gai: will sing.	will sing	leisure,actions	A	গাব	future		-	0.7	
+gad	PROPN		A personal name in the Bible: Gad. A son of Jacob and a tribe of Israel.	Gad	religion	BN	gad	invariable		-	0.9	
+gadarene	PROPN		A personal name in the Bible: Gadarene.	Gadarene	religion	BN	gadarene	invariable		-	0.9	
+gadda	NOUN		A mattress.	mattress	home	H	गद्दा	base form,countable,inanimate		Gadda te sutibo.	0.7	
+gath	NOUN		A knot.	knot	home	H	गाँठ	base form,countable,inanimate		Rusi te gath ase.	0.7	
+gayi	NOUN		A cow.	cow	farming	H	गाय	base form,countable,animate	gai	Gayi dudh dibo.	0.7	
+gaza	PROPN		A place name in the Bible: Gaza.	Gaza	places,religion	BN	gaza	invariable		Gaza Baibel te ase.	0.9	
+ghalta	ADJ		Deep; spelling of gahira.	deep	describing	N	ghalta	base form		-	0.3	doubtful: spelling unclear
+gherikena	VERB		Having surrounded; from gheri.	surrounding	actions	A	ঘেৰি	participle		-	0.7	
+ghumi	VERB		To sleep.	to sleep	actions,health	A	ঘুমাই	citation form		-	0.8	
+ghunga	ADJ		Mute, unable to speak.	mute;dumb	health	H	गूंगा	base form		-	0.8	
+gideon	PROPN		A personal name in the Bible: Gideon.	Gideon	religion	BN	gideon	invariable		Baibel te Gideon laga naam ase.	0.9	
+girija	VERB	NOUN=church	To fall; also church.	to fall	actions	N	girija	citation form	girja	-	0.3	doubtful: unclear use
+gog	PROPN		A personal name in the Bible: Gog.	Gog	religion	BN	gog	invariable		Baibel te Gog laga naam ase.	0.9	
+gufa	NOUN		A cave.	cave	nature	H	गुफा	base form,countable,inanimate		-	0.9	
+gundha	VERB		To smell.	to smell	body,actions	A	গোন্ধ	citation form	gundh	-	0.6	
+gunn	NOUN		Quality or virtue.	quality;virtue	describing	H	गुण	base form,countable,inanimate	gun	Tai laga gunn bhal.	0.4	doubtful: could be a name
+hafta	NOUN		A week.	week	time	P	हफ़्ता	base form,countable,inanimate		Ek hafta hoise.	0.9	
+hajam	NOUN		Digestion; with kori, to swallow up.	digestion;swallowing	health	P	हज़म	base form,mass,inanimate		-	0.7	
+hal	NOUN		A plough.	plough	farming	H	हल	base form,countable,inanimate		-	0.9	
+hamla	NOUN		An attack.	attack	civic	P	हमला	base form,countable,inanimate		Hamla hoise.	0.85	
+hamor	DET		Our, ours.	our	pronouns	H	हमार	invariable		Hamor ghor.	0.2	doubtful: not typical Nagamese
+hasibo	VERB		Future of hasi: will laugh.	will laugh	feelings,actions	A	হাঁহিম	future		-	0.8	
+hathiara	NOUN		A weapon.	weapon	civic	H	हथियार	base form,countable,inanimate	hathiyar	Hathiara loi ahise.	0.85	
+hazar	NUM		One thousand.	thousand	numbers	P	हज़ार	invariable	hajar	Ek hazar taka.	0.9	
+henadhikari	NOUN		A military commander.	commander;officer	work,civic	S	सेनाधिकारी	base form,countable,animate		-	0.6	
+hermogenes	PROPN		A personal name in the Bible: Hermogenes.	Hermogenes	religion	BN	hermogenes	invariable		-	0.9	
+herodia	PROPN		A personal name in the Bible: Herodia.	Herodia	religion	BN	herodia	invariable		Baibel te Herodia laga naam ase.	0.9	
+herodion	PROPN		A personal name in the Bible: Herodion.	Herodion	religion	BN	herodion	invariable		-	0.9	
+hierapolis	PROPN		A place name in the Bible: Hierapolis.	Hierapolis	places,religion	BN	hierapolis	invariable		Hierapolis Baibel te ase.	0.9	
+hikaise	VERB		Past of hikai: taught.	taught	education,actions	A	শিকাইছে	past		-	0.85	
+hiliai	VERB		To shake or toss.	to shake;to toss	actions	A	হিলাই	citation form	hilai	-	0.6	
+honmanio	ADJ		Honourable, respected.	honourable;respected	community	A	সন্মানীয়	base form		Tai honmanio manu.	0.3	doubtful: unclear spelling
+hosabi	NOUN		An accountant.	accountant	work,money	H	हिसाबी	base form,countable,animate	hisabi	Tai hosabi ase.	0.2	doubtful: unclear word
+hosea	PROPN		A personal name in the Bible: Hosea.	Hosea	religion	BN	hosea	invariable		Baibel te Hosea laga naam ase.	0.9	
+humai	VERB		Having entered; from humai.	having entered	actions	A	সোমাই	participle		-	0.7	
+hungama	NOUN		An uproar or commotion.	uproar;commotion	community	P	हंगामा	base form,countable,inanimate		-	0.85	
+hyssop	NOUN		A herb used in rituals.	hyssop	religion	E	hyssop	base form,mass,inanimate		Hyssop gash.	0.5	
+idumea	PROPN		A place name in the Bible: Idumea.	Idumea	places,religion	BN	idumea	invariable		-	0.9	
+illyricum	PROPN		A place name in the Bible: Illyricum.	Illyricum	places,religion	BN	illyricum	invariable		-	0.9	
+immanuel	PROPN		A personal name in the Bible: Immanuel. A name meaning God with us.	Immanuel	religion	BN	immanuel	invariable		Baibel te Immanuel laga naam ase.	0.9	
+inkar	NOUN		Denial or refusal; with kori, to deny.	denial;refusal	actions	P	इनकार	base form,mass,inanimate		-	0.8	
+issachar	PROPN		A personal name in the Bible: Issachar.	Issachar	religion	BN	issachar	invariable		-	0.9	
+itra	NOUN		Perfume.	perfume	clothing	H	इत्र	base form,mass,inanimate		Itra lagai dise.	0.7	
+iukabole	VERB		To hide; spelling of lukabole.	to hide	actions	A	লুকাবলৈ	infinitive	lukabole	-	0.5	doubtful: typo of lukabole
+jaa	VERB		Go; imperative of ja.	go	travel,actions	H	जा	imperative	ja	Ghor te jaa.	0.7	
+jacinth	NOUN		A blue gemstone.	jacinth	religion	E	jacinth	base form,countable,inanimate		Jacinth pathor.	0.5	
+jambres	PROPN		A personal name in the Bible: Jambres.	Jambres	religion	BN	jambres	invariable		Baibel te Jambres laga naam ase.	0.9	
+janabole	VERB		To inform or let know.	to inform;to tell	media,actions	A	জনাবলৈ	infinitive		Moi taike janabole ase.	0.6	
+jannai	PROPN		A personal name in the Bible: Jannai.	Jannai	religion	BN	jannai	invariable		-	0.9	
+jannes	PROPN		A personal name in the Bible: Jannes.	Jannes	religion	BN	jannes	invariable		Baibel te Jannes laga naam ase.	0.9	
+janoni	NOUN		Mother.	mother	family	S	जननी	base form,countable,animate		Janoni ghor te ase.	0.4	
+jared	PROPN		A personal name in the Bible: Jared.	Jared	religion	BN	jared	invariable		-	0.9	
+jasus	NOUN		A spy.	spy	work	H	जासूस	base form,countable,animate		Jasus ahise.	0.75	
+jawani	NOUN		Youth, young age.	youth	time	H	जवानी	base form,mass,inanimate		Jawani te moi khel khelise.	0.8	
+jeneka	SCONJ		As, just as.	as;just as	grammar	A	যেনেকৈ	invariable		Jeneka koise teneka kori.	0.8	
+jephtath	PROPN		A personal name in the Bible: Jephtath.	Jephtath	religion	BN	jephtath	invariable		Baibel te Jephtath laga naam ase.	0.9	
+jesus	PROPN		A personal name in the Bible: Jesus. Another spelling of Jisu.	Jesus	religion	BN	jesus	invariable		Baibel te Jesus laga naam ase.	0.9	
+jetia	SCONJ		When, at the time that.	when	time,grammar	A	যেতিয়া	invariable	jitia	Jetia ahibi moike kobi.	0.7	
+jezebel	PROPN		A personal name in the Bible: Jezebel.	Jezebel	religion	BN	jezebel	invariable		-	0.9	
+jhabara	NOUN		Rubbish, dirt.	rubbish;filth	describing	A	জাবৰ	base form,mass,inanimate	jhabra	-	0.6	
+jhali	NOUN		A snare or net trap.	snare;trap	nature	A	জালি	base form,countable,inanimate		-	0.4	
+jhara	NOUN		A charm or spell, ritual healing by sweeping.	charm;spell	culture	H	झाड़ा	base form,countable,inanimate		-	0.6	
+jharu	NOUN		A broom.	broom	home	H	झाड़ू	base form,countable,inanimate		Jharu pora jhari dibi.	0.9	
+jhundai	NOUN		A crowd or group.	crowd;group	community	H	झुंड	base form,countable,inanimate	jhund	Bisi jhundai ase.	0.2	doubtful: unclear word
+jiliki	VERB		To shine, sparkle.	to shine;to sparkle	describing	A	জিলিকি	citation form		-	0.7	
+joanan	PROPN		A personal name in the Bible: Joanan.	Joanan	religion	BN	joanan	invariable		-	0.9	
+jobole	VERB		To go; purpose form of ja.	to go	travel,actions	A	যাবলৈ	infinitive		-	0.7	
+joda	PROPN		A personal name in the Bible: Joda.	Joda	religion	BN	joda	invariable		-	0.9	
+joel	PROPN		A personal name in the Bible: Joel.	Joel	religion	BN	joel	invariable		-	0.9	
+jogot	NOUN		The world.	world	nature	S	জগত	base form,countable,inanimate		Jogot bisi dangor.	0.6	
+jolon	NOUN		Burning, a burning pain.	burning	health	A	জ্বলন	base form,mass,inanimate		Jolon hoise.	0.4	
+jonam	PROPN		A personal name in the Bible: Jonam.	Jonam	religion	BN	jonam	invariable		-	0.9	
+jora	NOUN		A pair.	pair	numbers	H	जोड़ा	base form,countable,inanimate		-	0.9	
+jorim	PROPN		A personal name in the Bible: Jorim.	Jorim	religion	BN	jorim	invariable		-	0.9	
+josech	PROPN		A personal name in the Bible: Josech.	Josech	religion	BN	josech	invariable		-	0.9	
+josh	NOUN		Enthusiasm, passion.	zeal;enthusiasm	feelings	P	जोश	base form,mass,inanimate		-	0.85	
+jude	PROPN		A personal name in the Bible: Jude.	Jude	religion	BN	jude	invariable		Baibel te Jude laga naam ase.	0.9	
+julia	PROPN		A personal name in the Bible: Julia.	Julia	religion	BN	julia	invariable		-	0.9	
+junias	PROPN		A personal name in the Bible: Junias.	Junias	religion	BN	junias	invariable		-	0.9	
+jurai	VERB		To cool or soothe.	to cool;to soothe	feelings,actions	A	জুৰাই	citation form		Jurai dibi.	0.4	
+jurwa	NOUN		Unclear; possibly gambling.	gambling	leisure	N	jurwa	base form,mass,inanimate		Jurwa nakhelibi.	0.15	doubtful: unclear word
+jyotishee	NOUN		A fortune teller or astrologer.	fortune teller;astrologer	culture	S	ज्योतिषी	base form,countable,animate	jyotishi	-	0.7	
+kabja	NOUN		Possession, control.	possession;control	civic	P	कब्ज़ा	base form,mass,inanimate		Tai kabja loise.	0.8	
+kandha	NOUN		Shoulder.	shoulder	body	H	कंधा	base form,countable,inanimate		-	0.85	
+kandia	VERB		Crying while; from kandi.	crying	feelings,actions	A	কান্দিয়া	participle		Kandia kandia ahise.	0.4	
+kape	VERB		Present of kapi: shakes, trembles.	shakes;trembles	actions	A	কঁপে	present		-	0.8	
+kar	PRON		Whose.	whose	pronouns	A	কাৰ	invariable		-	0.8	
+katha	NOUN		A unit of measure, or a grain measure.	measure	farming	A	কঠা	base form,countable,inanimate		-	0.3	doubtful: sentence use unclear
+katta	NOUN		A thorn.	thorn	nature	H	काँटा	base form,countable,inanimate		-	0.8	
+kefa	PROPN		A personal name in the Bible: Kefa. Another name of Peter.	Kefa	religion	BN	kefa	invariable		-	0.9	
+ketia	ADV		When; with bhi, ever.	when;ever	time	A	কেতিয়া	invariable	kitia	-	0.85	
+khaas	ADJ		Special, particular.	special;particular	describing	H	ख़ास	base form	khas	Etu khaas jinis.	0.85	
+khajur	NOUN		Date palm or dates.	date palm;dates	food,nature	H	खजूर	base form,countable,inanimate		-	0.8	
+khakuwa	NOUN		A glutton.	glutton	food	A	খাকুৱা	base form,countable,animate		Tai khakuwa manu.	0.3	doubtful: unclear word
+khazana	NOUN		A treasury, treasure.	treasury;treasure	money	P	ख़ज़ाना	base form,countable,inanimate		-	0.8	
+kher	NOUN		Straw or thatch.	straw;thatch	farming,home	A	খেৰ	base form,mass,inanimate		-	0.8	
+khilari	NOUN		A player or athlete.	player;athlete	leisure	H	खिलाड़ी	base form,countable,animate		-	0.9	
+khulai	VERB		To open or set free.	to open;to release	actions	A	খুলাই	citation form		Dorja khulai dibi.	0.6	
+khule	VERB		Present of khuli: opens.	opens	actions	A	খুলে	present		-	0.85	
+kidron	PROPN		A place name in the Bible: Kidron.	Kidron	places,religion	BN	kidron	invariable		Kidron Baibel te ase.	0.9	
+kilo	NOUN		A kilogram.	kilo;kilogram	describing	E	kilo	base form,countable,inanimate		-	0.95	
+kira	NOUN		An insect or worm.	insect;worm	nature	H	कीड़ा	base form,countable,animate		Kira ase.	0.85	
+kish	PROPN		A personal name in the Bible: Kish.	Kish	religion	BN	kish	invariable		Baibel te Kish laga naam ase.	0.9	
+kobutar	NOUN		A pigeon or dove.	pigeon;dove	nature	H	कबूतर	base form,countable,animate		-	0.85	
+koidibole	VERB		To tell someone; purpose form of koidi.	to tell	media,actions	A	কৈদিবলৈ	infinitive		-	0.7	
+koidisele	VERB		Past perfect of koidi: had told.	had told	media,actions	A	কৈদিছিল	past		-	0.7	
+koikai	ADV		One after another; unclear.	one after another	describing	N	koikai	invariable		-	0.25	doubtful: unclear
+komoliya	PROPN		A name.	Komoliya	community	PN	komoliya	invariable		Komoliya ekjon manu.	0.3	doubtful: no context
+kopas	NOUN		Cotton, a cotton ball.	cotton	clothing	H	कपास	base form,mass,inanimate		-	0.7	
+korah	PROPN		A personal name in the Bible: Korah.	Korah	religion	BN	korah	invariable		-	0.9	
+koridile	VERB		If you do it for me; conditional of kori and di.	if done for	actions	A	কৰি দিলে	conditional		-	0.7	
+koriloi	VERB		Having done and taken; do for oneself.	having done;do for oneself	actions	A	কৰি লৈ	participle		Moi koriloi jabo.	0.5	
+korithake	VERB		Keeps doing, stays doing; from kori and thak.	keeps doing;stays	actions	A	কৰি থাকে	present,habitual		-	0.6	
+kos	NOUN		A unit of distance, about two miles.	kos;distance	travel	H	कोस	base form,countable,inanimate		-	0.5	
+kosi	VERB		To tighten or hold fast.	to tighten;to hold fast	actions	H	कसी	citation form		-	0.4	doubtful: unclear use
+koum	X		Aramaic word meaning arise.	arise	religion	N	koum	invariable		-	0.3	
+kudi	NUM		Twenty.	twenty	numbers	A	কুৰি	invariable	kuri	Kudi taka lage.	0.5	doubtful: usually written kuri
+kumar	NOUN		A potter.	potter	work	H	कुम्हार	base form,countable,animate	kumhar	-	0.7	
+kure	VERB		Present of kori: does, makes.	does;makes	actions	A	কৰে	present	kore	-	0.7	
+lagija	VERB		To bump or strike against.	to bump;to strike	actions	N	lagija	citation form		-	0.3	doubtful: unclear form
+lagisele	VERB		Past perfect of lagi: had needed, had to.	had to;had needed	actions	A	লাগিছিল	past		-	0.6	
+lakshya	NOUN		An aim or goal.	aim;goal	education	S	लक्ष्य	base form,countable,inanimate		Moi laga lakshya bhal.	0.7	
+lalaj	NOUN		Greed.	greed	feelings	H	लालच	base form,mass,inanimate	lalach	Lalaj nakoribi.	0.5	
+lamech	PROPN		A personal name in the Bible: Lamech.	Lamech	religion	BN	lamech	invariable		-	0.9	
+latin	PROPN	ADJ=Latin	The Latin language.	Latin	education	E	Latin	invariable		-	0.8	
+lenden	NOUN		Dealings, trade, give and take.	dealings;trade	money	H	लेनदेन	base form,mass,inanimate		Taikhan lenden kore.	0.8	
+libya	PROPN		A place name in the Bible: Libya.	Libya	places,religion	BN	libya	invariable		-	0.9	
+linus	PROPN		A personal name in the Bible: Linus.	Linus	religion	BN	linus	invariable		-	0.9	
+liter	NOUN		A litre.	litre	describing	E	litre	base form,countable,inanimate	litre	Ek liter pani.	0.9	
+litra	NOUN		A pound weight in the Bible.	pound;litra	money	N	litra	base form,countable,inanimate		Ek litra suna.	0.3	doubtful: rare
+logo	ADP		With, fellow.	with;fellow	grammar	N	logo	invariable	logot	-	0.5	doubtful: variant of logot
+lois	PROPN		A personal name in the Bible: Lois.	Lois	religion	BN	lois	invariable		Baibel te Lois laga naam ase.	0.9	
+loribi	VERB		Fight; imperative of lori.	fight	actions	A	যুঁজিবি	imperative		-	0.7	
+lsor	NOUN		God; typo of Isor.	God	religion	S	ईश्वर	base form,countable,animate	isor	-	0.3	doubtful: typo of isor
+lu	NOUN		A hot dry wind.	hot wind	weather	H	लू	base form,mass,inanimate		Lu bohise.	0.3	doubtful: no context
+luki	VERB		To hide.	to hide	actions	A	লুকি	citation form		Tai luki ase.	0.85	
+lycia	PROPN		A place name in the Bible: Lycia.	Lycia	places,religion	BN	lycia	invariable		-	0.9	
+lysanias	PROPN		A personal name in the Bible: Lysanias.	Lysanias	religion	BN	lysanias	invariable		Baibel te Lysanias laga naam ase.	0.9	
+lysea	PROPN		A place name in the Bible: Lysea.	Lysea	places,religion	BN	lysea	invariable		-	0.9	
+maali	NOUN		A gardener.	gardener	work	H	माली	base form,countable,animate		Maali bagan te ase.	0.8	
+maath	PROPN		A personal name in the Bible: Maath.	Maath	religion	BN	maath	invariable		-	0.9	
+machang	NOUN		A raised platform or hut.	platform;raised hut	home	A	মচং	base form,countable,inanimate		Machang te bohibi.	0.6	
+magadan	PROPN		A place name in the Bible: Magadan.	Magadan	places,religion	BN	magadan	invariable		-	0.9	
+magdelene	PROPN		A personal name in the Bible: Magdelene.	Magdelene	religion	BN	magdelene	invariable		-	0.9	
+magog	PROPN		A personal name in the Bible: Magog.	Magog	religion	BN	magog	invariable		Baibel te Magog laga naam ase.	0.9	
+mahalaleel	PROPN		A personal name in the Bible: Mahalaleel.	Mahalaleel	religion	BN	mahalaleel	invariable		-	0.9	
+makhi	NOUN		A fly.	fly	nature	H	मक्खी	base form,countable,animate		-	0.85	
+malchus	PROPN		A personal name in the Bible: Malchus.	Malchus	religion	BN	malchus	invariable		-	0.9	
+malis	NOUN		Massage or rubbing; with kori, to massage.	massage;rubbing	health	P	मालिश	base form,mass,inanimate		-	0.85	
+malta	PROPN		A place name in the Bible: Malta.	Malta	places,religion	BN	malta	invariable		-	0.9	
+mamor	NOUN		Rust.	rust	describing	N	mamor	base form,mass,inanimate		-	0.3	doubtful: meaning inferred
+mantri	NOUN		A minister.	minister	civic,work	S	मंत्री	base form,countable,animate		-	0.85	
+marble	NOUN		Marble stone.	marble	describing	E	marble	base form,mass,inanimate		Marble pathor.	0.7	
+mashal	NOUN		A torch.	torch	home	P	मशाल	base form,countable,inanimate		-	0.85	
+massiha	NOUN		The Messiah.	Messiah	religion	P	मसीहा	base form,countable,animate		-	0.7	
+mattatha	PROPN		A personal name in the Bible: Mattatha.	Mattatha	religion	BN	mattatha	invariable		-	0.9	
+mede	PROPN		A personal name in the Bible: Mede.	Mede	religion	BN	mede	invariable		-	0.9	
+median	PROPN		A Median, person from Media.	Median	places	BN	Median	invariable		Median manu.	0.3	doubtful: unclear
+melea	PROPN		A personal name in the Bible: Melea.	Melea	religion	BN	melea	invariable		-	0.9	
+mem	NOUN		Madam.	madam	community	E	ma'am	base form,countable,animate		Mem ahise.	0.3	doubtful: no context
+memna	PROPN		A personal name in the Bible: Memna.	Memna	religion	BN	memna	invariable		-	0.9	
+messiah	PROPN		A personal name in the Bible: Messiah. A title meaning Christ.	Messiah	religion	BN	messiah	invariable		-	0.9	
+methuselah	PROPN		A personal name in the Bible: Methuselah.	Methuselah	religion	BN	methuselah	invariable		-	0.9	
+metre	NOUN		A metre.	metre	describing	E	metre	base form,countable,inanimate		Ek metre lamba.	0.9	
+minar	NOUN		A tower.	tower	places	P	मीनार	base form,countable,inanimate		Minar dangor ase.	0.8	
+miras	NOUN		An inheritance.	inheritance	family	P	मीरास	base form,mass,inanimate		Miras pabo.	0.3	doubtful: no context
+mitylene	PROPN		A place name in the Bible: Mitylene.	Mitylene	places,religion	BN	mitylene	invariable		-	0.9	
+mnason	PROPN		A personal name in the Bible: Mnason.	Mnason	religion	BN	mnason	invariable		Baibel te Mnason laga naam ase.	0.9	
+mohanta	NOUN		A chief or head of a religious house.	chief;abbot	religion	H	महंत	base form,countable,animate		Mohanta ahise.	0.4	
+mojdur	NOUN		A labourer.	labourer;worker	work	P	मज़दूर	base form,countable,animate		Mojdur kaam kore.	0.9	
+molech	PROPN		A personal name in the Bible: Molech. A false god.	Molech	religion	BN	molech	invariable		Baibel te Molech laga naam ase.	0.9	
+molom	NOUN		Ointment, salve.	ointment;salve	health	H	मलहम	base form,mass,inanimate		Molom lagai dibi.	0.4	
+monjuri	NOUN		Approval, permission.	approval;permission	civic	P	मंज़ूरी	base form,mass,inanimate		Monjuri pabo.	0.8	
+morona	NOUN		Death, dying.	death;dying	health	A	মৰণ	base form,mass,inanimate		Morona ahise.	0.3	doubtful: unclear
+mulberry	NOUN		A mulberry fruit or tree.	mulberry	food,nature	E	mulberry	base form,countable,inanimate		Mulberry khabo.	0.6	
+munafa	NOUN		Profit.	profit	money	P	मुनाफ़ा	base form,mass,inanimate		Munafa pai.	0.9	
+mussai	VERB		To wipe away.	to wipe	actions,home	A	মোছাই	citation form		Ton mussai dibi.	0.4	
+mussri	NOUN		Lentil; unclear.	lentil	food	H	मसूर	base form,mass,inanimate		Mussri dal.	0.15	doubtful: unclear word
+mutha	NOUN		A bundle or handful.	bundle;handful	describing	H	मुट्ठा	base form,countable,inanimate		-	0.6	
+myra	PROPN		A place name in the Bible: Myra.	Myra	places,religion	BN	myra	invariable		-	0.9	
+myrrh	NOUN		A fragrant resin.	myrrh	religion	E	myrrh	base form,mass,inanimate		-	0.6	
+naakal	NOUN		Nakedness; unclear.	nakedness	clothing	N	naakal	base form,mass,inanimate	nangal	-	0.2	doubtful: meaning inferred
+naaman	PROPN		A personal name in the Bible: Naaman.	Naaman	religion	BN	naaman	invariable		-	0.9	
+naapibo	VERB		Future of naapi: will measure.	will measure	actions	A	জুখিব	future	naapibo	-	0.7	
+nabachaile	VERB		If not spare; negative conditional of bacha.	if not spared	actions	A	নাবচালে	negative,conditional		-	0.6	
+nabera	VERB		Do not walk about; negative of bera.	not walk about	actions	A	নাবেৰা	negative		Nabera nabera.	0.3	doubtful: unclear form
+nabhutibo	VERB		Will not be put out; negative future of bhuti.	will not be quenched	actions	A	নুভুতিব	negative,future		-	0.5	
+nabikhabo	VERB		Will not hurt; negative future of bikha.	will not hurt	health	N	nabikhabo	negative,future		Nabikhabo.	0.3	doubtful: unclear form
+nabira	VERB		Could not pass, unable; negative.	unable to pass	actions	N	nabira	negative		-	0.3	doubtful: unclear form
+naboha	VERB		Not sat on, unridden; negative participle of boha.	unridden	actions	A	নবহা	negative,participle		-	0.5	
+nabujha	VERB		Did not understand; negative of bujha.	did not understand	actions	A	নুবুজা	negative,participle		Moi nabujha.	0.8	

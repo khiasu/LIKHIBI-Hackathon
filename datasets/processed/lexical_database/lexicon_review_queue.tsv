@@ -1,872 +1,1134 @@
-id	word	status	pos	gloss_candidates	morphology	variants	domains	decision	correct_pos	correct_gloss	note
-LKB-00001	aru	attested	CCONJ	and							
-LKB-00002	laga	attested	ADP	of (possessive)			grammar,greetings				
-LKB-00003	pora	attested	ADP	from, by			grammar,greetings,home				
-LKB-00004	khan	attested	PART	plural marker (written apart or attached: manu khan, manukhan)			grammar,greetings				
-LKB-00005	ke	attested	ADP	to (object marker)			grammar,greetings				
-LKB-00006	tai	attested	PRON	he, she			greetings,pronouns				
-LKB-00007	ase	attested	AUX	is, am, are (exists)		aase,asse	grammar,greetings				
-LKB-00008	te	attested	ADP	in, at, to			grammar,greetings				
-LKB-00009	etu	attested	PRON	this			grammar,greetings,places				
-LKB-00010	kene	attested	SCONJ	having (done), and then			grammar,greetings				
-LKB-00011	taikhan	attested	PRON	they	tai + -khan (plural)		greetings,pronouns				
-LKB-00013	bhi	attested	PART	also, even			grammar,greetings				
-LKB-00015	moi	attested	PRON	I, me			greetings,pronouns				
-LKB-00016	to	attested	PART	topic or emphasis particle			grammar,greetings				
-LKB-00017	kintu	attested	CCONJ	but			grammar,greetings				
-LKB-00019	nimite	attested	ADP	for			grammar,greetings				
-LKB-00023	sob	attested	DET	all			grammar,greetings				
-LKB-00025	amikhan	attested	PRON	we	ami + -khan (plural)		greetings,pronouns				
-LKB-00027	apuni	attested	PRON	you (polite)			greetings,pronouns				
-LKB-00028	he	attested	PART	emphasis particle (indeed, only)			grammar,greetings				
-LKB-00029	logote	attested	ADP	with			grammar,greetings,places				
-LKB-00031	thakise	attested	AUX	was, stayed	thak- + -ise (past)	thakishe	grammar,greetings				
-LKB-00032	tumikhan	attested	PRON	you (plural)	tumi + -khan (plural)		pronouns				
-LKB-00034	koi	attested	PART	quotative: saying that	ko- + -i (non-finite, ongoing)		actions				
-LKB-00035	titia	attested	ADV	then							
-LKB-00036	ekjon	attested	DET	one (person), someone							
-LKB-00037	jitia	attested	SCONJ	when (relative)							
-LKB-00041	kun	attested	PRON	who, which							
-LKB-00042	bisi	attested	DET	many, much, very		bishi,bissi					
-LKB-00043	nai	attested	PART	not, there is not		naai	grammar,greetings				
-LKB-00044	ki	attested	PRON	what			greetings				
-LKB-00045	kelemane	attested	SCONJ	because							
-LKB-00046	hoi	attested	AUX	is, becomes; yes	ho- + -i (non-finite, ongoing)		greetings				
-LKB-00047	eneka	attested	ADV	like this, so							
-LKB-00048	tumi	attested	PRON	you (familiar)			pronouns				
-LKB-00052	apnikhan	attested	PRON	you (plural, polite)	apni + -khan (plural)						
-LKB-00054	karone	attested	ADP	because of, for			grammar,greetings,slang				
-LKB-00055	ami	attested	PRON	we			pronouns				
-LKB-00058	nijor	attested	PRON	own, oneself							
-LKB-00059	ekta	attested	DET	one, a			greetings				
-LKB-00060	nohoi	attested	PART	is not, no	noho- + -i (non-finite, ongoing)						
-LKB-00061	hoise	attested	AUX	became, happened	ho- + -ise (past)		grammar				
-LKB-00068	ta	attested	ADV	there							
-LKB-00070	jodi	attested	SCONJ	if							
-LKB-00080	uporte	attested	ADP	on, above							
-LKB-00083	pichete	attested	ADP	after, behind							
-LKB-00086	etiya	attested	ADV	now			grammar,greetings,slang,time				
-LKB-00087	dusra	attested	DET	other, another							
-LKB-00089	kunba	attested	PRON	someone, some							
-LKB-00096	hobo	attested	AUX	will be, will happen	ho- + -bo (future)		grammar				
-LKB-00098	eku	attested	DET	any (nothing, with a negative)							
-LKB-00100	hoile	attested	SCONJ	then, if so	ho- + -ile (conditional, when)						
-LKB-00106	na	attested	PART	not			grammar,greetings,slang				
-LKB-00109	thake	attested	AUX	stays, is (habitually)	thak- + -e (present, habitual)						
-LKB-00113	kilekoile	attested	ADV	why							
-LKB-00115	tak	attested	ADP	until, up to			describing				
-LKB-00118	lage	attested	AUX	must, is needed	lag- + -e (present, habitual)		grammar				
-LKB-00131	logot	attested	ADP	with			community,family				
-LKB-00132	nohoile	attested	CCONJ	otherwise, or else	noho- + -ile (conditional, when)						
-LKB-00135	thakibo	attested	AUX	will be, will stay	thak- + -ibo (future)	thaakibo	actions,grammar				
-LKB-00137	kitia	attested	ADV	when (question)							
-LKB-00141	thik	attested	ADV	right, correctly, okay			greetings,slang				
-LKB-00149	hodai	attested	ADV	always							
-LKB-00150	majote	attested	ADP	among, in the middle of			places				
-LKB-00155	kineka	attested	ADV	how							
-LKB-00160	utu	attested	PRON	that							
-LKB-00168	jineka	attested	SCONJ	as, the way that							
-LKB-00178	naki	attested	PART	or (in questions), isn't it							
-LKB-00181	khali	attested	ADV	only, just							
-LKB-00182	duijon	attested	NUM	two (people)							
-LKB-00225	pare	attested	AUX	can	par- + -e (present, habitual)						
-LKB-00250	olop	attested	DET	a little, few							
-LKB-00276	kiman	attested	ADV	how much, how many		kimaan					
-LKB-00286	tin	attested	NUM	three		teen	numbers				
-LKB-00305	dhanyavad	attested	INTJ	thank you		dhanyabaad,dhanyabad					
-LKB-00306	kiba	attested	PRON	something		kibaa	greetings,slang				
-LKB-00320	majot	attested	ADP	among, in the middle of							
-LKB-00344	napare	attested	AUX	cannot	par- + -e (negative, present, habitual)						
-LKB-00358	kot	attested	ADV	where			slang				
-LKB-00373	ek	attested	NUM	one			numbers				
-LKB-00403	aji	attested	ADV	today		aaji					
-LKB-00566	amen	attested	INTJ	amen							
-LKB-00603	dui	attested	NUM	two			numbers				
-LKB-00703	kote	attested	ADV	where			places				
-LKB-00771	kali	attested	ADV	tomorrow, yesterday			time				
-LKB-00864	char	attested	NUM	four		chaar					
-LKB-01098	nisina	attested	ADP	like, as		nishina					
-LKB-01149	itu	attested	PRON	this			grammar,greetings,places,slang				
-LKB-01171	ba	attested	CCONJ	or			grammar,greetings				
-LKB-01299	kena	attested	SCONJ	having (done), and then			grammar				
-LKB-01310	panch	attested	NUM	five		paanch					
-LKB-01768	bi	attested	PART	also, even							
-LKB-02204	apunikhan	attested	PRON	you (plural, polite)	apuni + -khan (plural)		pronouns				
-LKB-03030	aro	curated	CCONJ	and							
-LKB-03482	agete	curated	ADP	before, in front of							
-LKB-04731	abar	curated	ADV	again							
-LKB-00012	manu	attested	NOUN	man; men			community,family,greetings				
-LKB-00014	kori	attested	VERB		kor- + -i (non-finite, ongoing)		actions,greetings,slang				
-LKB-00018	isor	attested	PROPN	god			greetings,religion				
-LKB-00020	koise	attested	VERB	said; saying	ko- + -ise (past)		greetings				
-LKB-00021	dise	attested	VERB	gave; given	di- + -se (past)		greetings				
-LKB-00022	jisu	attested	PROPN	jesus			greetings,religion				
-LKB-00024	kotha	attested	Unknown	word; words		kothaa	greetings,religion,slang				
-LKB-00026	thaka	attested	Unknown			thakaa	greetings				
-LKB-00030	taike	attested	PRON		tai + ke (attached postposition)		pronouns				
-LKB-00033	bole	attested	Unknown				grammar				
-LKB-00038	jaise	attested	VERB	went; departed	ja- + -ise (past)						
-LKB-00039	kaam	attested	VERB	works; work		kam	actions,community				
-LKB-00040	jun	attested	Unknown	whoever							
-LKB-00049	bhal	attested	ADJ	good; well		bhaal	describing,greetings,slang				
-LKB-00050	nisena	attested	Unknown	like							
-LKB-00051	kora	attested	NOUN				food				
-LKB-00053	korise	attested	VERB	done	kor- + -ise (past)	korishe					
-LKB-00056	dibo	attested	VERB	give	di- + -bo (future)						
-LKB-00057	mon	attested	VERB	heart; hearts			actions,slang				
-LKB-00062	khrista	attested	PROPN	christ			greetings,religion				
-LKB-00063	probhu	attested	PROPN	lord							
-LKB-00064	diya	attested	Unknown								
-LKB-00065	biswas	attested	Unknown	faith; believe		bishwas,vishwas	religion				
-LKB-00066	jai	attested	VERB	went; going	ja- + -i (non-finite, ongoing)						
-LKB-00067	loi	attested	VERB	took; led	lo- + -i (non-finite, ongoing)		actions				
-LKB-00069	baba	attested	NOUN	father; fathers			actions,family				
-LKB-00071	ahise	attested	VERB	came; come	ah- + -ise (past)	aahise	grammar				
-LKB-00072	kore	attested	VERB		kor- + -e (present, habitual)		actions				
-LKB-00073	dibi	attested	VERB		di- + -bi (imperative, future (you))		actions				
-LKB-00074	atma	attested	PROPN	spirit; spiritual			feelings,religion				
-LKB-00075	koribo	attested	VERB		kor- + -ibo (future)		actions,grammar				
-LKB-00076	ghor	attested	NOUN	house; household			actions,home				
-LKB-00077	dangor	attested	ADJ	great; greater			nature				
-LKB-00078	moike	attested	PRON		moi + ke (attached postposition)		pronouns				
-LKB-00079	loise	attested	VERB	took; received	lo- + -ise (past)						
-LKB-00081	niyom	attested	NOUN	law; lawful							
-LKB-00082	morom	attested	VERB	love; beloved			feelings,slang				
-LKB-00084	biya	attested	Unknown	evil; worse							
-LKB-00085	usorte	attested	Unknown	near; sight	usor + te (attached postposition)						
-LKB-00088	koile	attested	VERB		ko- + -ile (conditional, when)						
-LKB-00090	dibole	attested	VERB	give	di- + -bole (infinitive, purpose)						
-LKB-00091	din	attested	NOUN	days; day			actions,time				
-LKB-00092	dukh	attested	VERB	suffer; suffered			body				
-LKB-00093	koribi	attested	VERB		kor- + -ibi (imperative, future (you))						
-LKB-00094	bacha	attested	NOUN	children; child		baccha					
-LKB-00095	bhai	attested	NOUN	brothers; brother			actions,community,family				
-LKB-00097	di	attested	Unknown	give; delivered		dii					
-LKB-00099	hosa	attested	Unknown	truth; certainly		hosaa	slang				
-LKB-00101	chela	attested	NOUN	disciples; disciple							
-LKB-00102	naam	attested	NOUN	name; names			greetings				
-LKB-00103	jabo	attested	VERB	go	ja- + -bo (future)	jaabo,javo	actions,grammar,greetings				
-LKB-00104	homoi	attested	NOUN	time; hour							
-LKB-00105	juntu	attested	Unknown								
-LKB-00107	pobitro	attested	PROPN	holy; saints			religion				
-LKB-00108	thaki	attested	VERB	stay; live	thak- + -i (non-finite, ongoing)		actions,grammar,greetings				
-LKB-00110	eitu	attested	Unknown	things							
-LKB-00111	kele	attested	Unknown								
-LKB-00112	paap	attested	NOUN	sin; sins			greetings,religion				
-LKB-00114	itcha	attested	Unknown	desire; lusts							
-LKB-00116	ahi	attested	VERB	coming; came	ah- + -i (non-finite, ongoing)		actions				
-LKB-00117	gaw	attested	NOUN	body; flesh							
-LKB-00119	khushi	attested	VERB	joy; rejoice		khusi	actions,feelings				
-LKB-00120	prithibi	attested	NOUN	earth; world							
-LKB-00121	jagate	attested	Unknown	place	jaga + te (attached postposition)						
-LKB-00122	dikhise	attested	VERB	saw; seen	dikh- + -ise (past)						
-LKB-00123	jani	attested	VERB	know; knowing	jan- + -i (non-finite, ongoing)						
-LKB-00124	age	attested	Unknown	first		aage	time				
-LKB-00125	jibon	attested	NOUN	life			religion				
-LKB-00126	sabi	attested	VERB	behold; see	sa- + -bi (imperative, future (you))		actions				
-LKB-00127	yehudi	attested	PROPN	jews; jew							
-LKB-00128	paribo	attested	VERB	able	par- + -ibo (future)						
-LKB-00129	chari	attested	VERB	left; leave	char- + -i (non-finite, ongoing)		numbers				
-LKB-00130	pura	attested	Unknown	fulfilled; whole							
-LKB-00133	jinda	attested	Unknown	living; live							
-LKB-00134	hoilebi	attested	Unknown								
-LKB-00136	diye	attested	VERB	gives							
-LKB-00138	thakibi	attested	VERB	watch	thak- + -ibi (imperative, future (you))						
-LKB-00139	chokra	attested	NOUN	son			family,greetings,slang				
-LKB-00140	putro	attested	PROPN	son			family,greetings				
-LKB-00142	paul	attested	PROPN	paul							
-LKB-00143	bhabona	attested	NOUN	mind; thoughts			actions,feelings				
-LKB-00144	bisar	attested	NOUN	judgment; judge							
-LKB-00145	sheher	attested	NOUN	city; cities			greetings				
-LKB-00146	bhitor	attested	NOUN	entered			home				
-LKB-00147	luwa	attested	NOUN	food; chosen							
-LKB-00148	huni	attested	VERB	hear; heard	hun- + -i (non-finite, ongoing)						
-LKB-00151	paise	attested	VERB	found; received	pa- + -ise (past)						
-LKB-00152	pabo	attested	VERB	receive; find	pa- + -bo (future)						
-LKB-00153	kapra	attested	NOUN	clothing; garment							
-LKB-00154	mohima	attested	NOUN	glory; glorified							
-LKB-00156	hobole	attested	VERB	become; happen	ho- + -bole (infinitive, purpose)						
-LKB-00157	dikhai	attested	VERB	revealed; show	dikha- + -i (non-finite, ongoing)						
-LKB-00158	bhoi	attested	Unknown	fear; afraid							
-LKB-00159	alag	attested	Unknown	languages; separate							
-LKB-00161	khara	attested	VERB	standing; stood							
-LKB-00162	morai	attested	VERB	killed; kill	mora- + -i (non-finite, ongoing)						
-LKB-00163	peter	attested	PROPN	peter							
-LKB-00164	mora	attested	ADJ	dead; death			nature				
-LKB-00165	hath	attested	NOUN	hands; hand		haath	body				
-LKB-00166	hunise	attested	VERB	heard	hun- + -ise (past)						
-LKB-00167	nijorke	attested	Unknown		nijor + ke (attached postposition)						
-LKB-00169	prathana	attested	VERB	pray; prayer							
-LKB-00170	asele	attested	VERB								
-LKB-00171	kobo	attested	VERB	say; tell	ko- + -bo (future)						
-LKB-00172	sorgodoth	attested	NOUN	angel; angels							
-LKB-00173	khotom	attested	VERB	destroy; destroyed							
-LKB-00174	ulai	attested	VERB		ula- + -i (non-finite, ongoing)						
-LKB-00175	ahibo	attested	VERB	come; comes	ah- + -ibo (future)	aahibo	actions,grammar				
-LKB-00176	jabole	attested	VERB	go	ja- + -bole (infinitive, purpose)						
-LKB-00177	dinte	attested	NOUN	day	din + te (attached postposition)						
-LKB-00179	maiki	attested	NOUN	wife; woman							
-LKB-00180	kowa	attested	VERB				nature				
-LKB-00183	rasta	attested	NOUN	way; ways		raasta	greetings				
-LKB-00184	aha	attested	VERB	coming; come							
-LKB-00185	pani	attested	NOUN	water; waters		paani	actions,food,nature				
-LKB-00186	likha	attested	Unknown	scribes; written							
-LKB-00187	sapha	attested	Unknown	pure; clean							
-LKB-00188	bhag	attested	NOUN	members; part							
-LKB-00189	sorgo	attested	NOUN	heaven; heavens							
-LKB-00190	mati	attested	VERB	called; call	mat- + -i (non-finite, ongoing)		actions,colours,farming,nature				
-LKB-00191	poila	attested	ADJ	first							
-LKB-00192	phale	attested	Unknown	side; toward			greetings,places				
-LKB-00193	mondoli	attested	NOUN	temple; synagogue							
-LKB-00194	purohit	attested	NOUN	priest; priests							
-LKB-00195	tumike	attested	PRON		tumi + ke (attached postposition)		pronouns				
-LKB-00196	bohi	attested	VERB	sat; sitting	boh- + -i (non-finite, ongoing)						
-LKB-00197	jowab	attested	VERB	answered; answer							
-LKB-00198	john	attested	PROPN	john							
-LKB-00199	jaga	attested	NOUN	place; places			greetings				
-LKB-00200	bhabobadi	attested	NOUN	prophets; prophet			greetings				
-LKB-00201	pai	attested	VERB		pa- + -i (non-finite, ongoing)						
-LKB-00202	mahila	attested	NOUN	woman; women							
-LKB-00203	asurit	attested	VERB	marveled; amazed							
-LKB-00204	dikhi	attested	VERB	see; seen	dikh- + -i (non-finite, ongoing)						
-LKB-00205	jerusalem	attested	PROPN	jerusalem							
-LKB-00206	hisab	attested	VERB	according; measure							
-LKB-00207	likhi	attested	VERB	written; write	likh- + -i (non-finite, ongoing)		actions				
-LKB-00208	bonai	attested	VERB	made; make	bona- + -i (non-finite, ongoing)						
-LKB-00209	nathaka	attested	Unknown	without							
-LKB-00210	suku	attested	NOUN	eyes; eye							
-LKB-00211	raja	attested	Unknown	king; kings			community,slang				
-LKB-00212	desh	attested	NOUN	nations; nation			actions				
-LKB-00213	joma	attested	VERB	gathered; together							
-LKB-00214	bahar	attested	NOUN	outside			home				
-LKB-00215	mani	attested	VERB	keep; obedience	man- + -i (non-finite, ongoing)		greetings				
-LKB-00216	lobi	attested	VERB	take	lo- + -bi (imperative, future (you))						
-LKB-00217	hukum	attested	VERB	commanded; commandment			grammar				
-LKB-00218	pathai	attested	VERB	sent; send	patha- + -i (non-finite, ongoing)						
-LKB-00219	sikhai	attested	VERB	teaching; taught	sikha- + -i (non-finite, ongoing)						
-LKB-00220	takot	attested	NOUN	power; strong			greetings				
-LKB-00221	para	attested	Unknown	able							
-LKB-00222	kha	attested	NOUN	food; eat							
-LKB-00223	jane	attested	VERB	know; knows	jan- + -e (present, habitual)	jaane					
-LKB-00224	mori	attested	VERB	died; die	mor- + -i (non-finite, ongoing)						
-LKB-00226	eke	attested	ADV	together; accord							
-LKB-00227	girja	attested	NOUN	assembly; assemblies			religion				
-LKB-00228	bhorta	attested	VERB	filled; full							
-LKB-00229	awaj	attested	NOUN	voice; sound							
-LKB-00230	duniya	attested	NOUN	world			actions				
-LKB-00231	dikene	attested	VERB								
-LKB-00232	noukar	attested	NOUN	servant; servants							
-LKB-00233	hudise	attested	VERB	asked	hud- + -ise (past)						
-LKB-00234	misa	attested	ADJ	false; lie		misaa	slang				
-LKB-00235	shuru	attested	VERB	beginning; began		suru	actions,greetings				
-LKB-00236	khuli	attested	VERB	opened; open							
-LKB-00237	mangso	attested	NOUN	flesh; fleshly			food,home				
-LKB-00238	wapas	attested	VERB	back; returned							
-LKB-00239	ama	attested	NOUN	mother; parents			actions,family				
-LKB-00240	rajyo	attested	PROPN	kingdom							
-LKB-00241	ghas	attested	NOUN	tree; trees							
-LKB-00242	nakore	attested	VERB		kor- + -e (negative, present, habitual)						
-LKB-00243	dhori	attested	VERB	seize; hold	dhor- + -i (non-finite, ongoing)		actions				
-LKB-00244	prochar	attested	VERB	preach; preached			greetings,religion				
-LKB-00245	pathor	attested	NOUN	stone; stones							
-LKB-00246	theng	attested	NOUN	feet; foot			body				
-LKB-00247	malik	attested	NOUN	master; masters							
-LKB-00248	jabi	attested	VERB	go; depart	ja- + -bi (imperative, future (you))						
-LKB-00249	khai	attested	VERB	eats; eating	kha- + -i (non-finite, ongoing)		actions				
-LKB-00251	kosom	attested	NOUN	promise; oath			greetings				
-LKB-00252	mota	attested	NOUN	husband; husbands		motaa					
-LKB-00253	tinehoile	attested	ADV								
-LKB-00254	najane	attested	VERB	know	jan- + -e (negative, present, habitual)		greetings				
-LKB-00255	shanti	attested	NOUN	peace		santi	feelings,religion,slang				
-LKB-00256	bo	attested	Unknown								
-LKB-00257	huwa	attested	NOUN								
-LKB-00258	baptizma	attested	VERB	baptized; baptism							
-LKB-00259	dwara	attested	Unknown								
-LKB-00260	gawahi	attested	NOUN	testimony; witnesses			community,greetings,religion				
-LKB-00261	poisa	attested	NOUN	money; tax			civic				
-LKB-00262	jonom	attested	VERB	born; birth							
-LKB-00263	matha	attested	NOUN	head; heads			body				
-LKB-00264	khun	attested	NOUN	blood							
-LKB-00265	ahibole	attested	VERB	come	ah- + -ibole (infinitive, purpose)		slang				
-LKB-00266	bemar	attested	Unknown	sick; diseases							
-LKB-00267	jon	attested	NOUN				nature				
-LKB-00268	mer	attested	Unknown	sheep; lamb							
-LKB-00269	kheti	attested	NOUN	field; farmers			farming				
-LKB-00270	junke	attested	Unknown		jun + ke (attached postposition)						
-LKB-00271	yate	attested	ADV								
-LKB-00272	piche	attested	VERB	followed; follow							
-LKB-00273	janwar	attested	NOUN	beast; animals							
-LKB-00274	lobo	attested	VERB		lo- + -bo (future)						
-LKB-00275	roti	attested	NOUN	bread; loaves							
-LKB-00277	golti	attested	Unknown	accusers; accuse							
-LKB-00278	jui	attested	NOUN	fire; sulfur							
-LKB-00279	basi	attested	VERB	chosen; appointed							
-LKB-00280	pathaise	attested	VERB	sent	patha- + -ise (past)						
-LKB-00281	pharisee	attested	PROPN	pharisees; pharisee							
-LKB-00282	kobole	attested	VERB	speak	ko- + -bole (infinitive, purpose)						
-LKB-00283	khabole	attested	VERB	eat; drink	kha- + -bole (infinitive, purpose)		slang				
-LKB-00284	anise	attested	VERB	brought	an- + -ise (past)						
-LKB-00285	shadi	attested	NOUN	wedding; marry							
-LKB-00287	uthai	attested	VERB	exalted; raised	utha- + -i (non-finite, ongoing)						
-LKB-00288	sorgote	attested	NOUN	heaven; heavenly	sorgo + te (attached postposition)						
-LKB-00289	se	attested	VERB			she					
-LKB-00290	cholawta	attested	NOUN	rulers; ruler							
-LKB-00291	kunke	attested	Unknown		kun + ke (attached postposition)						
-LKB-00292	rakhi	attested	VERB	laid	rakh- + -i (non-finite, ongoing)		actions				
-LKB-00293	hala	attested	VERB	cried; crying							
-LKB-00294	abraham	attested	PROPN	abraham							
-LKB-00295	lagai	attested	VERB	clothed; dressed	laga- + -i (non-finite, ongoing)						
-LKB-00296	chutu	attested	ADJ	little; small							
-LKB-00297	sewa	attested	VERB	serve; served		shewa	greetings				
-LKB-00298	susamachar	attested	PROPN	news			community,greetings				
-LKB-00299	matise	attested	VERB	called; invited	mat- + -ise (past)						
-LKB-00300	sai	attested	VERB	watching; watched	sa- + -i (non-finite, ongoing)						
-LKB-00301	mukh	attested	NOUN	mouth			body				
-LKB-00302	rakhise	attested	VERB	laid	rakh- + -ise (past)						
-LKB-00303	joldi	attested	ADV	immediately; quickly							
-LKB-00304	mari	attested	VERB	struck; beat	mar- + -i (non-finite, ongoing)						
-LKB-00307	somoi	attested	NOUN	time; hour							
-LKB-00308	adhikar	attested	NOUN	authority							
-LKB-00309	porjati	attested	PROPN	gentiles; nations							
-LKB-00310	giri	attested	VERB	fell; fall	gir- + -i (non-finite, ongoing)						
-LKB-00311	phelai	attested	VERB	thrown; throw	phela- + -i (non-finite, ongoing)						
-LKB-00312	hathte	attested	NOUN	delivered; hand	hath + te (attached postposition)						
-LKB-00313	gyaan	attested	NOUN	knowledge; wisdom							
-LKB-00314	bujhi	attested	VERB	understand; understanding	bujh- + -i (non-finite, ongoing)						
-LKB-00315	moses	attested	PROPN	moses							
-LKB-00316	sat	attested	NUM	seven		saat,shaat					
-LKB-00317	ahikena	attested	VERB		ah- + -ikena (having done)						
-LKB-00318	sorom	attested	VERB	shame; ashamed							
-LKB-00319	biswasi	attested	Unknown	faithful		biswasee					
-LKB-00321	maph	attested	VERB	forgive; forgiven							
-LKB-00322	notun	attested	ADJ	new							
-LKB-00323	israel	attested	PROPN	israel							
-LKB-00324	somoite	attested	NOUN	hour	somoi + te (attached postposition)						
-LKB-00325	bona	attested	VERB	foundation							
-LKB-00326	dikha	attested	VERB	show; seen							
-LKB-00327	nadibi	attested	VERB		di- + -bi (negative, imperative, future (you))						
-LKB-00328	bisari	attested	VERB	seek; seeking	bisar- + -i (non-finite, ongoing)						
-LKB-00329	bhoot	attested	NOUN	demons; demon							
-LKB-00330	nichete	attested	Unknown	subjected; subject	niche + te (attached postposition)						
-LKB-00331	cross	attested	VERB	cross; crucified							
-LKB-00332	sobke	attested	Unknown		sob + ke (attached postposition)						
-LKB-00333	dharmik	attested	ADJ	righteous; righteousness							
-LKB-00334	monte	attested	NOUN	heart; hearts	mon + te (attached postposition)						
-LKB-00335	bachai	attested	VERB	save; saved	bacha- + -i (non-finite, ongoing)						
-LKB-00336	chihna	attested	NOUN	sign; signs							
-LKB-00337	baroh	attested	NOUN	twelve							
-LKB-00338	sonman	attested	Unknown	honor; honored							
-LKB-00339	digdar	attested	NOUN	trouble; hard							
-LKB-00340	taiyar	attested	VERB	ready; prepare							
-LKB-00341	apostle	attested	NOUN	apostles; apostle							
-LKB-00342	ulaikene	attested	VERB		ula- + -ikene (having done)						
-LKB-00343	duita	attested	NUM	two							
-LKB-00345	asha	attested	NOUN	hope		asa	feelings,religion				
-LKB-00346	saal	attested	NOUN	years; year		sal	time				
-LKB-00347	rukhi	attested	VERB	waiting; wait	rukh- + -i (non-finite, ongoing)						
-LKB-00348	simon	attested	PROPN	simon							
-LKB-00349	lobole	attested	VERB		lo- + -bole (infinitive, purpose)						
-LKB-00350	salam	attested	Unknown	greet; greetings		salaam	greetings				
-LKB-00351	asirbad	attested	VERB	blessed; blessing							
-LKB-00352	modot	attested	Unknown	help; helped							
-LKB-00353	thakile	attested	VERB	though; absent	thak- + -ile (conditional, when)						
-LKB-00354	galilee	attested	PROPN	galilee; galileans							
-LKB-00355	naw	attested	NOUN	boat; boats							
-LKB-00356	harai	attested	VERB	lost; perish	hara- + -i (non-finite, ongoing)						
-LKB-00357	sipahi	attested	NOUN	soldiers; soldier			community				
-LKB-00359	bijon	attested	NOUN	seed; sow							
-LKB-00360	jinis	attested	NOUN	things		jinish					
-LKB-00361	uthi	attested	VERB	arose; arise	uth- + -i (non-finite, ongoing)						
-LKB-00362	sunnot	attested	NOUN	circumcision; circumcised							
-LKB-00363	dur	attested	ADJ	far; abstain		door	describing,greetings				
-LKB-00364	motlob	attested	VERB	mean; interpreted							
-LKB-00365	saman	attested	NOUN	goods		saaman					
-LKB-00366	bhirodh	attested	Unknown								
-LKB-00367	pabole	attested	VERB	inheritance	pa- + -bole (infinitive, purpose)						
-LKB-00368	samundar	attested	NOUN	sea							
-LKB-00369	dhun	attested	NOUN	riches; treasure							
-LKB-00370	khong	attested	NOUN	wrath; angry							
-LKB-00371	anugrah	attested	NOUN	grace			religion				
-LKB-00372	porikha	attested	VERB	tempted; temptation			greetings				
-LKB-00374	hali	attested	VERB	poured	hal- + -i (non-finite, ongoing)	haali					
-LKB-00375	saikene	attested	VERB	looking	sa- + -ikene (having done)						
-LKB-00376	mili	attested	VERB	join	mil- + -i (non-finite, ongoing)		actions				
-LKB-00377	chinta	attested	Unknown	anxious; troubled			feelings				
-LKB-00378	lagi	attested	VERB		lag- + -i (non-finite, ongoing)	laagi					
-LKB-00379	lok	attested	VERB	met; meet							
-LKB-00380	bondhi	attested	NOUN	prison; prisoner							
-LKB-05137	aa	candidate	Unknown								
-LKB-05138	aadmi	candidate	Unknown								
-LKB-05141	aahibo	candidate	Unknown								
-LKB-05143	aaj	candidate	Unknown								
-LKB-05144	aaja	candidate	Unknown								
-LKB-05155	aao	candidate	Unknown								
-LKB-05156	aapne	candidate	Unknown								
-LKB-05157	aasaan	candidate	Unknown								
-LKB-05159	aata	candidate	Unknown								
-LKB-05160	aati	candidate	Unknown								
-LKB-05161	aaya	candidate	Unknown								
-LKB-05162	aaye	candidate	Unknown								
-LKB-05163	aayi	candidate	Unknown								
-LKB-05166	about	candidate	Unknown								
-LKB-05167	abuse	candidate	Unknown								
-LKB-05169	accha	candidate	Unknown			achha					
-LKB-05171	achha	candidate	Unknown								
-LKB-05177	added	candidate	Unknown								
-LKB-05178	additions	candidate	Unknown								
-LKB-05180	ads	candidate	Unknown								
-LKB-05183	agae	candidate	Unknown								
-LKB-05185	against	candidate	Unknown								
-LKB-05189	ago	candidate	Unknown								
-LKB-05194	aicf	candidate	Unknown								
-LKB-05200	alert	candidate	Unknown								
-LKB-05205	alphabetical	candidate	Unknown								
-LKB-05212	ameer	candidate	Unknown								
-LKB-05214	amikhanr	candidate	Unknown								
-LKB-05227	apunba	candidate	Unknown								
-LKB-05228	apunikhanr	candidate	Unknown								
-LKB-05230	archives	candidate	Unknown								
-LKB-05233	arrest	candidate	Unknown								
-LKB-05235	asaan	candidate	Unknown								
-LKB-05236	asey	candidate	Unknown								
-LKB-05242	assamese	candidate	Unknown								
-LKB-05250	awareness	candidate	Unknown								
-LKB-05252	baad	candidate	Unknown								
-LKB-05255	baap	candidate	Unknown								
-LKB-05256	baat	candidate	Unknown			bat					
-LKB-05258	babri	candidate	Unknown								
-LKB-05260	baccha	candidate	Unknown								
-LKB-05261	bada	candidate	Unknown								
-LKB-05264	badsurat	candidate	Unknown								
-LKB-05266	bagmi	candidate	Unknown								
-LKB-05270	bahut	candidate	Unknown								
-LKB-05272	baitho	candidate	Unknown								
-LKB-05273	bajaanaa	candidate	Unknown								
-LKB-05275	banana	candidate	Unknown								
-LKB-05276	banda	candidate	Unknown								
-LKB-05299	bea	candidate	Unknown								
-LKB-05308	beneficiaries	candidate	Unknown								
-LKB-05323	bhandari	candidate	Unknown								
-LKB-05327	bhejna	candidate	Unknown								
-LKB-05335	bhool	candidate	Unknown								
-LKB-05347	bihar	candidate	Unknown								
-LKB-05364	blas	candidate	Unknown								
-LKB-05365	blos	candidate	Unknown								
-LKB-05374	bol	candidate	Unknown								
-LKB-05379	bolibo	candidate	Unknown								
-LKB-05380	bolna	candidate	Unknown								
-LKB-05381	bolo	candidate	Unknown								
-LKB-05382	bolta	candidate	Unknown								
-LKB-05383	bolti	candidate	Unknown								
-LKB-05385	bonn	candidate	Unknown								
-LKB-05410	bronze	candidate	Unknown								
-LKB-05411	browse	candidate	Unknown								
-LKB-05417	bulana	candidate	Unknown								
-LKB-05419	bull	candidate	Unknown								
-LKB-05420	bumrah	candidate	Unknown								
-LKB-05428	can	candidate	Unknown								
-LKB-05437	categories	candidate	Unknown								
-LKB-05438	category	candidate	Unknown								
-LKB-05440	ceuta	candidate	Unknown								
-LKB-05444	chaawal	candidate	Unknown								
-LKB-05445	chahiye	candidate	Unknown								
-LKB-05446	chai	candidate	Unknown								
-LKB-05455	chalna	candidate	Unknown			chalnaa					
-LKB-05456	chalnaa	candidate	Unknown								
-LKB-05457	chalo	candidate	Unknown								
-LKB-05461	championship	candidate	Unknown								
-LKB-05464	cheez	candidate	Unknown								
-LKB-05467	chhodna	candidate	Unknown								
-LKB-05477	chopra	candidate	Unknown								
-LKB-05480	circuit	candidate	Unknown								
-LKB-05491	columbus	candidate	Unknown								
-LKB-05492	comeback	candidate	Unknown								
-LKB-05494	commonwealth	candidate	Unknown								
-LKB-05501	contributors	candidate	Unknown								
-LKB-05507	crackdown	candidate	Unknown								
-LKB-05509	crew	candidate	Unknown								
-LKB-05511	crore	candidate	Unknown								
-LKB-05512	crossing	candidate	Unknown								
-LKB-05513	csos	candidate	Unknown								
-LKB-05528	dara	candidate	Unknown								
-LKB-05532	daudna	candidate	Unknown								
-LKB-05534	days	candidate	Unknown								
-LKB-05536	ddma	candidate	Unknown								
-LKB-05542	defcc	candidate	Unknown								
-LKB-05543	dega	candidate	Unknown								
-LKB-05544	degi	candidate	Unknown								
-LKB-05545	dekh	candidate	Unknown								
-LKB-05547	dekhna	candidate	Unknown								
-LKB-05548	dekho	candidate	Unknown								
-LKB-05549	dekhta	candidate	Unknown								
-LKB-05550	dekhti	candidate	Unknown								
-LKB-05552	demolition	candidate	Unknown								
-LKB-05553	dena	candidate	Unknown								
-LKB-05554	departments	candidate	Unknown								
-LKB-05564	dheere	candidate	Unknown			dhheere					
-LKB-05565	dhheere	candidate	Unknown								
-LKB-05572	dictionary	candidate	Unknown								
-LKB-05578	digilocker	candidate	Unknown								
-LKB-05586	discover	candidate	Unknown								
-LKB-05587	discuss	candidate	Unknown								
-LKB-05588	dishey	candidate	Unknown								
-LKB-05592	division	candidate	Unknown								
-LKB-05596	don	candidate	Unknown								
-LKB-05597	donate	candidate	Unknown								
-LKB-05605	doubles	candidate	Unknown								
-LKB-05606	dpdb	candidate	Unknown								
-LKB-05611	drug	candidate	Unknown								
-LKB-05616	dure	candidate	Unknown			duure					
-LKB-05619	dwsm	candidate	Unknown								
-LKB-05620	dy	candidate	Unknown								
-LKB-05628	editorial	candidate	Unknown								
-LKB-05644	empower	candidate	Unknown								
-LKB-05648	entered	candidate	Unknown								
-LKB-05649	entertainment	candidate	Unknown								
-LKB-05657	eu	candidate	Unknown								
-LKB-05658	evaluate	candidate	Unknown								
-LKB-05660	ex	candidate	Unknown								
-LKB-05663	exclusive	candidate	Unknown								
-LKB-05667	express	candidate	Unknown								
-LKB-05672	faster	candidate	Unknown								
-LKB-05674	february	candidate	Unknown								
-LKB-05676	felicitate	candidate	Unknown								
-LKB-05684	forestry	candidate	Unknown								
-LKB-05690	fraud	candidate	Unknown								
-LKB-05693	gaana	candidate	Unknown								
-LKB-05694	gaanaa	candidate	Unknown								
-LKB-05699	gahuri	candidate	Unknown								
-LKB-05701	games	candidate	Unknown								
-LKB-05702	ganda	candidate	Unknown								
-LKB-05710	garib	candidate	Unknown								
-LKB-05713	gateway	candidate	Unknown								
-LKB-05715	gaya	candidate	Unknown								
-LKB-05716	gaye	candidate	Unknown								
-LKB-05720	get	candidate	Unknown								
-LKB-05732	ghussa	candidate	Unknown								
-LKB-05733	girna	candidate	Unknown								
-LKB-05744	gratia	candidate	Unknown								
-LKB-05746	grief	candidate	Unknown								
-LKB-05751	haafta	candidate	Unknown								
-LKB-05752	haan	candidate	Unknown								
-LKB-05753	haarna	candidate	Unknown								
-LKB-05758	hame	candidate	Unknown								
-LKB-05759	hamesha	candidate	Unknown								
-LKB-05760	hamne	candidate	Unknown								
-LKB-05763	hansna	candidate	Unknown								
-LKB-05767	hatana	candidate	Unknown								
-LKB-05770	have	candidate	Unknown								
-LKB-05774	headlines	candidate	Unknown								
-LKB-05786	hm	candidate	Unknown								
-LKB-05787	ho	candidate	Unknown								
-LKB-05791	hoga	candidate	Unknown								
-LKB-05792	hogi	candidate	Unknown								
-LKB-05793	hoileh	candidate	Unknown								
-LKB-05794	hoishey	candidate	Unknown								
-LKB-05799	homepage	candidate	Unknown								
-LKB-05801	hormuz	candidate	Unknown								
-LKB-05805	hote	candidate	Unknown								
-LKB-05810	hours	candidate	Unknown								
-LKB-05813	hua	candidate	Unknown								
-LKB-05814	hue	candidate	Unknown								
-LKB-05815	hui	candidate	Unknown								
-LKB-05816	hundreds	candidate	Unknown								
-LKB-05820	icfre	candidate	Unknown								
-LKB-05821	imd	candidate	Unknown								
-LKB-05823	imran	candidate	Unknown								
-LKB-05826	infrastructure	candidate	Unknown								
-LKB-05829	inquiry	candidate	Unknown								
-LKB-05830	inspect	candidate	Unknown								
-LKB-05831	integration	candidate	Unknown								
-LKB-05832	inter	candidate	Unknown								
-LKB-05833	interact	candidate	Unknown								
-LKB-05834	interaction	candidate	Unknown								
-LKB-05837	involved	candidate	Unknown								
-LKB-05838	isliye	candidate	Unknown								
-LKB-05842	itna	candidate	Unknown								
-LKB-05843	jaabo	candidate	Unknown								
-LKB-05845	jaana	candidate	Unknown								
-LKB-05846	jaata	candidate	Unknown								
-LKB-05847	jaati	candidate	Unknown								
-LKB-05848	jab	candidate	Unknown								
-LKB-05853	janaiise	candidate	Unknown								
-LKB-05855	jao	candidate	Unknown								
-LKB-05856	javelin	candidate	Unknown								
-LKB-05859	jeena	candidate	Unknown								
-LKB-05861	jeetna	candidate	Unknown								
-LKB-05862	jete	candidate	Unknown								
-LKB-05876	jo	candidate	Unknown								
-LKB-05877	jodna	candidate	Unknown								
-LKB-05878	jokom	candidate	Unknown								
-LKB-05887	july	candidate	Unknown								
-LKB-05889	june	candidate	Unknown								
-LKB-05891	justice	candidate	Unknown								
-LKB-05894	kaafi	candidate	Unknown								
-LKB-05897	kab	candidate	Unknown								
-LKB-05898	kabhi	candidate	Unknown								
-LKB-05899	kahan	candidate	Unknown								
-LKB-05900	kahin	candidate	Unknown								
-LKB-05901	kaise	candidate	Unknown								
-LKB-05908	kamaboley	candidate	Unknown								
-LKB-05909	kamzor	candidate	Unknown								
-LKB-05916	karega	candidate	Unknown								
-LKB-05917	karegi	candidate	Unknown								
-LKB-05918	karein	candidate	Unknown								
-LKB-05919	karenge	candidate	Unknown								
-LKB-05921	kariye	candidate	Unknown								
-LKB-05922	karne	candidate	Unknown								
-LKB-05923	karney	candidate	Unknown								
-LKB-05924	karo	candidate	Unknown								
-LKB-05926	karta	candidate	Unknown								
-LKB-05927	karti	candidate	Unknown								
-LKB-05928	karunga	candidate	Unknown								
-LKB-05929	karungi	candidate	Unknown								
-LKB-05933	kaun	candidate	Unknown								
-LKB-05934	kcp	candidate	Unknown								
-LKB-05938	kenee	candidate	Unknown								
-LKB-05945	khaabo	candidate	Unknown								
-LKB-05952	khao	candidate	Unknown								
-LKB-05953	kharid	candidate	Unknown								
-LKB-05955	khelnaa	candidate	Unknown								
-LKB-05969	kholna	candidate	Unknown								
-LKB-05972	khush	candidate	Unknown								
-LKB-05976	kibaa	candidate	Unknown								
-LKB-05987	kitna	candidate	Unknown								
-LKB-05991	kiye	candidate	Unknown								
-LKB-05998	koina	candidate	Unknown								
-LKB-05999	koishey	candidate	Unknown								
-LKB-06007	koriboo	candidate	Unknown								
-LKB-06010	kothaa	candidate	Unknown								
-LKB-06014	kuch	candidate	Unknown								
-LKB-06020	kumba	candidate	Unknown								
-LKB-06023	kurey	candidate	Unknown								
-LKB-06024	kuriboley	candidate	Unknown								
-LKB-06025	kurishey	candidate	Unknown								
-LKB-06026	kurisheynutun	candidate	Unknown								
-LKB-06027	kyunki	candidate	Unknown								
-LKB-06029	laagise	candidate	Unknown								
-LKB-06030	laana	candidate	Unknown			lana					
-LKB-06031	ladka	candidate	Unknown								
-LKB-06032	ladki	candidate	Unknown								
-LKB-06033	lagana	candidate	Unknown								
-LKB-06035	lagey	candidate	Unknown								
-LKB-06039	laile	candidate	Unknown								
-LKB-06040	laka	candidate	Unknown								
-LKB-06041	lale	candidate	Unknown								
-LKB-06042	lalse	candidate	Unknown								
-LKB-06044	lana	candidate	Unknown								
-LKB-06045	landslide	candidate	Unknown								
-LKB-06046	languages	candidate	Unknown								
-LKB-06048	latest	candidate	Unknown								
-LKB-06053	lega	candidate	Unknown								
-LKB-06054	legi	candidate	Unknown								
-LKB-06055	leh	candidate	Unknown								
-LKB-06056	lejana	candidate	Unknown								
-LKB-06057	lekha	candidate	Unknown								
-LKB-06058	lekin	candidate	Unknown								
-LKB-06059	lena	candidate	Unknown								
-LKB-06061	liberhan	candidate	Unknown								
-LKB-06063	likhna	candidate	Unknown								
-LKB-06064	likho	candidate	Unknown								
-LKB-06065	links	candidate	Unknown								
-LKB-06067	litikai	candidate	Unknown								
-LKB-06068	liye	candidate	Unknown								
-LKB-06072	loboley	candidate	Unknown								
-LKB-06078	loishey	candidate	Unknown								
-LKB-06079	lokot	candidate	Unknown								
-LKB-06091	maa	candidate	Unknown								
-LKB-06103	majbut	candidate	Unknown								
-LKB-06107	malum	candidate	Unknown								
-LKB-06117	manuh	candidate	Unknown								
-LKB-06123	marna	candidate	Unknown								
-LKB-06124	masaala	candidate	Unknown								
-LKB-06127	mass	candidate	Unknown								
-LKB-06132	matlab	candidate	Unknown								
-LKB-06139	may	candidate	Unknown								
-LKB-06140	mazboot	candidate	Unknown								
-LKB-06141	measure	candidate	Unknown								
-LKB-06148	members	candidate	Unknown								
-LKB-06149	messi	candidate	Unknown								
-LKB-06150	miami	candidate	Unknown								
-LKB-06153	migrant	candidate	Unknown								
-LKB-06156	milega	candidate	Unknown								
-LKB-06157	milegi	candidate	Unknown								
-LKB-06158	milestone	candidate	Unknown								
-LKB-06159	milna	candidate	Unknown								
-LKB-06160	milo	candidate	Unknown								
-LKB-06166	mla	candidate	Unknown								
-LKB-06169	modi	candidate	Unknown								
-LKB-06176	monday	candidate	Unknown								
-LKB-06184	more	candidate	Unknown								
-LKB-06189	motaa	candidate	Unknown								
-LKB-06195	mujhe	candidate	Unknown								
-LKB-06196	mujhse	candidate	Unknown								
-LKB-06197	multilingual	candidate	Unknown								
-LKB-06198	murai	candidate	Unknown								
-LKB-06200	mushkil	candidate	Unknown								
-LKB-06204	naachna	candidate	Unknown			nachnaa					
-LKB-06206	naai	candidate	Unknown								
-LKB-06217	nachnaa	candidate	Unknown								
-LKB-06224	nakura	candidate	Unknown								
-LKB-06241	nbsp	candidate	Unknown								
-LKB-06245	neeraj	candidate	Unknown								
-LKB-06246	negotiate	candidate	Unknown								
-LKB-06252	nh	candidate	Unknown								
-LKB-06256	nimitey	candidate	Unknown								
-LKB-06259	nishina	candidate	Unknown								
-LKB-06263	nitish	candidate	Unknown								
-LKB-06266	nk	candidate	Unknown								
-LKB-06276	northeastern	candidate	Unknown								
-LKB-06277	november	candidate	Unknown								
-LKB-06279	npsc	candidate	Unknown								
-LKB-06286	ocr	candidate	Unknown								
-LKB-06299	oman	candidate	Unknown								
-LKB-06303	operations	candidate	Unknown								
-LKB-06305	org	candidate	Unknown								
-LKB-06306	organize	candidate	Unknown								
-LKB-06314	ott	candidate	Unknown								
-LKB-06316	our	candidate	Unknown								
-LKB-06327	padhibo	candidate	Unknown								
-LKB-06328	padho	candidate	Unknown								
-LKB-06333	paishey	candidate	Unknown								
-LKB-06335	pakadna	candidate	Unknown								
-LKB-06336	pakana	candidate	Unknown								
-LKB-06345	par	candidate	Unknown								
-LKB-06352	parso	candidate	Unknown								
-LKB-06354	passing	candidate	Unknown								
-LKB-06357	pathok	candidate	Unknown								
-LKB-06361	patil	candidate	Unknown								
-LKB-06362	pehle	candidate	Unknown								
-LKB-06365	pending	candidate	Unknown								
-LKB-06375	petro	candidate	Unknown								
-LKB-06379	phenkna	candidate	Unknown								
-LKB-06380	phesama	candidate	Unknown								
-LKB-06381	phir	candidate	Unknown								
-LKB-06396	piyo	candidate	Unknown								
-LKB-06397	planned	candidate	Unknown								
-LKB-06401	pledge	candidate	Unknown								
-LKB-06402	pm	candidate	Unknown								
-LKB-06405	pohoribole	candidate	Unknown								
-LKB-06424	posts	candidate	Unknown								
-LKB-06427	powered	candidate	Unknown								
-LKB-06428	pra	candidate	Unknown								
-LKB-06434	prashanth	candidate	Unknown								
-LKB-06436	pre	candidate	Unknown								
-LKB-06448	projects	candidate	Unknown								
-LKB-06459	proverbs	candidate	Unknown								
-LKB-06466	quick	candidate	Unknown								
-LKB-06478	rakhna	candidate	Unknown								
-LKB-06479	ramanathan	candidate	Unknown								
-LKB-06480	ramkumar	candidate	Unknown								
-LKB-06490	recent	candidate	Unknown								
-LKB-06492	recovery	candidate	Unknown								
-LKB-06497	regional	candidate	Unknown								
-LKB-06501	releases	candidate	Unknown								
-LKB-06502	relief	candidate	Unknown								
-LKB-06507	repeat	candidate	Unknown								
-LKB-06510	resources	candidate	Unknown								
-LKB-06515	reveal	candidate	Unknown								
-LKB-06516	rfri	candidate	Unknown								
-LKB-06517	rifles	candidate	Unknown								
-LKB-06523	rona	candidate	Unknown								
-LKB-06530	roz	candidate	Unknown								
-LKB-06531	rozana	candidate	Unknown								
-LKB-06532	rs	candidate	Unknown								
-LKB-06534	rukna	candidate	Unknown								
-LKB-06535	ruko	candidate	Unknown								
-LKB-06543	saath	candidate	Unknown								
-LKB-06545	sab	candidate	Unknown								
-LKB-06546	sabji	candidate	Unknown								
-LKB-06552	samajh	candidate	Unknown								
-LKB-06553	samajhna	candidate	Unknown								
-LKB-06556	samjha	candidate	Unknown								
-LKB-06557	samjho	candidate	Unknown								
-LKB-06568	satha	candidate	Unknown								
-LKB-06571	scams	candidate	Unknown								
-LKB-06576	seedha	candidate	Unknown								
-LKB-06584	senior	candidate	Unknown								
-LKB-06585	september	candidate	Unknown								
-LKB-06587	servicemen	candidate	Unknown								
-LKB-06599	sharma	candidate	Unknown								
-LKB-06603	shatrughan	candidate	Unknown								
-LKB-06605	she	candidate	Unknown								
-LKB-06608	shells	candidate	Unknown								
-LKB-06611	shey	candidate	Unknown								
-LKB-06612	shg	candidate	Unknown								
-LKB-06627	shuruhubo	candidate	Unknown								
-LKB-06631	silver	candidate	Unknown								
-LKB-06633	sinking	candidate	Unknown								
-LKB-06635	sirf	candidate	Unknown								
-LKB-06640	sitrolekha	candidate	Unknown								
-LKB-06651	soch	candidate	Unknown								
-LKB-06653	sochna	candidate	Unknown								
-LKB-06654	socho	candidate	Unknown								
-LKB-06661	sona	candidate	Unknown								
-LKB-06664	sono	candidate	Unknown								
-LKB-06684	states	candidate	Unknown								
-LKB-06685	statistics	candidate	Unknown								
-LKB-06689	strait	candidate	Unknown								
-LKB-06696	sundar	candidate	Unknown								
-LKB-06699	sunna	candidate	Unknown								
-LKB-06700	suno	candidate	Unknown								
-LKB-06701	sunta	candidate	Unknown								
-LKB-06702	sunti	candidate	Unknown								
-LKB-06703	supreme	candidate	Unknown								
-LKB-06711	tab	candidate	Unknown								
-LKB-06712	tabhi	candidate	Unknown								
-LKB-06717	taikhanr	candidate	Unknown								
-LKB-06725	talks	candidate	Unknown								
-LKB-06733	teen	candidate	Unknown								
-LKB-06738	temporary	candidate	Unknown								
-LKB-06740	tests	candidate	Unknown								
-LKB-06741	tez	candidate	Unknown								
-LKB-06742	thaakibo	candidate	Unknown								
-LKB-06744	thakaa	candidate	Unknown								
-LKB-06745	thakishey	candidate	Unknown								
-LKB-06747	thanka	candidate	Unknown								
-LKB-06748	thanks	candidate	Unknown								
-LKB-06758	thoda	candidate	Unknown								
-LKB-06765	times	candidate	Unknown								
-LKB-06771	todna	candidate	Unknown								
-LKB-06777	tools	candidate	Unknown								
-LKB-06783	tou	candidate	Unknown								
-LKB-06797	trump	candidate	Unknown								
-LKB-06799	tssori	candidate	Unknown								
-LKB-06810	tumhe	candidate	Unknown								
-LKB-06811	tumikhanr	candidate	Unknown								
-LKB-06814	tumne	candidate	Unknown								
-LKB-06815	tumse	candidate	Unknown								
-LKB-06823	udaas	candidate	Unknown								
-LKB-06824	udyog	candidate	Unknown								
-LKB-06828	ukrainian	candidate	Unknown								
-LKB-06830	uncategorized	candidate	Unknown								
-LKB-06831	under	candidate	Unknown								
-LKB-06832	understanding	candidate	Unknown								
-LKB-06841	user	candidate	Unknown								
-LKB-06842	usne	candidate	Unknown								
-LKB-06843	usse	candidate	Unknown								
-LKB-06845	uthana	candidate	Unknown								
-LKB-06846	uthho	candidate	Unknown			utho					
-LKB-06848	uthna	candidate	Unknown								
-LKB-06849	utho	candidate	Unknown								
-LKB-06850	utna	candidate	Unknown								
-LKB-06851	valuable	candidate	Unknown								
-LKB-06856	vijay	candidate	Unknown								
-LKB-06857	vir	candidate	Unknown								
-LKB-06860	visitor	candidate	Unknown								
-LKB-06863	wahan	candidate	Unknown								
-LKB-06864	waisa	candidate	Unknown								
-LKB-06865	waise	candidate	Unknown								
-LKB-06868	wales	candidate	Unknown								
-LKB-06870	warna	candidate	Unknown								
-LKB-06882	wildfire	candidate	Unknown								
-LKB-06887	withdrawing	candidate	Unknown								
-LKB-06889	word	candidate	Unknown								
-LKB-06890	words	candidate	Unknown								
-LKB-06897	xobdo	candidate	Unknown								
-LKB-06900	ya	candidate	Unknown								
-LKB-06901	yaar	candidate	Unknown								
-LKB-06902	yahan	candidate	Unknown								
-LKB-06903	yash	candidate	Unknown								
-LKB-06909	zaroor	candidate	Unknown								
-LKB-06912	zyada	candidate	Unknown								
+id	word	status	pos	english_definition	gloss_candidates	morphology	variants	domains	decision	correct_pos	correct_gloss	note
+LKB-00001	aru	attested	CCONJ	More, again.	and; more; again	simple stem (no affix)	aaru	grammar				
+LKB-00002	laga	attested	ADP	Of (possessive).	of (possessive)	simple stem (no affix)		grammar,greetings				
+LKB-00003	pora	attested	ADP	From, by.	from, by; from; by	simple stem (no affix)		grammar,greetings,home				
+LKB-00004	khan	attested	PART	Plural marker (written apart or attached: manu khan, manukhan).	plural marker (written apart or attached: manu khan, manukhan); plural marker (written apart or attached: manu khan; manukhan)	simple stem (no affix)		grammar,greetings				
+LKB-00005	ke	attested	ADP	To (object marker).	to (object marker)	simple stem (no affix)		grammar,greetings				
+LKB-00006	tai	attested	PRON	He, she.	he, she; he; she	simple stem (no affix)		greetings,pronouns				
+LKB-00007	ase	attested	AUX	Is, am, are (exists).	is, am, are (exists); is; am; are (exists)	simple stem (no affix)	aase,asse	grammar,greetings				
+LKB-00008	te	attested	ADP	In, at, to.	in, at, to; in; at; to	simple stem (no affix)		grammar,greetings				
+LKB-00009	etu	attested	PRON	This.	this	simple stem (no affix)		grammar,greetings,places,pronouns				
+LKB-00010	kene	attested	SCONJ	Having (done), and then.	having (done), and then; having (done); and then	simple stem (no affix)		grammar,greetings				
+LKB-00011	taikhan	attested	PRON	They.	they	tai + -khan (plural)		greetings,pronouns				
+LKB-00013	bhi	attested	PART	Also, even.	also, even; also; even	simple stem (no affix)		grammar,greetings				
+LKB-00015	moi	attested	PRON	I, me.	I, me; I; me	simple stem (no affix)		greetings,pronouns				
+LKB-00016	to	attested	PART	Topic or emphasis particle.	topic or emphasis particle	simple stem (no affix)		grammar,greetings				
+LKB-00017	kintu	attested	CCONJ	But.	but	simple stem (no affix)		grammar,greetings				
+LKB-00019	nimite	attested	ADP	For.	for	simple stem (no affix)		grammar,greetings				
+LKB-00023	sob	attested	DET	All.	all	simple stem (no affix)		grammar,greetings				
+LKB-00025	amikhan	attested	PRON	We.	we	ami + -khan (plural)		greetings,pronouns				
+LKB-00027	apuni	attested	PRON	You (polite).	you (polite)	simple stem (no affix)		greetings,pronouns				
+LKB-00028	he	attested	PART	Emphasis particle (indeed, only).	emphasis particle (indeed, only); emphasis particle (indeed; only)	simple stem (no affix)		grammar,greetings				
+LKB-00029	logote	attested	ADP	With.	with	simple stem (no affix)		grammar,greetings,places				
+LKB-00031	thakise	attested	AUX	Was, stayed.	was, stayed; was; stayed	thak- + -ise (past)	thakishe	grammar,greetings				
+LKB-00032	tumikhan	attested	PRON	You (plural).	you (plural)	tumi + -khan (plural)		pronouns				
+LKB-00034	koi	attested	PART	To say or tell; also used to introduce speech.	quotative: saying that; say; tell; speak	ko- + -i (non-finite, ongoing)	koy	actions				
+LKB-00035	titia	attested	ADV	Then.	then	simple stem (no affix)		grammar				
+LKB-00036	ekjon	attested	DET	One (person), someone.	one (person), someone; one (person); someone	simple stem (no affix)		grammar				
+LKB-00037	jitia	attested	SCONJ	When (relative).	when (relative)	simple stem (no affix)		grammar				
+LKB-00041	kun	attested	PRON	Who, which.	who, which; who; which	simple stem (no affix)		pronouns				
+LKB-00042	bisi	attested	DET	Many, much, very.	many, much, very; many; much; very	simple stem (no affix)	bishi,bissi	grammar				
+LKB-00043	nai	attested	PART	Not, there is not.	not, there is not; not; there is not	simple stem (no affix)	naai	grammar,greetings				
+LKB-00044	ki	attested	PRON	What.	what	simple stem (no affix)		greetings,pronouns				
+LKB-00045	kelemane	attested	SCONJ	Because.	because	simple stem (no affix)		grammar				
+LKB-00046	hoi	attested	AUX	To become or happen; also means yes, okay.	is, becomes; yes; become; be; happen	ho- + -i (non-finite, ongoing)	hoy	actions,greetings				
+LKB-00047	eneka	attested	ADV	Like this, so.	like this, so; like this; so	simple stem (no affix)		grammar				
+LKB-00048	tumi	attested	PRON	You (familiar).	you (familiar)	simple stem (no affix)		pronouns				
+LKB-00052	apnikhan	attested	PRON	You (plural, polite).	you (plural, polite); you (plural; polite)	apni + -khan (plural)		pronouns				
+LKB-00054	karone	attested	ADP	Because of, for.	because of, for; because of; for	simple stem (no affix)		grammar,greetings,slang				
+LKB-00055	ami	attested	PRON	We.	we	simple stem (no affix)	ammi	pronouns				
+LKB-00058	nijor	attested	PRON	Own, oneself.	own, oneself; own; oneself	simple stem (no affix)		pronouns				
+LKB-00059	ekta	attested	DET	One, a.	one, a; one; a	simple stem (no affix)		grammar,greetings				
+LKB-00060	nohoi	attested	PART	Is not, does not happen; also otherwise or lest.	is not, no; not be; otherwise; lest	noho- + -i (non-finite, ongoing)	nohoy	grammar				
+LKB-00061	hoise	attested	AUX	Became, happened.	became, happened; became; happened	ho- + -ise (past)		grammar				
+LKB-00068	ta	attested	ADV	There.	there	simple stem (no affix)		grammar				
+LKB-00070	jodi	attested	SCONJ	If.	if	simple stem (no affix)		grammar				
+LKB-00080	uporte	attested	ADP	On, above.	on, above; on; above	simple stem (no affix)		grammar				
+LKB-00083	pichete	attested	ADP	After, behind.	after, behind; after; behind	simple stem (no affix)		grammar				
+LKB-00086	etiya	attested	ADV	Now.	now	simple stem (no affix)		grammar,greetings,slang,time				
+LKB-00087	dusra	attested	DET	Other, another.	other, another; other; another	simple stem (no affix)	doosra	grammar				
+LKB-00089	kunba	attested	PRON	Someone, some.	someone, some; someone; some	simple stem (no affix)		pronouns				
+LKB-00096	hobo	attested	AUX	Will be, will happen.	will be, will happen; will be; will happen	ho- + -bo (future)		grammar				
+LKB-00098	eku	attested	DET	Any (nothing, with a negative).	any (nothing, with a negative); any (nothing; with a negative)	simple stem (no affix)		grammar				
+LKB-00100	hoile	attested	SCONJ	Then, if so.	then, if so; then; if so	ho- + -ile (conditional, when)		grammar				
+LKB-00106	na	attested	PART	Not.	not	simple stem (no affix)		grammar,greetings,slang				
+LKB-00109	thake	attested	AUX	Stays, is (habitually).	stays, is (habitually); stays; is (habitually)	thak- + -e (present, habitual)		grammar				
+LKB-00113	kilekoile	attested	ADV	Why.	why	simple stem (no affix)		grammar				
+LKB-00115	tak	attested	ADP	Until, up to.	until, up to; until; up to	simple stem (no affix)		describing,grammar				
+LKB-00118	lage	attested	AUX	To be needed.	must, is needed; need; be necessary	lag- + -e (present, habitual)		grammar				
+LKB-00131	logot	attested	ADP	With.	with	simple stem (no affix)		community,family,grammar				
+LKB-00132	nohoile	attested	CCONJ	Otherwise, or else.	otherwise, or else; otherwise; or else	noho- + -ile (conditional, when)		grammar				
+LKB-00135	thakibo	attested	AUX	Will be, will stay.	will be, will stay; will be; will stay	thak- + -ibo (future)	thaakibo	actions,grammar				
+LKB-00137	kitia	attested	ADV	When (question).	when (question)	simple stem (no affix)		grammar				
+LKB-00141	thik	attested	ADV	Right, correctly, okay.	right, correctly, okay; right; correctly; okay	simple stem (no affix)	theek	grammar,greetings,slang				
+LKB-00149	hodai	attested	ADV	Always.	always	simple stem (no affix)		time				
+LKB-00150	majote	attested	ADP	Among, in the middle of.	among, in the middle of; among; in the middle of	simple stem (no affix)		grammar,places				
+LKB-00155	kineka	attested	ADV	How.	how	simple stem (no affix)		grammar				
+LKB-00160	utu	attested	PRON	That.	that	simple stem (no affix)		pronouns				
+LKB-00168	jineka	attested	SCONJ	As, the way that.	as, the way that; as; the way that	simple stem (no affix)		grammar				
+LKB-00178	naki	attested	PART	Or (in questions), isn't it.	or (in questions), isn't it; or (in questions); isn't it	simple stem (no affix)		grammar				
+LKB-00181	khali	attested	ADV	Only, just.	only, just; only; just	simple stem (no affix)	khaali	grammar				
+LKB-00182	duijon	attested	NUM	Two (people).	two (people)	simple stem (no affix)		grammar				
+LKB-00225	pare	attested	AUX	Can.	can	par- + -e (present, habitual)		grammar				
+LKB-00250	olop	attested	DET	A little, few.	a little, few; a little; few	simple stem (no affix)		grammar				
+LKB-00276	kiman	attested	ADV	How much, how many.	how much, how many; how much; how many	simple stem (no affix)	kimaan	grammar				
+LKB-00286	tin	attested	NUM	A metal can for food, or a thin sheet of metal.	three; can; tin can; metal sheet	simple stem (no affix)	teen	home,numbers				
+LKB-00305	dhanyavad	attested	INTJ	Thank you.	thank you	simple stem (no affix)	dhanyabaad,dhanyabad	grammar				
+LKB-00306	kiba	attested	PRON	Something.	something	simple stem (no affix)	kibaa	greetings,pronouns,slang				
+LKB-00320	majot	attested	ADP	Among, in the middle of.	among, in the middle of; among; in the middle of	simple stem (no affix)		grammar				
+LKB-00344	napare	attested	AUX	Cannot.	cannot	par- + -e (negative, present, habitual)		grammar				
+LKB-00358	kot	attested	ADV	Where.	where	simple stem (no affix)		grammar,slang				
+LKB-00373	ek	attested	NUM	One.	one	simple stem (no affix)		grammar,numbers				
+LKB-00403	aji	attested	ADV	Today.	today	simple stem (no affix)	aaji	grammar				
+LKB-00566	amen	attested	INTJ	Said at the end of a prayer to mean so be it.	amen; so be it; truly; yes	simple stem (no affix)		community,religion				
+LKB-00603	dui	attested	NUM	Two.	two	simple stem (no affix)		grammar,numbers				
+LKB-00703	kote	attested	ADV	Where.	where	simple stem (no affix)		grammar,places				
+LKB-00771	kali	attested	ADV	Tomorrow or yesterday by context.	tomorrow, yesterday; tomorrow; yesterday	simple stem (no affix)		time				
+LKB-00864	char	attested	NUM	Four.	four	simple stem (no affix)	chaar	grammar				
+LKB-01091	nisina	attested	ADP	Like, as.	like, as; like; as	simple stem (no affix)	nishina	grammar				
+LKB-01137	itu	attested	PRON	This.	this	simple stem (no affix)		grammar,greetings,places,pronouns,slang				
+LKB-01157	ba	attested	CCONJ	Or.	or	simple stem (no affix)		grammar,greetings				
+LKB-01267	kena	attested	SCONJ	Having (done), and then.	having (done), and then; having (done); and then	simple stem (no affix)		grammar				
+LKB-01277	panch	attested	NUM	Five.	five	simple stem (no affix)	paanch	grammar				
+LKB-01648	bi	attested	PART	Also, even.	also, even; also; even	simple stem (no affix)	bee	grammar				
+LKB-01967	apunikhan	attested	PRON	You (plural, polite).	you (plural, polite); you (plural; polite)	apuni + -khan (plural)		pronouns				
+LKB-02557	aro	curated	CCONJ	And.	and	simple stem (no affix)		grammar				
+LKB-03003	agete	curated	ADP	Before, in front of.	before, in front of; before; in front of	simple stem (no affix)		grammar				
+LKB-04182	abar	curated	ADV	Again.	again	simple stem (no affix)		grammar				
+LKB-00012	manu	attested	NOUN	A person, a human being.	man; men; person; people	simple stem (no affix)	manuh	community,family,greetings				
+LKB-00014	kori	attested	VERB	To do or make; also forms compound verbs with nouns and English words (call kori, help kori).	do; make; perform	kor- + -i (non-finite, ongoing)	kore	actions,compounds,greetings,slang				
+LKB-00018	isor	attested	PROPN	God, the Creator.	god	simple stem (no affix)	isshor,iswar,ishor	greetings,religion				
+LKB-00020	koise	attested	VERB	Past form of koi ('say').	said; saying; say (past)	ko- + -ise (past)		greetings				
+LKB-00021	dise	attested	VERB	Past form of dii ('give').	gave; given; give (past)	di- + -se (past)		greetings				
+LKB-00022	jisu	attested	PROPN	Jesus.	jesus	simple stem (no affix)	jesu	greetings,religion				
+LKB-00024	kotha	attested	NOUN	A word, a talk, a matter.	word; words; talk; matter	simple stem (no affix); used with kori as a light verb	kothaa	culture,describing,greetings,religion,slang				
+LKB-00026	thaka	attested	VERB	Staying, living; also the participle 'who is, that stays'.	staying; living; being	simple stem (no affix)	thakaa	actions,greetings				
+LKB-00030	taike	attested	PRON	tai with the postposition ke written attached ('he').	he (attached ke)	tai + ke (attached postposition)		pronouns				
+LKB-00033	bole	attested	PART	To, in order to; ending that makes an infinitive.	to; in order to	simple stem (no affix)	bolle	grammar				
+LKB-00038	jaise	attested	VERB	Past form of jai ('go').	went; departed; go (past)	ja- + -ise (past)		actions,travel				
+LKB-00039	kaam	attested	NOUN	Work, a job or task.	works; work; job; task	simple stem (no affix); used with kori as a light verb	kam	actions,community,work				
+LKB-00040	jun	attested	PRON	Who, which, whoever.	whoever; who; which	simple stem (no affix)	jon	pronouns				
+LKB-00049	bhal	attested	ADJ	Good, fine, well.	good; well; fine	simple stem (no affix)	bhaal	describing,greetings,slang				
+LKB-00050	nisena	attested	ADP	Like, just as.	like; as; similar to	simple stem (no affix)	nisina	grammar				
+LKB-00051	kora	attested	VERB	Doing; verbal form of kori.	doing; making	simple stem (no affix); used with kori as a light verb		actions,food				
+LKB-00053	korise	attested	VERB	Past form of kori ('do').	done; do (past)	kor- + -ise (past)	korishe	actions,compounds				
+LKB-00056	dibo	attested	VERB	Future form of dii ('give').	give; give (future)	di- + -bo (future)	diibbo	actions				
+LKB-00057	mon	attested	NOUN	Mind, heart, wish.	heart; hearts; mind; wish	simple stem (no affix)		actions,feelings,slang				
+LKB-00062	khrista	attested	PROPN	Khrista, a name used in the Nagamese New Testament.	christ; Khrista	simple stem (no affix)		greetings,religion				
+LKB-00063	probhu	attested	PROPN	Lord, master; used for God and Jesus.	lord; master	simple stem (no affix)	prabhu	religion				
+LKB-00064	diya	attested	VERB	Given, giving; participle of di.	given; giving	simple stem (no affix)		actions				
+LKB-00065	biswas	attested	NOUN	Faith, trust, belief.	faith; believe; trust; belief	simple stem (no affix); used with kori as a light verb	bishwas,vishwas	feelings,religion				
+LKB-00066	jai	attested	VERB	To go or depart.	went; going; go; depart	ja- + -i (non-finite, ongoing)	jay	actions,travel				
+LKB-00067	loi	attested	VERB	To take or receive; also to carry along.	took; led; take; receive	lo- + -i (non-finite, ongoing)	loy	actions				
+LKB-00069	baba	attested	NOUN	Father.	father; fathers; dad	simple stem (no affix)		actions,family				
+LKB-00071	ahise	attested	VERB	Past form of ahi ('come').	came; come; come (past)	ah- + -ise (past)	aahise	grammar				
+LKB-00072	kore	attested	VERB	Present, habitual form of kori ('do').	do (present, habitual)	kor- + -e (present, habitual)		actions				
+LKB-00073	dibi	attested	VERB	Imperative, future (you) form of dii ('give').	give (imperative, future (you))	di- + -bi (imperative, future (you))		actions				
+LKB-00074	atma	attested	NOUN	Spirit, soul.	spirit; spiritual; soul	simple stem (no affix)		feelings,religion				
+LKB-00075	koribo	attested	VERB	Future form of kori ('do').	do (future)	kor- + -ibo (future)		actions,grammar				
+LKB-00076	ghor	attested	NOUN	House, home.	house; household; home	simple stem (no affix)		actions,home				
+LKB-00077	dangor	attested	ADJ	Big, great, large; also older.	great; greater; big; large	simple stem (no affix)	dangar	describing,nature				
+LKB-00078	moike	attested	PRON	moi with the postposition ke written attached ('I').	I (attached ke)	moi + ke (attached postposition)		pronouns				
+LKB-00079	loise	attested	VERB	Past form of loi ('take').	took; received; take (past)	lo- + -ise (past)		actions				
+LKB-00081	niyom	attested	NOUN	A rule or law.	law; lawful; rule	simple stem (no affix)		civic				
+LKB-00082	morom	attested	NOUN	Love, affection.	love; beloved; affection	simple stem (no affix); used with kori as a light verb		feelings,slang				
+LKB-00084	biya	attested	ADJ	Bad, evil.	evil; worse; bad	simple stem (no affix)	beya	describing				
+LKB-00085	usorte	attested	ADJ	usor with the postposition te written attached ('near').	near; sight; near (attached te)	usor + te (attached postposition)		describing				
+LKB-00088	koile	attested	VERB	Conditional, when form of koi ('say').	say (conditional, when)	ko- + -ile (conditional, when)		actions				
+LKB-00090	dibole	attested	VERB	Infinitive, purpose form of dii ('give').	give; give (infinitive, purpose)	di- + -bole (infinitive, purpose)		actions				
+LKB-00091	din	attested	NOUN	Day.	days; day	simple stem (no affix)		actions,time				
+LKB-00092	dukh	attested	NOUN	Sorrow, pain, suffering.	suffer; suffered; sorrow; pain	simple stem (no affix)		body,feelings				
+LKB-00093	koribi	attested	VERB	Imperative, future (you) form of kori ('do').	do (imperative, future (you))	kor- + -ibi (imperative, future (you))		actions,compounds				
+LKB-00094	bacha	attested	NOUN	Child.	children; child; kid	simple stem (no affix)	baccha	family				
+LKB-00095	bhai	attested	NOUN	Brother.	brothers; brother	simple stem (no affix)		actions,community,family				
+LKB-00097	di	attested	VERB	Give; short form of dibo, dibi.	give; delivered; hand over	simple stem (no affix)	dii	actions				
+LKB-00099	hosa	attested	ADJ	True, real; also truth.	truth; certainly; true; real	simple stem (no affix)	hosaa,hasa,sasa	describing,slang				
+LKB-00101	chela	attested	NOUN	Disciple, follower.	disciples; disciple; follower	simple stem (no affix)		religion				
+LKB-00102	naam	attested	NOUN	Name.	name; names	simple stem (no affix)	nam	describing,greetings				
+LKB-00103	jabo	attested	VERB	Future form of jai ('go').	go; go (future)	ja- + -bo (future)	jaabo,javo	actions,grammar,greetings				
+LKB-00104	homoi	attested	NOUN	Time, a period or moment.	time; hour; moment	simple stem (no affix)	somoi	time				
+LKB-00105	juntu	attested	DET	Which, whichever.	which; whichever	simple stem (no affix)		grammar				
+LKB-00107	pobitro	attested	ADJ	Holy, pure.	holy; saints; sacred; pure	simple stem (no affix)	pobitra	religion				
+LKB-00108	thaki	attested	VERB	To stay or live.	stay; live	thak- + -i (non-finite, ongoing)		actions,grammar,greetings				
+LKB-00110	eitu	attested	PRON	This, these things.	things; this; these	simple stem (no affix)		pronouns				
+LKB-00111	kele	attested	ADV	Why; for what reason.	why; for what	simple stem (no affix)	kile	grammar				
+LKB-00112	paap	attested	NOUN	Sin, wrongdoing.	sin; sins; wrongdoing	simple stem (no affix)	pap	greetings,religion				
+LKB-00114	itcha	attested	NOUN	Wish, desire.	desire; lusts; wish	simple stem (no affix); used with kori as a light verb	icha	feelings				
+LKB-00116	ahi	attested	VERB	To come or arrive.	coming; came; come; arrive	ah- + -i (non-finite, ongoing)	aahi	actions,travel				
+LKB-00117	gaw	attested	NOUN	Body, flesh.	body; flesh	simple stem (no affix)		body				
+LKB-00119	khushi	attested	NOUN	Happiness, joy.	joy; rejoice; happiness	simple stem (no affix)	khusi	actions,feelings				
+LKB-00120	prithibi	attested	NOUN	The earth, the world.	earth; world	simple stem (no affix)	prithvi	nature				
+LKB-00121	jagate	attested	NOUN	jaga with the postposition te written attached ('place').	place; place (attached te)	jaga + te (attached postposition)		places				
+LKB-00122	dikhise	attested	VERB	Past form of dikhi ('see').	saw; seen; see (past)	dikh- + -ise (past)		actions				
+LKB-00123	jani	attested	VERB	To know or understand a fact.	know; knowing; be aware	jan- + -i (non-finite, ongoing)		actions				
+LKB-00124	age	attested	ADV	Before, earlier, first.	first; before; earlier	simple stem (no affix)	aage	time				
+LKB-00125	jibon	attested	NOUN	Life.	life	simple stem (no affix)	jiwon	describing,religion				
+LKB-00126	sabi	attested	VERB	Imperative, future (you) form of sai ('look').	behold; see; look (imperative, future (you))	sa- + -bi (imperative, future (you))		actions				
+LKB-00127	yehudi	attested	PROPN	Yehudi, a name used in the Nagamese New Testament.	jews; jew; Yehudi	simple stem (no affix)		religion				
+LKB-00128	paribo	attested	VERB	Future form of pari ('be able').	able; be able (future)	par- + -ibo (future)		actions,grammar				
+LKB-00129	chari	attested	VERB	To leave, abandon or let go.	left; leave; abandon; release	char- + -i (non-finite, ongoing)		actions,numbers				
+LKB-00130	pura	attested	ADJ	Complete, whole, full.	fulfilled; whole; complete; full	simple stem (no affix)		describing				
+LKB-00133	jinda	attested	ADJ	Alive, living.	living; live; alive	simple stem (no affix)		describing				
+LKB-00134	hoilebi	attested	CCONJ	But even so, however.	however; even so; still	simple stem (no affix)		grammar				
+LKB-00136	diye	attested	VERB	Present of di: gives, is giving.	gives; gave	simple stem (no affix)		actions				
+LKB-00138	thakibi	attested	VERB	Imperative, future (you) form of thaki ('stay').	watch; stay (imperative, future (you))	thak- + -ibi (imperative, future (you))		actions				
+LKB-00139	chokra	attested	NOUN	Boy; a son.	son; boy	simple stem (no affix)		family,greetings,slang				
+LKB-00140	putro	attested	PROPN	Son.	son	simple stem (no affix)	putra	family,greetings				
+LKB-00142	paul	attested	PROPN	Paul, a name used in the Nagamese New Testament.	paul	simple stem (no affix)		religion				
+LKB-00143	bhabona	attested	NOUN	Thought, worry.	mind; thoughts; thought; worry	simple stem (no affix)		actions,feelings				
+LKB-00144	bisar	attested	NOUN	Judgment, a decision about right and wrong.	judgment; judge; trial	simple stem (no affix); used with kori as a light verb	bichar	civic				
+LKB-00145	sheher	attested	NOUN	City, town.	city; cities; town	simple stem (no affix)	shahar	greetings,places				
+LKB-00146	bhitor	attested	ADP	Inside, within.	entered; inside; within	simple stem (no affix)		grammar,home				
+LKB-00147	luwa	attested	NOUN	Drink; in kha-luwa, food and drink.	food; chosen; drink	simple stem (no affix)		food				
+LKB-00148	huni	attested	VERB	To hear.	hear; heard	hun- + -i (non-finite, ongoing)		actions				
+LKB-00151	paise	attested	VERB	Past form of pai ('get').	found; received; get (past)	pa- + -ise (past)		actions				
+LKB-00152	pabo	attested	VERB	Future form of pai ('get').	receive; find; get (future)	pa- + -bo (future)		actions				
+LKB-00153	kapra	attested	NOUN	Clothes, cloth.	clothing; garment; clothes; cloth	simple stem (no affix)		clothing				
+LKB-00154	mohima	attested	NOUN	Glory, greatness.	glory; glorified; greatness	simple stem (no affix)		religion				
+LKB-00156	hobole	attested	VERB	Infinitive, purpose form of hoi ('become').	become; happen; become (infinitive, purpose)	ho- + -bole (infinitive, purpose)		actions				
+LKB-00157	dikhai	attested	VERB	To show or reveal something.	revealed; show; reveal; display	dikha- + -i (non-finite, ongoing)	dekhai	actions				
+LKB-00158	bhoi	attested	NOUN	Fear.	fear; afraid	simple stem (no affix); used with kori as a light verb		feelings				
+LKB-00159	alag	attested	ADJ	Separate, different.	languages; separate; different	simple stem (no affix)		describing				
+LKB-00161	khara	attested	VERB	Standing, upright.	standing; stood; upright	simple stem (no affix)		actions,describing				
+LKB-00162	morai	attested	VERB	To kill.	killed; kill; murder	mora- + -i (non-finite, ongoing)		actions				
+LKB-00163	peter	attested	PROPN	Peter, a name used in the Nagamese New Testament.	peter	simple stem (no affix)		religion				
+LKB-00164	mora	attested	ADJ	Dead; died.	dead; death; died	simple stem (no affix)		describing,nature				
+LKB-00165	hath	attested	NOUN	Hand, arm.	hands; hand; arm	simple stem (no affix)	haath	body				
+LKB-00166	hunise	attested	VERB	Past form of huni ('hear').	heard; hear (past)	hun- + -ise (past)		actions				
+LKB-00167	nijorke	attested	PRON	nijor with the postposition ke written attached ('own').	own (attached ke)	nijor + ke (attached postposition)		pronouns				
+LKB-00169	prathana	attested	NOUN	Prayer.	pray; prayer	simple stem (no affix); used with kori as a light verb	prarthana	religion				
+LKB-00170	asele	attested	VERB	Past of ase: was, were.	was; were	simple stem (no affix)		actions				
+LKB-00171	kobo	attested	VERB	Future form of koi ('say').	say; tell; say (future)	ko- + -bo (future)		actions				
+LKB-00172	sorgodoth	attested	NOUN	Angel, a messenger from heaven.	angel; angels	simple stem (no affix)	sorgodut	religion				
+LKB-00173	khotom	attested	VERB	Finished, ended.	destroy; destroyed; finished; ended	simple stem (no affix)		describing				
+LKB-00174	ulai	attested	VERB	To take out or bring down.	take out; bring down; remove	ula- + -i (non-finite, ongoing)	ulia	actions				
+LKB-00175	ahibo	attested	VERB	Future form of ahi ('come').	come; comes; come (future)	ah- + -ibo (future)	aahibo	actions,grammar				
+LKB-00176	jabole	attested	VERB	Infinitive, purpose form of jai ('go').	go; go (infinitive, purpose)	ja- + -bole (infinitive, purpose)		actions,travel				
+LKB-00177	dinte	attested	NOUN	din with the postposition te written attached ('day').	day; day (attached te)	din + te (attached postposition)		time				
+LKB-00179	maiki	attested	NOUN	Woman, wife, female.	wife; woman; female	simple stem (no affix)		family				
+LKB-00180	kowa	attested	VERB	Said, told; verbal form of koi.	said; told; saying	simple stem (no affix)		actions,nature				
+LKB-00183	rasta	attested	NOUN	Road, path, way.	way; ways; road; path	simple stem (no affix)	raasta	greetings,travel				
+LKB-00184	aha	attested	VERB	Coming; verbal form of ahi.	coming; come; arrival	simple stem (no affix)		actions				
+LKB-00185	pani	attested	NOUN	Water.	water; waters	simple stem (no affix)	paani	actions,food,nature				
+LKB-00186	likha	attested	VERB	Written; verbal form of likhi.	scribes; written; writing	simple stem (no affix)		education				
+LKB-00187	sapha	attested	ADJ	Clean, pure.	pure; clean	simple stem (no affix)	saph	describing				
+LKB-00188	bhag	attested	NOUN	Part, portion, share.	members; part; portion; share	simple stem (no affix)	bhaag	describing				
+LKB-00189	sorgo	attested	NOUN	Heaven.	heaven; heavens	simple stem (no affix)		religion				
+LKB-00190	mati	attested	VERB	To call or summon someone.	called; call; summon; invite	mat- + -i (non-finite, ongoing)	maati	actions,colours,farming,nature				
+LKB-00191	poila	attested	ADJ	First.	first	simple stem (no affix)		numbers				
+LKB-00192	phale	attested	NOUN	Side, direction.	side; toward; direction	simple stem (no affix)		greetings,places				
+LKB-00193	mondoli	attested	NOUN	Church, congregation of believers.	temple; synagogue; church; congregation	simple stem (no affix)		community,religion				
+LKB-00194	purohit	attested	NOUN	Priest.	priest; priests	simple stem (no affix)		religion				
+LKB-00195	tumike	attested	PRON	tumi with the postposition ke written attached ('you (familiar)').	you (familiar) (attached ke)	tumi + ke (attached postposition)		pronouns				
+LKB-00196	bohi	attested	VERB	To sit.	sat; sitting; sit	boh- + -i (non-finite, ongoing)		actions				
+LKB-00197	jowab	attested	VERB	Answer, reply.	answered; answer; reply	simple stem (no affix)		education				
+LKB-00198	john	attested	PROPN	John, a man's name in the Bible.	john	simple stem (no affix)		religion				
+LKB-00199	jaga	attested	NOUN	Place, space.	place; places; space	simple stem (no affix)	jagah	greetings,places				
+LKB-00200	bhabobadi	attested	NOUN	Prophet.	prophets; prophet	simple stem (no affix)		greetings,religion				
+LKB-00201	pai	attested	VERB	To get, find or receive.	get; find; receive	pa- + -i (non-finite, ongoing)	paai,pay	actions				
+LKB-00202	mahila	attested	NOUN	Woman.	woman; women	simple stem (no affix)		family				
+LKB-00203	asurit	attested	ADJ	Amazed, astonished.	marveled; amazed; astonished	simple stem (no affix)	achorit	feelings				
+LKB-00204	dikhi	attested	VERB	To see or to appear.	see; seen; look; notice	dikh- + -i (non-finite, ongoing)	dekhi	actions				
+LKB-00205	jerusalem	attested	PROPN	Jerusalem, a name used in the Nagamese New Testament.	jerusalem	simple stem (no affix)		religion				
+LKB-00206	hisab	attested	VERB	Account, way, manner.	according; measure; account; way	simple stem (no affix)	hisaab	money				
+LKB-00207	likhi	attested	VERB	To write.	written; write; record	likh- + -i (non-finite, ongoing)		actions,education				
+LKB-00208	bonai	attested	VERB	To make or build.	made; make; build	bona- + -i (non-finite, ongoing)		actions				
+LKB-00209	nathaka	attested	VERB	Not staying, without; negative of thaka.	without; not being	simple stem (no affix)		grammar				
+LKB-00210	suku	attested	NOUN	Eye.	eyes; eye	simple stem (no affix)		body				
+LKB-00211	raja	attested	NOUN	King.	king; kings	simple stem (no affix)		civic,community,slang				
+LKB-00212	desh	attested	NOUN	Country, nation.	nations; nation; country	simple stem (no affix)		actions,places				
+LKB-00213	joma	attested	VERB	To gather, collect; used with koi or hoi.	gathered; together; gather; collect	simple stem (no affix)		actions				
+LKB-00214	bahar	attested	ADV	Outside, out.	outside; out	simple stem (no affix)		home,places				
+LKB-00215	mani	attested	VERB	To obey or accept; to believe.	keep; obedience; obey; accept	man- + -i (non-finite, ongoing)		actions,greetings				
+LKB-00216	lobi	attested	VERB	Imperative, future (you) form of loi ('take').	take; take (imperative, future (you))	lo- + -bi (imperative, future (you))		actions				
+LKB-00217	hukum	attested	NOUN	Command, order.	commanded; commandment; command; order	simple stem (no affix)		civic,grammar				
+LKB-00218	pathai	attested	VERB	To send.	sent; send	patha- + -i (non-finite, ongoing)		actions				
+LKB-00219	sikhai	attested	VERB	To teach.	teaching; taught; teach	sikha- + -i (non-finite, ongoing)		actions,education				
+LKB-00220	takot	attested	NOUN	Strength, power.	power; strong; strength	simple stem (no affix)		body,greetings				
+LKB-00221	para	attested	ADJ	Possible, able.	able; possible	simple stem (no affix)	pare	describing				
+LKB-00222	kha	attested	VERB	Eat; short form of khai.	food; eat	simple stem (no affix)		food				
+LKB-00223	jane	attested	VERB	Present, habitual form of jani ('know').	know; knows; know (present, habitual)	jan- + -e (present, habitual)	jaane	actions				
+LKB-00224	mori	attested	VERB	To die.	died; die; pass away	mor- + -i (non-finite, ongoing)		actions,health				
+LKB-00226	eke	attested	ADJ	Same, equal.	together; accord; same; equal	simple stem (no affix)		describing				
+LKB-00227	girja	attested	NOUN	Church.	assembly; assemblies; church	simple stem (no affix)		religion				
+LKB-00228	bhorta	attested	ADJ	Full, filled.	filled; full	simple stem (no affix)		describing				
+LKB-00229	awaj	attested	NOUN	Voice, sound.	voice; sound	simple stem (no affix)		describing				
+LKB-00230	duniya	attested	NOUN	The world.	world	simple stem (no affix)		actions,nature				
+LKB-00231	dikene	attested	VERB	Having given; di with kene.	having given	simple stem (no affix)		actions				
+LKB-00232	noukar	attested	NOUN	Servant, worker.	servant; servants; worker	simple stem (no affix)		work				
+LKB-00233	hudise	attested	VERB	Past form of hudi ('ask').	asked; ask (past)	hud- + -ise (past)		actions				
+LKB-00234	misa	attested	ADJ	False, untrue; a lie.	false; lie; untrue	simple stem (no affix)	misaa,micha	describing,slang				
+LKB-00235	shuru	attested	NOUN	Beginning, start.	beginning; began; start	simple stem (no affix); used with kori as a light verb	suru	actions,greetings,time				
+LKB-00236	khuli	attested	VERB	To open; opened.	opened; open	simple stem (no affix)		actions				
+LKB-00237	mangso	attested	NOUN	Meat, flesh.	flesh; fleshly; meat	simple stem (no affix)	mangsho	body,food,home				
+LKB-00238	wapas	attested	ADV	Back, returning.	back; returned; again	simple stem (no affix)		travel				
+LKB-00239	ama	attested	NOUN	Mother.	mother; parents	simple stem (no affix)	amma	actions,family				
+LKB-00240	rajyo	attested	PROPN	Kingdom.	kingdom	simple stem (no affix)		civic				
+LKB-00241	ghas	attested	NOUN	Grass, plants.	tree; trees; grass; plants	simple stem (no affix)	ghaas	nature				
+LKB-00242	nakore	attested	VERB	Negative, present, habitual form of kori ('do').	do (negative, present, habitual)	kor- + -e (negative, present, habitual)		actions,compounds				
+LKB-00243	dhori	attested	VERB	To hold or catch.	seize; hold; catch; grab	dhor- + -i (non-finite, ongoing)		actions				
+LKB-00244	prochar	attested	VERB	Preaching, spreading a message.	preach; preached; preaching; publicity	simple stem (no affix); used with kori as a light verb		greetings,religion				
+LKB-00245	pathor	attested	NOUN	Stone, rock.	stone; stones; rock	simple stem (no affix)		nature				
+LKB-00246	theng	attested	NOUN	Leg, foot.	feet; foot; leg	simple stem (no affix)		body				
+LKB-00247	malik	attested	NOUN	Owner, master, boss.	master; masters; owner; boss	simple stem (no affix)		work				
+LKB-00248	jabi	attested	VERB	Imperative, future (you) form of jai ('go').	go; depart; go (imperative, future (you))	ja- + -bi (imperative, future (you))		actions,travel				
+LKB-00249	khai	attested	VERB	To eat.	eats; eating; eat	kha- + -i (non-finite, ongoing)		actions,food				
+LKB-00251	kosom	attested	NOUN	Oath, vow.	promise; oath; vow	simple stem (no affix)		greetings,religion				
+LKB-00252	mota	attested	NOUN	Man, husband; a male.	husband; husbands; male; man	simple stem (no affix)	motaa	family				
+LKB-00253	tinehoile	attested	ADV	Then, so, therefore.	then; so; therefore	simple stem (no affix)		grammar				
+LKB-00254	najane	attested	VERB	Negative, present, habitual form of jani ('know').	know; know (negative, present, habitual)	jan- + -e (negative, present, habitual)		greetings				
+LKB-00255	shanti	attested	NOUN	Peace.	peace	simple stem (no affix)	santi	feelings,religion,slang				
+LKB-00256	bo	attested	PART	Variant of bole: to, in order to.	to; in order to	simple stem (no affix)		grammar				
+LKB-00257	huwa	attested	VERB	Happened, became; verbal form of hoi.	happened; became	simple stem (no affix)		actions				
+LKB-00258	baptizma	attested	VERB	Baptism.	baptized; baptism	simple stem (no affix)		religion				
+LKB-00259	dwara	attested	ADP	By, through, by means of.	by; through	simple stem (no affix)		grammar				
+LKB-00260	gawahi	attested	NOUN	Witness, testimony.	testimony; witnesses; witness	simple stem (no affix)		civic,community,greetings,religion				
+LKB-00261	poisa	attested	NOUN	Money, coins.	money; tax; coins	simple stem (no affix)	poisha	civic,money				
+LKB-00262	jonom	attested	NOUN	Birth.	born; birth	simple stem (no affix)		family				
+LKB-00263	matha	attested	NOUN	Head.	head; heads	simple stem (no affix)		body				
+LKB-00264	khun	attested	NOUN	Blood.	blood	simple stem (no affix)	khoon	body				
+LKB-00265	ahibole	attested	VERB	Infinitive, purpose form of ahi ('come').	come; come (infinitive, purpose)	ah- + -ibole (infinitive, purpose)		slang				
+LKB-00266	bemar	attested	ADJ	Sick, ill; an illness.	sick; diseases; ill; illness	simple stem (no affix)	bimar	health				
+LKB-00267	jon	attested	NOUN	Person; counter word for people.	person; counter	simple stem (no affix)		nature,numbers				
+LKB-00268	mer	attested	NOUN	Sheep.	sheep; lamb	simple stem (no affix)		farming				
+LKB-00269	kheti	attested	NOUN	Farming, a field.	field; farmers; farming	simple stem (no affix)		farming				
+LKB-00270	junke	attested	PRON	jun with the postposition ke written attached ('who').	who (attached ke)	jun + ke (attached postposition)		pronouns				
+LKB-00271	yate	attested	ADV	Here.	here	simple stem (no affix)		places				
+LKB-00272	piche	attested	VERB	Behind, after.	followed; follow; behind; after	simple stem (no affix)	pichete	places,time				
+LKB-00273	janwar	attested	NOUN	Animal.	beast; animals; animal	simple stem (no affix)	jaanwar	nature				
+LKB-00274	lobo	attested	VERB	Future form of loi ('take').	take (future)	lo- + -bo (future)		actions				
+LKB-00275	roti	attested	NOUN	Bread, flatbread.	bread; loaves; flatbread	simple stem (no affix)		food				
+LKB-00277	golti	attested	NOUN	Blame, fault, mistake.	accusers; accuse; blame; fault	simple stem (no affix)	galti	civic				
+LKB-00278	jui	attested	NOUN	Fire.	fire; sulfur	simple stem (no affix)		nature				
+LKB-00279	basi	attested	VERB	To choose, pick.	chosen; appointed; choose; pick	simple stem (no affix)	baasi	actions				
+LKB-00280	pathaise	attested	VERB	Past form of pathai ('send').	sent; send (past)	patha- + -ise (past)		actions				
+LKB-00281	pharisee	attested	PROPN	Pharisee, a name used in the Nagamese New Testament.	pharisees; pharisee	simple stem (no affix)		religion				
+LKB-00282	kobole	attested	VERB	Infinitive, purpose form of koi ('say').	speak; say (infinitive, purpose)	ko- + -bole (infinitive, purpose)		actions				
+LKB-00283	khabole	attested	VERB	Infinitive, purpose form of khai ('eat').	eat; drink; eat (infinitive, purpose)	kha- + -bole (infinitive, purpose)		slang				
+LKB-00284	anise	attested	VERB	Past form of ani ('bring').	brought; bring (past)	an- + -ise (past)		actions				
+LKB-00285	shadi	attested	NOUN	Wedding, marriage.	wedding; marry; marriage	simple stem (no affix); used with kori as a light verb	shaadi,sadi	family				
+LKB-00287	uthai	attested	VERB	To wake someone; to lift.	exalted; raised; wake; lift	utha- + -i (non-finite, ongoing)		actions				
+LKB-00288	sorgote	attested	NOUN	sorgo with the postposition te written attached ('heaven').	heaven; heavenly; heaven (attached te)	sorgo + te (attached postposition)		religion				
+LKB-00289	se	attested	VERB	Marks continuing action, like is or was doing.	is doing	simple stem (no affix)	she	grammar				
+LKB-00290	cholawta	attested	NOUN	Ruler, leader.	rulers; ruler; leader	simple stem (no affix)		civic				
+LKB-00291	kunke	attested	PRON	kun with the postposition ke written attached ('who').	who (attached ke)	kun + ke (attached postposition)		pronouns				
+LKB-00292	rakhi	attested	VERB	To keep or put.	laid; keep; put; place	rakh- + -i (non-finite, ongoing)		actions				
+LKB-00293	hala	attested	VERB	A shout or cry, a loud call.	cried; crying; shout; cry	simple stem (no affix)		actions				
+LKB-00294	abraham	attested	PROPN	Abraham, a name used in the Nagamese New Testament.	abraham	simple stem (no affix)		religion				
+LKB-00295	lagai	attested	VERB	To apply, put on or attach.	clothed; dressed; apply; put on	laga- + -i (non-finite, ongoing)		actions,clothing				
+LKB-00296	chutu	attested	ADJ	Small, little.	little; small	simple stem (no affix)		describing				
+LKB-00297	sewa	attested	VERB	Service, serving.	serve; served; service; serving	simple stem (no affix); used with kori as a light verb	shewa,seva	greetings,religion,work				
+LKB-00298	susamachar	attested	PROPN	Good news, the Gospel.	news; good news; gospel	simple stem (no affix)		community,greetings,religion				
+LKB-00299	matise	attested	VERB	Past form of mati ('call').	called; invited; call (past)	mat- + -ise (past)		actions				
+LKB-00300	sai	attested	VERB	To look or see; used in the sense of looking at.	watching; watched; look; see	sa- + -i (non-finite, ongoing)	chai	actions				
+LKB-00301	mukh	attested	NOUN	Mouth, face.	mouth; face	simple stem (no affix)		body				
+LKB-00302	rakhise	attested	VERB	Past form of rakhi ('keep').	laid; keep (past)	rakh- + -ise (past)		actions				
+LKB-00303	joldi	attested	ADV	Quickly, soon.	immediately; quickly; soon	simple stem (no affix)	jaldi	describing				
+LKB-00304	mari	attested	VERB	To hit or kill.	struck; beat; hit; kill	mar- + -i (non-finite, ongoing)	maari	actions				
+LKB-00307	somoi	attested	NOUN	Time; variant of homoi.	time; hour; moment	simple stem (no affix)	homoi	time				
+LKB-00308	adhikar	attested	NOUN	Authority, right.	authority; right	simple stem (no affix)		civic				
+LKB-00309	porjati	attested	PROPN	Porjati, a name used in the Nagamese New Testament.	gentiles; nations; Porjati	simple stem (no affix)		religion				
+LKB-00310	giri	attested	VERB	To fall down.	fell; fall; drop	gir- + -i (non-finite, ongoing)		actions				
+LKB-00311	phelai	attested	VERB	To throw away.	thrown; throw; discard	phela- + -i (non-finite, ongoing)		actions				
+LKB-00312	hathte	attested	NOUN	hathi with the postposition te written attached ('elephant').	delivered; hand; elephant (attached te)	hath + te (attached postposition)		nature				
+LKB-00313	gyaan	attested	NOUN	Knowledge, wisdom.	knowledge; wisdom	simple stem (no affix)	gyan	education				
+LKB-00314	bujhi	attested	VERB	To understand.	understand; understanding	bujh- + -i (non-finite, ongoing)		actions				
+LKB-00315	moses	attested	PROPN	Moses, a name used in the Nagamese New Testament.	moses	simple stem (no affix)		religion				
+LKB-00316	sat	attested	NUM	Seven.	seven	simple stem (no affix)	saat,shaat	numbers				
+LKB-00317	ahikena	attested	VERB	Having done form of ahi ('come').	come (having done)	ah- + -ikena (having done)		actions,travel				
+LKB-00318	sorom	attested	VERB	Shame.	shame; ashamed	simple stem (no affix)		feelings				
+LKB-00319	biswasi	attested	ADJ	Faithful; a believer.	faithful; believer	simple stem (no affix)	biswasee	religion				
+LKB-00321	maph	attested	NOUN	Forgiveness, pardon.	forgive; forgiven; forgiveness; pardon	simple stem (no affix); used with kori as a light verb		feelings				
+LKB-00322	notun	attested	ADJ	New.	new	simple stem (no affix)		describing				
+LKB-00323	israel	attested	PROPN	Israel, a name used in the Nagamese New Testament.	israel	simple stem (no affix)		religion				
+LKB-00324	somoite	attested	NOUN	somoi with the postposition te written attached ('time').	hour; time (attached te)	somoi + te (attached postposition)		time				
+LKB-00325	bona	attested	VERB	To make or build; short form of bonai.	foundation; make; build	simple stem (no affix)		actions				
+LKB-00326	dikha	attested	VERB	Show; short form of dikhai.	show; seen	simple stem (no affix)		actions				
+LKB-00327	nadibi	attested	VERB	Negative, imperative, future (you) form of dii ('give').	give (negative, imperative, future (you))	di- + -bi (negative, imperative, future (you))		actions				
+LKB-00328	bisari	attested	VERB	To search or look carefully.	seek; seeking; search	bisar- + -i (non-finite, ongoing)		actions				
+LKB-00329	bhoot	attested	NOUN	Ghost, demon.	demons; demon; ghost	simple stem (no affix)	bhut	culture				
+LKB-00330	nichete	attested	ADV	niche with the postposition te written attached ('below').	subjected; subject; below (attached te)	niche + te (attached postposition)		places				
+LKB-00331	cross	attested	NOUN	Cross, as used for Jesus.	cross; crucified	simple stem (no affix)		religion				
+LKB-00332	sobke	attested	NOUN	sobi with the postposition ke written attached ('picture').	picture (attached ke)	sob + ke (attached postposition)		media				
+LKB-00333	dharmik	attested	ADJ	Righteous, religious.	righteous; righteousness; religious	simple stem (no affix)		religion				
+LKB-00334	monte	attested	NOUN	mon with the postposition te written attached ('mind').	heart; hearts; mind (attached te)	mon + te (attached postposition)		feelings				
+LKB-00335	bachai	attested	VERB	To save or rescue.	save; saved; rescue; protect	bacha- + -i (non-finite, ongoing)		actions				
+LKB-00336	chihna	attested	NOUN	Sign, mark.	sign; signs; mark	simple stem (no affix)		describing				
+LKB-00337	baroh	attested	NOUN	Twelve.	twelve	simple stem (no affix)		numbers				
+LKB-00338	sonman	attested	NOUN	Honour, respect.	honor; honored; honour; respect	simple stem (no affix); used with kori as a light verb	samman	feelings				
+LKB-00339	digdar	attested	ADJ	Troubled, bothered; trouble.	trouble; hard; troubled; bothered	simple stem (no affix)		feelings				
+LKB-00340	taiyar	attested	ADJ	Ready.	ready; prepare; prepared	simple stem (no affix)		describing				
+LKB-00341	apostle	attested	NOUN	Apostle, one of Jesus' sent followers.	apostles; apostle	simple stem (no affix)		religion				
+LKB-00342	ulaikene	attested	VERB	Having done form of ulai ('take out').	take out (having done)	ula- + -ikene (having done)		actions				
+LKB-00343	duita	attested	NUM	Two.	two	simple stem (no affix)		numbers				
+LKB-00345	asha	attested	NOUN	Hope.	hope	simple stem (no affix)	asa	feelings,religion				
+LKB-00346	saal	attested	NOUN	Year.	years; year	simple stem (no affix)	sal	time				
+LKB-00347	rukhi	attested	VERB	To wait or stay.	waiting; wait; stay; stop	rukh- + -i (non-finite, ongoing)	roki	actions				
+LKB-00348	simon	attested	PROPN	Simon, a name used in the Nagamese New Testament.	simon	simple stem (no affix)		religion				
+LKB-00349	lobole	attested	VERB	Infinitive, purpose form of loi ('take').	take (infinitive, purpose)	lo- + -bole (infinitive, purpose)		actions				
+LKB-00350	salam	attested	NOUN	Greeting, respect.	greet; greetings; greeting; respect	simple stem (no affix); used with kori as a light verb	salaam	greetings				
+LKB-00351	asirbad	attested	VERB	Blessing.	blessed; blessing	simple stem (no affix); used with kori as a light verb	ashirbad	religion				
+LKB-00352	modot	attested	NOUN	Help, support.	help; helped; support	simple stem (no affix); used with kori as a light verb		community				
+LKB-00353	thakile	attested	VERB	Conditional, when form of thaki ('stay').	though; absent; stay (conditional, when)	thak- + -ile (conditional, when)		actions				
+LKB-00354	galilee	attested	PROPN	Galilee, a name used in the Nagamese New Testament.	galilee; galileans	simple stem (no affix)		religion				
+LKB-00355	naw	attested	NOUN	Boat.	boat; boats	simple stem (no affix)		travel				
+LKB-00356	harai	attested	VERB	To lose or perish.	lost; perish; lose; be lost	hara- + -i (non-finite, ongoing)		actions				
+LKB-00357	sipahi	attested	NOUN	Soldier.	soldiers; soldier	simple stem (no affix)		civic,community				
+LKB-00359	bijon	attested	NOUN	Seed.	seed; sow	simple stem (no affix)	bij	farming				
+LKB-00360	jinis	attested	NOUN	Thing, object.	things; thing; object	simple stem (no affix)	jinish	describing				
+LKB-00361	uthi	attested	VERB	To get up or rise.	arose; arise; get up; rise	uth- + -i (non-finite, ongoing)		actions				
+LKB-00362	sunnot	attested	NOUN	Circumcision.	circumcision; circumcised	simple stem (no affix)		religion				
+LKB-00363	dur	attested	ADJ	Far, distant.	far; abstain; distant	simple stem (no affix)	door	describing,greetings				
+LKB-00364	motlob	attested	NOUN	Meaning, purpose.	mean; interpreted; meaning; purpose	simple stem (no affix)		education				
+LKB-00365	saman	attested	NOUN	Goods, belongings.	goods; belongings	simple stem (no affix)	saamaan,saaman	home				
+LKB-00366	bhirodh	attested	NOUN	Opposition, being against.	opposition; resistance	simple stem (no affix)		civic				
+LKB-00367	pabole	attested	VERB	Infinitive, purpose form of pai ('get').	inheritance; get (infinitive, purpose)	pa- + -bole (infinitive, purpose)		actions				
+LKB-00368	samundar	attested	NOUN	Sea.	sea	simple stem (no affix)		nature				
+LKB-00369	dhun	attested	NOUN	Wealth, riches.	riches; treasure; wealth	simple stem (no affix)	dhon	money				
+LKB-00370	khong	attested	NOUN	Anger.	wrath; angry; anger	simple stem (no affix)		feelings				
+LKB-00371	anugrah	attested	NOUN	Grace, kindness.	grace; kindness	simple stem (no affix)	anugraha	religion				
+LKB-00372	porikha	attested	VERB	Test, trial, temptation.	tempted; temptation; test; trial	simple stem (no affix)		education,greetings,religion				
+LKB-00374	hali	attested	VERB	To pour or put into something.	poured; pour; put in; spill	hal- + -i (non-finite, ongoing)	haali,dhali	actions				
+LKB-00375	saikene	attested	VERB	Having done form of sai ('look').	looking; look (having done)	sa- + -ikene (having done)		actions				
+LKB-00376	mili	attested	VERB	To join, meet or agree.	join; meet; mix	mil- + -i (non-finite, ongoing)		actions				
+LKB-00377	chinta	attested	NOUN	Worry, concern.	anxious; troubled; worry; concern	simple stem (no affix); used with kori as a light verb		feelings				
+LKB-00378	lagi	attested	VERB	To be needed or required; to feel (hunger, fear).	need; be required; feel	lag- + -i (non-finite, ongoing)	laagi	actions,feelings				
+LKB-00379	lok	attested	VERB	Meeting; perhaps lok kori, to meet.	met; meet; meeting	simple stem (no affix); used with kori as a light verb		actions				
+LKB-00380	bondhi	attested	NOUN	Prisoner, captive.	prison; prisoner; captive	simple stem (no affix)		civic				
+LKB-05849	aa	candidate	VERB	Come (Hindi aa).	come	simple stem (no affix)	aah	actions				
+LKB-05850	aadmi	candidate	NOUN	A man or person.	man; person	simple stem (no affix)	admi	community,family				
+LKB-05851	aahibo	candidate	VERB	Will come.	will come	simple stem (no affix)	ahibo	actions,travel				
+LKB-05852	aaj	candidate	NOUN	Today.	today	simple stem (no affix)	aaji	time				
+LKB-05853	aaja	candidate	VERB	Come (Hindi imperative).	come	simple stem (no affix)		actions				
+LKB-05854	aao	candidate	VERB	Come (polite Hindi).	come	simple stem (no affix)		actions				
+LKB-05855	aapne	candidate	PRON	You (formal Hindi).	you	simple stem (no affix)		pronouns				
+LKB-05856	aasaan	candidate	ADJ	Easy.	easy	simple stem (no affix)	asaan	describing				
+LKB-05857	aata	candidate	NOUN	Wheat flour.	flour; wheat flour	simple stem (no affix)	ata	food				
+LKB-05858	aati	candidate	VERB	Coming (Hindi).	coming	simple stem (no affix)	ati	actions				
+LKB-05859	aaya	candidate	VERB	Came (Hindi).	came	simple stem (no affix)		actions				
+LKB-05860	aaye	candidate	VERB	Came (Hindi plural or polite).	came	simple stem (no affix)		actions				
+LKB-05861	aayi	candidate	VERB	Came (Hindi feminine).	came	simple stem (no affix)		actions				
+LKB-05862	about	candidate	ADV	(of quantities) imprecise but fairly close to correct.	about; approximately; some; roughly	simple stem (no affix)		grammar				
+LKB-05863	abuse	candidate	VERB	Treat badly.	abuse; mistreat; maltreat; ill-use	simple stem (no affix); used with kori as a light verb		community				
+LKB-05864	accha	candidate	ADJ	Good, fine; also okay.	good; fine; okay	simple stem (no affix)	achha,acha	describing				
+LKB-05865	achha	candidate	ADJ	Good, fine; also okay.	good; fine; okay	simple stem (no affix)	accha	describing				
+LKB-05866	added	candidate	VERB	Past tense of add.	added	simple stem (no affix)		actions				
+LKB-05867	additions	candidate	NOUN	Things that are added.	additions	simple stem (no affix)		describing				
+LKB-05868	ads	candidate	NOUN	Advertisements.	ads; advertisements	simple stem (no affix)		media,money				
+LKB-05869	agae	candidate	ADV	Ahead, earlier.	ahead; earlier	simple stem (no affix)	age	time				
+LKB-05870	against	candidate	ADP	Opposed to.	against	simple stem (no affix)		grammar				
+LKB-05871	ago	candidate	ADV	Back in time.	ago	simple stem (no affix)		time				
+LKB-05872	aicf	candidate	NOUN	An organisation abbreviation.	aicf	simple stem (no affix)		civic				
+LKB-05873	alert	candidate	VERB	Warn or arouse to a sense of danger or call to a state of preparedness.	alert; alarm	simple stem (no affix); used with kori as a light verb		media				
+LKB-05874	alphabetical	candidate	ADJ	In order of the alphabet.	alphabetical	simple stem (no affix)		education				
+LKB-05875	ameer	candidate	ADJ	Rich.	rich; wealthy	simple stem (no affix)		describing,money				
+LKB-05876	amikhanr	candidate	PRON	Our (possessive).	our	simple stem (no affix)	amikhanor	pronouns				
+LKB-05877	apunba	candidate	PRON	Unclear, possibly Manipuri you.	you	simple stem (no affix)		pronouns				
+LKB-05878	apunikhanr	candidate	PRON	Your (plural polite).	your	simple stem (no affix)	apunikhanor	pronouns				
+LKB-05879	archives	candidate	NOUN	Collection of records especially about an institution.	archives	simple stem (no affix)		media				
+LKB-05880	arrest	candidate	VERB	Take into custody.	arrest; collar; nail; apprehend	simple stem (no affix); used with kori as a light verb		actions,civic				
+LKB-05881	asaan	candidate	ADJ	Easy.	easy	simple stem (no affix)	aasaan	describing				
+LKB-05882	asey	candidate	VERB	Is, exists.	is; are; exists	simple stem (no affix)	ase	grammar				
+LKB-05883	assamese	candidate	NOUN	The people or language of Assam.	Assamese	simple stem (no affix)		community,culture				
+LKB-05884	awareness	candidate	NOUN	Having knowledge of.	awareness; consciousness; cognizance; cognisance	simple stem (no affix)		education				
+LKB-05885	baad	candidate	ADV	After, later.	after; later	simple stem (no affix)		time				
+LKB-05886	baap	candidate	NOUN	Father.	father	simple stem (no affix)	bap	family				
+LKB-05887	baat	candidate	NOUN	Talk, matter.	talk; matter	simple stem (no affix)	bat,vat	actions				
+LKB-05888	baccha	candidate	NOUN	Child.	child	simple stem (no affix)	bacha	family				
+LKB-05889	bada	candidate	NOUN	Big (Hindi); also a snack.	big	simple stem (no affix)		describing				
+LKB-05890	badsurat	candidate	ADJ	Ugly.	ugly	simple stem (no affix)		describing				
+LKB-05891	bahut	candidate	ADV	Very, a lot.	very; a lot; much	simple stem (no affix)	bohut	describing				
+LKB-05892	baitho	candidate	VERB	Sit (Hindi imperative).	sit	simple stem (no affix)		actions				
+LKB-05893	bajaanaa	candidate	VERB	To play or ring an instrument.	play; ring	simple stem (no affix)	bajana	actions,leisure				
+LKB-05894	banana	candidate	NOUN	Any of several tropical and subtropical treelike herbs of the genus Musa having a terminal crown of large entire leaves and usually bearing hanging clusters of elongated fruits.	banana	simple stem (no affix)		food,nature				
+LKB-05895	banda	candidate	NOUN	Person, fellow.	fellow; guy	simple stem (no affix)		community,slang				
+LKB-05896	bea	candidate	NOUN	Unclear, maybe marriage.	marriage	simple stem (no affix)	biya	family				
+LKB-05897	beneficiaries	candidate	NOUN	People who receive help.	beneficiaries	simple stem (no affix)		civic				
+LKB-05898	bhandari	candidate	NOUN	Storekeeper; a surname.	storekeeper	simple stem (no affix)		work				
+LKB-05899	bhejna	candidate	VERB	To send.	send	simple stem (no affix)		actions				
+LKB-05900	bhool	candidate	NOUN	Mistake.	mistake	simple stem (no affix)	bhul	describing				
+LKB-05901	blas	candidate	NOUN	Unclear.	unclear	simple stem (no affix)		slang				
+LKB-05902	blos	candidate	NOUN	Unclear.	unclear	simple stem (no affix)		slang				
+LKB-05903	bol	candidate	VERB	Say, speak; also ball.	say; speak	simple stem (no affix)		actions				
+LKB-05904	bolibo	candidate	VERB	Will say.	will say	simple stem (no affix)		actions				
+LKB-05905	bolna	candidate	VERB	To say or speak.	say; speak	simple stem (no affix)		actions				
+LKB-05906	bolo	candidate	VERB	Say, speak.	say; speak	simple stem (no affix)		actions				
+LKB-05907	bolta	candidate	VERB	Saying (Hindi).	says	simple stem (no affix)		actions				
+LKB-05908	bolti	candidate	VERB	Saying (Hindi).	says	simple stem (no affix)		actions				
+LKB-05909	bonn	candidate	NOUN	Forest.	forest	simple stem (no affix)	bon	nature				
+LKB-05910	bronze	candidate	NOUN	An alloy of copper and tin and sometimes other elements; also any copper-base alloy containing other elements in place of tin.	bronze	simple stem (no affix)		home				
+LKB-05911	browse	candidate	VERB	To look through web pages or items.	browse	simple stem (no affix)		actions,technology				
+LKB-05912	bulana	candidate	VERB	To call or invite.	call; invite	simple stem (no affix)		actions				
+LKB-05913	bull	candidate	NOUN	A male cow.	bull	simple stem (no affix)		farming,nature				
+LKB-05914	can	candidate	AUX	Is able to.	can; be able	simple stem (no affix)		grammar				
+LKB-05915	categories	candidate	NOUN	Groups or kinds.	categories	simple stem (no affix)		education				
+LKB-05916	category	candidate	NOUN	A collection of things sharing a common attribute.	category; class; family	simple stem (no affix)		community				
+LKB-05917	chaawal	candidate	NOUN	Rice (uncooked).	rice	simple stem (no affix)	chawal	food				
+LKB-05918	chahiye	candidate	VERB	Is needed.	need; want	simple stem (no affix)		actions				
+LKB-05919	chai	candidate	NOUN	Tea.	tea	simple stem (no affix)		food				
+LKB-05920	chalna	candidate	VERB	To walk or run.	walk; go	simple stem (no affix)	chalnaa	actions,travel				
+LKB-05921	chalnaa	candidate	VERB	To walk or run.	walk; go	simple stem (no affix)	chalna	actions,travel				
+LKB-05922	chalo	candidate	VERB	Lets go.	lets go; go	simple stem (no affix)		actions,travel				
+LKB-05923	championship	candidate	NOUN	The status of being a champion.	championship; title	simple stem (no affix)		health				
+LKB-05924	cheez	candidate	NOUN	Thing.	thing; object	simple stem (no affix)	chij	describing				
+LKB-05925	chhodna	candidate	VERB	To leave, give up.	leave; quit	simple stem (no affix)		actions				
+LKB-05926	circuit	candidate	NOUN	An electrical device that provides a path for electrical current to flow.	circuit	simple stem (no affix)		home				
+LKB-05927	columbus	candidate	PROPN	The state capital of Ohio; located in the center of the state; site of Ohio State University.	columbus	simple stem (no affix)		places				
+LKB-05928	comeback	candidate	NOUN	A quick reply to a question or remark (especially a witty or critical one).	comeback; rejoinder; retort; return	simple stem (no affix)		media				
+LKB-05929	commonwealth	candidate	NOUN	The official name of some states in the United States (Massachusetts and Pennsylvania and Virginia and Kentucky) and associated territories (Puerto Rico).	commonwealth	simple stem (no affix)		places				
+LKB-05930	contributors	candidate	NOUN	People who give or help.	contributors	simple stem (no affix)		community				
+LKB-05931	crackdown	candidate	NOUN	Strong official action.	crackdown	simple stem (no affix)		civic				
+LKB-05932	crew	candidate	NOUN	A team working together.	crew; team	simple stem (no affix)		work				
+LKB-05933	crore	candidate	NUM	Ten million.	crore	simple stem (no affix)		money,numbers				
+LKB-05934	crossing	candidate	NOUN	Traveling across.	crossing	simple stem (no affix)	crossings	actions,places,travel				
+LKB-05935	csos	candidate	NOUN	Civil society organisations.	CSOs	simple stem (no affix)		civic				
+LKB-05936	dara	candidate	NOUN	Fear.	fear	simple stem (no affix)		feelings				
+LKB-05937	daudna	candidate	VERB	To run.	run	simple stem (no affix)		actions				
+LKB-05938	days	candidate	NOUN	Plural of day.	days	simple stem (no affix)		time				
+LKB-05939	ddma	candidate	NOUN	An abbreviation.	DDMA	simple stem (no affix)		civic				
+LKB-05940	defcc	candidate	NOUN	An abbreviation.	DEFCC	simple stem (no affix)		civic				
+LKB-05941	dega	candidate	VERB	Will give (Hindi).	will give	simple stem (no affix)		actions				
+LKB-05942	degi	candidate	VERB	Will give (Hindi feminine).	will give	simple stem (no affix)		actions				
+LKB-05943	dekh	candidate	VERB	See, look.	see; look	simple stem (no affix)		actions				
+LKB-05944	dekhna	candidate	VERB	To see.	see	simple stem (no affix)		actions				
+LKB-05945	dekho	candidate	VERB	See, look.	see; look	simple stem (no affix)		actions				
+LKB-05946	dekhta	candidate	VERB	Seeing (Hindi).	sees	simple stem (no affix)		actions				
+LKB-05947	dekhti	candidate	VERB	Seeing (Hindi feminine).	sees	simple stem (no affix)		actions				
+LKB-05948	demolition	candidate	NOUN	An event (or the result of an event) that completely destroys something.	demolition; destruction; wipeout	simple stem (no affix)		culture				
+LKB-05949	dena	candidate	VERB	To give.	give	simple stem (no affix)		actions				
+LKB-05950	departments	candidate	NOUN	Sections of an office or college.	departments	simple stem (no affix)		civic,work				
+LKB-05951	dheere	candidate	ADV	Slowly.	slowly	simple stem (no affix)	dhheere,dhire	describing				
+LKB-05952	dhheere	candidate	ADV	Slowly.	slowly	simple stem (no affix)	dheere	describing				
+LKB-05953	dictionary	candidate	NOUN	A reference book containing an alphabetical list of words with information about them.	dictionary; lexicon	simple stem (no affix)		education,media				
+LKB-05954	digilocker	candidate	NOUN	Government app for documents.	DigiLocker	simple stem (no affix)		civic,technology				
+LKB-05955	discover	candidate	VERB	Discover or determine the existence, presence, or fact of.	discover; detect; observe; find	simple stem (no affix); used with kori as a light verb		actions				
+LKB-05956	discuss	candidate	VERB	To consider or examine in speech or writing.	discuss; discourse	simple stem (no affix); used with kori as a light verb		community,media				
+LKB-05957	division	candidate	NOUN	An army unit large enough to sustain combat.	division	simple stem (no affix)		community				
+LKB-05958	don	candidate	NOUN	Gang leader.	don	simple stem (no affix)		slang				
+LKB-05959	donate	candidate	VERB	Give to a charity or good cause.	donate	simple stem (no affix); used with kori as a light verb		community,money				
+LKB-05960	doubles	candidate	NOUN	Pairs; a game format.	doubles	simple stem (no affix)		leisure				
+LKB-05961	dpdb	candidate	NOUN	An abbreviation.	DPDB	simple stem (no affix)		civic				
+LKB-05962	drug	candidate	NOUN	Medicine or illegal drug.	drug; medicine	simple stem (no affix)		health				
+LKB-05963	dure	candidate	ADV	Far away.	far	simple stem (no affix)	duure,dur	places				
+LKB-05964	dwsm	candidate	NOUN	An abbreviation.	DWSM	simple stem (no affix)		civic				
+LKB-05965	dy	candidate	NOUN	Unclear.	unclear	simple stem (no affix)		slang				
+LKB-05966	editorial	candidate	NOUN	An article giving opinions or perspectives.	editorial; column	simple stem (no affix)		media				
+LKB-05967	empower	candidate	VERB	Give or delegate power or authority to.	empower; authorise; authorize	simple stem (no affix); used with kori as a light verb		community				
+LKB-05968	entered	candidate	VERB	Past tense of enter.	entered	simple stem (no affix)		actions				
+LKB-05969	entertainment	candidate	NOUN	An activity that is diverting and that holds the attention.	entertainment; amusement	simple stem (no affix)		actions				
+LKB-05970	eu	candidate	X	Unclear fragment, not a known Nagamese word.	fragment	simple stem (no affix)		grammar				
+LKB-05971	evaluate	candidate	VERB	Evaluate or estimate the nature, quality, ability, extent, or significance of.	evaluate; measure; valuate; assess	simple stem (no affix); used with kori as a light verb		education				
+LKB-05972	ex	candidate	NOUN	A former partner.	ex; former partner	simple stem (no affix)		community,slang				
+LKB-05973	exclusive	candidate	ADJ	Not divided or shared with others.	exclusive; sole	simple stem (no affix)		describing				
+LKB-05974	express	candidate	VERB	Give expression to.	express; show; evince	simple stem (no affix); used with kori as a light verb		media				
+LKB-05975	faster	candidate	ADV	More quickly.	faster; quicker	simple stem (no affix)		grammar				
+LKB-05976	february	candidate	PROPN	The month following January and preceding March.	february; feb	simple stem (no affix)		time				
+LKB-05977	felicitate	candidate	VERB	Express congratulations.	felicitate; congratulate	simple stem (no affix); used with kori as a light verb		media				
+LKB-05978	forestry	candidate	NOUN	The science and work of managing forests.	forestry; forest management	simple stem (no affix)		nature,work				
+LKB-05979	fraud	candidate	NOUN	Intentional deception resulting in injury to another person.	fraud	simple stem (no affix)	frauds	actions,civic,money				
+LKB-05980	gaana	candidate	NOUN	A song.	song; music	simple stem (no affix); used with kori as a light verb	gaanaa,gana	culture,leisure				
+LKB-05981	gaanaa	candidate	NOUN	A song (variant spelling).	song	simple stem (no affix)	gaana,gana	culture,leisure				
+LKB-05982	gahuri	candidate	NOUN	A pig.	pig; pork	simple stem (no affix)		farming,food				
+LKB-05983	games	candidate	NOUN	Games, plays.	games	simple stem (no affix)		leisure				
+LKB-05984	ganda	candidate	ADJ	Dirty, filthy.	dirty; filthy	simple stem (no affix)	gandaa,gonda	describing				
+LKB-05985	garib	candidate	ADJ	Poor, without money.	poor; needy	simple stem (no affix)	gorib	describing,money				
+LKB-05986	gateway	candidate	NOUN	An entrance that can be closed by a gate.	gateway	simple stem (no affix)		home				
+LKB-05987	gaya	candidate	VERB	Went, gone (Hindi).	went; gone	simple stem (no affix)		actions				
+LKB-05988	gaye	candidate	VERB	Went, gone (Hindi plural).	went; gone	simple stem (no affix)		actions				
+LKB-05989	get	candidate	VERB	To get or receive (with kori).	get; receive	simple stem (no affix); used with kori as a light verb		actions				
+LKB-05990	ghussa	candidate	NOUN	Anger.	anger	simple stem (no affix)	gussa	feelings				
+LKB-05991	girna	candidate	VERB	To fall.	fall	simple stem (no affix)		actions				
+LKB-05992	gratia	candidate	NOUN	Latin word for grace, not Nagamese.	grace	simple stem (no affix)		religion				
+LKB-05993	grief	candidate	NOUN	Intense sorrow caused by loss of a loved one (especially by death).	grief; heartache; heartbreak; brokenheartedness	simple stem (no affix)		feelings				
+LKB-05994	haafta	candidate	NOUN	A week.	week	simple stem (no affix)	hafta	time				
+LKB-05995	haan	candidate	INTJ	Yes.	yes	simple stem (no affix)	han	greetings				
+LKB-05996	haarna	candidate	VERB	To lose.	lose	simple stem (no affix)		actions				
+LKB-05997	hame	candidate	PRON	Us (Hindi).	us	simple stem (no affix)		pronouns				
+LKB-05998	hamesha	candidate	ADV	Always.	always	simple stem (no affix)	humesha	time				
+LKB-05999	hamne	candidate	PRON	We (Hindi, agentive).	we	simple stem (no affix)		pronouns				
+LKB-06000	hansna	candidate	VERB	To laugh.	laugh	simple stem (no affix)		actions,feelings				
+LKB-06001	have	candidate	VERB	To have (English).	have	simple stem (no affix)		grammar				
+LKB-06002	headlines	candidate	NOUN	Main news titles.	headlines	simple stem (no affix)		media				
+LKB-06003	hm	candidate	INTJ	Hmm, a thinking sound.	hmm	simple stem (no affix)	hmm	greetings				
+LKB-06004	ho	candidate	INTJ	Yes.	yes	simple stem (no affix)		greetings				
+LKB-06005	hoga	candidate	AUX	Will be (Hindi).	will be	simple stem (no affix)		grammar				
+LKB-06006	hogi	candidate	AUX	Will be (Hindi, feminine).	will be	simple stem (no affix)		grammar				
+LKB-06007	hoileh	candidate	SCONJ	Only if, as long as.	only if	simple stem (no affix)		grammar				
+LKB-06008	hoishey	candidate	VERB	Has become, has happened.	has become	simple stem (no affix)	hoise	grammar				
+LKB-06009	homepage	candidate	NOUN	Main page of a website.	homepage	simple stem (no affix)		technology				
+LKB-06010	hote	candidate	ADV	Unclear; possibly in being.	unclear	simple stem (no affix)		grammar				
+LKB-06011	hours	candidate	NOUN	A period of time assigned for work.	hours	simple stem (no affix)		time				
+LKB-06012	hua	candidate	VERB	Happened, became (Hindi).	happened	simple stem (no affix)		grammar				
+LKB-06013	hue	candidate	VERB	Happened, became (Hindi plural).	happened	simple stem (no affix)		grammar				
+LKB-06014	hui	candidate	VERB	Having become.	having become	simple stem (no affix)		grammar				
+LKB-06015	hundreds	candidate	NUM	Many hundreds.	hundreds	simple stem (no affix)		numbers				
+LKB-06016	infrastructure	candidate	NOUN	Basic facilities like roads and power.	infrastructure	simple stem (no affix)		civic				
+LKB-06017	inquiry	candidate	NOUN	A search for knowledge.	inquiry; enquiry; research	simple stem (no affix)		education				
+LKB-06018	inspect	candidate	VERB	Look over carefully.	inspect	simple stem (no affix); used with kori as a light verb		actions,work				
+LKB-06019	integration	candidate	NOUN	The action of incorporating a racial or religious group into a community.	integration; integrating; desegregation	simple stem (no affix)		actions				
+LKB-06020	inter	candidate	VERB	Place in a grave or tomb.	inter; bury; entomb; inhume	simple stem (no affix); used with kori as a light verb		community				
+LKB-06021	interact	candidate	VERB	Act together or towards others or with others.	interact	simple stem (no affix); used with kori as a light verb		community				
+LKB-06022	interaction	candidate	NOUN	A mutual or reciprocal action; interacting.	interaction	simple stem (no affix)		actions				
+LKB-06023	involved	candidate	ADJ	Connected by participation or association or use.	involved	simple stem (no affix)		describing				
+LKB-06024	isliye	candidate	ADV	Therefore, for that reason.	therefore	simple stem (no affix)		grammar				
+LKB-06025	itna	candidate	DET	This much (Hindi).	this much	simple stem (no affix)		grammar				
+LKB-06026	jaabo	candidate	VERB	Will go.	will go	simple stem (no affix)	jabo	actions				
+LKB-06027	jaana	candidate	VERB	To go (Hindi).	go	simple stem (no affix)		actions				
+LKB-06028	jaata	candidate	VERB	Goes (Hindi).	goes	simple stem (no affix)	jata	actions				
+LKB-06029	jaati	candidate	NOUN	Caste, ethnic group.	caste; ethnic group	simple stem (no affix)	jati	community				
+LKB-06030	jab	candidate	SCONJ	When (Hindi).	when	simple stem (no affix)		time				
+LKB-06031	janaiise	candidate	VERB	Has informed.	has informed	simple stem (no affix)		actions				
+LKB-06032	jao	candidate	VERB	Go (polite imperative).	go	simple stem (no affix)		actions				
+LKB-06033	javelin	candidate	NOUN	A throwing spear used in sport.	javelin	simple stem (no affix)		leisure				
+LKB-06034	jeena	candidate	VERB	To live.	live	simple stem (no affix)	jina	actions				
+LKB-06035	jeetna	candidate	VERB	To win.	win	simple stem (no affix)		actions,leisure				
+LKB-06036	jete	candidate	SCONJ	As much as; so that.	as much as	simple stem (no affix)		grammar				
+LKB-06037	jo	candidate	PRON	Who, which, whoever.	who; which	simple stem (no affix)		pronouns				
+LKB-06038	jokom	candidate	ADV	As, like, in the manner of.	like	simple stem (no affix)		describing				
+LKB-06039	july	candidate	NOUN	The month of July.	July	simple stem (no affix)		time				
+LKB-06040	june	candidate	NOUN	The month of June.	June	simple stem (no affix)		time				
+LKB-06041	justice	candidate	NOUN	The quality of being just or fair.	justice; justness	simple stem (no affix)		describing				
+LKB-06042	kaafi	candidate	ADV	Quite, enough, very.	quite; enough	simple stem (no affix)	kafi	describing				
+LKB-06043	kab	candidate	ADV	When (Hindi).	when	simple stem (no affix)		time				
+LKB-06044	kabhi	candidate	ADV	Ever, sometimes.	ever; sometimes	simple stem (no affix)		time				
+LKB-06045	kahan	candidate	ADV	Where (Hindi).	where	simple stem (no affix)		places				
+LKB-06046	kahin	candidate	ADV	Somewhere.	somewhere	simple stem (no affix)		places				
+LKB-06047	kaise	candidate	ADV	How (Hindi).	how	simple stem (no affix)		grammar				
+LKB-06048	kamaboley	candidate	VERB	In order to earn.	to earn	simple stem (no affix)		money,work				
+LKB-06049	kamzor	candidate	ADJ	Weak.	weak	simple stem (no affix)	kamjor	describing,health				
+LKB-06050	karega	candidate	VERB	Will do (he).	will do	simple stem (no affix)		actions				
+LKB-06051	karegi	candidate	VERB	Will do (she).	will do	simple stem (no affix)		actions				
+LKB-06052	karenge	candidate	VERB	Will do (we).	will do	simple stem (no affix)		actions				
+LKB-06053	karne	candidate	VERB	To do (Hindi).	to do	simple stem (no affix)		actions				
+LKB-06054	karney	candidate	VERB	To do (Hindi variant).	to do	simple stem (no affix)	karne	actions				
+LKB-06055	karo	candidate	VERB	Do (imperative).	do	simple stem (no affix)		actions				
+LKB-06056	karta	candidate	VERB	Does (Hindi).	does	simple stem (no affix)		actions				
+LKB-06057	karti	candidate	VERB	Does (feminine Hindi).	does	simple stem (no affix)		actions				
+LKB-06058	kaun	candidate	PRON	Who (Hindi).	who	simple stem (no affix)		pronouns				
+LKB-06059	kenee	candidate	ADV	How.	how	simple stem (no affix)		grammar				
+LKB-06060	khaabo	candidate	VERB	Will eat.	will eat	simple stem (no affix)	khabo	food				
+LKB-06061	khao	candidate	VERB	Eat (imperative).	eat	simple stem (no affix)		food				
+LKB-06062	kharid	candidate	VERB	To buy.	buy	simple stem (no affix)		money				
+LKB-06063	khelnaa	candidate	VERB	To play.	play	simple stem (no affix)	khelna	leisure				
+LKB-06064	kholna	candidate	VERB	To open.	open	simple stem (no affix)		actions				
+LKB-06065	khush	candidate	ADJ	Happy, pleased.	happy; pleased	simple stem (no affix)		feelings				
+LKB-06066	kibaa	candidate	PRON	Something, anything.	something	simple stem (no affix)	kiba	pronouns				
+LKB-06067	kitna	candidate	DET	How much, how many.	how much	simple stem (no affix)		numbers				
+LKB-06068	kiye	candidate	ADV	Why (variant).	why	simple stem (no affix)	kiya	grammar				
+LKB-06069	koina	candidate	NOUN	Unclear.	unclear	simple stem (no affix)		describing				
+LKB-06070	koishey	candidate	VERB	Has said.	has said	simple stem (no affix)	koise	actions				
+LKB-06071	koriboo	candidate	VERB	Will do (variant).	will do	simple stem (no affix)	koribo	actions				
+LKB-06072	kothaa	candidate	NOUN	Word, talk.	word; talk	simple stem (no affix)	kotha	culture				
+LKB-06073	kuch	candidate	DET	Some, a little.	some; a little	simple stem (no affix)		numbers				
+LKB-06074	kumba	candidate	NOUN	Unclear.	unclear	simple stem (no affix)		describing				
+LKB-06075	kurey	candidate	NOUN	Unclear.	unclear	simple stem (no affix)		describing				
+LKB-06076	kuriboley	candidate	VERB	In order to do.	to do	simple stem (no affix)	koriboley	actions				
+LKB-06077	kurishey	candidate	NOUN	Twenty-one or a score.	score	simple stem (no affix)		numbers				
+LKB-06078	kurisheynutun	candidate	ADJ	Unclear, maybe new twenty.	unclear	simple stem (no affix)		numbers				
+LKB-06079	kyunki	candidate	SCONJ	Because.	because	simple stem (no affix)	kyuki	grammar				
+LKB-06080	laagise	candidate	VERB	Has been needed; has attached.	is needed	simple stem (no affix)		grammar				
+LKB-06081	laana	candidate	VERB	To bring.	bring	simple stem (no affix)	lana	actions				
+LKB-06082	ladka	candidate	NOUN	Boy.	boy	simple stem (no affix)		family				
+LKB-06083	ladki	candidate	NOUN	Girl.	girl	simple stem (no affix)		family				
+LKB-06084	lagana	candidate	VERB	To apply or put on.	apply	simple stem (no affix)		actions				
+LKB-06085	lagey	candidate	VERB	Needs; is needed.	is needed	simple stem (no affix)	lage	grammar				
+LKB-06086	laile	candidate	VERB	If taken, if brought.	if take	simple stem (no affix)		grammar				
+LKB-06087	laka	candidate	NOUN	Unclear.	unclear	simple stem (no affix)		describing				
+LKB-06088	lale	candidate	ADJ	Red (locative).	red	simple stem (no affix)		colours				
+LKB-06089	landslide	candidate	NOUN	A sudden downhill slide of soil or rock, often after heavy rain.	mudslide; rockslide; slip	simple stem (no affix)		culture,weather				
+LKB-06090	languages	candidate	NOUN	Languages.	languages	simple stem (no affix)		education				
+LKB-06091	latest	candidate	ADJ	Up to the immediate present; most recent or most up-to-date.	latest; up-to-the-minute	simple stem (no affix)		describing				
+LKB-06092	lega	candidate	VERB	Will take (Hindi).	will take	simple stem (no affix)		actions				
+LKB-06093	legi	candidate	VERB	Will take (feminine).	will take	simple stem (no affix)		actions				
+LKB-06094	leh	candidate	INTJ	Particle at the end, as in Ladakhi.	particle	simple stem (no affix)		slang				
+LKB-06095	lekha	candidate	NOUN	Writing.	writing	simple stem (no affix)		education				
+LKB-06096	lekin	candidate	CCONJ	But.	but	simple stem (no affix)		grammar				
+LKB-06097	lena	candidate	VERB	To take.	take	simple stem (no affix)		actions				
+LKB-06098	likhna	candidate	VERB	To write.	write	simple stem (no affix)		education				
+LKB-06099	likho	candidate	VERB	Write (imperative).	write	simple stem (no affix)		education				
+LKB-06100	links	candidate	NOUN	A golf course that is built on sandy ground near a shore.	links	simple stem (no affix)		home				
+LKB-06101	litikai	candidate	NOUN	Unclear.	unclear	simple stem (no affix)		describing				
+LKB-06102	liye	candidate	ADP	For.	for	simple stem (no affix)		grammar				
+LKB-06103	loboley	candidate	VERB	In order to take.	to take	simple stem (no affix)		actions				
+LKB-06104	loishey	candidate	VERB	Has taken.	has taken	simple stem (no affix)	loise	actions				
+LKB-06105	lokot	candidate	ADP	With (variant).	with	simple stem (no affix)	logot	grammar				
+LKB-06106	maa	candidate	NOUN	Mother.	mother	simple stem (no affix)	ma	family				
+LKB-06107	majbut	candidate	ADJ	Strong.	strong	simple stem (no affix)	mazboot	describing				
+LKB-06108	malum	candidate	ADJ	Known, aware.	known	simple stem (no affix)		describing				
+LKB-06109	manuh	candidate	NOUN	Person.	person	simple stem (no affix)	manu	community				
+LKB-06110	marna	candidate	VERB	To hit or die.	hit; die	simple stem (no affix)		actions				
+LKB-06111	masaala	candidate	NOUN	Spice.	spice	simple stem (no affix)	masala	food				
+LKB-06112	mass	candidate	NOUN	Mass; a large group.	mass	simple stem (no affix)		community				
+LKB-06113	matlab	candidate	NOUN	Meaning.	meaning	simple stem (no affix)		education				
+LKB-06114	may	candidate	AUX	May, might.	may	simple stem (no affix)		grammar				
+LKB-06115	mazboot	candidate	ADJ	Strong, sturdy.	strong	simple stem (no affix)	majbut	describing				
+LKB-06116	measure	candidate	VERB	Determine the measurements of something or somebody, take measurements of.	measure; mensurate	simple stem (no affix); used with kori as a light verb		education,numbers				
+LKB-06117	members	candidate	NOUN	Members.	members	simple stem (no affix)		community				
+LKB-06118	migrant	candidate	NOUN	A person who moves for work.	migrant	simple stem (no affix)		community,work				
+LKB-06119	milega	candidate	VERB	Will get (he).	will get	simple stem (no affix)		actions				
+LKB-06120	milegi	candidate	VERB	Will get (she).	will get	simple stem (no affix)		actions				
+LKB-06121	milestone	candidate	NOUN	A significant stage or event in the progress of something.	stage; landmark; achievement	simple stem (no affix)		media				
+LKB-06122	milna	candidate	VERB	To meet or to get.	meet; get	simple stem (no affix)		actions				
+LKB-06123	milo	candidate	VERB	Meet; get (imperative).	meet	simple stem (no affix)		actions				
+LKB-06124	mla	candidate	NOUN	Member of the Legislative Assembly.	MLA	simple stem (no affix)		civic				
+LKB-06125	monday	candidate	PROPN	The second day of the week; the first working day.	monday; mon	simple stem (no affix)		time				
+LKB-06126	more	candidate	PRON	Me; my.	my	simple stem (no affix)	mor	pronouns				
+LKB-06127	motaa	candidate	ADJ	Fat, thick.	fat; thick	simple stem (no affix)	mota	describing				
+LKB-06128	mujhe	candidate	PRON	To me (Hindi).	to me	simple stem (no affix)		pronouns				
+LKB-06129	mujhse	candidate	PRON	From me (Hindi).	from me	simple stem (no affix)		pronouns				
+LKB-06130	multilingual	candidate	ADJ	Speaking many languages.	multilingual	simple stem (no affix)		education				
+LKB-06131	murai	candidate	NOUN	Radish.	radish	simple stem (no affix)		food				
+LKB-06132	mushkil	candidate	ADJ	Difficult, hard.	difficult	simple stem (no affix)		describing				
+LKB-06133	naachna	candidate	VERB	To dance.	dance	simple stem (no affix)	nachnaa	leisure				
+LKB-06134	naai	candidate	PART	No, not.	no	simple stem (no affix)	nai	grammar				
+LKB-06135	nachnaa	candidate	VERB	To dance.	dance	simple stem (no affix)	nachna	actions,leisure				
+LKB-06136	nakura	candidate	VERB	Possibly did not do.	not do	simple stem (no affix)		actions				
+LKB-06137	nbsp	candidate	X	HTML space code from web text, not a word.	space code	simple stem (no affix)		technology				
+LKB-06138	negotiate	candidate	VERB	Discuss the terms of an arrangement.	negotiate price; negociate	simple stem (no affix); used with kori as a light verb		actions,media,money				
+LKB-06139	nh	candidate	X	Abbreviation, perhaps National Highway.	highway	simple stem (no affix)		travel				
+LKB-06140	nimitey	candidate	ADP	For the sake of, because of.	for; because of	simple stem (no affix)	nimitte	grammar				
+LKB-06141	nk	candidate	X	Abbreviation or noise.	nk	simple stem (no affix)		technology				
+LKB-06142	northeastern	candidate	ADJ	Of the north east of India.	northeastern	simple stem (no affix)		places				
+LKB-06143	november	candidate	PROPN	The month following October and preceding December.	november; nov	simple stem (no affix)		time				
+LKB-06144	npsc	candidate	PROPN	Nagaland Public Service Commission.	NPSC	simple stem (no affix)		civic,work				
+LKB-06145	ocr	candidate	X	Abbreviation for text recognition.	OCR	simple stem (no affix)		technology				
+LKB-06146	oman	candidate	INTJ	Amen, or the country Oman.	amen	simple stem (no affix)		religion				
+LKB-06147	operations	candidate	NOUN	Activities of a business or organisation, or military or surgical procedures.	activities; work; procedures	simple stem (no affix)		actions				
+LKB-06148	org	candidate	X	Web address ending, not a word.	org	simple stem (no affix)		technology				
+LKB-06149	organize	candidate	VERB	Arrange or plan something in an orderly way.	arrange; plan; coordinate	simple stem (no affix); used with kori as a light verb		actions,community				
+LKB-06150	ott	candidate	X	Abbreviation for streaming services.	OTT	simple stem (no affix)		technology				
+LKB-06151	our	candidate	DET	English word our found in running text.	our	simple stem (no affix)		pronouns				
+LKB-06152	padhibo	candidate	VERB	Will read or study.	will read; will study	simple stem (no affix)	porhibo	actions,education				
+LKB-06153	padho	candidate	VERB	Read or study, imperative.	read; study	simple stem (no affix)		actions,education				
+LKB-06154	paishey	candidate	VERB	Has got or found.	has got	simple stem (no affix)	paise	actions				
+LKB-06155	pakadna	candidate	VERB	To catch or hold.	catch; hold	simple stem (no affix)	pakarna	actions				
+LKB-06156	pakana	candidate	VERB	To cook.	cook	simple stem (no affix)		actions,food				
+LKB-06157	par	candidate	ADP	On, after.	on; after; but	simple stem (no affix)		grammar				
+LKB-06158	parso	candidate	ADV	Day after tomorrow or day before yesterday.	day after tomorrow	simple stem (no affix)	parson	time				
+LKB-06159	passing	candidate	NOUN	(Soccer) kicking the ball to a teammate.	pass; kick; teammate	simple stem (no affix)		actions				
+LKB-06160	pathok	candidate	NOUN	Reader.	reader	simple stem (no affix)		education,media				
+LKB-06161	pehle	candidate	ADV	Before, earlier.	before; earlier; first	simple stem (no affix)		time				
+LKB-06162	pending	candidate	ADJ	Awaiting conclusion or confirmation.	pending	simple stem (no affix)		describing				
+LKB-06163	petro	candidate	NOUN	Petrol, uncertain.	petrol	simple stem (no affix)		travel				
+LKB-06164	phenkna	candidate	VERB	To throw.	throw	simple stem (no affix)		actions				
+LKB-06165	phir	candidate	ADV	Again, then.	again; then	simple stem (no affix)		time				
+LKB-06166	piyo	candidate	VERB	Drink, imperative.	drink	simple stem (no affix)		actions,food				
+LKB-06167	planned	candidate	ADJ	Designed or carried out according to a plan.	planned	simple stem (no affix)		describing				
+LKB-06168	pledge	candidate	VERB	Promise solemnly and formally.	pledge; plight	simple stem (no affix); used with kori as a light verb		media				
+LKB-06169	pm	candidate	X	Abbreviation for afternoon or evening time, or prime minister.	pm	simple stem (no affix)		time				
+LKB-06170	pohoribole	candidate	VERB	To read or study.	to read; to study	simple stem (no affix)	porhibole	actions,education				
+LKB-06171	posts	candidate	NOUN	Posts on social media.	posts	simple stem (no affix)		media,technology				
+LKB-06172	powered	candidate	VERB	English word from web text such as powered by.	powered	simple stem (no affix)		technology				
+LKB-06173	pra	candidate	X	Fragment, not a word.	pra	simple stem (no affix)		describing				
+LKB-06174	pre	candidate	X	Prefix fragment.	pre	simple stem (no affix)		describing				
+LKB-06175	projects	candidate	NOUN	Projects.	projects	simple stem (no affix)		work				
+LKB-06176	proverbs	candidate	PROPN	The Book of Proverbs in the Bible.	Proverbs	simple stem (no affix)		religion				
+LKB-06177	quick	candidate	ADJ	Accomplished rapidly and without delay.	quick; speedy	simple stem (no affix)		describing				
+LKB-06178	rakhna	candidate	VERB	To keep or put.	keep; put	simple stem (no affix)		actions				
+LKB-06179	recent	candidate	ADJ	New.	recent	simple stem (no affix)		describing				
+LKB-06180	recovery	candidate	NOUN	Return to an original state.	recovery	simple stem (no affix)		culture				
+LKB-06181	regional	candidate	ADJ	Characteristic of a region.	regional	simple stem (no affix)		describing				
+LKB-06182	releases	candidate	NOUN	News releases or new releases.	releases	simple stem (no affix)		media				
+LKB-06183	relief	candidate	NOUN	The feeling that comes when something burdensome is removed or reduced.	relief; alleviation; assuagement	simple stem (no affix)		civic,feelings				
+LKB-06184	repeat	candidate	VERB	To say, state, or perform again.	repeat; reiterate; ingeminate; iterate	simple stem (no affix); used with kori as a light verb		media				
+LKB-06185	resources	candidate	NOUN	Resources.	resources	simple stem (no affix)		work				
+LKB-06186	reveal	candidate	VERB	Make visible.	reveal; uncover; unveil	simple stem (no affix); used with kori as a light verb		actions				
+LKB-06187	rfri	candidate	X	Fragment or abbreviation.	rfri	simple stem (no affix)		technology				
+LKB-06188	rifles	candidate	NOUN	Rifles.	rifles	simple stem (no affix)		civic				
+LKB-06189	rona	candidate	VERB	To cry.	cry; weep	simple stem (no affix)		actions,feelings				
+LKB-06190	roz	candidate	ADV	Every day.	daily; every day	simple stem (no affix)		time				
+LKB-06191	rozana	candidate	ADV	Daily.	daily	simple stem (no affix)		time				
+LKB-06192	rs	candidate	NOUN	Abbreviation for rupees.	rupees	simple stem (no affix)		money				
+LKB-06193	rukna	candidate	VERB	To stop or wait.	stop; wait	simple stem (no affix)		actions				
+LKB-06194	ruko	candidate	VERB	Stop or wait, imperative.	stop; wait	simple stem (no affix)		actions				
+LKB-06195	saath	candidate	ADP	With, together.	with; together	simple stem (no affix)		grammar				
+LKB-06196	sab	candidate	DET	All, every.	all; every	simple stem (no affix)		grammar				
+LKB-06197	sabji	candidate	NOUN	Vegetables, cooked vegetables.	vegetables	simple stem (no affix)		food				
+LKB-06198	samajh	candidate	NOUN	Understanding.	understanding	simple stem (no affix)		education				
+LKB-06199	samajhna	candidate	VERB	To understand.	understand	simple stem (no affix)		actions,education				
+LKB-06200	samjha	candidate	VERB	Understood, or explained.	understood; explained	simple stem (no affix)		actions,education				
+LKB-06201	samjho	candidate	VERB	Understand, imperative.	understand	simple stem (no affix)		actions,education				
+LKB-06202	satha	candidate	ADP	With, together with.	with	simple stem (no affix)	sathe	grammar				
+LKB-06203	scams	candidate	NOUN	Scams.	scams	simple stem (no affix)		civic,media				
+LKB-06204	seedha	candidate	ADJ	Straight, direct.	straight; direct	simple stem (no affix)	sidha	describing				
+LKB-06205	senior	candidate	NOUN	An undergraduate student during the year preceding graduation.	senior	simple stem (no affix)		community				
+LKB-06206	september	candidate	PROPN	The month following August and preceding October.	september; sep; sept	simple stem (no affix)		time				
+LKB-06207	servicemen	candidate	NOUN	Servicemen.	servicemen	simple stem (no affix)		civic				
+LKB-06208	she	candidate	PRON	He or she, or English she.	he; she	simple stem (no affix)	shey	pronouns				
+LKB-06209	shells	candidate	NOUN	Shells.	shells	simple stem (no affix)		nature				
+LKB-06210	shey	candidate	PRON	He or she.	he; she; that	simple stem (no affix)	she	pronouns				
+LKB-06211	shg	candidate	X	Abbreviation for self help group.	SHG	simple stem (no affix)		civic,work				
+LKB-06212	shuruhubo	candidate	VERB	Will begin.	will begin	simple stem (no affix)		actions				
+LKB-06213	silver	candidate	NOUN	A soft white precious univalent metallic element having the highest electrical and thermal conductivity of any metal; occurs in argentite and in free form; used in coins and jewelry and tableware and photography.	silver; ag	simple stem (no affix)		clothing,home,money				
+LKB-06214	sinking	candidate	NOUN	A descent as through liquid (especially through water).	sinking	simple stem (no affix)		culture				
+LKB-06215	sirf	candidate	ADV	Only, just.	only; just	simple stem (no affix)		grammar				
+LKB-06216	soch	candidate	NOUN	Thought, thinking.	thought	simple stem (no affix)		feelings				
+LKB-06217	sochna	candidate	VERB	To think.	think	simple stem (no affix)		actions,feelings				
+LKB-06218	socho	candidate	VERB	Think, imperative.	think	simple stem (no affix)		actions,feelings				
+LKB-06219	sona	candidate	NOUN	Gold.	gold	simple stem (no affix)	shona	money				
+LKB-06220	sono	candidate	NOUN	Gold, variant of sona.	gold	simple stem (no affix)	sona	money				
+LKB-06221	states	candidate	NOUN	States.	states	simple stem (no affix)		civic				
+LKB-06222	statistics	candidate	NOUN	Statistics.	statistics	simple stem (no affix)		education				
+LKB-06223	strait	candidate	NOUN	A narrow channel of the sea joining two larger bodies of water.	strait; sound	simple stem (no affix)		nature				
+LKB-06224	sundar	candidate	ADJ	Beautiful.	beautiful	simple stem (no affix)	sundor	describing				
+LKB-06225	sunna	candidate	VERB	To listen.	listen	simple stem (no affix)		actions				
+LKB-06226	suno	candidate	VERB	Listen, imperative.	listen	simple stem (no affix)		actions				
+LKB-06227	sunta	candidate	VERB	Listening, he listens.	listens	simple stem (no affix)		actions				
+LKB-06228	sunti	candidate	VERB	Listening, she listens.	listens	simple stem (no affix)		actions				
+LKB-06229	supreme	candidate	ADJ	Highest in rank, authority or quality.	highest; greatest; ultimate	simple stem (no affix)		describing				
+LKB-06230	tab	candidate	ADV	Then, at that time.	then; at that time	simple stem (no affix)		time				
+LKB-06231	tabhi	candidate	ADV	Only then, at that very time.	only then	simple stem (no affix)		time				
+LKB-06232	taikhanr	candidate	PRON	Of them.	their; of them	simple stem (no affix)		pronouns				
+LKB-06233	talks	candidate	NOUN	A discussion intended to produce an agreement.	talks; negotiation; dialogue	simple stem (no affix)		media				
+LKB-06234	teen	candidate	NUM	Three.	three	simple stem (no affix)		numbers				
+LKB-06235	temporary	candidate	ADJ	Not permanent; not lasting; - James Thurber.	temporary; impermanent	simple stem (no affix)		describing				
+LKB-06236	tests	candidate	NOUN	Tests.	tests	simple stem (no affix)		education				
+LKB-06237	tez	candidate	ADJ	Fast, sharp.	fast; sharp	simple stem (no affix)		describing				
+LKB-06238	thaakibo	candidate	VERB	Will stay.	will stay	simple stem (no affix)	thakibo	actions				
+LKB-06239	thakaa	candidate	VERB	Stayed, staying.	staying	simple stem (no affix)	thaka	actions				
+LKB-06240	thakishey	candidate	VERB	Has stayed.	has stayed	simple stem (no affix)	thakise	actions				
+LKB-06241	thanka	candidate	X	Unclear word.	unclear	simple stem (no affix)		describing				
+LKB-06242	thanks	candidate	INTJ	An expression of gratitude, meaning thank you.	thank you; cheers; much obliged	simple stem (no affix)	thanx	greetings,media				
+LKB-06243	thoda	candidate	ADJ	A little.	little; some	simple stem (no affix)		describing				
+LKB-06244	times	candidate	NOUN	A more or less definite period of time now or previously present.	times	simple stem (no affix)		time				
+LKB-06245	todna	candidate	VERB	To break or pluck.	break; pluck	simple stem (no affix)		actions				
+LKB-06246	tools	candidate	NOUN	Tools.	tools	simple stem (no affix)		technology,work				
+LKB-06247	tssori	candidate	X	Unclear word.	unclear	simple stem (no affix)		describing				
+LKB-06248	tumhe	candidate	PRON	To you.	you	simple stem (no affix)		pronouns				
+LKB-06249	tumikhanr	candidate	PRON	Of you all.	your, plural	simple stem (no affix)		pronouns				
+LKB-06250	tumne	candidate	PRON	You, as subject doing something.	you	simple stem (no affix)		pronouns				
+LKB-06251	tumse	candidate	PRON	From you.	from you	simple stem (no affix)		pronouns				
+LKB-06252	udaas	candidate	ADJ	Sad, low in spirit.	sad; gloomy	simple stem (no affix)	udas	feelings				
+LKB-06253	udyog	candidate	NOUN	Industry, enterprise.	industry; enterprise	simple stem (no affix)		work				
+LKB-06254	ukrainian	candidate	PROPN	The Slavic language spoken in the Ukraine.	ukrainian	simple stem (no affix)		media				
+LKB-06255	uncategorized	candidate	ADJ	English word from website menus.	uncategorized	simple stem (no affix)		technology				
+LKB-06256	under	candidate	ADP	Below or beneath something.	beneath; below; underneath	simple stem (no affix)		describing				
+LKB-06257	understanding	candidate	NOUN	The cognitive condition of someone who understands.	understanding; apprehension; discernment; savvy	simple stem (no affix)		education				
+LKB-06258	user	candidate	NOUN	Person who uses an app or service.	user	simple stem (no affix)	usher	technology				
+LKB-06259	usne	candidate	PRON	He or she, as subject doing something.	he; she	simple stem (no affix)		pronouns				
+LKB-06260	usse	candidate	PRON	From him or her.	from him; from her	simple stem (no affix)		pronouns				
+LKB-06261	uthana	candidate	VERB	To lift or pick up.	lift; pick up	simple stem (no affix)		actions				
+LKB-06262	uthho	candidate	VERB	Get up, imperative.	get up	simple stem (no affix)	utho	actions				
+LKB-06263	uthna	candidate	VERB	To get up, rise.	get up; rise	simple stem (no affix)		actions				
+LKB-06264	utho	candidate	VERB	Get up, imperative.	get up	simple stem (no affix)	uthho	actions				
+LKB-06265	utna	candidate	ADV	That much.	that much	simple stem (no affix)		describing				
+LKB-06266	valuable	candidate	ADJ	Having great material or monetary value especially for use or exchange.	valuable	simple stem (no affix)		describing				
+LKB-06267	vijay	candidate	NOUN	Victory; also a name.	victory	simple stem (no affix)		feelings				
+LKB-06268	vir	candidate	ADJ	Brave.	brave	simple stem (no affix)		describing				
+LKB-06269	visitor	candidate	NOUN	Someone who visits.	visitor; visitant	simple stem (no affix)		community				
+LKB-06270	wahan	candidate	ADV	There.	there	simple stem (no affix)		places				
+LKB-06271	waisa	candidate	ADJ	Like that, such.	like that; such	simple stem (no affix)		describing				
+LKB-06272	waise	candidate	ADV	In that way, anyway.	like that; anyway	simple stem (no affix)		describing				
+LKB-06273	wales	candidate	PROPN	A country in the United Kingdom.	Wales	simple stem (no affix)		places				
+LKB-06274	warna	candidate	CCONJ	Otherwise.	otherwise	simple stem (no affix)		grammar				
+LKB-06275	wildfire	candidate	NOUN	Fire that spreads in forest.	wildfire	simple stem (no affix)		nature				
+LKB-06276	withdrawing	candidate	VERB	English participle from text.	withdrawing	simple stem (no affix)		money				
+LKB-06277	word	candidate	NOUN	A unit of language.	word	simple stem (no affix)		education				
+LKB-06278	words	candidate	NOUN	The words that are spoken.	words	simple stem (no affix)		media				
+LKB-06279	xobdo	candidate	NOUN	Sound, word.	sound; word	simple stem (no affix)	sobdo	media				
+LKB-06280	ya	candidate	CCONJ	Or.	or	simple stem (no affix)	yaa	grammar				
+LKB-06281	yaar	candidate	NOUN	Friend, dear friend.	friend; buddy	simple stem (no affix)		community,slang				
+LKB-06282	yahan	candidate	ADV	Here.	here	simple stem (no affix)		places				
+LKB-06283	yash	candidate	NOUN	Fame; also a name.	fame	simple stem (no affix)		feelings				
+LKB-06284	zaroor	candidate	ADV	Surely, certainly.	surely; certainly	simple stem (no affix)	jarur	describing				
+LKB-06285	zyada	candidate	ADJ	More, too much.	more; too much	simple stem (no affix)	jyada	describing				
+LKB-08039	hoai	researched	VERB	To cause to happen.	cause; make happen	simple stem (no affix)	hoao	actions				
+LKB-09153	ngoni	researched	VERB	To gather strength.	gather strength	simple stem (no affix)	ngon	body				
+LKB-10860	xoi	researched	VERB	To spread out; to dry in sun.	spread out; sun dry	simple stem (no affix)		farming				
+LKB-06355	ak	researched	NUM	One.	one	simple stem (no affix)		numbers				
+LKB-06429	apa	researched	NOUN	Boy.	boy; son; A young male home servant.	simple stem (no affix)		community				
+LKB-06512	baan	researched	NOUN	Konyak communal house where warriors hung the severed heads they had taken.	communal house; head house	simple stem (no affix)		community,culture				
+LKB-06522	bagai	researched	VERB	To climb, mount.	to climb; mount; to crawl; creep	simple stem (no affix)		travel				
+LKB-06616	bej	researched	NOUN	Physician.	physician; barber	simple stem (no affix)		community				
+LKB-06617	bejar	researched	NOUN	Displeasure.	displeasure; sadness; sorrow; grief	simple stem (no affix)		feelings				
+LKB-06731	bhu	researched	NOUN	Eyebrow.	eyebrow	simple stem (no affix)		body				
+LKB-06804	bog	researched	NOUN	Egret.	egret; heron; crane	simple stem (no affix)		nature				
+LKB-06820	boirhan	researched	NOUN	Rain, raining.	rain; raining	simple stem (no affix)		weather				
+LKB-06833	bolok	researched	INTJ	Let's go.	let's go	simple stem (no affix)		greetings				
+LKB-06952	buta	researched	ADJ	Dwarf.	dwarf	simple stem (no affix)		describing				
+LKB-07329	dhukai	researched	VERB	Die.	die	simple stem (no affix)		actions				
+LKB-07356	dima	researched	NOUN	Egg.	egg	simple stem (no affix)		nature				
+LKB-07710	ghau	researched	NOUN	Injury, hurt.	injury; hurt; wound	simple stem (no affix)		health				
+LKB-07914	hana	researched	ADJ	Rubbed.	rubbed; combined	simple stem (no affix)	sana	describing				
+LKB-08034	hitha	researched	NOUN	Bagasse.	bagasse	simple stem (no affix)	sitha	home				
+LKB-08096	hosang	researched	NOUN	Namghar.	namghar	simple stem (no affix)	sosang	home				
+LKB-08213	jakhe	researched	NOUN	Jakoi, a kind of bamboo scoop used for fishing.	jakoi; a kind of bamboo scoop used for fishing	simple stem (no affix)		home				
+LKB-08214	jakhla	researched	NOUN	Ladder.	ladder	simple stem (no affix)		home				
+LKB-08253	jetha	researched	NOUN	Uncle.	uncle (husband of father or mother's elder sister); uncle (father's elder brother)	simple stem (no affix)		community				
+LKB-08393	kakral	researched	NOUN	Bitter melon.	bitter melon; spiny gourd	simple stem (no affix)		food				
+LKB-08429	kasu	researched	NOUN	Tortoise.	tortoise	simple stem (no affix)		nature				
+LKB-08482	khe	researched	NOUN	Rice beer made from arai rice by the Angami Naga.	rice beer	simple stem (no affix)		culture,food,leisure				
+LKB-08633	konthohilpi	researched	NOUN	Singer.	singer	simple stem (no affix)	konthosilpi	community				
+LKB-08877	makra	researched	NOUN	Spider.	spider	simple stem (no affix)		nature				
+LKB-09008	moidhphol	researched	NOUN	Papaya.	papaya	simple stem (no affix)		nature				
+LKB-09166	nil	researched	NOUN	Blue.	blue (colour); indigo	simple stem (no affix)		describing				
+LKB-09170	ningni	researched	NOUN	Mouse.	mouse	simple stem (no affix)		nature				
+LKB-09235	okni	researched	NOUN	Louse.	louse	simple stem (no affix)		nature				
+LKB-09349	paraua	researched	NOUN	Pigeon, domestic pigeon.	pigeon; domestic pigeon	simple stem (no affix)		nature				
+LKB-09388	pek	researched	NOUN	Mud.	mud	simple stem (no affix)		home				
+LKB-09740	ray	researched	NOUN	King.	king	simple stem (no affix)		community				
+LKB-10127	sokhu	researched	NOUN	Eye.	eye	simple stem (no affix)		body				
+LKB-10132	sokori	researched	NOUN	Female silk moth.	female silk moth; butterfly	simple stem (no affix)		nature				
+LKB-10188	sowal	researched	NOUN	Boy, child.	boy; child (m)	simple stem (no affix)		community,family				
+LKB-10481	thouga	researched	NOUN	Beautiful, good-looking, handsome.	beautiful; good-looking; handsome; nice	simple stem (no affix)		home				
+LKB-06290	aanki	researched	VERB	To draw a picture.	draw; paint; sketch	simple stem (no affix)	anki,aanka	education,leisure				
+LKB-06402	ancori	researched	VERB	To grab; to snatch.	grab; snatch	simple stem (no affix)	ancora	actions				
+LKB-06549	baluka	researched	NOUN	A bamboo species.	bamboo; bamboo species	simple stem (no affix)	balukah	farming,nature				
+LKB-06608	bedana	researched	NOUN	Pomegranate fruit.	pomegranate	simple stem (no affix)	dalim	farming,food				
+LKB-06676	bhedai	researched	NOUN	Stinkvine, a wild leafy herb.	stinkvine; wild herb	simple stem (no affix)		farming,food				
+LKB-06708	bhokat	researched	ADJ	Foolish or stupid.	foolish; stupid; bhokat	simple stem (no affix)		describing				
+LKB-06720	bhoriya	researched	NOUN	Husband.	husband	simple stem (no affix)	bhariya	family				
+LKB-06740	bhusi	researched	VERB	To rub; to scrub.	rub; scrub	simple stem (no affix)	bhus	home				
+LKB-06823	bokarchod	researched	NOUN	Spelling variant of bokachoda; strong Bengali insult.	stupid fucker; fool	simple stem (no affix)		feelings,slang				
+LKB-06824	bokchod	researched	NOUN	Spelling variant of bokachoda; strong Bengali insult.	stupid fucker; fool	simple stem (no affix)		feelings,slang				
+LKB-07018	chadanyi	researched	PROPN	Angami festival, one of the traditional Angami celebrations.	festival	simple stem (no affix)		culture				
+LKB-07065	chiki	researched	VERB	To flash; to glitter.	flash; glitter; shine	simple stem (no affix)	chik	nature				
+LKB-07218	dadai	researched	NOUN	Grandfather.	grandfather; dadai	simple stem (no affix)		community				
+LKB-07309	dhat	researched	INTJ	Shoo! Nonsense! A dismissive exclamation.	shoo; nonsense; tut	simple stem (no affix)		slang				
+LKB-07422	drakhya	researched	NOUN	Grape.	grape	simple stem (no affix)	dakhya	farming,food				
+LKB-07503	emaan	researched	ADV	This much, so much.	this much; emaan	simple stem (no affix)	imaan	numbers				
+LKB-07713	ghisi	researched	VERB	To rub; to grind (by rubbing).	rub; grind	simple stem (no affix)	ghis	home				
+LKB-07722	ghontakoron	researched	NOUN	Rattlebox, a wild plant with pods.	rattlebox; crotalaria	simple stem (no affix)	ghontakoran	farming,nature				
+LKB-07801	gosi	researched	VERB	To wash the body; to rub clean.	rub clean; scrub	simple stem (no affix)	gosh	health,home				
+LKB-08015	hijol	researched	NOUN	Barringtonia tree, a tree of wet places.	barringtonia; tree	simple stem (no affix)		nature				
+LKB-08026	hinkejvu	researched	NOUN	Simple boiled dish of colocasia and greens with salt, Naga style.	boiled greens	simple stem (no affix)		food				
+LKB-08157	ikhai	researched	ADV	Here, in this place.	here; ikhai	simple stem (no affix)	iyat	places				
+LKB-08331	joroth	researched	NOUN	Annatto plant, used for red colour.	annatto; lipstick tree	simple stem (no affix)		farming,food				
+LKB-08458	kerunyi	researched	PROPN	Angami festival, one of the traditional Angami celebrations.	festival	simple stem (no affix)		culture				
+LKB-08470	khagori	researched	NOUN	A tall reed grass used for thatch.	reed; tall grass	simple stem (no affix)	khagari	nature				
+LKB-08485	khekaisa	researched	NOUN	Shawl for elected leaders, ministers and social activists in Nagaland.	leader shawl	simple stem (no affix)		civic,clothing				
+LKB-08487	kheki	researched	VERB	To spit out.	spit out	simple stem (no affix)	khek	body				
+LKB-08513	khoni	researched	NOUN	A digging tool or spade used by farmers.	digging tool; spade	simple stem (no affix)		farming,work				
+LKB-08625	komolini	researched	NOUN	Lotus flower.	lotus flower	simple stem (no affix)	komalini	nature				
+LKB-08643	kornikar	researched	NOUN	Golden shower tree, with yellow flowers.	golden shower tree; cassia	simple stem (no affix)		nature				
+LKB-08689	kusmando	researched	NOUN	White pumpkin or ash gourd.	white pumpkin; ash gourd	simple stem (no affix)	kushmando	farming,food				
+LKB-08697	kutura	researched	NOUN	A dog.	dog	simple stem (no affix)	kutur	home,nature				
+LKB-08755	lekhai	researched	VERB	To cause to write; to record.	make write; record	simple stem (no affix)		education				
+LKB-08756	lekhi	researched	VERB	To write (formal).	write	simple stem (no affix)	lekh	education				
+LKB-08826	lowai	researched	VERB	To make take.	make take; cause to take	simple stem (no affix)	lowa	actions				
+LKB-08849	maari	researched	VERB	To hit hard.	hit hard	simple stem (no affix)	mar	actions				
+LKB-08931	megela	researched	NOUN	A tall cane grass.	cane; tall grass	simple stem (no affix)	megelah	farming,nature				
+LKB-08945	meowa	researched	NOUN	Giant granadilla, a passion fruit.	passion fruit	simple stem (no affix)		farming,food				
+LKB-09080	muji	researched	INTJ	Vulgar expletive like fuck, used for anger, surprise or happiness.	fuck; damn	simple stem (no affix)		feelings,slang				
+LKB-09100	murkha	researched	NOUN	Sanskrit-origin word for fool, equivalent to boka.	fool; idiot	simple stem (no affix)		describing,slang				
+LKB-09154	ngonyi	researched	PROPN	Angami festival, one of the traditional Angami celebrations.	festival	simple stem (no affix)		culture				
+LKB-09172	nisha	researched	NOUN	Night time.	night	simple stem (no affix)		weather				
+LKB-09206	nunu	researched	NOUN	Vulgar Bengali word for the penis, used in insults.	penis; dick	simple stem (no affix)		body,slang				
+LKB-09276	osudhi	researched	NOUN	Herbal medicine or remedy.	remedy; herbal medicine; osudhi	simple stem (no affix)		health				
+LKB-09447	phukuri	researched	VERB	To puff; to blow out.	puff; blow out	simple stem (no affix)	phukur	actions				
+LKB-09731	ranga	researched	ADJ	Coloured or dyed in colour.	coloured; dyed; ranga	simple stem (no affix)	ronga	clothing,colours				
+LKB-09764	rensi	researched	NOUN	Rengma youth dormitory.	youth dormitory	simple stem (no affix)		community,culture				
+LKB-09792	rhujon	researched	NOUN	Fermented bamboo shoot variety of the Lotha Naga.	fermented bamboo shoot	simple stem (no affix)		food				
+LKB-09793	rhuju	researched	NOUN	Fermented bamboo shoot variety of the Lotha Naga.	fermented bamboo shoot	simple stem (no affix)		food				
+LKB-09825	rongtu	researched	NOUN	Shawl that may be worn only after a mithun sacrifice made over three generations.	shawl	simple stem (no affix)		clothing,culture				
+LKB-09838	rowai	researched	VERB	To cry out loud.	wail; cry out	simple stem (no affix)	row	feelings				
+LKB-10126	sokhai	researched	VERB	To dry up.	dry up	simple stem (no affix)	sok	nature				
+LKB-10163	sorot	researched	NOUN	Autumn season.	autumn; fall	simple stem (no affix)	soroth	weather				
+LKB-10413	temaan	researched	ADV	That much, so much.	that much; temaan	simple stem (no affix)	timaan	numbers				
+LKB-10424	tepi	researched	VERB	To roast; to scorch.	roast; scorch	simple stem (no affix)		food				
+LKB-10425	terhunyi	researched	PROPN	Angami festival, one of the traditional Angami celebrations.	festival	simple stem (no affix)		culture				
+LKB-10473	tholi	researched	VERB	To stop; to halt.	stop; halt	simple stem (no affix)	thol	actions				
+LKB-10603	tuki	researched	VERB	To peck; to poke.	peck; poke	simple stem (no affix)	tuk	actions				
+LKB-10847	xikhai	researched	ADV	There, in that place.	there; in that place; xikhai	simple stem (no affix)		places				
+LKB-10848	xikhoni	researched	ADV	There, at that place.	there; that place; xikhoni	simple stem (no affix)	sikhoni	places				
+LKB-10875	xukai	researched	VERB	To dry.	dry	simple stem (no affix)		farming				
+LKB-10876	xukhi	researched	VERB	To be dry; to dry up.	be dry; dry up	simple stem (no affix)	shukh	nature				
+LKB-10884	xuwai	researched	VERB	To make sleep.	make sleep; lull	simple stem (no affix)	shuwai	body				
+LKB-10893	yo	researched	NOUN	Konyak girls youth dormitory.	girls dormitory	simple stem (no affix)		community,culture				
+LKB-06363	akini	researched	NOUN	Perilla seed used to flavour snail and pork dishes among Naga tribes.	perilla seed	simple stem (no affix)		food,nature				
+LKB-06821	bokachoda	researched	NOUN	Strong Bengali insult meaning roughly stupid fucker; highly vulgar.	stupid fucker; fool; idiot	simple stem (no affix)	bocachoda,wokachoda	feelings,slang				
+LKB-07080	chokibo	researched	NOUN	Land snail eaten in Naga cooking, often with perilla seed.	land snail; snail	simple stem (no affix)		food,nature				
+LKB-09066	moxondori	researched	NOUN	A small herb with leaves used as a green vegetable.	herb; greens	simple stem (no affix)		farming,food				
+LKB-10878	xulpha	researched	NOUN	Dill, a herb with fine leaves.	dill	simple stem (no affix)	sulpha	farming,food				
+LKB-06392	amora	researched	NOUN	Hog plum or ambarella fruit.	hog plum; ambarella	simple stem (no affix)	amra	farming,food				
+LKB-06475	athiya	researched	NOUN	A type of banana, sweet silk fig banana.	silk fig banana; banana	simple stem (no affix)		farming,food				
+LKB-06705	bhoira	researched	NOUN	Belleric myrobalan tree and its fruit.	belleric myrobalan; myrobalan	simple stem (no affix)		food,nature				
+LKB-06776	birina	researched	NOUN	Vetiver grass with fragrant roots.	vetiver; vetiver grass	simple stem (no affix)	birna	farming,nature				
+LKB-06873	bosonta	researched	NOUN	Spring season.	spring	simple stem (no affix)	bosonto	weather				
+LKB-07083	chopi	researched	VERB	To chop; to hack.	chop; hack	simple stem (no affix)	chop	food				
+LKB-07257	debodaru	researched	NOUN	Deodar, a tall cedar tree.	deodar; cedar	simple stem (no affix)		nature				
+LKB-07809	goti	researched	VERB	To gather.	gather; collect	simple stem (no affix)		community				
+LKB-07840	grisma	researched	NOUN	Summer season.	summer	simple stem (no affix)	grishmo	weather				
+LKB-08092	horitoki	researched	NOUN	Chebulic myrobalan tree and its fruit.	myrobalan; harad	simple stem (no affix)	horitaki	food,nature				
+LKB-08160	ikhyu	researched	NOUN	Sugarcane.	sugarcane	simple stem (no affix)	ikhu	farming,food				
+LKB-08237	jatibah	researched	NOUN	A type of bamboo.	bamboo	simple stem (no affix)	jatibaah	farming,nature				
+LKB-08294	joa	researched	NOUN	A wooden yoke for a pair of oxen.	yoke	simple stem (no affix)		farming				
+LKB-08394	kalmegh	researched	NOUN	Andrographis, a bitter medicinal herb.	andrographis; bitter herb	simple stem (no affix)	kalmeg	health,nature				
+LKB-08600	kohuwa	researched	NOUN	Wild sugarcane grass.	wild sugarcane; grass	simple stem (no affix)	kohuva	nature				
+LKB-08632	konthal	researched	NOUN	Jackfruit.	jackfruit	simple stem (no affix)	kothal	farming,food				
+LKB-08646	korphul	researched	NOUN	A fragrant herb chewed with betel nut.	betel herb; herb	simple stem (no affix)	korfol	farming,food				
+LKB-08726	lamphi	researched	VERB	To jump; to leap.	jump; leap	simple stem (no affix)		actions				
+LKB-08934	mekhala	researched	NOUN	Traditional woven wrap-around garment worn by Ao women.	wrap-around garment; mekhela	simple stem (no affix)	mekhela	clothing,culture				
+LKB-09029	mor	researched	PRON	My (possessive form).	my	simple stem (no affix)		pronouns				
+LKB-09045	mosundori	researched	NOUN	Fish mint, a herb used in cooking.	fish mint; herb	simple stem (no affix)	mosondori	farming,food				
+LKB-09681	puroi	researched	NOUN	Red vine spinach, a leafy green.	red vine spinach; spinach	simple stem (no affix)		farming,food				
+LKB-10069	sirish	researched	NOUN	Siris tree with pods.	siris tree; albizia	simple stem (no affix)	shirish	nature				
+LKB-10128	sokola	researched	NOUN	Key lime or small lime fruit.	key lime; small lime	simple stem (no affix)		farming,food				
+LKB-10294	sukloti	researched	NOUN	Patchouli, a fragrant herb.	patchouli; herb	simple stem (no affix)	xukloti	farming,food				
+LKB-10447	thandai	researched	VERB	To cool; to make cold.	cool; chill	simple stem (no affix)		weather				
+LKB-10831	xaaj	researched	NOUN	Fermented rice beer.	rice beer; beer	simple stem (no affix)		food				
+LKB-06626	bemisaal	researched	INTJ	Matchless! Peerless!	matchless; peerless; unique	simple stem (no affix)	bemisal	slang				
+LKB-06306	accounts	researched	NOUN	Accounts.	accounts	simple stem (no affix)		education				
+LKB-06312	admitted	researched	VERB	Admitted.	admitted	simple stem (no affix); used with kori as a light verb		education,health				
+LKB-06321	afwaah	researched	NOUN	A rumour.	rumour	simple stem (no affix)	afwa	slang				
+LKB-06337	ahh	researched	INTJ	Ahh.	ahh	simple stem (no affix)		slang				
+LKB-06345	airhostess	researched	NOUN	Flight attendant.	flight attendant	simple stem (no affix)		travel				
+LKB-06419	anm	researched	NOUN	Health worker.	health worker	simple stem (no affix)		civic,health				
+LKB-06421	annualday	researched	NOUN	Annual day.	annual day	simple stem (no affix)		education,leisure				
+LKB-06437	appstore	researched	PROPN	App store.	app store	simple stem (no affix)		technology				
+LKB-06450	arrear	researched	NOUN	Arrears.	arrears	simple stem (no affix)	arrears	money,work				
+LKB-06504	autorickshaw	researched	NOUN	Auto rickshaw.	auto rickshaw	simple stem (no affix)		travel				
+LKB-06510	ayurvedic	researched	ADJ	Ayurvedic.	ayurvedic	simple stem (no affix)		health				
+LKB-06516	backcover	researched	NOUN	Phone back cover.	phone back cover	simple stem (no affix)		technology				
+LKB-06575	barcode	researched	NOUN	Barcode.	barcode	simple stem (no affix)		money,work				
+LKB-06609	bedsheet	researched	NOUN	Bedsheet.	bedsheet	simple stem (no affix)		home				
+LKB-06641	betadine	researched	NOUN	Antiseptic solution.	antiseptic solution	simple stem (no affix)		health				
+LKB-06670	bhanbhan	researched	ADV	With a buzzing or humming sound.	buzzing; humming; bhanbhan	simple stem (no affix)		describing				
+LKB-06691	bhim	researched	PROPN	Payment app.	payment app	simple stem (no affix)		money				
+LKB-06710	bhomor	researched	NOUN	Bee or wasp.	bee; wasp; bhomor	simple stem (no affix)		places				
+LKB-06712	bhonbhon	researched	ADV	With a buzzing sound, as of bees.	buzzing; humming; bhonbhon	simple stem (no affix)	bhanbhan	describing				
+LKB-06800	bloodbank	researched	NOUN	Blood bank.	blood bank	simple stem (no affix)		health,places				
+LKB-06802	boardingpass	researched	NOUN	Boarding pass.	boarding pass	simple stem (no affix)		travel				
+LKB-06848	booyah	researched	INTJ	Game win.	game win	simple stem (no affix)		leisure,slang				
+LKB-06886	bottled	researched	ADJ	Bottled.	bottled	simple stem (no affix)		food				
+LKB-06889	bournvita	researched	PROPN	Malt drink.	malt drink	simple stem (no affix)		food				
+LKB-06894	bp	researched	NOUN	Blood pressure.	blood pressure	simple stem (no affix)		health				
+LKB-06900	brb	researched	INTJ	Be right back.	be right back	simple stem (no affix)		slang				
+LKB-06901	breaktime	researched	NOUN	Break time.	break time	simple stem (no affix)		education,work				
+LKB-06905	brihospotibar	researched	NOUN	Thursday, the fifth day of the week.	Thursday; brihospotibar	simple stem (no affix)		time				
+LKB-06914	btw	researched	ADV	By the way.	by the way	simple stem (no affix)		slang				
+LKB-06923	buffering	researched	NOUN	Video buffering.	video buffering	simple stem (no affix)		media,technology				
+LKB-06947	busfare	researched	NOUN	Bus fare.	bus fare	simple stem (no affix)		travel				
+LKB-06949	busstand	researched	NOUN	Bus stand.	bus stand	simple stem (no affix)		places,travel				
+LKB-06950	busstop	researched	NOUN	Bus stop.	bus stop	simple stem (no affix)		places,travel				
+LKB-06984	cardio	researched	NOUN	Cardio exercise.	cardio exercise	simple stem (no affix)		health				
+LKB-06991	carrent	researched	NOUN	Car rental.	car rental	simple stem (no affix)		travel				
+LKB-06993	carrybag	researched	NOUN	Carry bag.	carry bag	simple stem (no affix)		money				
+LKB-06996	cashback	researched	NOUN	Cash back.	cash back	simple stem (no affix)		money				
+LKB-06998	cashless	researched	ADJ	Cashless.	cashless	simple stem (no affix)		money				
+LKB-06999	cashmemo	researched	NOUN	Cash memo.	cash memo	simple stem (no affix)		money				
+LKB-07010	ccu	researched	NOUN	Critical care unit.	critical care unit	simple stem (no affix)		health				
+LKB-07027	challan	researched	NOUN	Traffic fine receipt.	traffic fine receipt	simple stem (no affix)		civic,travel				
+LKB-07037	charging	researched	NOUN	Phone charging.	phone charging	simple stem (no affix)		technology				
+LKB-07041	chatbot	researched	NOUN	Chatbot.	chatbot	simple stem (no affix)		technology				
+LKB-07042	chc	researched	NOUN	Health centre.	health centre	simple stem (no affix)		civic,health				
+LKB-07044	cheapest	researched	ADJ	Cheapest.	cheapest	simple stem (no affix)		money				
+LKB-07047	checkgate	researched	NOUN	Check gate.	check gate	simple stem (no affix)		civic,travel				
+LKB-07048	checkin	researched	NOUN	Check in.	check in	simple stem (no affix)		travel				
+LKB-07049	checking	researched	NOUN	Security check.	security check	simple stem (no affix)		civic,travel				
+LKB-07050	checkpost	researched	NOUN	Police checkpost.	police checkpost	simple stem (no affix)		civic,travel				
+LKB-07054	chemo	researched	NOUN	Chemotherapy.	chemotherapy	simple stem (no affix)		health				
+LKB-07061	chhed	researched	NOUN	Teasing or provocation.	teasing; provocation; pestering	simple stem (no affix); used with kori as a light verb		slang				
+LKB-07085	chopping	researched	NOUN	Chopping board.	chopping board	simple stem (no affix)		food				
+LKB-07088	chowmein	researched	NOUN	Chowmein.	chowmein	simple stem (no affix)		food				
+LKB-07089	chowmin	researched	NOUN	Chowmin.	chowmin	simple stem (no affix)	chowmein	food				
+LKB-07096	chupchup	researched	ADV	Quietly, in silence.	quietly; silently; chupchup	simple stem (no affix)	chupchap	describing				
+LKB-07118	cng	researched	NOUN	Compressed natural gas.	compressed natural gas	simple stem (no affix)		travel				
+LKB-07141	complan	researched	NOUN	Health drink.	health drink	simple stem (no affix)		food,health				
+LKB-07143	compounder	researched	NOUN	Pharmacy dispenser.	pharmacy dispenser	simple stem (no affix)		health				
+LKB-07162	cornflake	researched	NOUN	Cornflakes.	cornflakes	simple stem (no affix)	cornflakes	food				
+LKB-07191	cringy	researched	ADJ	Cringe.	cringe	simple stem (no affix)		feelings,slang				
+LKB-07192	crocin	researched	NOUN	Paracetamol tablet.	paracetamol tablet	simple stem (no affix)		health				
+LKB-07200	crunchy	researched	ADJ	Crunchy.	crunchy	simple stem (no affix)		food				
+LKB-07214	cyber	researched	NOUN	Cyber cafe.	cyber cafe	simple stem (no affix)		places,technology				
+LKB-07252	dayoff	researched	NOUN	Day off.	day off	simple stem (no affix)		time,work				
+LKB-07254	deadlift	researched	NOUN	Dead lift.	dead lift	simple stem (no affix)		health				
+LKB-07275	deo	researched	NOUN	Deodorant.	deodorant	simple stem (no affix)		health				
+LKB-07285	dettol	researched	NOUN	Antiseptic.	antiseptic	simple stem (no affix)		health				
+LKB-07294	dhaba	researched	NOUN	Roadside eatery.	roadside eatery	simple stem (no affix)		food,places				
+LKB-07316	dhokdhok	researched	ADV	Quickly or in a pounding way, as of the heart.	pounding; quickly; dhokdhok	simple stem (no affix)		describing,feelings				
+LKB-07324	dhopdhap	researched	ADV	With a heavy falling thud.	thud; dhop; dhopdhap	simple stem (no affix)		describing				
+LKB-07339	dialer	researched	NOUN	Phone dial pad.	phone dial pad	simple stem (no affix)		technology				
+LKB-07361	dinnerset	researched	NOUN	Dinner set.	dinner set	simple stem (no affix)		home				
+LKB-07371	disprin	researched	NOUN	Pain tablet.	pain tablet	simple stem (no affix)		health				
+LKB-07417	dosa	researched	NOUN	Dosa.	dosa	simple stem (no affix)		food				
+LKB-07423	dresscode	researched	NOUN	Dress code.	dress code	simple stem (no affix)		clothing,work				
+LKB-07429	dualsim	researched	ADJ	Dual sim.	dual sim	simple stem (no affix)		technology				
+LKB-07456	dushtu	researched	ADJ	Naughty or mischievous.	naughty; mischievous; dushtu	simple stem (no affix)	dushto	feelings				
+LKB-07465	earbud	researched	NOUN	Earbud.	earbud	simple stem (no affix)	earbuds	technology				
+LKB-07467	earning	researched	NOUN	Income.	income	simple stem (no affix)		money				
+LKB-07505	emoji	researched	NOUN	Emoji.	emoji	simple stem (no affix)	emojis	media,slang				
+LKB-07516	ent	researched	NOUN	Ear nose throat.	ear nose throat	simple stem (no affix)		health				
+LKB-07535	eww	researched	INTJ	Yuck.	yuck	simple stem (no affix)		feelings,slang				
+LKB-07556	fanta	researched	NOUN	Soft drink.	soft drink	simple stem (no affix)		food				
+LKB-07561	fastag	researched	NOUN	Toll tag.	toll tag	simple stem (no affix)		money,travel				
+LKB-07562	fastfood	researched	NOUN	Fast food.	fast food	simple stem (no affix)		food				
+LKB-07565	fd	researched	NOUN	Fixed deposit.	fixed deposit	simple stem (no affix)		money				
+LKB-07580	fireengine	researched	NOUN	Fire engine.	fire engine	simple stem (no affix)		civic,travel				
+LKB-07582	firstaid	researched	NOUN	First aid.	first aid	simple stem (no affix)		health				
+LKB-07584	fitna	researched	NOUN	Mischief, trouble-making.	mischief; trouble	simple stem (no affix)		slang				
+LKB-07588	flipkart	researched	PROPN	Online shop.	online shop	simple stem (no affix)		money				
+LKB-07605	fourwheeler	researched	NOUN	Four wheeler.	four wheeler	simple stem (no affix)		travel				
+LKB-07613	friedrice	researched	NOUN	Fried rice.	fried rice	simple stem (no affix)		food				
+LKB-07617	frooti	researched	NOUN	Mango drink.	mango drink	simple stem (no affix)		food				
+LKB-07623	fullbook	researched	ADJ	Fully booked.	fully booked	simple stem (no affix)		travel				
+LKB-07625	fundraising	researched	NOUN	Fundraising.	fundraising	simple stem (no affix)		community,money				
+LKB-07629	fyi	researched	INTJ	For your information.	for your information	simple stem (no affix)		slang,work				
+LKB-07667	gasagency	researched	NOUN	Gas agency.	gas agency	simple stem (no affix)		money				
+LKB-07668	gasstove	researched	NOUN	Gas stove.	gas stove	simple stem (no affix)		home				
+LKB-07670	gatepass	researched	NOUN	Gate pass.	gate pass	simple stem (no affix)		civic,work				
+LKB-07696	gg	researched	INTJ	Good game.	good game	simple stem (no affix)		leisure,slang				
+LKB-07728	ghosting	researched	NOUN	Ignoring someone.	ignoring someone	simple stem (no affix)		feelings,slang				
+LKB-07736	ghurghur	researched	ADV	With a continuous rumbling or buzzing sound.	rumbling; buzzing; ghurghur	simple stem (no affix)		describing				
+LKB-07756	glucometer	researched	NOUN	Blood sugar meter.	blood sugar meter	simple stem (no affix)		health				
+LKB-07800	gosh	researched	INTJ	Gosh.	gosh	simple stem (no affix)		feelings,slang				
+LKB-07811	gpay	researched	PROPN	Google pay.	google pay	simple stem (no affix)		money				
+LKB-07872	gustakhi	researched	NOUN	Rudeness or impertinence; with kori, to be rude.	rudeness; impertinence; disrespect	simple stem (no affix); used with kori as a light verb	gustaakhi	feelings,slang				
+LKB-07882	hacked	researched	ADJ	Hacked.	hacked	simple stem (no affix)		technology				
+LKB-07920	handsfree	researched	NOUN	Hands free earphone.	hands free earphone	simple stem (no affix)		technology				
+LKB-07935	harddisk	researched	NOUN	Hard disk.	hard disk	simple stem (no affix)		technology				
+LKB-07941	harpic	researched	NOUN	Toilet cleaner.	toilet cleaner	simple stem (no affix)		home				
+LKB-07969	heartattack	researched	NOUN	Heart attack.	heart attack	simple stem (no affix)		health				
+LKB-07977	helipad	researched	NOUN	Helipad.	helipad	simple stem (no affix)		places,travel				
+LKB-08006	highbeam	researched	NOUN	High beam.	high beam	simple stem (no affix)		travel				
+LKB-08030	hiring	researched	NOUN	Hiring.	hiring	simple stem (no affix)		work				
+LKB-08038	hmm	researched	INTJ	Hmm.	hmm	simple stem (no affix)		feelings,slang				
+LKB-08071	homestay	researched	NOUN	Homestay.	homestay	simple stem (no affix)		places,travel				
+LKB-08093	horlicks	researched	NOUN	Malt drink.	malt drink	simple stem (no affix)		food				
+LKB-08098	hospitalised	researched	VERB	Admit to hospital.	admit to hospital	simple stem (no affix); used with kori as a light verb		health				
+LKB-08099	hospitalized	researched	VERB	Admit to hospital.	admit to hospital	simple stem (no affix); used with kori as a light verb		health				
+LKB-08100	hotcase	researched	NOUN	Insulated food box.	insulated food box	simple stem (no affix)		home				
+LKB-08152	idk	researched	INTJ	I do not know.	i do not know	simple stem (no affix)		slang				
+LKB-08153	idli	researched	NOUN	Idli.	idli	simple stem (no affix)		food				
+LKB-08155	ifsc	researched	NOUN	Bank branch code.	bank branch code	simple stem (no affix)		money				
+LKB-08167	imps	researched	NOUN	Instant bank transfer.	instant bank transfer	simple stem (no affix)		money				
+LKB-08168	inbox	researched	NOUN	Inbox.	inbox	simple stem (no affix)		technology,work				
+LKB-08175	innova	researched	NOUN	Innova car.	innova car	simple stem (no affix)		travel				
+LKB-08184	internetpack	researched	NOUN	Internet pack.	internet pack	simple stem (no affix)		money,technology				
+LKB-08189	iodex	researched	NOUN	Pain balm.	pain balm	simple stem (no affix)		health				
+LKB-08192	iphone	researched	PROPN	Iphone.	iphone	simple stem (no affix)		technology				
+LKB-08200	jaama	researched	NOUN	Shirt or clothing top.	shirt; jaama	simple stem (no affix)	jama	clothing				
+LKB-08201	jaanu	researched	INTJ	Darling, sweetheart.	darling; sweetheart; dear	simple stem (no affix)	janu	slang				
+LKB-08242	jcb	researched	NOUN	Excavator.	excavator	simple stem (no affix)		work				
+LKB-08269	jhogora	researched	NOUN	Quarrel or dispute.	quarrel; dispute; jhogora	simple stem (no affix)	jhogra	feelings				
+LKB-08270	jhogra	researched	NOUN	Quarrel or fight.	quarrel; fight; jhogra	simple stem (no affix)		feelings				
+LKB-08271	jhol	researched	NOUN	A mess or trouble.	mess; trouble; problem	simple stem (no affix)		slang				
+LKB-08272	jhoom	researched	NOUN	Shower or light rainfall with drizzle.	shower; drizzle; jhoom	simple stem (no affix)	jhum	weather				
+LKB-08372	kaal	researched	ADV	Tomorrow or the next day.	tomorrow; kaal	simple stem (no affix)		time				
+LKB-08374	kabab	researched	NOUN	Kebab.	kebab	simple stem (no affix)	kebap	food				
+LKB-08480	khatkhat	researched	ADJ	Making a sharp knocking sound.	knocking; rattling; khatkhat	simple stem (no affix)		describing				
+LKB-08503	khisiya	researched	ADJ	Jealous or envious.	jealous; envious; khisiya	simple stem (no affix)		feelings				
+LKB-08528	khorosh	researched	NOUN	Expense.	expense; khorosh	simple stem (no affix)	khoroch	money				
+LKB-08583	kk	researched	INTJ	Okay.	okay	simple stem (no affix)		greetings,slang				
+LKB-08701	kyc	researched	NOUN	Know your customer.	know your customer	simple stem (no affix)		money				
+LKB-08714	lahelahe	researched	ADV	Slowly, gradually, bit by bit.	slowly; gradually; lahelahe	simple stem (no affix)		time				
+LKB-08731	lastseen	researched	NOUN	Last seen.	last seen	simple stem (no affix)		technology				
+LKB-08732	latapata	researched	ADJ	Loose, hanging, or dangling.	loose; hanging; latapata	simple stem (no affix)		describing				
+LKB-08769	lice	researched	NOUN	Head lice.	head lice	simple stem (no affix)		health				
+LKB-08771	lifting	researched	NOUN	Weight lifting.	weight lifting	simple stem (no affix)		health				
+LKB-08776	limca	researched	NOUN	Lemon soda.	lemon soda	simple stem (no affix)		food				
+LKB-08778	linking	researched	NOUN	Aadhaar linking.	aadhaar linking	simple stem (no affix)		civic,money				
+LKB-08784	lmao	researched	INTJ	Laughing hard.	laughing hard	simple stem (no affix)		slang				
+LKB-08804	lol	researched	INTJ	Laughing out loud.	laughing out loud	simple stem (no affix)		slang				
+LKB-08831	lpg	researched	NOUN	Cooking gas.	cooking gas	simple stem (no affix)		home				
+LKB-08832	lte	researched	NOUN	4g data.	4g data	simple stem (no affix)		technology				
+LKB-08841	lunchbox	researched	NOUN	Lunchbox.	lunchbox	simple stem (no affix)		food				
+LKB-08850	maati	researched	NOUN	Soil or mud.	soil; mud; maati	simple stem (no affix)	mati	places				
+LKB-08851	maaza	researched	NOUN	Mango drink.	mango drink	simple stem (no affix)	mazaa	food				
+LKB-08857	maggi	researched	NOUN	Instant noodles.	instant noodles	simple stem (no affix)	magi	food				
+LKB-08898	maruti	researched	NOUN	Maruti car.	maruti car	simple stem (no affix)		travel				
+LKB-08922	maxicab	researched	NOUN	Minibus.	minibus	simple stem (no affix)		travel				
+LKB-08927	mcb	researched	NOUN	Circuit breaker.	circuit breaker	simple stem (no affix)		home				
+LKB-08930	megapixel	researched	NOUN	Megapixel.	megapixel	simple stem (no affix)		media,technology				
+LKB-08942	memorycard	researched	NOUN	Memory card.	memory card	simple stem (no affix)		technology				
+LKB-08959	micr	researched	NOUN	Cheque code.	cheque code	simple stem (no affix)		money				

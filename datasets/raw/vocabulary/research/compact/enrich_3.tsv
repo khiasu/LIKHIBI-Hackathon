@@ -1,0 +1,434 @@
+galise	VERB		Past of gali: scolded, rebuked.	scolded;rebuked	actions	N	galise	past		-	0.8	
+ghao	NOUN		A wound or sore on the body.	wound;sore	body,health	A	ঘাঁ	base form,countable,inanimate	ghaw	-	0.8	
+ghaw	NOUN		A wound or sore on the body.	wound;sore	body,health	A	ঘাঁ	base form,countable,inanimate	ghao	-	0.8	
+gilas	NOUN		A drinking glass; also the material glass.	glass	home	E	glass	base form,countable,inanimate	glass	-	0.7	
+gojal	NOUN		A nail or spike.	nail;spike	home,work	N	gojal	base form,countable,inanimate		-	0.4	doubtful: meaning inferred from one verse
+halat	NOUN		Condition or state of a person or thing.	condition;state	describing	P	हालत	base form,mass,inanimate		-	0.8	
+hallelujah	INTJ		An exclamation of praise to God.	hallelujah;praise God	religion	PN	hallelujah	invariable	alleluia	Hallelujah, Isor bisi bhal ase!	0.8	
+hisa	NOUN		A share or portion of something.	share;portion;part	money,community	P	हिस्सा	base form,countable,inanimate	hissa	-	0.8	
+huma	VERB		To enter or go inside.	enter;go in	actions	A	সোমা	citation form	xoma	-	0.6	doubtful: spelling variant of soma
+jula	VERB	NOUN=jealousy (suku jula)	To burn; suku jula means jealousy.	burn;be jealous	feelings	A	জ্বলা	citation form	jola	-	0.5	doubtful: sense from one phrase
+khanai	NOUN	VERB=eating	The act of eating; food.	eating;food	food	N	khanai	base form,mass,inanimate		-	0.6	
+kopu	NOUN		A dove or small bird.	dove;pigeon	nature	N	kopu	base form,countable,animate		-	0.4	doubtful: maybe part of a bird phrase
+kuha	NOUN		A well for water.	well	nature,home	A	কুৱা	base form,countable,inanimate	kuwa	-	0.7	
+kurta	NOUN		A long loose shirt.	shirt;kurta	clothing	H	कुर्ता	base form,countable,inanimate		Tai kurta pindhi ase.	0.8	
+lebi	ADV		Else, otherwise (in nohoi lebi).	else;otherwise	grammar	N	lebi	invariable		-	0.4	doubtful: only seen in nohoi lebi
+legion	NOUN		A large group of soldiers; the name given by a possessed man.	legion	community	E	legion	base form,countable,animate		-	0.8	
+lipai	VERB		To cover or coat with something.	cover;coat;plaster	actions	A	লেপা	citation form	lepai	-	0.6	
+maksad	NOUN		A purpose or aim.	purpose;aim	describing	P	मक़सद	base form,countable,inanimate	maqsad	-	0.8	
+mamuli	ADJ		Ordinary, common, of little importance.	ordinary;common;small	describing	P	मामूली	base form	mamuly	-	0.8	
+masul	NOUN		A tax or duty paid to the ruler.	tax;duty	money,civic	P	महसूल	base form,countable,inanimate		-	0.8	
+moidam	NOUN		A grave or burial mound.	grave;tomb;burial	culture	A	মৈদাম	base form,countable,inanimate		-	0.6	
+nabuja	VERB		Not understood; unknown or foreign.	not understood;unknown;foreign	describing	N	nabuja	negative		-	0.5	doubtful: used as an adjective
+namore	VERB		Does not die.	does not die;never dies	actions	N	namore	negative	na more	-	0.7	
+nibisare	VERB		Does not seek or search for.	does not seek;does not search	actions	N	nibisare	negative		-	0.6	
+ninyanve	NUM		Ninety-nine.	ninety-nine	numbers	H	निन्यानवे	invariable	ninanabe	-	0.8	
+nokorni	NOUN		A woman servant or maid.	maid;female servant	work	A	নকৰণী	base form,countable,animate		-	0.6	
+nost	VERB	ADJ=ruined|NOUN=ruin	To be lost or destroyed; to perish.	perish;be destroyed;be lost	actions	H	नष्ट	citation form	nosto	-	0.8	
+paa	VERB		To find or get.	find;get	actions	A	পোৱা	citation form	pai,pua	-	0.5	doubtful: spelling variant of pai
+pagla	ADJ	NOUN=mad person	Mad, crazy.	mad;crazy	describing	H	पागल	base form	pagol	-	0.9	
+paisele	VERB		Past perfect of pai: had found or met.	had found;had met	actions	N	paisele	past		-	0.7	
+paribona	VERB		Cannot, is not able to (paribo + na).	cannot;unable	grammar	N	paribona	negative		-	0.5	doubtful: written as one word with na
+phine	ADV		Outwardly, on the surface (bahar phine).	outwardly;on the outside	describing	N	phine	invariable		-	0.3	doubtful: meaning unclear
+rukhanai	VERB		To hold back or stop.	hold back;stop;prevent	actions	N	rukhanai	citation form	rokhanai	-	0.4	doubtful: form unclear
+saithaka	VERB		Watching over, tending, keeping watch.	watching;tending	actions	N	saithaka	citation form	sai thaka	-	0.7	
+sakti	NOUN		Strength or power.	strength;power	describing	S	शक्ति	base form,mass,inanimate	xokti,shokti	-	0.8	
+samjhai	VERB		To explain or make someone understand.	explain;make understand	actions,education	H	समझाना	citation form	somjhai	-	0.8	
+samne	ADP	ADV=in front	In front of, before.	in front of;before	grammar	H	सामने	invariable	samna	-	0.8	
+sampoti	NOUN		Property or wealth.	property;wealth	money	S	सम्पत्ति	base form,mass,inanimate	sompoti	-	0.8	
+tera	ADJ		Crooked, bent, not straight.	crooked;bent	describing	A	টেৰা	base form		-	0.8	
+thapi	VERB		To warm oneself; also to place or pat.	warm oneself;place	actions	A	থাপি	citation form		-	0.5	doubtful: sense inferred from one verse
+thuki	VERB		To spit.	spit	actions,body	A	থুকি	citation form		-	0.7	
+tona	NOUN		A charm or spell (jadu-tona is witchcraft).	spell;charm;witchcraft	culture,religion	H	टोना	base form,countable,inanimate		-	0.7	
+upai	NOUN		A way or means of doing something.	way;means;method	describing	S	उपाय	base form,countable,inanimate		-	0.8	
+buri	ADJ	NOUN=old woman	Old, aged (of a woman); an old woman.	old;aged	describing,family	A	বুঢ়ী	base form	buree	-	0.8	
+dhyan	NOUN		Attention or heed; also meditation.	attention;heed;meditation	feelings,religion	S	ध्यान	base form,mass,inanimate		-	0.8	
+lora	NOUN		A boy or young man.	boy;young man;lad	family	A	লৰা	base form,countable,animate		-	0.8	
+khas	ADJ		Special, particular, chosen.	special;particular	describing	P	खास	base form	khash	-	0.8	
+daag	NOUN	VERB=to seal (with dise)	A mark or stain; a seal.	mark;stain;seal	describing	P	दाग	base form,countable,inanimate	dag	-	0.8	
+borbad	ADJ	VERB=to ruin (with kori)	Ruined, destroyed.	ruined;destroyed	describing	P	बरबाद	base form	barbad	-	0.8	
+hika	VERB		To learn; to teach (hikai).	learn;study	education	A	শিকা	citation form	sika,shika	-	0.8	
+gai	VERB		To sing.	sing	leisure,actions	A	গাই	citation form		-	0.8	
+jongli	ADJ		Wild, not tame.	wild;savage	nature	H	जंगली	base form	jungli	-	0.9	
+pala	NOUN		A herder or keeper of animals.	herder;keeper	work,farming	N	pala	base form,countable,animate		-	0.4	doubtful: sense inferred from gahori pala
+bari	VERB		To grow, increase.	grow;increase	actions	A	বাঢ়ি	citation form	barhi	-	0.7	
+pankha	NOUN		A wing; also a fan.	wing;fan	nature,home	H	पंख	base form,countable,inanimate		-	0.8	
+bikha	NOUN		Pain, agony (as of labour); also poison in Assamese.	pain;agony	health	N	bikha	base form,mass,inanimate		-	0.4	doubtful: sense inferred from one verse
+ethiopia	PROPN		Ethiopia, a country in Africa.	Ethiopia	places	BN	Ethiopia	invariable		-	0.9	
+abiswas	ADJ	NOUN=unbelief	Not believing; unbelief.	unbelieving;faithless	religion	A	অবিশ্বাস	base form	abishwas	-	0.8	
+alpha	PROPN		Alpha, first letter of the Greek alphabet.	Alpha	religion	PN	alpha	invariable		-	0.8	
+amminadab	PROPN		Amminadab, a man in the family line of Jesus.	Amminadab	religion	BN	Amminadab	invariable		-	0.9	
+anth	NOUN		The end.	end	time	S	अन्त	base form,countable,inanimate	ant	-	0.8	
+arimathea	PROPN		Arimathea, a town in Judea.	Arimathea	places	BN	Arimathea	invariable		-	0.9	
+atharo	NUM		Eighteen.	eighteen	numbers	H	अठारह	invariable	athara	-	0.8	
+badla	NOUN		Revenge or exchange.	revenge;exchange	community	H	बदला	base form,mass,inanimate		-	0.8	
+bail	NOUN		An ox or bullock.	ox;bullock	farming	H	बैल	base form,countable,animate		-	0.7	
+bandha	VERB		Tied, bound.	tied;bound	actions	A	বন্ধা	past participle		-	0.7	
+bhikh	NOUN		Alms; begging.	alms;begging	money	H	भीख	base form,mass,inanimate	bhik	Tai bhikh mangi ase.	0.8	
+bhoyam	NOUN		Ground or land.	ground;land	nature	A	ভূঁই	base form,mass,inanimate	bhoy	-	0.3	doubtful: meaning unclear
+bhukha	ADJ		Hungry.	hungry	feelings,food	H	भूखा	base form	bhuka	-	0.9	
+buari	NOUN		A daughter-in-law.	daughter-in-law	family	A	বোৱাৰী	base form,countable,animate	bouari	Buari ghor te ase.	0.8	
+chaat	NOUN		A roof or shelter.	roof;shelter	home	H	छत	base form,countable,inanimate	chat	-	0.6	
+chador	NOUN		A sheet or cloak.	sheet;cloak;shawl	clothing	P	चादर	base form,countable,inanimate		-	0.8	
+chalaki	NOUN		Cleverness or cunning.	cleverness;cunning	describing	H	चालाकी	base form,mass,inanimate		-	0.8	
+charjon	NUM		Four people.	four people	numbers	N	charjon	invariable		-	0.7	
+charsoh	NUM		Four hundred.	four hundred	numbers	H	चार सौ	invariable	charsou	-	0.8	
+chil	NOUN		A kite or eagle, a bird of prey.	eagle;kite	nature	H	चील	base form,countable,animate		Chil akaxot uri ase.	0.8	
+chukuli	NOUN	VERB=to incite (with kori)	Tale-telling or stirring up trouble.	gossip;incitement	community	A	চুকলি	base form,mass,inanimate		-	0.6	
+claudius	PROPN		Claudius, a Roman emperor.	Claudius	culture	BN	Claudius	invariable		-	0.9	
+demetrius	PROPN		Demetrius, a man in the New Testament.	Demetrius	culture	BN	Demetrius	invariable		-	0.9	
+denari	NOUN		A denarius, a Roman silver coin.	denarius;coin	money	E	denarius	base form,countable,inanimate	denarii,dinari	-	0.7	
+dhaar	NOUN		A debt or loan.	debt;loan	money	H	उधार	base form,countable,inanimate	dhar,udhar	-	0.8	
+dhaka	NOUN	VERB=to cover|VERB=to push	A push or shove.	push;shove	actions	A	ধাক্কা	base form,countable,inanimate		-	0.7	
+dhakai	VERB		To cover over.	cover;hide	actions	A	ঢাকি	citation form		-	0.7	
+dhale	VERB		Pours; present of dhal.	pours;spills	actions	H	ढालना	present		-	0.7	
+dhamali	NOUN		Fun, joking or foolish play.	joke;fun	leisure	A	ধেমালি	base form,mass,inanimate	dhemali	-	0.7	
+dhanush	NOUN		A bow; a rainbow.	bow;rainbow	nature	S	धनुष	base form,countable,inanimate		-	0.8	
+dhomki	NOUN		A threat.	threat	actions	H	धमकी	base form,countable,inanimate		-	0.8	
+dhuli	NOUN		Dust.	dust	nature	A	ধূলি	base form,mass,inanimate		-	0.8	
+dorwaja	NOUN		A door.	door	home	P	दरवाज़ा	base form,countable,inanimate	darwaja	-	0.9	
+duisoh	NUM		Two hundred.	two hundred	numbers	H	दो सौ	invariable	duisou	-	0.8	
+dunkh	NOUN		A sting.	sting	nature	H	डंक	base form,countable,inanimate	dank	-	0.7	
+erastus	PROPN		Erastus, a man in the New Testament.	Erastus	culture	BN	Erastus	invariable		-	0.9	
+gamcha	NOUN		A towel or cotton cloth.	towel;cloth	clothing,home	A	গামোছা	base form,countable,inanimate	gamosa	-	0.9	
+gheri	VERB		To surround.	surround;encircle	actions	H	घेरना	citation form		-	0.8	
+ghuse	VERB		Present of ghusi: enters.	enters;goes in	actions	H	घुसना	present		-	0.7	
+golgotha	PROPN		Golgotha, the hill where Jesus was crucified.	Golgotha	places	BN	Golgotha	invariable		-	0.9	
+hari	VERB		To lose, fail or be defeated.	lose;fail;be defeated	actions	A	হাৰি	citation form		-	0.8	
+hermes	PROPN		Hermes, a Greek god.	Hermes	religion	BN	Hermes	invariable		-	0.9	
+ishara	NOUN	VERB=to signal (with kori)	A sign or gesture.	sign;gesture;signal	actions	P	इशारा	base form,countable,inanimate		-	0.8	
+jathi	NOUN		Kin or people of one tribe.	kin;tribe;people	community	S	जाति	base form,countable,animate	jati	-	0.5	doubtful: sense inferred from one verse
+jeher	NOUN	ADJ=poisonous	Poison.	poison	health,nature	P	ज़हर	base form,mass,inanimate	zeher	-	0.8	
+jeremiah	PROPN		Jeremiah, a prophet.	Jeremiah	religion	BN	Jeremiah	invariable		-	0.9	
+joshua	PROPN		Joshua, a man in the Bible.	Joshua	religion	BN	Joshua	invariable		-	0.9	
+jugut	NOUN		Preparation (as in Jugut Din, Preparation Day).	preparation	religion,time	N	jugut	base form,mass,inanimate		-	0.4	doubtful: only seen in Jugut Din
+kabotar	NOUN		A pigeon or dove.	pigeon;dove	nature	H	कबूतर	base form,countable,animate		-	0.9	
+kamura	NOUN		A worm or insect larva.	worm;maggot	nature	N	kamura	base form,countable,animate		-	0.5	doubtful: usually seen as kamura puka
+khair	NOUN		A feeding trough or manger.	trough;manger	farming	N	khair	base form,countable,inanimate		-	0.4	doubtful: sense inferred from one verse
+khajana	NOUN		A treasure or treasury.	treasure;treasury	money	P	ख़ज़ाना	base form,countable,inanimate	khazana	-	0.8	
+khechera	ADJ		Harsh, difficult or unkind.	harsh;unkind	describing	N	khechera	base form		-	0.5	doubtful: sense inferred from one verse
+khisa	NOUN		A story or tale.	story;tale	culture	H	किस्सा	base form,countable,inanimate	kissa	-	0.8	
+khujkari	VERB		Walking, stepping along.	walking;stepping	actions	N	khujkari	citation form		-	0.4	doubtful: form unclear
+kibi	PRON		Something (in kiba kibi, something or other).	something	pronouns	N	kibi	invariable		-	0.3	doubtful: seen only in kiba kibi
+kimti	NOUN		Price or value.	price;value	money	P	क़ीमत	base form,mass,inanimate	kimat	-	0.8	
+korhi	NUM		Twenty.	twenty	numbers	A	কুৰি	invariable	kuri	Korhi taka dibi.	0.6	doubtful: also means a score
+lengera	ADJ		Lame, limping.	lame;limping	body,health	A	লেঙেৰা	base form	lengra	-	0.8	
+lengta	ADJ		Lame.	lame	body,health	H	लंगड़ा	base form		Tai lengta ase.	0.4	doubtful: could also mean naked
+lo	VERB		Take (imperative of loi, to take).	take	actions	H	लो	imperative		-	0.7	
+longor	NOUN		An anchor.	anchor	travel	P	लंगर	base form,countable,inanimate		-	0.8	
+luke	PROPN		Luke, a writer of a gospel.	Luke	religion	BN	Luke	invariable		-	0.9	
+manasseh	PROPN		Manasseh, a king of Judah.	Manasseh	religion	BN	Manasseh	invariable		-	0.9	
+mar	NOUN		A beating or blow.	beating;blow	actions	H	मार	base form,countable,inanimate		-	0.8	
+matidise	VERB		Past of mati: called, named.	called;named	actions	N	matidise	past		-	0.6	
+montor	NOUN		A spell or sacred chant.	spell;chant	religion	S	मन्त्र	base form,countable,inanimate	mantra	Tai montor pori ase.	0.7	
+naapi	VERB		To measure.	measure	actions	H	नापना	citation form	napi	-	0.7	
+nabona	VERB		Do not make (negative imperative).	do not make	actions	N	nabona	negative,imperative		-	0.5	
+nachola	VERB		Do not operate or exercise (negative of chola).	do not exercise	actions	N	nachola	negative		-	0.5	
+nacholai	VERB		Does not run or work (negative of cholai).	does not run	actions	N	nacholai	negative		-	0.5	
+nadhale	VERB		Does not pour (negative of dhale).	does not pour	actions	N	nadhale	negative		-	0.6	
+nadholai	ADJ		Unwashed.	unwashed	describing	N	nadholai	base form		-	0.6	
+nadhuribi	VERB		Never bear (fruit); negative imperative.	never bear	farming	N	nadhuribi	negative		-	0.4	doubtful: sense inferred from one verse
+nadikena	VERB		Without giving (negative of dikena).	without giving	actions	N	nadikena	negative		-	0.6	
+najuwa	VERB		Not going (negative of juwa).	not going	actions	N	najuwa	negative		-	0.6	
+napibo	VERB		Will not drink (negative future of pibo).	will not drink	food	N	napibo	negative,future		-	0.7	
+napindi	VERB		Not wearing (negative of pindhi).	not wearing	clothing	N	napindi	negative		-	0.7	
+nineveh	PROPN		Nineveh, an old city in Assyria.	Nineveh	places	BN	Nineveh	invariable		-	0.9	
+noksa	NOUN		A picture, design or map.	picture;design;map	describing	P	नक्शा	base form,countable,inanimate	naksa	-	0.7	
+omega	PROPN		Omega, last letter of the Greek alphabet.	Omega	religion	PN	omega	invariable		-	0.8	
+pagala	ADJ	NOUN=mad person	Mad, crazy.	mad;crazy	describing	H	पागल	base form	pagla,pagol	-	0.8	
+pehera	NOUN		A guard or watch.	guard;watch	civic	H	पहरा	base form,countable,inanimate		-	0.7	
+phang	NOUN		A trap or snare.	trap;snare	nature	H	फन्दा	base form,countable,inanimate	phanda	-	0.5	doubtful: sense inferred from one verse
+phasai	VERB		To hand over or betray.	betray;hand over	actions	H	फँसाना	citation form		-	0.6	
+phasi	VERB		To be caught or stuck.	be caught;be stuck	actions	H	फँसना	citation form		-	0.7	
+phat	ADV	VERB=to tear	At once, quickly.	at once;quickly	time	H	फट	invariable		-	0.4	doubtful: sense inferred from one verse
+phoring	NOUN		A grasshopper or locust.	grasshopper;locust	nature	A	ফৰিং	base form,countable,animate		-	0.8	
+phrygia	PROPN		Phrygia, a region in Asia Minor.	Phrygia	places	BN	Phrygia	invariable		-	0.9	
+phusla	ADJ		Coaxing, deceiving (as in phusla kotha, smooth talk).	coaxing;deceiving	describing	H	फुसलाना	base form		-	0.4	doubtful: seen only in phusla kotha
+pondro	NUM		Fifteen.	fifteen	numbers	H	पन्द्रह	invariable	pandro	-	0.8	
+porisharok	NOUN		A caretaker or overseer.	overseer;caretaker	community,religion	S	परिचालक	base form,countable,animate		-	0.5	
+procharok	NOUN		A preacher or one who spreads a message.	preacher;evangelist	religion	S	प्रचारक	base form,countable,animate		-	0.8	
+proconsul	NOUN		A Roman governor of a province.	proconsul;governor	civic	E	proconsul	base form,countable,animate		-	0.7	
+punchai	VERB		To make reach, supply or fill a need.	supply;make reach	actions	N	punchai	citation form		-	0.5	
+pyasa	ADJ	NOUN=thirst	Thirsty.	thirsty	feelings,food	H	प्यासा	base form	pyasha	-	0.9	
+rukha	VERB		To wait, keep or guard.	wait;keep;guard	actions	A	ৰখা	citation form	rokha	-	0.7	
+sajah	NOUN		A punishment.	punishment	civic	P	सज़ा	base form,countable,inanimate	saja	-	0.9	
+salmon	PROPN		Salmon, a man in the family line of Jesus.	Salmon	religion	BN	Salmon	invariable		-	0.9	
+sangoti	NOUN		Company or fellowship.	fellowship;company	community,religion	S	संगति	base form,mass,inanimate	songoti	-	0.8	
+sardis	PROPN		Sardis, a city in Asia Minor.	Sardis	places	BN	Sardis	invariable		Sardis ekta puran sheher ase.	0.9	
+senapoti	NOUN		A commander of soldiers.	commander;captain	civic	S	सेनापति	base form,countable,animate		-	0.8	
+shisa	NOUN		Glass; a mirror.	glass;mirror	home	H	शीशा	base form,mass,inanimate	sisa	-	0.8	
+shrapit	ADJ		Cursed.	cursed	religion	S	शापित	base form	xapit,sapit	-	0.8	
+siloam	PROPN		Siloam, a pool in Jerusalem.	Siloam	places	BN	Siloam	invariable		Siloam pukhuri Jerusalem te ase.	0.9	
+simeon	PROPN		Simeon, a man in the Bible.	Simeon	religion	BN	Simeon	invariable		-	0.9	
+suru	NOUN		The beginning or start.	beginning;start	time	H	शुरू	base form,countable,inanimate	shuru	-	0.8	
+synagogue	NOUN		A Jewish place of worship.	synagogue	religion	E	synagogue	base form,countable,inanimate		-	0.8	
+tis	NUM		Thirty.	thirty	numbers	H	तीस	invariable	tees	-	0.8	
+ultai	VERB		To turn over or turn back.	turn over;reverse	actions	H	उलटाना	citation form	ulta	Tai ultai ahise.	0.6	
+urai	VERB		To fly or blow about.	fly;blow about	actions,nature	A	উৰি	citation form	uri	-	0.7	
+uttor	NOUN	NOUN=answer	The north; also an answer.	north;answer	travel	S	उत्तर	base form,countable,inanimate		-	0.8	
+zacchaeus	PROPN		Zacchaeus, a tax collector who met Jesus.	Zacchaeus	religion	BN	Zacchaeus	invariable		-	0.9	
+zebulun	PROPN		Zebulun, a son of Jacob and a tribe.	Zebulun	religion	BN	Zebulun	invariable		-	0.9	
+zerubbabel	PROPN		Zerubbabel, a man in the family line of Jesus.	Zerubbabel	religion	BN	Zerubbabel	invariable		-	0.9	
+didi	NOUN		Older sister.	older sister;sister	family	H	दीदी	base form,countable,animate		Moi laga didi ghor te ase.	0.9	
+khirki	NOUN		A window.	window	home	H	खिड़की	base form,countable,inanimate		-	0.9	
+goli	VERB	NOUN=bullet; pill	To melt.	melt	actions,nature	A	গলি	citation form		-	0.7	
+himot	NOUN	VERB=to dare (with kora)	Courage or daring.	courage;daring	feelings	P	हिम्मत	base form,mass,inanimate	himmat	-	0.8	
+nakuribi	VERB		Do not do (negative imperative of kori).	do not do	actions	N	nakuribi	negative,imperative	nakoribi	-	0.6	
+gham	NOUN		Heat of the sun; sweat.	heat;sweat	weather,body	H	घाम	base form,mass,inanimate		-	0.7	
+patla	ADJ		Thin, slender.	thin;slender	describing	H	पतला	base form		-	0.8	
+nach	NOUN	VERB=to dance (with kori)	A dance.	dance	leisure,culture	H	नाच	base form,countable,inanimate		-	0.9	
+no	PART		English word no, used for refusing or negating.	no;not	grammar	E	no	invariable		-	0.4	doubtful: English word
+taja	ADJ		Fresh, strong, lively.	fresh;lively	describing	P	ताज़ा	base form	tajah	-	0.8	
+bhara	NOUN		Rent or hire fee.	rent;hire	money,home	A	ভাৰা	base form,mass,inanimate		-	0.8	
+khorcha	NOUN	VERB=to spend (with kori)	Expense or cost.	expense;cost	money	P	ख़र्च	base form,countable,inanimate	kharcha,khoroch	Eitu bisi khorcha hobo.	0.9	
+greece	PROPN		Greece, a country in Europe.	Greece	places	BN	Greece	invariable		-	0.9	
+ram	PROPN		Ram, a man in the family line of Jesus.	Ram	religion	BN	Ram	invariable		-	0.8	
+spain	PROPN		Spain, a country in Europe.	Spain	places	BN	Spain	invariable		-	0.9	
+chawal	NOUN		Rice, raw or husked grain.	rice	food	H	चावल	base form,mass,inanimate	chaol	-	0.8	
+sosta	ADJ		Cheap; easy.	cheap;easy	money,describing	P	सस्ता	base form	sasta	-	0.8	
+talent	NOUN		A large sum of money in old times; also natural skill.	talent;skill	money	E	talent	base form,countable,inanimate		-	0.7	
+bebohar	NOUN		Behaviour or treatment of others.	behaviour;treatment	community	S	व्यवहार	base form,mass,inanimate	byabohar	-	0.8	
+bhori	NOUN		Foot or leg.	foot;leg	body	A	ভৰি	base form,countable,inanimate	bhori	Moi laga bhori dukh kori ase.	0.8	
+ayna	NOUN		A mirror.	mirror	home	P	आईना	base form,countable,inanimate	aina	-	0.8	
+dao	NOUN		A sword or large knife.	sword;knife	work,farming	A	দা	base form,countable,inanimate		-	0.8	
+kilometer	NOUN		A kilometre, a unit of distance.	kilometre	travel	E	kilometer	base form,countable,inanimate	km	-	0.8	
+pisi	VERB		To grind or crush.	grind;crush	actions,food	A	পিহি	citation form	pihi	-	0.7	
+bhorai	VERB		To fill up.	fill;fill up	actions	A	ভৰাই	citation form	bhori	-	0.7	
+ghatna	NOUN		An event or incident.	event;incident	community	S	घटना	base form,countable,inanimate		-	0.8	
+nakha	VERB		Do not eat; does not eat (negative of kha).	do not eat;does not eat	food	N	nakha	negative		Etu nakha.	0.4	doubtful: could also mean nail
+pibo	VERB		Will drink (future of pi).	will drink	food	N	pibo	future		-	0.8	
+poribole	VERB		In order to read (purpose form of pori).	to read	education	N	poribole	purpose		-	0.8	
+pulta	ADJ		Upside down, topsy-turvy (as in ulta-pulta).	topsy-turvy;upside down	describing	H	पलटा	base form		-	0.4	doubtful: seen only in ulta-pulta
+ghar	NOUN		A house or home.	house;home	home	H	घर	base form,countable,inanimate	ghor	Moi ghar jabo.	0.8	
+abba	NOUN		Father; an Aramaic word of address to God.	father;dad	family,religion	PN	abba	base form,countable,animate		-	0.8	
+achim	PROPN		Achim, a man in the family line of Jesus.	Achim	religion	BN	Achim	invariable		-	0.9	
+aeneas	PROPN		Aeneas, a sick man healed by Peter.	Aeneas	religion	BN	Aeneas	invariable		-	0.9	
+agabus	PROPN		Agabus, a prophet in the early church.	Agabus	religion	BN	Agabus	invariable		-	0.9	
+ahaz	PROPN		Ahaz, a king of Judah.	Ahaz	religion	BN	Ahaz	invariable		-	0.9	
+akash	NOUN		The sky.	sky;heaven	nature	S	আকাশ	base form,countable,inanimate	akaxh,akhas	-	0.9	
+amon	PROPN		Amon, a king of Judah.	Amon	religion	BN	Amon	invariable		-	0.9	
+anyai	NOUN		Injustice or wrong.	injustice;wrong	civic	S	अन्याय	base form,mass,inanimate	onyay	Eitu anyai ase.	0.8	
+apobitro	ADJ		Unclean, impure.	unclean;impure	religion	S	अपवित्र	base form		-	0.9	
+arabia	PROPN		Arabia, a country in Asia.	Arabia	places	BN	Arabia	invariable		-	0.9	
+archippus	PROPN		Archippus, a man in the New Testament.	Archippus	religion	BN	Archippus	invariable		-	0.9	
+areopagus	PROPN		Areopagus, a hill in Athens.	Areopagus	places	BN	Areopagus	invariable		-	0.9	
+asa	PROPN		Asa, a king of Judah.	Asa	religion	BN	Asa	invariable		-	0.9	
+asani	ADV		Lightly, carelessly.	lightly;carelessly	describing	N	asani	invariable		-	0.3	doubtful: meaning unclear
+asher	PROPN		Asher, a son of Jacob and a tribe.	Asher	religion	BN	Asher	invariable		-	0.9	
+asli	ADJ		Real, genuine, pure.	real;genuine;pure	describing	P	असली	base form	asol	-	0.9	
+assos	PROPN		Assos, a port city in Asia Minor.	Assos	places	BN	Assos	invariable		-	0.9	
+augustus	PROPN		Augustus, a Roman emperor.	Augustus	culture	BN	Augustus	invariable		Augustus Roma laga raja thakise.	0.9	
+azor	PROPN		Azor, a man in the family line of Jesus.	Azor	religion	BN	Azor	invariable		-	0.9	
+bahai	VERB		To cause to flow; to shed.	shed;pour out	actions	H	बहाना	citation form		-	0.6	
+bahatar	NUM		Seventy-two.	seventy-two	numbers	H	बहत्तर	invariable	bahattar	-	0.7	
+baltin	NOUN		A bucket.	bucket	home	H	बाल्टी	base form,countable,inanimate	balti	-	0.8	
+bana	VERB		Made, built (as in manu pora bana, man-made).	made;built	actions	H	बना	past participle		-	0.7	
+barhoi	NOUN		A carpenter.	carpenter	work	A	বঢ়াই	base form,countable,animate		-	0.8	
+barsabbas	PROPN		Barsabbas, a man in the book of Acts.	Barsabbas	religion	BN	Barsabbas	invariable		-	0.9	
+basikena	VERB		Having sat down (conjunctive form).	having sat	actions	N	basikena	conjunctive	bohikena	Tai basikena kotha koi ase.	0.4	doubtful: form unclear
+benga	ADJ		Crooked, bent; also in kaan benga (deaf).	crooked;bent	describing,body	A	বেঙা	base form		-	0.4	doubtful: sense inferred from one verse
+bernica	PROPN		Bernice, a sister of King Agrippa.	Bernice	culture	BN	Bernica	invariable		-	0.9	
+beya	ADJ		Bad, wicked.	bad;wicked	describing	A	বেয়া	base form	beya,baya	-	0.9	
+bhagwan	NOUN		God.	God;deity	religion	H	भगवान	base form,countable,animate		Bhagwan sob ke dekhi ase.	0.8	
+bhak	NOUN		Unclear; possibly a share or portion.	share;portion	describing	N	bhak	base form,countable,inanimate		Eitu bhak ase.	0.2	doubtful: no evidence of meaning
+bhiji	NOUN		A needle.	needle	home	N	bhiji	base form,countable,inanimate		-	0.5	doubtful: sense inferred from one verse
+bhoj	NOUN		A feast or big meal.	feast;meal	food,culture	H	भोज	base form,countable,inanimate		-	0.8	
+bhujai	VERB		To explain or make understand.	explain;make understand	actions	N	bhujai	citation form	bujhai	Moi apuni ke bhujai dibo.	0.4	doubtful: probable spelling of bujhai
+bhuti	VERB		To go out, be extinguished (of fire).	go out;be put out	actions	H	बुझना	citation form	buji	-	0.5	doubtful: probable spelling of buji
+bis	NUM		Twenty.	twenty	numbers	H	बीस	invariable	bish	-	0.9	
+bithynia	PROPN		Bithynia, a region in Asia Minor.	Bithynia	places	BN	Bithynia	invariable		-	0.9	
+bodon	NOUN		The body.	body	body	S	बदन	base form,countable,inanimate		-	0.8	
+borabar	ADJ	ADV=equally	Equal, same.	equal;same	describing	H	बराबर	base form	barabar	Duijon borabar ase.	0.9	
+cainan	PROPN		Cainan, a man in the family line of Jesus.	Cainan	religion	BN	Cainan	invariable		-	0.9	
+canaan	PROPN		Canaan, the land promised to Israel.	Canaan	places	BN	Canaan	invariable		-	0.9	
+cappadocia	PROPN		Cappadocia, a region in Asia Minor.	Cappadocia	places	BN	Cappadocia	invariable		-	0.9	
+carnelian	NOUN		A red precious stone.	carnelian	nature	E	carnelian	base form,countable,inanimate		-	0.7	
+cenchrea	PROPN		Cenchrea, a port near Corinth.	Cenchrea	places	BN	Cenchrea	invariable		-	0.9	
+chal	NOUN		A trick or scheme.	trick;scheme	describing	H	चाल	base form,countable,inanimate		-	0.7	
+chihnaki	ADJ		Known, acquainted.	known;acquainted	community	H	पहचान	base form	chinaki	-	0.5	
+chingibo	VERB		Will snatch or pluck away (future).	will snatch;will pluck	actions	A	ছিঙিব	future		-	0.5	
+choise	VERB		Past of choi: touched.	touched	actions	A	চুইছে	past		-	0.8	
+cholabole	VERB		To manage or lead (purpose form of chola).	to run;to manage	actions	N	cholabole	purpose		-	0.7	
+chora	NOUN		A boy or son.	boy;son	family	H	छोरा	base form,countable,animate	chowa	-	0.5	
+chorazin	PROPN		Chorazin, a town in Galilee.	Chorazin	places	BN	Chorazin	invariable		-	0.9	
+chukli	NOUN		Tale-telling or stirring up trouble.	gossip;slander	community	A	চুকলি	base form,mass,inanimate	chukuli	Tai chukli kori ase.	0.5	doubtful: spelling variant of chukuli
+chuna	NOUN		Lime used for whitewash.	lime;whitewash	home	H	चूना	base form,mass,inanimate		-	0.8	
+crispus	PROPN		Crispus, a man baptized by Paul.	Crispus	religion	BN	Crispus	invariable		-	0.9	
+crystal	NOUN		Clear crystal stone.	crystal	nature	E	crystal	base form,countable,inanimate		-	0.8	
+dabi	VERB		To be pressed down or burdened.	be pressed;be burdened	actions,feelings	H	दबना	citation form		-	0.7	
+dauri	VERB		To run.	run	actions	A	দৌৰি	citation form	dowri,dour	-	0.9	
+dhongi	NOUN		A hypocrite or pretender.	hypocrite;pretender	community	H	ढोंगी	base form,countable,animate		-	0.8	
+dhonyabad	NOUN	INTJ=thank you	Thanks; an expression of gratitude.	thanks;gratitude	greetings,feelings	S	धन्यवाद	base form,mass,inanimate	dhanyabad,dhanyavad	-	0.9	
+dhulaise	VERB		Past of dhula: washed.	washed	actions,home	N	dhulaise	past		Tai kapra dhulaise.	0.6	
+dhungi	NOUN		A hypocrite or pretender.	hypocrite;pretender	community	H	ढोंगी	base form,countable,animate	dhongi	-	0.7	
+dinari	NOUN		A denarius, a Roman silver coin.	denarius;coin	money	E	denarius	base form,countable,inanimate	denari	-	0.7	
+dorcas	PROPN		Dorcas, a woman in the book of Acts.	Dorcas	religion	BN	Dorcas	invariable		Dorcas ekjon bhal mahila thakise.	0.9	
+dosh	NOUN		A fault, blame or charge.	fault;blame;charge	civic	S	दोष	base form,countable,inanimate	dos	-	0.8	
+duar	NOUN		A door or gate.	door;gate	home	A	দুৱাৰ	base form,countable,inanimate	dwar,duwar	-	0.8	
+dushto	ADJ		Evil, wicked.	evil;wicked	describing	S	दुष्ट	base form	dusto	-	0.9	
+ejkon	NUM		One person.	one person;someone	numbers	N	ejkon	invariable	ekjon	-	0.6	
+ekubi	PRON		Anything, even one thing.	anything;even one	pronouns	N	ekubi	invariable	eku bhi	-	0.7	
+eleazar	PROPN		Eleazar, a man in the family line of Jesus.	Eleazar	religion	BN	Eleazar	invariable		-	0.9	
+eli	PROPN		Eli, a word meaning my God, used by Jesus on the cross.	Eli	religion	BN	Eli	invariable		Eli, Eli, lama sabachthani.	0.8	
+eliakim	PROPN		Eliakim, a man in the family line of Jesus.	Eliakim	religion	BN	Eliakim	invariable		-	0.9	
+eliud	PROPN		Eliud, a man in the family line of Jesus.	Eliud	religion	BN	Eliud	invariable		-	0.9	
+eloi	PROPN		Eloi, an Aramaic word meaning my God.	Eloi	religion	BN	Eloi	invariable		Eloi, Eloi, lama sabachthani.	0.8	
+elymas	PROPN		Elymas, a sorcerer in the book of Acts.	Elymas	religion	BN	Elymas	invariable		Elymas ekjon jadu kora manu thakise.	0.9	
+emerald	NOUN		A green precious stone.	emerald	nature	E	emerald	base form,countable,inanimate		-	0.8	
+epaphroditus	PROPN		Epaphroditus, a helper of Paul.	Epaphroditus	religion	BN	Epaphroditus	invariable		-	0.9	
+euphrates	PROPN		Euphrates, a great river in Asia.	Euphrates	places	BN	Euphrates	invariable		-	0.9	
+gabriel	PROPN		Gabriel, an angel.	Gabriel	religion	BN	Gabriel	invariable		-	0.9	
+galta	NOUN		A mistake or error.	mistake;error	describing	H	ग़लती	base form,countable,inanimate	galti	Eitu moi laga galta ase.	0.9	
+gamaliel	PROPN		Gamaliel, a teacher of the law.	Gamaliel	religion	BN	Gamaliel	invariable		Gamaliel ekjon gyani manu thakise.	0.9	
+gethsemane	PROPN		Gethsemane, a garden near Jerusalem.	Gethsemane	places	BN	Gethsemane	invariable		-	0.9	
+ghuma	VERB		To sleep.	sleep	body,actions	A	ঘুমা	citation form	ghumai,ghum	-	0.7	
+ghusai	VERB		To thrust or push inside.	thrust in;push in	actions	H	घुसाना	citation form		-	0.7	
+gundai	VERB		To stink or give off a smell.	stink;smell bad	describing	A	গুন্ধ	citation form	gandhai	-	0.5	
+gusibo	VERB		Will enter (future of ghusi).	will enter	actions	H	घुसना	future	ghusibo	-	0.7	
+ha	INTJ		Yes; also an exclamation.	yes;ah	greetings	N	ha	invariable	haa	-	0.8	
+hagar	PROPN		Hagar, the mother of Ishmael.	Hagar	religion	BN	Hagar	invariable		-	0.9	
+hairan	ADJ		Weary, bothered or astonished.	weary;bothered;astonished	feelings	H	हैरान	base form		-	0.7	
+haran	PROPN		Haran, a city in Mesopotamia.	Haran	places	BN	Haran	invariable		Haran ekta puran sheher ase.	0.9	
+hata	VERB		To remove or move aside.	remove;move aside	actions	H	हटाना	citation form	hatai	Eitu hata.	0.4	doubtful: likely stem of hatai
+heera	NOUN		A diamond or precious stone.	diamond;gem	money	H	हीरा	base form,countable,inanimate	hira	-	0.8	
+hezekiah	PROPN		Hezekiah, a king of Judah.	Hezekiah	religion	BN	Hezekiah	invariable		-	0.9	
+hymenaeus	PROPN		Hymenaeus, a man named in Paul letters.	Hymenaeus	religion	BN	Hymenaeus	invariable		-	0.9	
+jairus	PROPN		Jairus, a leader of a synagogue.	Jairus	religion	BN	Jairus	invariable		-	0.9	
+jap	NOUN		Repeated chanting or prayer.	chanting;prayer	religion	H	जप	base form,mass,inanimate		Tai jap kori ase.	0.6	
+jasper	NOUN		A precious stone.	jasper	nature	E	jasper	base form,countable,inanimate		-	0.8	
+jechoniah	PROPN		Jechoniah, a king of Judah.	Jechoniah	religion	BN	Jechoniah	invariable		-	0.9	
+jehoshaphat	PROPN		Jehoshaphat, a king of Judah.	Jehoshaphat	religion	BN	Jehoshaphat	invariable		-	0.9	
+jhorna	NOUN		A spring or small stream.	spring;stream	nature	A	জৰণা	base form,countable,inanimate	jorna	-	0.8	
+jintu	PRON		Which, who (relative word, like juntu).	which;who	grammar,pronouns	N	jintu	invariable	juntu	-	0.5	doubtful: likely variant of juntu
+jit	NOUN	VERB=to win	Victory.	victory;win	leisure	H	जीत	base form,mass,inanimate		-	0.8	
+joanna	PROPN		Joanna, a woman who followed Jesus.	Joanna	religion	BN	Joanna	invariable		-	0.9	
+joram	PROPN		Joram, a king of Judah.	Joram	religion	BN	Joram	invariable		-	0.9	
+josiah	PROPN		Josiah, a king of Judah.	Josiah	religion	BN	Josiah	invariable		-	0.9	
+jotham	PROPN		Jotham, a king of Judah.	Jotham	religion	BN	Jotham	invariable		-	0.9	
+julabole	VERB		To make jealous or provoke (purpose form).	to provoke;to make jealous	feelings	N	julabole	purpose		-	0.5	
+julius	PROPN		Julius, a Roman officer.	Julius	culture	BN	Julius	invariable		Julius ekjon Rome laga senapoti thakise.	0.9	
+juthor	ADJ		Crippled or maimed.	crippled;maimed	health,body	N	juthor	base form		-	0.4	doubtful: sense inferred from one verse
+jyoti	NOUN		Light.	light	nature,religion	S	ज्योति	base form,mass,inanimate	jyoty	-	0.8	
+khang	NOUN		A burden or weight.	burden;weight	feelings	N	khang	base form,countable,inanimate		-	0.4	doubtful: sense inferred from one verse
+khat	VERB		To knock (khat-khatai, knocking).	knock	actions	A	খট	citation form		-	0.6	
+khatai	VERB		Knocking (as in khat-khatai).	knocking	actions	A	খটখটাই	citation form	khatkhatai	-	0.6	
+khunda	VERB		To pound or grind grain.	pound;grind	food,farming	A	খুন্দা	citation form		-	0.7	
+koboristan	NOUN		A graveyard.	graveyard;cemetery	culture	P	क़ब्रिस्तान	base form,countable,inanimate	kabristan	-	0.9	
+koila	NOUN		Charcoal or coal.	charcoal;coal	home	H	कोयला	base form,mass,inanimate		-	0.9	
+kuthar	NOUN		An axe.	axe	work	A	কুঠাৰ	base form,countable,inanimate		-	0.9	
+laat	NOUN		A kick.	kick	actions	H	लात	base form,countable,inanimate	lat	-	0.8	
+lama	ADV		Why (Aramaic word in Eli, Eli, lama sabachthani).	why	religion	PN	lama	invariable		Eli, Eli, lama sabachthani.	0.6	doubtful: Aramaic quote only
+larai	NOUN	VERB=to fight (with kora)	A fight or war.	fight;war;battle	community	H	लड़ाई	base form,countable,inanimate		-	0.9	
+latrine	NOUN		A toilet.	toilet;latrine	home,health	E	latrine	base form,countable,inanimate		-	0.8	
+lili	NOUN		A lily flower.	lily	nature	E	lily	base form,countable,inanimate		-	0.7	
+lipi	VERB	NOUN=script	To roll up or wrap.	roll up;wrap	actions	A	লিপি	citation form		-	0.4	doubtful: sense inferred from one verse
+lucius	PROPN		Lucius, a leader in the church at Antioch.	Lucius	religion	BN	Lucius	invariable		-	0.9	
+luka	VERB		To hide.	hide	actions	A	লুকা	citation form	luku	-	0.8	
+lycaonia	PROPN		Lycaonia, a region in Asia Minor.	Lycaonia	places	BN	Lycaonia	invariable		-	0.9	
+lydia	PROPN		Lydia, a woman in the book of Acts.	Lydia	religion	BN	Lydia	invariable		-	0.9	
+mala	NOUN		A garland or necklace.	garland;necklace	clothing,culture	H	माला	base form,countable,inanimate		Tai mala pindhi ase.	0.9	
+masiha	PROPN		The Messiah, the anointed one.	Messiah;Christ	religion	BN	Masiha	invariable	masih	-	0.8	
+mattathias	PROPN		Mattathias, a man in the family line of Jesus.	Mattathias	religion	BN	Mattathias	invariable		-	0.9	
+matthan	PROPN		Matthan, a man in the family line of Jesus.	Matthan	religion	BN	Matthan	invariable		-	0.9	
+matthat	PROPN		Matthat, a man in the family line of Jesus.	Matthat	religion	BN	Matthat	invariable		-	0.9	
+matthias	PROPN		Matthias, an apostle chosen after Judas.	Matthias	religion	BN	Matthias	invariable		-	0.9	
+mecedonia	PROPN		Macedonia, a region in Greece.	Macedonia	places	BN	Macedonia	invariable	macedonia	-	0.9	
+melchi	PROPN		Melchi, a man in the family line of Jesus.	Melchi	religion	BN	Melchi	invariable		-	0.9	
+mesopotamia	PROPN		Mesopotamia, the land between two rivers.	Mesopotamia	places	BN	Mesopotamia	invariable		-	0.9	
+michael	PROPN		Michael, an archangel.	Michael	religion	BN	Michael	invariable		Michael ekjon sorgodoth ase.	0.9	
+mina	NOUN		A mina, an old unit of money.	mina;coin	money	E	mina	base form,countable,inanimate		Ekta mina dibi.	0.5	
+mistiri	NOUN		A mason or skilled builder.	mason;builder;craftsman	work	H	मिस्त्री	base form,countable,animate	mistri	-	0.9	
+mol	NOUN	NOUN=manure	Price or worth.	price;worth;manure	money	H	मोल	base form,mass,inanimate		-	0.6	doubtful: verse sense is manure
+moncho	NOUN		A stage or platform.	stage;platform	community	S	मंच	base form,countable,inanimate	mancha	-	0.7	
+mosto	ADJ		Hardened, dull (of the mind).	hardened;dull	describing	N	mosto	base form		-	0.3	doubtful: sense inferred from one verse
+murjha	ADJ		Withered, shrivelled.	withered;shrivelled	describing,health	H	मुरझा	base form		-	0.7	
+mysia	PROPN		Mysia, a region in Asia Minor.	Mysia	places	BN	Mysia	invariable		-	0.9	
+nabhaba	VERB		Not thinking or expecting (negative of bhaba).	not expecting;not thinking	actions	N	nabhaba	negative		-	0.6	
+nabhute	VERB		Does not go out (of fire).	does not go out	actions	N	nabhute	negative		-	0.4	doubtful: sense inferred from one verse
+nachi	VERB		To dance (conjunctive: dancing).	dance;dancing	leisure,culture	H	नाचना	citation form		-	0.9	
+nadhala	ADJ		Not put in (as in unleavened bread).	unleavened;not added	food	N	nadhala	base form		-	0.5	
+nadhalibo	VERB		Will not pour or put in.	will not pour	actions	N	nadhalibo	negative,future		Tai pani nadhalibo.	0.5	
+naghurabo	VERB		Will not return or turn back.	will not return	actions	N	naghurabo	negative,future		Moi naghurabo.	0.5	
+nahili	VERB		Not shaking or moving (negative conjunctive).	not moving;not shaken	actions	N	nahili	negative		-	0.5	
+nahilibo	VERB		Will not shake or move.	will not move	actions	N	nahilibo	negative,future		-	0.5	
+nakhaile	VERB		If not eating (negative conditional of khai).	if not eating	food	N	nakhaile	negative,conditional		-	0.7	
+nakhila	VERB		Do not eat or take (as in bhoi nakhila, do not fear).	do not fear;do not eat	feelings	N	nakhila	negative,imperative		-	0.5	
+namaribole	VERB		In order not to die or kill.	so as not to die;so as not to kill	actions	N	namaribole	negative,purpose		-	0.4	
+namoribole	VERB		Would not have died.	would not have died	actions	N	namoribole	negative		-	0.5	
+napunche	VERB		Does not reach or arrive.	does not reach;does not arrive	actions	N	napunche	negative,present		Tai ghor te napunche.	0.6	
+narakha	VERB		Not kept or planted (negative of rakha).	not kept;not sown	farming	N	narakha	negative		-	0.4	
+nashikabo	VERB		Will not learn.	will not learn	education	N	nashikabo	negative,future		Tai nashikabo.	0.5	
+nashikai	VERB		Does not teach or guide.	does not teach	education	N	nashikai	negative		-	0.5	
+nashta	NOUN		Breakfast or a light morning meal.	breakfast;snack	food	P	नाश्ता	base form,mass,inanimate	nasta	Nashta khabo.	0.8	
+nasilai	VERB		Does not sew (negative of silai).	does not sew	clothing	N	nasilai	negative		-	0.6	
+nathakilebi	VERB		Even though not having or staying.	even though lacking	grammar	N	nathakilebi	negative,concessive		-	0.6	
+neendh	NOUN		Sleep.	sleep	body	H	नींद	base form,mass,inanimate	nind	-	0.8	
+nicolas	PROPN		Nicolas, a man in Revelation.	Nicolas	religion	BN	Nicolas	invariable		-	0.9	
+nothogabi	VERB		Do not deceive (negative imperative of thogai).	do not deceive	actions	N	nothogabi	negative,imperative		-	0.6	
+olivet	PROPN		Olivet, the Mount of Olives.	Olivet	places	BN	Olivet	invariable		-	0.9	
+onesimus	PROPN		Onesimus, a man named in Paul letters.	Onesimus	religion	BN	Onesimus	invariable		-	0.9	
+onesiphorus	PROPN		Onesiphorus, a friend of Paul.	Onesiphorus	religion	BN	Onesiphorus	invariable		-	0.9	
+ongkho	NOUN		A number or figure.	number;figure	numbers	A	অংক	base form,countable,inanimate	ongko	-	0.6	
+pakhi	NOUN		A wing; also a bird.	wing;bird	nature	A	পাখি	base form,countable,animate	pakhi	-	0.7	
+palm	NOUN		A palm tree or palm leaf.	palm	nature	E	palm	base form,countable,inanimate		-	0.7	
+panjar	NOUN		Rib or side of the body.	rib;side	body	A	পাঁজৰ	base form,countable,inanimate	panjor	-	0.8	
+paphos	PROPN		Paphos, a port city on Cyprus.	Paphos	places	BN	Paphos	invariable		-	0.9	
+parivar	NOUN		A family or household.	family;household	family	S	परिवार	base form,countable,animate	poribar	-	0.9	
+paro	NOUN		A pigeon or dove.	pigeon;dove	nature	A	পাৰো	base form,countable,animate		-	0.7	
+pergamum	PROPN		Pergamum, a city in Asia Minor.	Pergamum	places	BN	Pergamum	invariable		-	0.9	
+pharoah	PROPN		Pharaoh, the king of Egypt.	Pharaoh	culture	BN	Pharoah	invariable	pharaoh	-	0.9	
+phasabo	VERB		Will trap or catch (future).	will trap;will catch	actions	H	फँसाना	future		-	0.6	
+phata	VERB		Torn, split.	torn;split	actions	H	फटा	past participle		-	0.8	
+phen	NOUN		Foam or froth.	foam;froth	nature	H	फेन	base form,mass,inanimate		-	0.8	
+philadelphia	PROPN		Philadelphia, a city in Asia Minor.	Philadelphia	places	BN	Philadelphia	invariable		Philadelphia ekta sheher ase.	0.9	
+phoenix	PROPN		Phoenix, a port on Crete.	Phoenix	places	BN	Phoenix	invariable		-	0.9	
+phot	NOUN		A photo.	photo	media	E	photo	base form,countable,inanimate	photo	Moi phot tulibo.	0.3	doubtful: spelling unclear
+phuslai	VERB		To coax or persuade.	coax;persuade	actions	H	फुसलाना	citation form		-	0.7	
+pidhi	NOUN		A generation or descendants.	generation;descendants	family	S	पीढ़ी	base form,countable,animate		-	0.8	
+pisidia	PROPN		Pisidia, a region in Asia Minor.	Pisidia	places	BN	Pisidia	invariable		-	0.9	
+porbot	NOUN		A mountain.	mountain	nature	S	पर्वत	base form,countable,inanimate	parbat	-	0.8	
+proshansa	NOUN		Praise.	praise	feelings	S	प्रशंसा	base form,mass,inanimate	prosongsa	-	0.8	
+publius	PROPN		Publius, a leader on the island of Malta.	Publius	culture	BN	Publius	invariable		-	0.9	
+pucha	ADJ		Rotten, spoiled.	rotten;spoiled	describing,food	A	পচা	base form	pocha	-	0.8	
+rang	NOUN		Colour.	colour;paint	colours	H	रंग	base form,countable,inanimate	rong	Eitu bhal rang ase.	0.9	
+regiment	NOUN		A group of soldiers.	regiment;army unit	civic	E	regiment	base form,countable,animate		-	0.7	
+rehoboam	PROPN		Rehoboam, a king of Judah.	Rehoboam	religion	BN	Rehoboam	invariable		-	0.9	
+roop	NOUN		Form or appearance.	form;appearance	describing	S	रूप	base form,countable,inanimate	rup	-	0.8	
+rufus	PROPN		Rufus, a man in the church at Rome.	Rufus	religion	BN	Rufus	invariable		-	0.9	
+saathi	NOUN		A friend or companion.	friend;companion	community	H	साथी	base form,countable,animate	sathi	-	0.9	
+sabachthani	X		Aramaic word meaning you have forsaken me.	forsaken	religion	PN	sabachthani	invariable		Eli, Eli, lama sabachthani.	0.7	
+salaam	NOUN	INTJ=hello	A greeting.	greeting;salute	greetings	P	सलाम	base form,countable,inanimate	salam	-	0.9	
+salem	PROPN		Salem, an old city of peace.	Salem	places	BN	Salem	invariable		-	0.9	
+salome	PROPN		Salome, a woman who followed Jesus.	Salome	religion	BN	Salome	invariable		-	0.9	
+sandook	NOUN		A chest or box.	chest;box	home	P	संदूक	base form,countable,inanimate	sanduk	-	0.9	
+saya	NOUN		A shadow.	shadow	nature	P	साया	base form,countable,inanimate		-	0.8	
+shealtiel	PROPN		Shealtiel, a man in the family line of Jesus.	Shealtiel	religion	BN	Shealtiel	invariable		-	0.9	
+sikayat	NOUN		A complaint.	complaint	community	P	शिकायत	base form,countable,inanimate	shikayat	-	0.9	
+silai	VERB	NOUN=sewing	To sew.	sew;stitch	clothing	H	सिलाई	citation form		Tai kapra silai kori ase.	0.8	
+siri	NOUN		A stair or step.	stairs;step	home	H	सीढ़ी	base form,countable,inanimate	sirhi	-	0.6	
+siyahi	NOUN		Ink.	ink	education	P	स्याही	base form,mass,inanimate	syahi	-	0.8	
+siyal	NOUN		A jackal or fox.	jackal;fox	nature	H	सियार	base form,countable,animate		Siyal rati huwa ase.	0.8	
+smyrna	PROPN		Smyrna, a city in Asia Minor.	Smyrna	places	BN	Smyrna	invariable		Smyrna ekta puran sheher ase.	0.9	
+sosthenes	PROPN		Sosthenes, a leader of a synagogue.	Sosthenes	religion	BN	Sosthenes	invariable		-	0.9	
+sukhai	VERB		To dry something.	dry	actions	A	শুকাই	citation form		-	0.8	
+suyro	NOUN		The sun.	sun	nature	S	सूर्य	base form,countable,inanimate	suryo	-	0.7	
+taar	NOUN		Wire; also a telegram.	wire;cable	technology	H	तार	base form,countable,inanimate	tar	Taar bisi lomba ase.	0.8	
+tabitha	PROPN		Tabitha, a woman raised to life by Peter.	Tabitha	religion	BN	Tabitha	invariable		-	0.9	
+talents	NOUN		Plural of talent: large sums of money.	talents;money	money	E	talents	base form,countable,inanimate		-	0.6	
+tari	ADV		Quickly (in tara-tari).	quickly;hurry	time	H	तड़ी	invariable		-	0.4	doubtful: seen only in tara-tari
+tertullus	PROPN		Tertullus, a lawyer in the book of Acts.	Tertullus	civic	BN	Tertullus	invariable		-	0.9	
+thaddaeus	PROPN		Thaddaeus, one of the twelve apostles.	Thaddaeus	religion	BN	Thaddaeus	invariable		-	0.9	
+theophilus	PROPN		Theophilus, the person Luke wrote to.	Theophilus	religion	BN	Theophilus	invariable		-	0.9	
+tyag	NOUN	VERB=to give up (with kori)	Giving up; sacrifice.	sacrifice;giving up	religion	S	त्याग	base form,mass,inanimate	tyaag	Tai bisi tyag kori ase.	0.8	
+ulti	NOUN		Vomit.	vomit	health,body	H	उल्टी	base form,mass,inanimate		Moi ulti kori ase.	0.5	doubtful: could be ulta turn
+updesh	NOUN		Teaching or advice.	teaching;advice	education,religion	S	उपदेश	base form,mass,inanimate	upodesh	-	0.8	
+uzziah	PROPN		Uzziah, a king of Judah.	Uzziah	religion	BN	Uzziah	invariable		-	0.9	
+vyapari	NOUN		A merchant or trader.	merchant;trader	work,money	S	व्यापारी	base form,countable,animate	byapari	-	0.9	
+zadok	PROPN		Zadok, a man in the family line of Jesus.	Zadok	religion	BN	Zadok	invariable		-	0.9	
+zeus	PROPN		Zeus, a Greek god.	Zeus	religion	BN	Zeus	invariable		-	0.9	
+khusi	NOUN	ADJ=happy	Happiness or joy.	joy;happiness	feelings	P	ख़ुशी	base form,mass,inanimate	khushi	-	0.9	
+dukan	NOUN		A shop.	shop;store	money,work	P	दुकान	base form,countable,inanimate	dokan	-	0.9	
+hataikena	VERB		Having removed (conjunctive of hatai).	having removed	actions	N	hataikena	conjunctive		-	0.6	
+ghonta	NOUN		An hour; also a bell.	hour;bell	time	H	घंटा	base form,countable,inanimate	ghanta	-	0.9	
+sobji	NOUN		Vegetables or herbs.	vegetable;herb	food	P	सब्ज़ी	base form,mass,inanimate	sabji	-	0.9	
+wala	PART		One who does or has something (as in dangor wala).	one who;-er	grammar	H	वाला	invariable		-	0.6	

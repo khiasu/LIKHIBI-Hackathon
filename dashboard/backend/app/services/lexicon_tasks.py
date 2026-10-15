@@ -1,9 +1,11 @@
-"""Lexicon words that still need an English meaning, for speakers to supply.
+"""Lexicon words that still need a speaker-checked English meaning, for speakers to supply.
 
-The lexicon lists about 6,900 Nagamese words, but none has a verified meaning yet.
-Speakers fill them in on the Contribute page, most frequent words first. Each
+The lexicon lists 20,000 Nagamese words. Most have a researched meaning, but none is
+verified until a speaker checks it. Speakers fill them in on the Contribute page,
+most frequent words first, with the researched glosses offered as guesses. Each
 meaning goes through the same review as any other contribution, and an approved
-one reaches the translation memory at once.
+one reaches the translation memory at once. Derived forms (kor- + -ise) are not
+asked about: their meaning follows from the root's.
 """
 
 from __future__ import annotations
@@ -30,18 +32,25 @@ class MeaningTask:
     guesses: tuple[str, ...]
 
 
-def _needs_meaning(definition: object) -> bool:
-    text = str(definition or "").strip()
+def _needs_meaning(entry: dict) -> bool:
+    if "is_validated" in entry:  # current lexicon: definitions are researched, a speaker verifies them
+        return not entry["is_validated"] and entry.get("status") != "derived"
+    text = str(entry.get("english_definition") or "").strip()
     return not text or text.startswith("Definition placeholder")
 
 
 @lru_cache(maxsize=4)
-def _open_words(path: str, mtime: float) -> tuple[tuple[str, int, str | None], ...]:
+def _open_words(path: str, mtime: float) -> tuple[tuple[str, int, str | None, tuple[str, ...]], ...]:
     entries = json.loads(Path(path).read_text(encoding="utf-8"))
     words = [
-        (str(e["lemma"]).strip(), int(e.get("frequency_count") or 0), e.get("etymology_origin"))
+        (
+            str(e["lemma"]).strip(),
+            int(e.get("frequency_count") or 0),
+            e.get("etymology_origin"),
+            tuple(str(g.get("english")) for g in (e.get("gloss_candidates") or [])[:2] if g.get("english")),
+        )
         for e in entries
-        if e.get("lemma") and _needs_meaning(e.get("english_definition"))
+        if e.get("lemma") and _needs_meaning(e)
     ]
     return tuple(sorted(words, key=lambda w: -w[1]))
 
@@ -69,5 +78,8 @@ def meaning_tasks(
     pool = [w for w in open_words[:POOL_SIZE] if w[0].lower() not in skip]
     picks = (rng or random.Random()).sample(pool, min(count, len(pool)))
     picks.sort(key=lambda w: -w[1])
-    tasks = [MeaningTask(lemma, frequency, origin, guesses.get(lemma.lower(), ())) for lemma, frequency, origin in picks]
+    tasks = [
+        MeaningTask(lemma, frequency, origin, guesses.get(lemma.lower()) or researched)
+        for lemma, frequency, origin, researched in picks
+    ]
     return tasks, len(open_words), len(words)
