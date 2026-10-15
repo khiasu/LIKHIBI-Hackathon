@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A Select's closed state: the value, with the caret pushed to the far right (17dp in). -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:drawableEnd="@drawable/ic_select_caret"
+    android:drawableTint="@color/app_text"
+    android:ellipsize="end"
+    android:gravity="center_vertical"
+    android:maxLines="1"
+    android:paddingEnd="0dp"
+    android:textColor="@color/app_text"
+    android:textSize="16sp" />

@@ -1,700 +1,510 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Settings home, Figma 54:245 (design/figma/00_54-245_app-settings.png). -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/colorBackground"
+    android:background="@color/app_background"
+    android:clipToPadding="false"
     android:fitsSystemWindows="true">
 
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:paddingBottom="40dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="32dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            android:src="@drawable/likhibi_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_gravity="center_horizontal"
+            android:accessibilityHeading="true"
+            android:text="@string/app_name"
+            android:textColor="@color/app_text"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
-            <!-- Header Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/settings_subtitle"
+            android:textColor="@color/app_text_subtitle"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="86dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shawl_band"
+            android:importantForAccessibility="no" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_enable_keyboard"
+            style="@style/Likhibi.Button.Filled"
+            android:layout_marginTop="23dp"
+            android:text="@string/btn_enable" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_select_keyboard"
+            style="@style/Likhibi.Button.Outlined"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_select" />
+
+        <!-- PERSONALIZATION -->
+        <TextView
+            style="@style/Likhibi.SectionHeader"
+            android:layout_marginTop="32dp"
+            android:text="@string/section_personalization" />
+
+        <com.google.android.material.card.MaterialCardView style="@style/Likhibi.Card">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:paddingTop="48dp"
-                android:paddingBottom="32dp">
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/likhibi_logo"
-                    android:scaleType="centerCrop" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Likhibi"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="32sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="16dp" />
-                
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nagamese Keyboard"
-                    android:textColor="?attr/colorOnSurface"
-                    android:alpha="0.7"
-                    android:textSize="14sp"
-                    android:layout_marginTop="4dp" />
-                
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingHorizontal="16dp">
-
-                <!-- Setup Buttons -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_enable_keyboard"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Enable Keyboard"
-                    app:cornerRadius="12dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_select_keyboard"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginBottom="24dp"
-                    android:text="Select Keyboard"
-                    app:cornerRadius="12dp"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
-
-                <!-- Personalization Card -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PERSONALIZATION"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.1"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="8dp" />
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="?attr/colorSurface"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="0dp"
-                    app:strokeWidth="0dp"
-                    android:layout_marginBottom="24dp">
-                    
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <!-- Theme Row -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:paddingHorizontal="16dp"
-                            android:paddingVertical="12dp"
-                            android:gravity="center_vertical">
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Keyboard Theme"
-                                    android:textColor="?attr/colorOnSurface"
-                                    android:textSize="16sp" />
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Visual theme and palette"
-                                    android:textColor="?attr/colorOnSurface"
-                                    android:alpha="0.6"
-                                    android:textSize="13sp" />
-                            </LinearLayout>
-                            <Spinner
-                                android:id="@+id/spinner_theme"
-                                android:layout_width="wrap_content"
-                                android:layout_height="48dp"
-                                android:spinnerMode="dialog"
-                                android:backgroundTint="?attr/colorOnSurface" />
-                        </LinearLayout>
-                        
-                        <!-- Dedicated Custom Theme Controls Panel -->
-                        <LinearLayout
-                            android:id="@+id/layout_custom_theme_controls"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:paddingHorizontal="16dp"
-                            android:paddingBottom="16dp"
-                            android:visibility="gone">
-
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_change_wallpaper"
-                                android:layout_width="match_parent"
-                                android:layout_height="48dp"
-                                android:layout_marginBottom="14dp"
-                                android:text="Pick Custom Wallpaper"
-                                app:icon="@drawable/ic_wallpaper_clean"
-                                app:cornerRadius="10dp"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
-
-                            <!-- Wallpaper Dimming -->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginBottom="12dp">
-                                <TextView
-                                    android:id="@+id/lbl_overlay_opacity"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Wallpaper Dimming: 55%"
-                                    android:textColor="?attr/colorOnSurface"
-                                    android:textSize="13sp" />
-                                <SeekBar
-                                    android:id="@+id/seek_overlay_opacity"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:max="240"
-                                    android:progress="140"
-                                    android:layout_marginTop="4dp" />
-                            </LinearLayout>
-
-                            <!-- Keycap Opacity -->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginBottom="12dp">
-                                <TextView
-                                    android:id="@+id/lbl_key_opacity"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Keycap Transparency: 20%"
-                                    android:textColor="?attr/colorOnSurface"
-                                    android:textSize="13sp" />
-                                <SeekBar
-                                    android:id="@+id/seek_key_opacity"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:max="255"
-                                    android:progress="50"
-                                    android:layout_marginTop="4dp" />
-                            </LinearLayout>
-
-                            <!-- Key Corner Radius Slider -->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginBottom="12dp">
-                                <TextView
-                                    android:id="@+id/lbl_corner_radius"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Key Corner Rounding: 10dp"
-                                    android:textColor="?attr/colorOnSurface"
-                                    android:textSize="13sp" />
-                                <SeekBar
-                                    android:id="@+id/seek_corner_radius"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:max="20"
-                                    android:progress="10"
-                                    android:layout_marginTop="4dp" />
-                            </LinearLayout>
-
-                            <!-- 3D Elevation Switch -->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:gravity="center_vertical"
-                                android:layout_marginBottom="14dp">
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:orientation="vertical">
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="3D Key Elevation"
-                                        android:textColor="?attr/colorOnSurface"
-                                        android:textSize="14sp" />
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Tactile keycap drop shadows"
-                                        android:textColor="?attr/colorOnSurface"
-                                        android:alpha="0.6"
-                                        android:textSize="12sp" />
-                                </LinearLayout>
-                                <com.google.android.material.switchmaterial.SwitchMaterial
-                                    android:id="@+id/switch_custom_shadow"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
-                            </LinearLayout>
-
-                            <!-- Accent Glow Color Selection -->
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Key Accent Color"
-                                android:textColor="?attr/colorOnSurface"
-                                android:textSize="13sp"
-                                android:layout_marginBottom="8dp" />
-
-                            <LinearLayout
-                                android:id="@+id/layout_accent_colors"
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:orientation="horizontal"
-                                android:gravity="center_vertical">
-
-                                <View
-                                    android:id="@+id/color_chip_cyan"
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="@drawable/color_chip_cyan"
-                                    android:clickable="true"
-                                    android:focusable="true" />
-
-                                <View
-                                    android:id="@+id/color_chip_amber"
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="@drawable/color_chip_amber"
-                                    android:clickable="true"
-                                    android:focusable="true" />
-
-                                <View
-                                    android:id="@+id/color_chip_emerald"
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="@drawable/color_chip_emerald"
-                                    android:clickable="true"
-                                    android:focusable="true" />
-
-                                <View
-                                    android:id="@+id/color_chip_rose"
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="@drawable/color_chip_rose"
-                                    android:clickable="true"
-                                    android:focusable="true" />
-
-                                <View
-                                    android:id="@+id/color_chip_violet"
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="@drawable/color_chip_violet"
-                                    android:clickable="true"
-                                    android:focusable="true" />
-
-                                <View
-                                    android:id="@+id/color_chip_blue"
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="@drawable/color_chip_blue"
-                                    android:clickable="true"
-                                    android:focusable="true" />
-
-                                <View
-                                    android:id="@+id/color_chip_white"
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
-                                    android:background="@drawable/color_chip_white"
-                                    android:clickable="true"
-                                    android:focusable="true" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?attr/colorOnSurface" android:alpha="0.08" android:layout_marginStart="16dp"/>
-
-                        <!-- Number Row Toggle -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:paddingHorizontal="16dp"
-                            android:paddingVertical="12dp"
-                            android:gravity="center_vertical">
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Number Row"
-                                    android:textColor="?attr/colorOnSurface"
-                                    android:textSize="16sp" />
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Display dedicated number row on top"
-                                    android:textColor="?attr/colorOnSurface"
-                                    android:alpha="0.6"
-                                    android:textSize="13sp" />
-                            </LinearLayout>
-                            <com.google.android.material.switchmaterial.SwitchMaterial
-                                android:id="@+id/switch_number_row"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-                        </LinearLayout>
-
-                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?attr/colorOnSurface" android:alpha="0.08" android:layout_marginStart="16dp"/>
-
-                        <!-- Font Row -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:paddingHorizontal="16dp"
-                            android:paddingVertical="12dp"
-                            android:gravity="center_vertical">
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Keyboard Font"
-                                    android:textColor="?attr/colorOnSurface"
-                                    android:textSize="16sp" />
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Keycap typography style"
-                                    android:textColor="?attr/colorOnSurface"
-                                    android:alpha="0.6"
-                                    android:textSize="13sp" />
-                            </LinearLayout>
-                            <Spinner
-                                android:id="@+id/spinner_font"
-                                android:layout_width="wrap_content"
-                                android:layout_height="48dp"
-                                android:spinnerMode="dialog"
-                                android:backgroundTint="?attr/colorOnSurface" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <!-- Sensory Feedback Card -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="SENSORY FEEDBACK"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.1"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="8dp" />
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="?attr/colorSurface"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="0dp"
-                    app:strokeWidth="0dp"
-                    android:layout_marginBottom="24dp">
-                    
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <!-- Haptic Row -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:paddingHorizontal="16dp"
-                            android:paddingTop="16dp"
-                            android:paddingBottom="8dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Haptic Feedback"
-                                android:textColor="?attr/colorOnSurface"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:id="@+id/lbl_haptic"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Vibration strength: 10ms"
-                                android:textColor="?attr/colorOnSurface"
-                                android:alpha="0.6"
-                                android:textSize="13sp"
-                                android:layout_marginTop="2dp" />
-                            <SeekBar
-                                android:id="@+id/seek_haptic"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
-                                android:max="50"
-                                android:progress="10"
-                                android:progressTint="?attr/colorPrimary"
-                                android:thumbTint="?attr/colorPrimary" />
-                        </LinearLayout>
-
-                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?attr/colorOnSurface" android:alpha="0.08" android:layout_marginStart="16dp"/>
-
-                        <!-- Sound Toggle Row -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:paddingHorizontal="16dp"
-                            android:paddingVertical="12dp"
-                            android:gravity="center_vertical">
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Key Press Sounds"
-                                android:textColor="?attr/colorOnSurface"
-                                android:textSize="16sp" />
-                            <com.google.android.material.switchmaterial.SwitchMaterial
-                                android:id="@+id/switch_sound"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:useMaterialThemeColors="true" />
-                        </LinearLayout>
-                        
-                        <!-- Sound Volume Row -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:paddingHorizontal="16dp"
-                            android:paddingBottom="16dp">
-                            <TextView
-                                android:id="@+id/lbl_sound_volume"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Volume: 50%"
-                                android:textColor="?attr/colorOnSurface"
-                                android:alpha="0.6"
-                                android:textSize="13sp" />
-                            <SeekBar
-                                android:id="@+id/seek_sound_volume"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:max="100"
-                                android:progress="50"
-                                android:progressTint="?attr/colorPrimary"
-                                android:thumbTint="?attr/colorPrimary" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <!-- Translation Card -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TRANSLATION"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.1"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="8dp" />
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    app:cardBackgroundColor="?attr/colorSurface"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="0dp"
-                    app:strokeWidth="0dp">
+                <LinearLayout
+                    style="@style/Likhibi.Row"
+                    android:minHeight="72dp">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
                         android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:paddingHorizontal="16dp"
-                            android:paddingVertical="12dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Offline translator"
-                                android:textColor="?attr/colorOnSurface"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:id="@+id/text_translate_model_status"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:alpha="0.6"
-                                android:text="Checking…"
-                                android:textColor="?attr/colorOnSurface"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginStart="16dp"
-                            android:alpha="0.08"
-                            android:background="?attr/colorOnSurface" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:paddingHorizontal="16dp"
-                            android:paddingVertical="12dp">
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Use the Likhibi server when online"
-                                    android:textColor="?attr/colorOnSurface"
-                                    android:textSize="16sp" />
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:alpha="0.6"
-                                    android:text="Stronger translations. Only the sentence you translate is sent."
-                                    android:textColor="?attr/colorOnSurface"
-                                    android:textSize="13sp" />
-                            </LinearLayout>
-                            <com.google.android.material.switchmaterial.SwitchMaterial
-                                android:id="@+id/switch_translate_online"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-                        </LinearLayout>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginStart="16dp"
-                            android:alpha="0.08"
-                            android:background="?attr/colorOnSurface" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:paddingHorizontal="16dp"
-                            android:paddingTop="12dp"
-                            android:paddingBottom="4dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Server address"
-                                android:textColor="?attr/colorOnSurface"
-                                android:textSize="16sp" />
-                            <EditText
-                                android:id="@+id/edit_translate_server"
-                                android:layout_width="match_parent"
-                                android:layout_height="48dp"
-                                android:hint="https://… or http://192.168.1.5:8000"
-                                android:importantForAutofill="no"
-                                android:inputType="textUri"
-                                android:singleLine="true"
-                                android:textSize="15sp" />
-                        </LinearLayout>
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:alpha="0.6"
-                            android:paddingHorizontal="16dp"
-                            android:paddingBottom="14dp"
-                            android:text="Typing and offline translation never leave this phone. With the server on, only the sentence you choose to translate is sent to the address above."
-                            android:textColor="?attr/colorOnSurface"
-                            android:textSize="13sp" />
+                            style="@style/Likhibi.RowTitle"
+                            android:text="@string/row_theme" />
+
+                        <TextView
+                            style="@style/Likhibi.RowDescription"
+                            android:text="@string/row_theme_desc" />
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
 
-                <!-- Tools Card -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TOOLS"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.1"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="8dp" />
+                    <Spinner
+                        android:id="@+id/spinner_theme"
+                        style="@style/Likhibi.Select"
+                        android:contentDescription="@string/row_theme" />
+                </LinearLayout>
 
-                <com.google.android.material.card.MaterialCardView
+                <!-- Custom theme controls, shown only while Custom is selected. -->
+                <LinearLayout
+                    android:id="@+id/layout_custom_theme_controls"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardBackgroundColor="?attr/colorSurface"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="0dp"
-                    app:strokeWidth="0dp">
-                    
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="19dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_change_wallpaper"
+                        style="@style/Likhibi.Button.Outlined"
+                        android:layout_marginBottom="14dp"
+                        android:text="@string/custom_pick_wallpaper" />
+
+                    <TextView
+                        android:id="@+id/lbl_overlay_opacity"
+                        style="@style/Likhibi.RowDescription"
+                        android:text="Wallpaper dimming" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/seek_overlay_opacity"
+                        style="@style/Likhibi.Slider"
+                        android:contentDescription="Wallpaper dimming"
+                        android:stepSize="1"
+                        android:valueFrom="0"
+                        android:valueTo="240" />
+
+                    <TextView
+                        android:id="@+id/lbl_key_opacity"
+                        style="@style/Likhibi.RowDescription"
+                        android:text="Keycap opacity" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/seek_key_opacity"
+                        style="@style/Likhibi.Slider"
+                        android:contentDescription="Keycap opacity"
+                        android:stepSize="1"
+                        android:valueFrom="0"
+                        android:valueTo="255" />
+
+                    <TextView
+                        android:id="@+id/lbl_corner_radius"
+                        style="@style/Likhibi.RowDescription"
+                        android:text="Key corner radius" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/seek_corner_radius"
+                        style="@style/Likhibi.Slider"
+                        android:contentDescription="Key corner radius"
+                        android:stepSize="1"
+                        android:valueFrom="0"
+                        android:valueTo="20" />
+
                     <LinearLayout
-                        android:id="@+id/btn_clear_clipboard"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        android:background="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:gravity="center_vertical">
-                        
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
                         <TextView
+                            style="@style/Likhibi.RowTitle"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Clear Clipboard History"
-                            android:textColor="#FF5252"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                            android:text="Key shadows" />
 
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switch_custom_shadow"
+                            style="@style/Likhibi.Switch"
+                            android:contentDescription="Key shadows" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Likhibi.RowDescription"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/custom_accent" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_accent_colors"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/color_chip_cyan"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/color_chip_cyan"
+                            android:clickable="true"
+                            android:focusable="true" />
+
+                        <View
+                            android:id="@+id/color_chip_amber"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/color_chip_amber"
+                            android:clickable="true"
+                            android:focusable="true" />
+
+                        <View
+                            android:id="@+id/color_chip_emerald"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/color_chip_emerald"
+                            android:clickable="true"
+                            android:focusable="true" />
+
+                        <View
+                            android:id="@+id/color_chip_rose"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/color_chip_rose"
+                            android:clickable="true"
+                            android:focusable="true" />
+
+                        <View
+                            android:id="@+id/color_chip_violet"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/color_chip_violet"
+                            android:clickable="true"
+                            android:focusable="true" />
+
+                        <View
+                            android:id="@+id/color_chip_blue"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/color_chip_blue"
+                            android:clickable="true"
+                            android:focusable="true" />
+
+                        <View
+                            android:id="@+id/color_chip_white"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/color_chip_white"
+                            android:clickable="true"
+                            android:focusable="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/Likhibi.Divider" />
+
+                <LinearLayout
+                    style="@style/Likhibi.Row"
+                    android:minHeight="72dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Likhibi.RowTitle"
+                            android:text="@string/row_number_row" />
+
+                        <TextView
+                            style="@style/Likhibi.RowDescription"
+                            android:text="@string/row_number_row_desc" />
+                    </LinearLayout>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switch_number_row"
+                        style="@style/Likhibi.Switch"
+                        android:contentDescription="@string/row_number_row" />
+                </LinearLayout>
+
+                <View style="@style/Likhibi.Divider" />
+
+                <LinearLayout
+                    style="@style/Likhibi.Row"
+                    android:minHeight="69dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Likhibi.RowTitle"
+                            android:text="@string/row_font" />
+
+                        <TextView
+                            style="@style/Likhibi.RowDescription"
+                            android:text="@string/row_font_desc" />
+                    </LinearLayout>
+
+                    <Spinner
+                        android:id="@+id/spinner_font"
+                        style="@style/Likhibi.Select"
+                        android:contentDescription="@string/row_font" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- SENSORY FEEDBACK -->
+        <TextView
+            style="@style/Likhibi.SectionHeader"
+            android:text="@string/section_feedback" />
+
+        <com.google.android.material.card.MaterialCardView style="@style/Likhibi.Card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        style="@style/Likhibi.RowTitle"
+                        android:text="@string/row_haptic" />
+
+                    <TextView
+                        android:id="@+id/lbl_haptic"
+                        style="@style/Likhibi.RowDescription"
+                        android:text="Vibration strength: 10ms" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/seek_haptic"
+                        style="@style/Likhibi.Slider"
+                        android:layout_marginTop="6dp"
+                        android:contentDescription="@string/row_haptic"
+                        android:stepSize="1"
+                        android:valueFrom="0"
+                        android:valueTo="50" />
+                </LinearLayout>
+
+                <View style="@style/Likhibi.Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/Likhibi.RowTitle"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/row_sound" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switch_sound"
+                            style="@style/Likhibi.Switch"
+                            android:contentDescription="@string/row_sound" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/lbl_sound_volume"
+                        style="@style/Likhibi.RowDescription"
+                        android:layout_marginTop="14dp"
+                        android:text="Volume: 50%" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/seek_sound_volume"
+                        style="@style/Likhibi.Slider"
+                        android:contentDescription="@string/row_sound_volume"
+                        android:stepSize="1"
+                        android:valueFrom="0"
+                        android:valueTo="100" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- TRANSLATION (not in the design; keeps the existing translation controls) -->
+        <TextView
+            style="@style/Likhibi.SectionHeader"
+            android:text="@string/section_translation" />
+
+        <com.google.android.material.card.MaterialCardView style="@style/Likhibi.Card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/Likhibi.Row"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Likhibi.RowTitle"
+                        android:text="@string/row_offline_translator" />
+
+                    <TextView
+                        android:id="@+id/text_translate_model_status"
+                        style="@style/Likhibi.RowDescription"
+                        android:text="Checking…" />
+                </LinearLayout>
+
+                <View style="@style/Likhibi.Divider" />
+
+                <LinearLayout style="@style/Likhibi.Row">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Likhibi.RowTitle"
+                            android:text="@string/row_translate_online" />
+
+                        <TextView
+                            style="@style/Likhibi.RowDescription"
+                            android:text="@string/row_translate_online_desc" />
+                    </LinearLayout>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switch_translate_online"
+                        style="@style/Likhibi.Switch"
+                        android:contentDescription="@string/row_translate_online" />
+                </LinearLayout>
+
+                <View style="@style/Likhibi.Divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="19dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        style="@style/Likhibi.RowTitle"
+                        android:text="@string/row_server" />
+
+                    <EditText
+                        android:id="@+id/edit_translate_server"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:backgroundTint="@color/app_outline"
+                        android:hint="https://… or http://192.168.1.5:8000"
+                        android:importantForAutofill="no"
+                        android:inputType="textUri"
+                        android:singleLine="true"
+                        android:textColor="@color/app_text"
+                        android:textColorHint="@color/app_text_secondary"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Likhibi.RowDescription"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="19dp"
+                    android:paddingBottom="14dp"
+                    android:text="@string/translate_privacy_note" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- TOOLS -->
+        <TextView
+            style="@style/Likhibi.SectionHeader"
+            android:text="@string/section_tools" />
+
+        <com.google.android.material.card.MaterialCardView style="@style/Likhibi.Card">
+
+            <LinearLayout
+                android:id="@+id/btn_clear_clipboard"
+                style="@style/Likhibi.Row"
+                android:background="@drawable/app_row_background"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    style="@style/Likhibi.RowTitle"
+                    android:text="@string/row_clear_clipboard"
+                    android:textColor="@color/app_primary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

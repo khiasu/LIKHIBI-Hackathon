@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings home (Roboto, the system font). Sizes from design/SPECS.md, screen 0. -->
+    <style name="Likhibi" />
+
+    <style name="Likhibi.SectionHeader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">26dp</item>
+        <item name="android:layout_marginBottom">9dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/app_section_label</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.125</item>
+        <item name="android:accessibilityHeading">true</item>
+    </style>
+
+    <style name="Likhibi.Card">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/app_card</item>
+        <item name="cardCornerRadius">13dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="Likhibi.Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/app_divider</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+
+    <style name="Likhibi.RowTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineHeight">19sp</item>
+    </style>
+
+    <style name="Likhibi.RowDescription">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:textColor">@color/app_text_secondary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:lineHeight">15sp</item>
+    </style>
+
+    <style name="Likhibi.Row">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">19dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <style name="Likhibi.Button.Filled" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">43dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/app_primary</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.114</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="rippleColor">@color/app_pressed</item>
+    </style>
+
+    <style name="Likhibi.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">43dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="strokeColor">@color/app_outline</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:textColor">@color/app_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.114</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="rippleColor">@color/app_pressed</item>
+    </style>
+
+    <style name="Likhibi.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="useMaterialThemeColors">false</item>
+        <item name="thumbTint">@color/app_switch_thumb</item>
+        <item name="trackTint">@color/app_switch_track</item>
+    </style>
+
+    <style name="Likhibi.Slider" parent="Widget.MaterialComponents.Slider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="trackHeight">2dp</item>
+        <item name="thumbRadius">6dp</item>
+        <item name="thumbElevation">0dp</item>
+        <item name="haloRadius">16dp</item>
+        <item name="haloColor">@color/app_pressed</item>
+        <item name="trackColorActive">@color/app_secondary_strong</item>
+        <item name="trackColorInactive">@color/app_track_off</item>
+        <item name="thumbColor">@color/app_secondary</item>
+        <item name="tickVisible">false</item>
+        <item name="labelBehavior">gone</item>
+    </style>
+
+    <!-- A Select: the value, then a small caret at the far right. No box. -->
+    <style name="Likhibi.Select">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@null</item>
+        <item name="android:popupBackground">@color/app_card</item>
+        <item name="android:spinnerMode">dropdown</item>
+    </style>
+</resources>

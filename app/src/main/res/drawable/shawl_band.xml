@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The shawl band under the subtitle: red, thread, ochre, thread, red. 86 x 3dp, square ends. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:width="36dp" android:height="3dp" android:gravity="start|center_vertical">
+        <color android:color="@color/app_primary" />
+    </item>
+    <item android:width="3dp" android:height="3dp" android:gravity="start|center_vertical" android:start="36dp">
+        <color android:color="@color/app_thread_white" />
+    </item>
+    <item android:width="8dp" android:height="3dp" android:gravity="start|center_vertical" android:start="39dp">
+        <color android:color="@color/app_section_label" />
+    </item>
+    <item android:width="3dp" android:height="3dp" android:gravity="start|center_vertical" android:start="47dp">
+        <color android:color="@color/app_thread_white" />
+    </item>
+    <item android:width="36dp" android:height="3dp" android:gravity="start|center_vertical" android:start="50dp">
+        <color android:color="@color/app_primary" />
+    </item>
+</layer-list>

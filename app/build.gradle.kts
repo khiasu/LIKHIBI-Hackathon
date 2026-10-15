@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.likhibi.keyboard"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.likhibi.keyboard"

@@ -5,8 +5,32 @@
     <string name="subtype_label">Nagamese + English</string>
 
     <string name="settings_title">Likhibi</string>
+    <string name="settings_subtitle">Nagamese Keyboard</string>
     <string name="btn_enable">Enable keyboard</string>
-    <string name="btn_select">Select as current keyboard</string>
+    <string name="btn_select">Select keyboard</string>
     <string name="settings_hint">After enabling, use “Select” to switch keyboards in any app.</string>
-</resources>
 
+    <string name="section_personalization">Personalization</string>
+    <string name="section_feedback">Sensory feedback</string>
+    <string name="section_translation">Translation</string>
+    <string name="section_tools">Tools</string>
+
+    <string name="row_theme">Keyboard Theme</string>
+    <string name="row_theme_desc">Visual theme and palette</string>
+    <string name="row_number_row">Number Row</string>
+    <string name="row_number_row_desc">Display dedicated number row on top</string>
+    <string name="row_font">Keyboard Font</string>
+    <string name="row_font_desc">Keycap typography style</string>
+    <string name="row_haptic">Haptic Feedback</string>
+    <string name="row_sound">Key Press Sounds</string>
+    <string name="row_sound_volume">Key press volume</string>
+    <string name="row_offline_translator">Offline translator</string>
+    <string name="row_translate_online">Use the Likhibi server when online</string>
+    <string name="row_translate_online_desc">Stronger translations. Only the sentence you translate is sent.</string>
+    <string name="row_server">Server address</string>
+    <string name="translate_privacy_note">Typing and offline translation never leave this phone. With the server on, only the sentence you choose to translate is sent to the address above.</string>
+    <string name="row_clear_clipboard">Clear Clipboard History</string>
+
+    <string name="custom_pick_wallpaper">Choose photo</string>
+    <string name="custom_accent">Accent colour</string>
+</resources>

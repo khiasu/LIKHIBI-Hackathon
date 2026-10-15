@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.LikhibiKeyboard" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:statusBarColor">#F7F4EE</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
-        <item name="android:navigationBarColor">#F7F4EE</item>
-        <item name="colorPrimary">#C62828</item>
-        <item name="colorPrimaryVariant">#A72020</item>
-        <item name="colorOnPrimary">#FFFFFF</item>
-        <item name="colorSecondary">#E53935</item>
-        <item name="colorOnSecondary">#FFFFFF</item>
-        <item name="android:colorBackground">#F7F4EE</item>
-        <item name="colorSurface">#FFFFFF</item>
-        <item name="colorOnSurface">#1C1917</item>
+    <!-- The settings app is designed dark only; a light settings theme is not designed yet,
+         so values-night/themes.xml repeats this palette. -->
+    <style name="Theme.LikhibiKeyboard" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:statusBarColor">@color/app_background</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:navigationBarColor">@color/app_background</item>
+        <item name="android:windowBackground">@color/app_background</item>
+        <item name="android:colorBackground">@color/app_background</item>
+        <item name="colorPrimary">@color/app_secondary</item>
+        <item name="colorPrimaryVariant">@color/app_secondary_track</item>
+        <item name="colorOnPrimary">@color/app_background</item>
+        <item name="colorSecondary">@color/app_secondary</item>
+        <item name="colorOnSecondary">@color/app_background</item>
+        <item name="colorSurface">@color/app_card</item>
+        <item name="colorOnSurface">@color/app_text</item>
+        <item name="colorControlNormal">@color/app_text_secondary</item>
+        <item name="colorControlActivated">@color/app_secondary</item>
+        <item name="android:textColorPrimary">@color/app_text</item>
+        <item name="android:textColorSecondary">@color/app_text_secondary</item>
+        <item name="android:textColorHint">@color/app_text_secondary</item>
     </style>
 </resources>

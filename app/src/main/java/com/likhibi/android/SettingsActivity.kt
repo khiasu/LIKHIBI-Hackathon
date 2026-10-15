@@ -15,7 +15,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
-import android.widget.SeekBar
+import com.google.android.material.slider.Slider
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -32,12 +32,12 @@ class SettingsActivity : AppCompatActivity() {
 
     private lateinit var prefs: SharedPreferences
     private lateinit var lblHaptic: TextView
-    private lateinit var seekHaptic: SeekBar
+    private lateinit var seekHaptic: Slider
 
     private lateinit var fontSpinner: Spinner
     private lateinit var switchSound: SwitchMaterial
     private lateinit var lblSoundVolume: TextView
-    private lateinit var seekSoundVolume: SeekBar
+    private lateinit var seekSoundVolume: Slider
 
     companion object {
         private const val RC_PICK_WALLPAPER = 1001
@@ -81,8 +81,8 @@ class SettingsActivity : AppCompatActivity() {
             "Custom Studio"
         )
         val themeValues = THEME_VALUES
-        val themeAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, themeOptions)
-        themeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val themeAdapter = ArrayAdapter(this, R.layout.item_select_value, themeOptions)
+        themeAdapter.setDropDownViewResource(R.layout.item_select_dropdown)
         themeSpinner.adapter = themeAdapter
 
         val currentTheme = prefs.getString("selected_theme", CustomKeyboardView.DEFAULT_THEME) ?: CustomKeyboardView.DEFAULT_THEME
@@ -96,11 +96,11 @@ class SettingsActivity : AppCompatActivity() {
 
         val customControlsLayout: LinearLayout = findViewById(R.id.layout_custom_theme_controls)
         val btnChangeWallpaper: Button = findViewById(R.id.btn_change_wallpaper)
-        val seekKeyOpacity: SeekBar = findViewById(R.id.seek_key_opacity)
+        val seekKeyOpacity: Slider = findViewById(R.id.seek_key_opacity)
         val lblKeyOpacity: TextView = findViewById(R.id.lbl_key_opacity)
-        val seekOverlayOpacity: SeekBar = findViewById(R.id.seek_overlay_opacity)
+        val seekOverlayOpacity: Slider = findViewById(R.id.seek_overlay_opacity)
         val lblOverlayOpacity: TextView = findViewById(R.id.lbl_overlay_opacity)
-        val seekCornerRadius: SeekBar = findViewById(R.id.seek_corner_radius)
+        val seekCornerRadius: Slider = findViewById(R.id.seek_corner_radius)
         val lblCornerRadius: TextView = findViewById(R.id.lbl_corner_radius)
         val switchCustomShadow: SwitchMaterial = findViewById(R.id.switch_custom_shadow)
         val switchNumberRow: SwitchMaterial = findViewById(R.id.switch_number_row)
@@ -113,16 +113,16 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         val initKeyOpacity = prefs.getInt("custom_key_opacity", 70)
-        seekKeyOpacity.progress = initKeyOpacity
-        lblKeyOpacity.text = "Keycap Opacity: ${(initKeyOpacity * 100 / 255)}%"
+        seekKeyOpacity.value = initKeyOpacity.coerceIn(0, 255).toFloat()
+        lblKeyOpacity.text = "Keycap opacity: ${(initKeyOpacity * 100 / 255)}%"
 
         val initOverlayOpacity = prefs.getInt("custom_overlay_opacity", 140)
-        seekOverlayOpacity.progress = initOverlayOpacity
-        lblOverlayOpacity.text = "Wallpaper Dimming: ${(initOverlayOpacity * 100 / 240)}%"
+        seekOverlayOpacity.value = initOverlayOpacity.coerceIn(0, 240).toFloat()
+        lblOverlayOpacity.text = "Wallpaper dimming: ${(initOverlayOpacity * 100 / 240)}%"
 
         val initRadius = prefs.getFloat("custom_corner_radius", 8f).toInt()
-        seekCornerRadius.progress = initRadius
-        lblCornerRadius.text = "Key Corner Rounding: ${initRadius}dp"
+        seekCornerRadius.value = initRadius.coerceIn(0, 20).toFloat()
+        lblCornerRadius.text = "Key corner radius: ${initRadius}dp"
 
         switchCustomShadow.isChecked = prefs.getBoolean("custom_key_has_shadow", true)
         switchCustomShadow.setOnCheckedChangeListener { _, isChecked ->
@@ -130,32 +130,23 @@ class SettingsActivity : AppCompatActivity() {
             prefs.edit().putBoolean("custom_key_has_shadow", isChecked).apply()
         }
 
-        seekKeyOpacity.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                lblKeyOpacity.text = "Keycap Opacity: ${(progress * 100 / 255)}%"
+        seekKeyOpacity.addOnChangeListener { _, value, _ ->
+            val progress = value.toInt()
+                lblKeyOpacity.text = "Keycap opacity: ${(progress * 100 / 255)}%"
                 prefs.edit().putInt("custom_key_opacity", progress).apply()
-            }
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
-        })
+        }
 
-        seekOverlayOpacity.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                lblOverlayOpacity.text = "Wallpaper Dimming: ${(progress * 100 / 240)}%"
+        seekOverlayOpacity.addOnChangeListener { _, value, _ ->
+            val progress = value.toInt()
+                lblOverlayOpacity.text = "Wallpaper dimming: ${(progress * 100 / 240)}%"
                 prefs.edit().putInt("custom_overlay_opacity", progress).apply()
-            }
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
-        })
+        }
 
-        seekCornerRadius.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                lblCornerRadius.text = "Key Corner Rounding: ${progress}dp"
+        seekCornerRadius.addOnChangeListener { _, value, _ ->
+            val progress = value.toInt()
+                lblCornerRadius.text = "Key corner radius: ${progress}dp"
                 prefs.edit().putFloat("custom_corner_radius", progress.toFloat()).apply()
-            }
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
-        })
+        }
 
         btnChangeWallpaper.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT).apply { type = "image/*" }
@@ -205,8 +196,8 @@ class SettingsActivity : AppCompatActivity() {
         fontSpinner = findViewById(R.id.spinner_font)
         val fontOptions = arrayOf("System Default", "Sans Serif Clean", "Modern Light", "Bold Impact", "Classic Serif", "Monospace Code")
         val fontValues = arrayOf("sans-serif", "sans-serif-medium", "sans-serif-light", "sans-serif-black", "serif", "monospace")
-        val fontAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, fontOptions)
-        fontAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val fontAdapter = ArrayAdapter(this, R.layout.item_select_value, fontOptions)
+        fontAdapter.setDropDownViewResource(R.layout.item_select_dropdown)
         fontSpinner.adapter = fontAdapter
 
         val currentFont = prefs.getString("selected_font", "sans-serif") ?: "sans-serif"
@@ -231,7 +222,7 @@ class SettingsActivity : AppCompatActivity() {
         seekSoundVolume.isEnabled = soundEnabled
 
         val currentVolume = (prefs.getFloat("sound_volume", 0.5f) * 100).toInt()
-        seekSoundVolume.progress = currentVolume
+        seekSoundVolume.value = currentVolume.coerceIn(0, 100).toFloat()
         lblSoundVolume.text = "Volume: ${currentVolume}%"
 
         switchSound.setOnCheckedChangeListener { _, isChecked ->
@@ -240,32 +231,28 @@ class SettingsActivity : AppCompatActivity() {
             seekSoundVolume.isEnabled = isChecked
         }
 
-        seekSoundVolume.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+        seekSoundVolume.addOnChangeListener { _, value, _ ->
+            val progress = value.toInt()
                 lblSoundVolume.text = "Volume: ${progress}%"
                 prefs.edit().putFloat("sound_volume", progress / 100f).apply()
-            }
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
-        })
+        }
 
         // Haptic Intensity
         lblHaptic = findViewById(R.id.lbl_haptic)
         seekHaptic = findViewById(R.id.seek_haptic)
 
         val activeHaptic = prefs.getInt("haptic_strength", CustomKeyboardView.DEFAULT_HAPTIC_MS)
-        seekHaptic.progress = activeHaptic
+        seekHaptic.value = activeHaptic.coerceIn(0, 50).toFloat()
         lblHaptic.text = "Vibration strength: ${activeHaptic}ms"
 
-        seekHaptic.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+        seekHaptic.addOnChangeListener { _, value, _ ->
+            val progress = value.toInt()
                 lblHaptic.text = "Vibration strength: ${progress}ms"
                 prefs.edit().putInt("haptic_strength", progress).apply()
-            }
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {
-                triggerTactileSample(seekHaptic.progress)
-            }
+        }
+        seekHaptic.addOnSliderTouchListener(object : Slider.OnSliderTouchListener {
+            override fun onStartTrackingTouch(slider: Slider) = Unit
+            override fun onStopTrackingTouch(slider: Slider) = triggerTactileSample(slider.value.toInt())
         })
 
         // Clipboard Manager
